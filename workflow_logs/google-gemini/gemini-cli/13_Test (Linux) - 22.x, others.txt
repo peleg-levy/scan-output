@@ -1,0 +1,1597 @@
+﻿2026-10-14T16:47:50.0827770Z Current runner version: '2.337.0'
+2026-10-14T16:47:50.0834768Z Runner name: 'gemini-cli-ubuntu-16-core-1062650376'
+2026-10-14T16:47:50.0836041Z Runner group name: 'gemini-cli-large-runners'
+2026-10-14T16:47:50.0853309Z ##[group]Runner Image Provisioner
+2026-10-14T16:47:50.0854235Z Hosted Compute Agent
+2026-10-14T16:47:50.0854836Z Version: 20260925.591
+2026-10-14T16:47:50.0855558Z Commit: 4bbd3026ee0327b231371970207de01818f92dc2
+2026-10-14T16:47:50.0856301Z Build Date: 2026-09-14T11:04:13Z
+2026-10-14T16:47:50.0857253Z ##[endgroup]
+2026-10-14T16:47:50.0858862Z ##[group]Operating System
+2026-10-14T16:47:50.0859521Z Ubuntu
+2026-10-14T16:47:50.0860126Z 24.04.5
+2026-10-14T16:47:50.0860660Z LTS
+2026-10-14T16:47:50.0861173Z ##[endgroup]
+2026-10-14T16:47:50.0861802Z ##[group]Runner Image
+2026-10-14T16:47:50.0862386Z Image: ubuntu-24.04
+2026-10-14T16:47:50.0863011Z Version: 20261004.327.1
+2026-10-14T16:47:50.0864386Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T16:47:50.0866014Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T16:47:50.0867219Z ##[endgroup]
+2026-10-14T16:47:50.0868668Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T16:47:50.0870572Z Checks: read
+2026-10-14T16:47:50.0871264Z Contents: read
+2026-10-14T16:47:50.0871839Z Metadata: read
+2026-10-14T16:47:50.0872421Z PullRequests: read
+2026-10-14T16:47:50.0873027Z ##[endgroup]
+2026-10-14T16:47:50.0874982Z Secret source: None
+2026-10-14T16:47:50.0876241Z Cache mode: write
+2026-10-14T16:47:50.0877443Z Prepare workflow directory
+2026-10-14T16:47:50.1271583Z Prepare all required actions
+2026-10-14T16:47:50.1317571Z Getting action download info
+2026-10-14T16:47:50.4089479Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-14T16:47:50.8525655Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-14T16:47:50.9737254Z Download action repository 'dorny/test-reporter@dc3a92680fcc15842eef52e8c4606ea7ce6bd3f3' (SHA:dc3a92680fcc15842eef52e8c4606ea7ce6bd3f3)
+2026-10-14T16:47:51.6336951Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-14T16:47:51.9108191Z Complete job name: Test (Linux) - 22.x, others
+2026-10-14T16:47:52.0144554Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-14T16:47:52.0146349Z with:
+2026-10-14T16:47:52.0147418Z   persist-credentials: false
+2026-10-14T16:47:52.0148458Z   repository: google-gemini/gemini-cli
+2026-10-14T16:47:52.0158339Z   token: ***
+2026-10-14T16:47:52.0159167Z   ssh-strict: true
+2026-10-14T16:47:52.0160014Z   ssh-user: git
+2026-10-14T16:47:52.0160825Z   clean: true
+2026-10-14T16:47:52.0161690Z   sparse-checkout-cone-mode: true
+2026-10-14T16:47:52.0162716Z   fetch-depth: 1
+2026-10-14T16:47:52.0163571Z   fetch-tags: false
+2026-10-14T16:47:52.0164444Z   show-progress: true
+2026-10-14T16:47:52.0165327Z   lfs: false
+2026-10-14T16:47:52.0166154Z   submodules: false
+2026-10-14T16:47:52.0167197Z   set-safe-directory: true
+2026-10-14T16:47:52.0168500Z ##[endgroup]
+2026-10-14T16:47:52.1139800Z Syncing repository: google-gemini/gemini-cli
+2026-10-14T16:47:52.1142413Z ##[group]Getting Git version info
+2026-10-14T16:47:52.1143806Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:47:52.1145682Z [command]/usr/bin/git version
+2026-10-14T16:47:52.2229083Z git version 2.55.0
+2026-10-14T16:47:52.2248681Z ##[endgroup]
+2026-10-14T16:47:52.2262870Z Temporarily overriding HOME='/home/runner/work/_temp/8dd75448-9d7c-41ce-affc-d3e4e9e4f4c0' before making global git config changes
+2026-10-14T16:47:52.2265978Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:47:52.2268804Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:47:52.2516374Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:47:52.2520333Z ##[group]Initializing the repository
+2026-10-14T16:47:52.2524428Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:47:52.3009044Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T16:47:52.3011276Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T16:47:52.3013378Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T16:47:52.3015054Z hint: call:
+2026-10-14T16:47:52.3016416Z hint:
+2026-10-14T16:47:52.3017790Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T16:47:52.3019130Z hint:
+2026-10-14T16:47:52.3020372Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T16:47:52.3022460Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T16:47:52.3024136Z hint:
+2026-10-14T16:47:52.3024997Z hint: 	git branch -m <name>
+2026-10-14T16:47:52.3025873Z hint:
+2026-10-14T16:47:52.3027211Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T16:47:52.3029358Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-14T16:47:52.3032456Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-14T16:47:52.3304425Z ##[endgroup]
+2026-10-14T16:47:52.3306058Z ##[group]Disabling automatic garbage collection
+2026-10-14T16:47:52.3307921Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T16:47:52.3335932Z ##[endgroup]
+2026-10-14T16:47:52.3337600Z ##[group]Setting up auth
+2026-10-14T16:47:52.3341902Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:47:52.3387925Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:47:52.5132296Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:47:52.5162738Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:47:52.5402681Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T16:47:52.5432426Z ##[endgroup]
+2026-10-14T16:47:52.5433784Z ##[group]Fetching the repository
+2026-10-14T16:47:52.5441551Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1f2767f9590f1b25e5be6881dcd428560f10cc0b:refs/remotes/pull/29725/merge
+2026-10-14T16:47:54.9364356Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T16:47:54.9366849Z  * [new ref]         1f2767f9590f1b25e5be6881dcd428560f10cc0b -> pull/29725/merge
+2026-10-14T16:47:54.9369393Z ##[endgroup]
+2026-10-14T16:47:54.9370194Z ##[group]Determining the checkout info
+2026-10-14T16:47:54.9371242Z ##[endgroup]
+2026-10-14T16:47:54.9376715Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T16:47:54.9538089Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T16:47:54.9564331Z ##[group]Checking out the ref
+2026-10-14T16:47:54.9568446Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/29725/merge
+2026-10-14T16:47:55.3700671Z Note: switching to 'refs/remotes/pull/29725/merge'.
+2026-10-14T16:47:55.3701412Z 
+2026-10-14T16:47:55.3701767Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T16:47:55.3702566Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T16:47:55.3703413Z state without impacting any branches by switching back to a branch.
+2026-10-14T16:47:55.3703918Z 
+2026-10-14T16:47:55.3704256Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T16:47:55.3705518Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T16:47:55.3705994Z 
+2026-10-14T16:47:55.3706187Z   git switch -c <new-branch-name>
+2026-10-14T16:47:55.3706442Z 
+2026-10-14T16:47:55.3706772Z Or undo this operation with:
+2026-10-14T16:47:55.3706995Z 
+2026-10-14T16:47:55.3707128Z   git switch -
+2026-10-14T16:47:55.3707323Z 
+2026-10-14T16:47:55.3707627Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T16:47:55.3708068Z 
+2026-10-14T16:47:55.3708503Z HEAD is now at 1f2767f Merge 32469a2a91741084ad1c4ec0230dd84b92bac100 into a6321abb69aa877288417f6eb85a7acc0165ea1f
+2026-10-14T16:47:55.3717102Z ##[endgroup]
+2026-10-14T16:47:55.3763885Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T16:47:55.3785653Z 1f2767f9590f1b25e5be6881dcd428560f10cc0b
+2026-10-14T16:47:55.3794704Z ##[group]Removing auth
+2026-10-14T16:47:55.3797717Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:47:55.3824464Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:47:55.4042553Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:47:55.4065027Z http.https://github.com/.extraheader
+2026-10-14T16:47:55.4071562Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T16:47:55.4100293Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:47:55.4310135Z ##[endgroup]
+2026-10-14T16:47:55.4572385Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-10-14T16:47:55.4572862Z with:
+2026-10-14T16:47:55.4573116Z   node-version: 22.x
+2026-10-14T16:47:55.4573395Z   cache: npm
+2026-10-14T16:47:55.4573640Z   always-auth: false
+2026-10-14T16:47:55.4573900Z   check-latest: false
+2026-10-14T16:47:55.4576992Z   token: ***
+2026-10-14T16:47:55.4577260Z ##[endgroup]
+2026-10-14T16:47:55.6279276Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-14T16:47:55.6284400Z (node:2695) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T16:47:55.6285347Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:47:55.6286191Z ##[group]Environment details
+2026-10-14T16:47:58.3015093Z node: v22.23.3
+2026-10-14T16:47:58.3015390Z npm: 10.9.9
+2026-10-14T16:47:58.3015661Z yarn: 1.22.22
+2026-10-14T16:47:58.3016909Z ##[endgroup]
+2026-10-14T16:47:58.3038181Z [command]/opt/hostedtoolcache/node/22.23.3/x64/bin/npm config get cache
+2026-10-14T16:47:58.6279551Z /home/runner/.npm
+2026-10-14T16:47:58.8430196Z Cache hit for: node-cache-Linux-x64-npm-257290dc9ce66ea5b0e2e9a5c3fb6059c4b6b1fb417b00e0056b1f26a76831db
+2026-10-14T16:47:58.8529484Z (node:2695) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T16:48:00.0363177Z Received 58720256 of 188547060 (31.1%), 55.9 MBs/sec
+2026-10-14T16:48:00.7076306Z Received 188547060 of 188547060 (100.0%), 107.5 MBs/sec
+2026-10-14T16:48:00.7077913Z Cache Size: ~180 MB (188547060 B)
+2026-10-14T16:48:00.7142426Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0818c613-1d8a-4b9c-bb1b-b0b40012ac3a/cache.tzst -P -C /home/runner/work/gemini-cli/gemini-cli --use-compress-program unzstd
+2026-10-14T16:48:01.6131170Z Cache restored successfully
+2026-10-14T16:48:01.6224807Z Cache restored from key: node-cache-Linux-x64-npm-257290dc9ce66ea5b0e2e9a5c3fb6059c4b6b1fb417b00e0056b1f26a76831db
+2026-10-14T16:48:01.6401431Z ##[group]Run npm run build
+2026-10-14T16:48:01.6401925Z [36;1mnpm run build[0m
+2026-10-14T16:48:01.7672939Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:48:01.7673392Z ##[endgroup]
+2026-10-14T16:48:01.8965980Z 
+2026-10-14T16:48:01.8971294Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:48:01.8971842Z > node scripts/build.js
+2026-10-14T16:48:01.8972041Z 
+2026-10-14T16:48:09.0517931Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2026-10-14T16:48:10.1768510Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-10-14T16:48:47.4783988Z 
+2026-10-14T16:48:47.4784904Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae prepare
+2026-10-14T16:48:47.4787639Z > husky && npm run bundle
+2026-10-14T16:48:47.4788097Z 
+2026-10-14T16:48:47.6256721Z 
+2026-10-14T16:48:47.6257689Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-14T16:48:47.6259332Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-14T16:48:47.6260290Z 
+2026-10-14T16:48:47.7179161Z 
+2026-10-14T16:48:47.7179963Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:48:47.7180595Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:48:47.7180859Z 
+2026-10-14T16:48:47.9134687Z 
+2026-10-14T16:48:47.9135244Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:48:47.9135891Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:48:47.9136177Z 
+2026-10-14T16:48:48.0302027Z 
+2026-10-14T16:48:48.0303345Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:48:48.0303995Z > node esbuild.client.js
+2026-10-14T16:48:48.0304219Z 
+2026-10-14T16:48:49.3824027Z 
+2026-10-14T16:48:49.3824897Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:48:49.3825607Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:48:49.3825866Z 
+2026-10-14T16:48:50.0368234Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:48:50.0781564Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:48:51.1738698Z Copied 9 policy files to bundle/policies/
+2026-10-14T16:48:51.1748602Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-14T16:48:51.1819220Z Copied docs to bundle/docs/
+2026-10-14T16:48:51.1824001Z Copied built-in skills to bundle/builtin/
+2026-10-14T16:48:51.1967991Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-14T16:48:51.2017524Z Copied extension examples to bundle/examples/
+2026-10-14T16:48:51.2018215Z Assets copied to bundle/
+2026-10-14T16:48:51.2310663Z 
+2026-10-14T16:48:51.2311382Z added 1410 packages, and audited 1418 packages in 49s
+2026-10-14T16:48:51.2311713Z 
+2026-10-14T16:48:51.2311978Z 389 packages are looking for funding
+2026-10-14T16:48:51.2312339Z   run `npm fund` for details
+2026-10-14T16:48:51.4967450Z 
+2026-10-14T16:48:51.4968342Z 100 vulnerabilities (4 low, 44 moderate, 45 high, 7 critical)
+2026-10-14T16:48:51.4968808Z 
+2026-10-14T16:48:51.4969265Z To address issues that do not require attention, run:
+2026-10-14T16:48:51.4969792Z   npm audit fix
+2026-10-14T16:48:51.4969987Z 
+2026-10-14T16:48:51.4970446Z To address all issues (including breaking changes), run:
+2026-10-14T16:48:51.4970988Z   npm audit fix --force
+2026-10-14T16:48:51.4971227Z 
+2026-10-14T16:48:51.4971419Z Run `npm audit` for details.
+2026-10-14T16:48:51.7279668Z 
+2026-10-14T16:48:51.7280296Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:48:51.7280899Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:48:51.7281171Z 
+2026-10-14T16:48:51.8120453Z CI environment detected. Building workspaces sequentially...
+2026-10-14T16:48:51.9247014Z 
+2026-10-14T16:48:51.9248008Z > @google/gemini-cli-a2a-server@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:48:51.9248623Z > node ../../scripts/build_package.js
+2026-10-14T16:48:51.9248877Z 
+2026-10-14T16:49:00.3670048Z Successfully copied files.
+2026-10-14T16:49:00.3725985Z 
+2026-10-14T16:49:00.3726726Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:00.3727360Z > node ../../scripts/build_package.js
+2026-10-14T16:49:00.3727613Z 
+2026-10-14T16:49:39.4541953Z Successfully copied files.
+2026-10-14T16:49:39.4613311Z 
+2026-10-14T16:49:39.4614095Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:39.4614703Z > node ../../scripts/build_package.js
+2026-10-14T16:49:39.4614953Z 
+2026-10-14T16:49:39.6666700Z Running chrome devtools MCP bundling...
+2026-10-14T16:49:39.7809244Z 
+2026-10-14T16:49:39.7811868Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:49:39.7812745Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:49:39.7813086Z 
+2026-10-14T16:49:40.4465092Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:49:40.4886290Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:49:40.5549808Z Successfully copied files.
+2026-10-14T16:49:40.5647062Z Copied documentation to dist/docs
+2026-10-14T16:49:40.5682200Z 
+2026-10-14T16:49:40.5682716Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:40.5683384Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:49:40.5683693Z 
+2026-10-14T16:49:40.6829000Z 
+2026-10-14T16:49:40.6829706Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:49:40.6830278Z > node esbuild.client.js
+2026-10-14T16:49:40.6830491Z 
+2026-10-14T16:49:41.8474881Z 
+2026-10-14T16:49:41.8475828Z > @google/gemini-cli-sdk@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:41.8477103Z > node ../../scripts/build_package.js
+2026-10-14T16:49:41.8477375Z 
+2026-10-14T16:49:44.0663340Z Successfully copied files.
+2026-10-14T16:49:44.0714794Z 
+2026-10-14T16:49:44.0715407Z > @google/gemini-cli-test-utils@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:44.0716041Z > node ../../scripts/build_package.js
+2026-10-14T16:49:44.0716294Z 
+2026-10-14T16:49:46.0157740Z Successfully copied files.
+2026-10-14T16:49:46.0211944Z 
+2026-10-14T16:49:46.0212504Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:46.0213241Z > npm run build:dev
+2026-10-14T16:49:46.0213411Z 
+2026-10-14T16:49:46.1364423Z 
+2026-10-14T16:49:46.1365242Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build:dev
+2026-10-14T16:49:46.1365955Z > node esbuild.js
+2026-10-14T16:49:46.1366147Z 
+2026-10-14T16:49:46.1892415Z [watch] build started
+2026-10-14T16:49:46.6195195Z [watch] build finished
+2026-10-14T16:49:47.8165594Z ##[group]Run sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq bubblewrap
+2026-10-14T16:49:47.8166394Z [36;1msudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq bubblewrap[0m
+2026-10-14T16:49:47.8167172Z [36;1m# Ubuntu 24.04+ requires this to allow bwrap to function in CI[0m
+2026-10-14T16:49:47.8167641Z [36;1msudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true[0m
+2026-10-14T16:49:47.8229440Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:49:47.8229779Z ##[endgroup]
+2026-10-14T16:49:55.0017038Z Selecting previously unselected package bubblewrap.
+2026-10-14T16:49:55.0637996Z (Reading database ... 
+2026-10-14T16:49:55.0638588Z (Reading database ... 5%
+2026-10-14T16:49:55.0639019Z (Reading database ... 10%
+2026-10-14T16:49:55.0639427Z (Reading database ... 15%
+2026-10-14T16:49:55.0639833Z (Reading database ... 20%
+2026-10-14T16:49:55.0640325Z (Reading database ... 25%
+2026-10-14T16:49:55.0640717Z (Reading database ... 30%
+2026-10-14T16:49:55.0641408Z (Reading database ... 35%
+2026-10-14T16:49:55.0641797Z (Reading database ... 40%
+2026-10-14T16:49:55.0642186Z (Reading database ... 45%
+2026-10-14T16:49:55.0642571Z (Reading database ... 50%
+2026-10-14T16:49:55.1148717Z (Reading database ... 55%
+2026-10-14T16:49:55.4534655Z (Reading database ... 60%
+2026-10-14T16:49:55.7265127Z (Reading database ... 65%
+2026-10-14T16:49:56.0425323Z (Reading database ... 70%
+2026-10-14T16:49:56.3932493Z (Reading database ... 75%
+2026-10-14T16:49:56.7625094Z (Reading database ... 80%
+2026-10-14T16:49:57.4048095Z (Reading database ... 85%
+2026-10-14T16:49:58.1233569Z (Reading database ... 90%
+2026-10-14T16:49:58.7461228Z (Reading database ... 95%
+2026-10-14T16:49:58.7461693Z (Reading database ... 100%
+2026-10-14T16:49:58.7462343Z (Reading database ... 203191 files and directories currently installed.)
+2026-10-14T16:49:58.7504348Z Preparing to unpack .../bubblewrap_0.9.0-1ubuntu0.3_amd64.deb ...
+2026-10-14T16:49:58.7529742Z Unpacking bubblewrap (0.9.0-1ubuntu0.3) ...
+2026-10-14T16:49:58.8021916Z Setting up bubblewrap (0.9.0-1ubuntu0.3) ...
+2026-10-14T16:49:58.8064119Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-14T16:49:58.8082379Z Not building database; man-db/auto-update is not 'true'.
+2026-10-14T16:49:59.9578715Z 
+2026-10-14T16:49:59.9579348Z Running kernel seems to be up-to-date.
+2026-10-14T16:49:59.9579661Z 
+2026-10-14T16:49:59.9579855Z No services need to be restarted.
+2026-10-14T16:49:59.9580100Z 
+2026-10-14T16:49:59.9580325Z No containers need to be restarted.
+2026-10-14T16:49:59.9580563Z 
+2026-10-14T16:49:59.9580790Z No user sessions are running outdated binaries.
+2026-10-14T16:49:59.9581080Z 
+2026-10-14T16:49:59.9581482Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-14T16:50:00.7730061Z kernel.apparmor_restrict_unprivileged_userns = 0
+2026-10-14T16:50:00.7773244Z ##[group]Run npm ci
+2026-10-14T16:50:00.7773500Z [36;1mnpm ci[0m
+2026-10-14T16:50:00.7835048Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:50:00.7835401Z ##[endgroup]
+2026-10-14T16:50:06.7169750Z 
+2026-10-14T16:50:06.7170561Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae prepare
+2026-10-14T16:50:06.7171174Z > husky && npm run bundle
+2026-10-14T16:50:06.7171365Z 
+2026-10-14T16:50:06.8523074Z 
+2026-10-14T16:50:06.8523640Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-14T16:50:06.8525128Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-14T16:50:06.8526066Z 
+2026-10-14T16:50:06.9453543Z 
+2026-10-14T16:50:06.9454163Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:50:06.9454796Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:50:06.9455144Z 
+2026-10-14T16:50:07.1376964Z 
+2026-10-14T16:50:07.1377604Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:07.1378312Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:50:07.1378634Z 
+2026-10-14T16:50:07.2539547Z 
+2026-10-14T16:50:07.2540200Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:50:07.2540770Z > node esbuild.client.js
+2026-10-14T16:50:07.2540964Z 
+2026-10-14T16:50:08.5079031Z 
+2026-10-14T16:50:08.5079965Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:50:08.5080664Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:50:08.5080936Z 
+2026-10-14T16:50:09.1725603Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:50:09.2146862Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:50:10.2941001Z Copied 9 policy files to bundle/policies/
+2026-10-14T16:50:10.2956413Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-14T16:50:10.3148387Z Copied docs to bundle/docs/
+2026-10-14T16:50:10.3156411Z Copied built-in skills to bundle/builtin/
+2026-10-14T16:50:10.3531380Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-14T16:50:10.3586730Z Copied extension examples to bundle/examples/
+2026-10-14T16:50:10.3587562Z Assets copied to bundle/
+2026-10-14T16:50:10.3807371Z 
+2026-10-14T16:50:10.3807929Z added 110 packages, changed 2 packages, and audited 1418 packages in 10s
+2026-10-14T16:50:10.3808328Z 
+2026-10-14T16:50:10.3808515Z 389 packages are looking for funding
+2026-10-14T16:50:10.3808865Z   run `npm fund` for details
+2026-10-14T16:50:10.6443598Z 
+2026-10-14T16:50:10.6444482Z 100 vulnerabilities (4 low, 44 moderate, 45 high, 7 critical)
+2026-10-14T16:50:10.6444854Z 
+2026-10-14T16:50:10.6445137Z To address issues that do not require attention, run:
+2026-10-14T16:50:10.6445592Z   npm audit fix
+2026-10-14T16:50:10.6445748Z 
+2026-10-14T16:50:10.6446015Z To address all issues (including breaking changes), run:
+2026-10-14T16:50:10.6446431Z   npm audit fix --force
+2026-10-14T16:50:10.6447076Z 
+2026-10-14T16:50:10.6447291Z Run `npm audit` for details.
+2026-10-14T16:50:10.6867831Z ##[group]Run if [[ "others" == "cli" ]]; then
+2026-10-14T16:50:10.6868211Z [36;1mif [[ "others" == "cli" ]]; then[0m
+2026-10-14T16:50:10.6868566Z [36;1m  npm run test:ci --workspace "@google/gemini-cli"[0m
+2026-10-14T16:50:10.6868889Z [36;1melse[0m
+2026-10-14T16:50:10.6869216Z [36;1m  # Explicitly list non-cli packages to ensure they are sharded correctly[0m
+2026-10-14T16:50:10.6870273Z [36;1m  npm run test:ci --workspace "@google/gemini-cli-core" --workspace "@google/gemini-cli-a2a-server" --workspace "gemini-cli-vscode-ide-companion" --workspace "@google/gemini-cli-test-utils" --if-present -- --coverage.enabled=false[0m
+2026-10-14T16:50:10.6871216Z [36;1m  npm run test:scripts[0m
+2026-10-14T16:50:10.6871454Z [36;1mfi[0m
+2026-10-14T16:50:10.6939907Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:50:10.6940240Z env:
+2026-10-14T16:50:10.6940433Z   NO_COLOR: true
+2026-10-14T16:50:10.6940643Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:50:10.6940917Z ##[endgroup]
+2026-10-14T16:50:10.8139785Z 
+2026-10-14T16:50:10.8140421Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae test:ci
+2026-10-14T16:50:10.8141107Z > vitest run --coverage.enabled=false
+2026-10-14T16:50:10.8141399Z 
+2026-10-14T16:50:11.1040228Z 
+2026-10-14T16:50:11.1041436Z  RUN  v3.2.4 /home/runner/work/gemini-cli/gemini-cli/packages/core
+2026-10-14T16:50:11.1041825Z 
+2026-10-14T16:50:13.6959354Z  ✓ src/services/chatRecordingService.test.ts (67 tests) 528ms
+2026-10-14T16:50:13.7537011Z  ✓ src/policy/policy-engine.test.ts (164 tests) 177ms
+2026-10-14T16:50:13.9438497Z  ✓ src/services/memoryService.test.ts (56 tests) 825ms
+2026-10-14T16:50:13.9445751Z    ✓ memoryService > tryAcquireLock > successfully acquires lock when none exists  400ms
+2026-10-14T16:50:14.4484542Z  ✓ src/mcp/oauth-provider.test.ts (50 tests) 1430ms
+2026-10-14T16:50:14.4515227Z    ✓ MCPOAuthProvider > authenticate > should handle invalid callback request  1002ms
+2026-10-14T16:50:14.5568495Z  ✓ src/services/shellExecutionService.test.ts (84 tests) 1163ms
+2026-10-14T16:50:14.7766777Z  ✓ src/tools/ripGrep.test.ts (70 tests) 1079ms
+2026-10-14T16:50:15.1629563Z  ✓ src/utils/fileUtils.test.ts (118 tests) 221ms
+2026-10-14T16:50:15.6669645Z  ✓ src/utils/security.test.ts (54 tests | 3 skipped) 39ms
+2026-10-14T16:50:17.1610780Z  ✓ src/telemetry/loggers.test.ts (52 tests) 101ms
+2026-10-14T16:50:17.2068040Z  ✓ src/scheduler/scheduler.test.ts (47 tests) 143ms
+2026-10-14T16:50:17.4721097Z  ✓ src/code_assist/oauth2.test.ts (41 tests) 510ms
+2026-10-14T16:50:17.6014912Z  ✓ src/telemetry/clearcut-logger/clearcut-logger.test.ts (79 tests) 451ms
+2026-10-14T16:50:17.7470208Z  ✓ src/tools/shell.test.ts (95 tests | 1 skipped) 683ms
+2026-10-14T16:50:17.7649097Z  ✓ src/agents/local-executor.test.ts (69 tests) 308ms
+2026-10-14T16:50:18.0212815Z  ✓ src/commands/memory.test.ts (63 tests | 2 skipped) 433ms
+2026-10-14T16:50:18.1956007Z  ✓ src/tools/edit.test.ts (70 tests) 369ms
+2026-10-14T16:50:18.2403773Z (node:4649) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 101 model-changed listeners added to [CoreEventEmitter]. MaxListeners is 100. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:50:18.2405519Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-14T16:50:18.2435341Z  ✓ src/agents/registry.test.ts (61 tests | 1 skipped) 142ms
+2026-10-14T16:50:18.8928278Z  ✓ src/utils/oauth-flow.test.ts (74 tests) 146ms
+2026-10-14T16:50:19.1615683Z  ✓ src/core/geminiChat.test.ts (132 tests) 1541ms
+2026-10-14T16:50:19.1680405Z  ✓ src/tools/mcp-tool.test.ts (65 tests) 252ms
+2026-10-14T16:50:19.2421969Z  ✓ src/tools/web-fetch.test.ts (62 tests) 177ms
+2026-10-14T16:50:19.3308385Z  ✓ src/utils/googleQuotaErrors.test.ts (48 tests) 37ms
+2026-10-14T16:50:19.4231244Z  ✓ src/core/client.test.ts (83 tests | 1 skipped) 1658ms
+2026-10-14T16:50:19.6316250Z  ✓ src/config/models.test.ts (101 tests) 41ms
+2026-10-14T16:50:19.8766295Z  ✓ src/utils/paths.test.ts (163 tests | 37 skipped) 46ms
+2026-10-14T16:50:19.9128221Z  ✓ src/agent/legacy-agent-session.test.ts (35 tests) 753ms
+2026-10-14T16:50:20.2469290Z  ✓ src/core/prompts.test.ts (71 tests) 195ms
+2026-10-14T16:50:20.3124131Z  ✓ src/services/modelConfigService.test.ts (39 tests) 23ms
+2026-10-14T16:50:21.0308745Z  ✓ src/core/contentGenerator.test.ts (55 tests) 116ms
+2026-10-14T16:50:21.1714610Z  ✓ src/services/sandboxManager.integration.test.ts (34 tests) 2678ms
+2026-10-14T16:50:21.3218674Z  ✓ src/tools/write-file.test.ts (48 tests) 276ms
+2026-10-14T16:50:21.3388277Z  ✓ src/context/chatCompressionService.test.ts (36 tests) 145ms
+2026-10-14T16:50:21.5129786Z  ✓ src/services/loopDetectionService.test.ts (57 tests) 226ms
+2026-10-14T16:50:21.5357408Z  ✓ src/utils/editor.test.ts (224 tests) 92ms
+2026-10-14T16:50:21.8499438Z  ✓ src/utils/memoryImportProcessor.test.ts (26 tests) 66ms
+2026-10-14T16:50:22.2245806Z  ✓ src/services/sessionSummaryUtils.test.ts (26 tests) 193ms
+2026-10-14T16:50:22.2559007Z  ✓ src/ide/ide-connection-utils.test.ts (46 tests | 1 skipped) 59ms
+2026-10-14T16:50:22.7446283Z  ✓ src/policy/toml-loader.test.ts (59 tests) 187ms
+2026-10-14T16:50:23.0084127Z  ✓ src/utils/retry.test.ts (46 tests) 72ms
+2026-10-14T16:50:23.0453097Z  ✓ src/services/fileDiscoveryService.test.ts (52 tests) 273ms
+2026-10-14T16:50:23.0458366Z  ✓ src/tools/read-many-files.test.ts (34 tests) 357ms
+2026-10-14T16:50:23.0467815Z  ✓ src/scheduler/policy.test.ts (31 tests) 38ms
+2026-10-14T16:50:23.4628236Z  ✓ src/agents/agentLoader.test.ts (59 tests) 114ms
+2026-10-14T16:50:23.7173544Z  ✓ src/tools/mcp-client-manager.test.ts (38 tests) 179ms
+2026-10-14T16:50:23.7635916Z  ✓ src/agents/remote-subagent-protocol.test.ts (31 tests) 220ms
+2026-10-14T16:50:23.7783971Z  ✓ src/hooks/hookRunner.test.ts (25 tests) 136ms
+2026-10-14T16:50:24.3565606Z  ✓ src/utils/memoryDiscovery.test.ts (30 tests) 174ms
+2026-10-14T16:50:24.4343417Z  ✓ src/code_assist/server.test.ts (37 tests) 91ms
+2026-10-14T16:50:24.7948677Z  ✓ src/core/loggingContentGenerator.test.ts (33 tests) 47ms
+2026-10-14T16:50:24.8782026Z  ✓ src/scheduler/tool-executor.test.ts (17 tests) 381ms
+2026-10-14T16:50:25.3864241Z  ✓ src/agents/local-subagent-protocol.test.ts (37 tests) 221ms
+2026-10-14T16:50:25.4444425Z  ✓ src/tools/grep.test.ts (33 tests) 294ms
+2026-10-14T16:50:25.9118274Z  ✓ src/core/baseLlmClient.test.ts (29 tests) 71ms
+2026-10-14T16:50:26.1429296Z  ✓ src/policy/config.test.ts (34 tests) 134ms
+2026-10-14T16:50:26.2948813Z  ✓ src/tools/tool-registry.test.ts (32 tests) 155ms
+2026-10-14T16:50:26.4651105Z  ✓ src/tools/mcp-client.test.ts (79 tests) 795ms
+2026-10-14T16:50:26.4731806Z  ✓ src/mcp/oauth-utils.test.ts (57 tests) 63ms
+2026-10-14T16:50:26.7138523Z  ✓ src/tools/read-file.test.ts (38 tests) 235ms
+2026-10-14T16:50:26.8990033Z  ✓ src/hooks/hookEventHandler.test.ts (17 tests) 32ms
+2026-10-14T16:50:26.9472246Z  ✓ src/routing/strategies/numericalClassifierStrategy.test.ts (28 tests) 55ms
+2026-10-14T16:50:26.9688618Z  ✓ src/agents/auth-provider/oauth2-provider.test.ts (28 tests) 35ms
+2026-10-14T16:50:27.1128560Z  ✓ src/services/executionLifecycleService.test.ts (28 tests) 30ms
+2026-10-14T16:50:27.1474191Z  ✓ src/config/config.test.ts (250 tests) 1481ms
+2026-10-14T16:50:27.5108207Z  ✓ src/code_assist/admin/admin_controls.test.ts (44 tests) 68ms
+2026-10-14T16:50:27.5825668Z  ✓ src/agents/remote-invocation.test.ts (19 tests) 34ms
+2026-10-14T16:50:27.6857638Z  ✓ src/tools/ask-user.test.ts (37 tests) 75ms
+2026-10-14T16:50:27.9508470Z  ✓ src/hooks/hookRegistry.test.ts (24 tests) 34ms
+2026-10-14T16:50:28.0537702Z  ✓ src/config/storage.test.ts (44 tests) 43ms
+2026-10-14T16:50:28.0871590Z  ✓ src/telemetry/uiTelemetry.test.ts (24 tests) 22ms
+2026-10-14T16:50:28.1024244Z  ✓ src/services/sessionSummaryService.test.ts (33 tests) 50ms
+2026-10-14T16:50:28.1171530Z  ✓ src/utils/generateContentResponseUtilities.test.ts (50 tests) 22ms
+2026-10-14T16:50:28.5728493Z  ✓ src/telemetry/memory-monitor.test.ts (31 tests) 56ms
+2026-10-14T16:50:28.6597547Z  ✓ src/core/turn.test.ts (22 tests) 23ms
+2026-10-14T16:50:28.7216055Z  ✓ src/ide/ide-client.test.ts (27 tests) 64ms
+2026-10-14T16:50:28.8421907Z  ✓ src/utils/shell-utils.test.ts (67 tests | 2 skipped) 174ms
+2026-10-14T16:50:29.1458689Z  ✓ src/utils/workspaceContext.test.ts (41 tests) 76ms
+2026-10-14T16:50:29.1767854Z  ✓ src/utils/googleErrors.test.ts (22 tests) 12ms
+2026-10-14T16:50:29.5619782Z  ✓ src/agent/event-translator.test.ts (60 tests) 31ms
+2026-10-14T16:50:29.6252301Z  ✓ src/core/logger.test.ts (39 tests) 203ms
+2026-10-14T16:50:29.8228774Z  ✓ src/agents/local-session-invocation.test.ts (20 tests) 72ms
+2026-10-14T16:50:29.9732918Z  ✓ src/policy/shell-safety.test.ts (23 tests) 41ms
+2026-10-14T16:50:30.0062137Z  ✓ src/agents/remote-session-invocation.test.ts (17 tests) 31ms
+2026-10-14T16:50:30.1283578Z  ✓ src/utils/pathReader.test.ts (22 tests) 106ms
+2026-10-14T16:50:30.1555749Z  ✓ src/agents/browser/browserAgentInvocation.test.ts (23 tests) 77ms
+2026-10-14T16:50:30.2104182Z  ✓ src/services/gitService.test.ts (27 tests) 189ms
+2026-10-14T16:50:30.2663385Z  ✓ src/utils/historyHardening.test.ts (19 tests) 18ms
+2026-10-14T16:50:30.2776441Z  ✓ src/scheduler/state-manager.test.ts (33 tests) 32ms
+2026-10-14T16:50:30.3348542Z  ✓ src/tools/at-reference-resolution.test.ts (19 tests) 198ms
+2026-10-14T16:50:30.6722883Z  ✓ src/agents/a2aUtils.test.ts (29 tests) 18ms
+2026-10-14T16:50:30.7238843Z  ✓ src/services/environmentSanitization.test.ts (33 tests) 27ms
+2026-10-14T16:50:30.8564620Z  ✓ src/agents/a2a-client-manager.test.ts (29 tests) 68ms
+2026-10-14T16:50:31.1007413Z  ✓ src/context/agentHistoryProvider.test.ts (15 tests) 38ms
+2026-10-14T16:50:31.3652705Z  ✓ src/scheduler/scheduler_parallel.test.ts (10 tests) 287ms
+2026-10-14T16:50:31.5513760Z  ✓ src/agents/browser/browserAgentFactory.test.ts (27 tests) 73ms
+2026-10-14T16:50:32.6992759Z  ✓ src/context/toolOutputMaskingService.test.ts (11 tests) 57ms
+2026-10-14T16:50:32.8510607Z  ✓ src/agents/local-invocation.test.ts (17 tests) 64ms
+2026-10-14T16:50:32.8800825Z  ✓ src/tools/exit-plan-mode.test.ts (23 tests) 155ms
+2026-10-14T16:50:32.8963530Z (node:6705) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:50:32.8965396Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-14T16:50:32.8967680Z (node:6705) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:50:32.9083885Z  ✓ src/telemetry/sdk.test.ts (19 tests) 73ms
+2026-10-14T16:50:32.9860222Z  ✓ src/availability/autoRoutingFallback.integration.test.ts (6 tests) 143ms
+2026-10-14T16:50:33.0324187Z  ✓ src/agents/browser/browserManager.test.ts (64 tests) 12211ms
+2026-10-14T16:50:33.0325992Z    ✓ BrowserManager > MCP connection > should throw error when invalid domain is configured in allowedDomains  1505ms
+2026-10-14T16:50:33.0328739Z    ✓ BrowserManager > MCP connection > should throw actionable error when existing mode connection fails  3011ms
+2026-10-14T16:50:33.0330318Z    ✓ BrowserManager > MCP connection > should throw profile-lock remediation when persistent mode hits "already running"  3012ms
+2026-10-14T16:50:33.0331767Z    ✓ BrowserManager > MCP connection > should throw timeout-specific remediation for persistent mode  1505ms
+2026-10-14T16:50:33.0332606Z    ✓ BrowserManager > MCP connection > should include sessionMode in generic fallback error  1507ms
+2026-10-14T16:50:33.0333496Z    ✓ BrowserManager > MCP connection > should classify non-connection-refused errors in existing mode as unknown  1509ms
+2026-10-14T16:50:33.2146925Z  ✓ src/output/stream-json-formatter.test.ts (20 tests) 18ms
+2026-10-14T16:50:33.2372074Z  ✓ src/availability/policyHelpers.test.ts (35 tests) 24ms
+2026-10-14T16:50:33.2966842Z  ✓ src/utils/filesearch/fileSearch.test.ts (31 tests) 4411ms
+2026-10-14T16:50:33.2968250Z    ✓ FileSearch > should include newly created directory when watcher is enabled  1527ms
+2026-10-14T16:50:33.2970169Z    ✓ FileSearch > should include newly created file and remove it after deletion when watcher is enabled  2714ms
+2026-10-14T16:50:33.3708353Z  ✓ src/agent/agent-session.test.ts (18 tests) 175ms
+2026-10-14T16:50:33.5087131Z  ✓ src/safety/built-in.test.ts (19 tests) 133ms
+2026-10-14T16:50:33.5551725Z  ✓ src/tools/glob.test.ts (37 tests) 1932ms
+2026-10-14T16:50:33.5788555Z  ✓ src/agents/auth-provider/factory.test.ts (29 tests) 52ms
+2026-10-14T16:50:33.7754650Z  ✓ src/policy/persistence.test.ts (16 tests) 108ms
+2026-10-14T16:50:33.9285106Z  ✓ src/routing/strategies/classifierStrategy.test.ts (17 tests) 31ms
+2026-10-14T16:50:33.9728324Z  ✓ src/utils/sessionUtils.test.ts (11 tests) 13ms
+2026-10-14T16:50:33.9768062Z  ✓ src/context/utils/snapshotGenerator.test.ts (14 tests) 31ms
+2026-10-14T16:50:34.0238620Z  ✓ src/sandbox/windows/WindowsSandboxManager.test.ts (20 tests | 2 skipped) 614ms
+2026-10-14T16:50:34.0286465Z  ✓ src/prompts/promptProvider.test.ts (17 tests) 53ms
+2026-10-14T16:50:34.1838692Z  ✓ src/hooks/hookTranslator.test.ts (18 tests) 17ms
+2026-10-14T16:50:34.2538650Z  ✓ src/tools/ls.test.ts (23 tests) 151ms
+2026-10-14T16:50:34.3383455Z  ✓ src/mcp/oauth-token-storage.test.ts (30 tests) 27ms
+2026-10-14T16:50:34.4808436Z  ✓ src/telemetry/gcp-exporters.test.ts (20 tests) 65ms
+2026-10-14T16:50:34.5445742Z  ✓ src/utils/atCommandUtils.test.ts (40 tests) 35ms
+2026-10-14T16:50:34.6271748Z  ✓ src/code_assist/converter.test.ts (25 tests) 12ms
+2026-10-14T16:50:34.7302989Z  ✓ src/utils/events.test.ts (26 tests) 371ms
+2026-10-14T16:50:34.9378453Z  ✓ src/confirmation-bus/message-bus.test.ts (17 tests) 24ms
+2026-10-14T16:50:34.9962742Z  ✓ src/config/projectRegistry.test.ts (20 tests) 1061ms
+2026-10-14T16:50:34.9964022Z    ✓ ProjectRegistry > re-throws error if save ultimately fails after retries  763ms
+2026-10-14T16:50:35.0188335Z  ✓ src/utils/compatibility.test.ts (39 tests) 33ms
+2026-10-14T16:50:35.0475291Z  ✓ src/hooks/hookAggregator.test.ts (10 tests) 12ms
+2026-10-14T16:50:35.0909535Z  ✓ src/scheduler/confirmation.test.ts (8 tests) 30ms
+2026-10-14T16:50:35.3712283Z  ✓ src/hooks/types.test.ts (35 tests) 21ms
+2026-10-14T16:50:35.4330507Z  ✓ src/utils/textUtils.test.ts (52 tests) 17ms
+2026-10-14T16:50:35.5548463Z  ✓ src/utils/fetch.spec.ts (17 tests) 35ms
+2026-10-14T16:50:35.7009166Z  ✓ src/utils/untrustedContextTracker.test.ts (14 tests) 20ms
+2026-10-14T16:50:35.9561723Z  ✓ src/ide/ideContext.test.ts (23 tests) 26ms
+2026-10-14T16:50:35.9744233Z  ✓ src/services/sandboxManager.test.ts (23 tests) 23ms
+2026-10-14T16:50:36.0228774Z  ✓ src/sandbox/linux/bwrapArgsBuilder.test.ts (17 tests) 19ms
+2026-10-14T16:50:36.3084299Z  ✓ src/mcp/oauth-callback-iss-handling.test.ts (6 tests) 109ms
+2026-10-14T16:50:36.3561987Z  ✓ src/telemetry/sanitize.test.ts (18 tests) 16ms
+2026-10-14T16:50:36.4565768Z  ✓ src/utils/fetch.test.ts (24 tests) 97ms
+2026-10-14T16:50:36.5011644Z  ✓ src/code_assist/oauth-credential-storage.test.ts (18 tests) 34ms
+2026-10-14T16:50:36.7370638Z  ✓ src/tools/modifiable-tool.test.ts (12 tests) 61ms
+2026-10-14T16:50:36.8120716Z  ✓ src/hooks/hookPlanner.test.ts (10 tests) 14ms
+2026-10-14T16:50:36.9397381Z  ✓ src/utils/filesearch/crawler.test.ts (19 tests) 143ms
+2026-10-14T16:50:36.9715425Z  ✓ src/code_assist/telemetry.test.ts (18 tests) 18ms
+2026-10-14T16:50:37.1388790Z  ✓ src/ide/ide-installer.test.ts (20 tests) 30ms
+2026-10-14T16:50:37.3926792Z  ✓ src/skills/skillManager.test.ts (10 tests) 88ms
+2026-10-14T16:50:37.4140938Z  ✓ src/utils/userAccountManager.test.ts (23 tests) 69ms
+2026-10-14T16:50:37.4818659Z  ✓ src/code_assist/setup.test.ts (20 tests) 32ms
+2026-10-14T16:50:37.7166705Z  ✓ src/telemetry/config.test.ts (32 tests) 19ms
+2026-10-14T16:50:37.7838439Z  ✓ src/utils/errors.test.ts (29 tests) 24ms
+2026-10-14T16:50:37.7931208Z  ✓ src/tools/shellBackgroundTools.test.ts (10 tests) 82ms
+2026-10-14T16:50:38.0108335Z  ✓ src/fallback/handler.test.ts (13 tests) 35ms
+2026-10-14T16:50:38.0458364Z  ✓ src/utils/getFolderStructure.test.ts (15 tests) 103ms
+2026-10-14T16:50:38.1165376Z  ✓ src/utils/partUtils.test.ts (38 tests) 14ms
+2026-10-14T16:50:38.1409118Z  ✓ src/context/graph/render.test.ts (4 tests) 13ms
+2026-10-14T16:50:38.1548679Z  ✓ src/sandbox/utils/commandSafety.test.ts (23 tests) 105ms
+2026-10-14T16:50:38.4048331Z  ✓ src/output/json-formatter.test.ts (18 tests) 15ms
+2026-10-14T16:50:38.5438391Z  ✓ src/utils/tool-utils.test.ts (19 tests) 284ms
+2026-10-14T16:50:38.5651120Z  ✓ src/utils/ignorePatterns.test.ts (29 tests) 26ms
+2026-10-14T16:50:38.7548506Z  ✓ src/utils/bfsFileSearch.test.ts (16 tests) 119ms
+2026-10-14T16:50:38.8797199Z  ✓ src/routing/strategies/gemmaClassifierStrategy.test.ts (11 tests) 23ms
+2026-10-14T16:50:38.9308359Z  ✓ src/agents/a2a-errors.test.ts (22 tests) 15ms
+2026-10-14T16:50:39.0104708Z  ✓ src/utils/checkpointUtils.test.ts (15 tests) 30ms
+2026-10-14T16:50:39.1547452Z  ✓ src/agents/memory-leak-regression.test.ts (10 tests) 1984ms
+2026-10-14T16:50:39.1549382Z    ✓ GH-28537 / b/561554750 Memory Leak Regression Tests > History Collapsing Across Long-Running Turns > keeps history byte growth bounded across 50 simulated tool turns  1801ms
+2026-10-14T16:50:39.2104351Z  ✓ src/hooks/hookSystem.test.ts (8 tests) 111ms
+2026-10-14T16:50:39.3756305Z  ✓ src/voice/responseFormatter.test.ts (37 tests) 32ms
+2026-10-14T16:50:39.5428625Z  ✓ src/context/pipeline/contextWorkingBuffer.test.ts (9 tests) 14ms
+2026-10-14T16:50:39.5458401Z  ✓ src/telemetry/activity-monitor.test.ts (22 tests) 18ms
+2026-10-14T16:50:39.5709485Z  ✓ src/telemetry/startupProfiler.test.ts (25 tests) 39ms
+2026-10-14T16:50:39.5827400Z  ✓ src/utils/tokenCalculation.test.ts (16 tests) 21ms
+2026-10-14T16:50:39.6288841Z  ✓ src/services/worktreeService.test.ts (19 tests) 39ms
+2026-10-14T16:50:39.6762766Z  ✓ src/utils/llm-edit-fixer.test.ts (8 tests) 34ms
+2026-10-14T16:50:39.8645946Z  ✓ src/telemetry/semantic.test.ts (21 tests) 11ms
+2026-10-14T16:50:40.0270915Z  ✓ src/skills/skillLoader.test.ts (15 tests) 107ms
+2026-10-14T16:50:40.0279595Z  ✓ src/context/memoryContextManager.test.ts (8 tests) 19ms
+2026-10-14T16:50:40.0494310Z  ✓ src/telemetry/trace.test.ts (16 tests) 19ms
+2026-10-14T16:50:40.1793336Z  ✓ src/services/keychainService.test.ts (14 tests) 56ms
+2026-10-14T16:50:40.3008504Z  ✓ src/utils/ignorePathUtils.test.ts (25 tests) 20ms
+2026-10-14T16:50:40.4164221Z  ✓ src/agents/browser/mcpToolWrapper.test.ts (15 tests) 28ms
+2026-10-14T16:50:40.5562663Z  ✓ src/agents/browser/analyzeScreenshot.test.ts (8 tests) 21ms
+2026-10-14T16:50:40.5564369Z  ✓ src/context/system-tests/lifecycle.golden.test.ts (4 tests) 159ms
+2026-10-14T16:50:40.6491098Z  ✓ src/sandbox/macos/MacOsSandboxManager.test.ts (11 tests) 120ms
+2026-10-14T16:50:40.6723198Z  ✓ src/ide/detect-ide.test.ts (33 tests) 23ms
+2026-10-14T16:50:41.0441969Z  ✓ src/prompts/utils.test.ts (30 tests) 23ms
+2026-10-14T16:50:41.2233029Z  ✓ src/utils/extensionLoader.test.ts (11 tests | 1 skipped) 22ms
+2026-10-14T16:50:41.4998501Z  ✓ src/safety/checker-runner.test.ts (9 tests) 32ms
+2026-10-14T16:50:41.5417355Z  ✓ src/telemetry/conseca-logger.test.ts (10 tests) 33ms
+2026-10-14T16:50:41.5854447Z  ✓ src/services/modelConfig.integration.test.ts (10 tests) 11ms
+2026-10-14T16:50:42.0808601Z  ✓ src/policy/policy-updater.test.ts (10 tests) 148ms
+2026-10-14T16:50:42.1576961Z  ✓ src/core/coreToolHookTriggers.test.ts (7 tests) 15ms
+2026-10-14T16:50:42.4969149Z  ✓ src/telemetry/rate-limiter.test.ts (24 tests) 18ms
+2026-10-14T16:50:42.7558503Z  ✓ src/context/contextCompressionService.test.ts (5 tests) 16ms
+2026-10-14T16:50:42.7878360Z  ✓ src/tools/tools.test.ts (15 tests) 36ms
+2026-10-14T16:50:42.9258715Z  ✓ src/utils/terminalSerializer.test.ts (19 tests) 95ms
+2026-10-14T16:50:43.1549790Z  ✓ src/billing/billing.test.ts (36 tests) 12ms
+2026-10-14T16:50:43.2075770Z  ✓ src/utils/nextSpeakerChecker.test.ts (10 tests) 24ms
+2026-10-14T16:50:43.3148205Z  ✓ src/scheduler/tool-modifier.test.ts (6 tests) 16ms
+2026-10-14T16:50:43.4439448Z  ✓ src/tools/web-search.test.ts (9 tests) 104ms
+2026-10-14T16:50:43.5578455Z  ✓ src/agents/agent-tool.test.ts (9 tests) 34ms
+2026-10-14T16:50:43.5898676Z  ✓ src/utils/gitUtils.test.ts (9 tests) 191ms
+2026-10-14T16:50:43.6306802Z  ✓ src/utils/editCorrector.test.ts (20 tests) 10ms
+2026-10-14T16:50:43.6478537Z  ✓ src/safety/conseca/conseca.test.ts (10 tests) 13ms
+2026-10-14T16:50:43.7658369Z  ✓ src/scheduler/scheduler_hooks.test.ts (3 tests) 37ms
+2026-10-14T16:50:43.8488377Z  ✓ src/ide/process-utils.test.ts (11 tests) 16ms
+2026-10-14T16:50:43.9080303Z  ✓ src/agent/mock.test.ts (10 tests) 18ms
+2026-10-14T16:50:43.9998573Z  ✓ src/availability/modelAvailabilityService.test.ts (16 tests) 15ms
+2026-10-14T16:50:44.1140506Z  ✓ src/sandbox/utils/sandboxDenialUtils.test.ts (19 tests) 15ms
+2026-10-14T16:50:44.1510537Z  ✓ src/code_assist/admin/mcpUtils.test.ts (13 tests) 13ms
+2026-10-14T16:50:44.2864737Z  ✓ src/context/contextManager.test.ts (4 tests) 29ms
+2026-10-14T16:50:44.5806853Z  ✓ src/sandbox/macos/seatbeltArgsBuilder.test.ts (10 tests) 45ms
+2026-10-14T16:50:44.6421360Z  ✓ src/utils/trust.test.ts (14 tests) 25ms
+2026-10-14T16:50:44.7238753Z  ✓ src/routing/strategies/approvalModeStrategy.test.ts (11 tests) 16ms
+2026-10-14T16:50:44.7298308Z  ✓ src/tools/message-bus-integration.test.ts (6 tests) 81ms
+2026-10-14T16:50:44.7673990Z  ✓ src/tools/line-endings.test.ts (5 tests) 94ms
+2026-10-14T16:50:44.9581399Z  ✓ src/utils/secure-browser-launcher.test.ts (14 tests) 25ms
+2026-10-14T16:50:45.2468057Z  ✓ src/telemetry/file-exporters.test.ts (9 tests) 66ms
+2026-10-14T16:50:45.3018389Z  ✓ src/tools/read-mcp-resource.test.ts (6 tests) 24ms
+2026-10-14T16:50:45.3751775Z  ✓ src/agents/skill-extraction-agent.test.ts (7 tests) 12ms
+2026-10-14T16:50:45.4012723Z  ✓ src/services/fileDiscoveryService.symlink.test.ts (8 tests) 64ms
+2026-10-14T16:50:45.4776363Z  ✓ src/utils/summarizer.test.ts (8 tests) 130ms
+2026-10-14T16:50:45.6417661Z  ✓ src/prompts/planModeNonInteractive.test.ts (5 tests) 14ms
+2026-10-14T16:50:45.6548409Z  ✓ src/policy/workspace-policy.test.ts (3 tests) 4717ms
+2026-10-14T16:50:45.6549550Z    ✓ Workspace-Level Policies > should load workspace policies with correct priority (Tier 3)  2755ms
+2026-10-14T16:50:45.6551017Z    ✓ Workspace-Level Policies > should ignore workspace policies if workspacePoliciesDir is undefined  1044ms
+2026-10-14T16:50:45.6551986Z    ✓ Workspace-Level Policies > should load workspace policies and correctly transform to Tier 3  918ms
+2026-10-14T16:50:45.7098949Z  ✓ src/agent/content-utils.test.ts (24 tests) 15ms
+2026-10-14T16:50:46.0189843Z  ✓ src/utils/errorReporting.test.ts (6 tests) 55ms
+2026-10-14T16:50:46.0279652Z  ✓ src/mcp/google-auth-provider.test.ts (15 tests) 50ms
+2026-10-14T16:50:46.0328383Z  ✓ src/utils/environmentContext.test.ts (8 tests) 42ms
+2026-10-14T16:50:46.1218422Z  ✓ src/context/processors/stateSnapshotProcessor.test.ts (6 tests) 20ms
+2026-10-14T16:50:46.3553734Z  ✓ src/services/gcmTruncationReproduction.test.ts (4 tests) 276ms
+2026-10-14T16:50:46.4139422Z  ✓ src/utils/fsErrorMessages.test.ts (29 tests) 11ms
+2026-10-14T16:50:46.4147925Z  ✓ src/utils/channel.test.ts (22 tests) 19ms
+2026-10-14T16:50:46.6204160Z  ✓ src/agents/auth-provider/google-credentials-provider.test.ts (12 tests) 19ms
+2026-10-14T16:50:46.6443864Z  ✓ src/sandbox/utils/proactivePermissions.test.ts (11 tests) 15ms
+2026-10-14T16:50:46.6758388Z  ✓ src/tools/trackerTools.test.ts (7 tests) 319ms
+2026-10-14T16:50:46.7087185Z  ✓ src/routing/modelRouterService.test.ts (6 tests) 81ms
+2026-10-14T16:50:46.9019202Z  ✓ src/utils/gitIgnoreParser.test.ts (13 tests) 69ms
+2026-10-14T16:50:46.9689381Z  ✓ src/services/sandboxedFileSystemService.test.ts (5 tests) 17ms
+2026-10-14T16:50:46.9788412Z  ✓ src/telemetry/high-water-mark-tracker.test.ts (18 tests) 20ms
+2026-10-14T16:50:47.0737605Z  ✓ src/routing/strategies/compositeStrategy.test.ts (6 tests) 16ms
+2026-10-14T16:50:47.2261843Z  ✓ src/code_assist/codeAssist.test.ts (9 tests) 25ms
+2026-10-14T16:50:47.2745750Z  ✓ src/context/pipeline/orchestrator.test.ts (4 tests) 34ms
+2026-10-14T16:50:47.3238527Z  ✓ src/agents/agent-scheduler.test.ts (5 tests) 15ms
+2026-10-14T16:50:47.4002288Z  ✓ src/tools/confirmation-policy.test.ts (12 tests) 252ms
+2026-10-14T16:50:47.4552518Z  ✓ src/policy/integrity.test.ts (9 tests) 54ms
+2026-10-14T16:50:47.6209083Z  ✓ src/mcp/token-storage/keychain-token-storage.test.ts (15 tests) 24ms
+2026-10-14T16:50:47.6779237Z working stdout ✓ src/utils/stdio.test.ts (6 tests) 42ms
+2026-10-14T16:50:47.6820684Z  ✓ src/policy/stable-stringify.test.ts (21 tests) 15ms
+2026-10-14T16:50:47.7851432Z  ✓ src/tools/enter-plan-mode.test.ts (9 tests) 64ms
+2026-10-14T16:50:47.8128747Z  ✓ src/tools/mcp-compliance-transport.test.ts (8 tests) 12ms
+2026-10-14T16:50:47.8768516Z  ✓ src/utils/cache.test.ts (16 tests) 28ms
+2026-10-14T16:50:48.0628540Z  ✓ src/agents/browser/inputBlocker.test.ts (11 tests) 21ms
+2026-10-14T16:50:48.0778833Z  ✓ src/services/FolderTrustDiscoveryService.test.ts (8 tests) 72ms
+2026-10-14T16:50:48.1657263Z  ✓ src/agents/browser/snapshotSuperseder.test.ts (6 tests) 14ms
+2026-10-14T16:50:48.2288953Z  ✓ src/core/geminiChat_network_retry.test.ts (9 tests) 17071ms
+2026-10-14T16:50:48.2328432Z    ✓ GeminiChat Network Retries > should retry when a 503 ApiError occurs during stream iteration  1033ms
+2026-10-14T16:50:48.2368535Z    ✓ GeminiChat Network Retries > should retry on generic network error if retryFetchErrors is true  1008ms
+2026-10-14T16:50:48.2408855Z    ✓ GeminiChat Network Retries > should retry on SSL error during connection phase (ERR_SSL_SSLV3_ALERT_BAD_RECORD_MAC)  5931ms
+2026-10-14T16:50:48.2414309Z    ✓ GeminiChat Network Retries > should retry on ECONNRESET error during connection phase  6023ms
+2026-10-14T16:50:48.2416040Z    ✓ GeminiChat Network Retries > should retry on SSL error during stream iteration (mid-stream failure)  1031ms
+2026-10-14T16:50:48.2418463Z    ✓ GeminiChat Network Retries > should retry on OpenSSL 3.x SSL error during stream iteration (ERR_SSL_SSL/TLS_ALERT_BAD_RECORD_MAC)  1017ms
+2026-10-14T16:50:48.2420497Z    ✓ GeminiChat Network Retries > should retry on premature stream closure (ERR_STREAM_PREMATURE_CLOSE)  1015ms
+2026-10-14T16:50:48.2729399Z  ✓ src/commands/restore.test.ts (6 tests) 15ms
+2026-10-14T16:50:48.3016837Z  ✓ src/context/utils/adaptiveTokenCalculator.test.ts (7 tests) 13ms
+2026-10-14T16:50:48.4211955Z  ✓ src/utils/schemaValidator.test.ts (12 tests) 140ms
+2026-10-14T16:50:48.6629184Z  ✓ src/agents/auth-provider/api-key-provider.test.ts (12 tests) 15ms
+2026-10-14T16:50:48.7314744Z  ✓ src/telemetry/billingEvents.test.ts (18 tests) 23ms
+2026-10-14T16:50:48.7488576Z  ✓ src/utils/apiConversionUtils.test.ts (7 tests) 11ms
+2026-10-14T16:50:48.7500722Z  ✓ src/tools/diffOptions.test.ts (10 tests) 28ms
+2026-10-14T16:50:48.8328751Z  ✓ src/policy/utils.test.ts (19 tests) 13ms
+2026-10-14T16:50:49.0836257Z  ✓ src/core/prompts-substitution.test.ts (6 tests) 18ms
+2026-10-14T16:50:49.2018268Z  ✓ src/hooks/trustedHooks.test.ts (7 tests) 18ms
+2026-10-14T16:50:49.2758530Z  ✓ src/context/processors/stateSnapshotAsyncProcessor.test.ts (4 tests) 17ms
+2026-10-14T16:50:49.3002823Z  ✓ src/agents/auth-provider/value-resolver.test.ts (22 tests) 17ms
+2026-10-14T16:50:49.5184877Z  ✓ src/tools/activate-skill.test.ts (7 tests) 83ms
+2026-10-14T16:50:49.5276023Z  ✓ src/tools/complete-task.test.ts (12 tests) 98ms
+2026-10-14T16:50:49.5875508Z  ✓ src/mcp/sa-impersonation-provider.test.ts (8 tests) 27ms
+2026-10-14T16:50:49.8939031Z  ✓ src/utils/flashFallback.test.ts (6 tests) 37ms
+2026-10-14T16:50:49.9072135Z  ✓ src/sandbox/linux/LinuxSandboxManager.test.ts (5 tests) 19ms
+2026-10-14T16:50:50.0844474Z  ✓ src/config/scoped-config.test.ts (13 tests) 41ms
+2026-10-14T16:50:50.1039321Z  ✓ src/utils/process-utils.test.ts (8 tests) 20ms
+2026-10-14T16:50:50.3138360Z  ✓ src/config/config-agents-reload.test.ts (4 tests) 143ms
+2026-10-14T16:50:50.3488378Z  ✓ src/config/extensions/integrity.test.ts (11 tests) 22ms
+2026-10-14T16:50:50.5458593Z  ✓ src/skills/skillManagerAlias.test.ts (2 tests) 16ms
+2026-10-14T16:50:50.5488275Z  ✓ src/services/fileSystemService.test.ts (8 tests) 69ms
+2026-10-14T16:50:50.5656983Z  ✓ src/context/contextManager.incremental.test.ts (1 test) 9ms
+2026-10-14T16:50:50.6111106Z  ✓ src/mcp/token-storage/hybrid-token-storage.test.ts (8 tests) 19ms
+2026-10-14T16:50:50.8872300Z  ✓ src/agents/auth-provider/base-provider.test.ts (10 tests) 11ms
+2026-10-14T16:50:50.8884420Z  ✓ src/routing/strategies/fallbackStrategy.test.ts (5 tests) 9ms
+2026-10-14T16:50:50.9144653Z  ✓ src/utils/headless.test.ts (14 tests) 9ms
+2026-10-14T16:50:50.9788768Z  ✓ src/safety/context-builder.test.ts (7 tests) 16ms
+2026-10-14T16:50:50.9908723Z  ✓ src/tools/list-mcp-resources.test.ts (5 tests) 10ms
+2026-10-14T16:50:51.2678322Z  ✓ src/utils/path-validator.test.ts (17 tests) 9ms
+2026-10-14T16:50:51.2888307Z  ✓ src/code_assist/experiments/experiments_local.test.ts (5 tests) 46ms
+2026-10-14T16:50:51.3093383Z  ✓ src/utils/sessionOperations.test.ts (7 tests) 27ms
+2026-10-14T16:50:51.3374716Z  ✓ src/context/graph/fromGraph.test.ts (8 tests) 10ms
+2026-10-14T16:50:51.4736286Z  ✓ src/core/fakeContentGenerator.test.ts (7 tests) 13ms
+2026-10-14T16:50:51.6130586Z  ✓ src/config/injectionService.test.ts (10 tests) 11ms
+2026-10-14T16:50:51.6577837Z  ✓ src/mcp/token-storage/base-token-storage.test.ts (12 tests) 8ms
+2026-10-14T16:50:51.6638596Z  ✓ src/utils/authConsent.test.ts (7 tests) 14ms
+2026-10-14T16:50:51.9537715Z  ✓ src/utils/fastAckHelper.test.ts (9 tests) 30ms
+2026-10-14T16:50:51.9783703Z  ✓ src/availability/policyCatalog.test.ts (13 tests) 11ms
+2026-10-14T16:50:51.9857475Z  ✓ src/telemetry/activity-detector.test.ts (13 tests) 14ms
+2026-10-14T16:50:52.1045239Z  ✓ src/tools/topicTool.test.ts (9 tests) 63ms
+2026-10-14T16:50:52.3328398Z  ✓ src/core/apiKeyCredentialStorage.test.ts (8 tests) 27ms
+2026-10-14T16:50:52.3448556Z  ✓ src/safety/conseca/policy-enforcer.test.ts (5 tests) 22ms
+2026-10-14T16:50:52.5038829Z  ✓ src/tools/shell_proactive.test.ts (4 tests) 154ms
+2026-10-14T16:50:52.5501279Z  ✓ src/code_assist/experiments/client_metadata.test.ts (12 tests) 57ms
+2026-10-14T16:50:52.6724587Z  ✓ src/agents/utils.test.ts (12 tests) 9ms
+2026-10-14T16:50:52.7398454Z  ✓ src/context/processors/toolMaskingProcessor.test.ts (3 tests) 14ms
+2026-10-14T16:50:52.7678415Z  ✓ src/utils/sharedProjectThrottling.test.ts (4 tests) 9ms
+2026-10-14T16:50:52.8022155Z  ✓ src/utils/filesearch/ignore.test.ts (12 tests) 28ms
+2026-10-14T16:50:52.8747497Z  ✓ src/policy/shell-safety-regression.test.ts (11 tests) 110ms
+2026-10-14T16:50:52.9548533Z  ✓ src/utils/markdownUtils.test.ts (13 tests) 11ms
+2026-10-14T16:50:52.9572065Z  ✓ src/tools/tool-names.test.ts (9 tests) 10ms
+2026-10-14T16:50:53.0144772Z  ✓ src/context/system-tests/hysteresis.test.ts (2 tests) 1856ms
+2026-10-14T16:50:53.0146936Z    ✓ Context Manager Hysteresis Tests > should block consolidation when deficit is below coalescing threshold  628ms
+2026-10-14T16:50:53.0148485Z    ✓ Context Manager Hysteresis Tests > should track growth from the new baseline after consolidation  1226ms
+2026-10-14T16:50:53.0285618Z  ✓ src/agents/registry_acknowledgement.test.ts (4 tests) 36ms
+2026-10-14T16:50:53.0689265Z  ✓ src/tools/shellBackgroundTools.integration.test.ts (2 tests) 2604ms
+2026-10-14T16:50:53.0728781Z    ✓ Background Tools Integration > should support interaction cycle: start background -> list -> read logs  2116ms
+2026-10-14T16:50:53.0758987Z    ✓ Background Tools Integration > should delete the temporary directory when a short-lived background shell command exits  486ms
+2026-10-14T16:50:53.1620056Z  ✓ src/availability/fallbackIntegration.test.ts (3 tests) 14ms
+2026-10-14T16:50:53.1624311Z  ✓ src/utils/tool-visibility.test.ts (13 tests) 8ms
+2026-10-14T16:50:53.2998439Z  ✓ src/utils/messageInspectors.test.ts (11 tests) 7ms
+2026-10-14T16:50:53.3240927Z  ✓ src/tools/jit-context.test.ts (8 tests) 12ms
+2026-10-14T16:50:53.3548338Z  ✓ src/utils/ignoreFileParser.test.ts (7 tests) 31ms
+2026-10-14T16:50:53.4278620Z  ✓ src/context/graph/toGraph.test.ts (2 tests) 12ms
+2026-10-14T16:50:53.4848401Z  ✓ src/services/trackerService.test.ts (5 tests) 44ms
+2026-10-14T16:50:53.5194610Z  ✓ src/tools/write-todos.test.ts (9 tests) 53ms
+2026-10-14T16:50:53.6008733Z  ✓ src/agents/auth-provider/http-provider.test.ts (7 tests) 12ms
+2026-10-14T16:50:53.6980242Z  ✓ src/sandbox/windows/commandSafety.test.ts (10 tests) 17ms
+2026-10-14T16:50:53.7314129Z  ✓ src/utils/browserConsent.test.ts (5 tests) 13ms
+2026-10-14T16:50:53.7524043Z  ✓ src/utils/planUtils.test.ts (8 tests) 20ms
+2026-10-14T16:50:53.7705098Z  ✓ src/code_assist/experiments/experiments.test.ts (4 tests) 35ms
+2026-10-14T16:50:53.8007553Z  ✓ src/routing/strategies/defaultStrategy.test.ts (4 tests) 7ms
+2026-10-14T16:50:53.8188831Z  ✓ src/context/processors/nodeDistillationProcessor.test.ts (2 tests) 13ms
+2026-10-14T16:50:54.0705745Z  ✓ src/utils/filesearch/crawlCache.test.ts (9 tests) 19ms
+2026-10-14T16:50:54.1101863Z  ✓ src/sandbox/utils/fsUtils.test.ts (5 tests) 7ms
+2026-10-14T16:50:54.1407054Z  ✓ src/tools/base-tool-invocation.test.ts (2 tests) 12ms
+2026-10-14T16:50:54.1768380Z  ✓ src/utils/ragLogger.test.ts (5 tests) 13ms
+2026-10-14T16:50:54.2072543Z  ✓ src/utils/errorParsing.test.ts (11 tests) 8ms
+2026-10-14T16:50:54.2578677Z  ✓ src/services/fileSystemService.atomic.test.ts (5 tests) 119ms
+2026-10-14T16:50:54.3124312Z  ✓ src/telemetry/semantic.truncation.test.ts (4 tests) 8ms
+2026-10-14T16:50:54.3533917Z  ✓ src/prompts/snippets-memory.test.ts (5 tests) 6ms
+2026-10-14T16:50:54.4958918Z  ✓ src/agent/tool-display-utils.test.ts (9 tests) 9ms
+2026-10-14T16:50:54.5000689Z  ✓ src/core/recordingContentGenerator.test.ts (4 tests) 11ms
+2026-10-14T16:50:54.5213581Z  ✓ src/core/localLiteRtLmClient.test.ts (5 tests) 17ms
+2026-10-14T16:50:54.5738411Z  ✓ src/utils/agent-sanitization-utils.test.ts (8 tests) 11ms
+2026-10-14T16:50:54.6758450Z  ✓ src/context/system-tests/powerUserLifecycle.test.ts (1 test) 42ms
+2026-10-14T16:50:54.7108289Z  ✓ src/utils/buildFileUtils.test.ts (7 tests) 20ms
+2026-10-14T16:50:54.7128765Z  ✓ src/utils/pathCorrector.test.ts (4 tests) 18ms
+2026-10-14T16:50:54.7404221Z  ✓ src/services/modelConfig.golden.test.ts (2 tests) 12ms
+2026-10-14T16:50:54.8557299Z  ✓ src/context/utils/formatNodesForLlm.test.ts (5 tests) 6ms
+2026-10-14T16:50:54.9328384Z  ✓ src/utils/installationManager.test.ts (4 tests) 10ms
+2026-10-14T16:50:54.9632466Z  ✓ src/utils/pathMutex.test.ts (5 tests) 91ms
+2026-10-14T16:50:55.0488593Z  ✓ src/prompts/prompt-registry.test.ts (7 tests) 22ms
+2026-10-14T16:50:55.0519451Z  ✓ src/core/agentChatHistory.test.ts (11 tests) 7ms
+2026-10-14T16:50:55.1846827Z  ✓ src/context/processors/nodeTruncationProcessor.test.ts (2 tests) 9ms
+2026-10-14T16:50:55.2400955Z  ✓ src/utils/delay.test.ts (7 tests) 19ms
+2026-10-14T16:50:55.3515912Z  ✓ src/context/processors/rollingSummaryProcessor.test.ts (3 tests) 9ms
+2026-10-14T16:50:55.3539192Z  ✓ src/config/storageMigration.test.ts (5 tests) 27ms
+2026-10-14T16:50:55.4016064Z  ✓ src/context/contextManager.barrier.test.ts (1 test) 33ms
+2026-10-14T16:50:55.4937805Z  ✓ src/context/graph/mapper.test.ts (1 test) 9ms
+2026-10-14T16:50:55.5542997Z  ✓ src/tools/definitions/coreToolsModelSnapshots.test.ts (38 tests) 24ms
+2026-10-14T16:50:55.6867735Z  ✓ src/context/processors/blobDegradationProcessor.test.ts (3 tests) 12ms
+2026-10-14T16:50:55.7201698Z  ✓ src/context/tracer.test.ts (2 tests) 23ms
+2026-10-14T16:50:55.8588855Z  ✓ src/agents/acknowledgedAgents.test.ts (4 tests) 29ms
+2026-10-14T16:50:55.9044915Z  ✓ src/config/flashFallback.test.ts (6 tests) 23ms
+2026-10-14T16:50:55.9107979Z  ✓ src/sandbox/windows/windowsSandboxDenialUtils.test.ts (8 tests) 8ms
+2026-10-14T16:50:56.0359170Z  ✓ src/utils/debugLogger.test.ts (6 tests) 14ms
+2026-10-14T16:50:56.0968628Z  ✓ src/utils/envExpansion.test.ts (15 tests) 12ms
+2026-10-14T16:50:56.1063833Z  ✓ src/context/contextManager.hotstart.test.ts (3 tests) 33ms
+2026-10-14T16:50:56.1195420Z  ✓ src/policy/shell-substitution.test.ts (4 tests) 88ms
+2026-10-14T16:50:56.2251660Z  ✓ src/utils/fileDiffUtils.test.ts (7 tests) 7ms
+2026-10-14T16:50:56.2421231Z  ✓ src/config/memory.test.ts (10 tests) 9ms
+2026-10-14T16:50:56.2843724Z  ✓ src/context/config/configLoader.test.ts (5 tests) 67ms
+2026-10-14T16:50:56.4569929Z  ✓ src/utils/customHeaderUtils.test.ts (11 tests) 11ms
+2026-10-14T16:50:56.4598222Z  ✓ src/routing/strategies/overrideStrategy.test.ts (4 tests) 6ms
+2026-10-14T16:50:56.4838432Z  ↓ src/services/shellExecutionService.windows.integration.test.ts (5 tests | 5 skipped)
+2026-10-14T16:50:56.5698518Z  ✓ src/core/modelMappingContentGenerator.test.ts (6 tests) 10ms
+2026-10-14T16:50:56.6092689Z  ✓ src/mcp/mcp-oauth-provider.test.ts (1 test) 8ms
+2026-10-14T16:50:56.6299461Z  ✓ src/utils/thoughtUtils.test.ts (11 tests) 9ms
+2026-10-14T16:50:56.9035541Z  ✓ src/context/toolDistillationService.test.ts (4 tests) 12ms
+2026-10-14T16:50:56.9434383Z  ✓ src/utils/cruxKeyLeak.test.ts (4 tests) 175ms
+2026-10-14T16:50:56.9704656Z  ✓ src/utils/safeJsonStringify.test.ts (8 tests) 7ms
+2026-10-14T16:50:57.0255102Z  ✓ src/tools/get-internal-docs.test.ts (4 tests) 96ms
+2026-10-14T16:50:57.0494071Z  ✓ src/context/utils/contextTokenCalculator.test.ts (3 tests) 6ms
+2026-10-14T16:50:57.3088999Z  ✓ src/agents/cli-help-agent.test.ts (5 tests) 6ms
+2026-10-14T16:50:57.3548173Z  ✓ src/tools/memoryTool.test.ts (7 tests) 8ms
+2026-10-14T16:50:57.3908130Z  ✓ src/resources/resource-registry.test.ts (4 tests) 6ms
+2026-10-14T16:50:57.4338421Z  ✓ src/tools/diff-utils.test.ts (7 tests) 7ms
+2026-10-14T16:50:57.4628748Z  ✓ src/agents/auth-provider/credential-leak-prevention.test.ts (2 tests) 8ms
+2026-10-14T16:50:57.6430377Z  ✓ src/hooks/runtimeHooks.test.ts (4 tests) 32ms
+2026-10-14T16:50:57.6916351Z  ✓ src/utils/deadlineTimer.test.ts (5 tests) 12ms
+2026-10-14T16:50:57.7212753Z  ✓ src/safety/conseca/policy-generator.test.ts (3 tests) 19ms
+2026-10-14T16:50:57.8298337Z  ✓ src/utils/toolCallContext.test.ts (4 tests) 16ms
+2026-10-14T16:50:57.8847345Z  ✓ src/policy/sandboxPolicyManager.test.ts (4 tests) 16ms
+2026-10-14T16:50:57.9097518Z  ✓ src/tools/definitions/resolver.test.ts (4 tests) 6ms
+2026-10-14T16:50:58.0223947Z  ✓ src/utils/version.test.ts (4 tests) 10ms
+2026-10-14T16:50:58.0778787Z  ✓ src/utils/approvalModeUtils.test.ts (7 tests) 6ms
+2026-10-14T16:50:58.2206208Z  ✓ src/utils/language-detection.test.ts (5 tests) 9ms
+2026-10-14T16:50:58.3648206Z  ✓ src/utils/package.test.ts (4 tests) 15ms
+2026-10-14T16:50:58.4232912Z  ✓ src/tools/omissionPlaceholderDetector.test.ts (6 tests) 6ms
+2026-10-14T16:50:58.4858743Z  ↓ src/services/shellExecutionService.pty.integration.test.ts (1 test | 1 skipped)
+2026-10-14T16:50:58.7301682Z  ✓ src/utils/errors_timeout.test.ts (3 tests) 5ms
+2026-10-14T16:50:58.7780309Z  ✓ src/context/pipeline/environmentImpl.test.ts (1 test) 6ms
+2026-10-14T16:50:58.8301288Z  ✓ src/utils/filesearch/result-cache.test.ts (3 tests) 4ms
+2026-10-14T16:50:58.9158361Z  ✓ src/agents/generalist-agent.test.ts (2 tests) 22ms
+2026-10-14T16:50:58.9324883Z  ✓ src/utils/filesearch/fileWatcher.test.ts (6 tests) 7458ms
+2026-10-14T16:50:58.9348290Z    ✓ FileWatcher > should emit relative add and unlink events for files  2917ms
+2026-10-14T16:50:58.9378377Z    ✓ FileWatcher > should skip ignored paths  1713ms
+2026-10-14T16:50:58.9408234Z    ✓ FileWatcher > should emit addDir and unlinkDir events for directories  605ms
+2026-10-14T16:50:58.9442426Z    ✓ FileWatcher > should normalize nested paths without leading dot prefix  558ms
+2026-10-14T16:50:58.9447936Z    ✓ FileWatcher > should not emit new events after stop is called  1107ms
+2026-10-14T16:50:58.9449452Z    ✓ FileWatcher > should be safe to start and stop multiple times  556ms
+2026-10-14T16:50:59.1158620Z  ✓ src/utils/shell-utils.integration.test.ts (3 tests) 208ms
+2026-10-14T16:50:59.1601809Z  ✓ src/prompts/mcp-prompts.test.ts (2 tests) 6ms
+2026-10-14T16:50:59.2943096Z  ✓ src/services/sessionScratchpadUtils.test.ts (3 tests) 19ms
+2026-10-14T16:50:59.3177118Z  ✓ src/context/pipeline/inbox.test.ts (2 tests) 6ms
+2026-10-14T16:50:59.3420063Z  ✓ src/agents/browser/mcpToolWrapperConfirmation.test.ts (2 tests) 18ms
+2026-10-14T16:50:59.3708378Z  ✓ src/config/path-validation.test.ts (2 tests) 13ms
+2026-10-14T16:50:59.4563395Z  ✓ src/core/tokenLimits.test.ts (5 tests) 7ms
+2026-10-14T16:50:59.5768418Z  ✓ src/telemetry/heap-snapshot.test.ts (2 tests) 12ms
+2026-10-14T16:50:59.6314610Z  ✓ src/telemetry/telemetry-utils.test.ts (6 tests) 5ms
+2026-10-14T16:50:59.6828598Z  ✓ src/utils/cryptoUtils.test.ts (4 tests) 6ms
+2026-10-14T16:50:59.6829890Z  ✓ src/utils/modelUtils.test.ts (3 tests) 4ms
+2026-10-14T16:50:59.6918878Z  ✓ src/voice/whisperTranscriptionProvider.test.ts (1 test) 5ms
+2026-10-14T16:50:59.7503809Z  ✓ src/agents/codebase-investigator.test.ts (4 tests) 7ms
+2026-10-14T16:50:59.8036911Z  ✓ src/utils/checks.test.ts (3 tests) 7ms
+2026-10-14T16:50:59.9057916Z  ✓ src/utils/formatters.test.ts (4 tests) 6ms
+2026-10-14T16:50:59.9555586Z  ✓ src/commands/init.test.ts (2 tests) 7ms
+2026-10-14T16:51:00.0112692Z  ✓ src/commands/extensions.test.ts (1 test) 4ms
+2026-10-14T16:51:00.0428066Z  ✓ src/index.test.ts (1 test) 3ms
+2026-10-14T16:51:00.1762935Z  ✓ src/policy/core-tools-mapping.test.ts (2 tests) 119ms
+2026-10-14T16:51:00.2751671Z  ✓ src/scheduler/scheduler_waiting_callback.test.ts (1 test) 29ms
+2026-10-14T16:51:00.5868138Z  ✓ src/config/sandbox-integration.test.ts (1 test) 11ms
+2026-10-14T16:51:00.6239882Z  ✓ src/telemetry/telemetry.test.ts (2 tests) 24ms
+2026-10-14T16:51:00.6451614Z  ✓ src/policy/topic-policy.test.ts (3 tests) 41ms
+2026-10-14T16:51:01.1685118Z  ✓ src/safety/registry.test.ts (4 tests) 4ms
+2026-10-14T16:51:01.3558956Z  ✓ src/config/trackerFeatureFlag.test.ts (3 tests) 121ms
+2026-10-14T16:51:01.6590380Z  ✓ src/safety/conseca/integration.test.ts (1 test) 3ms
+2026-10-14T16:51:10.2264239Z  ✓ src/telemetry/metrics.test.ts (95 tests) 53254ms
+2026-10-14T16:51:10.2265215Z    ✓ Telemetry Metrics > recordFlickerFrame > does not record metrics if not initialized  1636ms
+2026-10-14T16:51:10.2266318Z    ✓ Telemetry Metrics > recordFlickerFrame > records a flicker frame event when initialized  1230ms
+2026-10-14T16:51:10.2267680Z    ✓ Telemetry Metrics > recordExitFail > does not record metrics if not initialized  1055ms
+2026-10-14T16:51:10.2268708Z    ✓ Telemetry Metrics > recordExitFail > records a exit fail event when initialized  1107ms
+2026-10-14T16:51:10.2269569Z    ✓ Telemetry Metrics > recordSlowRender > does not record metrics if not initialized  837ms
+2026-10-14T16:51:10.2270431Z    ✓ Telemetry Metrics > recordSlowRender > records a slow render event when initialized  867ms
+2026-10-14T16:51:10.2271291Z    ✓ Telemetry Metrics > recordPlanExecution > does not record metrics if not initialized  843ms
+2026-10-14T16:51:10.2272162Z    ✓ Telemetry Metrics > recordPlanExecution > records a plan execution event when initialized  797ms
+2026-10-14T16:51:10.2273039Z    ✓ Telemetry Metrics > initializeMetrics > should apply common attributes including email  753ms
+2026-10-14T16:51:10.2273951Z    ✓ Telemetry Metrics > recordChatCompressionMetrics > does not record metrics if not initialized  866ms
+2026-10-14T16:51:10.2274955Z    ✓ Telemetry Metrics > recordChatCompressionMetrics > records token compression with the correct attributes  983ms
+2026-10-14T16:51:10.2275926Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should not record metrics if not initialized  967ms
+2026-10-14T16:51:10.2277232Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'input' type with 100 tokens for model 'gemini-pro'  724ms
+2026-10-14T16:51:10.2278977Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'output' type with 50 tokens for model 'gemini-pro'  740ms
+2026-10-14T16:51:10.2280063Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'thought' type with 25 tokens for model 'gemini-pro'  761ms
+2026-10-14T16:51:10.2281119Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'cache' type with 75 tokens for model 'gemini-pro'  616ms
+2026-10-14T16:51:10.2282178Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'tool' type with 125 tokens for model 'gemini-pro'  422ms
+2026-10-14T16:51:10.2283304Z    ✓ Telemetry Metrics > recordTokenUsageMetrics > should record token usage for 'input' type with 200 tokens for model 'gemini-different-model'  422ms
+2026-10-14T16:51:10.2284313Z    ✓ Telemetry Metrics > recordLinesChanged metric > should not record lines added/removed if not initialized  512ms
+2026-10-14T16:51:10.2285391Z    ✓ Telemetry Metrics > recordLinesChanged metric > should record lines added with function_name after initialization  961ms
+2026-10-14T16:51:10.2286363Z    ✓ Telemetry Metrics > recordLinesChanged metric > should record lines removed with function_name after initialization  910ms
+2026-10-14T16:51:10.2289376Z    ✓ Telemetry Metrics > recordFileOperationMetric > 'should not record metrics if not init…'  974ms
+2026-10-14T16:51:10.2290261Z    ✓ Telemetry Metrics > recordFileOperationMetric > 'should record file creation with all …'  860ms
+2026-10-14T16:51:10.2291054Z    ✓ Telemetry Metrics > recordFileOperationMetric > 'should record file read with minimal …'  832ms
+2026-10-14T16:51:10.2291827Z    ✓ Telemetry Metrics > recordFileOperationMetric > 'should record file update with some a…'  925ms
+2026-10-14T16:51:10.2292590Z    ✓ Telemetry Metrics > recordFileOperationMetric > 'should record file update with no opt…'  926ms
+2026-10-14T16:51:10.2293380Z    ✓ Telemetry Metrics > recordModelRoutingMetrics > should not record metrics if not initialized  1013ms
+2026-10-14T16:51:10.2294267Z    ✓ Telemetry Metrics > recordModelRoutingMetrics > should record latency for a successful routing decision  892ms
+2026-10-14T16:51:10.2295197Z    ✓ Telemetry Metrics > recordModelRoutingMetrics > should record latency and failure for a failed routing decision  796ms
+2026-10-14T16:51:10.2296286Z    ✓ Telemetry Metrics > recordModelRoutingMetrics > should truncate long reasoning and error_message when GEMINI_STRICT_TELEMETRY_LIMITS is true  823ms
+2026-10-14T16:51:10.2297797Z    ✓ Telemetry Metrics > recordModelRoutingMetrics > should NOT truncate long reasoning and error_message when GEMINI_STRICT_TELEMETRY_LIMITS is false or unset  878ms
+2026-10-14T16:51:10.2298793Z    ✓ Telemetry Metrics > recordAgentRunMetrics > should not record metrics if not initialized  1011ms
+2026-10-14T16:51:10.2299504Z    ✓ Telemetry Metrics > recordAgentRunMetrics > should record agent run metrics  917ms
+2026-10-14T16:51:10.2300250Z    ✓ Telemetry Metrics > recordOnboardingSuccess > should not record metrics if not initialized  976ms
+2026-10-14T16:51:10.2301101Z    ✓ Telemetry Metrics > recordOnboardingSuccess > should record onboarding success metrics without duration  1035ms
+2026-10-14T16:51:10.2301978Z    ✓ Telemetry Metrics > recordOnboardingSuccess > should record onboarding success metrics with duration  1024ms
+2026-10-14T16:51:10.2303056Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientTokenUsage > should not record metrics when not initialized  990ms
+2026-10-14T16:51:10.2304616Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientTokenUsage > should record input token usage with correct attributes  1093ms
+2026-10-14T16:51:10.2305970Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientTokenUsage > should record output token usage with correct attributes  716ms
+2026-10-14T16:51:10.2307835Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientTokenUsage > should record token usage with optional attributes  726ms
+2026-10-14T16:51:10.2309121Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientOperationDuration > should not record metrics when not initialized  814ms
+2026-10-14T16:51:10.2310531Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientOperationDuration > should record successful operation duration with correct attributes  1070ms
+2026-10-14T16:51:10.2311958Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientOperationDuration > should record failed operation duration with error type  1065ms
+2026-10-14T16:51:10.2313320Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientOperationDuration > should record operation duration with server details  1009ms
+2026-10-14T16:51:10.2314768Z    ✓ Telemetry Metrics > OpenTelemetry GenAI Semantic Convention Metrics > recordGenAiClientOperationDuration > should handle minimal required attributes  917ms
+2026-10-14T16:51:10.2316066Z    ✓ Telemetry Metrics > Performance Monitoring Metrics > recordStartupPerformance > should not record metrics when performance monitoring is disabled  932ms
+2026-10-14T16:51:10.2317539Z    ✓ Telemetry Metrics > Performance Monitoring Metrics > recordStartupPerformance > should record startup performance with phase and details  871ms
+2026-10-14T16:51:10.2318667Z    ✓ Telemetry Metrics > Performance Monitoring Metrics > recordStartupPerformance > should record startup performance without details  1038ms
+2026-10-14T16:51:10.2319839Z    ✓ Telemetry Metrics > Performance Monitoring Metrics > recordStartupPerformance > should handle floating-point duration values from performance.now()  362ms
+2026-10-14T16:51:10.2320928Z    ✓ Telemetry Metrics > Performance Monitoring Metrics > recordMemoryUsage > should record memory usage for 'heap_used'  327ms
+2026-10-14T16:51:10.3388683Z 
+2026-10-14T16:51:10.3418718Z  Test Files  418 passed | 2 skipped (420)
+2026-10-14T16:51:10.3446323Z       Tests  8340 passed | 57 skipped (8397)
+2026-10-14T16:51:10.3446968Z    Start at  16:50:11
+2026-10-14T16:51:10.3457321Z    Duration  59.23s (transform 28.29s, setup 11.66s, collect 466.10s, tests 146.71s, environment 123ms, prepare 40.89s)
+2026-10-14T16:51:10.3457852Z 
+2026-10-14T16:51:11.9265110Z JUNIT report written to /home/runner/work/gemini-cli/gemini-cli/packages/core/junit.xml
+2026-10-14T16:51:12.0466986Z 
+2026-10-14T16:51:12.0467791Z > @google/gemini-cli-a2a-server@0.66.0-nightly.20261013.g204db94ae test:ci
+2026-10-14T16:51:12.0468607Z > vitest run --coverage --coverage.enabled=false
+2026-10-14T16:51:12.0468950Z 
+2026-10-14T16:51:12.3117706Z 
+2026-10-14T16:51:12.3118806Z  RUN  v3.1.1 /home/runner/work/gemini-cli/gemini-cli/packages/a2a-server
+2026-10-14T16:51:12.3119208Z 
+2026-10-14T16:51:13.3952466Z  ✓ src/agent/executor.test.ts (10 tests) 340ms
+2026-10-14T16:51:17.6527889Z  ✓ src/commands/command-registry.test.ts (6 tests) 9ms
+2026-10-14T16:51:17.6676923Z  ✓ src/commands/extensions.test.ts (8 tests) 7ms
+2026-10-14T16:51:17.6679851Z  ✓ src/commands/memory.test.ts (4 tests) 6ms
+2026-10-14T16:51:17.6800941Z  ✓ src/persistence/gcs.test.ts (12 tests) 31ms
+2026-10-14T16:51:17.7125217Z  ✓ src/config/settings.test.ts (15 tests) 41ms
+2026-10-14T16:51:17.7300534Z  ✓ src/config/rce_vulnerability.test.ts (3 tests) 11ms
+2026-10-14T16:51:17.7368025Z  ✓ src/commands/restore.test.ts (6 tests) 10ms
+2026-10-14T16:51:17.7608225Z  ✓ src/commands/init.test.ts (5 tests) 26ms
+2026-10-14T16:51:17.7631555Z  ✓ src/agent/race-condition.test.ts (3 tests) 40ms
+2026-10-14T16:51:17.7883928Z  ✓ src/config/workspace_trust.test.ts (4 tests) 83ms
+2026-10-14T16:51:17.8048480Z  ✓ src/config/config.test.ts (35 tests) 135ms
+2026-10-14T16:51:17.8252150Z working stderr(node:13909) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 model-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8264375Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-14T16:51:17.8267529Z (node:13909) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 memory-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8271167Z (node:13909) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 approval-mode-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8274446Z (node:13909) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 mcp-progress listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8398050Z (node:13908) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 model-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8406812Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-14T16:51:17.8408142Z  ✓ src/agent/task-event-driven.test.ts (18 tests) 107ms
+2026-10-14T16:51:17.8409495Z  ✓ src/agent/task.test.ts (20 tests) 107ms
+2026-10-14T16:51:17.8422401Z (node:13908) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 memory-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8423985Z  ✓ src/http/endpoints.test.ts (6 tests) 117ms
+2026-10-14T16:51:17.8426319Z (node:13908) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 approval-mode-changed listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:17.8431301Z (node:13908) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 mcp-progress listeners added to [CoreEventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-10-14T16:51:18.2180934Z  ✓ src/http/app.test.ts (22 tests) 194ms
+2026-10-14T16:51:18.2470815Z 
+2026-10-14T16:51:18.2475125Z  Test Files  16 passed (16)
+2026-10-14T16:51:18.2475718Z       Tests  177 passed (177)
+2026-10-14T16:51:18.2476163Z    Start at  16:51:12
+2026-10-14T16:51:18.2479899Z    Duration  5.93s (transform 4.50s, setup 0ms, collect 75.29s, tests 1.27s, environment 4ms, prepare 1.72s)
+2026-10-14T16:51:18.2480627Z 
+2026-10-14T16:51:18.3062170Z JUNIT report written to /home/runner/work/gemini-cli/gemini-cli/packages/a2a-server/junit.xml
+2026-10-14T16:51:18.3464039Z 
+2026-10-14T16:51:18.3464729Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae test:ci
+2026-10-14T16:51:18.3465403Z > vitest run --coverage --coverage.enabled=false
+2026-10-14T16:51:18.3465675Z 
+2026-10-14T16:51:18.6230480Z 
+2026-10-14T16:51:18.6231270Z  RUN  v3.2.4 /home/runner/work/gemini-cli/gemini-cli/packages/vscode-ide-companion
+2026-10-14T16:51:18.6232144Z 
+2026-10-14T16:51:19.0948060Z  ✓ src/open-files-manager.test.ts (17 tests) 29ms
+2026-10-14T16:51:22.5040581Z  ✓ src/diff-manager.test.ts (9 tests) 13ms
+2026-10-14T16:51:22.6033126Z  ✓ src/extension.test.ts (12 tests) 110ms
+2026-10-14T16:51:22.8566378Z  ✓ src/ide-server.test.ts (25 tests | 1 skipped) 370ms
+2026-10-14T16:51:22.8828837Z 
+2026-10-14T16:51:22.8832484Z  Test Files  4 passed (4)
+2026-10-14T16:51:22.8833222Z       Tests  62 passed | 1 skipped (63)
+2026-10-14T16:51:22.8833818Z    Start at  16:51:18
+2026-10-14T16:51:22.8838222Z    Duration  4.26s (transform 1.94s, setup 0ms, collect 10.79s, tests 523ms, environment 1ms, prepare 418ms)
+2026-10-14T16:51:22.8838962Z 
+2026-10-14T16:51:23.1070044Z 
+2026-10-14T16:51:23.1070892Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae test:scripts
+2026-10-14T16:51:23.1071668Z > vitest run --config ./scripts/tests/vitest.config.ts
+2026-10-14T16:51:23.1072026Z 
+2026-10-14T16:51:23.3920962Z 
+2026-10-14T16:51:23.3921597Z  RUN  v3.2.4 /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:51:23.3922396Z 
+2026-10-14T16:51:23.9827351Z  ✓ scripts/tests/tool-log-formatter.test.ts (15 tests) 7ms
+2026-10-14T16:51:23.9842760Z stdout | scripts/tests/telemetry_gcp.test.ts > telemetry_gcp.js > should not set GOOGLE_APPLICATION_CREDENTIALS when env var is not set
+2026-10-14T16:51:23.9843863Z ✨ Starting Local Telemetry Exporter for Google Cloud ✨
+2026-10-14T16:51:23.9844370Z ✅ Using OTLP Google Cloud Project ID: test-project
+2026-10-14T16:51:23.9844621Z 
+2026-10-14T16:51:23.9844912Z 🔑 Please ensure you are authenticated with Google Cloud:
+2026-10-14T16:51:23.9845720Z   - Run `gcloud auth application-default login` OR ensure `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to a valid service account key.
+2026-10-14T16:51:23.9846843Z   - The account needs "Cloud Trace Agent", "Monitoring Metric Writer", and "Logs Writer" roles.
+2026-10-14T16:51:23.9847204Z 
+2026-10-14T16:51:23.9847831Z stdout | scripts/tests/telemetry_gcp.test.ts > telemetry_gcp.js > should not set GOOGLE_APPLICATION_CREDENTIALS when env var is not set
+2026-10-14T16:51:23.9848541Z 🧹 Cleaning up old processes and logs...
+2026-10-14T16:51:23.9848943Z ✅ Stopped existing otelcol-contrib process.
+2026-10-14T16:51:23.9849328Z ✅ Deleted old GCP collector log.
+2026-10-14T16:51:23.9849779Z 📄 Wrote OTEL collector config to /tmp/otel/collector-gcp.yaml
+2026-10-14T16:51:23.9850370Z 🚀 Starting OTEL collector for GCP... Logs: /tmp/otel/collector-gcp.log
+2026-10-14T16:51:23.9850919Z ⏳ Waiting for OTEL collector to start (PID: 123)...
+2026-10-14T16:51:23.9851265Z 
+2026-10-14T16:51:23.9852198Z stdout | scripts/tests/telemetry_gcp.test.ts > telemetry_gcp.js > should not set GOOGLE_APPLICATION_CREDENTIALS when env var is not set
+2026-10-14T16:51:23.9853438Z ✅ OTEL collector started successfully on port 4317.
+2026-10-14T16:51:23.9853787Z 
+2026-10-14T16:51:23.9854107Z ✨ Local OTEL collector for GCP is running.
+2026-10-14T16:51:23.9854437Z 
+2026-10-14T16:51:23.9854964Z 🚀 To send telemetry, run the Gemini CLI in a separate terminal window.
+2026-10-14T16:51:23.9855431Z 
+2026-10-14T16:51:23.9855942Z 📄 Collector logs are being written to: /tmp/otel/collector-gcp.log
+2026-10-14T16:51:23.9857253Z 📄 Tail collector logs in another terminal: tail -f /tmp/otel/collector-gcp.log
+2026-10-14T16:51:23.9857832Z 
+2026-10-14T16:51:23.9858247Z 📊 View your telemetry data in Google Cloud Console:
+2026-10-14T16:51:23.9859357Z    - Logs: https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Ftest-project%2Flogs%2Fgemini_cli%22?project=test-project
+2026-10-14T16:51:23.9860245Z    - Metrics: https://console.cloud.google.com/monitoring/metrics-explorer?project=test-project
+2026-10-14T16:51:23.9860910Z    - Traces: https://console.cloud.google.com/traces/list?project=test-project
+2026-10-14T16:51:23.9861225Z 
+2026-10-14T16:51:23.9861340Z Press Ctrl+C to exit.
+2026-10-14T16:51:23.9861481Z 
+2026-10-14T16:51:23.9912089Z  ✓ scripts/tests/telemetry_gcp.test.ts (1 test) 67ms
+2026-10-14T16:51:24.0158076Z  ✓ scripts/tests/eval-report.test.ts (14 tests) 27ms
+2026-10-14T16:51:24.0501868Z  ✓ scripts/tests/autogen.test.ts (10 tests) 5ms
+2026-10-14T16:51:24.2079795Z Options:
+2026-10-14T16:51:24.2080563Z       --version      Show version number                               [boolean]
+2026-10-14T16:51:24.2081613Z       --original-pr  The original PR number to comment on               [number]
+2026-10-14T16:51:24.2082578Z       --exit-code    Exit code from patch creation step                 [number]
+2026-10-14T16:51:24.2083395Z       --commit       The commit SHA being patched                       [string]
+2026-10-14T16:51:24.2084102Z       --channel      The channel (stable or preview)
+2026-10-14T16:51:24.2084747Z                                          [string] [choices: "stable", "preview"]
+2026-10-14T16:51:24.2085574Z       --repository   The GitHub repository (owner/repo format)          [string]
+2026-10-14T16:51:24.2086395Z       --run-id       The GitHub workflow run ID                         [string]
+2026-10-14T16:51:24.2087965Z       --environment [string] [choices: "prod", "dev"] [default: "totally-bogus"]
+2026-10-14T16:51:24.2088816Z       --test         Test mode - validate logic without GitHub API calls
+2026-10-14T16:51:24.2089504Z                                                       [boolean] [default: false]
+2026-10-14T16:51:24.2090213Z   -h, --help         Show help                                         [boolean]
+2026-10-14T16:51:24.2090640Z 
+2026-10-14T16:51:24.2090776Z Examples:
+2026-10-14T16:51:24.2091444Z   patch-create-comment.js --original-pr 86  Test success comment
+2026-10-14T16:51:24.2092183Z   55 --exit-code 0 --commit abc1234 --chan
+2026-10-14T16:51:24.2092755Z   nel preview --repository google-gemini/g
+2026-10-14T16:51:24.2093250Z   emini-cli --test
+2026-10-14T16:51:24.2093848Z   patch-create-comment.js --original-pr 86  Test failure comment
+2026-10-14T16:51:24.2094556Z   55 --exit-code 1 --commit abc1234 --chan
+2026-10-14T16:51:24.2095149Z   nel stable --repository google-gemini/ge
+2026-10-14T16:51:24.2095648Z   mini-cli --test
+2026-10-14T16:51:24.2095892Z 
+2026-10-14T16:51:24.2096054Z Invalid values:
+2026-10-14T16:51:24.2096935Z   Argument: environment, Given: "totally-bogus", Choices: "prod", "dev"
+2026-10-14T16:51:24.3144137Z stderr | scripts/tests/get-release-version.test.js > getVersion > Advanced Scenarios > should auto-increment patch version if the calculated one already exists
+2026-10-14T16:51:24.3145357Z Git tag v0.7.0 already exists.
+2026-10-14T16:51:24.3145834Z Version 0.7.0 exists, incrementing.
+2026-10-14T16:51:24.3146122Z 
+2026-10-14T16:51:24.3157724Z stderr | scripts/tests/get-release-version.test.js > getVersion > Advanced Scenarios > should auto-increment preview number if the calculated one already exists
+2026-10-14T16:51:24.3159443Z Version 0.8.0-preview.0 already exists on NPM.
+2026-10-14T16:51:24.3160373Z Version 0.8.0-preview.0 exists, incrementing.
+2026-10-14T16:51:24.3160969Z 
+2026-10-14T16:51:24.3212333Z  ✓ scripts/tests/get-release-version.test.js (9 tests) 35ms
+2026-10-14T16:51:24.4062712Z  ✓ scripts/tests/proxy-agent-bundle.test.ts (2 tests) 420ms
+2026-10-14T16:51:24.4064411Z    ✓ proxy-agent bundle shape and interop > preserves named and default constructors after ESM splitting  339ms
+2026-10-14T16:51:25.3691796Z  ✓ scripts/tests/patch-create-comment.test.js (19 tests) 1447ms
+2026-10-14T16:51:27.9364988Z  ✓ scripts/tests/tool-registry.test.ts (15 tests) 11ms
+2026-10-14T16:51:27.9780295Z  ✓ scripts/tests/eval-analysis.test.ts (21 tests) 50ms
+2026-10-14T16:51:28.1919261Z  ✓ scripts/tests/generate-keybindings-doc.test.ts (2 tests) 223ms
+2026-10-14T16:51:28.3167822Z  ✓ scripts/tests/generate-settings-schema.test.ts (2 tests) 235ms
+2026-10-14T16:51:28.4073083Z  ✓ scripts/tests/eval-inventory.test.ts (24 tests) 475ms
+2026-10-14T16:51:28.4073987Z    ✓ eval-inventory > collectInventory > discovers eval files from the real evals directory  303ms
+2026-10-14T16:51:28.5224908Z  ✓ scripts/tests/eval-validate.test.ts (38 tests) 290ms
+2026-10-14T16:51:28.6528189Z  ✓ scripts/tests/eval-coverage.test.ts (29 tests) 409ms
+2026-10-14T16:51:28.8285062Z  ✓ scripts/tests/generate-settings-doc.test.ts (1 test) 762ms
+2026-10-14T16:51:28.8286004Z    ✓ generate-settings-doc > keeps documentation in sync in check mode  761ms
+2026-10-14T16:51:28.8558482Z 
+2026-10-14T16:51:28.8562297Z  Test Files  15 passed (15)
+2026-10-14T16:51:28.8562770Z       Tests  202 passed (202)
+2026-10-14T16:51:28.8563322Z    Start at  16:51:23
+2026-10-14T16:51:28.8566858Z    Duration  5.46s (transform 3.85s, setup 493ms, collect 35.39s, tests 4.46s, environment 7ms, prepare 2.07s)
+2026-10-14T16:51:28.8567380Z 
+2026-10-14T16:51:28.9884400Z ##[group]Run npm run bundle
+2026-10-14T16:51:28.9884696Z [36;1mnpm run bundle[0m
+2026-10-14T16:51:28.9947753Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:51:28.9948105Z ##[endgroup]
+2026-10-14T16:51:29.0925114Z 
+2026-10-14T16:51:29.0926093Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-14T16:51:29.0928029Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-14T16:51:29.0928989Z 
+2026-10-14T16:51:29.1860832Z 
+2026-10-14T16:51:29.1861407Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:51:29.1862219Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:51:29.1862488Z 
+2026-10-14T16:51:29.3760555Z 
+2026-10-14T16:51:29.3761346Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:29.3762194Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:51:29.3762524Z 
+2026-10-14T16:51:29.4934115Z 
+2026-10-14T16:51:29.4934864Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:51:29.4935708Z > node esbuild.client.js
+2026-10-14T16:51:29.4936002Z 
+2026-10-14T16:51:30.7751911Z 
+2026-10-14T16:51:30.7752793Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:51:30.7753523Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:51:30.7753787Z 
+2026-10-14T16:51:31.4477019Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:51:31.4907225Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:51:32.6305869Z Copied 9 policy files to bundle/policies/
+2026-10-14T16:51:32.6320655Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-14T16:51:32.6517298Z Copied docs to bundle/docs/
+2026-10-14T16:51:32.6525486Z Copied built-in skills to bundle/builtin/
+2026-10-14T16:51:32.6919768Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-14T16:51:32.6973596Z Copied extension examples to bundle/examples/
+2026-10-14T16:51:32.6974213Z Assets copied to bundle/
+2026-10-14T16:51:32.7175185Z ##[group]Run node ./bundle/gemini.js --version
+2026-10-14T16:51:32.7175584Z [36;1mnode ./bundle/gemini.js --version[0m
+2026-10-14T16:51:32.7237742Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:51:32.7238128Z ##[endgroup]
+2026-10-14T16:51:34.1986112Z 0.66.0-nightly.20261013.g204db94ae
+2026-10-14T16:51:34.2172972Z ##[group]Run # 1. Package the project into a tarball
+2026-10-14T16:51:34.2173372Z [36;1m# 1. Package the project into a tarball[0m
+2026-10-14T16:51:34.2173684Z [36;1mTARBALL=$(npm pack | tail -n 1)[0m
+2026-10-14T16:51:34.2173952Z [36;1m[0m
+2026-10-14T16:51:34.2174176Z [36;1m# 2. Move to a fresh directory for isolation[0m
+2026-10-14T16:51:34.2174524Z [36;1mmkdir -p ../smoke-test-dir[0m
+2026-10-14T16:51:34.2174792Z [36;1mmv "$TARBALL" ../smoke-test-dir/[0m
+2026-10-14T16:51:34.2175102Z [36;1mcd ../smoke-test-dir[0m
+2026-10-14T16:51:34.2175335Z [36;1m[0m
+2026-10-14T16:51:34.2175528Z [36;1m# 3. Run npx from the tarball[0m
+2026-10-14T16:51:34.2175795Z [36;1mnpx "./$TARBALL" --version[0m
+2026-10-14T16:51:34.2237287Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:51:34.2237618Z ##[endgroup]
+2026-10-14T16:51:43.4289828Z npm notice
+2026-10-14T16:51:43.4291272Z npm notice 📦  @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae
+2026-10-14T16:51:43.4291957Z npm notice Tarball Contents
+2026-10-14T16:51:43.4298873Z npm notice 11.4kB LICENSE
+2026-10-14T16:51:43.4299228Z npm notice 13.5kB README.md
+2026-10-14T16:51:43.4299741Z npm notice 3.4kB bundle/builtin/antigravity-support/SKILL.md
+2026-10-14T16:51:43.4300367Z npm notice 8.0kB bundle/builtin/skill-creator/scripts/init_skill.cjs
+2026-10-14T16:51:43.4301029Z npm notice 3.9kB bundle/builtin/skill-creator/scripts/package_skill.cjs
+2026-10-14T16:51:43.4301698Z npm notice 3.5kB bundle/builtin/skill-creator/scripts/validate_skill.cjs
+2026-10-14T16:51:43.4302282Z npm notice 20.2kB bundle/builtin/skill-creator/SKILL.md
+2026-10-14T16:51:43.4302805Z npm notice 11.6MB bundle/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:51:43.4303397Z npm notice 209B bundle/bundled/third_party/bundled-packages.json
+2026-10-14T16:51:43.4303939Z npm notice 8.0MB bundle/bundled/third_party/index.js
+2026-10-14T16:51:43.4304591Z npm notice 304B bundle/bundled/third_party/issue-descriptions/arInsecureContext.md
+2026-10-14T16:51:43.4305409Z npm notice 228B bundle/bundled/third_party/issue-descriptions/arInvalidInfoHeader.md
+2026-10-14T16:51:43.4306293Z npm notice 249B bundle/bundled/third_party/issue-descriptions/arInvalidRegisterOsSourceHeader.md
+2026-10-14T16:51:43.4307590Z npm notice 252B bundle/bundled/third_party/issue-descriptions/arInvalidRegisterOsTriggerHeader.md
+2026-10-14T16:51:43.4308533Z npm notice 239B bundle/bundled/third_party/issue-descriptions/arInvalidRegisterSourceHeader.md
+2026-10-14T16:51:43.4309450Z npm notice 242B bundle/bundled/third_party/issue-descriptions/arInvalidRegisterTriggerHeader.md
+2026-10-14T16:51:43.4310487Z npm notice 325B bundle/bundled/third_party/issue-descriptions/arNavigationRegistrationUniqueScopeAlreadySet.md
+2026-10-14T16:51:43.4311677Z npm notice 383B bundle/bundled/third_party/issue-descriptions/arNavigationRegistrationWithoutTransientUserActivation.md
+2026-10-14T16:51:43.4312718Z npm notice 298B bundle/bundled/third_party/issue-descriptions/arNoRegisterOsSourceHeader.md
+2026-10-14T16:51:43.4313607Z npm notice 301B bundle/bundled/third_party/issue-descriptions/arNoRegisterOsTriggerHeader.md
+2026-10-14T16:51:43.4314470Z npm notice 296B bundle/bundled/third_party/issue-descriptions/arNoRegisterSourceHeader.md
+2026-10-14T16:51:43.4315323Z npm notice 299B bundle/bundled/third_party/issue-descriptions/arNoRegisterTriggerHeader.md
+2026-10-14T16:51:43.4316150Z npm notice 204B bundle/bundled/third_party/issue-descriptions/arNoWebOrOsSupport.md
+2026-10-14T16:51:43.4317048Z npm notice 801B bundle/bundled/third_party/issue-descriptions/arOsSourceIgnored.md
+2026-10-14T16:51:43.4317707Z npm notice 826B bundle/bundled/third_party/issue-descriptions/arOsTriggerIgnored.md
+2026-10-14T16:51:43.4318377Z npm notice 472B bundle/bundled/third_party/issue-descriptions/arPermissionPolicyDisabled.md
+2026-10-14T16:51:43.4319068Z npm notice 451B bundle/bundled/third_party/issue-descriptions/arSourceAndTriggerHeaders.md
+2026-10-14T16:51:43.4319990Z npm notice 698B bundle/bundled/third_party/issue-descriptions/arSourceIgnored.md
+2026-10-14T16:51:43.4320623Z npm notice 651B bundle/bundled/third_party/issue-descriptions/arTriggerIgnored.md
+2026-10-14T16:51:43.4321301Z npm notice 448B bundle/bundled/third_party/issue-descriptions/arUntrustworthyReportingOrigin.md
+2026-10-14T16:51:43.4321968Z npm notice 429B bundle/bundled/third_party/issue-descriptions/arWebAndOsHeaders.md
+2026-10-14T16:51:43.4322619Z npm notice 269B bundle/bundled/third_party/issue-descriptions/bounceTrackingMitigations.md
+2026-10-14T16:51:43.4323378Z npm notice 175B bundle/bundled/third_party/issue-descriptions/clientHintMetaTagAllowListInvalidOrigin.md
+2026-10-14T16:51:43.4324154Z npm notice 189B bundle/bundled/third_party/issue-descriptions/clientHintMetaTagModifiedHTML.md
+2026-10-14T16:51:43.4325146Z npm notice 306B bundle/bundled/third_party/issue-descriptions/CoepCoopSandboxedIframeCannotNavigateToCoopPage.md
+2026-10-14T16:51:43.4325977Z npm notice 677B bundle/bundled/third_party/issue-descriptions/CoepCorpNotSameOrigin.md
+2026-10-14T16:51:43.4326985Z npm notice 969B bundle/bundled/third_party/issue-descriptions/CoepCorpNotSameOriginAfterDefaultedToSameOriginByCoep.md
+2026-10-14T16:51:43.4327822Z npm notice 499B bundle/bundled/third_party/issue-descriptions/CoepCorpNotSameSite.md
+2026-10-14T16:51:43.4328551Z npm notice 488B bundle/bundled/third_party/issue-descriptions/CoepFrameResourceNeedsCoepHeader.md
+2026-10-14T16:51:43.4329290Z npm notice 424B bundle/bundled/third_party/issue-descriptions/CompatibilityModeQuirks.md
+2026-10-14T16:51:43.4330080Z npm notice 467B bundle/bundled/third_party/issue-descriptions/connectionAllowlistInvalidAllowlistItemType.md
+2026-10-14T16:51:43.4330892Z npm notice 437B bundle/bundled/third_party/issue-descriptions/connectionAllowlistInvalidHeader.md
+2026-10-14T16:51:43.4331676Z npm notice 333B bundle/bundled/third_party/issue-descriptions/connectionAllowlistInvalidUrlPattern.md
+2026-10-14T16:51:43.4332465Z npm notice 425B bundle/bundled/third_party/issue-descriptions/connectionAllowlistItemNotInnerList.md
+2026-10-14T16:51:43.4333236Z npm notice 361B bundle/bundled/third_party/issue-descriptions/connectionAllowlistMoreThanOneList.md
+2026-10-14T16:51:43.4334076Z npm notice 265B bundle/bundled/third_party/issue-descriptions/connectionAllowlistReportingEndpointNotToken.md
+2026-10-14T16:51:43.4334889Z npm notice 404B bundle/bundled/third_party/issue-descriptions/CookieAttributeValueExceedsMaxSize.md
+2026-10-14T16:51:43.4335738Z npm notice 515B bundle/bundled/third_party/issue-descriptions/cookieCrossSiteRedirectDowngrade.md
+2026-10-14T16:51:43.4336814Z npm notice 182B bundle/bundled/third_party/issue-descriptions/cookieExcludeBlockedWithinRelatedWebsiteSet.md
+2026-10-14T16:51:43.4337686Z npm notice 530B bundle/bundled/third_party/issue-descriptions/cookieExcludeDomainNonAscii.md
+2026-10-14T16:51:43.4338463Z npm notice 387B bundle/bundled/third_party/issue-descriptions/cookieExcludePortMismatch.md
+2026-10-14T16:51:43.4339162Z npm notice 279B bundle/bundled/third_party/issue-descriptions/cookieExcludeSchemeMismatch.md
+2026-10-14T16:51:43.4339910Z npm notice 388B bundle/bundled/third_party/issue-descriptions/cookieExcludeThirdPartyPhaseoutRead.md
+2026-10-14T16:51:43.4340680Z npm notice 387B bundle/bundled/third_party/issue-descriptions/cookieExcludeThirdPartyPhaseoutSet.md
+2026-10-14T16:51:43.4341400Z npm notice 544B bundle/bundled/third_party/issue-descriptions/cookieWarnDomainNonAscii.md
+2026-10-14T16:51:43.4342088Z npm notice 378B bundle/bundled/third_party/issue-descriptions/cookieWarnMetadataGrantRead.md
+2026-10-14T16:51:43.4342786Z npm notice 375B bundle/bundled/third_party/issue-descriptions/cookieWarnMetadataGrantSet.md
+2026-10-14T16:51:43.4343520Z npm notice 400B bundle/bundled/third_party/issue-descriptions/cookieWarnThirdPartyPhaseoutRead.md
+2026-10-14T16:51:43.4344273Z npm notice 400B bundle/bundled/third_party/issue-descriptions/cookieWarnThirdPartyPhaseoutSet.md
+2026-10-14T16:51:43.4345031Z npm notice 536B bundle/bundled/third_party/issue-descriptions/corsAllowCredentialsRequired.md
+2026-10-14T16:51:43.4345846Z npm notice 537B bundle/bundled/third_party/issue-descriptions/corsDisabledScheme.md
+2026-10-14T16:51:43.4346675Z npm notice 628B bundle/bundled/third_party/issue-descriptions/corsDisallowedByMode.md
+2026-10-14T16:51:43.4347522Z npm notice 518B bundle/bundled/third_party/issue-descriptions/corsHeaderDisallowedByPreflightResponse.md
+2026-10-14T16:51:43.4348294Z npm notice 640B bundle/bundled/third_party/issue-descriptions/corsInvalidHeaderValues.md
+2026-10-14T16:51:43.4349047Z npm notice 1.1kB bundle/bundled/third_party/issue-descriptions/corsLocalNetworkAccessPermissionDenied.md
+2026-10-14T16:51:43.4349868Z npm notice 480B bundle/bundled/third_party/issue-descriptions/corsMethodDisallowedByPreflightResponse.md
+2026-10-14T16:51:43.4350642Z npm notice 335B bundle/bundled/third_party/issue-descriptions/corsNoCorsRedirectModeNotFollow.md
+2026-10-14T16:51:43.4351460Z npm notice 645B bundle/bundled/third_party/issue-descriptions/corsOriginMismatch.md
+2026-10-14T16:51:43.4352143Z npm notice 394B bundle/bundled/third_party/issue-descriptions/corsPreflightResponseInvalid.md
+2026-10-14T16:51:43.4352878Z npm notice 377B bundle/bundled/third_party/issue-descriptions/corsRedirectContainsCredentials.md
+2026-10-14T16:51:43.4353605Z npm notice 914B bundle/bundled/third_party/issue-descriptions/corsWildcardOriginNotAllowed.md
+2026-10-14T16:51:43.4354259Z npm notice 615B bundle/bundled/third_party/issue-descriptions/cspEvalViolation.md
+2026-10-14T16:51:43.4354876Z npm notice 608B bundle/bundled/third_party/issue-descriptions/cspInlineViolation.md
+2026-10-14T16:51:43.4355567Z npm notice 616B bundle/bundled/third_party/issue-descriptions/cspTrustedTypesPolicyViolation.md
+2026-10-14T16:51:43.4356287Z npm notice 544B bundle/bundled/third_party/issue-descriptions/cspTrustedTypesSinkViolation.md
+2026-10-14T16:51:43.4357101Z npm notice 961B bundle/bundled/third_party/issue-descriptions/cspURLViolation.md
+2026-10-14T16:51:43.4357693Z npm notice 45B bundle/bundled/third_party/issue-descriptions/deprecation.md
+2026-10-14T16:51:43.4358491Z npm notice 57B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestAccountsHttpNotFound.md
+2026-10-14T16:51:43.4359326Z npm notice 39B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestAccountsInvalidResponse.md
+2026-10-14T16:51:43.4360178Z npm notice 73B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestAccountsNoResponse.md
+2026-10-14T16:51:43.4360972Z npm notice 37B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestApprovalDeclined.md
+2026-10-14T16:51:43.4361716Z npm notice 32B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestCanceled.md
+2026-10-14T16:51:43.4362488Z npm notice 61B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestErrorFetchingSignin.md
+2026-10-14T16:51:43.4363296Z npm notice 28B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestErrorIdToken.md
+2026-10-14T16:51:43.4364078Z npm notice 52B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestIdTokenHttpNotFound.md
+2026-10-14T16:51:43.4364912Z npm notice 41B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestIdTokenInvalidRequest.md
+2026-10-14T16:51:43.4365755Z npm notice 31B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestIdTokenInvalidResponse.md
+2026-10-14T16:51:43.4366724Z npm notice 65B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestIdTokenNoResponse.md
+2026-10-14T16:51:43.4367545Z npm notice 42B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestInvalidSigninResponse.md
+2026-10-14T16:51:43.4368366Z npm notice 63B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestManifestHttpNotFound.md
+2026-10-14T16:51:43.4369207Z npm notice 54B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestManifestInvalidResponse.md
+2026-10-14T16:51:43.4370035Z npm notice 88B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestManifestNoResponse.md
+2026-10-14T16:51:43.4370942Z npm notice 77B bundle/bundled/third_party/issue-descriptions/federatedAuthRequestTooManyRequests.md
+2026-10-14T16:51:43.4371817Z npm notice 64B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestInvalidAccountsResponse.md
+2026-10-14T16:51:43.4372762Z npm notice 77B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestInvalidConfigOrWellKnown.md
+2026-10-14T16:51:43.4373715Z npm notice 99B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNoAccountSharingPermission.md
+2026-10-14T16:51:43.4374627Z npm notice 55B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNoApiPermission.md
+2026-10-14T16:51:43.4375601Z npm notice 76B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNoReturningUserFromFetchedAccounts.md
+2026-10-14T16:51:43.4376801Z npm notice 41B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNotIframe.md
+2026-10-14T16:51:43.4377703Z npm notice 78B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNotPotentiallyTrustworthy.md
+2026-10-14T16:51:43.4378593Z npm notice 61B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNotSameOrigin.md
+2026-10-14T16:51:43.4379485Z npm notice 74B bundle/bundled/third_party/issue-descriptions/federatedAuthUserInfoRequestNotSignedInWithIdp.md
+2026-10-14T16:51:43.4380275Z npm notice 409B bundle/bundled/third_party/issue-descriptions/fetchingPartitionedBlobURL.md
+2026-10-14T16:51:43.4381077Z npm notice 336B bundle/bundled/third_party/issue-descriptions/genericFormAriaLabelledByToNonExistingIdError.md
+2026-10-14T16:51:43.4381944Z npm notice 219B bundle/bundled/third_party/issue-descriptions/genericFormAutocompleteAttributeEmptyError.md
+2026-10-14T16:51:43.4382763Z npm notice 268B bundle/bundled/third_party/issue-descriptions/genericFormDuplicateIdForInputError.md
+2026-10-14T16:51:43.4383625Z npm notice 383B bundle/bundled/third_party/issue-descriptions/genericFormEmptyIdAndNameAttributesForInputError.md
+2026-10-14T16:51:43.4384648Z npm notice 326B bundle/bundled/third_party/issue-descriptions/genericFormInputAssignedAutocompleteValueToIdOrNameAttributeError.md
+2026-10-14T16:51:43.4385718Z npm notice 245B bundle/bundled/third_party/issue-descriptions/genericFormInputHasWrongButWellIntendedAutocompleteValueError.md
+2026-10-14T16:51:43.4386725Z npm notice 361B bundle/bundled/third_party/issue-descriptions/genericFormInputWithNoLabelError.md
+2026-10-14T16:51:43.4387551Z npm notice 323B bundle/bundled/third_party/issue-descriptions/genericFormLabelForMatchesNonExistingIdError.md
+2026-10-14T16:51:43.4388338Z npm notice 306B bundle/bundled/third_party/issue-descriptions/genericFormLabelForNameError.md
+2026-10-14T16:51:43.4389163Z npm notice 223B bundle/bundled/third_party/issue-descriptions/genericFormLabelHasNeitherForNorNestedInputError.md
+2026-10-14T16:51:43.4390026Z npm notice 403B bundle/bundled/third_party/issue-descriptions/genericNavigationEntryMarkedSkippable.md
+2026-10-14T16:51:43.4390798Z npm notice 129B bundle/bundled/third_party/issue-descriptions/genericResponseWasBlockedByORB.md
+2026-10-14T16:51:43.4391430Z npm notice 839B bundle/bundled/third_party/issue-descriptions/heavyAd.md
+2026-10-14T16:51:43.4392011Z npm notice 775B bundle/bundled/third_party/issue-descriptions/LowTextContrast.md
+2026-10-14T16:51:43.4392604Z npm notice 429B bundle/bundled/third_party/issue-descriptions/mixedContent.md
+2026-10-14T16:51:43.4393253Z npm notice 493B bundle/bundled/third_party/issue-descriptions/navigatingPartitionedBlobURL.md
+2026-10-14T16:51:43.4394011Z npm notice 388B bundle/bundled/third_party/issue-descriptions/permissionElementActivationDisabled.md
+2026-10-14T16:51:43.4394862Z npm notice 446B bundle/bundled/third_party/issue-descriptions/permissionElementActivationDisabledWithOccluder.md
+2026-10-14T16:51:43.4395804Z npm notice 499B bundle/bundled/third_party/issue-descriptions/permissionElementActivationDisabledWithOccluderParent.md
+2026-10-14T16:51:43.4396832Z npm notice 278B bundle/bundled/third_party/issue-descriptions/permissionElementCspFrameAncestorsMissing.md
+2026-10-14T16:51:43.4397786Z npm notice 168B bundle/bundled/third_party/issue-descriptions/permissionElementFencedFrameDisallowed.md
+2026-10-14T16:51:43.4398582Z npm notice 160B bundle/bundled/third_party/issue-descriptions/permissionElementFontSizeTooLarge.md
+2026-10-14T16:51:43.4399339Z npm notice 158B bundle/bundled/third_party/issue-descriptions/permissionElementFontSizeTooSmall.md
+2026-10-14T16:51:43.4400125Z npm notice 146B bundle/bundled/third_party/issue-descriptions/permissionElementGeolocationDeprecated.md
+2026-10-14T16:51:43.4400962Z npm notice 184B bundle/bundled/third_party/issue-descriptions/permissionElementInsetBoxShadowUnsupported.md
+2026-10-14T16:51:43.4401786Z npm notice 232B bundle/bundled/third_party/issue-descriptions/permissionElementInvalidDisplayStyle.md
+2026-10-14T16:51:43.4402668Z npm notice 250B bundle/bundled/third_party/issue-descriptions/permissionElementInvalidSizeValue.md
+2026-10-14T16:51:43.4403408Z npm notice 216B bundle/bundled/third_party/issue-descriptions/permissionElementInvalidType.md
+2026-10-14T16:51:43.4404177Z npm notice 282B bundle/bundled/third_party/issue-descriptions/permissionElementInvalidTypeActivation.md
+2026-10-14T16:51:43.4404965Z npm notice 218B bundle/bundled/third_party/issue-descriptions/permissionElementLowContrast.md
+2026-10-14T16:51:43.4405699Z npm notice 218B bundle/bundled/third_party/issue-descriptions/permissionElementNonOpaqueColor.md
+2026-10-14T16:51:43.4406620Z npm notice 265B bundle/bundled/third_party/issue-descriptions/permissionElementPaddingBottomUnsupported.md
+2026-10-14T16:51:43.4407465Z npm notice 263B bundle/bundled/third_party/issue-descriptions/permissionElementPaddingRightUnsupported.md
+2026-10-14T16:51:43.4408309Z npm notice 265B bundle/bundled/third_party/issue-descriptions/permissionElementPermissionsPolicyBlocked.md
+2026-10-14T16:51:43.4409114Z npm notice 199B bundle/bundled/third_party/issue-descriptions/permissionElementRegistrationFailed.md
+2026-10-14T16:51:43.4409895Z npm notice 373B bundle/bundled/third_party/issue-descriptions/permissionElementRequestInProgress.md
+2026-10-14T16:51:43.4410690Z npm notice 227B bundle/bundled/third_party/issue-descriptions/permissionElementSecurityChecksFailed.md
+2026-10-14T16:51:43.4411475Z npm notice 294B bundle/bundled/third_party/issue-descriptions/permissionElementTypeNotSupported.md
+2026-10-14T16:51:43.4412245Z npm notice 396B bundle/bundled/third_party/issue-descriptions/permissionElementUntrustedEvent.md
+2026-10-14T16:51:43.4413041Z npm notice 179B bundle/bundled/third_party/issue-descriptions/placeholderDescriptionForInvisibleIssues.md
+2026-10-14T16:51:43.4413809Z npm notice 100B bundle/bundled/third_party/issue-descriptions/propertyRuleInvalidNameIssue.md
+2026-10-14T16:51:43.4414493Z npm notice 157B bundle/bundled/third_party/issue-descriptions/propertyRuleIssue.md
+2026-10-14T16:51:43.4415221Z npm notice 571B bundle/bundled/third_party/issue-descriptions/SameSiteExcludeContextDowngradeRead.md
+2026-10-14T16:51:43.4415996Z npm notice 572B bundle/bundled/third_party/issue-descriptions/SameSiteExcludeContextDowngradeSet.md
+2026-10-14T16:51:43.4416941Z npm notice 583B bundle/bundled/third_party/issue-descriptions/SameSiteExcludeNavigationContextDowngrade.md
+2026-10-14T16:51:43.4417720Z npm notice 556B bundle/bundled/third_party/issue-descriptions/SameSiteNoneInsecureErrorRead.md
+2026-10-14T16:51:43.4418436Z npm notice 611B bundle/bundled/third_party/issue-descriptions/SameSiteNoneInsecureErrorSet.md
+2026-10-14T16:51:43.4419151Z npm notice 592B bundle/bundled/third_party/issue-descriptions/SameSiteNoneInsecureWarnRead.md
+2026-10-14T16:51:43.4419858Z npm notice 647B bundle/bundled/third_party/issue-descriptions/SameSiteNoneInsecureWarnSet.md
+2026-10-14T16:51:43.4420621Z npm notice 699B bundle/bundled/third_party/issue-descriptions/SameSiteUnspecifiedLaxAllowUnsafeRead.md
+2026-10-14T16:51:43.4421424Z npm notice 758B bundle/bundled/third_party/issue-descriptions/SameSiteUnspecifiedLaxAllowUnsafeSet.md
+2026-10-14T16:51:43.4422306Z npm notice 610B bundle/bundled/third_party/issue-descriptions/SameSiteWarnCrossDowngradeRead.md
+2026-10-14T16:51:43.4423044Z npm notice 612B bundle/bundled/third_party/issue-descriptions/SameSiteWarnCrossDowngradeSet.md
+2026-10-14T16:51:43.4423806Z npm notice 622B bundle/bundled/third_party/issue-descriptions/SameSiteWarnStrictLaxDowngradeStrict.md
+2026-10-14T16:51:43.4424674Z npm notice 587B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityDisallowedOptGroupChild.md
+2026-10-14T16:51:43.4425594Z npm notice 605B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityDisallowedSelectChild.md
+2026-10-14T16:51:43.4426778Z npm notice 272B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityInteractiveContentAttributesSelectDescendant.md
+2026-10-14T16:51:43.4428004Z npm notice 409B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityInteractiveContentLegendChild.md
+2026-10-14T16:51:43.4428999Z npm notice 299B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityInteractiveContentOptionChild.md
+2026-10-14T16:51:43.4429982Z npm notice 470B bundle/bundled/third_party/issue-descriptions/selectElementAccessibilityNonPhrasingContentOptionChild.md
+2026-10-14T16:51:43.4430766Z npm notice 643B bundle/bundled/third_party/issue-descriptions/sharedArrayBuffer.md
+2026-10-14T16:51:43.4431554Z npm notice 101B bundle/bundled/third_party/issue-descriptions/sharedDictionaryUseErrorCrossOriginNoCorsRequest.md
+2026-10-14T16:51:43.4432447Z npm notice 97B bundle/bundled/third_party/issue-descriptions/sharedDictionaryUseErrorDictionaryLoadFailure.md
+2026-10-14T16:51:43.4433343Z npm notice 155B bundle/bundled/third_party/issue-descriptions/sharedDictionaryUseErrorMatchingDictionaryNotUsed.md
+2026-10-14T16:51:43.4434319Z npm notice 101B bundle/bundled/third_party/issue-descriptions/sharedDictionaryUseErrorUnexpectedContentDictionaryHeader.md
+2026-10-14T16:51:43.4435280Z npm notice 91B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorCossOriginNoCorsRequest.md
+2026-10-14T16:51:43.4436181Z npm notice 49B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorDisallowedBySettings.md
+2026-10-14T16:51:43.4437173Z npm notice 124B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorExpiredResponse.md
+2026-10-14T16:51:43.4438061Z npm notice 126B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorFeatureDisabled.md
+2026-10-14T16:51:43.4438937Z npm notice 63B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorInsufficientResources.md
+2026-10-14T16:51:43.4439812Z npm notice 84B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorInvalidMatchField.md
+2026-10-14T16:51:43.4440696Z npm notice 81B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorInvalidStructuredHeader.md
+2026-10-14T16:51:43.4441572Z npm notice 93B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorInvalidTTLField.md
+2026-10-14T16:51:43.4442422Z npm notice 138B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNavigationRequest.md
+2026-10-14T16:51:43.4443248Z npm notice 76B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNoMatchField.md
+2026-10-14T16:51:43.4444096Z npm notice 85B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonIntegerTTLField.md
+2026-10-14T16:51:43.4444977Z npm notice 88B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonListMatchDestField.md
+2026-10-14T16:51:43.4445851Z npm notice 115B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonSecureContext.md
+2026-10-14T16:51:43.4446831Z npm notice 82B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonStringIdField.md
+2026-10-14T16:51:43.4447744Z npm notice 98B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonStringInMatchDestList.md
+2026-10-14T16:51:43.4448646Z npm notice 85B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonStringMatchField.md
+2026-10-14T16:51:43.4449629Z npm notice 83B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorNonTokenTypeField.md
+2026-10-14T16:51:43.4450474Z npm notice 49B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorRequestAborted.md
+2026-10-14T16:51:43.4451283Z npm notice 49B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorShuttingDown.md
+2026-10-14T16:51:43.4452106Z npm notice 134B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorTooLongIdField.md
+2026-10-14T16:51:43.4452944Z npm notice 131B bundle/bundled/third_party/issue-descriptions/sharedDictionaryWriteErrorUnsupportedType.md
+2026-10-14T16:51:43.4453700Z npm notice 655B bundle/bundled/third_party/issue-descriptions/sriInvalidSignatureHeader.md
+2026-10-14T16:51:43.4454554Z npm notice 756B bundle/bundled/third_party/issue-descriptions/sriInvalidSignatureInputHeader.md
+2026-10-14T16:51:43.4455273Z npm notice 465B bundle/bundled/third_party/issue-descriptions/sriMissingSignatureHeader.md
+2026-10-14T16:51:43.4455994Z npm notice 477B bundle/bundled/third_party/issue-descriptions/sriMissingSignatureInputHeader.md
+2026-10-14T16:51:43.4456924Z npm notice 420B bundle/bundled/third_party/issue-descriptions/sriSignatureHeaderValueIsIncorrectLength.md
+2026-10-14T16:51:43.4457762Z npm notice 643B bundle/bundled/third_party/issue-descriptions/sriSignatureHeaderValueIsNotByteSequence.md
+2026-10-14T16:51:43.4458579Z npm notice 678B bundle/bundled/third_party/issue-descriptions/sriSignatureHeaderValueIsParameterized.md
+2026-10-14T16:51:43.4459422Z npm notice 278B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderInvalidComponentName.md
+2026-10-14T16:51:43.4460284Z npm notice 516B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderInvalidComponentType.md
+2026-10-14T16:51:43.4461216Z npm notice 231B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderInvalidDerivedComponentParameter.md
+2026-10-14T16:51:43.4462212Z npm notice 286B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderInvalidHeaderComponentParameter.md
+2026-10-14T16:51:43.4463107Z npm notice 338B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderInvalidParameter.md
+2026-10-14T16:51:43.4463902Z npm notice 500B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderKeyIdLength.md
+2026-10-14T16:51:43.4464684Z npm notice 339B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderMissingLabel.md
+2026-10-14T16:51:43.4465536Z npm notice 380B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderMissingRequiredParameters.md
+2026-10-14T16:51:43.4466551Z npm notice 351B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderValueMissingComponents.md
+2026-10-14T16:51:43.4467422Z npm notice 429B bundle/bundled/third_party/issue-descriptions/sriSignatureInputHeaderValueNotInnerList.md
+2026-10-14T16:51:43.4468224Z npm notice 429B bundle/bundled/third_party/issue-descriptions/sriValidationFailedIntegrityMismatch.md
+2026-10-14T16:51:43.4468990Z npm notice 259B bundle/bundled/third_party/issue-descriptions/sriValidationFailedInvalidLength.md
+2026-10-14T16:51:43.4469758Z npm notice 295B bundle/bundled/third_party/issue-descriptions/sriValidationFailedSignatureExpired.md
+2026-10-14T16:51:43.4470539Z npm notice 384B bundle/bundled/third_party/issue-descriptions/sriValidationFailedSignatureMismatch.md
+2026-10-14T16:51:43.4471248Z npm notice 266B bundle/bundled/third_party/issue-descriptions/stylesheetLateImport.md
+2026-10-14T16:51:43.4471915Z npm notice 76B bundle/bundled/third_party/issue-descriptions/stylesheetRequestFailed.md
+2026-10-14T16:51:43.4472830Z npm notice 231B bundle/bundled/third_party/issue-descriptions/summaryElementAccessibilityInteractiveContentSummaryDescendant.md
+2026-10-14T16:51:43.4473746Z npm notice 606B bundle/bundled/third_party/issue-descriptions/unencodedDigestIncorrectDigestLength.md
+2026-10-14T16:51:43.4474523Z npm notice 692B bundle/bundled/third_party/issue-descriptions/unencodedDigestIncorrectDigestType.md
+2026-10-14T16:51:43.4475410Z npm notice 549B bundle/bundled/third_party/issue-descriptions/unencodedDigestMalformedDictionary.md
+2026-10-14T16:51:43.4476174Z npm notice 581B bundle/bundled/third_party/issue-descriptions/unencodedDigestUnknownAlgorithm.md
+2026-10-14T16:51:43.4476901Z npm notice 166.1kB bundle/bundled/third_party/THIRD_PARTY_NOTICES
+2026-10-14T16:51:43.4477315Z npm notice 3.8kB bundle/chunk-2KUNXFSS.js
+2026-10-14T16:51:43.4477652Z npm notice 13.7kB bundle/chunk-3D3UOUJI.js
+2026-10-14T16:51:43.4477993Z npm notice 669.5kB bundle/chunk-3WQPLPFX.js
+2026-10-14T16:51:43.4478325Z npm notice 858B bundle/chunk-5AUYMPVF.js
+2026-10-14T16:51:43.4478649Z npm notice 1.2kB bundle/chunk-5PS3AYFU.js
+2026-10-14T16:51:43.4478975Z npm notice 2.5kB bundle/chunk-34MYV7JD.js
+2026-10-14T16:51:43.4479422Z npm notice 123.5kB bundle/chunk-664ZODQF.js
+2026-10-14T16:51:43.4479754Z npm notice 13.7kB bundle/chunk-B5FHSNK6.js
+2026-10-14T16:51:43.4480086Z npm notice 49.2kB bundle/chunk-B5H2NTTA.js
+2026-10-14T16:51:43.4480415Z npm notice 3.7MB bundle/chunk-D4VKZ65I.js
+2026-10-14T16:51:43.4480740Z npm notice 205.7kB bundle/chunk-DAHVX5MI.js
+2026-10-14T16:51:43.4481069Z npm notice 3.4kB bundle/chunk-E6POQCN2.js
+2026-10-14T16:51:43.4481394Z npm notice 16.7MB bundle/chunk-EPZKLM4T.js
+2026-10-14T16:51:43.4481732Z npm notice 16.8MB bundle/chunk-FPN62F6J.js
+2026-10-14T16:51:43.4482059Z npm notice 19.6kB bundle/chunk-IUSZTFJH.js
+2026-10-14T16:51:43.4482382Z npm notice 56.5kB bundle/chunk-IUUIT4SU.js
+2026-10-14T16:51:43.4482701Z npm notice 3.4kB bundle/chunk-JU6DWSJA.js
+2026-10-14T16:51:43.4483025Z npm notice 19.5kB bundle/chunk-KO7OBZHZ.js
+2026-10-14T16:51:43.4483346Z npm notice 1.6kB bundle/chunk-L5V3KIDT.js
+2026-10-14T16:51:43.4483666Z npm notice 41.5kB bundle/chunk-L6PII3GR.js
+2026-10-14T16:51:43.4483998Z npm notice 669.5kB bundle/chunk-LTPL4SXK.js
+2026-10-14T16:51:43.4484331Z npm notice 49.2kB bundle/chunk-NZBWB722.js
+2026-10-14T16:51:43.4484653Z npm notice 3.8kB bundle/chunk-OVEHX7ID.js
+2026-10-14T16:51:43.4484979Z npm notice 3.7MB bundle/chunk-ZVZUFW3C.js
+2026-10-14T16:51:43.4485309Z npm notice 902B bundle/cleanup-NEAKGU52.js
+2026-10-14T16:51:43.4485639Z npm notice 902B bundle/cleanup-ZRJMCBLT.js
+2026-10-14T16:51:43.4485965Z npm notice 53.4kB bundle/core-5PJ3WEYO.js
+2026-10-14T16:51:43.4486312Z npm notice 683.4kB bundle/devtools-TYCPOPV3.js
+2026-10-14T16:51:43.4486825Z npm notice 146.8kB bundle/devtoolsService-EHNGZUYI.js
+2026-10-14T16:51:43.4487235Z npm notice 146.8kB bundle/devtoolsService-JNVJ2G5N.js
+2026-10-14T16:51:43.4487595Z npm notice 53.4kB bundle/dist-DLTULSU4.js
+2026-10-14T16:51:43.4487981Z npm notice 6.5kB bundle/docs/admin/enterprise-controls.md
+2026-10-14T16:51:43.4488424Z npm notice 121.7kB bundle/docs/assets/connected_devtools.png
+2026-10-14T16:51:43.4488877Z npm notice 61.2kB bundle/docs/assets/gemini-screenshot.png
+2026-10-14T16:51:43.4489366Z npm notice 112.5kB bundle/docs/assets/monitoring-dashboard-logs.png
+2026-10-14T16:51:43.4489887Z npm notice 58.9kB bundle/docs/assets/monitoring-dashboard-metrics.png
+2026-10-14T16:51:43.4490417Z npm notice 55.8kB bundle/docs/assets/monitoring-dashboard-overview.png
+2026-10-14T16:51:43.4490888Z npm notice 389.7kB bundle/docs/assets/release_patch.png
+2026-10-14T16:51:43.4491308Z npm notice 157.3kB bundle/docs/assets/theme-ansi-dark.png
+2026-10-14T16:51:43.4491740Z npm notice 144.8kB bundle/docs/assets/theme-ansi-light.png
+2026-10-14T16:51:43.4492194Z npm notice 154.4kB bundle/docs/assets/theme-atom-one-dark.png
+2026-10-14T16:51:43.4492629Z npm notice 150.0kB bundle/docs/assets/theme-ayu-dark.png
+2026-10-14T16:51:43.4493046Z npm notice 140.5kB bundle/docs/assets/theme-ayu-light.png
+2026-10-14T16:51:43.4493469Z npm notice 265.5kB bundle/docs/assets/theme-custom.png
+2026-10-14T16:51:43.4493902Z npm notice 158.7kB bundle/docs/assets/theme-default-dark.png
+2026-10-14T16:51:43.4494363Z npm notice 147.3kB bundle/docs/assets/theme-default-light.png
+2026-10-14T16:51:43.4494821Z npm notice 160.3kB bundle/docs/assets/theme-dracula-dark.png
+2026-10-14T16:51:43.4495376Z npm notice 157.4kB bundle/docs/assets/theme-github-dark.png
+2026-10-14T16:51:43.4495860Z npm notice 138.4kB bundle/docs/assets/theme-github-light.png
+2026-10-14T16:51:43.4496304Z npm notice 137.2kB bundle/docs/assets/theme-google-light.png
+2026-10-14T16:51:43.4496859Z npm notice 167.3kB bundle/docs/assets/theme-holiday-dark.png
+2026-10-14T16:51:43.4497340Z npm notice 161.2kB bundle/docs/assets/theme-shades-of-purple-dark.png
+2026-10-14T16:51:43.4497835Z npm notice 149.3kB bundle/docs/assets/theme-solarized-dark.png
+2026-10-14T16:51:43.4498309Z npm notice 141.4kB bundle/docs/assets/theme-solarized-light.png
+2026-10-14T16:51:43.4498779Z npm notice 55.6kB bundle/docs/assets/theme-tokyonight-dark.png
+2026-10-14T16:51:43.4499226Z npm notice 123.1kB bundle/docs/assets/theme-xcode-light.png
+2026-10-14T16:51:43.4499811Z npm notice 7.1kB bundle/docs/behavioral-evals.md
+2026-10-14T16:51:43.4500187Z npm notice 68.5kB bundle/docs/changelogs/index.md
+2026-10-14T16:51:43.4500592Z npm notice 3.7kB bundle/docs/changelogs/latest.md
+2026-10-14T16:51:43.4500984Z npm notice 6.0kB bundle/docs/changelogs/preview.md
+2026-10-14T16:51:43.4501349Z npm notice 4.7kB bundle/docs/cli/acp-mode.md
+2026-10-14T16:51:43.4501707Z npm notice 7.0kB bundle/docs/cli/auto-memory.md
+2026-10-14T16:51:43.4502080Z npm notice 3.1kB bundle/docs/cli/checkpointing.md
+2026-10-14T16:51:43.4502475Z npm notice 16.6kB bundle/docs/cli/cli-reference.md
+2026-10-14T16:51:43.4502857Z npm notice 6.7kB bundle/docs/cli/creating-skills.md
+2026-10-14T16:51:43.4503278Z npm notice 12.1kB bundle/docs/cli/custom-commands.md
+2026-10-14T16:51:43.4503653Z npm notice 19.2kB bundle/docs/cli/enterprise.md
+2026-10-14T16:51:43.4504019Z npm notice 2.1kB bundle/docs/cli/gemini-ignore.md
+2026-10-14T16:51:43.4504379Z npm notice 3.8kB bundle/docs/cli/gemini-md.md
+2026-10-14T16:51:43.4504774Z npm notice 6.5kB bundle/docs/cli/generation-settings.md
+2026-10-14T16:51:43.4505160Z npm notice 3.6kB bundle/docs/cli/git-worktrees.md
+2026-10-14T16:51:43.4505512Z npm notice 1.6kB bundle/docs/cli/headless.md
+2026-10-14T16:51:43.4505899Z npm notice 2.7kB bundle/docs/cli/model-routing.md
+2026-10-14T16:51:43.4506273Z npm notice 2.9kB bundle/docs/cli/model-steering.md
+2026-10-14T16:51:43.4506852Z npm notice 2.7kB bundle/docs/cli/model.md
+2026-10-14T16:51:43.4507217Z npm notice 2.0kB bundle/docs/cli/notifications.md
+2026-10-14T16:51:43.4507579Z npm notice 19.6kB bundle/docs/cli/plan-mode.md
+2026-10-14T16:51:43.4507924Z npm notice 2.3kB bundle/docs/cli/rewind.md
+2026-10-14T16:51:43.4508261Z npm notice 14.1kB bundle/docs/cli/sandbox.md
+2026-10-14T16:51:43.4508636Z npm notice 6.4kB bundle/docs/cli/session-management.md
+2026-10-14T16:51:43.4509009Z npm notice 37.3kB bundle/docs/cli/settings.md
+2026-10-14T16:51:43.4509411Z npm notice 3.3kB bundle/docs/cli/skills-best-practices.md
+2026-10-14T16:51:43.4509791Z npm notice 5.7kB bundle/docs/cli/skills.md
+2026-10-14T16:51:43.4510143Z npm notice 4.6kB bundle/docs/cli/system-prompt.md
+2026-10-14T16:51:43.4510507Z npm notice 29.6kB bundle/docs/cli/telemetry.md
+2026-10-14T16:51:43.4510849Z npm notice 8.1kB bundle/docs/cli/themes.md
+2026-10-14T16:51:43.4511197Z npm notice 754B bundle/docs/cli/token-caching.md
+2026-10-14T16:51:43.4511578Z npm notice 6.2kB bundle/docs/cli/trusted-folders.md
+2026-10-14T16:51:43.4511992Z npm notice 7.1kB bundle/docs/cli/tutorials/automation.md
+2026-10-14T16:51:43.4512433Z npm notice 4.5kB bundle/docs/cli/tutorials/file-management.md
+2026-10-14T16:51:43.4512869Z npm notice 3.3kB bundle/docs/cli/tutorials/mcp-setup.md
+2026-10-14T16:51:43.4513315Z npm notice 4.5kB bundle/docs/cli/tutorials/memory-management.md
+2026-10-14T16:51:43.4513794Z npm notice 3.5kB bundle/docs/cli/tutorials/plan-mode-steering.md
+2026-10-14T16:51:43.4514274Z npm notice 3.7kB bundle/docs/cli/tutorials/session-management.md
+2026-10-14T16:51:43.4514746Z npm notice 3.6kB bundle/docs/cli/tutorials/shell-commands.md
+2026-10-14T16:51:43.4515230Z npm notice 5.9kB bundle/docs/cli/tutorials/skills-getting-started.md
+2026-10-14T16:51:43.4515703Z npm notice 3.0kB bundle/docs/cli/tutorials/task-planning.md
+2026-10-14T16:51:43.4516250Z npm notice 2.5kB bundle/docs/cli/tutorials/web-tools.md
+2026-10-14T16:51:43.4516845Z npm notice 3.0kB bundle/docs/cli/using-agent-skills.md
+2026-10-14T16:51:43.4517227Z npm notice 3.1kB bundle/docs/core/gemma-setup.md
+2026-10-14T16:51:43.4517576Z npm notice 5.0kB bundle/docs/core/index.md
+2026-10-14T16:51:43.4517958Z npm notice 7.1kB bundle/docs/core/local-model-routing.md
+2026-10-14T16:51:43.4518355Z npm notice 17.0kB bundle/docs/core/remote-agents.md
+2026-10-14T16:51:43.4518729Z npm notice 23.6kB bundle/docs/core/subagents.md
+2026-10-14T16:51:43.4519115Z npm notice 2.8kB bundle/docs/examples/proxy-script.md
+2026-10-14T16:51:43.4519537Z npm notice 5.8kB bundle/docs/extensions/best-practices.md
+2026-10-14T16:51:43.4520052Z npm notice 1.8kB bundle/docs/extensions/index.md
+2026-10-14T16:51:43.4520442Z npm notice 12.0kB bundle/docs/extensions/reference.md
+2026-10-14T16:51:43.4520830Z npm notice 7.6kB bundle/docs/extensions/releasing.md
+2026-10-14T16:51:43.4521264Z npm notice 12.3kB bundle/docs/extensions/writing-extensions.md
+2026-10-14T16:51:43.4521730Z npm notice 15.0kB bundle/docs/get-started/authentication.mdx
+2026-10-14T16:51:43.4522146Z npm notice 4.6kB bundle/docs/get-started/gemini-3.md
+2026-10-14T16:51:43.4522526Z npm notice 6.3kB bundle/docs/get-started/index.md
+2026-10-14T16:51:43.4522932Z npm notice 5.6kB bundle/docs/get-started/installation.mdx
+2026-10-14T16:51:43.4523340Z npm notice 17.7kB bundle/docs/hooks/best-practices.md
+2026-10-14T16:51:43.4523699Z npm notice 8.3kB bundle/docs/hooks/index.md
+2026-10-14T16:51:43.4524053Z npm notice 13.3kB bundle/docs/hooks/reference.md
+2026-10-14T16:51:43.4524433Z npm notice 11.5kB bundle/docs/hooks/writing-hooks.md
+2026-10-14T16:51:43.4524885Z npm notice 10.8kB bundle/docs/ide-integration/ide-companion-spec.md
+2026-10-14T16:51:43.4525342Z npm notice 11.7kB bundle/docs/ide-integration/index.md
+2026-10-14T16:51:43.4525697Z npm notice 5.9kB bundle/docs/index.md
+2026-10-14T16:51:43.4526041Z npm notice 8.5kB bundle/docs/integration-tests.md
+2026-10-14T16:51:43.4526633Z npm notice 10.0kB bundle/docs/issue-and-pr-automation.md
+2026-10-14T16:51:43.4527039Z npm notice 4.9kB bundle/docs/local-development.md
+2026-10-14T16:51:43.4527409Z npm notice 3.1kB bundle/docs/mermaid/context.mmd
+2026-10-14T16:51:43.4527789Z npm notice 1.6kB bundle/docs/mermaid/render-path.mmd
+2026-10-14T16:51:43.4528142Z npm notice 2.5kB bundle/docs/npm.md
+2026-10-14T16:51:43.4528459Z npm notice 981B bundle/docs/redirects.json
+2026-10-14T16:51:43.4528820Z npm notice 24.3kB bundle/docs/reference/commands.md
+2026-10-14T16:51:43.4529231Z npm notice 102.3kB bundle/docs/reference/configuration.md
+2026-10-14T16:51:43.4529678Z npm notice 23.4kB bundle/docs/reference/keyboard-shortcuts.md
+2026-10-14T16:51:43.4530089Z npm notice 6.4kB bundle/docs/reference/memport.md
+2026-10-14T16:51:43.4530504Z npm notice 19.4kB bundle/docs/reference/policy-engine.md
+2026-10-14T16:51:43.4530888Z npm notice 18.0kB bundle/docs/reference/tools.md
+2026-10-14T16:51:43.4531258Z npm notice 5.5kB bundle/docs/release-confidence.md
+2026-10-14T16:51:43.4531620Z npm notice 23.3kB bundle/docs/releases.md
+2026-10-14T16:51:43.4531959Z npm notice 8.1kB bundle/docs/resources/faq.md
+2026-10-14T16:51:43.4532364Z npm notice 9.1kB bundle/docs/resources/quota-and-pricing.md
+2026-10-14T16:51:43.4532789Z npm notice 6.7kB bundle/docs/resources/tos-privacy.md
+2026-10-14T16:51:43.4533205Z npm notice 10.5kB bundle/docs/resources/troubleshooting.md
+2026-10-14T16:51:43.4533615Z npm notice 1.5kB bundle/docs/resources/uninstall.md
+2026-10-14T16:51:43.4533969Z npm notice 9.4kB bundle/docs/sidebar.json
+2026-10-14T16:51:43.4534328Z npm notice 1.5kB bundle/docs/tools/activate-skill.md
+2026-10-14T16:51:43.4534699Z npm notice 2.8kB bundle/docs/tools/ask-user.md
+2026-10-14T16:51:43.4535070Z npm notice 5.2kB bundle/docs/tools/file-system.md
+2026-10-14T16:51:43.4535453Z npm notice 1.7kB bundle/docs/tools/internal-docs.md
+2026-10-14T16:51:43.4535833Z npm notice 1.8kB bundle/docs/tools/mcp-resources.md
+2026-10-14T16:51:43.4536320Z npm notice 43.6kB bundle/docs/tools/mcp-server.md
+2026-10-14T16:51:43.4536826Z npm notice 1.2kB bundle/docs/tools/memory.md
+2026-10-14T16:51:43.4537176Z npm notice 2.6kB bundle/docs/tools/planning.md
+2026-10-14T16:51:43.4537515Z npm notice 7.9kB bundle/docs/tools/shell.md
+2026-10-14T16:51:43.4537883Z npm notice 1.2kB bundle/docs/tools/todos.md
+2026-10-14T16:51:43.4538222Z npm notice 2.6kB bundle/docs/tools/tracker.md
+2026-10-14T16:51:43.4538573Z npm notice 1.7kB bundle/docs/tools/web-fetch.md
+2026-10-14T16:51:43.4538941Z npm notice 1.1kB bundle/docs/tools/web-search.md
+2026-10-14T16:51:43.4539283Z npm notice 418B bundle/events-XB7DADIJ.js
+2026-10-14T16:51:43.4539737Z npm notice 114B bundle/examples/custom-commands/commands/fs/grep-code.toml
+2026-10-14T16:51:43.4540413Z npm notice 54B bundle/examples/custom-commands/gemini-extension.json
+2026-10-14T16:51:43.4540924Z npm notice 100B bundle/examples/exclude-tools/gemini-extension.json
+2026-10-14T16:51:43.4541396Z npm notice 52B bundle/examples/hooks/gemini-extension.json
+2026-10-14T16:51:43.4541824Z npm notice 216B bundle/examples/hooks/hooks/hooks.json
+2026-10-14T16:51:43.4542240Z npm notice 188B bundle/examples/hooks/scripts/on-start.js
+2026-10-14T16:51:43.4542655Z npm notice 1.4kB bundle/examples/mcp-server/example.js
+2026-10-14T16:51:43.4543098Z npm notice 213B bundle/examples/mcp-server/gemini-extension.json
+2026-10-14T16:51:43.4543547Z npm notice 253B bundle/examples/mcp-server/package.json
+2026-10-14T16:51:43.4543942Z npm notice 859B bundle/examples/mcp-server/README.md
+2026-10-14T16:51:43.4544377Z npm notice 131B bundle/examples/policies/gemini-extension.json
+2026-10-14T16:51:43.4544870Z npm notice 872B bundle/examples/policies/policies/policies.toml
+2026-10-14T16:51:43.4545297Z npm notice 1.4kB bundle/examples/policies/README.md
+2026-10-14T16:51:43.4545724Z npm notice 53B bundle/examples/skills/gemini-extension.json
+2026-10-14T16:51:43.4546185Z npm notice 215B bundle/examples/skills/skills/greeter/SKILL.md
+2026-10-14T16:51:43.4546845Z npm notice 535B bundle/examples/themes-example/gemini-extension.json
+2026-10-14T16:51:43.4547314Z npm notice 870B bundle/examples/themes-example/README.md
+2026-10-14T16:51:43.4547724Z npm notice 648.7kB bundle/gemini-B7NXW5BY.js
+2026-10-14T16:51:43.4548068Z npm notice 649.1kB bundle/gemini-LI5NMDLE.js
+2026-10-14T16:51:43.4548392Z npm notice 5.1kB bundle/gemini.js
+2026-10-14T16:51:43.4548749Z npm notice 1.5kB bundle/getMachineId-bsd-TXG52NKR.js
+2026-10-14T16:51:43.4549164Z npm notice 1.6kB bundle/getMachineId-darwin-7OE4DDZ6.js
+2026-10-14T16:51:43.4549581Z npm notice 1.3kB bundle/getMachineId-linux-SHIFKOOX.js
+2026-10-14T16:51:43.4550027Z npm notice 1.1kB bundle/getMachineId-unsupported-5U5DOEYY.js
+2026-10-14T16:51:43.4550463Z npm notice 1.7kB bundle/getMachineId-win-6KLLGOI4.js
+2026-10-14T16:51:43.4550871Z npm notice 479B bundle/https-proxy-agent-JWL7GO47.js
+2026-10-14T16:51:43.4551265Z npm notice 1.3MB bundle/interactiveCli-5C7XV6JB.js
+2026-10-14T16:51:43.4551659Z npm notice 1.3MB bundle/interactiveCli-ZDWMVWRU.js
+2026-10-14T16:51:43.4552070Z npm notice 2.1kB bundle/liteRtServerManager-AQMKGYWK.js
+2026-10-14T16:51:43.4552490Z npm notice 2.1kB bundle/liteRtServerManager-GP7JDHEV.js
+2026-10-14T16:51:43.4552904Z npm notice 11.7kB bundle/multipart-parser-E7RMVJWU.js
+2026-10-14T16:51:43.4553309Z npm notice 11.7kB bundle/multipart-parser-KPBZEGQU.js
+2026-10-14T16:51:43.4553705Z npm notice 10.6kB bundle/oauth2-provider-Q4Q2GBVW.js
+2026-10-14T16:51:43.4554116Z npm notice 10.3kB bundle/oauth2-provider-YL6FZXGV.js
+2026-10-14T16:51:43.4554482Z npm notice 312B bundle/policies/agents.toml
+2026-10-14T16:51:43.4555019Z npm notice 111B bundle/policies/conseca.toml
+2026-10-14T16:51:43.4555489Z npm notice 366B bundle/policies/discovered.toml
+2026-10-14T16:51:43.4555989Z npm notice 158B bundle/policies/non-interactive.toml
+2026-10-14T16:51:43.4556730Z npm notice 6.9kB bundle/policies/plan.toml
+2026-10-14T16:51:43.4557193Z npm notice 2.2kB bundle/policies/read-only.toml
+2026-10-14T16:51:43.4571417Z npm notice 647B bundle/policies/sandbox-default.toml
+2026-10-14T16:51:43.4572088Z npm notice 3.0kB bundle/policies/write.toml
+2026-10-14T16:51:43.4572487Z npm notice 2.4kB bundle/policies/yolo.toml
+2026-10-14T16:51:43.4572901Z npm notice 8.7kB bundle/sandbox-macos-permissive-open.sb
+2026-10-14T16:51:43.4573371Z npm notice 9.0kB bundle/sandbox-macos-permissive-proxied.sb
+2026-10-14T16:51:43.4573841Z npm notice 6.9kB bundle/sandbox-macos-restrictive-open.sb
+2026-10-14T16:51:43.4574313Z npm notice 7.1kB bundle/sandbox-macos-restrictive-proxied.sb
+2026-10-14T16:51:43.4574760Z npm notice 8.2kB bundle/sandbox-macos-strict-open.sb
+2026-10-14T16:51:43.4575188Z npm notice 8.4kB bundle/sandbox-macos-strict-proxied.sb
+2026-10-14T16:51:43.4575559Z npm notice 45.4kB bundle/src-65GKNWUJ.js
+2026-10-14T16:51:43.4575890Z npm notice 45.7kB bundle/src-U45KTUYT.js
+2026-10-14T16:51:43.4576345Z npm notice 352.1kB bundle/src-XZYPU6PJ.js
+2026-10-14T16:51:43.4576925Z npm notice 622B bundle/start-DNBM3NIQ.js
+2026-10-14T16:51:43.4577247Z npm notice 622B bundle/start-FLIFGEHS.js
+2026-10-14T16:51:43.4577626Z npm notice 274.5kB bundle/tree-sitter-7U6MW5PS.js
+2026-10-14T16:51:43.4578028Z npm notice 1.8MB bundle/tree-sitter-bash-34ZGLXVX.js
+2026-10-14T16:51:43.4578408Z npm notice 362.8kB bundle/worker/worker-entry.js
+2026-10-14T16:51:43.4578726Z npm notice 8.0kB package.json
+2026-10-14T16:51:43.4578994Z npm notice Tarball Details
+2026-10-14T16:51:43.4579290Z npm notice name: @google/gemini-cli
+2026-10-14T16:51:43.4579673Z npm notice version: 0.66.0-nightly.20261013.g204db94ae
+2026-10-14T16:51:43.4580200Z npm notice filename: google-gemini-cli-0.66.0-nightly.20261013.g204db94ae.tgz
+2026-10-14T16:51:43.4580659Z npm notice package size: 16.7 MB
+2026-10-14T16:51:43.4580954Z npm notice unpacked size: 75.3 MB
+2026-10-14T16:51:43.4581333Z npm notice shasum: 500bce4a1d4a2c88e5ed129bc08e850d26bd71d8
+2026-10-14T16:51:43.4581815Z npm notice integrity: sha512-PsnqAxnqiMopL[...]dJ1eVIZipze/g==
+2026-10-14T16:51:43.4582184Z npm notice total files: 432
+2026-10-14T16:51:43.4582411Z npm notice
+2026-10-14T16:51:44.7091265Z npm warn exec The following package was not found and will be installed: file:google-gemini-cli-0.66.0-nightly.20261013.g204db94ae.tgz
+2026-10-14T16:51:47.9570418Z 0.66.0-nightly.20261013.g204db94ae
+2026-10-14T16:51:48.0085647Z ##[group]Run sleep 2
+2026-10-14T16:51:48.0085908Z [36;1msleep 2[0m
+2026-10-14T16:51:48.0147263Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:51:48.0147607Z ##[endgroup]
+2026-10-14T16:51:50.0329942Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-14T16:51:50.0330373Z with:
+2026-10-14T16:51:50.0330601Z   name: test-results-fork-Linux-22.x-others
+2026-10-14T16:51:50.0330895Z   path: packages/*/junit.xml
+2026-10-14T16:51:50.0331143Z   if-no-files-found: warn
+2026-10-14T16:51:50.0331391Z   compression-level: 6
+2026-10-14T16:51:50.0331600Z   overwrite: false
+2026-10-14T16:51:50.0331807Z   include-hidden-files: false
+2026-10-14T16:51:50.0332037Z ##[endgroup]
+2026-10-14T16:51:50.1931012Z (node:16254) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T16:51:50.1931957Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:51:50.2002473Z With the provided path, there will be 2 files uploaded
+2026-10-14T16:51:50.2006950Z Artifact name is valid!
+2026-10-14T16:51:50.2007702Z Root directory input is valid!
+2026-10-14T16:51:50.5445241Z Beginning upload of artifact content to blob storage
+2026-10-14T16:51:50.5989799Z (node:16254) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T16:51:50.9912064Z Uploaded bytes 292309
+2026-10-14T16:51:51.0506151Z Finished uploading artifact content to blob storage!
+2026-10-14T16:51:51.0507535Z SHA256 digest of uploaded artifact zip is af75ea60334796b7851f053113b6a59a28b0c8f0a16b7a7d5f4d0c00ec6c0cf9
+2026-10-14T16:51:51.0508310Z Finalizing artifact upload
+2026-10-14T16:51:51.3005268Z Artifact test-results-fork-Linux-22.x-others.zip successfully finalized. Artifact ID 11913269506
+2026-10-14T16:51:51.3006710Z Artifact test-results-fork-Linux-22.x-others has been successfully uploaded! Final size is 292309 bytes. Artifact ID is 11913269506
+2026-10-14T16:51:51.3012787Z Artifact download URL: https://github.com/google-gemini/gemini-cli/actions/runs/38600896727/artifacts/11913269506
+2026-10-14T16:51:51.3182399Z Post job cleanup.
+2026-10-14T16:51:51.4351244Z (node:16266) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T16:51:51.4352234Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:51:51.4354453Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-257290dc9ce66ea5b0e2e9a5c3fb6059c4b6b1fb417b00e0056b1f26a76831db, not saving cache.
+2026-10-14T16:51:51.4478900Z Post job cleanup.
+2026-10-14T16:51:51.5305625Z [command]/usr/bin/git version
+2026-10-14T16:51:51.5373106Z git version 2.55.0
+2026-10-14T16:51:51.5408827Z Temporarily overriding HOME='/home/runner/work/_temp/543ff019-819c-4a96-903d-79928540016c' before making global git config changes
+2026-10-14T16:51:51.5409790Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:51:51.5413380Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:51:51.5446920Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:51:51.5477168Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:51:51.5704343Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:51:51.5749679Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:51:51.6079116Z Cleaning up orphan processes
+2026-10-14T16:51:51.6923286Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

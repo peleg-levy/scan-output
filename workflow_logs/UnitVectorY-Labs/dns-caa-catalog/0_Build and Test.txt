@@ -1,0 +1,505 @@
+﻿2026-10-11T21:05:46.1251534Z Current runner version: '2.337.0'
+2026-10-11T21:05:46.1269553Z ##[group]Runner Image Provisioner
+2026-10-11T21:05:46.1270123Z Hosted Compute Agent
+2026-10-11T21:05:46.1270517Z Version: 20261002.596
+2026-10-11T21:05:46.1270891Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-11T21:05:46.1271343Z Build Date: 2026-10-02T22:28:27Z
+2026-10-11T21:05:46.1272096Z Worker ID: {8004559d-383b-4059-acad-f3478ee75fe0}
+2026-10-11T21:05:46.1272502Z Region: centralus
+2026-10-11T21:05:46.1272819Z Cloud: Azure
+2026-10-11T21:05:46.1273181Z ##[endgroup]
+2026-10-11T21:05:46.1273971Z ##[group]Operating System
+2026-10-11T21:05:46.1274392Z Ubuntu
+2026-10-11T21:05:46.1274697Z 24.04.5
+2026-10-11T21:05:46.1275022Z LTS
+2026-10-11T21:05:46.1275367Z ##[endgroup]
+2026-10-11T21:05:46.1275721Z ##[group]Runner Image
+2026-10-11T21:05:46.1276103Z Image: ubuntu-24.04
+2026-10-11T21:05:46.1276465Z Version: 20261004.327.1
+2026-10-11T21:05:46.1277240Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-11T21:05:46.1278330Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-11T21:05:46.1278929Z ##[endgroup]
+2026-10-11T21:05:46.1279607Z ##[group]GITHUB_TOKEN Permissions
+2026-10-11T21:05:46.1280850Z Contents: read
+2026-10-11T21:05:46.1281225Z Metadata: read
+2026-10-11T21:05:46.1281555Z ##[endgroup]
+2026-10-11T21:05:46.1282928Z Secret source: Actions
+2026-10-11T21:05:46.1283472Z Cache mode: write
+2026-10-11T21:05:46.1283945Z Prepare workflow directory
+2026-10-11T21:05:46.1492789Z Prepare all required actions
+2026-10-11T21:05:46.1525529Z Getting action download info
+2026-10-11T21:05:46.3746289Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-11T21:05:46.7355734Z Download action repository 'actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e' (SHA:b7ad1dad31e06c5925ef5d2fc7ad053ef454303e)
+2026-10-11T21:05:47.3384020Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-10-11T21:05:47.6088382Z Complete job name: Build and Test
+2026-10-11T21:05:47.6636193Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-11T21:05:47.6637150Z with:
+2026-10-11T21:05:47.6637648Z   persist-credentials: false
+2026-10-11T21:05:47.6638438Z   repository: UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:47.6643540Z   token: ***
+2026-10-11T21:05:47.6644030Z   ssh-strict: true
+2026-10-11T21:05:47.6644527Z   ssh-user: git
+2026-10-11T21:05:47.6645004Z   clean: true
+2026-10-11T21:05:47.6645552Z   sparse-checkout-cone-mode: true
+2026-10-11T21:05:47.6646156Z   fetch-depth: 1
+2026-10-11T21:05:47.6646651Z   fetch-tags: false
+2026-10-11T21:05:47.6647162Z   show-progress: true
+2026-10-11T21:05:47.6647680Z   lfs: false
+2026-10-11T21:05:47.6648281Z   submodules: false
+2026-10-11T21:05:47.6648791Z   set-safe-directory: true
+2026-10-11T21:05:47.6649376Z   allow-unsafe-pr-checkout: false
+2026-10-11T21:05:47.6650103Z ##[endgroup]
+2026-10-11T21:05:47.7297239Z Syncing repository: UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:47.7300128Z ##[group]Getting Git version info
+2026-10-11T21:05:47.7301312Z Working directory is '/home/runner/work/dns-caa-catalog/dns-caa-catalog'
+2026-10-11T21:05:47.7303164Z [command]/usr/bin/git version
+2026-10-11T21:05:47.8397004Z git version 2.55.0
+2026-10-11T21:05:47.8410968Z ##[endgroup]
+2026-10-11T21:05:47.8419942Z Temporarily overriding HOME='/home/runner/work/_temp/af9dca8e-dbf2-4444-946c-c032572ac5c5' before making global git config changes
+2026-10-11T21:05:47.8422280Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T21:05:47.8424542Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:05:47.8643144Z Deleting the contents of '/home/runner/work/dns-caa-catalog/dns-caa-catalog'
+2026-10-11T21:05:47.8645652Z ##[group]Determining repository object format
+2026-10-11T21:05:47.8647487Z ##[endgroup]
+2026-10-11T21:05:47.8648845Z ##[group]Initializing the repository
+2026-10-11T21:05:47.8650960Z [command]/usr/bin/git init /home/runner/work/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:05:47.9139766Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-11T21:05:47.9141553Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-11T21:05:47.9143179Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-11T21:05:47.9144411Z hint: call:
+2026-10-11T21:05:47.9145078Z hint:
+2026-10-11T21:05:47.9145957Z hint: 	git config --global init.defaultBranch <name>
+2026-10-11T21:05:47.9146961Z hint:
+2026-10-11T21:05:47.9147938Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-11T21:05:47.9149639Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-11T21:05:47.9150856Z hint:
+2026-10-11T21:05:47.9151608Z hint: 	git branch -m <name>
+2026-10-11T21:05:47.9152394Z hint:
+2026-10-11T21:05:47.9153453Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-11T21:05:47.9155273Z Initialized empty Git repository in /home/runner/work/dns-caa-catalog/dns-caa-catalog/.git/
+2026-10-11T21:05:47.9158288Z [command]/usr/bin/git remote add origin https://github.com/UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:47.9414408Z ##[endgroup]
+2026-10-11T21:05:47.9415699Z ##[group]Disabling automatic garbage collection
+2026-10-11T21:05:47.9416806Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-11T21:05:47.9447596Z ##[endgroup]
+2026-10-11T21:05:47.9448876Z ##[group]Setting up auth
+2026-10-11T21:05:47.9449775Z Removing SSH command configuration
+2026-10-11T21:05:47.9451989Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:05:47.9480303Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:05:48.1320379Z Removing HTTP extra header
+2026-10-11T21:05:48.1326060Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:05:48.1356337Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:05:48.1529809Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:05:48.1533202Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:05:48.1568557Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:05:48.1755472Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-11T21:05:48.1790647Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git.path /home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:48.1822227Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:48.1857212Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:48.1926389Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:48.1952174Z ##[endgroup]
+2026-10-11T21:05:48.1952990Z ##[group]Fetching the repository
+2026-10-11T21:05:48.1957189Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +90ffcf54f324e786ab8b653e6adc20ec821c29d6:refs/remotes/origin/main
+2026-10-11T21:05:48.9202968Z From https://github.com/UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:48.9204695Z  * [new ref]         90ffcf54f324e786ab8b653e6adc20ec821c29d6 -> origin/main
+2026-10-11T21:05:48.9210578Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-11T21:05:48.9236860Z   origin/main
+2026-10-11T21:05:48.9243415Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-11T21:05:48.9266837Z 90ffcf54f324e786ab8b653e6adc20ec821c29d6
+2026-10-11T21:05:48.9269948Z ##[endgroup]
+2026-10-11T21:05:48.9270226Z ##[group]Determining the checkout info
+2026-10-11T21:05:48.9270886Z ##[endgroup]
+2026-10-11T21:05:48.9273511Z [command]/usr/bin/git sparse-checkout disable
+2026-10-11T21:05:48.9467476Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-11T21:05:48.9495297Z ##[group]Checking out the ref
+2026-10-11T21:05:48.9497922Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-11T21:05:49.2251759Z Switched to a new branch 'main'
+2026-10-11T21:05:49.2258769Z branch 'main' set up to track 'origin/main'.
+2026-10-11T21:05:49.2269820Z ##[endgroup]
+2026-10-11T21:05:49.2310664Z [command]/usr/bin/git log -1 --format=%H
+2026-10-11T21:05:49.2336279Z 90ffcf54f324e786ab8b653e6adc20ec821c29d6
+2026-10-11T21:05:49.2344621Z ##[group]Removing auth
+2026-10-11T21:05:49.2344942Z Removing SSH command configuration
+2026-10-11T21:05:49.2347857Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:05:49.2377665Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:05:49.2565364Z Removing HTTP extra header
+2026-10-11T21:05:49.2567868Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:05:49.2604367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:05:49.2793265Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:05:49.2796793Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:05:49.2824471Z includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git.path
+2026-10-11T21:05:49.2825042Z includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path
+2026-10-11T21:05:49.2825501Z includeif.gitdir:/github/workspace/.git.path
+2026-10-11T21:05:49.2825878Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-11T21:05:49.2832454Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git.path
+2026-10-11T21:05:49.2856620Z /home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:49.2865033Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-99e25008\-8267\-49fe\-99b6\-0fcff6ae4687\.config
+2026-10-11T21:05:49.3531441Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path
+2026-10-11T21:05:49.3562878Z /home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:49.3571985Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-99e25008\-8267\-49fe\-99b6\-0fcff6ae4687\.config
+2026-10-11T21:05:49.3731241Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-11T21:05:49.3759073Z /github/runner_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:49.3763113Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-99e25008\-8267\-49fe\-99b6\-0fcff6ae4687\.config
+2026-10-11T21:05:49.4031524Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-11T21:05:49.4057656Z /github/runner_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config
+2026-10-11T21:05:49.4063955Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-99e25008\-8267\-49fe\-99b6\-0fcff6ae4687\.config
+2026-10-11T21:05:49.4484826Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:05:49.4677526Z Removing credentials config '/home/runner/work/_temp/git-credentials-99e25008-8267-49fe-99b6-0fcff6ae4687.config'
+2026-10-11T21:05:49.4684301Z ##[endgroup]
+2026-10-11T21:05:49.4951016Z ##[group]Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+2026-10-11T21:05:49.4951244Z with:
+2026-10-11T21:05:49.4951365Z   go-version: 1.27.2
+2026-10-11T21:05:49.4951491Z   check-latest: false
+2026-10-11T21:05:49.4953058Z   token: ***
+2026-10-11T21:05:49.4953181Z   cache: true
+2026-10-11T21:05:49.4953298Z ##[endgroup]
+2026-10-11T21:05:49.5682775Z Setup go version spec 1.27.2
+2026-10-11T21:05:49.5686702Z Attempting to download 1.27.2...
+2026-10-11T21:05:50.2509675Z matching 1.27.2...
+2026-10-11T21:05:50.2547158Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-linux-x64.tar.gz
+2026-10-11T21:05:50.9688590Z Extracting Go...
+2026-10-11T21:05:50.9764464Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/5600174c-8d51-4bcd-bae1-2626b9d15600 -f /home/runner/work/_temp/4f4dac17-b834-46e3-b26c-61db0caf80e4
+2026-10-11T21:05:52.2860343Z Successfully extracted go to /home/runner/work/_temp/5600174c-8d51-4bcd-bae1-2626b9d15600
+2026-10-11T21:05:52.2860894Z Adding to the cache ...
+2026-10-11T21:06:02.3136523Z Successfully cached go to /opt/hostedtoolcache/go/1.27.2/x64
+2026-10-11T21:06:02.3138183Z Added go to the path
+2026-10-11T21:06:02.3146211Z Successfully set up Go version 1.27.2
+2026-10-11T21:06:02.3282717Z [command]/opt/hostedtoolcache/go/1.27.2/x64/bin/go env GOMODCACHE
+2026-10-11T21:06:02.3311816Z [command]/opt/hostedtoolcache/go/1.27.2/x64/bin/go env GOCACHE
+2026-10-11T21:06:02.3335328Z /home/runner/go/pkg/mod
+2026-10-11T21:06:02.3346394Z /home/runner/.cache/go-build
+2026-10-11T21:06:02.4806209Z Cache is not found
+2026-10-11T21:06:02.4825258Z go version go1.27.2 linux/amd64
+2026-10-11T21:06:02.4825374Z 
+2026-10-11T21:06:02.4825577Z ##[group]go env
+2026-10-11T21:06:03.1323945Z AR='ar'
+2026-10-11T21:06:03.1324165Z CC='gcc'
+2026-10-11T21:06:03.1324382Z CGO_CFLAGS='-O2 -g'
+2026-10-11T21:06:03.1324574Z CGO_CPPFLAGS=''
+2026-10-11T21:06:03.1324757Z CGO_CXXFLAGS='-O2 -g'
+2026-10-11T21:06:03.1324909Z CGO_ENABLED='1'
+2026-10-11T21:06:03.1325023Z CGO_FFLAGS='-O2 -g'
+2026-10-11T21:06:03.1325140Z CGO_LDFLAGS='-O2 -g'
+2026-10-11T21:06:03.1325254Z CXX='g++'
+2026-10-11T21:06:03.1325359Z GCCGO='gccgo'
+2026-10-11T21:06:03.1325470Z GO111MODULE=''
+2026-10-11T21:06:03.1325576Z GOAMD64='v1'
+2026-10-11T21:06:03.1325701Z GOARCH='amd64'
+2026-10-11T21:06:03.1325805Z GOAUTH='netrc'
+2026-10-11T21:06:03.1325924Z GOBIN='/home/runner/go/bin'
+2026-10-11T21:06:03.1326079Z GOCACHE='/home/runner/.cache/go-build'
+2026-10-11T21:06:03.1326229Z GOCACHEPROG=''
+2026-10-11T21:06:03.1326338Z GODEBUG=''
+2026-10-11T21:06:03.1326458Z GOENV='/home/runner/.config/go/env'
+2026-10-11T21:06:03.1326599Z GOEXE=''
+2026-10-11T21:06:03.1326701Z GOEXPERIMENT=''
+2026-10-11T21:06:03.1326814Z GOFIPS140='off'
+2026-10-11T21:06:03.1326928Z GOFLAGS=''
+2026-10-11T21:06:03.1327314Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3053584413=/tmp/go-build -gno-record-gcc-switches'
+2026-10-11T21:06:03.1327863Z GOHOSTARCH='amd64'
+2026-10-11T21:06:03.1328120Z GOHOSTOS='linux'
+2026-10-11T21:06:03.1328242Z GOINSECURE=''
+2026-10-11T21:06:03.1329755Z GOMOD='/home/runner/work/dns-caa-catalog/dns-caa-catalog/go.mod'
+2026-10-11T21:06:03.1330022Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-10-11T21:06:03.1330165Z GONOPROXY=''
+2026-10-11T21:06:03.1330270Z GONOSUMDB=''
+2026-10-11T21:06:03.1330373Z GOOS='linux'
+2026-10-11T21:06:03.1330494Z GOPACKAGESDRIVER=''
+2026-10-11T21:06:03.1330647Z GOPATH='/home/runner/go'
+2026-10-11T21:06:03.1330897Z GOPRIVATE=''
+2026-10-11T21:06:03.1331074Z GOPROXY='https://proxy.golang.org,direct'
+2026-10-11T21:06:03.1331261Z GOROOT='/opt/hostedtoolcache/go/1.27.2/x64'
+2026-10-11T21:06:03.1331423Z GOSUMDB='sum.golang.org'
+2026-10-11T21:06:03.1331551Z GOTELEMETRY='local'
+2026-10-11T21:06:03.1331696Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-10-11T21:06:03.1331862Z GOTMPDIR=''
+2026-10-11T21:06:03.1331970Z GOTOOLCHAIN='local'
+2026-10-11T21:06:03.1332298Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.2/x64/pkg/tool/linux_amd64'
+2026-10-11T21:06:03.1332488Z GOVCS=''
+2026-10-11T21:06:03.1332595Z GOVERSION='go1.27.2'
+2026-10-11T21:06:03.1332711Z GOWORK=''
+2026-10-11T21:06:03.1332826Z PKG_CONFIG='pkg-config'
+2026-10-11T21:06:03.1332904Z 
+2026-10-11T21:06:03.1333177Z ##[endgroup]
+2026-10-11T21:06:03.4921157Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+2026-10-11T21:06:03.4921360Z with:
+2026-10-11T21:06:03.4921485Z   path: ~/.cache/go-build
+~/go/pkg/mod
+
+2026-10-11T21:06:03.4921719Z   key: Linux-go-1068ceb50b5db9c261d9baf01dce330faa20274c80533fe98659318db3feae35
+2026-10-11T21:06:03.4921949Z   restore-keys: Linux-go-
+
+2026-10-11T21:06:03.4922088Z   enableCrossOsArchive: false
+2026-10-11T21:06:03.4922223Z   fail-on-cache-miss: false
+2026-10-11T21:06:03.4922351Z   lookup-only: false
+2026-10-11T21:06:03.4922466Z   save-always: false
+2026-10-11T21:06:03.4922590Z env:
+2026-10-11T21:06:03.4922691Z   GOTOOLCHAIN: local
+2026-10-11T21:06:03.4922803Z ##[endgroup]
+2026-10-11T21:06:03.6801196Z Cache hit for restore-key: Linux-go-28bbf11a4a867410aff2d94fc47d2cbcf147bda852ffc8732310b30b3f5f4f17
+2026-10-11T21:06:04.5544924Z Received 48979062 of 48979062 (100.0%), 65.2 MBs/sec
+2026-10-11T21:06:04.5545657Z Cache Size: ~47 MB (48979062 B)
+2026-10-11T21:06:04.5584450Z [command]/usr/bin/tar -xf /home/runner/work/_temp/56af67ee-68a1-4aab-a457-992ea50e7912/cache.tzst -P -C /home/runner/work/dns-caa-catalog/dns-caa-catalog --use-compress-program unzstd
+2026-10-11T21:06:04.9217270Z Cache restored successfully
+2026-10-11T21:06:04.9290097Z Cache restored from key: Linux-go-28bbf11a4a867410aff2d94fc47d2cbcf147bda852ffc8732310b30b3f5f4f17
+2026-10-11T21:06:04.9389228Z ##[group]Run go mod download
+2026-10-11T21:06:04.9389449Z [36;1mgo mod download[0m
+2026-10-11T21:06:05.0596398Z shell: /usr/bin/bash -e {0}
+2026-10-11T21:06:05.0596588Z env:
+2026-10-11T21:06:05.0596729Z   GOTOOLCHAIN: local
+2026-10-11T21:06:05.0596859Z ##[endgroup]
+2026-10-11T21:06:05.5086504Z ##[group]Run go build -v ./...
+2026-10-11T21:06:05.5086695Z [36;1mgo build -v ./...[0m
+2026-10-11T21:06:05.5136640Z shell: /usr/bin/bash -e {0}
+2026-10-11T21:06:05.5136779Z env:
+2026-10-11T21:06:05.5136886Z   GOTOOLCHAIN: local
+2026-10-11T21:06:05.5137008Z ##[endgroup]
+2026-10-11T21:06:05.7124317Z internal/goarch
+2026-10-11T21:06:05.7124828Z internal/unsafeheader
+2026-10-11T21:06:05.7147041Z internal/byteorder
+2026-10-11T21:06:05.7165297Z internal/cpu
+2026-10-11T21:06:05.7167274Z internal/coverage/rtcov
+2026-10-11T21:06:05.7253663Z internal/abi
+2026-10-11T21:06:05.7268225Z internal/godebugs
+2026-10-11T21:06:05.7276316Z internal/goexperiment
+2026-10-11T21:06:05.7409271Z internal/goos
+2026-10-11T21:06:05.7434946Z internal/profilerecord
+2026-10-11T21:06:05.7449559Z internal/runtime/atomic
+2026-10-11T21:06:05.7549177Z internal/runtime/syscall/linux
+2026-10-11T21:06:05.7729158Z internal/bytealg
+2026-10-11T21:06:05.8839295Z internal/chacha8rand
+2026-10-11T21:06:05.8861150Z math/bits
+2026-10-11T21:06:05.8879259Z internal/runtime/exithook
+2026-10-11T21:06:05.9029207Z internal/strconv
+2026-10-11T21:06:05.9047936Z internal/runtime/gc
+2026-10-11T21:06:05.9049000Z internal/runtime/sys
+2026-10-11T21:06:05.9116006Z internal/asan
+2026-10-11T21:06:05.9180443Z internal/msan
+2026-10-11T21:06:05.9210314Z internal/race
+2026-10-11T21:06:05.9265737Z internal/runtime/math
+2026-10-11T21:06:05.9311448Z internal/runtime/pprof/label
+2026-10-11T21:06:05.9352984Z internal/stringslite
+2026-10-11T21:06:05.9529799Z internal/trace/tracev2
+2026-10-11T21:06:05.9665016Z internal/runtime/cgroup
+2026-10-11T21:06:05.9692712Z sync/atomic
+2026-10-11T21:06:05.9857433Z internal/synctest
+2026-10-11T21:06:05.9911681Z unicode
+2026-10-11T21:06:06.0044621Z internal/runtime/gc/scan
+2026-10-11T21:06:06.0046597Z internal/runtime/maps
+2026-10-11T21:06:06.0065005Z internal/sync
+2026-10-11T21:06:06.0269203Z unicode/utf8
+2026-10-11T21:06:06.0473376Z cmp
+2026-10-11T21:06:06.0549005Z encoding
+2026-10-11T21:06:06.0659151Z math
+2026-10-11T21:06:06.0786187Z unicode/utf16
+2026-10-11T21:06:06.0958833Z crypto/internal/fips140/alias
+2026-10-11T21:06:06.1070558Z crypto/internal/fips140deps/byteorder
+2026-10-11T21:06:06.1165399Z crypto/internal/fips140deps/cpu
+2026-10-11T21:06:06.1213804Z crypto/internal/constanttime
+2026-10-11T21:06:06.1259724Z crypto/internal/fips140/subtle
+2026-10-11T21:06:06.1489470Z crypto/internal/fips140deps/time
+2026-10-11T21:06:06.1603301Z crypto/internal/boring/sig
+2026-10-11T21:06:06.1666948Z runtime
+2026-10-11T21:06:06.2484211Z vendor/golang.org/x/crypto/cryptobyte/asn1
+2026-10-11T21:06:06.2599104Z crypto/subtle
+2026-10-11T21:06:06.2617717Z container/list
+2026-10-11T21:06:06.2628713Z vendor/golang.org/x/crypto/internal/alias
+2026-10-11T21:06:06.2778995Z internal/nettrace
+2026-10-11T21:06:06.2792118Z golang.org/x/net/internal/iana
+2026-10-11T21:06:06.2909040Z log/internal
+2026-10-11T21:06:07.6209395Z iter
+2026-10-11T21:06:07.6217801Z internal/reflectlite
+2026-10-11T21:06:07.6261172Z weak
+2026-10-11T21:06:07.6274904Z sync
+2026-10-11T21:06:07.6292439Z slices
+2026-10-11T21:06:07.6306542Z maps
+2026-10-11T21:06:07.6916252Z internal/bisect
+2026-10-11T21:06:07.6916922Z internal/testlog
+2026-10-11T21:06:07.6917353Z crypto/internal/fips140cache
+2026-10-11T21:06:07.6993692Z errors
+2026-10-11T21:06:07.7057261Z internal/singleflight
+2026-10-11T21:06:07.7079321Z unique
+2026-10-11T21:06:07.7241749Z io
+2026-10-11T21:06:07.7317584Z encoding/json/internal
+2026-10-11T21:06:07.7348977Z strconv
+2026-10-11T21:06:07.7431181Z encoding/json/internal/jsonflags
+2026-10-11T21:06:07.7599194Z encoding/json/internal/jsonopts
+2026-10-11T21:06:07.7819050Z internal/oserror
+2026-10-11T21:06:07.7821479Z reflect
+2026-10-11T21:06:07.7884465Z path
+2026-10-11T21:06:07.7904483Z bytes
+2026-10-11T21:06:07.7969730Z strings
+2026-10-11T21:06:07.8093828Z encoding/base32
+2026-10-11T21:06:07.8474418Z encoding/base64
+2026-10-11T21:06:07.9096313Z syscall
+2026-10-11T21:06:07.9111809Z hash
+2026-10-11T21:06:07.9197781Z bufio
+2026-10-11T21:06:07.9286379Z encoding/json/internal/jsonwire
+2026-10-11T21:06:07.9945193Z crypto
+2026-10-11T21:06:07.9996847Z encoding/json/jsontext
+2026-10-11T21:06:08.0199236Z internal/godebug
+2026-10-11T21:06:08.1438978Z crypto/internal/fips140deps/godebug
+2026-10-11T21:06:08.1619246Z crypto/internal/fips140
+2026-10-11T21:06:08.1678693Z time
+2026-10-11T21:06:08.1979902Z internal/syscall/unix
+2026-10-11T21:06:08.2609061Z internal/syscall/execenv
+2026-10-11T21:06:08.2875327Z crypto/internal/impl
+2026-10-11T21:06:08.3217054Z crypto/internal/fips140/sha256
+2026-10-11T21:06:08.3932478Z crypto/internal/fips140/sha3
+2026-10-11T21:06:08.4276033Z crypto/internal/fips140/sha512
+2026-10-11T21:06:08.4771413Z crypto/internal/entropy/v1.0.0
+2026-10-11T21:06:08.4929247Z crypto/internal/fips140/hmac
+2026-10-11T21:06:08.5085038Z crypto/internal/fips140/check
+2026-10-11T21:06:08.5147415Z io/fs
+2026-10-11T21:06:08.5209095Z internal/poll
+2026-10-11T21:06:08.5269056Z context
+2026-10-11T21:06:08.5708823Z internal/filepathlite
+2026-10-11T21:06:08.5814483Z crypto/internal/fips140/aes
+2026-10-11T21:06:08.5919136Z encoding/binary
+2026-10-11T21:06:08.5991133Z internal/fmtsort
+2026-10-11T21:06:08.6396722Z crypto/fips140
+2026-10-11T21:06:08.6409528Z os
+2026-10-11T21:06:08.6639187Z crypto/internal/fips140/nistec/fiat
+2026-10-11T21:06:08.6701607Z crypto/internal/fips140/edwards25519/field
+2026-10-11T21:06:08.7313889Z math/rand/v2
+2026-10-11T21:06:08.7629482Z math/rand
+2026-10-11T21:06:08.7763846Z crypto/internal/randutil
+2026-10-11T21:06:08.7909198Z crypto/internal/fips140/bigmod
+2026-10-11T21:06:08.8029438Z crypto/sha3
+2026-10-11T21:06:08.8313412Z crypto/internal/fips140hash
+2026-10-11T21:06:08.8431261Z internal/saferio
+2026-10-11T21:06:08.8584033Z crypto/internal/fips140/edwards25519
+2026-10-11T21:06:08.9554009Z crypto/internal/fips140/hkdf
+2026-10-11T21:06:08.9626611Z vendor/golang.org/x/crypto/internal/poly1305
+2026-10-11T21:06:08.9781820Z crypto/internal/fips140/tls12
+2026-10-11T21:06:09.0019173Z crypto/internal/fips140/tls13
+2026-10-11T21:06:09.0039006Z crypto/internal/fips140/nistec
+2026-10-11T21:06:09.0201115Z crypto/tls/internal/fips140tls
+2026-10-11T21:06:09.0262573Z encoding/pem
+2026-10-11T21:06:09.0309117Z vendor/golang.org/x/net/dns/dnsmessage
+2026-10-11T21:06:09.0389003Z fmt
+2026-10-11T21:06:09.0559214Z crypto/internal/sysrand
+2026-10-11T21:06:09.0739323Z crypto/internal/fips140/drbg
+2026-10-11T21:06:09.1086126Z crypto/internal/fips140/aes/gcm
+2026-10-11T21:06:09.1889481Z crypto/internal/fips140only
+2026-10-11T21:06:09.2019305Z crypto/internal/fips140/ed25519
+2026-10-11T21:06:09.2128966Z crypto/cipher
+2026-10-11T21:06:09.2547665Z crypto/internal/fips140/rsa
+2026-10-11T21:06:09.2939522Z crypto/internal/boring
+2026-10-11T21:06:09.3079087Z crypto/internal/rand
+2026-10-11T21:06:09.3186548Z encoding/hex
+2026-10-11T21:06:09.3253084Z flag
+2026-10-11T21:06:09.3406171Z crypto/internal/fips140/ecdh
+2026-10-11T21:06:09.3431345Z encoding/json/v2
+2026-10-11T21:06:09.3662784Z crypto/ecdh
+2026-10-11T21:06:09.4396846Z math/big
+2026-10-11T21:06:09.4493880Z crypto/internal/fips140/ecdsa
+2026-10-11T21:06:09.4545884Z crypto/sha512
+2026-10-11T21:06:09.4689151Z crypto/hmac
+2026-10-11T21:06:09.4865760Z crypto/sha1
+2026-10-11T21:06:09.5233132Z crypto/sha256
+2026-10-11T21:06:09.5317443Z crypto/aes
+2026-10-11T21:06:09.5361530Z crypto/des
+2026-10-11T21:06:09.5392882Z crypto/hkdf
+2026-10-11T21:06:09.5572017Z crypto/internal/fips140/mlkem
+2026-10-11T21:06:09.5711154Z vendor/golang.org/x/crypto/chacha20
+2026-10-11T21:06:09.6234597Z vendor/golang.org/x/sys/cpu
+2026-10-11T21:06:09.6582553Z crypto/mlkem
+2026-10-11T21:06:09.6729114Z crypto/md5
+2026-10-11T21:06:09.6801218Z vendor/golang.org/x/crypto/chacha20poly1305
+2026-10-11T21:06:09.7420378Z crypto/internal/fips140/mldsa
+2026-10-11T21:06:09.8262758Z crypto/hpke
+2026-10-11T21:06:09.9329053Z crypto/elliptic
+2026-10-11T21:06:09.9499265Z crypto/internal/boring/bbig
+2026-10-11T21:06:09.9659295Z encoding/asn1
+2026-10-11T21:06:09.9758816Z crypto/rand
+2026-10-11T21:06:10.0019018Z crypto/ed25519
+2026-10-11T21:06:10.0699706Z crypto/rsa
+2026-10-11T21:06:10.1615464Z vendor/golang.org/x/crypto/cryptobyte
+2026-10-11T21:06:10.1738248Z crypto/mldsa
+2026-10-11T21:06:10.1819746Z crypto/rc4
+2026-10-11T21:06:10.1934841Z crypto/dsa
+2026-10-11T21:06:10.1946465Z crypto/x509/pkix
+2026-10-11T21:06:10.2068884Z encoding/json
+2026-10-11T21:06:10.2399430Z net/netip
+2026-10-11T21:06:10.2569691Z crypto/ecdsa
+2026-10-11T21:06:10.9770099Z net/url
+2026-10-11T21:06:11.0342644Z path/filepath
+2026-10-11T21:06:11.0352984Z sort
+2026-10-11T21:06:11.0390619Z golang.org/x/net/bpf
+2026-10-11T21:06:11.0410473Z runtime/cgo
+2026-10-11T21:06:11.0963121Z html
+2026-10-11T21:06:11.1209441Z text/template/parse
+2026-10-11T21:06:11.1301076Z log
+2026-10-11T21:06:11.1315813Z golang.org/x/sys/unix
+2026-10-11T21:06:11.1859676Z regexp/syntax
+2026-10-11T21:06:11.3257406Z text/template
+2026-10-11T21:06:11.3850736Z regexp
+2026-10-11T21:06:11.7285508Z html/template
+2026-10-11T21:06:11.7399146Z compress/flate
+2026-10-11T21:06:11.7514861Z net
+2026-10-11T21:06:11.9279462Z hash/crc32
+2026-10-11T21:06:11.9998502Z vendor/golang.org/x/text/transform
+2026-10-11T21:06:12.0175770Z vendor/golang.org/x/text/unicode/bidi
+2026-10-11T21:06:12.0259042Z compress/gzip
+2026-10-11T21:06:12.0439368Z vendor/golang.org/x/text/unicode/norm
+2026-10-11T21:06:12.0715686Z mime
+2026-10-11T21:06:12.1373591Z vendor/golang.org/x/text/secure/bidirule
+2026-10-11T21:06:12.1766447Z mime/quotedprintable
+2026-10-11T21:06:12.2118212Z net/http/internal
+2026-10-11T21:06:12.2329033Z net/http/internal/ascii
+2026-10-11T21:06:12.2669404Z vendor/golang.org/x/net/http2/hpack
+2026-10-11T21:06:12.2762232Z net/http/internal/httpsfv
+2026-10-11T21:06:12.3229172Z vendor/golang.org/x/net/idna
+2026-10-11T21:06:12.5293530Z net/textproto
+2026-10-11T21:06:12.5339173Z golang.org/x/net/internal/socket
+2026-10-11T21:06:12.5368642Z crypto/x509
+2026-10-11T21:06:12.5398530Z vendor/golang.org/x/net/http/httpproxy
+2026-10-11T21:06:12.5779430Z vendor/golang.org/x/net/http/httpguts
+2026-10-11T21:06:12.5809094Z mime/multipart
+2026-10-11T21:06:12.6066374Z golang.org/x/net/ipv6
+2026-10-11T21:06:12.6072182Z golang.org/x/net/ipv4
+2026-10-11T21:06:12.8703831Z crypto/tls
+2026-10-11T21:06:13.3427843Z net/http/httptrace
+2026-10-11T21:06:13.3429855Z github.com/miekg/dns
+2026-10-11T21:06:13.3623933Z net/http/internal/httpcommon
+2026-10-11T21:06:13.3894911Z net/http/internal/http2
+2026-10-11T21:06:13.7935586Z net/http
+2026-10-11T21:06:14.5431597Z github.com/UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:06:14.9479105Z ##[group]Run go test -coverprofile=coverage.txt -covermode=atomic ./...
+2026-10-11T21:06:14.9479430Z [36;1mgo test -coverprofile=coverage.txt -covermode=atomic ./...[0m
+2026-10-11T21:06:14.9532667Z shell: /usr/bin/bash -e {0}
+2026-10-11T21:06:14.9532824Z env:
+2026-10-11T21:06:14.9532940Z   GOTOOLCHAIN: local
+2026-10-11T21:06:14.9533072Z ##[endgroup]
+2026-10-11T21:06:17.2817607Z 	github.com/UnitVectorY-Labs/dns-caa-catalog		coverage: 0.0% of statements
+2026-10-11T21:06:17.6340107Z Post job cleanup.
+2026-10-11T21:06:17.7350697Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/dns-caa-catalog/dns-caa-catalog --files-from manifest.txt --use-compress-program zstdmt
+2026-10-11T21:06:19.3084690Z Sent 51904512 of 59048577 (87.9%), 49.5 MBs/sec
+2026-10-11T21:06:19.7599137Z Sent 59048577 of 59048577 (100.0%), 38.8 MBs/sec
+2026-10-11T21:06:19.9591847Z Cache saved with key: Linux-go-1068ceb50b5db9c261d9baf01dce330faa20274c80533fe98659318db3feae35
+2026-10-11T21:06:19.9685047Z Post job cleanup.
+2026-10-11T21:06:20.0419579Z [command]/opt/hostedtoolcache/go/1.27.2/x64/bin/go env GOMODCACHE
+2026-10-11T21:06:20.0450458Z [command]/opt/hostedtoolcache/go/1.27.2/x64/bin/go env GOCACHE
+2026-10-11T21:06:20.0487428Z /home/runner/go/pkg/mod
+2026-10-11T21:06:20.0489489Z /home/runner/.cache/go-build
+2026-10-11T21:06:20.0693287Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/dns-caa-catalog/dns-caa-catalog --files-from manifest.txt --use-compress-program zstdmt
+2026-10-11T21:06:21.5434368Z Sent 53280768 of 59273065 (89.9%), 50.8 MBs/sec
+2026-10-11T21:06:22.2844799Z Sent 59273065 of 59273065 (100.0%), 32.5 MBs/sec
+2026-10-11T21:06:22.4306359Z Cache saved with the key: setup-go-Linux-x64-ubuntu24-go-1.27.2-cb644d3e0fbb896ccedcd4778702895d11b2fcebd8ee0068a5fdaab2e156cedf
+2026-10-11T21:06:22.4419490Z Post job cleanup.
+2026-10-11T21:06:22.4938278Z [command]/usr/bin/git version
+2026-10-11T21:06:22.4971422Z git version 2.55.0
+2026-10-11T21:06:22.4999097Z Temporarily overriding HOME='/home/runner/work/_temp/ca5b787c-d457-4096-8936-e9b1fd1f827c' before making global git config changes
+2026-10-11T21:06:22.4999878Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T21:06:22.5002660Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:06:22.5028837Z Removing SSH command configuration
+2026-10-11T21:06:22.5032709Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:06:22.5061253Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:06:22.5264709Z Removing HTTP extra header
+2026-10-11T21:06:22.5270847Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:06:22.5304482Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:06:22.5512660Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:06:22.5513142Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:06:22.5539168Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:06:22.5822829Z Cleaning up orphan processes

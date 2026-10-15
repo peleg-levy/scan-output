@@ -1,0 +1,278 @@
+# Secrets (API keys, tokens, etc.) have been redacted.
+# To include secrets, set "redact_secrets: false" in your preset or BBOT config.
+
+description: uxcam_schema_v3_full
+config:
+  modules:
+    hosting_iplocate: {}
+    reverse_ip_whoisxml: {}
+    shodan_dns: {}
+    github_usersearch: {}
+    github_codesearch: {}
+    github_workflows: {}
+    otx: {}
+    shodan_enterprise: {}
+    git_clone: {}
+    ip2location: {}
+    github_org: {}
+    neo4j: {}
+    sslcert:
+      module_threads: 32
+    baddns:
+      module_threads: 8
+      enabled_submodules:
+      - CNAME
+      - NS
+      - MX
+      - TXT
+      - references
+      - DMARC
+      - SPF
+      - MTA-STS
+      - WILDCARD
+      min_confidence: UNKNOWN
+      min_severity: INFO
+    badsecrets:
+      module_threads: 4
+    trufflehog:
+      module_threads: 4
+    http:
+      threads: 96
+    webbrute:
+      concurrency: 80
+      rate: 0
+      lines: 5000
+      max_depth: 3
+      extensions:
+      - php
+      - asp
+      - aspx
+      - ashx
+      - asmx
+      - jsp
+      - jspx
+      - cfm
+      - json
+      - xml
+      - yml
+      - yaml
+      - conf
+      - config
+      - zip
+    virtualhost:
+      max_concurrent_requests: 128
+      certificate_sans: true
+      special_hosts: true
+      wordcloud_check: true
+      require_inaccessible: false
+    waf_bypass:
+      max_concurrent_checks: 128
+    gowitness:
+      threads: 0
+    jadx:
+      threads: 8
+    medusa:
+      threads: 8
+    legba:
+      concurrency: 8
+      rate_limit: 8
+    nuclei:
+      concurrency: 40
+      ratelimit: 300
+      batch_size: 500
+    portscan:
+      ports: 1-65535
+      rate: 5000
+      wait: 3
+    dnsbrute:
+      max_depth: 5
+    dnsbrute_mutations:
+      max_mutations: 100
+    paramminer_getparams:
+      brute_short: true
+      mutate_case: true
+      recycle_words: true
+      skip_boring_words: false
+    paramminer_headers:
+      recycle_words: true
+      skip_boring_words: false
+    paramminer_cookies:
+      recycle_words: true
+      skip_boring_words: false
+    lightfuzz:
+      module_threads: 4
+      enabled_submodules:
+      - cmdi
+      - crypto
+      - path
+      - serial
+      - sqli
+      - ssti
+      - xss
+      - esi
+      - ssrf
+      disable_post: false
+      try_post_as_get: true
+      try_get_as_post: true
+      avoid_wafs: false
+      force_common_headers: true
+    wayback:
+      urls: true
+      archive: true
+      max_records: 100000
+    robots:
+      include_allow: true
+      include_disallow: true
+      include_sitemap: true
+    oauth:
+      try_all: true
+    ntlm:
+      try_all: true
+  max_mem_percent: 70
+  dns:
+    threads: 16
+    brute_threads: 5000
+  web:
+    http_rate_limit: 0
+    spider_distance: 4
+    spider_depth: 6
+    spider_links_per_page: 50
+  url_querystring_remove: false
+  url_querystring_collapse: false
+flags:
+- cloud-enum
+- code-enum
+- email-enum
+- iis-shortnames
+- subdomain-enum
+- web
+- web-heavy
+- web-paramminer
+- web-screenshots
+modules:
+- ajaxpro
+- anubisdb
+- apkpure
+- aspnet_bin_exposure
+- azure_tenant
+- baddns
+- baddns_direct
+- baddns_zone
+- badsecrets
+- bevigil
+- bucket_amazon
+- bucket_digitalocean
+- bucket_file_enum
+- bucket_firebase
+- bucket_google
+- bucket_hetzner
+- bucket_microsoft
+- bufferoverrun
+- builtwith
+- bypass403
+- c99
+- censys_dns
+- censys_ip
+- certspotter
+- chaos
+- code_repository
+- credshed
+- crt
+- crt_db
+- dehashed
+- dnsbimi
+- dnsbrute
+- dnsbrute_mutations
+- dnscaa
+- dnscommonsrv
+- dnsdumpster
+- dnstlsrpt
+- docker_pull
+- dockerhub
+- dotnetnuke
+- emailformat
+- filedownload
+- fingerprintx
+- fullhunt
+- generic_ssrf
+- git
+- git_clone
+- gitdumper
+- github_codesearch
+- github_org
+- github_usersearch
+- github_workflows
+- gitlab_com
+- gitlab_onprem
+- google_playstore
+- gowitness
+- graphql_introspection
+- hackertarget
+- host_header
+- hosting_iplocate
+- http
+- hunt
+- hunterio
+- iis_shortnames
+- ip2location
+- ipneighbor
+- ipstack
+- jadx
+- kreuzberg
+- leakix
+- legba
+- lightfuzz
+- medusa
+- myssl
+- newsletters
+- ntlm
+- nuclei
+- oauth
+- otx
+- paramminer_cookies
+- paramminer_getparams
+- paramminer_headers
+- pgp
+- portfilter
+- portscan
+- postman
+- postman_download
+- rapiddns
+- reflected_parameters
+- retirejs
+- reverse_ip_whoisxml
+- robots
+- securitytrails
+- securitytxt
+- shodan_dns
+- shodan_enterprise
+- skymem
+- social
+- sslcert
+- subdomaincenter
+- subdomainradar
+- telerik
+- trajan
+- trickest
+- trufflehog
+- url_manipulation
+- urlscan
+- virtualhost
+- virustotal
+- waf_bypass
+- wafw00f
+- wayback
+- webbrute
+- webbrute_shortnames
+output_modules:
+- asset_inventory
+- csv
+- json
+- neo4j
+- neo4j_schema
+- subdomains
+- txt
+- web_parameters
+- web_report
+scan_name: uxcam_schema_v3_full
+output_dir: /home/peleg/.bbot/scans/modules/

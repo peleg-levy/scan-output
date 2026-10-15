@@ -1,0 +1,796 @@
+﻿2026-10-03T23:03:40.7441737Z Current runner version: '2.337.0'
+2026-10-03T23:03:40.7466814Z ##[group]Runner Image Provisioner
+2026-10-03T23:03:40.7467675Z Hosted Compute Agent
+2026-10-03T23:03:40.7468430Z Version: 20260901.588
+2026-10-03T23:03:40.7469089Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-03T23:03:40.7469959Z Build Date: 2026-09-01T19:56:44Z
+2026-10-03T23:03:40.7470650Z Worker ID: {1fdc0981-4033-4bfb-aa1b-616faebdfb30}
+2026-10-03T23:03:40.7471359Z Azure Region: westus
+2026-10-03T23:03:40.7471996Z ##[endgroup]
+2026-10-03T23:03:40.7473553Z ##[group]Operating System
+2026-10-03T23:03:40.7474295Z Ubuntu
+2026-10-03T23:03:40.7474837Z 24.04.5
+2026-10-03T23:03:40.7475347Z LTS
+2026-10-03T23:03:40.7476283Z ##[endgroup]
+2026-10-03T23:03:40.7476854Z ##[group]Runner Image
+2026-10-03T23:03:40.7477568Z Image: ubuntu-24.04
+2026-10-03T23:03:40.7478154Z Version: 20260927.320.1
+2026-10-03T23:03:40.7479478Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-03T23:03:40.7481128Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-03T23:03:40.7482503Z ##[endgroup]
+2026-10-03T23:03:40.7485924Z ##[group]GITHUB_TOKEN Permissions
+2026-10-03T23:03:40.7488294Z Actions: write
+2026-10-03T23:03:40.7488942Z ArtifactMetadata: write
+2026-10-03T23:03:40.7489602Z Attestations: write
+2026-10-03T23:03:40.7490283Z Checks: write
+2026-10-03T23:03:40.7490840Z CodeQuality: write
+2026-10-03T23:03:40.7491447Z Contents: write
+2026-10-03T23:03:40.7492077Z CopilotRequests: write
+2026-10-03T23:03:40.7492678Z Deployments: write
+2026-10-03T23:03:40.7493293Z Discussions: write
+2026-10-03T23:03:40.7493848Z Drives: write
+2026-10-03T23:03:40.7494366Z Issues: write
+2026-10-03T23:03:40.7494965Z Metadata: read
+2026-10-03T23:03:40.7496074Z Models: read
+2026-10-03T23:03:40.7496708Z Packages: write
+2026-10-03T23:03:40.7497260Z Pages: write
+2026-10-03T23:03:40.7497782Z PullRequests: write
+2026-10-03T23:03:40.7498472Z RepositoryProjects: write
+2026-10-03T23:03:40.7499099Z SecurityEvents: write
+2026-10-03T23:03:40.7499711Z Statuses: write
+2026-10-03T23:03:40.7500298Z VulnerabilityAlerts: read
+2026-10-03T23:03:40.7500900Z ##[endgroup]
+2026-10-03T23:03:40.7503086Z Secret source: Actions
+2026-10-03T23:03:40.7503989Z Cache mode: write
+2026-10-03T23:03:40.7504775Z Prepare workflow directory
+2026-10-03T23:03:40.7909483Z Prepare all required actions
+2026-10-03T23:03:40.7958164Z Getting action download info
+2026-10-03T23:03:41.2060231Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-03T23:03:41.3323326Z Download action repository 'actions/setup-go@v7' (SHA:b7ad1dad31e06c5925ef5d2fc7ad053ef454303e)
+2026-10-03T23:03:41.7392330Z Download action repository 'golangci/golangci-lint-action@v9' (SHA:ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a)
+2026-10-03T23:03:42.2810955Z Complete job name: build
+2026-10-03T23:03:42.3641419Z ##[group]Run actions/checkout@v7
+2026-10-03T23:03:42.3642377Z with:
+2026-10-03T23:03:42.3642864Z   repository: mosajjal/sniproxy
+2026-10-03T23:03:42.3647197Z   token: ***
+2026-10-03T23:03:42.3647702Z   ssh-strict: true
+2026-10-03T23:03:42.3648186Z   ssh-user: git
+2026-10-03T23:03:42.3648670Z   persist-credentials: true
+2026-10-03T23:03:42.3649205Z   clean: true
+2026-10-03T23:03:42.3649693Z   sparse-checkout-cone-mode: true
+2026-10-03T23:03:42.3650266Z   fetch-depth: 1
+2026-10-03T23:03:42.3650739Z   fetch-tags: false
+2026-10-03T23:03:42.3651231Z   show-progress: true
+2026-10-03T23:03:42.3651767Z   lfs: false
+2026-10-03T23:03:42.3652233Z   submodules: false
+2026-10-03T23:03:42.3652801Z   set-safe-directory: true
+2026-10-03T23:03:42.3653365Z   allow-unsafe-pr-checkout: false
+2026-10-03T23:03:42.3654218Z env:
+2026-10-03T23:03:42.3654734Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:03:42.3655368Z ##[endgroup]
+2026-10-03T23:03:42.4772884Z Syncing repository: mosajjal/sniproxy
+2026-10-03T23:03:42.4775984Z ##[group]Getting Git version info
+2026-10-03T23:03:42.4777258Z Working directory is '/home/runner/work/sniproxy/sniproxy'
+2026-10-03T23:03:42.4779613Z [command]/usr/bin/git version
+2026-10-03T23:03:42.4822034Z git version 2.55.0
+2026-10-03T23:03:42.4847409Z ##[endgroup]
+2026-10-03T23:03:42.4870656Z Temporarily overriding HOME='/home/runner/work/_temp/8d4f493c-6560-41f2-a9de-2530c7bcb207' before making global git config changes
+2026-10-03T23:03:42.4874589Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T23:03:42.4879531Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:03:42.4940743Z Deleting the contents of '/home/runner/work/sniproxy/sniproxy'
+2026-10-03T23:03:42.4944556Z ##[group]Determining repository object format
+2026-10-03T23:03:42.4946401Z ##[endgroup]
+2026-10-03T23:03:42.4947696Z ##[group]Initializing the repository
+2026-10-03T23:03:42.4951474Z [command]/usr/bin/git init /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:03:42.5058333Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-03T23:03:42.5061844Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-03T23:03:42.5063920Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-03T23:03:42.5065724Z hint: call:
+2026-10-03T23:03:42.5066550Z hint:
+2026-10-03T23:03:42.5067547Z hint: 	git config --global init.defaultBranch <name>
+2026-10-03T23:03:42.5068779Z hint:
+2026-10-03T23:03:42.5069827Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-03T23:03:42.5071585Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-03T23:03:42.5073056Z hint:
+2026-10-03T23:03:42.5073900Z hint: 	git branch -m <name>
+2026-10-03T23:03:42.5074810Z hint:
+2026-10-03T23:03:42.5076243Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-03T23:03:42.5078233Z Initialized empty Git repository in /home/runner/work/sniproxy/sniproxy/.git/
+2026-10-03T23:03:42.5081810Z [command]/usr/bin/git remote add origin https://github.com/mosajjal/sniproxy
+2026-10-03T23:03:42.5131787Z ##[endgroup]
+2026-10-03T23:03:42.5133515Z ##[group]Disabling automatic garbage collection
+2026-10-03T23:03:42.5135067Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-03T23:03:42.5171040Z ##[endgroup]
+2026-10-03T23:03:42.5172721Z ##[group]Setting up auth
+2026-10-03T23:03:42.5174070Z Removing SSH command configuration
+2026-10-03T23:03:42.5187335Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T23:03:42.5226904Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-03T23:03:42.5615385Z Removing HTTP extra header
+2026-10-03T23:03:42.5630770Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T23:03:42.5660624Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-03T23:03:42.5884726Z Removing includeIf entries pointing to credentials config files
+2026-10-03T23:03:42.5890109Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T23:03:42.5926315Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-03T23:03:42.6161435Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-03T23:03:42.6203186Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path /home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:03:42.6238583Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:03:42.6278127Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:03:42.6314166Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:03:42.6346418Z ##[endgroup]
+2026-10-03T23:03:42.6347581Z ##[group]Fetching the repository
+2026-10-03T23:03:42.6353038Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1429d6dbe7bed4767597470223f93a407b0d5dab:refs/remotes/origin/master
+2026-10-03T23:03:43.0267449Z From https://github.com/mosajjal/sniproxy
+2026-10-03T23:03:43.0268854Z  * [new ref]         1429d6dbe7bed4767597470223f93a407b0d5dab -> origin/master
+2026-10-03T23:03:43.0277735Z [command]/usr/bin/git branch --list --remote origin/master
+2026-10-03T23:03:43.0309298Z   origin/master
+2026-10-03T23:03:43.0317825Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-10-03T23:03:43.0347348Z 1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:03:43.0352092Z ##[endgroup]
+2026-10-03T23:03:43.0353186Z ##[group]Determining the checkout info
+2026-10-03T23:03:43.0354343Z ##[endgroup]
+2026-10-03T23:03:43.0356979Z [command]/usr/bin/git sparse-checkout disable
+2026-10-03T23:03:43.0412189Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-03T23:03:43.0450512Z ##[group]Checking out the ref
+2026-10-03T23:03:43.0455033Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-03T23:03:43.0626979Z Reset branch 'master'
+2026-10-03T23:03:43.0633419Z branch 'master' set up to track 'origin/master'.
+2026-10-03T23:03:43.0644514Z ##[endgroup]
+2026-10-03T23:03:43.0704513Z [command]/usr/bin/git log -1 --format=%H
+2026-10-03T23:03:43.0742349Z 1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:03:43.1041971Z ##[group]Run actions/setup-go@v7
+2026-10-03T23:03:43.1118151Z with:
+2026-10-03T23:03:43.1118892Z   go-version: 1.26
+2026-10-03T23:03:43.1119407Z   check-latest: false
+2026-10-03T23:03:43.1124454Z   token: ***
+2026-10-03T23:03:43.1124922Z   cache: true
+2026-10-03T23:03:43.1125717Z env:
+2026-10-03T23:03:43.1126235Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:03:43.1126922Z ##[endgroup]
+2026-10-03T23:03:43.2316672Z Setup go version spec 1.26
+2026-10-03T23:03:43.2363575Z Found in cache @ /opt/hostedtoolcache/go/1.26.8/x64
+2026-10-03T23:03:43.2364865Z Added go to the path
+2026-10-03T23:03:43.2366337Z Successfully set up Go version 1.26
+2026-10-03T23:03:44.2863478Z [command]/opt/hostedtoolcache/go/1.26.8/x64/bin/go env GOMODCACHE
+2026-10-03T23:03:44.2907022Z [command]/opt/hostedtoolcache/go/1.26.8/x64/bin/go env GOCACHE
+2026-10-03T23:03:44.2944971Z /home/runner/go/pkg/mod
+2026-10-03T23:03:44.2971220Z /home/runner/.cache/go-build
+2026-10-03T23:03:44.5617199Z Cache is not found
+2026-10-03T23:03:44.5641416Z go version go1.26.8 linux/amd64
+2026-10-03T23:03:44.5641749Z 
+2026-10-03T23:03:44.5642238Z ##[group]go env
+2026-10-03T23:03:44.7313854Z AR='ar'
+2026-10-03T23:03:44.7314823Z CC='gcc'
+2026-10-03T23:03:44.7315240Z CGO_CFLAGS='-O2 -g'
+2026-10-03T23:03:44.7316026Z CGO_CPPFLAGS=''
+2026-10-03T23:03:44.7316469Z CGO_CXXFLAGS='-O2 -g'
+2026-10-03T23:03:44.7316991Z CGO_ENABLED='1'
+2026-10-03T23:03:44.7317421Z CGO_FFLAGS='-O2 -g'
+2026-10-03T23:03:44.7317880Z CGO_LDFLAGS='-O2 -g'
+2026-10-03T23:03:44.7318297Z CXX='g++'
+2026-10-03T23:03:44.7318657Z GCCGO='gccgo'
+2026-10-03T23:03:44.7319046Z GO111MODULE=''
+2026-10-03T23:03:44.7319447Z GOAMD64='v1'
+2026-10-03T23:03:44.7319807Z GOARCH='amd64'
+2026-10-03T23:03:44.7320185Z GOAUTH='netrc'
+2026-10-03T23:03:44.7320617Z GOBIN=''
+2026-10-03T23:03:44.7321333Z GOCACHE='/home/runner/.cache/go-build'
+2026-10-03T23:03:44.7322066Z GOCACHEPROG=''
+2026-10-03T23:03:44.7323268Z GODEBUG=''
+2026-10-03T23:03:44.7323821Z GOENV='/home/runner/.config/go/env'
+2026-10-03T23:03:44.7324722Z GOEXE=''
+2026-10-03T23:03:44.7325404Z GOEXPERIMENT='goroutineleakprofile,jsonv2'
+2026-10-03T23:03:44.7326522Z GOFIPS140='off'
+2026-10-03T23:03:44.7327048Z GOFLAGS=''
+2026-10-03T23:03:44.7328526Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2197436198=/tmp/go-build -gno-record-gcc-switches'
+2026-10-03T23:03:44.7330094Z GOHOSTARCH='amd64'
+2026-10-03T23:03:44.7330703Z GOHOSTOS='linux'
+2026-10-03T23:03:44.7331264Z GOINSECURE=''
+2026-10-03T23:03:44.7331945Z GOMOD='/home/runner/work/sniproxy/sniproxy/go.mod'
+2026-10-03T23:03:44.7332801Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-10-03T23:03:44.7333462Z GONOPROXY=''
+2026-10-03T23:03:44.7334015Z GONOSUMDB=''
+2026-10-03T23:03:44.7334575Z GOOS='linux'
+2026-10-03T23:03:44.7335230Z GOPATH='/home/runner/go'
+2026-10-03T23:03:44.7337094Z GOPRIVATE=''
+2026-10-03T23:03:44.7337734Z GOPROXY='https://proxy.golang.org,direct'
+2026-10-03T23:03:44.7338579Z GOROOT='/opt/hostedtoolcache/go/1.26.8/x64'
+2026-10-03T23:03:44.7339360Z GOSUMDB='sum.golang.org'
+2026-10-03T23:03:44.7339908Z GOTELEMETRY='local'
+2026-10-03T23:03:44.7340481Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-10-03T23:03:44.7341129Z GOTMPDIR=''
+2026-10-03T23:03:44.7341520Z GOTOOLCHAIN='local'
+2026-10-03T23:03:44.7342150Z GOTOOLDIR='/opt/hostedtoolcache/go/1.26.8/x64/pkg/tool/linux_amd64'
+2026-10-03T23:03:44.7342822Z GOVCS=''
+2026-10-03T23:03:44.7343184Z GOVERSION='go1.26.8'
+2026-10-03T23:03:44.7343582Z GOWORK=''
+2026-10-03T23:03:44.7343999Z PKG_CONFIG='pkg-config'
+2026-10-03T23:03:44.7344287Z 
+2026-10-03T23:03:44.7345006Z ##[endgroup]
+2026-10-03T23:03:44.7507595Z ##[group]Run golangci/golangci-lint-action@v9
+2026-10-03T23:03:44.7507944Z with:
+2026-10-03T23:03:44.7508140Z   version: latest
+2026-10-03T23:03:44.7508356Z   install-mode: binary
+2026-10-03T23:03:44.7508577Z   install-only: false
+2026-10-03T23:03:44.7511085Z   github-token: ***
+2026-10-03T23:03:44.7511339Z   verify: true
+2026-10-03T23:03:44.7511546Z   only-new-issues: false
+2026-10-03T23:03:44.7511896Z   skip-cache: false
+2026-10-03T23:03:44.7512112Z   skip-save-cache: false
+2026-10-03T23:03:44.7512355Z   cache-invalidation-interval: 7
+2026-10-03T23:03:44.7512617Z   problem-matchers: false
+2026-10-03T23:03:44.7512843Z env:
+2026-10-03T23:03:44.7513062Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:03:44.7513349Z   GOTOOLCHAIN: local
+2026-10-03T23:03:44.7513558Z ##[endgroup]
+2026-10-03T23:03:44.8934380Z ##[group]Restore cache
+2026-10-03T23:03:44.8939498Z Checking for go.mod: go.mod
+2026-10-03T23:03:45.1498420Z Cache not found for input keys: golangci-lint.cache-Linux-2961-3707fb0c4874906c603af44dd1b6ce85cff3381c, golangci-lint.cache-Linux-2961-
+2026-10-03T23:03:45.1500053Z ##[endgroup]
+2026-10-03T23:03:45.1500711Z ##[group]Install
+2026-10-03T23:03:45.1501353Z Finding needed golangci-lint version...
+2026-10-03T23:03:45.1629832Z Requested golangci-lint 'latest', using 'v2.14.0', calculation took 12ms
+2026-10-03T23:03:45.1631389Z Installation mode: binary
+2026-10-03T23:03:45.1632224Z Installing golangci-lint binary v2.14.0...
+2026-10-03T23:03:45.1633635Z Downloading binary https://github.com/golangci/golangci-lint/releases/download/v2.14.0/golangci-lint-2.14.0-linux-amd64.tar.gz ...
+2026-10-03T23:03:45.4640058Z [command]/usr/bin/tar xz --overwrite --warning=no-unknown-keyword --overwrite -C /home/runner -f /home/runner/work/_temp/fbfad3bc-8add-42ef-ae93-1aa9dcecd4f5
+2026-10-03T23:03:45.7427028Z Installed golangci-lint into /home/runner/golangci-lint-2.14.0-linux-amd64/golangci-lint in 579ms
+2026-10-03T23:03:45.7431630Z ##[endgroup]
+2026-10-03T23:03:45.7435966Z ##[group]run golangci-lint
+2026-10-03T23:03:45.7442208Z Running [/home/runner/golangci-lint-2.14.0-linux-amd64/golangci-lint config path] in [/home/runner/work/sniproxy/sniproxy] ...
+2026-10-03T23:03:45.8245033Z Running [/home/runner/golangci-lint-2.14.0-linux-amd64/golangci-lint config verify] in [/home/runner/work/sniproxy/sniproxy] ...
+2026-10-03T23:03:45.9139456Z Running [/home/runner/golangci-lint-2.14.0-linux-amd64/golangci-lint run] in [/home/runner/work/sniproxy/sniproxy] ...
+2026-10-03T23:04:34.3464870Z 0 issues.
+2026-10-03T23:04:34.3465135Z 
+2026-10-03T23:04:34.3465341Z golangci-lint found no issues
+2026-10-03T23:04:34.3466087Z Ran golangci-lint in 48433ms
+2026-10-03T23:04:34.3467764Z ##[endgroup]
+2026-10-03T23:04:34.3621372Z ##[group]Run go build -v ./...
+2026-10-03T23:04:34.3621747Z [36;1mgo build -v ./...[0m
+2026-10-03T23:04:34.3908068Z shell: /usr/bin/bash -e {0}
+2026-10-03T23:04:34.3908521Z env:
+2026-10-03T23:04:34.3908931Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:04:34.3909469Z   GOTOOLCHAIN: local
+2026-10-03T23:04:34.3909843Z ##[endgroup]
+2026-10-03T23:04:34.5427175Z github.com/mosajjal/sniproxy/v2/cmd/sniproxy
+2026-10-03T23:04:35.5413642Z ##[group]Run go test -v -race ./...
+2026-10-03T23:04:35.5414048Z [36;1mgo test -v -race ./...[0m
+2026-10-03T23:04:35.5478423Z shell: /usr/bin/bash -e {0}
+2026-10-03T23:04:35.5478778Z env:
+2026-10-03T23:04:35.5479090Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:04:35.5479511Z   GOTOOLCHAIN: local
+2026-10-03T23:04:35.5479810Z ##[endgroup]
+2026-10-03T23:05:28.7916055Z === RUN   TestIsLoopbackAddr
+2026-10-03T23:05:28.7916702Z --- PASS: TestIsLoopbackAddr (0.00s)
+2026-10-03T23:05:28.7917238Z === RUN   TestPortList
+2026-10-03T23:05:28.7917661Z --- PASS: TestPortList (0.00s)
+2026-10-03T23:05:28.7918117Z === RUN   TestPublicIP
+2026-10-03T23:05:28.7919219Z [90m2026-10-03T23:05:27Z[0m [32mINF[0m [1mpublic IPv6 (manually provided): 198.51.100.1[0m
+2026-10-03T23:05:28.7920498Z [90m2026-10-03T23:05:27Z[0m [32mINF[0m [1mpublic IPv6 (automatically determined): 192.0.2.1[0m
+2026-10-03T23:05:28.7921959Z [90m2026-10-03T23:05:27Z[0m [33mWRN[0m [1mfailed to get public IPv6, disabling it: network is unreachable[0m
+2026-10-03T23:05:28.7922890Z --- PASS: TestPublicIP (0.00s)
+2026-10-03T23:05:28.7923320Z PASS
+2026-10-03T23:05:28.7925619Z ok  	github.com/mosajjal/sniproxy/v2/cmd/sniproxy	1.020s
+2026-10-03T23:05:29.3818042Z === RUN   TestParseIPVersion
+2026-10-03T23:05:29.3818570Z === RUN   TestParseIPVersion/ipv4only
+2026-10-03T23:05:29.3819071Z === RUN   TestParseIPVersion/4only
+2026-10-03T23:05:29.3819611Z === RUN   TestParseIPVersion/ipv6only
+2026-10-03T23:05:29.3820140Z === RUN   TestParseIPVersion/6only
+2026-10-03T23:05:29.3820657Z === RUN   TestParseIPVersion/ipv4
+2026-10-03T23:05:29.3821009Z === RUN   TestParseIPVersion/4
+2026-10-03T23:05:29.3821550Z === RUN   TestParseIPVersion/ipv6
+2026-10-03T23:05:29.3822094Z === RUN   TestParseIPVersion/6
+2026-10-03T23:05:29.3822626Z === RUN   TestParseIPVersion/any
+2026-10-03T23:05:29.3823148Z === RUN   TestParseIPVersion/0
+2026-10-03T23:05:29.3823656Z === RUN   TestParseIPVersion/#00
+2026-10-03T23:05:29.3824241Z === RUN   TestParseIPVersion/garbage
+2026-10-03T23:05:29.3824824Z === RUN   TestParseIPVersion/__IPV4__
+2026-10-03T23:05:29.3825937Z --- PASS: TestParseIPVersion (0.00s)
+2026-10-03T23:05:29.3826692Z     --- PASS: TestParseIPVersion/ipv4only (0.00s)
+2026-10-03T23:05:29.3827458Z     --- PASS: TestParseIPVersion/4only (0.00s)
+2026-10-03T23:05:29.3828230Z     --- PASS: TestParseIPVersion/ipv6only (0.00s)
+2026-10-03T23:05:29.3828989Z     --- PASS: TestParseIPVersion/6only (0.00s)
+2026-10-03T23:05:29.3829725Z     --- PASS: TestParseIPVersion/ipv4 (0.00s)
+2026-10-03T23:05:29.3830433Z     --- PASS: TestParseIPVersion/4 (0.00s)
+2026-10-03T23:05:29.3830988Z     --- PASS: TestParseIPVersion/ipv6 (0.00s)
+2026-10-03T23:05:29.3831442Z     --- PASS: TestParseIPVersion/6 (0.00s)
+2026-10-03T23:05:29.3831891Z     --- PASS: TestParseIPVersion/any (0.00s)
+2026-10-03T23:05:29.3832335Z     --- PASS: TestParseIPVersion/0 (0.00s)
+2026-10-03T23:05:29.3832774Z     --- PASS: TestParseIPVersion/#00 (0.00s)
+2026-10-03T23:05:29.3833245Z     --- PASS: TestParseIPVersion/garbage (0.00s)
+2026-10-03T23:05:29.3833747Z     --- PASS: TestParseIPVersion/__IPV4__ (0.00s)
+2026-10-03T23:05:29.3834152Z === RUN   TestIPVersionString
+2026-10-03T23:05:29.3834670Z === RUN   TestIPVersionString/ipv4only
+2026-10-03T23:05:29.3834986Z === RUN   TestIPVersionString/ipv6only
+2026-10-03T23:05:29.3835279Z === RUN   TestIPVersionString/ipv4
+2026-10-03T23:05:29.3835867Z === RUN   TestIPVersionString/ipv6
+2026-10-03T23:05:29.3836158Z === RUN   TestIPVersionString/any
+2026-10-03T23:05:29.3836456Z === RUN   TestIPVersionString/any#01
+2026-10-03T23:05:29.3836785Z --- PASS: TestIPVersionString (0.00s)
+2026-10-03T23:05:29.3837167Z     --- PASS: TestIPVersionString/ipv4only (0.00s)
+2026-10-03T23:05:29.3837573Z     --- PASS: TestIPVersionString/ipv6only (0.00s)
+2026-10-03T23:05:29.3837953Z     --- PASS: TestIPVersionString/ipv4 (0.00s)
+2026-10-03T23:05:29.3838320Z     --- PASS: TestIPVersionString/ipv6 (0.00s)
+2026-10-03T23:05:29.3838682Z     --- PASS: TestIPVersionString/any (0.00s)
+2026-10-03T23:05:29.3839262Z     --- PASS: TestIPVersionString/any#01 (0.00s)
+2026-10-03T23:05:29.3839582Z === RUN   TestParseRanges
+2026-10-03T23:05:29.3839839Z === RUN   TestParseRanges/single_port
+2026-10-03T23:05:29.3840135Z === RUN   TestParseRanges/port_range
+2026-10-03T23:05:29.3840419Z === RUN   TestParseRanges/multiple_mixed
+2026-10-03T23:05:29.3840707Z === RUN   TestParseRanges/invalid_port
+2026-10-03T23:05:29.3841009Z === RUN   TestParseRanges/invalid_range_start
+2026-10-03T23:05:29.3841319Z === RUN   TestParseRanges/invalid_range_end
+2026-10-03T23:05:29.3841612Z === RUN   TestParseRanges/empty_input
+2026-10-03T23:05:29.3841890Z === RUN   TestParseRanges/port_zero
+2026-10-03T23:05:29.3842169Z === RUN   TestParseRanges/port_too_high
+2026-10-03T23:05:29.3842460Z === RUN   TestParseRanges/range_too_high
+2026-10-03T23:05:29.3842759Z === RUN   TestParseRanges/range_inverted
+2026-10-03T23:05:29.3843053Z --- PASS: TestParseRanges (0.00s)
+2026-10-03T23:05:29.3843420Z     --- PASS: TestParseRanges/single_port (0.00s)
+2026-10-03T23:05:29.3843833Z     --- PASS: TestParseRanges/port_range (0.00s)
+2026-10-03T23:05:29.3844239Z     --- PASS: TestParseRanges/multiple_mixed (0.00s)
+2026-10-03T23:05:29.3844648Z     --- PASS: TestParseRanges/invalid_port (0.00s)
+2026-10-03T23:05:29.3845079Z     --- PASS: TestParseRanges/invalid_range_start (0.00s)
+2026-10-03T23:05:29.3845987Z     --- PASS: TestParseRanges/invalid_range_end (0.00s)
+2026-10-03T23:05:29.3846414Z     --- PASS: TestParseRanges/empty_input (0.00s)
+2026-10-03T23:05:29.3846809Z     --- PASS: TestParseRanges/port_zero (0.00s)
+2026-10-03T23:05:29.3847221Z     --- PASS: TestParseRanges/port_too_high (0.00s)
+2026-10-03T23:05:29.3847636Z     --- PASS: TestParseRanges/range_too_high (0.00s)
+2026-10-03T23:05:29.3848120Z     --- PASS: TestParseRanges/range_inverted (0.00s)
+2026-10-03T23:05:29.3848494Z === RUN   TestParseBinders
+2026-10-03T23:05:29.3848788Z === RUN   TestParseBinders/basic_bind_no_additional
+2026-10-03T23:05:29.3849150Z === RUN   TestParseBinders/bind_with_additional
+2026-10-03T23:05:29.3849475Z === RUN   TestParseBinders/invalid_bind
+2026-10-03T23:05:29.3849790Z === RUN   TestParseBinders/invalid_additional
+2026-10-03T23:05:29.3850109Z --- PASS: TestParseBinders (0.00s)
+2026-10-03T23:05:29.3850537Z     --- PASS: TestParseBinders/basic_bind_no_additional (0.00s)
+2026-10-03T23:05:29.3851024Z     --- PASS: TestParseBinders/bind_with_additional (0.00s)
+2026-10-03T23:05:29.3851454Z     --- PASS: TestParseBinders/invalid_bind (0.00s)
+2026-10-03T23:05:29.3851880Z     --- PASS: TestParseBinders/invalid_additional (0.00s)
+2026-10-03T23:05:29.3852223Z === RUN   TestConfigValidate
+2026-10-03T23:05:29.3852501Z === RUN   TestConfigValidate/valid_config
+2026-10-03T23:05:29.3852819Z === RUN   TestConfigValidate/no_DNS_binding
+2026-10-03T23:05:29.3853146Z === RUN   TestConfigValidate/no_upstream_DNS
+2026-10-03T23:05:29.3853605Z === RUN   TestConfigValidate/no_HTTP_or_HTTPS_binding
+2026-10-03T23:05:29.3853950Z === RUN   TestConfigValidate/no_public_IP
+2026-10-03T23:05:29.3854331Z === RUN   TestConfigValidate/TLS_DNS_without_cert
+2026-10-03T23:05:29.3854674Z === RUN   TestConfigValidate/QUIC_DNS_without_cert
+2026-10-03T23:05:29.3855028Z === RUN   TestConfigValidate/TLS_DNS_with_cert_but_no_key
+2026-10-03T23:05:29.3855860Z === RUN   TestConfigValidate/TLS_DNS_with_cert
+2026-10-03T23:05:29.3856178Z --- PASS: TestConfigValidate (0.00s)
+2026-10-03T23:05:29.3856547Z     --- PASS: TestConfigValidate/valid_config (0.00s)
+2026-10-03T23:05:29.3856960Z     --- PASS: TestConfigValidate/no_DNS_binding (0.00s)
+2026-10-03T23:05:29.3857370Z     --- PASS: TestConfigValidate/no_upstream_DNS (0.00s)
+2026-10-03T23:05:29.3857820Z     --- PASS: TestConfigValidate/no_HTTP_or_HTTPS_binding (0.00s)
+2026-10-03T23:05:29.3858262Z     --- PASS: TestConfigValidate/no_public_IP (0.00s)
+2026-10-03T23:05:29.3858686Z     --- PASS: TestConfigValidate/TLS_DNS_without_cert (0.00s)
+2026-10-03T23:05:29.3859142Z     --- PASS: TestConfigValidate/QUIC_DNS_without_cert (0.00s)
+2026-10-03T23:05:29.3859770Z     --- PASS: TestConfigValidate/TLS_DNS_with_cert_but_no_key (0.00s)
+2026-10-03T23:05:29.3860247Z     --- PASS: TestConfigValidate/TLS_DNS_with_cert (0.00s)
+2026-10-03T23:05:29.3860586Z === RUN   TestDNSClient_lookupDomain4
+2026-10-03T23:05:29.3860886Z === RUN   TestDNSClient_lookupDomain4/test1
+2026-10-03T23:05:29.3861188Z === RUN   TestDNSClient_lookupDomain4/test2
+2026-10-03T23:05:29.3861504Z --- PASS: TestDNSClient_lookupDomain4 (0.01s)
+2026-10-03T23:05:29.3861902Z     --- PASS: TestDNSClient_lookupDomain4/test1 (0.00s)
+2026-10-03T23:05:29.3862304Z     --- PASS: TestDNSClient_lookupDomain4/test2 (0.00s)
+2026-10-03T23:05:29.3862660Z === RUN   TestGoroutineLeakProfile_DetectsKnownLeak
+2026-10-03T23:05:29.3863053Z --- PASS: TestGoroutineLeakProfile_DetectsKnownLeak (0.03s)
+2026-10-03T23:05:29.3863412Z === RUN   TestHandleTLS_NoGoroutineLeaks
+2026-10-03T23:05:29.3863732Z --- PASS: TestHandleTLS_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:29.3864077Z === RUN   TestHandleTLS_ConcurrentNoGoroutineLeaks
+2026-10-03T23:05:29.3864458Z --- PASS: TestHandleTLS_ConcurrentNoGoroutineLeaks (0.00s)
+2026-10-03T23:05:29.3864830Z === RUN   TestHandleTLS_SlowClientNoGoroutineLeaks
+2026-10-03T23:05:29.3865200Z --- PASS: TestHandleTLS_SlowClientNoGoroutineLeaks (0.05s)
+2026-10-03T23:05:29.3865782Z === RUN   TestHandleTLS_ValidSNI_NoUpstream
+2026-10-03T23:05:29.3866107Z --- PASS: TestHandleTLS_ValidSNI_NoUpstream (0.00s)
+2026-10-03T23:05:29.3866430Z === RUN   TestDNSClient_NoGoroutineLeaks
+2026-10-03T23:05:29.3887513Z --- PASS: TestDNSClient_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:29.3887926Z === RUN   TestDNSClient_ConcurrentNoGoroutineLeaks
+2026-10-03T23:05:29.3888346Z --- PASS: TestDNSClient_ConcurrentNoGoroutineLeaks (0.00s)
+2026-10-03T23:05:29.3888750Z === RUN   TestProxyCopy_NoGoroutineLeaks
+2026-10-03T23:05:29.3889091Z --- PASS: TestProxyCopy_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:29.3889420Z === RUN   TestUnexpectedLeaks
+2026-10-03T23:05:29.3889696Z --- PASS: TestUnexpectedLeaks (0.00s)
+2026-10-03T23:05:29.3890004Z === RUN   TestHandle80_HeaderFiltering
+2026-10-03T23:05:29.3890323Z --- PASS: TestHandle80_HeaderFiltering (0.00s)
+2026-10-03T23:05:29.3890657Z === RUN   TestHandle80_LoopPrevention
+2026-10-03T23:05:29.3890965Z --- PASS: TestHandle80_LoopPrevention (0.00s)
+2026-10-03T23:05:29.3891302Z === RUN   TestHandle80_RejectsSelfDestinations
+2026-10-03T23:05:29.3891697Z === RUN   TestHandle80_RejectsSelfDestinations/loopback_with_port
+2026-10-03T23:05:29.3892142Z === RUN   TestHandle80_RejectsSelfDestinations/loopback_bare
+2026-10-03T23:05:29.3892580Z === RUN   TestHandle80_RejectsSelfDestinations/ipv6_loopback
+2026-10-03T23:05:29.3893008Z === RUN   TestHandle80_RejectsSelfDestinations/localhost_by_name
+2026-10-03T23:05:29.3893448Z === RUN   TestHandle80_RejectsSelfDestinations/private_rfc1918
+2026-10-03T23:05:29.3893864Z === RUN   TestHandle80_RejectsSelfDestinations/private_10/8
+2026-10-03T23:05:29.3894278Z === RUN   TestHandle80_RejectsSelfDestinations/unspecified
+2026-10-03T23:05:29.3894681Z === RUN   TestHandle80_RejectsSelfDestinations/own_public_ip
+2026-10-03T23:05:29.3895079Z --- PASS: TestHandle80_RejectsSelfDestinations (0.00s)
+2026-10-03T23:05:29.3895936Z     --- PASS: TestHandle80_RejectsSelfDestinations/loopback_with_port (0.00s)
+2026-10-03T23:05:29.3896752Z     --- PASS: TestHandle80_RejectsSelfDestinations/loopback_bare (0.00s)
+2026-10-03T23:05:29.3897326Z     --- PASS: TestHandle80_RejectsSelfDestinations/ipv6_loopback (0.00s)
+2026-10-03T23:05:29.3897920Z     --- PASS: TestHandle80_RejectsSelfDestinations/localhost_by_name (0.00s)
+2026-10-03T23:05:29.3898519Z     --- PASS: TestHandle80_RejectsSelfDestinations/private_rfc1918 (0.00s)
+2026-10-03T23:05:29.3899102Z     --- PASS: TestHandle80_RejectsSelfDestinations/private_10/8 (0.00s)
+2026-10-03T23:05:29.3899659Z     --- PASS: TestHandle80_RejectsSelfDestinations/unspecified (0.00s)
+2026-10-03T23:05:29.3900244Z     --- PASS: TestHandle80_RejectsSelfDestinations/own_public_ip (0.00s)
+2026-10-03T23:05:29.3900737Z === RUN   TestHandle80_AllowConnToLocalStillBlocksManagementPorts
+2026-10-03T23:05:29.3901431Z === RUN   TestHandle80_AllowConnToLocalStillBlocksManagementPorts/pprof_port_is_refused
+2026-10-03T23:05:29.3902131Z === RUN   TestHandle80_AllowConnToLocalStillBlocksManagementPorts/prometheus_port_is_refused
+2026-10-03T23:05:29.3902855Z === RUN   TestHandle80_AllowConnToLocalStillBlocksManagementPorts/other_local_port_is_allowed
+2026-10-03T23:05:29.3903510Z --- PASS: TestHandle80_AllowConnToLocalStillBlocksManagementPorts (0.00s)
+2026-10-03T23:05:29.3904279Z     --- PASS: TestHandle80_AllowConnToLocalStillBlocksManagementPorts/pprof_port_is_refused (0.00s)
+2026-10-03T23:05:29.3905180Z     --- PASS: TestHandle80_AllowConnToLocalStillBlocksManagementPorts/prometheus_port_is_refused (0.00s)
+2026-10-03T23:05:29.3906362Z     --- PASS: TestHandle80_AllowConnToLocalStillBlocksManagementPorts/other_local_port_is_allowed (0.00s)
+2026-10-03T23:05:29.3906897Z === RUN   TestIsManagementPort
+2026-10-03T23:05:29.3907170Z --- PASS: TestIsManagementPort (0.00s)
+2026-10-03T23:05:29.3907456Z === RUN   TestGetHostname
+2026-10-03T23:05:29.3907761Z === RUN   TestGetHostname/valid_ClientHello_with_example.com
+2026-10-03T23:05:29.3908148Z === RUN   TestGetHostname/valid_ClientHello_with_subdomain
+2026-10-03T23:05:29.3908546Z === RUN   TestGetHostname/valid_ClientHello_with_long_domain
+2026-10-03T23:05:29.3908891Z === RUN   TestGetHostname/empty_data
+2026-10-03T23:05:29.3909169Z === RUN   TestGetHostname/non-TLS_data
+2026-10-03T23:05:29.3909466Z === RUN   TestGetHostname/truncated_TLS_record
+2026-10-03T23:05:29.3909777Z === RUN   TestGetHostname/single_byte
+2026-10-03T23:05:29.3910062Z --- PASS: TestGetHostname (0.00s)
+2026-10-03T23:05:29.3910499Z     --- PASS: TestGetHostname/valid_ClientHello_with_example.com (0.00s)
+2026-10-03T23:05:29.3911041Z     --- PASS: TestGetHostname/valid_ClientHello_with_subdomain (0.00s)
+2026-10-03T23:05:29.3911577Z     --- PASS: TestGetHostname/valid_ClientHello_with_long_domain (0.00s)
+2026-10-03T23:05:29.3912036Z     --- PASS: TestGetHostname/empty_data (0.00s)
+2026-10-03T23:05:29.3912423Z     --- PASS: TestGetHostname/non-TLS_data (0.00s)
+2026-10-03T23:05:29.3912833Z     --- PASS: TestGetHostname/truncated_TLS_record (0.00s)
+2026-10-03T23:05:29.3913236Z     --- PASS: TestGetHostname/single_byte (0.00s)
+2026-10-03T23:05:29.3913539Z === RUN   TestIsValidFQDN
+2026-10-03T23:05:29.3913789Z === RUN   TestIsValidFQDN/example.com
+2026-10-03T23:05:29.3914078Z === RUN   TestIsValidFQDN/sub.example.com
+2026-10-03T23:05:29.3914378Z === RUN   TestIsValidFQDN/a-b.example.co.uk
+2026-10-03T23:05:29.3914670Z === RUN   TestIsValidFQDN/a.bc
+2026-10-03T23:05:29.3914940Z === RUN   TestIsValidFQDN/123.example.com
+2026-10-03T23:05:29.3915218Z === RUN   TestIsValidFQDN/#00
+2026-10-03T23:05:29.3915679Z === RUN   TestIsValidFQDN/localhost
+2026-10-03T23:05:29.3915962Z === RUN   TestIsValidFQDN/.example.com
+2026-10-03T23:05:29.3916243Z === RUN   TestIsValidFQDN/example.
+2026-10-03T23:05:29.3916524Z === RUN   TestIsValidFQDN/-example.com
+2026-10-03T23:05:29.3916798Z === RUN   TestIsValidFQDN/1.2.3.4
+2026-10-03T23:05:29.3917068Z === RUN   TestIsValidFQDN/example.c
+2026-10-03T23:05:29.3917343Z === RUN   TestIsValidFQDN/example..com
+2026-10-03T23:05:29.3917617Z --- PASS: TestIsValidFQDN (0.00s)
+2026-10-03T23:05:29.3918171Z     --- PASS: TestIsValidFQDN/example.com (0.00s)
+2026-10-03T23:05:29.3918569Z     --- PASS: TestIsValidFQDN/sub.example.com (0.00s)
+2026-10-03T23:05:29.3918981Z     --- PASS: TestIsValidFQDN/a-b.example.co.uk (0.00s)
+2026-10-03T23:05:29.3919345Z     --- PASS: TestIsValidFQDN/a.bc (0.00s)
+2026-10-03T23:05:29.3919710Z     --- PASS: TestIsValidFQDN/123.example.com (0.00s)
+2026-10-03T23:05:29.3920066Z     --- PASS: TestIsValidFQDN/#00 (0.00s)
+2026-10-03T23:05:29.3920413Z     --- PASS: TestIsValidFQDN/localhost (0.00s)
+2026-10-03T23:05:29.3920787Z     --- PASS: TestIsValidFQDN/.example.com (0.00s)
+2026-10-03T23:05:29.3921158Z     --- PASS: TestIsValidFQDN/example. (0.00s)
+2026-10-03T23:05:29.3921531Z     --- PASS: TestIsValidFQDN/-example.com (0.00s)
+2026-10-03T23:05:29.3922034Z     --- PASS: TestIsValidFQDN/1.2.3.4 (0.00s)
+2026-10-03T23:05:29.3922395Z     --- PASS: TestIsValidFQDN/example.c (0.00s)
+2026-10-03T23:05:29.3922769Z     --- PASS: TestIsValidFQDN/example..com (0.00s)
+2026-10-03T23:05:29.3923079Z === RUN   TestLengthFromData
+2026-10-03T23:05:29.3923341Z === RUN   TestLengthFromData/zero
+2026-10-03T23:05:29.3923608Z === RUN   TestLengthFromData/one
+2026-10-03T23:05:29.3923867Z === RUN   TestLengthFromData/256
+2026-10-03T23:05:29.3924128Z === RUN   TestLengthFromData/offset
+2026-10-03T23:05:29.3924407Z --- PASS: TestLengthFromData (0.00s)
+2026-10-03T23:05:29.3924744Z     --- PASS: TestLengthFromData/zero (0.00s)
+2026-10-03T23:05:29.3925089Z     --- PASS: TestLengthFromData/one (0.00s)
+2026-10-03T23:05:29.3925676Z     --- PASS: TestLengthFromData/256 (0.00s)
+2026-10-03T23:05:29.3926050Z     --- PASS: TestLengthFromData/offset (0.00s)
+2026-10-03T23:05:29.3926364Z === RUN   TestGetExtensionBlock_Malformed
+2026-10-03T23:05:29.3926688Z --- PASS: TestGetExtensionBlock_Malformed (0.00s)
+2026-10-03T23:05:29.3927009Z === RUN   TestGetSNBlock_Malformed
+2026-10-03T23:05:29.3927285Z --- PASS: TestGetSNBlock_Malformed (0.00s)
+2026-10-03T23:05:29.3927572Z === RUN   TestGetSNIBlock_Empty
+2026-10-03T23:05:29.3927842Z --- PASS: TestGetSNIBlock_Empty (0.00s)
+2026-10-03T23:05:29.3928130Z === RUN   TestGetSNIBlock_BoundsOverflow
+2026-10-03T23:05:29.3928435Z --- PASS: TestGetSNIBlock_BoundsOverflow (0.00s)
+2026-10-03T23:05:29.3928748Z === RUN   TestGetSNIBlock_TooShortForLength
+2026-10-03T23:05:29.3929075Z --- PASS: TestGetSNIBlock_TooShortForLength (0.00s)
+2026-10-03T23:05:29.3929372Z === RUN   TestIsSelf
+2026-10-03T23:05:29.3929596Z === RUN   TestIsSelf/loopback_v4
+2026-10-03T23:05:29.3929848Z === RUN   TestIsSelf/loopback_v6
+2026-10-03T23:05:29.3930095Z === RUN   TestIsSelf/private_v4
+2026-10-03T23:05:29.3930346Z === RUN   TestIsSelf/unspecified_v4
+2026-10-03T23:05:29.3930638Z === RUN   TestIsSelf/public_ipv4_match
+2026-10-03T23:05:29.3930916Z === RUN   TestIsSelf/public_ipv6_match
+2026-10-03T23:05:29.3931188Z === RUN   TestIsSelf/source_addr_match
+2026-10-03T23:05:29.3931449Z === RUN   TestIsSelf/external_ip
+2026-10-03T23:05:29.3931705Z === RUN   TestIsSelf/external_ipv6
+2026-10-03T23:05:29.3931974Z --- PASS: TestIsSelf (0.00s)
+2026-10-03T23:05:29.3932289Z     --- PASS: TestIsSelf/loopback_v4 (0.00s)
+2026-10-03T23:05:29.3932629Z     --- PASS: TestIsSelf/loopback_v6 (0.00s)
+2026-10-03T23:05:29.3932961Z     --- PASS: TestIsSelf/private_v4 (0.00s)
+2026-10-03T23:05:29.3933306Z     --- PASS: TestIsSelf/unspecified_v4 (0.00s)
+2026-10-03T23:05:29.3933679Z     --- PASS: TestIsSelf/public_ipv4_match (0.00s)
+2026-10-03T23:05:29.3934055Z     --- PASS: TestIsSelf/public_ipv6_match (0.00s)
+2026-10-03T23:05:29.3934420Z     --- PASS: TestIsSelf/source_addr_match (0.00s)
+2026-10-03T23:05:29.3934768Z     --- PASS: TestIsSelf/external_ip (0.00s)
+2026-10-03T23:05:29.3935111Z     --- PASS: TestIsSelf/external_ipv6 (0.00s)
+2026-10-03T23:05:29.3935620Z === RUN   TestIsSelf_EmptyPublicIPs
+2026-10-03T23:05:29.3935925Z --- PASS: TestIsSelf_EmptyPublicIPs (0.00s)
+2026-10-03T23:05:29.3936216Z === RUN   TestGetPortFromConn
+2026-10-03T23:05:29.3936479Z --- PASS: TestGetPortFromConn (0.00s)
+2026-10-03T23:05:29.3936759Z === RUN   TestReadClientHello_Split
+2026-10-03T23:05:29.3937172Z === RUN   TestReadClientHello_Split/0
+2026-10-03T23:05:29.3937450Z === RUN   TestReadClientHello_Split/3
+2026-10-03T23:05:29.3937730Z === RUN   TestReadClientHello_Split/40
+2026-10-03T23:05:29.3938025Z --- PASS: TestReadClientHello_Split (0.00s)
+2026-10-03T23:05:29.3938385Z     --- PASS: TestReadClientHello_Split/0 (0.00s)
+2026-10-03T23:05:29.3938766Z     --- PASS: TestReadClientHello_Split/3 (0.00s)
+2026-10-03T23:05:29.3939135Z     --- PASS: TestReadClientHello_Split/40 (0.00s)
+2026-10-03T23:05:29.3939443Z === RUN   TestReadClientHello_Invalid
+2026-10-03T23:05:29.3939752Z === RUN   TestReadClientHello_Invalid/not_handshake
+2026-10-03T23:05:29.3940094Z === RUN   TestReadClientHello_Invalid/zero_length
+2026-10-03T23:05:29.3940411Z === RUN   TestReadClientHello_Invalid/too_long
+2026-10-03T23:05:29.3940844Z --- PASS: TestReadClientHello_Invalid (0.00s)
+2026-10-03T23:05:29.3941273Z     --- PASS: TestReadClientHello_Invalid/not_handshake (0.00s)
+2026-10-03T23:05:29.3941740Z     --- PASS: TestReadClientHello_Invalid/zero_length (0.00s)
+2026-10-03T23:05:29.3942188Z     --- PASS: TestReadClientHello_Invalid/too_long (0.00s)
+2026-10-03T23:05:29.3942483Z PASS
+2026-10-03T23:05:29.3942709Z ok  	github.com/mosajjal/sniproxy/v2/pkg	1.136s
+2026-10-03T23:05:43.2973440Z === RUN   TestMakeDecision
+2026-10-03T23:05:43.2974818Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s
+2026-10-03T23:05:43.2976312Z 2026-10-03T23:05:28Z INF started ACL: 'domain'
+2026-10-03T23:05:43.2977175Z 2026-10-03T23:05:28Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.2978106Z 2026-10-03T23:05:28Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.2979266Z 2026-10-03T23:05:28Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.2981123Z 2026-10-03T23:05:29Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.2982767Z 2026-10-03T23:05:29Z DBG domain going through proxy: ipinfo.io acl=domain
+2026-10-03T23:05:43.2984559Z 2026-10-03T23:05:29Z DBG decided on domain acl acl=domain conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.2986852Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s#01
+2026-10-03T23:05:43.2988104Z 2026-10-03T23:05:29Z INF started ACL: 'domain'
+2026-10-03T23:05:43.2988778Z 2026-10-03T23:05:29Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.2989534Z 2026-10-03T23:05:29Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.2990533Z 2026-10-03T23:05:29Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.2992165Z 2026-10-03T23:05:30Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"2.2.2.2","Port":80,"Zone":""}}
+2026-10-03T23:05:43.2993690Z 2026-10-03T23:05:30Z DBG domain not going through proxy: google.de acl=domain
+2026-10-03T23:05:43.2995131Z 2026-10-03T23:05:30Z DBG decided on domain acl acl=domain conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"2.2.2.2","Port":80,"Zone":""}}
+2026-10-03T23:05:43.2997162Z === RUN   TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s
+2026-10-03T23:05:43.2998131Z 2026-10-03T23:05:30Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.2998749Z 2026-10-03T23:05:30Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.2999531Z 2026-10-03T23:05:30Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3000205Z 2026-10-03T23:05:30Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3001473Z 2026-10-03T23:05:31Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3003521Z === RUN   TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01
+2026-10-03T23:05:43.3004576Z 2026-10-03T23:05:31Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3005221Z 2026-10-03T23:05:31Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3006200Z 2026-10-03T23:05:31Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3006884Z 2026-10-03T23:05:31Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3008438Z 2026-10-03T23:05:32Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3010180Z === RUN   TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02
+2026-10-03T23:05:43.3011219Z 2026-10-03T23:05:32Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3011875Z 2026-10-03T23:05:32Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3012585Z 2026-10-03T23:05:32Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3012960Z 2026-10-03T23:05:32Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3013692Z 2026-10-03T23:05:33Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3015680Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s
+2026-10-03T23:05:43.3017313Z 2026-10-03T23:05:33Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3017937Z 2026-10-03T23:05:33Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3018567Z 2026-10-03T23:05:33Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3019188Z 2026-10-03T23:05:33Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3019827Z 2026-10-03T23:05:33Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3020440Z 2026-10-03T23:05:33Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3021139Z 2026-10-03T23:05:33Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3021914Z 2026-10-03T23:05:33Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3023417Z 2026-10-03T23:05:34Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3024799Z 2026-10-03T23:05:34Z DBG domain going through proxy: ipinfo.io acl=domain
+2026-10-03T23:05:43.3026511Z 2026-10-03T23:05:34Z DBG decided on domain acl acl=domain conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3028508Z 2026-10-03T23:05:34Z DBG deciding on cidr acl acl=cidr conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3030848Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01
+2026-10-03T23:05:43.3032310Z 2026-10-03T23:05:34Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3032861Z 2026-10-03T23:05:34Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3033510Z 2026-10-03T23:05:34Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3034215Z 2026-10-03T23:05:34Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3034923Z 2026-10-03T23:05:34Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3035826Z 2026-10-03T23:05:34Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3036745Z 2026-10-03T23:05:34Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3037588Z 2026-10-03T23:05:34Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3039041Z 2026-10-03T23:05:35Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3040457Z 2026-10-03T23:05:35Z DBG domain not going through proxy: google.de acl=domain
+2026-10-03T23:05:43.3041971Z 2026-10-03T23:05:35Z DBG decided on domain acl acl=domain conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3044195Z 2026-10-03T23:05:35Z DBG deciding on cidr acl acl=cidr conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3046748Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02
+2026-10-03T23:05:43.3048218Z 2026-10-03T23:05:35Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3048859Z 2026-10-03T23:05:35Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3049500Z 2026-10-03T23:05:35Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3050039Z 2026-10-03T23:05:35Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3050840Z 2026-10-03T23:05:35Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3051580Z 2026-10-03T23:05:35Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3052295Z 2026-10-03T23:05:35Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3053131Z 2026-10-03T23:05:35Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3054623Z 2026-10-03T23:05:36Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3056171Z 2026-10-03T23:05:36Z DBG domain going through proxy: ipinfo.io acl=domain
+2026-10-03T23:05:43.3057569Z 2026-10-03T23:05:36Z DBG decided on domain acl acl=domain conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3059463Z 2026-10-03T23:05:36Z DBG deciding on cidr acl acl=cidr conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3061744Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03
+2026-10-03T23:05:43.3063279Z 2026-10-03T23:05:36Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3063771Z 2026-10-03T23:05:36Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3064362Z 2026-10-03T23:05:36Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3065081Z 2026-10-03T23:05:36Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3065986Z 2026-10-03T23:05:36Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3066644Z 2026-10-03T23:05:36Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3067304Z 2026-10-03T23:05:36Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3068219Z 2026-10-03T23:05:36Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3069742Z 2026-10-03T23:05:37Z DBG deciding on domain acl acl=domain conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3071108Z 2026-10-03T23:05:37Z DBG domain not going through proxy: google.de acl=domain
+2026-10-03T23:05:43.3072778Z 2026-10-03T23:05:37Z DBG decided on domain acl acl=domain conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3074735Z 2026-10-03T23:05:37Z DBG deciding on cidr acl acl=cidr conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3077159Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s
+2026-10-03T23:05:43.3078551Z 2026-10-03T23:05:37Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3079404Z 2026-10-03T23:05:37Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3080049Z 2026-10-03T23:05:37Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3080706Z 2026-10-03T23:05:37Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3081504Z 2026-10-03T23:05:37Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3082260Z 2026-10-03T23:05:37Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3082919Z 2026-10-03T23:05:37Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3083745Z 2026-10-03T23:05:37Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3085202Z 2026-10-03T23:05:38Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3087393Z 2026-10-03T23:05:38Z DBG deciding on domain acl acl=domain conn={"Decision":"Accept","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3088798Z 2026-10-03T23:05:38Z DBG domain not going through proxy: google.de acl=domain
+2026-10-03T23:05:43.3090150Z 2026-10-03T23:05:38Z DBG decided on domain acl acl=domain conn={"Decision":"OriginIP","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3092327Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01
+2026-10-03T23:05:43.3093952Z 2026-10-03T23:05:38Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3094553Z 2026-10-03T23:05:38Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3095157Z 2026-10-03T23:05:38Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3096330Z 2026-10-03T23:05:38Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3097398Z 2026-10-03T23:05:38Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3098325Z 2026-10-03T23:05:38Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3099058Z 2026-10-03T23:05:38Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3099953Z 2026-10-03T23:05:38Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3101982Z 2026-10-03T23:05:39Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3104173Z 2026-10-03T23:05:39Z DBG deciding on domain acl acl=domain conn={"Decision":"Accept","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3106200Z 2026-10-03T23:05:39Z DBG domain going through proxy: ipinfo.io acl=domain
+2026-10-03T23:05:43.3107898Z 2026-10-03T23:05:39Z DBG decided on domain acl acl=domain conn={"Decision":"ProxyIP","Domain":"ipinfo.io","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"77.77.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3110206Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02
+2026-10-03T23:05:43.3111826Z 2026-10-03T23:05:39Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3112429Z 2026-10-03T23:05:39Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3113048Z 2026-10-03T23:05:39Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3113592Z 2026-10-03T23:05:39Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3114215Z 2026-10-03T23:05:39Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3114931Z 2026-10-03T23:05:39Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3115840Z 2026-10-03T23:05:39Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3116797Z 2026-10-03T23:05:39Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3118190Z 2026-10-03T23:05:40Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3119628Z 2026-10-03T23:05:40Z DBG deciding on domain acl acl=domain conn={"Decision":"Reject","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3121053Z 2026-10-03T23:05:40Z DBG decided on domain acl acl=domain conn={"Decision":"Reject","Domain":"google.de","DstIP":{"IP":"0.0.0.0","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3122704Z === RUN   TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03
+2026-10-03T23:05:43.3123809Z 2026-10-03T23:05:40Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3124179Z 2026-10-03T23:05:40Z INF started ACL: 'domain'
+2026-10-03T23:05:43.3124618Z 2026-10-03T23:05:40Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3125143Z 2026-10-03T23:05:40Z INF Loading the domain from file/url acl=domain
+2026-10-03T23:05:43.3125829Z 2026-10-03T23:05:40Z INF (re)loading file: ../../domains.csv acl=domain
+2026-10-03T23:05:43.3126474Z 2026-10-03T23:05:40Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3127025Z 2026-10-03T23:05:40Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3127608Z 2026-10-03T23:05:40Z INF ../../domains.csv loaded with 0 prefix, 573 suffix and 0 fqdn acl=domain
+2026-10-03T23:05:43.3128682Z 2026-10-03T23:05:41Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3129910Z 2026-10-03T23:05:41Z DBG deciding on domain acl acl=domain conn={"Decision":"Reject","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3131371Z 2026-10-03T23:05:41Z DBG decided on domain acl acl=domain conn={"Decision":"Reject","Domain":"google.de","DstIP":{"IP":"0.0.0.0","Port":0,"Zone":""},"SrcIP":{"IP":"1.1.1.1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3132577Z === RUN   TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03
+2026-10-03T23:05:43.3133208Z 2026-10-03T23:05:41Z INF started ACL: 'cidr'
+2026-10-03T23:05:43.3133676Z 2026-10-03T23:05:41Z INF Loading the CIDR from file/url acl=cidr
+2026-10-03T23:05:43.3134218Z 2026-10-03T23:05:41Z INF (re)loading file: ../../cidr.csv acl=cidr
+2026-10-03T23:05:43.3134623Z 2026-10-03T23:05:41Z INF 2 cidr(s) loaded acl=cidr
+2026-10-03T23:05:43.3135951Z 2026-10-03T23:05:42Z DBG deciding on cidr acl acl=cidr conn={"Decision":"","Domain":"google.de","DstIP":{"IP":"","Port":0,"Zone":""},"SrcIP":{"IP":"2001:db8::1","Port":80,"Zone":""}}
+2026-10-03T23:05:43.3136734Z --- PASS: TestMakeDecision (14.04s)
+2026-10-03T23:05:43.3137627Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s (1.00s)
+2026-10-03T23:05:43.3139177Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s#01 (1.00s)
+2026-10-03T23:05:43.3140377Z     --- PASS: TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s (1.00s)
+2026-10-03T23:05:43.3141443Z     --- PASS: TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01 (1.00s)
+2026-10-03T23:05:43.3142679Z     --- PASS: TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02 (1.00s)
+2026-10-03T23:05:43.3144397Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s (1.00s)
+2026-10-03T23:05:43.3146498Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01 (1.00s)
+2026-10-03T23:05:43.3148424Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02 (1.00s)
+2026-10-03T23:05:43.3150455Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03 (1.00s)
+2026-10-03T23:05:43.3152333Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s (1.00s)
+2026-10-03T23:05:43.3154273Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#01 (1.00s)
+2026-10-03T23:05:43.3156509Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#02 (1.00s)
+2026-10-03T23:05:43.3158480Z     --- PASS: TestMakeDecision/_acl:___domain:_____enabled:_true_____priority:_20_____path:_../../domains.csv_____refresh_interval:_1h0m0s___cidr:_____enabled:_true_____priority:_19_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03 (1.00s)
+2026-10-03T23:05:43.3160018Z     --- PASS: TestMakeDecision/_acl:___cidr:_____enabled:_true_____priority:_30_____path:_../../cidr.csv_____refresh_interval:_1h0m0s#03 (1.00s)
+2026-10-03T23:05:43.3160692Z === RUN   TestReverse
+2026-10-03T23:05:43.3160917Z === RUN   TestReverse/test1
+2026-10-03T23:05:43.3161255Z === RUN   TestReverse/test2
+2026-10-03T23:05:43.3161496Z === RUN   TestReverse/test3
+2026-10-03T23:05:43.3161776Z === RUN   TestReverse/test4
+2026-10-03T23:05:43.3162056Z === RUN   TestReverse/test5
+2026-10-03T23:05:43.3162289Z --- PASS: TestReverse (0.00s)
+2026-10-03T23:05:43.3162684Z     --- PASS: TestReverse/test1 (0.00s)
+2026-10-03T23:05:43.3163003Z     --- PASS: TestReverse/test2 (0.00s)
+2026-10-03T23:05:43.3163410Z     --- PASS: TestReverse/test3 (0.00s)
+2026-10-03T23:05:43.3163780Z     --- PASS: TestReverse/test4 (0.00s)
+2026-10-03T23:05:43.3164115Z     --- PASS: TestReverse/test5 (0.00s)
+2026-10-03T23:05:43.3164357Z PASS
+2026-10-03T23:05:43.3164607Z ok  	github.com/mosajjal/sniproxy/v2/pkg/acl	15.051s
+2026-10-03T23:05:43.3164921Z === RUN   TestParseCIDR
+2026-10-03T23:05:43.3165144Z === PAUSE TestParseCIDR
+2026-10-03T23:05:43.3165786Z === RUN   TestParseInvalidCIDR
+2026-10-03T23:05:43.3166044Z === PAUSE TestParseInvalidCIDR
+2026-10-03T23:05:43.3166437Z === RUN   TestEdns0SubnetParseCIDR
+2026-10-03T23:05:43.3166719Z === PAUSE TestEdns0SubnetParseCIDR
+2026-10-03T23:05:43.3167092Z === CONT  TestEdns0SubnetParseCIDR
+2026-10-03T23:05:43.3169227Z     parse_test.go:106: msg: &dns.Msg{MsgHdr:dns.MsgHdr{Id:0x44fa, Response:false, Opcode:0, Authoritative:false, Truncated:false, RecursionDesired:true, RecursionAvailable:false, Zero:false, AuthenticatedData:false, CheckingDisabled:false, Rcode:0}, Compress:false, Question:[]dns.Question{dns.Question{Name:"example.com.", Qtype:0x1, Qclass:0x1}}, Answer:[]dns.RR(nil), Ns:[]dns.RR(nil), Extra:[]dns.RR{(*dns.OPT)(0xc000078c00)}}
+2026-10-03T23:05:43.3172682Z     parse_test.go:106: msg: &dns.Msg{MsgHdr:dns.MsgHdr{Id:0x44fa, Response:false, Opcode:0, Authoritative:false, Truncated:false, RecursionDesired:true, RecursionAvailable:false, Zero:false, AuthenticatedData:false, CheckingDisabled:false, Rcode:0}, Compress:false, Question:[]dns.Question{dns.Question{Name:"example.com.", Qtype:0x1, Qclass:0x1}}, Answer:[]dns.RR(nil), Ns:[]dns.RR(nil), Extra:[]dns.RR{(*dns.OPT)(0xc000078c00)}}
+2026-10-03T23:05:43.3174284Z --- PASS: TestEdns0SubnetParseCIDR (0.00s)
+2026-10-03T23:05:43.3174591Z === CONT  TestParseInvalidCIDR
+2026-10-03T23:05:43.3174858Z --- PASS: TestParseInvalidCIDR (0.00s)
+2026-10-03T23:05:43.3175132Z === CONT  TestParseCIDR
+2026-10-03T23:05:43.3175364Z --- PASS: TestParseCIDR (0.00s)
+2026-10-03T23:05:43.3175993Z PASS
+2026-10-03T23:05:43.3176242Z ok  	github.com/mosajjal/sniproxy/v2/pkg/doh	1.011s
+2026-10-03T23:05:43.5266495Z ##[group]Run go test -v -count=1 -run "Leak" ./...
+2026-10-03T23:05:43.5266991Z [36;1mgo test -v -count=1 -run "Leak" ./...[0m
+2026-10-03T23:05:43.5330352Z shell: /usr/bin/bash -e {0}
+2026-10-03T23:05:43.5330670Z env:
+2026-10-03T23:05:43.5330958Z   GOEXPERIMENT: goroutineleakprofile,jsonv2
+2026-10-03T23:05:43.5331342Z   GOTOOLCHAIN: local
+2026-10-03T23:05:43.5331631Z ##[endgroup]
+2026-10-03T23:05:48.8664891Z testing: warning: no tests to run
+2026-10-03T23:05:48.8665764Z PASS
+2026-10-03T23:05:48.8666502Z ok  	github.com/mosajjal/sniproxy/v2/cmd/sniproxy	0.008s [no tests to run]
+2026-10-03T23:05:48.9484739Z === RUN   TestGoroutineLeakProfile_DetectsKnownLeak
+2026-10-03T23:05:48.9485751Z --- PASS: TestGoroutineLeakProfile_DetectsKnownLeak (0.03s)
+2026-10-03T23:05:48.9486275Z === RUN   TestHandleTLS_NoGoroutineLeaks
+2026-10-03T23:05:48.9486728Z --- PASS: TestHandleTLS_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:48.9487253Z === RUN   TestHandleTLS_ConcurrentNoGoroutineLeaks
+2026-10-03T23:05:48.9487795Z --- PASS: TestHandleTLS_ConcurrentNoGoroutineLeaks (0.00s)
+2026-10-03T23:05:48.9488401Z === RUN   TestHandleTLS_SlowClientNoGoroutineLeaks
+2026-10-03T23:05:48.9488861Z --- PASS: TestHandleTLS_SlowClientNoGoroutineLeaks (0.05s)
+2026-10-03T23:05:48.9489416Z === RUN   TestDNSClient_NoGoroutineLeaks
+2026-10-03T23:05:48.9489798Z --- PASS: TestDNSClient_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:48.9490320Z === RUN   TestDNSClient_ConcurrentNoGoroutineLeaks
+2026-10-03T23:05:48.9490915Z --- PASS: TestDNSClient_ConcurrentNoGoroutineLeaks (0.00s)
+2026-10-03T23:05:48.9491352Z === RUN   TestProxyCopy_NoGoroutineLeaks
+2026-10-03T23:05:48.9491866Z --- PASS: TestProxyCopy_NoGoroutineLeaks (0.00s)
+2026-10-03T23:05:48.9492239Z === RUN   TestUnexpectedLeaks
+2026-10-03T23:05:48.9492564Z --- PASS: TestUnexpectedLeaks (0.00s)
+2026-10-03T23:05:48.9493002Z PASS
+2026-10-03T23:05:48.9493290Z ok  	github.com/mosajjal/sniproxy/v2/pkg	0.090s
+2026-10-03T23:05:48.9493708Z testing: warning: no tests to run
+2026-10-03T23:05:48.9494130Z PASS
+2026-10-03T23:05:48.9494492Z ok  	github.com/mosajjal/sniproxy/v2/pkg/acl	0.006s [no tests to run]
+2026-10-03T23:05:48.9494969Z testing: warning: no tests to run
+2026-10-03T23:05:48.9495361Z PASS
+2026-10-03T23:05:48.9495853Z ok  	github.com/mosajjal/sniproxy/v2/pkg/doh	0.003s [no tests to run]
+2026-10-03T23:05:48.9940541Z Post job cleanup.
+2026-10-03T23:05:49.1673849Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/sniproxy/sniproxy --files-from manifest.txt --use-compress-program zstdmt
+2026-10-03T23:05:49.5188691Z Failed to save: Unable to reserve cache with key golangci-lint.cache-Linux-2961-3707fb0c4874906c603af44dd1b6ce85cff3381c, another job may be creating this cache.
+2026-10-03T23:05:49.5193886Z Saved cache for golangci-lint from paths '/home/runner/.cache/golangci-lint' in 380ms
+2026-10-03T23:05:49.5346582Z Post job cleanup.
+2026-10-03T23:05:49.6566557Z [command]/opt/hostedtoolcache/go/1.26.8/x64/bin/go env GOMODCACHE
+2026-10-03T23:05:49.6622563Z [command]/opt/hostedtoolcache/go/1.26.8/x64/bin/go env GOCACHE
+2026-10-03T23:05:49.6658657Z /home/runner/go/pkg/mod
+2026-10-03T23:05:49.6679597Z /home/runner/.cache/go-build
+2026-10-03T23:05:49.6980071Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/sniproxy/sniproxy --files-from manifest.txt --use-compress-program zstdmt
+2026-10-03T23:05:52.0845292Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.26.8-c5dee0a4f633475562d237786e266f3b54b542e0899d1ef1ac176bfd7a3f3173, another job may be creating this cache.
+2026-10-03T23:05:52.1281109Z Post job cleanup.
+2026-10-03T23:05:52.2198300Z [command]/usr/bin/git version
+2026-10-03T23:05:52.2246847Z git version 2.55.0
+2026-10-03T23:05:52.2296268Z Temporarily overriding HOME='/home/runner/work/_temp/4ee31662-3bc3-4e7b-ac31-a8d0d2ff8303' before making global git config changes
+2026-10-03T23:05:52.2297987Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T23:05:52.2302282Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:05:52.2338283Z Removing SSH command configuration
+2026-10-03T23:05:52.2345372Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T23:05:52.2386398Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-03T23:05:52.2634764Z Removing HTTP extra header
+2026-10-03T23:05:52.2640923Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T23:05:52.2684204Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-03T23:05:52.2958273Z Removing includeIf entries pointing to credentials config files
+2026-10-03T23:05:52.2966774Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T23:05:52.2995362Z includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path
+2026-10-03T23:05:52.2996614Z includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path
+2026-10-03T23:05:52.2997577Z includeif.gitdir:/github/workspace/.git.path
+2026-10-03T23:05:52.2998396Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-03T23:05:52.3004936Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path
+2026-10-03T23:05:52.3034933Z /home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:05:52.3047496Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-e25af356\-3868\-4a36\-91b1\-835fb5634518\.config
+2026-10-03T23:05:52.3094376Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path
+2026-10-03T23:05:52.3125731Z /home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:05:52.3137476Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-e25af356\-3868\-4a36\-91b1\-835fb5634518\.config
+2026-10-03T23:05:52.3194303Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-03T23:05:52.3223019Z /github/runner_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:05:52.3232561Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-e25af356\-3868\-4a36\-91b1\-835fb5634518\.config
+2026-10-03T23:05:52.3269695Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-03T23:05:52.3295248Z /github/runner_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config
+2026-10-03T23:05:52.3305742Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-e25af356\-3868\-4a36\-91b1\-835fb5634518\.config
+2026-10-03T23:05:52.3344987Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-03T23:05:52.3569894Z Removing credentials config '/home/runner/work/_temp/git-credentials-e25af356-3868-4a36-91b1-835fb5634518.config'
+2026-10-03T23:05:52.3724591Z Cleaning up orphan processes

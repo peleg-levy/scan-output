@@ -1,0 +1,140 @@
+﻿2026-10-14T16:46:21.0928240Z Current runner version: '2.337.0'
+2026-10-14T16:46:21.0953149Z ##[group]Runner Image Provisioner
+2026-10-14T16:46:21.0954169Z Hosted Compute Agent
+2026-10-14T16:46:21.0954880Z Version: 20261002.596
+2026-10-14T16:46:21.0955671Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T16:46:21.0956467Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T16:46:21.0957198Z Worker ID: {ccd32c26-3f11-484e-9e22-4140334519ff}
+2026-10-14T16:46:21.0958070Z Region: westus
+2026-10-14T16:46:21.0958678Z Cloud: Azure
+2026-10-14T16:46:21.0959522Z ##[endgroup]
+2026-10-14T16:46:21.0961076Z ##[group]Operating System
+2026-10-14T16:46:21.0961743Z Ubuntu
+2026-10-14T16:46:21.0962375Z 24.04.5
+2026-10-14T16:46:21.0962937Z LTS
+2026-10-14T16:46:21.0963525Z ##[endgroup]
+2026-10-14T16:46:21.0964106Z ##[group]Runner Image
+2026-10-14T16:46:21.0964713Z Image: ubuntu-24.04
+2026-10-14T16:46:21.0965362Z Version: 20261004.327.1
+2026-10-14T16:46:21.0966635Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T16:46:21.0968298Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T16:46:21.0969497Z ##[endgroup]
+2026-10-14T16:46:21.0970849Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T16:46:21.0972768Z Issues: write
+2026-10-14T16:46:21.0973474Z Metadata: read
+2026-10-14T16:46:21.0974187Z PullRequests: write
+2026-10-14T16:46:21.0974757Z ##[endgroup]
+2026-10-14T16:46:21.0976873Z Secret source: Actions
+2026-10-14T16:46:21.0977823Z Cache mode: read
+2026-10-14T16:46:21.0978614Z Prepare workflow directory
+2026-10-14T16:46:21.1312107Z Prepare all required actions
+2026-10-14T16:46:21.1417823Z Complete job name: size-label
+2026-10-14T16:46:21.2254037Z ##[group]Run # Determine the target PR number
+2026-10-14T16:46:21.2255131Z [36;1m# Determine the target PR number[0m
+2026-10-14T16:46:21.2256006Z [36;1mif [ -n "29725" ]; then[0m
+2026-10-14T16:46:21.2256672Z [36;1m  PR_NUMBER="29725"[0m
+2026-10-14T16:46:21.2257408Z [36;1melif [ -n "" ]; then[0m
+2026-10-14T16:46:21.2258052Z [36;1m  PR_NUMBER=""[0m
+2026-10-14T16:46:21.2258685Z [36;1melse[0m
+2026-10-14T16:46:21.2259503Z [36;1m  echo "❌ Error: No PR number provided."[0m
+2026-10-14T16:46:21.2260271Z [36;1m  exit 1[0m
+2026-10-14T16:46:21.2260892Z [36;1mfi[0m
+2026-10-14T16:46:21.2261444Z [36;1m[0m
+2026-10-14T16:46:21.2262044Z [36;1mecho "Checking PR #$PR_NUMBER..."[0m
+2026-10-14T16:46:21.2262766Z [36;1m[0m
+2026-10-14T16:46:21.2263608Z [36;1m# 1. Ensure standard premium size labels exist in the repository (self-healing)[0m
+2026-10-14T16:46:21.2264661Z [36;1m# size/XS: Light green (#7ee081)[0m
+2026-10-14T16:46:21.2265447Z [36;1m# size/S: Yellow-green (#a6d49f)[0m
+2026-10-14T16:46:21.2266235Z [36;1m# size/M: Amber/Yellow (#f7d070)[0m
+2026-10-14T16:46:21.2266950Z [36;1m# size/L: Orange (#f48c06)[0m
+2026-10-14T16:46:21.2267638Z [36;1m# size/XL: Red (#dc2f02)[0m
+2026-10-14T16:46:21.2268675Z [36;1mgh label create "size/XS" --color "7ee081" --description "XS: <10 lines changed" 2>/dev/null || true[0m
+2026-10-14T16:46:21.2270509Z [36;1mgh label create "size/S"  --color "a6d49f" --description "S: 10-49 lines changed" 2>/dev/null || true[0m
+2026-10-14T16:46:21.2271990Z [36;1mgh label create "size/M"  --color "f7d070" --description "M: 50-249 lines changed" 2>/dev/null || true[0m
+2026-10-14T16:46:21.2273464Z [36;1mgh label create "size/L"  --color "f48c06" --description "L: 250-999 lines changed" 2>/dev/null || true[0m
+2026-10-14T16:46:21.2274933Z [36;1mgh label create "size/XL" --color "dc2f02" --description "XL: >=1000 lines changed" 2>/dev/null || true[0m
+2026-10-14T16:46:21.2275982Z [36;1m[0m
+2026-10-14T16:46:21.2276618Z [36;1m# 2. Fetch PR details in a single efficient API call[0m
+2026-10-14T16:46:21.2277690Z [36;1mPR_DATA=$(gh pr view "$PR_NUMBER" --json additions,deletions,changedFiles,labels)[0m
+2026-10-14T16:46:21.2278664Z [36;1mif [ -z "$PR_DATA" ]; then[0m
+2026-10-14T16:46:21.2279669Z [36;1m  echo "❌ Error: Could not fetch PR details."[0m
+2026-10-14T16:46:21.2281226Z [36;1m  exit 1[0m
+2026-10-14T16:46:21.2281768Z [36;1mfi[0m
+2026-10-14T16:46:21.2363801Z [36;1m[0m
+2026-10-14T16:46:21.2364783Z [36;1mADDITIONS=$(echo "$PR_DATA" | jq '.additions')[0m
+2026-10-14T16:46:21.2366064Z [36;1mDELETIONS=$(echo "$PR_DATA" | jq '.deletions')[0m
+2026-10-14T16:46:21.2367487Z [36;1mCHANGED_FILES=$(echo "$PR_DATA" | jq '.changedFiles')[0m
+2026-10-14T16:46:21.2368909Z [36;1mTOTAL=$((ADDITIONS + DELETIONS))[0m
+2026-10-14T16:46:21.2370189Z [36;1m[0m
+2026-10-14T16:46:21.2371061Z [36;1mecho "PR additions: $ADDITIONS, deletions: $DELETIONS, total changes: $TOTAL, files: $CHANGED_FILES"[0m
+2026-10-14T16:46:21.2372017Z [36;1m[0m
+2026-10-14T16:46:21.2372486Z [36;1m# 3. Calculate new size label[0m
+2026-10-14T16:46:21.2373073Z [36;1mif [ $TOTAL -lt 10 ]; then[0m
+2026-10-14T16:46:21.2373629Z [36;1m  SIZE="size/XS"[0m
+2026-10-14T16:46:21.2374149Z [36;1melif [ $TOTAL -lt 50 ]; then[0m
+2026-10-14T16:46:21.2374707Z [36;1m  SIZE="size/S"[0m
+2026-10-14T16:46:21.2375226Z [36;1melif [ $TOTAL -lt 250 ]; then[0m
+2026-10-14T16:46:21.2375780Z [36;1m  SIZE="size/M"[0m
+2026-10-14T16:46:21.2376276Z [36;1melif [ $TOTAL -lt 1000 ]; then[0m
+2026-10-14T16:46:21.2376861Z [36;1m  SIZE="size/L"[0m
+2026-10-14T16:46:21.2377337Z [36;1melse[0m
+2026-10-14T16:46:21.2377774Z [36;1m  SIZE="size/XL"[0m
+2026-10-14T16:46:21.2378269Z [36;1mfi[0m
+2026-10-14T16:46:21.2378676Z [36;1m[0m
+2026-10-14T16:46:21.2379513Z [36;1m# 4. Check existing labels and update only if necessary[0m
+2026-10-14T16:46:21.2380504Z [36;1mEXISTING_LABELS=$(echo "$PR_DATA" | jq -r '.labels[].name' 2>/dev/null || echo "")[0m
+2026-10-14T16:46:21.2381341Z [36;1m[0m
+2026-10-14T16:46:21.2382066Z [36;1mLABELS_TO_REMOVE=()[0m
+2026-10-14T16:46:21.2382694Z [36;1mfor L in size/XS size/S size/M size/L size/XL; do[0m
+2026-10-14T16:46:21.2383546Z [36;1m  if echo "$EXISTING_LABELS" | grep -Fq "$L" && [ "$L" != "$SIZE" ]; then[0m
+2026-10-14T16:46:21.2384381Z [36;1m    LABELS_TO_REMOVE+=("--remove-label" "$L")[0m
+2026-10-14T16:46:21.2384997Z [36;1m  fi[0m
+2026-10-14T16:46:21.2385424Z [36;1mdone[0m
+2026-10-14T16:46:21.2385850Z [36;1m[0m
+2026-10-14T16:46:21.2386276Z [36;1mLABEL_TO_ADD=()[0m
+2026-10-14T16:46:21.2386880Z [36;1mif ! echo "$EXISTING_LABELS" | grep -Fq "$SIZE"; then[0m
+2026-10-14T16:46:21.2387602Z [36;1m  LABEL_TO_ADD+=("--add-label" "$SIZE")[0m
+2026-10-14T16:46:21.2388200Z [36;1mfi[0m
+2026-10-14T16:46:21.2388690Z [36;1m[0m
+2026-10-14T16:46:21.2389542Z [36;1m# Perform a single, highly atomic edit call if changes are needed[0m
+2026-10-14T16:46:21.2390504Z [36;1mif [ ${#LABELS_TO_REMOVE[@]} -gt 0 ] || [ ${#LABEL_TO_ADD[@]} -gt 0 ]; then[0m
+2026-10-14T16:46:21.2391483Z [36;1m  echo "Updating labels: removing ${LABELS_TO_REMOVE[*]}, adding $SIZE"[0m
+2026-10-14T16:46:21.2392435Z [36;1m  gh pr edit "$PR_NUMBER" "${LABELS_TO_REMOVE[@]}" "${LABEL_TO_ADD[@]}"[0m
+2026-10-14T16:46:21.2393159Z [36;1melse[0m
+2026-10-14T16:46:21.2393776Z [36;1m  echo "✅ PR #$PR_NUMBER already has the correct size label ($SIZE)."[0m
+2026-10-14T16:46:21.2394511Z [36;1mfi[0m
+2026-10-14T16:46:21.2394945Z [36;1m[0m
+2026-10-14T16:46:21.2395656Z [36;1m# 5. Premium, anti-spam comment logic (updates previous comment to keep thread clean)[0m
+2026-10-14T16:46:21.2396535Z [36;1mCOMMENT="📊 PR Size: **$SIZE**[0m
+2026-10-14T16:46:21.2397129Z [36;1m- Lines changed: **$TOTAL**[0m
+2026-10-14T16:46:21.2397698Z [36;1m- Additions: +$ADDITIONS[0m
+2026-10-14T16:46:21.2398242Z [36;1m- Deletions: -$DELETIONS[0m
+2026-10-14T16:46:21.2398804Z [36;1m- Files changed: $CHANGED_FILES"[0m
+2026-10-14T16:46:21.2399681Z [36;1m[0m
+2026-10-14T16:46:21.2400324Z [36;1m# Find any existing size labeler comment by the github-actions bot[0m
+2026-10-14T16:46:21.2401144Z [36;1mecho "Searching for existing size comment..."[0m
+2026-10-14T16:46:21.2402042Z [36;1mCOMMENT_ID=$(gh api "repos/google-gemini/gemini-cli/issues/$PR_NUMBER/comments" \[0m
+2026-10-14T16:46:21.2403282Z [36;1m  --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("📊 PR Size:"))) | .id' | head -n 1)[0m
+2026-10-14T16:46:21.2404421Z [36;1m[0m
+2026-10-14T16:46:21.2404890Z [36;1mif [ -n "$COMMENT_ID" ]; then[0m
+2026-10-14T16:46:21.2405568Z [36;1m  echo "Updating existing comment (ID: $COMMENT_ID)..."[0m
+2026-10-14T16:46:21.2406735Z [36;1m  gh api "repos/google-gemini/gemini-cli/issues/comments/$COMMENT_ID" -X PATCH -f body="$COMMENT" > /dev/null[0m
+2026-10-14T16:46:21.2407751Z [36;1melse[0m
+2026-10-14T16:46:21.2408231Z [36;1m  echo "Creating new comment..."[0m
+2026-10-14T16:46:21.2408944Z [36;1m  gh pr comment "$PR_NUMBER" --body "$COMMENT" > /dev/null[0m
+2026-10-14T16:46:21.2410190Z [36;1mfi[0m
+2026-10-14T16:46:21.2410633Z [36;1m[0m
+2026-10-14T16:46:21.2411173Z [36;1mecho "🎉 PR size labeling completed successfully."[0m
+2026-10-14T16:46:21.3165201Z shell: /usr/bin/bash -e {0}
+2026-10-14T16:46:21.3166076Z env:
+2026-10-14T16:46:21.3170946Z   GH_TOKEN: ***
+2026-10-14T16:46:21.3171470Z   GH_REPO: google-gemini/gemini-cli
+2026-10-14T16:46:21.3172056Z ##[endgroup]
+2026-10-14T16:46:21.3402057Z Checking PR #29725...
+2026-10-14T16:46:24.1788360Z PR additions: 850, deletions: 579, total changes: 1429, files: 10
+2026-10-14T16:46:24.1906508Z Updating labels: removing , adding size/XL
+2026-10-14T16:46:26.2331979Z https://github.com/google-gemini/gemini-cli/pull/29725
+2026-10-14T16:46:26.2350449Z Searching for existing size comment...
+2026-10-14T16:46:26.6606549Z Updating existing comment (ID: 6131180098)...
+2026-10-14T16:46:27.7053695Z 🎉 PR size labeling completed successfully.
+2026-10-14T16:46:27.7198384Z Cleaning up orphan processes

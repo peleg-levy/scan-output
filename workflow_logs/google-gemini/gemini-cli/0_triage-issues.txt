@@ -1,0 +1,1213 @@
+﻿2026-10-14T14:11:29.7839441Z Current runner version: '2.337.0'
+2026-10-14T14:11:29.7875472Z ##[group]Runner Image Provisioner
+2026-10-14T14:11:29.7877468Z Hosted Compute Agent
+2026-10-14T14:11:29.7879154Z Version: 20261012.601
+2026-10-14T14:11:29.7880734Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-14T14:11:29.7882590Z Build Date: 2026-10-12T17:48:21Z
+2026-10-14T14:11:29.7884675Z Worker ID: {e954a6f3-2905-4f1c-ab99-32be6f3c29f5}
+2026-10-14T14:11:29.7886618Z Region: eastus
+2026-10-14T14:11:29.7888012Z Cloud: Azure
+2026-10-14T14:11:29.7889616Z ##[endgroup]
+2026-10-14T14:11:29.7892518Z ##[group]Operating System
+2026-10-14T14:11:29.7894328Z Ubuntu
+2026-10-14T14:11:29.7895873Z 24.04.5
+2026-10-14T14:11:29.7897283Z LTS
+2026-10-14T14:11:29.7898581Z ##[endgroup]
+2026-10-14T14:11:29.7900189Z ##[group]Runner Image
+2026-10-14T14:11:29.7901694Z Image: ubuntu-24.04
+2026-10-14T14:11:29.7903260Z Version: 20261012.334.1
+2026-10-14T14:11:29.7906310Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T14:11:29.7909729Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-14T14:11:29.7912255Z ##[endgroup]
+2026-10-14T14:11:29.7915226Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T14:11:29.7918412Z Issues: write
+2026-10-14T14:11:29.7920025Z Metadata: read
+2026-10-14T14:11:29.7921376Z ##[endgroup]
+2026-10-14T14:11:29.7925522Z Secret source: Actions
+2026-10-14T14:11:29.7927950Z Cache mode: write
+2026-10-14T14:11:29.7929939Z Prepare workflow directory
+2026-10-14T14:11:29.9445560Z Prepare all required actions
+2026-10-14T14:11:29.9493375Z Getting action download info
+2026-10-14T14:11:30.1350050Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-14T14:11:30.6892993Z Download action repository 'actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b' (SHA:a8d616148505b5069dccd32f177bb87d7f39123b)
+2026-10-14T14:11:30.8550442Z Download action repository 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea' (SHA:60a0d83039c74a4aee543508d2ffcb1c3799cdea)
+2026-10-14T14:11:30.9915524Z Download action repository 'google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489' (SHA:f77273f4c914e4bf38440cf36a0369cb64a37489)
+2026-10-14T14:11:31.3055381Z Getting action download info
+2026-10-14T14:11:31.4146105Z Download action repository 'google-github-actions/auth@v3' (SHA:7c6bc770dae815cd3e89ee6cdf493a5fab2cc093)
+2026-10-14T14:11:31.5369627Z Download action repository 'pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061' (SHA:41ff72655975bd51cab0327fa583b6e92b6d3061)
+2026-10-14T14:11:31.7098660Z Download action repository 'actions/upload-artifact@v6' (SHA:b7c566a772e6b6bfb58ed0dc250532a479d7789f)
+2026-10-14T14:11:31.9424182Z Getting action download info
+2026-10-14T14:11:32.1242019Z Complete job name: triage-issues
+2026-10-14T14:11:32.2034586Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-14T14:11:32.2035564Z with:
+2026-10-14T14:11:32.2035967Z   persist-credentials: false
+2026-10-14T14:11:32.2036436Z   repository: google-gemini/gemini-cli
+2026-10-14T14:11:32.2039019Z   token: ***
+2026-10-14T14:11:32.2039402Z   ssh-strict: true
+2026-10-14T14:11:32.2039787Z   ssh-user: git
+2026-10-14T14:11:32.2057463Z   clean: true
+2026-10-14T14:11:32.2058079Z   sparse-checkout-cone-mode: true
+2026-10-14T14:11:32.2058571Z   fetch-depth: 1
+2026-10-14T14:11:32.2058956Z   fetch-tags: false
+2026-10-14T14:11:32.2059345Z   show-progress: true
+2026-10-14T14:11:32.2059737Z   lfs: false
+2026-10-14T14:11:32.2060107Z   submodules: false
+2026-10-14T14:11:32.2060497Z   set-safe-directory: true
+2026-10-14T14:11:32.2061294Z ##[endgroup]
+2026-10-14T14:11:32.3021493Z Syncing repository: google-gemini/gemini-cli
+2026-10-14T14:11:32.3023175Z ##[group]Getting Git version info
+2026-10-14T14:11:32.3024464Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T14:11:32.3025422Z [command]/usr/bin/git version
+2026-10-14T14:11:32.3119928Z git version 2.55.0
+2026-10-14T14:11:32.3141540Z ##[endgroup]
+2026-10-14T14:11:32.3155434Z Temporarily overriding HOME='/home/runner/work/_temp/47857e65-4b94-46ea-acd3-727c1fcf069d' before making global git config changes
+2026-10-14T14:11:32.3156607Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T14:11:32.3161133Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T14:11:32.3216971Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T14:11:32.3220858Z ##[group]Initializing the repository
+2026-10-14T14:11:32.3225371Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T14:11:32.3369441Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T14:11:32.3370784Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T14:11:32.3371930Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T14:11:32.3373166Z hint: call:
+2026-10-14T14:11:32.3374414Z hint:
+2026-10-14T14:11:32.3375705Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T14:11:32.3376961Z hint:
+2026-10-14T14:11:32.3378401Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T14:11:32.3380591Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T14:11:32.3382391Z hint:
+2026-10-14T14:11:32.3383623Z hint: 	git branch -m <name>
+2026-10-14T14:11:32.3385279Z hint:
+2026-10-14T14:11:32.3386422Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T14:11:32.3388074Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-14T14:11:32.3391338Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-14T14:11:32.3456232Z ##[endgroup]
+2026-10-14T14:11:32.3457401Z ##[group]Disabling automatic garbage collection
+2026-10-14T14:11:32.3460648Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T14:11:32.3491606Z ##[endgroup]
+2026-10-14T14:11:32.3493138Z ##[group]Setting up auth
+2026-10-14T14:11:32.3499024Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T14:11:32.3530619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T14:11:32.3892965Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T14:11:32.3925213Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T14:11:32.4144731Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T14:11:32.4184546Z ##[endgroup]
+2026-10-14T14:11:32.4185288Z ##[group]Fetching the repository
+2026-10-14T14:11:32.4193125Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +42c51822084ac25cd5d97ac0023822c5235f88c8:refs/remotes/origin/main
+2026-10-14T14:11:34.2215553Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T14:11:34.2216985Z  * [new ref]         42c51822084ac25cd5d97ac0023822c5235f88c8 -> origin/main
+2026-10-14T14:11:34.2221050Z ##[endgroup]
+2026-10-14T14:11:34.2222669Z ##[group]Determining the checkout info
+2026-10-14T14:11:34.2224843Z ##[endgroup]
+2026-10-14T14:11:34.2229754Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T14:11:34.2284331Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T14:11:34.2387520Z ##[group]Checking out the ref
+2026-10-14T14:11:34.2395172Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-14T14:11:34.6525417Z Switched to a new branch 'main'
+2026-10-14T14:11:34.6530248Z branch 'main' set up to track 'origin/main'.
+2026-10-14T14:11:34.6544719Z ##[endgroup]
+2026-10-14T14:11:34.6597109Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T14:11:34.6619539Z 42c51822084ac25cd5d97ac0023822c5235f88c8
+2026-10-14T14:11:34.6629698Z ##[group]Removing auth
+2026-10-14T14:11:34.6634128Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T14:11:34.6663148Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T14:11:34.6886198Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T14:11:34.6917825Z http.https://github.com/.extraheader
+2026-10-14T14:11:34.6927111Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T14:11:34.6959811Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T14:11:34.7175843Z ##[endgroup]
+2026-10-14T14:11:34.7380363Z ##[group]Run sudo apt-get update
+2026-10-14T14:11:34.7380875Z [36;1msudo apt-get update[0m
+2026-10-14T14:11:34.7381289Z [36;1msudo apt-get install -y ripgrep[0m
+2026-10-14T14:11:34.7667298Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:34.7667995Z ##[endgroup]
+2026-10-14T14:11:34.8525317Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-14T14:11:34.8847698Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-14T14:11:34.8850578Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-14T14:11:34.8857922Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-14T14:11:34.8903521Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-14T14:11:34.8928058Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-14T14:11:35.0084199Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-14T14:11:35.0188493Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [576 kB]
+2026-10-14T14:11:35.0345262Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [518 kB]
+2026-10-14T14:11:35.0576129Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+2026-10-14T14:11:35.0647081Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+2026-10-14T14:11:35.0695135Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]
+2026-10-14T14:11:35.0776094Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+2026-10-14T14:11:35.0873281Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-14T14:11:35.1608224Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1145 kB]
+2026-10-14T14:11:35.1666728Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-14T14:11:35.1684275Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1221 kB]
+2026-10-14T14:11:35.1741117Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-14T14:11:35.1758821Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+2026-10-14T14:11:35.2277292Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+2026-10-14T14:11:38.1282171Z Fetched 12.1 MB in 1s (9827 kB/s)
+2026-10-14T14:11:39.0038337Z Reading package lists...
+2026-10-14T14:11:39.0339703Z Reading package lists...
+2026-10-14T14:11:39.2202974Z Building dependency tree...
+2026-10-14T14:11:39.2210773Z Reading state information...
+2026-10-14T14:11:39.3745245Z The following NEW packages will be installed:
+2026-10-14T14:11:39.3745805Z   ripgrep
+2026-10-14T14:11:39.3908606Z 0 upgraded, 1 newly installed, 0 to remove and 26 not upgraded.
+2026-10-14T14:11:39.3909496Z Need to get 1551 kB of archives.
+2026-10-14T14:11:39.3910324Z After this operation, 5335 kB of additional disk space will be used.
+2026-10-14T14:11:39.3911229Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-14T14:11:39.4930377Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 ripgrep amd64 14.1.0-1 [1551 kB]
+2026-10-14T14:11:39.7763967Z Fetched 1551 kB in 0s (10.2 MB/s)
+2026-10-14T14:11:39.7984951Z Selecting previously unselected package ripgrep.
+2026-10-14T14:11:39.8313164Z (Reading database ... 
+2026-10-14T14:11:39.8314088Z (Reading database ... 5%
+2026-10-14T14:11:39.8314734Z (Reading database ... 10%
+2026-10-14T14:11:39.8315188Z (Reading database ... 15%
+2026-10-14T14:11:39.8315851Z (Reading database ... 20%
+2026-10-14T14:11:39.8316406Z (Reading database ... 25%
+2026-10-14T14:11:39.8316850Z (Reading database ... 30%
+2026-10-14T14:11:39.8317277Z (Reading database ... 35%
+2026-10-14T14:11:39.8317970Z (Reading database ... 40%
+2026-10-14T14:11:39.8318412Z (Reading database ... 45%
+2026-10-14T14:11:39.8318839Z (Reading database ... 50%
+2026-10-14T14:11:39.8375917Z (Reading database ... 55%
+2026-10-14T14:11:39.9554649Z (Reading database ... 60%
+2026-10-14T14:11:40.1285369Z (Reading database ... 65%
+2026-10-14T14:11:40.3258243Z (Reading database ... 70%
+2026-10-14T14:11:40.6665413Z (Reading database ... 75%
+2026-10-14T14:11:40.8257565Z (Reading database ... 80%
+2026-10-14T14:11:41.0297813Z (Reading database ... 85%
+2026-10-14T14:11:41.5151795Z (Reading database ... 90%
+2026-10-14T14:11:41.7284896Z (Reading database ... 95%
+2026-10-14T14:11:41.7285779Z (Reading database ... 100%
+2026-10-14T14:11:41.7286835Z (Reading database ... 203540 files and directories currently installed.)
+2026-10-14T14:11:41.7328725Z Preparing to unpack .../ripgrep_14.1.0-1_amd64.deb ...
+2026-10-14T14:11:41.7364790Z Unpacking ripgrep (14.1.0-1) ...
+2026-10-14T14:11:41.8028732Z Setting up ripgrep (14.1.0-1) ...
+2026-10-14T14:11:41.8056922Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-14T14:11:41.8085709Z Not building database; man-db/auto-update is not 'true'.
+2026-10-14T14:11:42.4607862Z 
+2026-10-14T14:11:42.4608631Z Running kernel seems to be up-to-date.
+2026-10-14T14:11:42.4609269Z 
+2026-10-14T14:11:42.4609628Z No services need to be restarted.
+2026-10-14T14:11:42.4610160Z 
+2026-10-14T14:11:42.4610516Z No containers need to be restarted.
+2026-10-14T14:11:42.4611055Z 
+2026-10-14T14:11:42.4611453Z No user sessions are running outdated binaries.
+2026-10-14T14:11:42.4612067Z 
+2026-10-14T14:11:42.4612556Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-14T14:11:43.3904773Z ##[group]Run VERSION=$(jq -r .version package.json | cut -d'-' -f1)
+2026-10-14T14:11:43.3905472Z [36;1mVERSION=$(jq -r .version package.json | cut -d'-' -f1)[0m
+2026-10-14T14:11:43.3906000Z [36;1mecho "version=${VERSION}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:43.3906479Z [36;1mecho "🚀 Current CLI Version: ${VERSION}"[0m
+2026-10-14T14:11:43.3967058Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:43.3967550Z ##[endgroup]
+2026-10-14T14:11:43.4099991Z 🚀 Current CLI Version: 0.65.0
+2026-10-14T14:11:43.4318766Z ##[group]Run actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b
+2026-10-14T14:11:43.4319374Z with:
+2026-10-14T14:11:43.4319859Z   app-id: ***
+2026-10-14T14:11:43.4327540Z   private-key: ***
+2026-10-14T14:11:43.4327897Z   permission-issues: write
+2026-10-14T14:11:43.4328262Z   skip-token-revoke: false
+2026-10-14T14:11:43.4328635Z   github-api-url: https://api.github.com
+2026-10-14T14:11:43.4329044Z ##[endgroup]
+2026-10-14T14:11:43.5443181Z Inputs 'owner' and 'repositories' are not set. Creating token for this repository (google-gemini/gemini-cli).
+2026-10-14T14:11:44.0005840Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T14:11:44.0006388Z with:
+2026-10-14T14:11:44.0009088Z   github-token: ***
+2026-10-14T14:11:44.0009779Z   script: const syncIssueTypes = require('./.github/scripts/sync-issue-types.cjs');
+await syncIssueTypes({ github, context, core });
+2026-10-14T14:11:44.0010495Z   debug: false
+2026-10-14T14:11:44.0010823Z   user-agent: actions/github-script
+2026-10-14T14:11:44.0011217Z   result-encoding: json
+2026-10-14T14:11:44.0011547Z   retries: 0
+2026-10-14T14:11:44.0011897Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T14:11:44.0012308Z ##[endgroup]
+2026-10-14T14:11:44.7580799Z Synced 0 issues from labels.
+2026-10-14T14:11:44.7591074Z Found 0 issues missing both type and kind label to be analyzed.
+2026-10-14T14:11:44.7864391Z ##[group]Run set -euo pipefail
+2026-10-14T14:11:44.7864882Z [36;1mset -euo pipefail[0m
+2026-10-14T14:11:44.7865333Z [36;1mecho '🔍 Fetching open issues to find conflicts...'[0m
+2026-10-14T14:11:44.7865968Z [36;1m# Fetch up to 2000 open issues in one quick GraphQL-backed query[0m
+2026-10-14T14:11:44.7866843Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" --search "is:issue is:open" --limit 2000 --json number,title,body,labels > all_open_issues.json[0m
+2026-10-14T14:11:44.7867601Z [36;1m[0m
+2026-10-14T14:11:44.7868042Z [36;1mecho '🧹 Filtering issues with multiple area/ or priority/ labels...'[0m
+2026-10-14T14:11:44.7869153Z [36;1mjq -c '[ .[] | select( (.labels | map(select(.name | startswith("area/"))) | length) > 1 or (.labels | map(select(.name | startswith("priority/"))) | length) > 1 ) ] | .[0:50]' all_open_issues.json > conflicting_labels_issues.json[0m
+2026-10-14T14:11:44.7870118Z [36;1m[0m
+2026-10-14T14:11:44.7870552Z [36;1mCONFLICT_COUNT=$(jq 'length' conflicting_labels_issues.json)[0m
+2026-10-14T14:11:44.7871241Z [36;1mecho "Found ${CONFLICT_COUNT} issues with conflicting labels (capped at 50 for processing)."[0m
+2026-10-14T14:11:44.7931509Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:44.7932027Z env:
+2026-10-14T14:11:44.7935104Z   GITHUB_TOKEN: ***
+2026-10-14T14:11:44.7935512Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:44.7935968Z ##[endgroup]
+2026-10-14T14:11:44.8016861Z 🔍 Fetching open issues to find conflicts...
+2026-10-14T14:11:51.7576206Z 🧹 Filtering issues with multiple area/ or priority/ labels...
+2026-10-14T14:11:51.7787938Z Found 4 issues with conflicting labels (capped at 50 for processing).
+2026-10-14T14:11:51.7852667Z ##[group]Run set -euo pipefail
+2026-10-14T14:11:51.7853435Z [36;1mset -euo pipefail[0m
+2026-10-14T14:11:51.7854466Z [36;1m[0m
+2026-10-14T14:11:51.7855084Z [36;1mecho '🔍 Finding issues missing area labels...'[0m
+2026-10-14T14:11:51.7856000Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:11:51.7858402Z [36;1m  --search 'is:open is:issue -label:area/core -label:area/agent -label:area/enterprise -label:area/non-interactive -label:area/security -label:area/platform -label:area/extensions -label:area/documentation -label:area/unknown' --limit 50 --json number,title,body,labels > no_area_issues.json[0m
+2026-10-14T14:11:51.7860820Z [36;1m[0m
+2026-10-14T14:11:51.7861454Z [36;1mecho '🔍 Finding issues missing kind labels...'[0m
+2026-10-14T14:11:51.7862316Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:11:51.7864289Z [36;1m  --search 'is:open is:issue -label:kind/bug -label:kind/enhancement -label:kind/customer-issue -label:kind/question' --limit 50 --json number,title,body,labels > no_kind_issues.json[0m
+2026-10-14T14:11:51.7865922Z [36;1m[0m
+2026-10-14T14:11:51.7866593Z [36;1mecho '🏷️ Finding issues missing priority labels...'[0m
+2026-10-14T14:11:51.7867529Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:11:51.7869389Z [36;1m  --search 'is:open is:issue -label:priority/p0 -label:priority/p1 -label:priority/p2 -label:priority/p3 -label:priority/unknown' --limit 50 --json number,title,body,labels > no_priority_issues.json[0m
+2026-10-14T14:11:51.7871424Z [36;1m[0m
+2026-10-14T14:11:51.7872074Z [36;1mecho '📏 Finding issues missing effort labels...'[0m
+2026-10-14T14:11:51.7872974Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:11:51.7875188Z [36;1m  --search 'is:open is:issue -label:effort/small -label:effort/medium -label:effort/large label:area/core,area/extensions,area/site,area/non-interactive' --limit 20 --json number,title,body,labels > no_effort_issues.json[0m
+2026-10-14T14:11:51.7877053Z [36;1m[0m
+2026-10-14T14:11:51.7877783Z [36;1mecho '🔄 Merging and deduplicating standard triage issues...'[0m
+2026-10-14T14:11:51.7879043Z [36;1mif [ ! -f conflicting_labels_issues.json ]; then echo "[]" > conflicting_labels_issues.json; fi[0m
+2026-10-14T14:11:51.7880857Z [36;1mjq -c -s 'add | unique_by(.number)' no_area_issues.json no_kind_issues.json no_priority_issues.json conflicting_labels_issues.json > standard_issues_to_triage.json[0m
+2026-10-14T14:11:51.7882345Z [36;1m[0m
+2026-10-14T14:11:51.7882952Z [36;1mecho '📏 Deduplicating effort issues...'[0m
+2026-10-14T14:11:51.7884257Z [36;1mjq -c -s 'add | unique_by(.number)' no_effort_issues.json > effort_issues_to_triage.json[0m
+2026-10-14T14:11:51.7885244Z [36;1m[0m
+2026-10-14T14:11:51.7885945Z [36;1mSTANDARD_COUNT="$(jq 'length' standard_issues_to_triage.json)"[0m
+2026-10-14T14:11:51.7886983Z [36;1mEFFORT_COUNT="$(jq 'length' effort_issues_to_triage.json)"[0m
+2026-10-14T14:11:51.7888073Z [36;1mif [ "$STANDARD_COUNT" -gt 0 ] || [ "$EFFORT_COUNT" -gt 0 ]; then[0m
+2026-10-14T14:11:51.7889009Z [36;1m  echo "has_issues=true" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7890206Z [36;1m  echo "has_standard_issues=$([ "$STANDARD_COUNT" -gt 0 ] && echo 'true' || echo 'false')" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7891772Z [36;1m  echo "has_effort_issues=$([ "$EFFORT_COUNT" -gt 0 ] && echo 'true' || echo 'false')" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7892912Z [36;1melse[0m
+2026-10-14T14:11:51.7893571Z [36;1m  echo "has_issues=false" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7894718Z [36;1m  echo "has_standard_issues=false" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7895713Z [36;1m  echo "has_effort_issues=false" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:11:51.7896537Z [36;1mfi[0m
+2026-10-14T14:11:51.7897480Z [36;1mecho "✅ Found ${STANDARD_COUNT} standard issues and ${EFFORT_COUNT} effort issues to triage! 🎯"[0m
+2026-10-14T14:11:51.7973359Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:51.7974111Z env:
+2026-10-14T14:11:51.7976622Z   GITHUB_TOKEN: ***
+2026-10-14T14:11:51.7977013Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:51.7977432Z ##[endgroup]
+2026-10-14T14:11:51.8051983Z 🔍 Finding issues missing area labels...
+2026-10-14T14:11:52.4045799Z 🔍 Finding issues missing kind labels...
+2026-10-14T14:11:53.1951772Z 🏷️ Finding issues missing priority labels...
+2026-10-14T14:11:53.9628032Z 📏 Finding issues missing effort labels...
+2026-10-14T14:11:54.5424558Z 🔄 Merging and deduplicating standard triage issues...
+2026-10-14T14:11:54.5508576Z 📏 Deduplicating effort issues...
+2026-10-14T14:11:54.5611662Z ✅ Found 62 standard issues and 0 effort issues to triage! 🎯
+2026-10-14T14:11:54.5676331Z ##[group]Run cat << 'EOF' > gemini_exp.json
+2026-10-14T14:11:54.5676802Z [36;1mcat << 'EOF' > gemini_exp.json[0m
+2026-10-14T14:11:54.5677183Z [36;1m{[0m
+2026-10-14T14:11:54.5677484Z [36;1m  "flags": [[0m
+2026-10-14T14:11:54.5677800Z [36;1m    {[0m
+2026-10-14T14:11:54.5678108Z [36;1m      "flagId": 45750526,[0m
+2026-10-14T14:11:54.5678481Z [36;1m      "boolValue": false[0m
+2026-10-14T14:11:54.5678833Z [36;1m    }[0m
+2026-10-14T14:11:54.5679132Z [36;1m  ],[0m
+2026-10-14T14:11:54.5679442Z [36;1m  "experimentIds": [][0m
+2026-10-14T14:11:54.5679792Z [36;1m}[0m
+2026-10-14T14:11:54.5680082Z [36;1mEOF[0m
+2026-10-14T14:11:54.5739339Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:54.5739985Z ##[endgroup]
+2026-10-14T14:11:54.5896071Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T14:11:54.5896619Z with:
+2026-10-14T14:11:54.5899080Z   github-token: ***
+2026-10-14T14:11:54.5900442Z   script: const { data: labels } = await github.rest.issues.listLabelsForRepo({
+  owner: context.repo.owner,
+  repo: context.repo.repo,
+});
+const labelNames = labels.map(label => label.name);
+core.setOutput('available_labels', labelNames.join(','));
+core.info(`Found ${labelNames.length} labels: ${labelNames.join(', ')}`);
+return labelNames;
+2026-10-14T14:11:54.5901847Z   debug: false
+2026-10-14T14:11:54.5902182Z   user-agent: actions/github-script
+2026-10-14T14:11:54.5902563Z   result-encoding: json
+2026-10-14T14:11:54.5902895Z   retries: 0
+2026-10-14T14:11:54.5903232Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T14:11:54.5903636Z ##[endgroup]
+2026-10-14T14:11:54.9266598Z Found 30 labels: 1.0/eng-excellence, 1.0/ui-improvements, 1.0/windows-misc, ACP, agent/browser, aiq/agent, aiq/eval_infra, aiq/routing, area/agent, area/cli, area/core, area/documentation, area/enterprise, area/extensions, area/gallery, area/non-interactive, area/platform, area/security, area/site, area/unknown, auto-close, bot-fix, build-succeeded, dependencies, effort/large, effort/medium, effort/small, github_actions, good first issue, help wanted
+2026-10-14T14:11:54.9844493Z ##[group]Run google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T14:11:54.9845116Z with:
+2026-10-14T14:11:54.9845436Z   upload_artifacts: true
+2026-10-14T14:11:54.9846166Z   gcp_workload_identity_provider: projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a
+2026-10-14T14:11:54.9846936Z   gcp_project_id: quacktastic-waffle
+2026-10-14T14:11:54.9847318Z   gcp_location: global
+2026-10-14T14:11:54.9847822Z   gcp_service_account: gemini-cli-29fc077a@quacktastic-waffle.iam.gserviceaccount.com
+2026-10-14T14:11:54.9848507Z   gemini_api_key: ***
+2026-10-14T14:11:54.9849180Z   settings: {
+  "maxSessionTurns": 25,
+  "tools": {
+    "core": [
+      "read_file"
+    ]
+  },
+  "telemetry": {
+    "enabled": false,
+    "target": "gcp"
+  }
+}
+2026-10-14T14:11:54.9876193Z   prompt: ## Role
+
+You are an issue triage assistant. Analyze issues and identify
+appropriate labels. Use the available tools to gather information;
+do not ask for information to be provided.
+
+## Steps
+
+1. You are only able to use the read_file command. Review the available labels in the environment variable: "${AVAILABLE_LABELS}".
+2. Use the read_file tool to read the file "standard_issues_to_triage.json" which contains the JSON array of issues to triage (including their current labels).
+3. Review the issue title, body, current labels, and any comments provided in the JSON file.
+4. Identify the most relevant labels from the existing labels, specifically focusing on area/*, kind/*, and priority/*.
+5. Label Policy:
+   - If the issue already has a kind/ label, do not change it.
+   - If the issue has exactly ONE priority/ label, do not change it (unless you are explicitly re-evaluating an ambiguous priority).
+   - If the issue is missing a priority/ label, OR if the issue currently has MULTIPLE priority/ labels, you must evaluate the issue's impact to determine exactly ONE priority level (priority/p0, priority/p1, priority/p2, priority/p3, or priority/unknown) based the guidelines. If you are fixing an issue with multiple priority/ labels, put the correct one in `labels_to_add` and put all the incorrect ones in `labels_to_remove`.
+   - If the issue has exactly ONE area/ label, do not change it.
+   - If the issue is missing an area/ label, OR if the issue currently has MULTIPLE area/ labels, select exactly ONE area/ label that best fits the issue. Issues MUST NOT have multiple area/ labels. If you are fixing an issue with multiple area/ labels, put the correct one in `labels_to_add` and put all the incorrect ones in `labels_to_remove`.
+   - If any of these are missing, select exactly ONE appropriate label for the missing category.
+6. Identify other applicable labels based on the issue content, such as status/*, help wanted, good first issue, etc.
+7. Give me a single short explanation about why you are selecting each label in the process.
+8. Output a JSON array of objects, each containing the issue number
+   and the labels to add and remove, along with an explanation. For example:
+   ```
+   [
+     {
+       "issue_number": 123,
+       "labels_to_add": ["area/core", "kind/bug", "priority/p2"],
+       "labels_to_remove": ["status/need-triage"],
+       "explanation": "This issue is a UI bug that needs to be addressed with medium priority."
+     }
+   ]
+   ```
+  If an issue cannot be classified, do not include it in the output array.
+9. For each issue, carefully check if the CLI version is present. It is usually found under the "### Client information" header, as a bullet point (e.g., "• CLI Version: 0.33.1", "* **CLI Version:** 0.42.0"), or in the output of the `/about` command.
+  - **Only for issues classified as kind/bug:** If the version is provided but is more than 6 minor versions older than the most recent release (current version is 0.65.0), apply the status/need-information label and leave a comment politely asking the user to verify if the issue persists in the latest version.
+10. **Only for issues classified as kind/bug:** If the issue does not have sufficient information, recommend the status/need-information label and leave a comment politely requesting the missing details. For example, if repro steps are missing, ask for them; if the CLI version is completely missing, ask for the version information in the explanation section below. Do not ask for version info if it is already in the issue body. (Check both bullet points and bold text). For features and enhancements, the CLI version is NOT required.
+11. If you think an issue is a Priority/P0, you MUST apply the priority/p1 label AND the status/manual-triage label, and include a note in your explanation that it likely requires P0 escalation.
+12. If the issue is highly ambiguous, completely lacks a description, or you are torn between two lower priorities (like P2 vs P3), you MUST retain the existing priority label if one is already present. Do not toggle the priority if you do not have enough information to make a definitive change.
+13. If you are uncertain about a category, use the area/unknown, kind/question, or priority/unknown labels as appropriate. If you are extremely uncertain, apply the status/manual-triage label.
+
+## Guidelines
+
+- Output only valid JSON format
+- Do not include any explanation or additional text, just the JSON
+- Only use labels that already exist in the repository.
+  - Do not add comments or modify the issue content.
+  - Do not remove the following labels maintainer, help wanted or good first issue.
+  - Triage only the current issue.
+  - Identify exactly ONE area/ label. Do NOT assign multiple area/ labels to a single issue.
+  - Identify only one kind/ label (Do not apply kind/duplicate or kind/parent-issue)
+  - Identify exactly ONE priority/ label. Do NOT assign multiple priority/ labels to a single issue.
+  - **Do not manually downgrade the priority.** Always assign the true priority based on the guidelines. The system will handle downgrades programmatically if information is missing.
+  - **NEVER mention label names, label removals, or label additions in your `explanation`.** The explanation must be purely written for the user (e.g., "Please provide your CLI version.") without exposing internal triage mechanics (e.g., do NOT say "Removing area/unknown to leave only area/core").
+
+Categorization Guidelines (Priority):
+P0 - Urgent Blocking Issues:
+  - DO NOT APPLY THE priority/p0 LABEL AUTOMATICALLY. Instead apply priority/p1 and status/manual-triage.
+  - Definition: Critical failures breaking core functionality for a large portion of users. Examples: CLI fails to launch globally, core commands (gemini run) crash on valid input, unhandled promise rejections on boot, critical security vulnerability.
+  - Note: You must apply priority/p1 and status/manual-triage instead of priority/p0.
+P1 - Critical but Workable:
+  - Definition: Severe issues without a reasonable workaround, significantly degrading the developer experience but not globally blocking. Examples: Specific tools failing consistently (e.g., `web_search` returns 500s), persistent PTY streaming hangs, memory leaks leading to OOM after short use.
+P2 - Significant Issues:
+  - Definition: Affect some workflows but a clear workaround exists, or non-critical bugs. Examples: Theme flickering, confusing error messages, minor UI misalignment, failing to read deeply nested config files correctly.
+P3 - Minor/Enhancements:
+  - Definition: Trivial bugs, typos, documentation requests, or feature requests.
+
+Categorization Guidelines (Kind):
+kind/bug: The issue is describing an unexpected behavior or failure in the application.
+kind/enhancement: The issue is describing a feature request or an improvement to an existing feature.
+kind/question: The issue is asking a question about how to use the CLI or about a specific feature.
+
+Categorization Guidelines (Area):
+area/agent: The "brain" of the CLI. Core agent logic, model quality, tool/function calling, memory, web search, generated code quality, sub-agents.
+area/core: The fundamental CLI app. UI/UX, installation, OS compatibility, performance, command parsing, theming, flickering.
+area/documentation: Website docs, READMEs, inline help text.
+area/enterprise: Telemetry, Policy, Quota / Licensing
+area/extensions: Gemini CLI extensions capability
+area/non-interactive: GitHub Actions, SDK, 3P Integrations, Shell Scripting, Command line automation
+area/platform: Platform specific behavior
+area/security: Authentication, authorization, privacy, data leaks, credential storage.
+2026-10-14T14:11:54.9903215Z   gcp_token_format: access_token
+2026-10-14T14:11:54.9904269Z   gcp_access_token_scopes: https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/userinfo.profile
+2026-10-14T14:11:54.9905164Z   gemini_cli_version: latest
+2026-10-14T14:11:54.9905524Z   use_pnpm: false
+2026-10-14T14:11:54.9905872Z   workflow_name: 📋 Gemini Scheduled Issue Triage
+2026-10-14T14:11:54.9906278Z env:
+2026-10-14T14:11:54.9906568Z   GITHUB_TOKEN: 
+2026-10-14T14:11:54.9906895Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:54.9908726Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:54.9910533Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:54.9910870Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:54.9911246Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:54.9911607Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:54.9912005Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:54.9912376Z ##[endgroup]
+2026-10-14T14:11:54.9980547Z ##[start-action display=Validate Inputs;id=gemini_standard_issue_analysis.validate_inputs]
+2026-10-14T14:11:55.0008496Z ##[group]Run set -exuo pipefail
+2026-10-14T14:11:55.0008942Z [36;1mset -exuo pipefail[0m
+2026-10-14T14:11:55.0009289Z [36;1m[0m
+2026-10-14T14:11:55.0009709Z [36;1m# Emit a clear warning in three places without failing the step[0m
+2026-10-14T14:11:55.0010184Z [36;1mwarn() {[0m
+2026-10-14T14:11:55.0010495Z [36;1m  local msg="$1"[0m
+2026-10-14T14:11:55.0010836Z [36;1m  echo "WARNING: ${msg}" >&2[0m
+2026-10-14T14:11:55.0011278Z [36;1m  echo "::warning title=Input validation::${msg}"[0m
+2026-10-14T14:11:55.0011753Z [36;1m  if [[ -n "${GITHUB_STEP_SUMMARY:-}" ]]; then[0m
+2026-10-14T14:11:55.0012164Z [36;1m    {[0m
+2026-10-14T14:11:55.0012502Z [36;1m      echo "### Input validation warnings"[0m
+2026-10-14T14:11:55.0012908Z [36;1m      echo[0m
+2026-10-14T14:11:55.0013394Z [36;1m      echo "- ${msg}"[0m
+2026-10-14T14:11:55.0013973Z [36;1m    } >> "${GITHUB_STEP_SUMMARY}"[0m
+2026-10-14T14:11:55.0014362Z [36;1m  fi[0m
+2026-10-14T14:11:55.0014649Z [36;1m}[0m
+2026-10-14T14:11:55.0014933Z [36;1m[0m
+2026-10-14T14:11:55.0015279Z [36;1m# Validate the count of authentication methods[0m
+2026-10-14T14:11:55.0015717Z [36;1mauth_methods=0[0m
+2026-10-14T14:11:55.0016224Z [36;1mif [[ "${INPUT_GEMINI_API_KEY_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T14:11:55.0016944Z [36;1mif [[ "${INPUT_GOOGLE_API_KEY_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T14:11:55.0017715Z [36;1mif [[ "${INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T14:11:55.0018316Z [36;1m[0m
+2026-10-14T14:11:55.0018636Z [36;1mif [[ ${auth_methods} -eq 0 ]]; then[0m
+2026-10-14T14:11:55.0019398Z [36;1m  warn "No authentication method provided. Please provide one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'."[0m
+2026-10-14T14:11:55.0020128Z [36;1mfi[0m
+2026-10-14T14:11:55.0020418Z [36;1m[0m
+2026-10-14T14:11:55.0020740Z [36;1mif [[ ${auth_methods} -gt 1 ]]; then[0m
+2026-10-14T14:11:55.0021642Z [36;1m  warn "Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'."[0m
+2026-10-14T14:11:55.0022395Z [36;1mfi[0m
+2026-10-14T14:11:55.0022679Z [36;1m[0m
+2026-10-14T14:11:55.0023033Z [36;1m# Validate Workload Identity Federation inputs[0m
+2026-10-14T14:11:55.0023623Z [36;1mif [[ "${INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T14:11:55.0024403Z [36;1m  if [[ "${INPUT_GCP_PROJECT_ID_PRESENT:-false}" != "true" ]]; then[0m
+2026-10-14T14:11:55.0025194Z [36;1m    warn "When using Workload Identity Federation ('gcp_workload_identity_provider'), you must also provide 'gcp_project_id'."[0m
+2026-10-14T14:11:55.0025888Z [36;1m  fi[0m
+2026-10-14T14:11:55.0026332Z [36;1m  # Service account is required when using token_format (default behavior)[0m
+2026-10-14T14:11:55.0026951Z [36;1m  # Only optional when explicitly set to empty for direct WIF[0m
+2026-10-14T14:11:55.0027704Z [36;1m  if [[ "${INPUT_GCP_TOKEN_FORMAT}" != "" && "${INPUT_GCP_SERVICE_ACCOUNT_PRESENT:-false}" != "true" ]]; then[0m
+2026-10-14T14:11:55.0029011Z [36;1m    warn "When using Workload Identity Federation with token generation ('gcp_token_format'), you must also provide 'gcp_service_account'. To use direct WIF without a service account, explicitly set 'gcp_token_format' to an empty string."[0m
+2026-10-14T14:11:55.0030068Z [36;1m  fi[0m
+2026-10-14T14:11:55.0030539Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" == "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" ]]; then[0m
+2026-10-14T14:11:55.0031409Z [36;1m    warn "When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'."[0m
+2026-10-14T14:11:55.0032104Z [36;1m  fi[0m
+2026-10-14T14:11:55.0032407Z [36;1mfi[0m
+2026-10-14T14:11:55.0032699Z [36;1m[0m
+2026-10-14T14:11:55.0033001Z [36;1m# Validate Vertex AI API Key[0m
+2026-10-14T14:11:55.0033489Z [36;1mif [[ "${INPUT_GOOGLE_API_KEY_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T14:11:55.0034171Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" != "true" ]]; then[0m
+2026-10-14T14:11:55.0034765Z [36;1m    warn "When using 'google_api_key', you must set 'use_vertex_ai' to 'true'."[0m
+2026-10-14T14:11:55.0035278Z [36;1m  fi[0m
+2026-10-14T14:11:55.0035684Z [36;1m  if [[ "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" == "true" ]]; then[0m
+2026-10-14T14:11:55.0036298Z [36;1m    warn "When using 'google_api_key', 'use_gemini_code_assist' cannot be 'true'."[0m
+2026-10-14T14:11:55.0036832Z [36;1m  fi[0m
+2026-10-14T14:11:55.0037120Z [36;1mfi[0m
+2026-10-14T14:11:55.0037413Z [36;1m[0m
+2026-10-14T14:11:55.0037713Z [36;1m# Validate Gemini API Key[0m
+2026-10-14T14:11:55.0038184Z [36;1mif [[ "${INPUT_GEMINI_API_KEY_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T14:11:55.0039005Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" == "true" || "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" == "true" ]]; then[0m
+2026-10-14T14:11:55.0039825Z [36;1m    warn "When using 'gemini_api_key', both 'use_vertex_ai' and 'use_gemini_code_assist' must be 'false'."[0m
+2026-10-14T14:11:55.0040415Z [36;1m  fi[0m
+2026-10-14T14:11:55.0040698Z [36;1mfi[0m
+2026-10-14T14:11:55.0099367Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:55.0099828Z env:
+2026-10-14T14:11:55.0100133Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.0100468Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.0102292Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.0104245Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.0104626Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.0105004Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.0105371Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.0106028Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.0106444Z   INPUT_GEMINI_API_KEY_PRESENT: true
+2026-10-14T14:11:55.0106840Z   INPUT_GOOGLE_API_KEY_PRESENT: false
+2026-10-14T14:11:55.0107277Z   INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT: true
+2026-10-14T14:11:55.0107714Z   INPUT_GCP_PROJECT_ID_PRESENT: true
+2026-10-14T14:11:55.0108114Z   INPUT_GCP_SERVICE_ACCOUNT_PRESENT: true
+2026-10-14T14:11:55.0108522Z   INPUT_GCP_TOKEN_FORMAT: access_token
+2026-10-14T14:11:55.0108896Z   INPUT_USE_VERTEX_AI: 
+2026-10-14T14:11:55.0109235Z   INPUT_USE_GEMINI_CODE_ASSIST: 
+2026-10-14T14:11:55.0109585Z ##[endgroup]
+2026-10-14T14:11:55.0209538Z + auth_methods=0
+2026-10-14T14:11:55.0210395Z + [[ true == \t\r\u\e ]]
+2026-10-14T14:11:55.0211073Z + (( ++auth_methods ))
+2026-10-14T14:11:55.0211709Z + [[ false == \t\r\u\e ]]
+2026-10-14T14:11:55.0212351Z + [[ true == \t\r\u\e ]]
+2026-10-14T14:11:55.0213058Z + (( ++auth_methods ))
+2026-10-14T14:11:55.0213953Z + [[ 2 -eq 0 ]]
+2026-10-14T14:11:55.0214623Z + [[ 2 -gt 1 ]]
+2026-10-14T14:11:55.0215935Z + warn 'Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T14:11:55.0218066Z + local 'msg=Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T14:11:55.0220125Z + echo 'WARNING: Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T14:11:55.0221380Z WARNING: Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'.
+2026-10-14T14:11:55.0226077Z + echo '::warning title=Input validation::Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T14:11:55.0227253Z + [[ -n /home/runner/work/_temp/_runner_file_commands/step_summary_c36ae042-5108-48d8-bb43-03d783375bae ]]
+2026-10-14T14:11:55.0227875Z + echo '### Input validation warnings'
+2026-10-14T14:11:55.0228250Z + echo
+2026-10-14T14:11:55.0228965Z + echo '- Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T14:11:55.0229744Z + [[ true == \t\r\u\e ]]
+2026-10-14T14:11:55.0230071Z + [[ true != \t\r\u\e ]]
+2026-10-14T14:11:55.0230391Z + [[ access_token != '' ]]
+2026-10-14T14:11:55.0230724Z + [[ true != \t\r\u\e ]]
+2026-10-14T14:11:55.0231272Z + [[ false == \f\a\l\s\e ]]
+2026-10-14T14:11:55.0231975Z + warn 'When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T14:11:55.0233062Z + local 'msg=When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T14:11:55.0235157Z + echo 'WARNING: When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T14:11:55.0236399Z WARNING: When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'.
+2026-10-14T14:11:55.0237569Z + echo '::warning title=Input validation::When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T14:11:55.0238646Z + [[ -n /home/runner/work/_temp/_runner_file_commands/step_summary_c36ae042-5108-48d8-bb43-03d783375bae ]]
+2026-10-14T14:11:55.0239272Z + echo '### Input validation warnings'
+2026-10-14T14:11:55.0239649Z + echo
+2026-10-14T14:11:55.0240328Z + echo '- When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T14:11:55.0241204Z + [[ false == \t\r\u\e ]]
+2026-10-14T14:11:55.0241544Z + [[ true == \t\r\u\e ]]
+2026-10-14T14:11:55.0241863Z + [[ false == \t\r\u\e ]]
+2026-10-14T14:11:55.0242186Z + [[ false == \t\r\u\e ]]
+2026-10-14T14:11:55.0259137Z ##[warning]Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'.
+2026-10-14T14:11:55.0261598Z ##[warning]When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'.
+2026-10-14T14:11:55.0282186Z ##[end-action id=gemini_standard_issue_analysis.validate_inputs;outcome=success;conclusion=success;duration_ms=30]
+2026-10-14T14:11:55.0286588Z ##[start-action display=Sanitize workflow name;id=gemini_standard_issue_analysis.sanitize_workflow_name]
+2026-10-14T14:11:55.0305912Z ##[group]Run SANITIZED=$(echo "${WORKFLOW_NAME}" | sed 's/[^ a-zA-Z0-9-]//g' | xargs | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
+2026-10-14T14:11:55.0306799Z [36;1mSANITIZED=$(echo "${WORKFLOW_NAME}" | sed 's/[^ a-zA-Z0-9-]//g' | xargs | tr ' ' '_' | tr '[:upper:]' '[:lower:]')[0m
+2026-10-14T14:11:55.0307497Z [36;1mecho "gh_workflow_name=$SANITIZED" >> $GITHUB_OUTPUT[0m
+2026-10-14T14:11:55.0362624Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:55.0363076Z env:
+2026-10-14T14:11:55.0363366Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.0363927Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.0365817Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.0367662Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.0368004Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.0368381Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.0368751Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.0369145Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.0369555Z   WORKFLOW_NAME: 📋 Gemini Scheduled Issue Triage
+2026-10-14T14:11:55.0369968Z ##[endgroup]
+2026-10-14T14:11:55.0489064Z ##[end-action id=gemini_standard_issue_analysis.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=20]
+2026-10-14T14:11:55.0492459Z ##[start-action display=Configure Gemini CLI;id=gemini_standard_issue_analysis.__run]
+2026-10-14T14:11:55.0514302Z ##[group]Run mkdir -p .gemini/
+2026-10-14T14:11:55.0514894Z [36;1mmkdir -p .gemini/[0m
+2026-10-14T14:11:55.0515298Z [36;1mecho "${SETTINGS}" > ".gemini/settings.json"[0m
+2026-10-14T14:11:55.0570858Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:55.0571334Z env:
+2026-10-14T14:11:55.0571625Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.0571964Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.0574258Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.0576130Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.0576476Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.0576860Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.0577234Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.0577638Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.0578340Z   SETTINGS: {
+  "maxSessionTurns": 25,
+  "tools": {
+    "core": [
+      "read_file"
+    ]
+  },
+  "telemetry": {
+    "enabled": false,
+    "target": "gcp"
+  }
+}
+2026-10-14T14:11:55.0579030Z ##[endgroup]
+2026-10-14T14:11:55.0674567Z ##[end-action id=gemini_standard_issue_analysis.__run;outcome=success;conclusion=success;duration_ms=18]
+2026-10-14T14:11:55.0677934Z ##[start-action display=Install Custom Commands;id=gemini_standard_issue_analysis.__run_2]
+2026-10-14T14:11:55.0705030Z ##[group]Run set -euo pipefail
+2026-10-14T14:11:55.0705418Z [36;1mset -euo pipefail[0m
+2026-10-14T14:11:55.0705784Z [36;1mmkdir -p .gemini/commands[0m
+2026-10-14T14:11:55.0706287Z [36;1mcp -r "${GITHUB_ACTION_PATH}/.github/commands/"* .gemini/commands/[0m
+2026-10-14T14:11:55.0760440Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:55.0760901Z env:
+2026-10-14T14:11:55.0761213Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.0761550Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.0763382Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.0765477Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.0765823Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.0766204Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.0766578Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.0766979Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.0767690Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/google-github-actions/run-gemini-cli/f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T14:11:55.0768401Z ##[endgroup]
+2026-10-14T14:11:55.0876460Z ##[end-action id=gemini_standard_issue_analysis.__run_2;outcome=success;conclusion=success;duration_ms=19]
+2026-10-14T14:11:55.0879277Z ##[start-action display=Authenticate to Google Cloud;id=gemini_standard_issue_analysis.auth]
+2026-10-14T14:11:55.0942603Z ##[group]Run google-github-actions/auth@v3
+2026-10-14T14:11:55.0943016Z with:
+2026-10-14T14:11:55.0943340Z   project_id: quacktastic-waffle
+2026-10-14T14:11:55.0944404Z   workload_identity_provider: projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a
+2026-10-14T14:11:55.0945299Z   service_account: gemini-cli-29fc077a@quacktastic-waffle.iam.gserviceaccount.com
+2026-10-14T14:11:55.0945843Z   token_format: access_token
+2026-10-14T14:11:55.0946714Z   access_token_scopes: https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/userinfo.profile
+2026-10-14T14:11:55.0947583Z   create_credentials_file: true
+2026-10-14T14:11:55.0948165Z   export_environment_variables: true
+2026-10-14T14:11:55.0948548Z   universe: googleapis.com
+2026-10-14T14:11:55.0948897Z   cleanup_credentials: true
+2026-10-14T14:11:55.0949244Z   access_token_lifetime: 3600s
+2026-10-14T14:11:55.0949593Z   id_token_include_email: false
+2026-10-14T14:11:55.0949933Z env:
+2026-10-14T14:11:55.0950226Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.0950562Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.0952385Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.0972873Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.0973297Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.0973957Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.0974388Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.0974796Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.0975178Z ##[endgroup]
+2026-10-14T14:11:55.2922038Z Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json"
+2026-10-14T14:11:55.4850620Z ##[end-action id=gemini_standard_issue_analysis.auth;outcome=success;conclusion=success;duration_ms=397]
+2026-10-14T14:11:55.4854737Z ##[start-action display=Install pnpm;id=gemini_standard_issue_analysis.__pnpm_action-setup]
+2026-10-14T14:11:55.4861538Z ##[end-action id=gemini_standard_issue_analysis.__pnpm_action-setup;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-14T14:11:55.4866042Z ##[start-action display=Install Gemini CLI;id=gemini_standard_issue_analysis.install]
+2026-10-14T14:11:55.4887917Z ##[group]Run set -euo pipefail
+2026-10-14T14:11:55.4888339Z [36;1mset -euo pipefail[0m
+2026-10-14T14:11:55.4888715Z [36;1m[0m
+2026-10-14T14:11:55.4889073Z [36;1mVERSION_INPUT="${GEMINI_CLI_VERSION:-latest}"[0m
+2026-10-14T14:11:55.4889507Z [36;1m[0m
+2026-10-14T14:11:55.4890293Z [36;1mif [[ "${VERSION_INPUT}" == "latest" || "${VERSION_INPUT}" == "preview" || "${VERSION_INPUT}" == "nightly" || "${VERSION_INPUT}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9\.-]+)?(\+[a-zA-Z0-9\.-]+)?$ ]]; then[0m
+2026-10-14T14:11:55.4891285Z [36;1m  echo "Installing Gemini CLI from npm: @google/gemini-cli@${VERSION_INPUT}"[0m
+2026-10-14T14:11:55.4891855Z [36;1m  if [[ "${USE_PNPM}" == "true" ]]; then[0m
+2026-10-14T14:11:55.4892385Z [36;1m    pnpm add --silent --global @google/gemini-cli@"${VERSION_INPUT}"[0m
+2026-10-14T14:11:55.4892873Z [36;1m  else[0m
+2026-10-14T14:11:55.4893419Z [36;1m    npm install --silent --no-audit --prefer-offline --global @google/gemini-cli@"${VERSION_INPUT}"[0m
+2026-10-14T14:11:55.4894392Z [36;1m  fi[0m
+2026-10-14T14:11:55.4894698Z [36;1melse[0m
+2026-10-14T14:11:55.4895233Z [36;1m  echo "Installing Gemini CLI from GitHub: github:google-gemini/gemini-cli#${VERSION_INPUT}"[0m
+2026-10-14T14:11:55.4895946Z [36;1m  git clone https://github.com/google-gemini/gemini-cli.git[0m
+2026-10-14T14:11:55.4896433Z [36;1m  cd gemini-cli[0m
+2026-10-14T14:11:55.4896807Z [36;1m  git checkout "${VERSION_INPUT}"[0m
+2026-10-14T14:11:55.4897220Z [36;1m  npm install[0m
+2026-10-14T14:11:55.4897555Z [36;1m  npm run bundle[0m
+2026-10-14T14:11:55.4898010Z [36;1m  npm install --silent --no-audit --prefer-offline --global .[0m
+2026-10-14T14:11:55.4898500Z [36;1mfi[0m
+2026-10-14T14:11:55.4898829Z [36;1mecho "Verifying installation:"[0m
+2026-10-14T14:11:55.4899271Z [36;1mif command -v gemini >/dev/null 2>&1; then[0m
+2026-10-14T14:11:55.4899906Z [36;1m  gemini --version || echo "Gemini CLI installed successfully (version command not available)"[0m
+2026-10-14T14:11:55.4900506Z [36;1melse[0m
+2026-10-14T14:11:55.4900870Z [36;1m  echo "Error: Gemini CLI not found in PATH"[0m
+2026-10-14T14:11:55.4901543Z [36;1m  exit 1[0m
+2026-10-14T14:11:55.4901853Z [36;1mfi[0m
+2026-10-14T14:11:55.4902181Z [36;1mif [[ -n "${EXTENSIONS}" ]]; then[0m
+2026-10-14T14:11:55.4902612Z [36;1m  echo "Installing Gemini CLI extensions:"[0m
+2026-10-14T14:11:55.4903146Z [36;1m  echo "${EXTENSIONS}" | jq -r '.[]' | while IFS= read -r extension; do[0m
+2026-10-14T14:11:55.4903986Z [36;1m    extension=$(echo "${extension}" | xargs)[0m
+2026-10-14T14:11:55.4904479Z [36;1m    if [[ -n "${extension}" ]]; then[0m
+2026-10-14T14:11:55.4904907Z [36;1m      echo "Installing ${extension}..."[0m
+2026-10-14T14:11:55.4905389Z [36;1m      echo "Y" | gemini extensions install "${extension}"[0m
+2026-10-14T14:11:55.4905831Z [36;1m    fi[0m
+2026-10-14T14:11:55.4906139Z [36;1m  done[0m
+2026-10-14T14:11:55.4906437Z [36;1mfi[0m
+2026-10-14T14:11:55.4965825Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:11:55.4966300Z env:
+2026-10-14T14:11:55.4966882Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:11:55.4967806Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:11:55.4968634Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:11:55.4969421Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:11:55.4969854Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:11:55.4970262Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:11:55.4970664Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:11:55.4971067Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:11:55.4971464Z   GITHUB_TOKEN: 
+2026-10-14T14:11:55.4971807Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:11:55.4973638Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:11:55.4975828Z   CLI_VERSION: 0.65.0
+2026-10-14T14:11:55.4976179Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:11:55.4976567Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:11:55.4976940Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:11:55.4977353Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:11:55.4977743Z   GEMINI_CLI_VERSION: latest
+2026-10-14T14:11:55.4978095Z   EXTENSIONS: 
+2026-10-14T14:11:55.4978403Z   USE_PNPM: false
+2026-10-14T14:11:55.4978722Z   SURFACE: GitHub
+2026-10-14T14:11:55.4979067Z   GH_WORKFLOW_NAME: gemini_scheduled_issue_triage
+2026-10-14T14:11:55.4979475Z   GH_PR_NUMBER: 
+2026-10-14T14:11:55.4979785Z   GH_ISSUE_NUMBER: 
+2026-10-14T14:11:55.4980098Z ##[endgroup]
+2026-10-14T14:11:55.5061571Z Installing Gemini CLI from npm: @google/gemini-cli@latest
+2026-10-14T14:12:05.1999459Z Verifying installation:
+2026-10-14T14:12:06.7010948Z 0.64.0
+2026-10-14T14:12:06.7249189Z ##[end-action id=gemini_standard_issue_analysis.install;outcome=success;conclusion=success;duration_ms=11238]
+2026-10-14T14:12:06.7264319Z ##[start-action display=Run Gemini CLI;id=gemini_standard_issue_analysis.gemini_run]
+2026-10-14T14:12:06.7287229Z ##[group]Run set -euo pipefail
+2026-10-14T14:12:06.7287703Z [36;1mset -euo pipefail[0m
+2026-10-14T14:12:06.7288057Z [36;1m[0m
+2026-10-14T14:12:06.7288505Z [36;1m# Create a temporary directory for storing the output, and ensure it's[0m
+2026-10-14T14:12:06.7289037Z [36;1m# cleaned up later[0m
+2026-10-14T14:12:06.7289510Z [36;1mTEMP_STDOUT="$(mktemp -p "${RUNNER_TEMP}" gemini-out.XXXXXXXXXX)"[0m
+2026-10-14T14:12:06.7290117Z [36;1mTEMP_STDERR="$(mktemp -p "${RUNNER_TEMP}" gemini-err.XXXXXXXXXX)"[0m
+2026-10-14T14:12:06.7290616Z [36;1mfunction cleanup {[0m
+2026-10-14T14:12:06.7291007Z [36;1m  rm -f "${TEMP_STDOUT}" "${TEMP_STDERR}"[0m
+2026-10-14T14:12:06.7291592Z [36;1m}[0m
+2026-10-14T14:12:06.7291907Z [36;1mtrap cleanup EXIT[0m
+2026-10-14T14:12:06.7292245Z [36;1m[0m
+2026-10-14T14:12:06.7292576Z [36;1m# Keep track of whether we've failed[0m
+2026-10-14T14:12:06.7292981Z [36;1mFAILED=false[0m
+2026-10-14T14:12:06.7293300Z [36;1m[0m
+2026-10-14T14:12:06.7293996Z [36;1m# Run Gemini CLI with the provided prompt, using JSON output format[0m
+2026-10-14T14:12:06.7294665Z [36;1m# We capture stdout (JSON) to TEMP_STDOUT and stderr to TEMP_STDERR[0m
+2026-10-14T14:12:06.7295194Z [36;1mif [[ "${GEMINI_DEBUG}" = true ]]; then[0m
+2026-10-14T14:12:06.7296053Z [36;1m  echo "::warning::Gemini CLI debug logging is enabled. This will stream responses, which could reveal sensitive information if processed with untrusted inputs."[0m
+2026-10-14T14:12:06.7296909Z [36;1m  echo "::: Start Gemini CLI STDOUT :::"[0m
+2026-10-14T14:12:06.7297635Z [36;1m  if ! gemini --debug --yolo --prompt "${PROMPT}" --output-format json 2> >(tee "${TEMP_STDERR}" >&2) | tee "${TEMP_STDOUT}"; then[0m
+2026-10-14T14:12:06.7298345Z [36;1m    FAILED=true[0m
+2026-10-14T14:12:06.7298683Z [36;1m  fi[0m
+2026-10-14T14:12:06.7299374Z [36;1m  # Wait for async stderr logging to complete. This is because process substitution in Bash is async so let tee finish writing to ${TEMP_STDERR}[0m
+2026-10-14T14:12:06.7300259Z [36;1m  sleep 1[0m
+2026-10-14T14:12:06.7300622Z [36;1m  echo "::: End Gemini CLI STDOUT :::"[0m
+2026-10-14T14:12:06.7301029Z [36;1melse[0m
+2026-10-14T14:12:06.7301581Z [36;1m  if ! gemini --yolo --prompt "${PROMPT}" --output-format json 2> "${TEMP_STDERR}" 1> "${TEMP_STDOUT}"; then[0m
+2026-10-14T14:12:06.7302208Z [36;1m    FAILED=true[0m
+2026-10-14T14:12:06.7302537Z [36;1m  fi[0m
+2026-10-14T14:12:06.7302833Z [36;1mfi[0m
+2026-10-14T14:12:06.7303131Z [36;1m[0m
+2026-10-14T14:12:06.7303495Z [36;1m# Create the artifacts directory and copy full logs[0m
+2026-10-14T14:12:06.7304311Z [36;1mmkdir -p gemini-artifacts[0m
+2026-10-14T14:12:06.7304763Z [36;1mcp "${TEMP_STDOUT}" gemini-artifacts/stdout.log[0m
+2026-10-14T14:12:06.7305257Z [36;1mcp "${TEMP_STDERR}" gemini-artifacts/stderr.log[0m
+2026-10-14T14:12:06.7305728Z [36;1mif [[ -f .gemini/telemetry.log ]]; then[0m
+2026-10-14T14:12:06.7306243Z [36;1m  cp .gemini/telemetry.log gemini-artifacts/telemetry.log[0m
+2026-10-14T14:12:06.7306707Z [36;1melse[0m
+2026-10-14T14:12:06.7307191Z [36;1m  # Create an empty file so the artifact upload doesn't fail if telemetry is missing[0m
+2026-10-14T14:12:06.7307776Z [36;1m  touch gemini-artifacts/telemetry.log[0m
+2026-10-14T14:12:06.7308190Z [36;1mfi[0m
+2026-10-14T14:12:06.7308491Z [36;1m[0m
+2026-10-14T14:12:06.7308854Z [36;1m# Parse JSON output to extract response and errors[0m
+2026-10-14T14:12:06.7309495Z [36;1m# If output is not valid JSON, RESPONSE will be empty and we'll rely on stderr for errors[0m
+2026-10-14T14:12:06.7310070Z [36;1mRESPONSE=""[0m
+2026-10-14T14:12:06.7310403Z [36;1mERROR_JSON=""[0m
+2026-10-14T14:12:06.7310799Z [36;1mif jq -e . "${TEMP_STDOUT}" >/dev/null 2>&1; then[0m
+2026-10-14T14:12:06.7311354Z [36;1m   RESPONSE=$(jq -r '.response // ""' "${TEMP_STDOUT}")[0m
+2026-10-14T14:12:06.7311802Z [36;1mfi[0m
+2026-10-14T14:12:06.7312159Z [36;1mif jq -e . "${TEMP_STDERR}" >/dev/null 2>&1; then[0m
+2026-10-14T14:12:06.7312681Z [36;1m   ERROR_JSON=$(jq -c '.error // empty' "${TEMP_STDERR}")[0m
+2026-10-14T14:12:06.7313131Z [36;1mfi[0m
+2026-10-14T14:12:06.7313426Z [36;1m[0m
+2026-10-14T14:12:06.7314101Z [36;1mif { [[ -s "${TEMP_STDERR}" ]] && ! jq -e . "${TEMP_STDERR}" >/dev/null 2>&1; }; then[0m
+2026-10-14T14:12:06.7314709Z [36;1m  echo "::warning::Gemini CLI stderr was not valid JSON"[0m
+2026-10-14T14:12:06.7315167Z [36;1mfi[0m
+2026-10-14T14:12:06.7315459Z [36;1m[0m
+2026-10-14T14:12:06.7315890Z [36;1mif { [[ -s "${TEMP_STDOUT}" ]] && ! jq -e . "${TEMP_STDOUT}" >/dev/null 2>&1; }; then[0m
+2026-10-14T14:12:06.7316473Z [36;1m  echo "::warning::Gemini CLI stdout was not valid JSON"[0m
+2026-10-14T14:12:06.7316916Z [36;1mfi[0m
+2026-10-14T14:12:06.7317356Z [36;1m[0m
+2026-10-14T14:12:06.7317651Z [36;1m[0m
+2026-10-14T14:12:06.7318066Z [36;1m# Set the captured response as a step output, supporting multiline[0m
+2026-10-14T14:12:06.7318628Z [36;1mecho "gemini_response<<EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7319087Z [36;1mif [[ -n "${RESPONSE}" ]]; then[0m
+2026-10-14T14:12:06.7319523Z [36;1m  echo "${RESPONSE}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7319939Z [36;1melse[0m
+2026-10-14T14:12:06.7320283Z [36;1m  cat "${TEMP_STDOUT}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7320690Z [36;1mfi[0m
+2026-10-14T14:12:06.7321011Z [36;1mecho "EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7321392Z [36;1m[0m
+2026-10-14T14:12:06.7321796Z [36;1m# Set the captured errors as a step output, supporting multiline[0m
+2026-10-14T14:12:06.7322345Z [36;1mecho "gemini_errors<<EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7322794Z [36;1mif [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T14:12:06.7323232Z [36;1m  echo "${ERROR_JSON}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7323634Z [36;1melse[0m
+2026-10-14T14:12:06.7324254Z [36;1m  cat "${TEMP_STDERR}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7324678Z [36;1mfi[0m
+2026-10-14T14:12:06.7324999Z [36;1mecho "EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T14:12:06.7325392Z [36;1m[0m
+2026-10-14T14:12:06.7325824Z [36;1m# Generate Job Summary[0m
+2026-10-14T14:12:06.7326244Z [36;1mif [[ -n "${GITHUB_STEP_SUMMARY:-}" ]]; then[0m
+2026-10-14T14:12:06.7326655Z [36;1m  {[0m
+2026-10-14T14:12:06.7326984Z [36;1m    echo "### Gemini CLI Execution"[0m
+2026-10-14T14:12:06.7327373Z [36;1m    echo[0m
+2026-10-14T14:12:06.7327700Z [36;1m    echo "#### Prompt"[0m
+2026-10-14T14:12:06.7328050Z [36;1m    echo[0m
+2026-10-14T14:12:06.7328363Z [36;1m    echo "\`\`\`"[0m
+2026-10-14T14:12:06.7328716Z [36;1m    echo "${PROMPT}"[0m
+2026-10-14T14:12:06.7329058Z [36;1m    echo "\`\`\`"[0m
+2026-10-14T14:12:06.7329397Z [36;1m    echo[0m
+2026-10-14T14:12:06.7329736Z [36;1m    if [[ -n "${RESPONSE}" ]]; then[0m
+2026-10-14T14:12:06.7330141Z [36;1m       echo "#### Response"[0m
+2026-10-14T14:12:06.7330514Z [36;1m       echo[0m
+2026-10-14T14:12:06.7330839Z [36;1m       echo "${RESPONSE}"[0m
+2026-10-14T14:12:06.7331202Z [36;1m       echo[0m
+2026-10-14T14:12:06.7331513Z [36;1m    fi[0m
+2026-10-14T14:12:06.7331847Z [36;1m    if [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T14:12:06.7332254Z [36;1m       echo "#### Error"[0m
+2026-10-14T14:12:06.7332610Z [36;1m       echo[0m
+2026-10-14T14:12:06.7332931Z [36;1m       echo "\`\`\`json"[0m
+2026-10-14T14:12:06.7333296Z [36;1m       echo "${ERROR_JSON}"[0m
+2026-10-14T14:12:06.7333666Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T14:12:06.7334134Z [36;1m       echo[0m
+2026-10-14T14:12:06.7334482Z [36;1m    elif [[ "${FAILED}" == "true" ]]; then[0m
+2026-10-14T14:12:06.7334933Z [36;1m       echo "#### Error Output"[0m
+2026-10-14T14:12:06.7335318Z [36;1m       echo[0m
+2026-10-14T14:12:06.7353688Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T14:12:06.7354470Z [36;1m       cat "${TEMP_STDERR}"[0m
+2026-10-14T14:12:06.7355024Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T14:12:06.7355410Z [36;1m       echo[0m
+2026-10-14T14:12:06.7355745Z [36;1m    fi[0m
+2026-10-14T14:12:06.7356086Z [36;1m  } >> "${GITHUB_STEP_SUMMARY}"[0m
+2026-10-14T14:12:06.7356493Z [36;1mfi[0m
+2026-10-14T14:12:06.7356802Z [36;1m[0m
+2026-10-14T14:12:06.7357132Z [36;1mif [[ "${FAILED}" = true ]]; then[0m
+2026-10-14T14:12:06.7357668Z [36;1m  # If we have a structured error from JSON, use it for the error message[0m
+2026-10-14T14:12:06.7358209Z [36;1m  if [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T14:12:06.7358694Z [36;1m     ERROR_MSG=$(jq -r '.message // .' <<< "${ERROR_JSON}")[0m
+2026-10-14T14:12:06.7359262Z [36;1m     echo "::error title=Gemini CLI execution failed::${ERROR_MSG}"[0m
+2026-10-14T14:12:06.7359740Z [36;1m  fi[0m
+2026-10-14T14:12:06.7360089Z [36;1m  echo "::: Start Gemini CLI STDERR :::"[0m
+2026-10-14T14:12:06.7360695Z [36;1m  cat "${TEMP_STDERR}"[0m
+2026-10-14T14:12:06.7361088Z [36;1m  echo "::: End Gemini CLI STDERR :::"[0m
+2026-10-14T14:12:06.7361486Z [36;1m  exit 1[0m
+2026-10-14T14:12:06.7361818Z [36;1mfi[0m
+2026-10-14T14:12:06.7420789Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:12:06.7421251Z env:
+2026-10-14T14:12:06.7421844Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:12:06.7422742Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:12:06.7423546Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:12:06.7424470Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:12:06.7424903Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:12:06.7425308Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:12:06.7425710Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:12:06.7426114Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:12:06.7426500Z   GITHUB_TOKEN: 
+2026-10-14T14:12:06.7426835Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:12:06.7428792Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:12:06.7430620Z   CLI_VERSION: 0.65.0
+2026-10-14T14:12:06.7430956Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:12:06.7431334Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:12:06.7431696Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:12:06.7432070Z   GEMINI_MODEL: 
+2026-10-14T14:12:06.7432377Z   GEMINI_DEBUG: false
+2026-10-14T14:12:06.7432841Z   GEMINI_API_KEY: ***
+2026-10-14T14:12:06.7433185Z   SURFACE: GitHub
+2026-10-14T14:12:06.7433513Z   GOOGLE_CLOUD_LOCATION: global
+2026-10-14T14:12:06.7434120Z   GOOGLE_GENAI_USE_VERTEXAI: 
+2026-10-14T14:12:06.7434478Z   GOOGLE_API_KEY: 
+2026-10-14T14:12:06.7434821Z   GOOGLE_GENAI_USE_GCA: 
+2026-10-14T14:12:06.7439622Z   GOOGLE_CLOUD_ACCESS_TOKEN: ***
+2026-10-14T14:12:06.7465983Z   PROMPT: ## Role
+
+You are an issue triage assistant. Analyze issues and identify
+appropriate labels. Use the available tools to gather information;
+do not ask for information to be provided.
+
+## Steps
+
+1. You are only able to use the read_file command. Review the available labels in the environment variable: "${AVAILABLE_LABELS}".
+2. Use the read_file tool to read the file "standard_issues_to_triage.json" which contains the JSON array of issues to triage (including their current labels).
+3. Review the issue title, body, current labels, and any comments provided in the JSON file.
+4. Identify the most relevant labels from the existing labels, specifically focusing on area/*, kind/*, and priority/*.
+5. Label Policy:
+   - If the issue already has a kind/ label, do not change it.
+   - If the issue has exactly ONE priority/ label, do not change it (unless you are explicitly re-evaluating an ambiguous priority).
+   - If the issue is missing a priority/ label, OR if the issue currently has MULTIPLE priority/ labels, you must evaluate the issue's impact to determine exactly ONE priority level (priority/p0, priority/p1, priority/p2, priority/p3, or priority/unknown) based the guidelines. If you are fixing an issue with multiple priority/ labels, put the correct one in `labels_to_add` and put all the incorrect ones in `labels_to_remove`.
+   - If the issue has exactly ONE area/ label, do not change it.
+   - If the issue is missing an area/ label, OR if the issue currently has MULTIPLE area/ labels, select exactly ONE area/ label that best fits the issue. Issues MUST NOT have multiple area/ labels. If you are fixing an issue with multiple area/ labels, put the correct one in `labels_to_add` and put all the incorrect ones in `labels_to_remove`.
+   - If any of these are missing, select exactly ONE appropriate label for the missing category.
+6. Identify other applicable labels based on the issue content, such as status/*, help wanted, good first issue, etc.
+7. Give me a single short explanation about why you are selecting each label in the process.
+8. Output a JSON array of objects, each containing the issue number
+   and the labels to add and remove, along with an explanation. For example:
+   ```
+   [
+     {
+       "issue_number": 123,
+       "labels_to_add": ["area/core", "kind/bug", "priority/p2"],
+       "labels_to_remove": ["status/need-triage"],
+       "explanation": "This issue is a UI bug that needs to be addressed with medium priority."
+     }
+   ]
+   ```
+  If an issue cannot be classified, do not include it in the output array.
+9. For each issue, carefully check if the CLI version is present. It is usually found under the "### Client information" header, as a bullet point (e.g., "• CLI Version: 0.33.1", "* **CLI Version:** 0.42.0"), or in the output of the `/about` command.
+  - **Only for issues classified as kind/bug:** If the version is provided but is more than 6 minor versions older than the most recent release (current version is 0.65.0), apply the status/need-information label and leave a comment politely asking the user to verify if the issue persists in the latest version.
+10. **Only for issues classified as kind/bug:** If the issue does not have sufficient information, recommend the status/need-information label and leave a comment politely requesting the missing details. For example, if repro steps are missing, ask for them; if the CLI version is completely missing, ask for the version information in the explanation section below. Do not ask for version info if it is already in the issue body. (Check both bullet points and bold text). For features and enhancements, the CLI version is NOT required.
+11. If you think an issue is a Priority/P0, you MUST apply the priority/p1 label AND the status/manual-triage label, and include a note in your explanation that it likely requires P0 escalation.
+12. If the issue is highly ambiguous, completely lacks a description, or you are torn between two lower priorities (like P2 vs P3), you MUST retain the existing priority label if one is already present. Do not toggle the priority if you do not have enough information to make a definitive change.
+13. If you are uncertain about a category, use the area/unknown, kind/question, or priority/unknown labels as appropriate. If you are extremely uncertain, apply the status/manual-triage label.
+
+## Guidelines
+
+- Output only valid JSON format
+- Do not include any explanation or additional text, just the JSON
+- Only use labels that already exist in the repository.
+  - Do not add comments or modify the issue content.
+  - Do not remove the following labels maintainer, help wanted or good first issue.
+  - Triage only the current issue.
+  - Identify exactly ONE area/ label. Do NOT assign multiple area/ labels to a single issue.
+  - Identify only one kind/ label (Do not apply kind/duplicate or kind/parent-issue)
+  - Identify exactly ONE priority/ label. Do NOT assign multiple priority/ labels to a single issue.
+  - **Do not manually downgrade the priority.** Always assign the true priority based on the guidelines. The system will handle downgrades programmatically if information is missing.
+  - **NEVER mention label names, label removals, or label additions in your `explanation`.** The explanation must be purely written for the user (e.g., "Please provide your CLI version.") without exposing internal triage mechanics (e.g., do NOT say "Removing area/unknown to leave only area/core").
+
+Categorization Guidelines (Priority):
+P0 - Urgent Blocking Issues:
+  - DO NOT APPLY THE priority/p0 LABEL AUTOMATICALLY. Instead apply priority/p1 and status/manual-triage.
+  - Definition: Critical failures breaking core functionality for a large portion of users. Examples: CLI fails to launch globally, core commands (gemini run) crash on valid input, unhandled promise rejections on boot, critical security vulnerability.
+  - Note: You must apply priority/p1 and status/manual-triage instead of priority/p0.
+P1 - Critical but Workable:
+  - Definition: Severe issues without a reasonable workaround, significantly degrading the developer experience but not globally blocking. Examples: Specific tools failing consistently (e.g., `web_search` returns 500s), persistent PTY streaming hangs, memory leaks leading to OOM after short use.
+P2 - Significant Issues:
+  - Definition: Affect some workflows but a clear workaround exists, or non-critical bugs. Examples: Theme flickering, confusing error messages, minor UI misalignment, failing to read deeply nested config files correctly.
+P3 - Minor/Enhancements:
+  - Definition: Trivial bugs, typos, documentation requests, or feature requests.
+
+Categorization Guidelines (Kind):
+kind/bug: The issue is describing an unexpected behavior or failure in the application.
+kind/enhancement: The issue is describing a feature request or an improvement to an existing feature.
+kind/question: The issue is asking a question about how to use the CLI or about a specific feature.
+
+Categorization Guidelines (Area):
+area/agent: The "brain" of the CLI. Core agent logic, model quality, tool/function calling, memory, web search, generated code quality, sub-agents.
+area/core: The fundamental CLI app. UI/UX, installation, OS compatibility, performance, command parsing, theming, flickering.
+area/documentation: Website docs, READMEs, inline help text.
+area/enterprise: Telemetry, Policy, Quota / Licensing
+area/extensions: Gemini CLI extensions capability
+area/non-interactive: GitHub Actions, SDK, 3P Integrations, Shell Scripting, Command line automation
+area/platform: Platform specific behavior
+area/security: Authentication, authorization, privacy, data leaks, credential storage.
+2026-10-14T14:12:06.7493068Z   GH_WORKFLOW_NAME: gemini_scheduled_issue_triage
+2026-10-14T14:12:06.7493495Z   GH_PR_NUMBER: 
+2026-10-14T14:12:06.7493931Z   GH_ISSUE_NUMBER: 
+2026-10-14T14:12:06.7494257Z ##[endgroup]
+2026-10-14T14:25:07.7002932Z ##[warning]Gemini CLI stderr was not valid JSON
+2026-10-14T14:25:07.7124254Z ##[end-action id=gemini_standard_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=780985]
+2026-10-14T14:25:07.7128499Z ##[start-action display=Upload Gemini CLI outputs;id=gemini_standard_issue_analysis.__actions_upload-artifact]
+2026-10-14T14:25:07.7191199Z ##[group]Run actions/upload-artifact@v6
+2026-10-14T14:25:07.7191607Z with:
+2026-10-14T14:25:07.7191918Z   name: gemini-output
+2026-10-14T14:25:07.7192268Z   path: gemini-artifacts/
+2026-10-14T14:25:07.7192635Z   if-no-files-found: warn
+2026-10-14T14:25:07.7192984Z   compression-level: 6
+2026-10-14T14:25:07.7193329Z   overwrite: false
+2026-10-14T14:25:07.7193659Z   include-hidden-files: false
+2026-10-14T14:25:07.7194319Z env:
+2026-10-14T14:25:07.7194908Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:07.7195812Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:07.7196630Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:07.7197239Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:07.7197671Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:07.7198087Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:07.7198486Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:07.7198880Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:07.7199276Z   GITHUB_TOKEN: 
+2026-10-14T14:25:07.7199612Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:25:07.7201442Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:25:07.7203472Z   CLI_VERSION: 0.65.0
+2026-10-14T14:25:07.7204120Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:25:07.7204527Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:25:07.7204909Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:25:07.7205314Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:25:07.7205691Z ##[endgroup]
+2026-10-14T14:25:07.8786635Z With the provided path, there will be 3 files uploaded
+2026-10-14T14:25:07.8792972Z Artifact name is valid!
+2026-10-14T14:25:07.8794108Z Root directory input is valid!
+2026-10-14T14:25:08.0909376Z Beginning upload of artifact content to blob storage
+2026-10-14T14:25:08.1702173Z Uploaded bytes 1688
+2026-10-14T14:25:08.1962259Z Finished uploading artifact content to blob storage!
+2026-10-14T14:25:08.1963468Z SHA256 digest of uploaded artifact zip is 2c85ff746820c0c6070b24bb53d83844070005c15cca0b775ab735ed36f0b1b3
+2026-10-14T14:25:08.1965226Z Finalizing artifact upload
+2026-10-14T14:25:08.4682526Z Artifact gemini-output.zip successfully finalized. Artifact ID 11902014217
+2026-10-14T14:25:08.4684613Z Artifact gemini-output has been successfully uploaded! Final size is 1688 bytes. Artifact ID is 11902014217
+2026-10-14T14:25:08.4689116Z Artifact download URL: https://github.com/google-gemini/gemini-cli/actions/runs/38578274264/artifacts/11902014217
+2026-10-14T14:25:08.4783169Z ##[end-action id=gemini_standard_issue_analysis.__actions_upload-artifact;outcome=success;conclusion=success;duration_ms=765]
+2026-10-14T14:25:08.4789716Z ##[start-action display=Upload Telemetry to Google Cloud;id=gemini_standard_issue_analysis.__run_3]
+2026-10-14T14:25:08.4814678Z ##[group]Run set -euo pipefail
+2026-10-14T14:25:08.4815122Z [36;1mset -euo pipefail[0m
+2026-10-14T14:25:08.4815472Z [36;1m[0m
+2026-10-14T14:25:08.4815881Z [36;1m# If the telemetry log doesn't exist or is empty, do nothing.[0m
+2026-10-14T14:25:08.4816433Z [36;1mif [[ ! -s ".gemini/telemetry.log" ]]; then[0m
+2026-10-14T14:25:08.4816915Z [36;1m  echo "No telemetry log found, skipping upload."[0m
+2026-10-14T14:25:08.4817383Z [36;1m  exit 0[0m
+2026-10-14T14:25:08.4817693Z [36;1mfi[0m
+2026-10-14T14:25:08.4817994Z [36;1m[0m
+2026-10-14T14:25:08.4818369Z [36;1m# Generate the real config file from the template[0m
+2026-10-14T14:25:08.4818937Z [36;1msed -e "s#OTLP_GOOGLE_CLOUD_PROJECT#${OTLP_GOOGLE_CLOUD_PROJECT}#g" \[0m
+2026-10-14T14:25:08.4819578Z [36;1m    -e "s#GITHUB_REPOSITORY_PLACEHOLDER#${GITHUB_REPOSITORY}#g" \[0m
+2026-10-14T14:25:08.4820154Z [36;1m    -e "s#GITHUB_RUN_ID_PLACEHOLDER#${GITHUB_RUN_ID}#g" \[0m
+2026-10-14T14:25:08.4820710Z [36;1m    -e "s#GITHUB_PR_NUMBER_PLACEHOLDER#${GITHUB_PR_NUMBER}#g" \[0m
+2026-10-14T14:25:08.4821300Z [36;1m    -e "s#GITHUB_ISSUE_NUMBER_PLACEHOLDER#${GITHUB_ISSUE_NUMBER}#g" \[0m
+2026-10-14T14:25:08.4821891Z [36;1m    -e "s#GITHUB_WORKFLOW_PLACEHOLDER#${GH_WORKFLOW_NAME}#g" \[0m
+2026-10-14T14:25:08.4822597Z [36;1m  "${GITHUB_ACTION_PATH}/scripts/collector-gcp.yaml.template" > ".gemini/collector-gcp.yaml"[0m
+2026-10-14T14:25:08.4823191Z [36;1m[0m
+2026-10-14T14:25:08.4823570Z [36;1m# Ensure credentials file has the right permissions[0m
+2026-10-14T14:25:08.4824403Z [36;1mchmod 444 "$GOOGLE_APPLICATION_CREDENTIALS"[0m
+2026-10-14T14:25:08.4824830Z [36;1m[0m
+2026-10-14T14:25:08.4825211Z [36;1m# Run the collector in the background with a known name[0m
+2026-10-14T14:25:08.4825801Z [36;1mdocker run --rm --name gemini-telemetry-collector --network host \[0m
+2026-10-14T14:25:08.4826376Z [36;1m  -v "${GITHUB_WORKSPACE}:/github/workspace" \[0m
+2026-10-14T14:25:08.4827101Z [36;1m  -e "GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS/$GITHUB_WORKSPACE//github/workspace}" \[0m
+2026-10-14T14:25:08.4827775Z [36;1m  -w "/github/workspace" \[0m
+2026-10-14T14:25:08.4828227Z [36;1m  otel/opentelemetry-collector-contrib:0.108.0 \[0m
+2026-10-14T14:25:08.4828801Z [36;1m  --config /github/workspace/.gemini/collector-gcp.yaml &[0m
+2026-10-14T14:25:08.4829471Z [36;1m[0m
+2026-10-14T14:25:08.4829805Z [36;1m# Wait for the collector to start up[0m
+2026-10-14T14:25:08.4830265Z [36;1mecho "Waiting for collector to initialize..."[0m
+2026-10-14T14:25:08.4830699Z [36;1msleep 10[0m
+2026-10-14T14:25:08.4831010Z [36;1m[0m
+2026-10-14T14:25:08.4831382Z [36;1m# Monitor the queue until it's empty or we time out[0m
+2026-10-14T14:25:08.4831861Z [36;1mecho "Monitoring exporter queue..."[0m
+2026-10-14T14:25:08.4832267Z [36;1mATTEMPTS=0[0m
+2026-10-14T14:25:08.4832625Z [36;1mMAX_ATTEMPTS=12 # 12 * 5s = 60s timeout[0m
+2026-10-14T14:25:08.4833027Z [36;1mwhile true; do[0m
+2026-10-14T14:25:08.4833452Z [36;1m    # Use -f to fail silently if the server isn't ready yet[0m
+2026-10-14T14:25:08.4834283Z [36;1m    # Filter out the prometheus help/type comments before grabbing the value[0m
+2026-10-14T14:25:08.4835176Z [36;1m    QUEUE_SIZE=$(curl -sf http://localhost:8888/metrics | grep otelcol_exporter_queue_size | grep -v '^#' | awk '{print $2}' || echo "-1")[0m
+2026-10-14T14:25:08.4835930Z [36;1m[0m
+2026-10-14T14:25:08.4836258Z [36;1m    if [ "$QUEUE_SIZE" == "0" ]; then[0m
+2026-10-14T14:25:08.4836758Z [36;1m        echo "Exporter queue is empty, all data processed."[0m
+2026-10-14T14:25:08.4837223Z [36;1m        break[0m
+2026-10-14T14:25:08.4837699Z [36;1m    fi[0m
+2026-10-14T14:25:08.4838008Z [36;1m[0m
+2026-10-14T14:25:08.4838360Z [36;1m    if [ "$ATTEMPTS" -ge "$MAX_ATTEMPTS" ]; then[0m
+2026-10-14T14:25:08.4839032Z [36;1m        echo "::warning::Timed out waiting for exporter queue to empty. Proceeding with shutdown."[0m
+2026-10-14T14:25:08.4839619Z [36;1m        break[0m
+2026-10-14T14:25:08.4839945Z [36;1m    fi[0m
+2026-10-14T14:25:08.4840241Z [36;1m[0m
+2026-10-14T14:25:08.4840588Z [36;1m    echo "Queue size: $QUEUE_SIZE, waiting..."[0m
+2026-10-14T14:25:08.4841447Z [36;1m    sleep 5[0m
+2026-10-14T14:25:08.4841793Z [36;1m    ATTEMPTS=$((ATTEMPTS + 1))[0m
+2026-10-14T14:25:08.4842196Z [36;1mdone[0m
+2026-10-14T14:25:08.4842500Z [36;1m[0m
+2026-10-14T14:25:08.4842828Z [36;1m# Gracefully shut down the collector[0m
+2026-10-14T14:25:08.4843265Z [36;1mecho "Stopping collector..."[0m
+2026-10-14T14:25:08.4843928Z [36;1mdocker stop gemini-telemetry-collector[0m
+2026-10-14T14:25:08.4844478Z [36;1mecho "Collector stopped."[0m
+2026-10-14T14:25:08.4904763Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:25:08.4905237Z env:
+2026-10-14T14:25:08.4905824Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.4906733Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.4907549Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.4908164Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4908596Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4909016Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4909412Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4909809Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4910201Z   GITHUB_TOKEN: 
+2026-10-14T14:25:08.4910548Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:25:08.4912387Z   AVAILABLE_LABELS: 1.0/eng-excellence,1.0/ui-improvements,1.0/windows-misc,ACP,agent/browser,aiq/agent,aiq/eval_infra,aiq/routing,area/agent,area/cli,area/core,area/documentation,area/enterprise,area/extensions,area/gallery,area/non-interactive,area/platform,area/security,area/site,area/unknown,auto-close,bot-fix,build-succeeded,dependencies,effort/large,effort/medium,effort/small,github_actions,good first issue,help wanted
+2026-10-14T14:25:08.4914399Z   CLI_VERSION: 0.65.0
+2026-10-14T14:25:08.4914751Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T14:25:08.4915144Z   GEMINI_EXP: gemini_exp.json
+2026-10-14T14:25:08.4915518Z   GEMINI_STRICT_TELEMETRY_LIMITS: true
+2026-10-14T14:25:08.4916105Z   GEMINI_MODEL: gemini-3-flash-preview
+2026-10-14T14:25:08.4916533Z   OTLP_GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.4917268Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/google-github-actions/run-gemini-cli/f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T14:25:08.4918006Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:25:08.4918416Z   GITHUB_RUN_ID: 38578274264
+2026-10-14T14:25:08.4918767Z   GITHUB_PR_NUMBER: 
+2026-10-14T14:25:08.4919098Z   GITHUB_ISSUE_NUMBER: 
+2026-10-14T14:25:08.4919472Z   GH_WORKFLOW_NAME: gemini_scheduled_issue_triage
+2026-10-14T14:25:08.4919887Z ##[endgroup]
+2026-10-14T14:25:08.4996354Z No telemetry log found, skipping upload.
+2026-10-14T14:25:08.5003469Z ##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=21]
+2026-10-14T14:25:08.5142524Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T14:25:08.5143071Z with:
+2026-10-14T14:25:08.5145752Z   github-token: ***
+2026-10-14T14:25:08.5146428Z   script: const applyLabels = require('./.github/scripts/apply-issue-labels.cjs');
+await applyLabels({ github, context, core });
+2026-10-14T14:25:08.5147132Z   debug: false
+2026-10-14T14:25:08.5147467Z   user-agent: actions/github-script
+2026-10-14T14:25:08.5147867Z   result-encoding: json
+2026-10-14T14:25:08.5148202Z   retries: 0
+2026-10-14T14:25:08.5148551Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T14:25:08.5148972Z env:
+2026-10-14T14:25:08.5149553Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.5150463Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.5151345Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:08.5151963Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.5152392Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.5152816Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.5153215Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.5153614Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:08.5155243Z   LABELS_OUTPUT_STANDARD: [
+  {
+    "issue_number": 29751,
+    "labels_to_add": [
+      "area/agent",
+      "kind/enhancement",
+      "priority/p3"
+    ],
+    "labels_to_remove": [
+      "status/need-triage"
+    ],
+    "explanation": "This issue is a request to enhance agent editing tools to support legacy single-byte file encodings, categorized as a low priority enhancement."
+  }
+]
+2026-10-14T14:25:08.5156676Z   LABELS_OUTPUT_EFFORT: 
+2026-10-14T14:25:08.5157023Z ##[endgroup]
+2026-10-14T14:25:08.5959913Z Aggregated triage results for 1 issues.
+2026-10-14T14:25:11.2257597Z Successfully added labels for #29751: kind/enhancement, priority/p3, status/bot-triaged
+2026-10-14T14:25:12.1797125Z Successfully removed labels for #29751: status/need-triage
+2026-10-14T14:25:12.1943292Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T14:25:12.1944308Z with:
+2026-10-14T14:25:12.1946918Z   github-token: ***
+2026-10-14T14:25:12.1947610Z   script: const syncIssueTypes = require('./.github/scripts/sync-issue-types.cjs');
+await syncIssueTypes({ github, context, core });
+2026-10-14T14:25:12.1948333Z   debug: false
+2026-10-14T14:25:12.1948664Z   user-agent: actions/github-script
+2026-10-14T14:25:12.1949057Z   result-encoding: json
+2026-10-14T14:25:12.1949400Z   retries: 0
+2026-10-14T14:25:12.1949750Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T14:25:12.1950164Z env:
+2026-10-14T14:25:12.1950727Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:12.1951612Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:12.1952488Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:12.1953304Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:12.1953943Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:12.1954474Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:12.1954867Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:12.1955260Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:12.1955650Z ##[endgroup]
+2026-10-14T14:25:13.7784626Z Successfully synced Issue Type for #29751
+2026-10-14T14:25:13.7787746Z Synced 1 issues from labels.
+2026-10-14T14:25:13.7788643Z Found 0 issues missing both type and kind label to be analyzed.
+2026-10-14T14:25:13.7917553Z ##[group]Run set -euo pipefail
+2026-10-14T14:25:13.7917983Z [36;1mset -euo pipefail[0m
+2026-10-14T14:25:13.7918475Z [36;1mecho '🧹 Finding issues that have conflicting status labels...'[0m
+2026-10-14T14:25:13.7919059Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:25:13.7919845Z [36;1m  --search 'is:open is:issue label:status/bot-triaged label:status/need-triage' --limit 50 --json number > cleanup_1.json[0m
+2026-10-14T14:25:13.7920637Z [36;1mgh issue list --repo "${GITHUB_REPOSITORY}" \[0m
+2026-10-14T14:25:13.7921398Z [36;1m  --search 'is:open is:issue label:status/bot-triaged label:status/manual-triage' --limit 50 --json number > cleanup_2.json[0m
+2026-10-14T14:25:13.7922306Z [36;1mjq -c -s 'add | unique_by(.number)' cleanup_1.json cleanup_2.json > issues_to_cleanup.json[0m
+2026-10-14T14:25:13.7982367Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T14:25:13.7982879Z env:
+2026-10-14T14:25:13.7983567Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:13.7984896Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:13.7985834Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:13.7986530Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:13.7987027Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:13.7987482Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:13.7987923Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:13.7988361Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:13.7991423Z   GITHUB_TOKEN: ***
+2026-10-14T14:25:13.7991840Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T14:25:13.7992314Z ##[endgroup]
+2026-10-14T14:25:13.8087970Z 🧹 Finding issues that have conflicting status labels...
+2026-10-14T14:25:14.7780129Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T14:25:14.7781054Z with:
+2026-10-14T14:25:14.7784395Z   github-token: ***
+2026-10-14T14:25:14.7785387Z   script: const cleanupLabels = require('./.github/scripts/cleanup-triage-labels.cjs');
+await cleanupLabels({ github, context, core });
+2026-10-14T14:25:14.7786136Z   debug: false
+2026-10-14T14:25:14.7786468Z   user-agent: actions/github-script
+2026-10-14T14:25:14.7786883Z   result-encoding: json
+2026-10-14T14:25:14.7787223Z   retries: 0
+2026-10-14T14:25:14.7787582Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T14:25:14.7787991Z env:
+2026-10-14T14:25:14.7788567Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:14.7789456Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:14.7790292Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json
+2026-10-14T14:25:14.7790901Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T14:25:14.7791323Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T14:25:14.7791728Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:14.7792122Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T14:25:14.7792516Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T14:25:14.7792911Z ##[endgroup]
+2026-10-14T14:25:14.8571069Z Cleaned up conflicting labels from 0 issues.
+2026-10-14T14:25:14.8953692Z Post job cleanup.
+2026-10-14T14:25:14.8958604Z ##[start-action display=Authenticate to Google Cloud;id=__3904ff66-5d10-4ac3-b144-9af31415659b.auth]
+2026-10-14T14:25:14.9011966Z Post job cleanup.
+2026-10-14T14:25:14.9881923Z Removed exported credentials at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-95b3bf105c716350.json".
+2026-10-14T14:25:14.9974305Z ##[end-action id=__3904ff66-5d10-4ac3-b144-9af31415659b.auth;outcome=success;conclusion=success;duration_ms=99]
+2026-10-14T14:25:15.0092918Z Post job cleanup.
+2026-10-14T14:25:15.3196246Z Token revoked
+2026-10-14T14:25:15.3665041Z Post job cleanup.
+2026-10-14T14:25:15.4545921Z [command]/usr/bin/git version
+2026-10-14T14:25:15.4583683Z git version 2.55.0
+2026-10-14T14:25:15.4622396Z Temporarily overriding HOME='/home/runner/work/_temp/554823bb-4686-42b4-ae4d-63a233429f4a' before making global git config changes
+2026-10-14T14:25:15.4624065Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T14:25:15.4630749Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T14:25:15.4668115Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T14:25:15.4709545Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T14:25:15.4943650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T14:25:15.4978870Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T14:25:15.5363286Z Cleaning up orphan processes
+2026-10-14T14:25:15.5705953Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b, actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

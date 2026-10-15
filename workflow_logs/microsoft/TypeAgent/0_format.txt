@@ -1,0 +1,1105 @@
+﻿2026-10-14T06:10:21.3779985Z Current runner version: '2.337.0'
+2026-10-14T06:10:21.3801253Z ##[group]Runner Image Provisioner
+2026-10-14T06:10:21.3802064Z Hosted Compute Agent
+2026-10-14T06:10:21.3802690Z Version: 20261002.596
+2026-10-14T06:10:21.3803319Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T06:10:21.3803957Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T06:10:21.3804595Z Worker ID: {be939360-3ff3-4a4f-988d-035c53d8f869}
+2026-10-14T06:10:21.3805272Z Region: centralus
+2026-10-14T06:10:21.3805775Z Cloud: Azure
+2026-10-14T06:10:21.3806320Z ##[endgroup]
+2026-10-14T06:10:21.3807419Z ##[group]Operating System
+2026-10-14T06:10:21.3807950Z Ubuntu
+2026-10-14T06:10:21.3808469Z 24.04.5
+2026-10-14T06:10:21.3808979Z LTS
+2026-10-14T06:10:21.3809762Z ##[endgroup]
+2026-10-14T06:10:21.3810297Z ##[group]Runner Image
+2026-10-14T06:10:21.3810847Z Image: ubuntu-24.04
+2026-10-14T06:10:21.3811434Z Version: 20261004.327.1
+2026-10-14T06:10:21.3812525Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T06:10:21.3813693Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T06:10:21.3814485Z ##[endgroup]
+2026-10-14T06:10:21.3815574Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T06:10:21.3817217Z Contents: write
+2026-10-14T06:10:21.3817873Z Metadata: read
+2026-10-14T06:10:21.3818402Z PullRequests: write
+2026-10-14T06:10:21.3818954Z ##[endgroup]
+2026-10-14T06:10:21.3820944Z Secret source: Actions
+2026-10-14T06:10:21.3821809Z Cache mode: write
+2026-10-14T06:10:21.3822491Z Prepare workflow directory
+2026-10-14T06:10:21.4183557Z Prepare all required actions
+2026-10-14T06:10:21.4219710Z Getting action download info
+2026-10-14T06:10:21.6924570Z Download action repository 'actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1' (SHA:bcd2ba49218906704ab6c1aa796996da409d3eb1)
+2026-10-14T06:10:22.1109991Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T06:10:22.1409504Z Download action repository 'pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86' (SHA:0977fd99725f1db4007ccb2928dbb4e90d06cc86)
+2026-10-14T06:10:22.4732528Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-14T06:10:22.5624586Z Download action repository 'stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d' (SHA:4a55954c782fc1ea30b9056cd3e7a2b40ca8887d)
+2026-10-14T06:10:22.8580494Z Complete job name: format
+2026-10-14T06:10:22.8997711Z ##[group]Run git config --global core.autocrlf false
+2026-10-14T06:10:22.8998338Z [36;1mgit config --global core.autocrlf false[0m
+2026-10-14T06:10:22.9187540Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:10:22.9188234Z env:
+2026-10-14T06:10:22.9188602Z   HAS_APP_CREDS: false
+2026-10-14T06:10:22.9188964Z ##[endgroup]
+2026-10-14T06:10:22.9534747Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-14T06:10:22.9535305Z with:
+2026-10-14T06:10:22.9535659Z   ref: fix/workspace-dependency-refresh
+2026-10-14T06:10:22.9536060Z   fetch-depth: 0
+2026-10-14T06:10:22.9538238Z   token: ***
+2026-10-14T06:10:22.9538584Z   repository: microsoft/TypeAgent
+2026-10-14T06:10:22.9538972Z   ssh-strict: true
+2026-10-14T06:10:22.9539519Z   ssh-user: git
+2026-10-14T06:10:22.9539861Z   persist-credentials: true
+2026-10-14T06:10:22.9540219Z   clean: true
+2026-10-14T06:10:22.9540557Z   sparse-checkout-cone-mode: true
+2026-10-14T06:10:22.9540936Z   fetch-tags: false
+2026-10-14T06:10:22.9541269Z   show-progress: true
+2026-10-14T06:10:22.9541605Z   lfs: false
+2026-10-14T06:10:22.9541929Z   submodules: false
+2026-10-14T06:10:22.9542268Z   set-safe-directory: true
+2026-10-14T06:10:22.9542638Z   allow-unsafe-pr-checkout: false
+2026-10-14T06:10:22.9543010Z env:
+2026-10-14T06:10:22.9543324Z   HAS_APP_CREDS: false
+2026-10-14T06:10:22.9543698Z ##[endgroup]
+2026-10-14T06:10:23.0194513Z Syncing repository: microsoft/TypeAgent
+2026-10-14T06:10:23.0196960Z ##[group]Getting Git version info
+2026-10-14T06:10:23.0197588Z Working directory is '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:23.0198664Z [command]/usr/bin/git version
+2026-10-14T06:10:23.0199240Z git version 2.55.0
+2026-10-14T06:10:23.0200517Z ##[endgroup]
+2026-10-14T06:10:23.0204185Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/fd9fec65-7022-4dd3-9c00-59bf2a35f037/.gitconfig'
+2026-10-14T06:10:23.0208256Z Temporarily overriding HOME='/home/runner/work/_temp/fd9fec65-7022-4dd3-9c00-59bf2a35f037' before making global git config changes
+2026-10-14T06:10:23.0209465Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:10:23.0212024Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:23.0240690Z Deleting the contents of '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:23.0243138Z ##[group]Determining repository object format
+2026-10-14T06:10:23.2832151Z ##[endgroup]
+2026-10-14T06:10:23.2833854Z ##[group]Initializing the repository
+2026-10-14T06:10:23.2841764Z [command]/usr/bin/git init /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:23.2944814Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T06:10:23.2946789Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T06:10:23.2951865Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T06:10:23.2953300Z hint: call:
+2026-10-14T06:10:23.2954076Z hint:
+2026-10-14T06:10:23.2954940Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T06:10:23.2956197Z hint:
+2026-10-14T06:10:23.2957189Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T06:10:23.2958538Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T06:10:23.2960785Z hint:
+2026-10-14T06:10:23.2961550Z hint: 	git branch -m <name>
+2026-10-14T06:10:23.2962434Z hint:
+2026-10-14T06:10:23.2963531Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T06:10:23.2965606Z Initialized empty Git repository in /home/runner/work/TypeAgent/TypeAgent/.git/
+2026-10-14T06:10:23.2969921Z [command]/usr/bin/git remote add origin https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:23.3028672Z ##[endgroup]
+2026-10-14T06:10:23.3030349Z ##[group]Disabling automatic garbage collection
+2026-10-14T06:10:23.3031696Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T06:10:23.3066734Z ##[endgroup]
+2026-10-14T06:10:23.3068378Z ##[group]Setting up auth
+2026-10-14T06:10:23.3069515Z Removing SSH command configuration
+2026-10-14T06:10:23.3072519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:10:23.3108214Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:10:23.3383484Z Removing HTTP extra header
+2026-10-14T06:10:23.3386790Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:10:23.3415938Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:10:23.3597403Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:10:23.3603208Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:10:23.3641338Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:10:23.3824629Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T06:10:23.3862045Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path /home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:10:23.3892528Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:10:23.3923681Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:10:23.3951713Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:10:23.3979889Z ##[endgroup]
+2026-10-14T06:10:23.3982116Z ##[group]Fetching the repository
+2026-10-14T06:10:23.3986515Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-14T06:10:28.6811373Z From https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:28.6813211Z  * [new branch]          add-schema-grammar-generator -> origin/add-schema-grammar-generator
+2026-10-14T06:10:28.6813843Z  * [new branch]          add-terminal-ui-features-v2 -> origin/add-terminal-ui-features-v2
+2026-10-14T06:10:28.6814571Z  * [new branch]          agents/azure-cli-json-output-format -> origin/agents/azure-cli-json-output-format
+2026-10-14T06:10:28.6815217Z  * [new branch]          agents/devcontainer-pnpm-install-error-fix -> origin/agents/devcontainer-pnpm-install-error-fix
+2026-10-14T06:10:28.6815812Z  * [new branch]          automated/docs-readmes-20260701-254 -> origin/automated/docs-readmes-20260701-254
+2026-10-14T06:10:28.6816424Z  * [new branch]          automated/docs-readmes-20260706-259 -> origin/automated/docs-readmes-20260706-259
+2026-10-14T06:10:28.6817227Z  * [new branch]          automated/docs-readmes-20260707-260 -> origin/automated/docs-readmes-20260707-260
+2026-10-14T06:10:28.6818028Z  * [new branch]          automated/docs-readmes-20260710-263 -> origin/automated/docs-readmes-20260710-263
+2026-10-14T06:10:28.6818833Z  * [new branch]          automated/docs-readmes-20260713-266 -> origin/automated/docs-readmes-20260713-266
+2026-10-14T06:10:28.6819536Z  * [new branch]          automated/docs-readmes-20260714-267 -> origin/automated/docs-readmes-20260714-267
+2026-10-14T06:10:28.6820082Z  * [new branch]          automated/docs-readmes-20260715-268 -> origin/automated/docs-readmes-20260715-268
+2026-10-14T06:10:28.6820670Z  * [new branch]          automated/docs-readmes-20261001-5 -> origin/automated/docs-readmes-20261001-5
+2026-10-14T06:10:28.6821288Z  * [new branch]          automated/fix-dependabot-alerts-20260407 -> origin/automated/fix-dependabot-alerts-20260407
+2026-10-14T06:10:28.6822299Z  * [new branch]          automated/fix-dependabot-alerts-20260407-8 -> origin/automated/fix-dependabot-alerts-20260407-8
+2026-10-14T06:10:28.6823140Z  * [new branch]          automated/fix-dependabot-alerts-20260408-10 -> origin/automated/fix-dependabot-alerts-20260408-10
+2026-10-14T06:10:28.6823807Z  * [new branch]          automated/fix-dependabot-alerts-20260408-9 -> origin/automated/fix-dependabot-alerts-20260408-9
+2026-10-14T06:10:28.6824501Z  * [new branch]          automated/fix-dependabot-alerts-20260409-11 -> origin/automated/fix-dependabot-alerts-20260409-11
+2026-10-14T06:10:28.6825223Z  * [new branch]          automated/fix-dependabot-alerts-20260417-15 -> origin/automated/fix-dependabot-alerts-20260417-15
+2026-10-14T06:10:28.6825957Z  * [new branch]          automated/fix-dependabot-alerts-20260507-35 -> origin/automated/fix-dependabot-alerts-20260507-35
+2026-10-14T06:10:28.6826614Z  * [new branch]          automated/fix-dependabot-alerts-20260509-44 -> origin/automated/fix-dependabot-alerts-20260509-44
+2026-10-14T06:10:28.6827249Z  * [new branch]          automated/fix-dependabot-alerts-20260515-51 -> origin/automated/fix-dependabot-alerts-20260515-51
+2026-10-14T06:10:28.6828009Z  * [new branch]          automated/fix-dependabot-alerts-20260526-63 -> origin/automated/fix-dependabot-alerts-20260526-63
+2026-10-14T06:10:28.6828633Z  * [new branch]          automated/fix-dependabot-alerts-20260527-64 -> origin/automated/fix-dependabot-alerts-20260527-64
+2026-10-14T06:10:28.6829531Z  * [new branch]          automated/fix-dependabot-alerts-20260528-65 -> origin/automated/fix-dependabot-alerts-20260528-65
+2026-10-14T06:10:28.6830652Z  * [new branch]          automated/fix-dependabot-alerts-20260530-67 -> origin/automated/fix-dependabot-alerts-20260530-67
+2026-10-14T06:10:28.6831687Z  * [new branch]          automated/fix-dependabot-alerts-20260531-68 -> origin/automated/fix-dependabot-alerts-20260531-68
+2026-10-14T06:10:28.6832690Z  * [new branch]          automated/fix-dependabot-alerts-20260601-69 -> origin/automated/fix-dependabot-alerts-20260601-69
+2026-10-14T06:10:28.6833711Z  * [new branch]          automated/fix-dependabot-alerts-20260603-72 -> origin/automated/fix-dependabot-alerts-20260603-72
+2026-10-14T06:10:28.6834878Z  * [new branch]          automated/fix-dependabot-alerts-20260604-74 -> origin/automated/fix-dependabot-alerts-20260604-74
+2026-10-14T06:10:28.6836337Z  * [new branch]          automated/fix-dependabot-alerts-20260605-75 -> origin/automated/fix-dependabot-alerts-20260605-75
+2026-10-14T06:10:28.6837327Z  * [new branch]          automated/fix-dependabot-alerts-20260606-76 -> origin/automated/fix-dependabot-alerts-20260606-76
+2026-10-14T06:10:28.6838300Z  * [new branch]          automated/fix-dependabot-alerts-20260609-79 -> origin/automated/fix-dependabot-alerts-20260609-79
+2026-10-14T06:10:28.6839394Z  * [new branch]          automated/fix-dependabot-alerts-20260610-80 -> origin/automated/fix-dependabot-alerts-20260610-80
+2026-10-14T06:10:28.6840385Z  * [new branch]          automated/fix-dependabot-alerts-20260611-81 -> origin/automated/fix-dependabot-alerts-20260611-81
+2026-10-14T06:10:28.6841835Z  * [new branch]          automated/fix-dependabot-alerts-20260613-83 -> origin/automated/fix-dependabot-alerts-20260613-83
+2026-10-14T06:10:28.6842809Z  * [new branch]          automated/fix-dependabot-alerts-20260616-86 -> origin/automated/fix-dependabot-alerts-20260616-86
+2026-10-14T06:10:28.6843803Z  * [new branch]          automated/fix-dependabot-alerts-20260617-87 -> origin/automated/fix-dependabot-alerts-20260617-87
+2026-10-14T06:10:28.6844629Z  * [new branch]          automated/fix-dependabot-alerts-20260618-88 -> origin/automated/fix-dependabot-alerts-20260618-88
+2026-10-14T06:10:28.6845251Z  * [new branch]          automated/fix-dependabot-alerts-20260621-91 -> origin/automated/fix-dependabot-alerts-20260621-91
+2026-10-14T06:10:28.6845878Z  * [new branch]          automated/fix-dependabot-alerts-20260629-99 -> origin/automated/fix-dependabot-alerts-20260629-99
+2026-10-14T06:10:28.6846824Z  * [new branch]          automated/fix-dependabot-alerts-20260630-100 -> origin/automated/fix-dependabot-alerts-20260630-100
+2026-10-14T06:10:28.6847464Z  * [new branch]          automated/fix-dependabot-alerts-20260701-102 -> origin/automated/fix-dependabot-alerts-20260701-102
+2026-10-14T06:10:28.6848093Z  * [new branch]          automated/fix-dependabot-alerts-20260707-108 -> origin/automated/fix-dependabot-alerts-20260707-108
+2026-10-14T06:10:28.6848736Z  * [new branch]          automated/fix-dependabot-alerts-20260708-109 -> origin/automated/fix-dependabot-alerts-20260708-109
+2026-10-14T06:10:28.6849754Z  * [new branch]          automated/fix-dependabot-alerts-20260709-110 -> origin/automated/fix-dependabot-alerts-20260709-110
+2026-10-14T06:10:28.6850496Z  * [new branch]          automated/fix-dependabot-alerts-20260713-114 -> origin/automated/fix-dependabot-alerts-20260713-114
+2026-10-14T06:10:28.6851160Z  * [new branch]          automated/fix-dependabot-alerts-20260714-115 -> origin/automated/fix-dependabot-alerts-20260714-115
+2026-10-14T06:10:28.6851806Z  * [new branch]          automated/fix-dependabot-alerts-20260716-117 -> origin/automated/fix-dependabot-alerts-20260716-117
+2026-10-14T06:10:28.6852555Z  * [new branch]          automated/fix-dependabot-alerts-20260717-118 -> origin/automated/fix-dependabot-alerts-20260717-118
+2026-10-14T06:10:28.6853204Z  * [new branch]          automated/fix-dependabot-alerts-20260718-119 -> origin/automated/fix-dependabot-alerts-20260718-119
+2026-10-14T06:10:28.6853847Z  * [new branch]          automated/fix-dependabot-alerts-20260719-120 -> origin/automated/fix-dependabot-alerts-20260719-120
+2026-10-14T06:10:28.6854491Z  * [new branch]          automated/fix-dependabot-alerts-20260720-121 -> origin/automated/fix-dependabot-alerts-20260720-121
+2026-10-14T06:10:28.6855152Z  * [new branch]          automated/fix-dependabot-alerts-20260721-122 -> origin/automated/fix-dependabot-alerts-20260721-122
+2026-10-14T06:10:28.6855870Z  * [new branch]          automated/fix-dependabot-alerts-20260722-123 -> origin/automated/fix-dependabot-alerts-20260722-123
+2026-10-14T06:10:28.6856521Z  * [new branch]          automated/fix-dependabot-alerts-20260727-128 -> origin/automated/fix-dependabot-alerts-20260727-128
+2026-10-14T06:10:28.6857191Z  * [new branch]          automated/fix-dependabot-alerts-20260728-129 -> origin/automated/fix-dependabot-alerts-20260728-129
+2026-10-14T06:10:28.6857838Z  * [new branch]          automated/fix-dependabot-alerts-20260729-130 -> origin/automated/fix-dependabot-alerts-20260729-130
+2026-10-14T06:10:28.6858486Z  * [new branch]          automated/fix-dependabot-alerts-20260730-131 -> origin/automated/fix-dependabot-alerts-20260730-131
+2026-10-14T06:10:28.6859316Z  * [new branch]          automated/fix-dependabot-alerts-20260731-132 -> origin/automated/fix-dependabot-alerts-20260731-132
+2026-10-14T06:10:28.6859997Z  * [new branch]          automated/fix-dependabot-alerts-20260803-135 -> origin/automated/fix-dependabot-alerts-20260803-135
+2026-10-14T06:10:28.6860635Z  * [new branch]          automated/fix-dependabot-alerts-20260804-136 -> origin/automated/fix-dependabot-alerts-20260804-136
+2026-10-14T06:10:28.6861285Z  * [new branch]          automated/fix-dependabot-alerts-20260805-137 -> origin/automated/fix-dependabot-alerts-20260805-137
+2026-10-14T06:10:28.6861923Z  * [new branch]          automated/fix-dependabot-alerts-20260806-138 -> origin/automated/fix-dependabot-alerts-20260806-138
+2026-10-14T06:10:28.6862568Z  * [new branch]          automated/fix-dependabot-alerts-20260807-139 -> origin/automated/fix-dependabot-alerts-20260807-139
+2026-10-14T06:10:28.6863316Z  * [new branch]          automated/fix-dependabot-alerts-20260807-140 -> origin/automated/fix-dependabot-alerts-20260807-140
+2026-10-14T06:10:28.6864008Z  * [new branch]          automated/fix-dependabot-alerts-20260811-144 -> origin/automated/fix-dependabot-alerts-20260811-144
+2026-10-14T06:10:28.6864760Z  * [new branch]          automated/fix-dependabot-alerts-20260812-145 -> origin/automated/fix-dependabot-alerts-20260812-145
+2026-10-14T06:10:28.6865400Z  * [new branch]          automated/fix-dependabot-alerts-20260817-150 -> origin/automated/fix-dependabot-alerts-20260817-150
+2026-10-14T06:10:28.6866045Z  * [new branch]          automated/fix-dependabot-alerts-20260818-151 -> origin/automated/fix-dependabot-alerts-20260818-151
+2026-10-14T06:10:28.6866682Z  * [new branch]          automated/fix-dependabot-alerts-20260819-152 -> origin/automated/fix-dependabot-alerts-20260819-152
+2026-10-14T06:10:28.6867306Z  * [new branch]          automated/fix-dependabot-alerts-20260820-153 -> origin/automated/fix-dependabot-alerts-20260820-153
+2026-10-14T06:10:28.6867925Z  * [new branch]          automated/fix-dependabot-alerts-20260824-157 -> origin/automated/fix-dependabot-alerts-20260824-157
+2026-10-14T06:10:28.6868544Z  * [new branch]          automated/fix-dependabot-alerts-20260827-160 -> origin/automated/fix-dependabot-alerts-20260827-160
+2026-10-14T06:10:28.6869322Z  * [new branch]          automated/fix-dependabot-alerts-20260828-161 -> origin/automated/fix-dependabot-alerts-20260828-161
+2026-10-14T06:10:28.6870049Z  * [new branch]          automated/fix-dependabot-alerts-20260831-164 -> origin/automated/fix-dependabot-alerts-20260831-164
+2026-10-14T06:10:28.6870671Z  * [new branch]          automated/fix-dependabot-alerts-20260901-165 -> origin/automated/fix-dependabot-alerts-20260901-165
+2026-10-14T06:10:28.6871301Z  * [new branch]          automated/fix-dependabot-alerts-20260902-166 -> origin/automated/fix-dependabot-alerts-20260902-166
+2026-10-14T06:10:28.6871932Z  * [new branch]          automated/fix-dependabot-alerts-20260904-168 -> origin/automated/fix-dependabot-alerts-20260904-168
+2026-10-14T06:10:28.6872553Z  * [new branch]          automated/fix-dependabot-alerts-20260908-172 -> origin/automated/fix-dependabot-alerts-20260908-172
+2026-10-14T06:10:28.6873186Z  * [new branch]          automated/fix-dependabot-alerts-20260909-173 -> origin/automated/fix-dependabot-alerts-20260909-173
+2026-10-14T06:10:28.6873811Z  * [new branch]          automated/fix-dependabot-alerts-20260910-174 -> origin/automated/fix-dependabot-alerts-20260910-174
+2026-10-14T06:10:28.6874437Z  * [new branch]          automated/fix-dependabot-alerts-20260911-175 -> origin/automated/fix-dependabot-alerts-20260911-175
+2026-10-14T06:10:28.6875060Z  * [new branch]          automated/fix-dependabot-alerts-20260914-178 -> origin/automated/fix-dependabot-alerts-20260914-178
+2026-10-14T06:10:28.6875714Z  * [new branch]          automated/fix-dependabot-alerts-20260917-181 -> origin/automated/fix-dependabot-alerts-20260917-181
+2026-10-14T06:10:28.6876343Z  * [new branch]          automated/fix-dependabot-alerts-20261013-213 -> origin/automated/fix-dependabot-alerts-20261013-213
+2026-10-14T06:10:28.6876893Z  * [new branch]          cleanup/test-consolelogs -> origin/cleanup/test-consolelogs
+2026-10-14T06:10:28.6877320Z  * [new branch]          container               -> origin/container
+2026-10-14T06:10:28.6877754Z  * [new branch]          copilot-memory-plugin   -> origin/copilot-memory-plugin
+2026-10-14T06:10:28.6878326Z  * [new branch]          copilot/68268369843-fix-github-actions-workflow -> origin/copilot/68268369843-fix-github-actions-workflow
+2026-10-14T06:10:28.6879156Z  * [new branch]          copilot/add-unit-tests-for-fixable-todos -> origin/copilot/add-unit-tests-for-fixable-todos
+2026-10-14T06:10:28.6879821Z  * [new branch]          copilot/address-feedback-multi-question-forms -> origin/copilot/address-feedback-multi-question-forms
+2026-10-14T06:10:28.6880435Z  * [new branch]          copilot/cache-regex-for-string-part -> origin/copilot/cache-regex-for-string-part
+2026-10-14T06:10:28.6880991Z  * [new branch]          copilot/collate-todos-into-todo-md -> origin/copilot/collate-todos-into-todo-md
+2026-10-14T06:10:28.6881607Z  * [new branch]          copilot/create-visual-browser-for-type-agent -> origin/copilot/create-visual-browser-for-type-agent
+2026-10-14T06:10:28.6882345Z  * [new branch]          copilot/devrobgruendogfooding4 -> origin/copilot/devrobgruendogfooding4
+2026-10-14T06:10:28.6882899Z  * [new branch]          copilot/devrobgruendogfooding4-again -> origin/copilot/devrobgruendogfooding4-again
+2026-10-14T06:10:28.6883441Z  * [new branch]          copilot/devrobgruendogfooding5 -> origin/copilot/devrobgruendogfooding5
+2026-10-14T06:10:28.6883946Z  * [new branch]          copilot/fix-build-ts-failure -> origin/copilot/fix-build-ts-failure
+2026-10-14T06:10:28.6884479Z  * [new branch]          copilot/fix-comments-in-review-thread -> origin/copilot/fix-comments-in-review-thread
+2026-10-14T06:10:28.6885066Z  * [new branch]          copilot/fix-dependabot-security-issues -> origin/copilot/fix-dependabot-security-issues
+2026-10-14T06:10:28.6885679Z  * [new branch]          copilot/fix-failing-github-actions-workflow -> origin/copilot/fix-failing-github-actions-workflow
+2026-10-14T06:10:28.6886269Z  * [new branch]          copilot/fix-github-actions-build-ts -> origin/copilot/fix-github-actions-build-ts
+2026-10-14T06:10:28.6886881Z  * [new branch]          copilot/fix-github-actions-job-shell-and-cli -> origin/copilot/fix-github-actions-job-shell-and-cli
+2026-10-14T06:10:28.6887630Z  * [new branch]          copilot/fix-github-actions-workflow -> origin/copilot/fix-github-actions-workflow
+2026-10-14T06:10:28.6888375Z  * [new branch]          copilot/fix-github-actions-workflow-7e570772-b77a-4ab8-a47b-251813c695c4 -> origin/copilot/fix-github-actions-workflow-7e570772-b77a-4ab8-a47b-251813c695c4
+2026-10-14T06:10:28.6889458Z  * [new branch]          copilot/fix-github-actions-workflow-92387e00-f5d9-4dfb-a673-71b3e72bf622 -> origin/copilot/fix-github-actions-workflow-92387e00-f5d9-4dfb-a673-71b3e72bf622
+2026-10-14T06:10:28.6890234Z  * [new branch]          copilot/fix-github-actions-workflow-again -> origin/copilot/fix-github-actions-workflow-again
+2026-10-14T06:10:28.6890898Z  * [new branch]          copilot/fix-github-actions-workflow-another-one -> origin/copilot/fix-github-actions-workflow-another-one
+2026-10-14T06:10:28.6891569Z  * [new branch]          copilot/fix-github-actions-workflow-build-ts -> origin/copilot/fix-github-actions-workflow-build-ts
+2026-10-14T06:10:28.6892255Z  * [new branch]          copilot/fix-github-actions-workflow-build-ts-again -> origin/copilot/fix-github-actions-workflow-build-ts-again
+2026-10-14T06:10:28.6893032Z  * [new branch]          copilot/fix-github-actions-workflow-build-ts-another-one -> origin/copilot/fix-github-actions-workflow-build-ts-another-one
+2026-10-14T06:10:28.6893808Z  * [new branch]          copilot/fix-github-actions-workflow-build-ts-one-more-time -> origin/copilot/fix-github-actions-workflow-build-ts-one-more-time
+2026-10-14T06:10:28.6894567Z  * [new branch]          copilot/fix-github-actions-workflow-build-ts-yet-again -> origin/copilot/fix-github-actions-workflow-build-ts-yet-again
+2026-10-14T06:10:28.6895412Z  * [new branch]          copilot/fix-github-actions-workflow-cdcdf693-06c3-483f-a91f-160e5bcc336f -> origin/copilot/fix-github-actions-workflow-cdcdf693-06c3-483f-a91f-160e5bcc336f
+2026-10-14T06:10:28.6896189Z  * [new branch]          copilot/fix-github-actions-workflow-failure -> origin/copilot/fix-github-actions-workflow-failure
+2026-10-14T06:10:28.6896853Z  * [new branch]          copilot/fix-github-actions-workflow-failure-again -> origin/copilot/fix-github-actions-workflow-failure-again
+2026-10-14T06:10:28.6897688Z  * [new branch]          copilot/fix-github-actions-workflow-fcb337ac-72aa-47c3-8d30-005101d344b0 -> origin/copilot/fix-github-actions-workflow-fcb337ac-72aa-47c3-8d30-005101d344b0
+2026-10-14T06:10:28.6898479Z  * [new branch]          copilot/fix-github-actions-workflow-issue -> origin/copilot/fix-github-actions-workflow-issue
+2026-10-14T06:10:28.6899261Z  * [new branch]          copilot/fix-github-actions-workflow-issue-again -> origin/copilot/fix-github-actions-workflow-issue-again
+2026-10-14T06:10:28.6899952Z  * [new branch]          copilot/fix-github-actions-workflow-one-more-time -> origin/copilot/fix-github-actions-workflow-one-more-time
+2026-10-14T06:10:28.6900817Z  * [new branch]          copilot/fix-github-actions-workflow-please-work -> origin/copilot/fix-github-actions-workflow-please-work
+2026-10-14T06:10:28.6901504Z  * [new branch]          copilot/fix-github-actions-workflow-yet-again -> origin/copilot/fix-github-actions-workflow-yet-again
+2026-10-14T06:10:28.6902069Z  * [new branch]          copilot/fix-multiple-bugs -> origin/copilot/fix-multiple-bugs
+2026-10-14T06:10:28.6902595Z  * [new branch]          copilot/fix-shell-and-cli-windows-job -> origin/copilot/fix-shell-and-cli-windows-job
+2026-10-14T06:10:28.6903157Z  * [new branch]          copilot/fix-shell-and-cli-workflow -> origin/copilot/fix-shell-and-cli-workflow
+2026-10-14T06:10:28.6903725Z  * [new branch]          copilot/fix-shell-and-cli-workflow-again -> origin/copilot/fix-shell-and-cli-workflow-again
+2026-10-14T06:10:28.6904360Z  * [new branch]          copilot/fix-shell-and-cli-workflow-another-one -> origin/copilot/fix-shell-and-cli-workflow-another-one
+2026-10-14T06:10:28.6905009Z  * [new branch]          copilot/fix-shell-ui-greeting-functionality -> origin/copilot/fix-shell-ui-greeting-functionality
+2026-10-14T06:10:28.6905669Z  * [new branch]          copilot/fix-todos-in-todo-md -> origin/copilot/fix-todos-in-todo-md
+2026-10-14T06:10:28.6906241Z  * [new branch]          copilot/optimize-grammar-matcher-efficiency -> origin/copilot/optimize-grammar-matcher-efficiency
+2026-10-14T06:10:28.6906871Z  * [new branch]          copilot/refactor-input-completion-code -> origin/copilot/refactor-input-completion-code
+2026-10-14T06:10:28.6907581Z  * [new branch]          copilot/remove-config-execution-script-reuse-command-handl -> origin/copilot/remove-config-execution-script-reuse-command-handl
+2026-10-14T06:10:28.6908295Z  * [new branch]          copilot/remove-deprecated-dependencies -> origin/copilot/remove-deprecated-dependencies
+2026-10-14T06:10:28.6908888Z  * [new branch]          copilot/replace-image-generation-model -> origin/copilot/replace-image-generation-model
+2026-10-14T06:10:28.6909599Z  * [new branch]          copilot/review-tests-to-test-live -> origin/copilot/review-tests-to-test-live
+2026-10-14T06:10:28.6910191Z  * [new branch]          copilot/update-test-config-for-agents -> origin/copilot/update-test-config-for-agents
+2026-10-14T06:10:28.6910756Z  * [new branch]          copilot/upgrade-corepack-version -> origin/copilot/upgrade-corepack-version
+2026-10-14T06:10:28.6911365Z  * [new branch]          dependabot/github_actions/github-actions-ddbdad86d9 -> origin/dependabot/github_actions/github-actions-ddbdad86d9
+2026-10-14T06:10:28.6912018Z  * [new branch]          dependabot/npm_and_yarn/ts/dompurify-3.3.2 -> origin/dependabot/npm_and_yarn/ts/dompurify-3.3.2
+2026-10-14T06:10:28.6912580Z  * [new branch]          desktop-agent-improvements -> origin/desktop-agent-improvements
+2026-10-14T06:10:28.6913048Z  * [new branch]          dev/georgegng/cli_sessions -> origin/dev/georgegng/cli_sessions
+2026-10-14T06:10:28.6913538Z  * [new branch]          dev/georgeng/add_agentserver_docs -> origin/dev/georgeng/add_agentserver_docs
+2026-10-14T06:10:28.6914085Z  * [new branch]          dev/georgeng/add_doc_agg_trigger_pipeline -> origin/dev/georgeng/add_doc_agg_trigger_pipeline
+2026-10-14T06:10:28.6914633Z  * [new branch]          dev/georgeng/add_trace_command -> origin/dev/georgeng/add_trace_command
+2026-10-14T06:10:28.6915152Z  * [new branch]          dev/georgeng/agent_flow_updates -> origin/dev/georgeng/agent_flow_updates
+2026-10-14T06:10:28.6915672Z  * [new branch]          dev/georgeng/agentserver_session -> origin/dev/georgeng/agentserver_session
+2026-10-14T06:10:28.6916328Z  * [new branch]          dev/georgeng/agentserver_session_design -> origin/dev/georgeng/agentserver_session_design
+2026-10-14T06:10:28.6917226Z  * [new branch]          dev/georgeng/async-clientio-callbacks -> origin/dev/georgeng/async-clientio-callbacks
+2026-10-14T06:10:28.6917827Z  * [new branch]          dev/georgeng/audit_debug_logs -> origin/dev/georgeng/audit_debug_logs
+2026-10-14T06:10:28.6918473Z  * [new branch]          dev/georgeng/autogen-cicd -> origin/dev/georgeng/autogen-cicd
+2026-10-14T06:10:28.6919184Z  * [new branch]          dev/georgeng/benchmark_contextselector -> origin/dev/georgeng/benchmark_contextselector
+2026-10-14T06:10:28.6920043Z  * [new branch]          dev/georgeng/browser_queued_messages -> origin/dev/georgeng/browser_queued_messages
+2026-10-14T06:10:28.6920902Z  * [new branch]          dev/georgeng/build_ts_show_failures -> origin/dev/georgeng/build_ts_show_failures
+2026-10-14T06:10:28.6921733Z  * [new branch]          dev/georgeng/change_default_session -> origin/dev/georgeng/change_default_session
+2026-10-14T06:10:28.6922443Z  * [new branch]          dev/georgeng/cli_clientio_imp -> origin/dev/georgeng/cli_clientio_imp
+2026-10-14T06:10:28.6922976Z  * [new branch]          dev/georgeng/cli_conversation_commands -> origin/dev/georgeng/cli_conversation_commands
+2026-10-14T06:10:28.6923497Z  * [new branch]          dev/georgeng/cli_interrupt -> origin/dev/georgeng/cli_interrupt
+2026-10-14T06:10:28.6923992Z  * [new branch]          dev/georgeng/cli_sesh_persistence -> origin/dev/georgeng/cli_sesh_persistence
+2026-10-14T06:10:28.6924647Z  * [new branch]          dev/georgeng/clientio_improvements_1 -> origin/dev/georgeng/clientio_improvements_1
+2026-10-14T06:10:28.6925464Z  * [new branch]          dev/georgeng/config_autocomplete -> origin/dev/georgeng/config_autocomplete
+2026-10-14T06:10:28.6926125Z  * [new branch]          dev/georgeng/context_collision_resolution_doc -> origin/dev/georgeng/context_collision_resolution_doc
+2026-10-14T06:10:28.6926692Z  * [new branch]          dev/georgeng/contextselector_cache -> origin/dev/georgeng/contextselector_cache
+2026-10-14T06:10:28.6927254Z  * [new branch]          dev/georgeng/contxt_detection_v1 -> origin/dev/georgeng/contxt_detection_v1
+2026-10-14T06:10:28.6927791Z  * [new branch]          dev/georgeng/contxt_detection_v2 -> origin/dev/georgeng/contxt_detection_v2
+2026-10-14T06:10:28.6928276Z  * [new branch]          dev/georgeng/conv_grammar -> origin/dev/georgeng/conv_grammar
+2026-10-14T06:10:28.6928767Z  * [new branch]          dev/georgeng/conversation_package -> origin/dev/georgeng/conversation_package
+2026-10-14T06:10:28.6929482Z  * [new branch]          dev/georgeng/conversational_session_mgt -> origin/dev/georgeng/conversational_session_mgt
+2026-10-14T06:10:28.6930014Z  * [new branch]          dev/georgeng/deep_clear -> origin/dev/georgeng/deep_clear
+2026-10-14T06:10:28.6930550Z  * [new branch]          dev/georgeng/deprecate_cli_standalone -> origin/dev/georgeng/deprecate_cli_standalone
+2026-10-14T06:10:28.6931247Z  * [new branch]          dev/georgeng/describe_agents_actions -> origin/dev/georgeng/describe_agents_actions
+2026-10-14T06:10:28.6931773Z  * [new branch]          dev/georgeng/discord_agent -> origin/dev/georgeng/discord_agent
+2026-10-14T06:10:28.6932266Z  * [new branch]          dev/georgeng/discord_craft_msg -> origin/dev/georgeng/discord_craft_msg
+2026-10-14T06:10:28.6932759Z  * [new branch]          dev/georgeng/doc_autogen -> origin/dev/georgeng/doc_autogen
+2026-10-14T06:10:28.6933230Z  * [new branch]          dev/georgeng/doc_autogen_2 -> origin/dev/georgeng/doc_autogen_2
+2026-10-14T06:10:28.6933700Z  * [new branch]          dev/georgeng/docfx_setup -> origin/dev/georgeng/docfx_setup
+2026-10-14T06:10:28.6934190Z  * [new branch]          dev/georgeng/excalidraw_agent -> origin/dev/georgeng/excalidraw_agent
+2026-10-14T06:10:28.6934725Z  * [new branch]          dev/georgeng/fix-docsautogen-since -> origin/dev/georgeng/fix-docsautogen-since
+2026-10-14T06:10:28.6935262Z  * [new branch]          dev/georgeng/fix_as_easddr_use -> origin/dev/georgeng/fix_as_easddr_use
+2026-10-14T06:10:28.6935796Z  * [new branch]          dev/georgeng/fix_build_mcp_validation -> origin/dev/georgeng/fix_build_mcp_validation
+2026-10-14T06:10:28.6936345Z  * [new branch]          dev/georgeng/fix_chat_file_bug -> origin/dev/georgeng/fix_chat_file_bug
+2026-10-14T06:10:28.6936937Z  * [new branch]          dev/georgeng/fix_cli_conv -> origin/dev/georgeng/fix_cli_conv
+2026-10-14T06:10:28.6937441Z  * [new branch]          dev/georgeng/fix_cli_input_bug -> origin/dev/georgeng/fix_cli_input_bug
+2026-10-14T06:10:28.6938046Z  * [new branch]          dev/georgeng/fix_debug_prop_appagent -> origin/dev/georgeng/fix_debug_prop_appagent
+2026-10-14T06:10:28.6938590Z  * [new branch]          dev/georgeng/fix_instance_storage -> origin/dev/georgeng/fix_instance_storage
+2026-10-14T06:10:28.6939251Z  * [new branch]          dev/georgeng/fix_macro_library -> origin/dev/georgeng/fix_macro_library
+2026-10-14T06:10:28.6939788Z  * [new branch]          dev/georgeng/fix_nfa_with_subrules -> origin/dev/georgeng/fix_nfa_with_subrules
+2026-10-14T06:10:28.6940424Z  * [new branch]          dev/georgeng/fix_session_configs -> origin/dev/georgeng/fix_session_configs
+2026-10-14T06:10:28.6940943Z  * [new branch]          dev/georgeng/fix_shell_q_ux -> origin/dev/georgeng/fix_shell_q_ux
+2026-10-14T06:10:28.6941455Z  * [new branch]          dev/georgeng/fix_spotify_playlist -> origin/dev/georgeng/fix_spotify_playlist
+2026-10-14T06:10:28.6941983Z  * [new branch]          dev/georgeng/fix_test_flakiness -> origin/dev/georgeng/fix_test_flakiness
+2026-10-14T06:10:28.6942600Z  * [new branch]          dev/georgeng/fix_webflow_recording -> origin/dev/georgeng/fix_webflow_recording
+2026-10-14T06:10:28.6943105Z  * [new branch]          dev/georgeng/fix_wiki_toc -> origin/dev/georgeng/fix_wiki_toc
+2026-10-14T06:10:28.6943613Z  * [new branch]          dev/georgeng/fix_workflow_cli -> origin/dev/georgeng/fix_workflow_cli
+2026-10-14T06:10:28.6944138Z  * [new branch]          dev/georgeng/fold_reasoning_tools -> origin/dev/georgeng/fold_reasoning_tools
+2026-10-14T06:10:28.6944728Z  * [new branch]          dev/georgeng/getkeys_ignore_comments -> origin/dev/georgeng/getkeys_ignore_comments
+2026-10-14T06:10:28.6945266Z  * [new branch]          dev/georgeng/improve_cli_cleanup -> origin/dev/georgeng/improve_cli_cleanup
+2026-10-14T06:10:28.6945790Z  * [new branch]          dev/georgeng/improve_logs_2 -> origin/dev/georgeng/improve_logs_2
+2026-10-14T06:10:28.6946314Z  * [new branch]          dev/georgeng/message_queue_refactor -> origin/dev/georgeng/message_queue_refactor
+2026-10-14T06:10:28.6946897Z  * [new branch]          dev/georgeng/move_websocketserver_creation -> origin/dev/georgeng/move_websocketserver_creation
+2026-10-14T06:10:28.6947502Z  * [new branch]          dev/georgeng/onboardin_agents_keyword_gen -> origin/dev/georgeng/onboardin_agents_keyword_gen
+2026-10-14T06:10:28.6948013Z  * [new branch]          dev/georgeng/otel       -> origin/dev/georgeng/otel
+2026-10-14T06:10:28.6948486Z  * [new branch]          dev/georgeng/otel-foundations -> origin/dev/georgeng/otel-foundations
+2026-10-14T06:10:28.6949085Z  * [new branch]          dev/georgeng/otel-initialize-hosts -> origin/dev/georgeng/otel-initialize-hosts
+2026-10-14T06:10:28.6949620Z  * [new branch]          dev/georgeng/otel-lifecycle -> origin/dev/georgeng/otel-lifecycle
+2026-10-14T06:10:28.6950108Z  * [new branch]          dev/georgeng/otel-phase0 -> origin/dev/georgeng/otel-phase0
+2026-10-14T06:10:28.6950647Z  * [new branch]          dev/georgeng/otel-phase2-host-integration -> origin/dev/georgeng/otel-phase2-host-integration
+2026-10-14T06:10:28.6951277Z  * [new branch]          dev/georgeng/otel-phase2-structured-logging -> origin/dev/georgeng/otel-phase2-structured-logging
+2026-10-14T06:10:28.6951844Z  * [new branch]          dev/georgeng/otel-resources -> origin/dev/georgeng/otel-resources
+2026-10-14T06:10:28.6952331Z  * [new branch]          dev/georgeng/otel_debug_flow -> origin/dev/georgeng/otel_debug_flow
+2026-10-14T06:10:28.6952827Z  * [new branch]          dev/georgeng/otel_debug_flow_2 -> origin/dev/georgeng/otel_debug_flow_2
+2026-10-14T06:10:28.6953314Z  * [new branch]          dev/georgeng/otel_rpc_prop -> origin/dev/georgeng/otel_rpc_prop
+2026-10-14T06:10:28.6953797Z  * [new branch]          dev/georgeng/otel_rpc_wiring -> origin/dev/georgeng/otel_rpc_wiring
+2026-10-14T06:10:28.6954441Z  * [new branch]          dev/georgeng/otel_test_coverage -> origin/dev/georgeng/otel_test_coverage
+2026-10-14T06:10:28.6954968Z  * [new branch]          dev/georgeng/point_copilot_claude -> origin/dev/georgeng/point_copilot_claude
+2026-10-14T06:10:28.6955503Z  * [new branch]          dev/georgeng/reasoning_action_ui -> origin/dev/georgeng/reasoning_action_ui
+2026-10-14T06:10:28.6956044Z  * [new branch]          dev/georgeng/refactor_conversations -> origin/dev/georgeng/refactor_conversations
+2026-10-14T06:10:28.6956582Z  * [new branch]          dev/georgeng/refactor_sessions -> origin/dev/georgeng/refactor_sessions
+2026-10-14T06:10:28.6957105Z  * [new branch]          dev/georgeng/refactor_sessions_6 -> origin/dev/georgeng/refactor_sessions_6
+2026-10-14T06:10:28.6957621Z  * [new branch]          dev/georgeng/remove_stale_step -> origin/dev/georgeng/remove_stale_step
+2026-10-14T06:10:28.6958099Z  * [new branch]          dev/georgeng/rpc_rebind -> origin/dev/georgeng/rpc_rebind
+2026-10-14T06:10:28.6958664Z  * [new branch]          dev/georgeng/rpc_rebind_client_1 -> origin/dev/georgeng/rpc_rebind_client_1
+2026-10-14T06:10:28.6959390Z  * [new branch]          dev/georgeng/rpc_rebind_client_2 -> origin/dev/georgeng/rpc_rebind_client_2
+2026-10-14T06:10:28.6960007Z  * [new branch]          dev/georgeng/rpc_rebind_client_3 -> origin/dev/georgeng/rpc_rebind_client_3
+2026-10-14T06:10:28.6960507Z  * [new branch]          dev/georgeng/shared_types -> origin/dev/georgeng/shared_types
+2026-10-14T06:10:28.6961005Z  * [new branch]          dev/georgeng/shell_clientio -> origin/dev/georgeng/shell_clientio
+2026-10-14T06:10:28.6961579Z  * [new branch]          dev/georgeng/shell_conversation_commands -> origin/dev/georgeng/shell_conversation_commands
+2026-10-14T06:10:28.6962152Z  * [new branch]          dev/georgeng/simplify_question -> origin/dev/georgeng/simplify_question
+2026-10-14T06:10:28.6962682Z  * [new branch]          dev/georgeng/span_versioning_attr -> origin/dev/georgeng/span_versioning_attr
+2026-10-14T06:10:28.6963184Z  * [new branch]          dev/georgeng/test_retry -> origin/dev/georgeng/test_retry
+2026-10-14T06:10:28.6963662Z  * [new branch]          dev/georgeng/test_retry_multi -> origin/dev/georgeng/test_retry_multi
+2026-10-14T06:10:28.6964136Z  * [new branch]          dev/georgeng/toc_fix_3  -> origin/dev/georgeng/toc_fix_3
+2026-10-14T06:10:28.6964634Z  * [new branch]          dev/georgeng/typeagent-discovery -> origin/dev/georgeng/typeagent-discovery
+2026-10-14T06:10:28.6965218Z  * [new branch]          dev/georgeng/typeagent_browser_conversation -> origin/dev/georgeng/typeagent_browser_conversation
+2026-10-14T06:10:28.6965792Z  * [new branch]          dev/georgeng/update_code_grammar -> origin/dev/georgeng/update_code_grammar
+2026-10-14T06:10:28.6966471Z  * [new branch]          dev/georgeng/update_debug_steps -> origin/dev/georgeng/update_debug_steps
+2026-10-14T06:10:28.6967312Z  * [new branch]          dev/georgeng/update_doc_autogen_3 -> origin/dev/georgeng/update_doc_autogen_3
+2026-10-14T06:10:28.6968143Z  * [new branch]          dev/georgeng/update_docs_6_25_26 -> origin/dev/georgeng/update_docs_6_25_26
+2026-10-14T06:10:28.6968924Z  * [new branch]          dev/georgeng/user_settings -> origin/dev/georgeng/user_settings
+2026-10-14T06:10:28.6969625Z  * [new branch]          dev/georgeng/vsc_perms  -> origin/dev/georgeng/vsc_perms
+2026-10-14T06:10:28.6970317Z  * [new branch]          dev/georgeng/vscode_agent_updates -> origin/dev/georgeng/vscode_agent_updates
+2026-10-14T06:10:28.6970897Z  * [new branch]          dev/georgeng/vscode_conversations -> origin/dev/georgeng/vscode_conversations
+2026-10-14T06:10:28.6971439Z  * [new branch]          dev/georgeng/vscode_copy -> origin/dev/georgeng/vscode_copy
+2026-10-14T06:10:28.6971978Z  * [new branch]          dev/georgeng/vscode_message_alignment -> origin/dev/georgeng/vscode_message_alignment
+2026-10-14T06:10:28.6972544Z  * [new branch]          dev/georgeng/websocket_heartbeat -> origin/dev/georgeng/websocket_heartbeat
+2026-10-14T06:10:28.6973290Z  * [new branch]          dev/georgeng/websocket_session_map -> origin/dev/georgeng/websocket_session_map
+2026-10-14T06:10:28.6973919Z  * [new branch]          dev/hillarym/browser2   -> origin/dev/hillarym/browser2
+2026-10-14T06:10:28.6974739Z  * [new branch]          dev/hillarym/copilotModels -> origin/dev/hillarym/copilotModels
+2026-10-14T06:10:28.6975499Z  * [new branch]          dev/hillarym/decisionTest -> origin/dev/hillarym/decisionTest
+2026-10-14T06:10:28.6976221Z  * [new branch]          dev/hillarym/macroTests -> origin/dev/hillarym/macroTests
+2026-10-14T06:10:28.6976890Z  * [new branch]          dev/hillarym/macroTests2 -> origin/dev/hillarym/macroTests2
+2026-10-14T06:10:28.6977541Z  * [new branch]          dev/hillarym/macros2    -> origin/dev/hillarym/macros2
+2026-10-14T06:10:28.6997055Z  * [new branch]          dev/hillarym/macrosView2 -> origin/dev/hillarym/macrosView2
+2026-10-14T06:10:28.6997918Z  * [new branch]          dev/hillarym/memory14   -> origin/dev/hillarym/memory14
+2026-10-14T06:10:28.6998618Z  * [new branch]          dev/hillarym/memory16   -> origin/dev/hillarym/memory16
+2026-10-14T06:10:28.6999407Z  * [new branch]          dev/hillarym/memory18   -> origin/dev/hillarym/memory18
+2026-10-14T06:10:28.7000242Z  * [new branch]          dev/hillarym/memoryUX   -> origin/dev/hillarym/memoryUX
+2026-10-14T06:10:28.7000964Z  * [new branch]          dev/hillarym/memoryUX3  -> origin/dev/hillarym/memoryUX3
+2026-10-14T06:10:28.7001664Z  * [new branch]          dev/hillarym/memoryUx2  -> origin/dev/hillarym/memoryUx2
+2026-10-14T06:10:28.7002371Z  * [new branch]          dev/hillarym/memoryView3 -> origin/dev/hillarym/memoryView3
+2026-10-14T06:10:28.7003082Z  * [new branch]          dev/hillarym/pdfSupport -> origin/dev/hillarym/pdfSupport
+2026-10-14T06:10:28.7003878Z  * [new branch]          dev/hillarym/pdfSupport-memoryHub -> origin/dev/hillarym/pdfSupport-memoryHub
+2026-10-14T06:10:28.7004647Z  * [new branch]          dev/hillarym/pipelines  -> origin/dev/hillarym/pipelines
+2026-10-14T06:10:28.7005352Z  * [new branch]          dev/hillarym/webImport  -> origin/dev/hillarym/webImport
+2026-10-14T06:10:28.7006038Z  * [new branch]          dev/hillarym/webImport2 -> origin/dev/hillarym/webImport2
+2026-10-14T06:10:28.7006750Z  * [new branch]          dev/hillarym/webImport3 -> origin/dev/hillarym/webImport3
+2026-10-14T06:10:28.7007476Z  * [new branch]          dev/hillarym/webImport4 -> origin/dev/hillarym/webImport4
+2026-10-14T06:10:28.7008391Z  * [new branch]          dev/jebransyed/31000000728707-powershell-containment -> origin/dev/jebransyed/31000000728707-powershell-containment
+2026-10-14T06:10:28.7023319Z  * [new branch]          dev/jebransyed/agent-groups-disabled-recommendations -> origin/dev/jebransyed/agent-groups-disabled-recommendations
+2026-10-14T06:10:28.7024430Z  * [new branch]          dev/jebransyed/android-demo-v1 -> origin/dev/jebransyed/android-demo-v1
+2026-10-14T06:10:28.7025345Z  * [new branch]          dev/jebransyed/cli-processing-scrollback -> origin/dev/jebransyed/cli-processing-scrollback
+2026-10-14T06:10:28.7026304Z  * [new branch]          dev/jebransyed/client-agent-followups -> origin/dev/jebransyed/client-agent-followups
+2026-10-14T06:10:28.7027260Z  * [new branch]          dev/jebransyed/fix-cli-interaction-input -> origin/dev/jebransyed/fix-cli-interaction-input
+2026-10-14T06:10:28.7028228Z  * [new branch]          dev/jebransyed/fix-cli-temporary-output -> origin/dev/jebransyed/fix-cli-temporary-output
+2026-10-14T06:10:28.7029308Z  * [new branch]          dev/jebransyed/fix-copilot-cli-resolution -> origin/dev/jebransyed/fix-copilot-cli-resolution
+2026-10-14T06:10:28.7030317Z  * [new branch]          dev/jebransyed/fix-embedding-none-message-index -> origin/dev/jebransyed/fix-embedding-none-message-index
+2026-10-14T06:10:28.7031351Z  * [new branch]          dev/jebransyed/fix-macro-learning-grounding -> origin/dev/jebransyed/fix-macro-learning-grounding
+2026-10-14T06:10:28.7032446Z  * [new branch]          dev/jebransyed/fix-powershell-network-output -> origin/dev/jebransyed/fix-powershell-network-output
+2026-10-14T06:10:28.7033766Z  * [new branch]          dev/jebransyed/fix-source-macro-recorder -> origin/dev/jebransyed/fix-source-macro-recorder
+2026-10-14T06:10:28.7034762Z  * [new branch]          dev/jebransyed/git-story-aggregator-scaffold -> origin/dev/jebransyed/git-story-aggregator-scaffold
+2026-10-14T06:10:28.7035877Z  * [new branch]          dev/jebransyed/remove-powershell-feature-gates -> origin/dev/jebransyed/remove-powershell-feature-gates
+2026-10-14T06:10:28.7036759Z  * [new branch]          dev/jebransyed/run-no-op -> origin/dev/jebransyed/run-no-op
+2026-10-14T06:10:28.7037577Z  * [new branch]          dev/jebransyed/server-misreport-bug -> origin/dev/jebransyed/server-misreport-bug
+2026-10-14T06:10:28.7038483Z  * [new branch]          dev/jebransyed/simplify-wear-voice-ui -> origin/dev/jebransyed/simplify-wear-voice-ui
+2026-10-14T06:10:28.7039374Z  * [new branch]          dev/pialic/vscode-ext   -> origin/dev/pialic/vscode-ext
+2026-10-14T06:10:28.7040116Z  * [new branch]          dev/robgruen/TODO/actionGrammar -> origin/dev/robgruen/TODO/actionGrammar
+2026-10-14T06:10:28.7040984Z  * [new branch]          dev/robgruen/TODO/azure-ai-foundry -> origin/dev/robgruen/TODO/azure-ai-foundry
+2026-10-14T06:10:28.7041871Z  * [new branch]          dev/robgruen/TODO/cache -> origin/dev/robgruen/TODO/cache
+2026-10-14T06:10:28.7042593Z  * [new branch]          dev/robgruen/TODO/calendar -> origin/dev/robgruen/TODO/calendar
+2026-10-14T06:10:28.7043339Z  * [new branch]          dev/robgruen/TODO/desktop -> origin/dev/robgruen/TODO/desktop
+2026-10-14T06:10:28.7044102Z  * [new branch]          dev/robgruen/TODO/dispatcher -> origin/dev/robgruen/TODO/dispatcher
+2026-10-14T06:10:28.7044852Z  * [new branch]          dev/robgruen/TODO/docs  -> origin/dev/robgruen/TODO/docs
+2026-10-14T06:10:28.7045573Z  * [new branch]          dev/robgruen/TODO/infra -> origin/dev/robgruen/TODO/infra
+2026-10-14T06:10:28.7046318Z  * [new branch]          dev/robgruen/TODO/knowPro -> origin/dev/robgruen/TODO/knowPro
+2026-10-14T06:10:28.7047051Z  * [new branch]          dev/robgruen/TODO/memory -> origin/dev/robgruen/TODO/memory
+2026-10-14T06:10:28.7047787Z  * [new branch]          dev/robgruen/TODO/player -> origin/dev/robgruen/TODO/player
+2026-10-14T06:10:28.7048544Z  * [new branch]          dev/robgruen/TODO/shell -> origin/dev/robgruen/TODO/shell
+2026-10-14T06:10:28.7049468Z  * [new branch]          dev/robgruen/TODO/weather -> origin/dev/robgruen/TODO/weather
+2026-10-14T06:10:28.7050164Z  * [new branch]          dev/robgruen/TODOs      -> origin/dev/robgruen/TODOs
+2026-10-14T06:10:28.7050881Z  * [new branch]          dev/robgruen/action_browser -> origin/dev/robgruen/action_browser
+2026-10-14T06:10:28.7051652Z  * [new branch]          dev/robgruen/action_collision -> origin/dev/robgruen/action_collision
+2026-10-14T06:10:28.7052420Z  * [new branch]          dev/robgruen/admin_consent -> origin/dev/robgruen/admin_consent
+2026-10-14T06:10:28.7053278Z  * [new branch]          dev/robgruen/advanced_codeql -> origin/dev/robgruen/advanced_codeql
+2026-10-14T06:10:28.7054057Z  * [new branch]          dev/robgruen/agent_cleanup -> origin/dev/robgruen/agent_cleanup
+2026-10-14T06:10:28.7054840Z  * [new branch]          dev/robgruen/agent_cli  -> origin/dev/robgruen/agent_cli
+2026-10-14T06:10:28.7055589Z  * [new branch]          dev/robgruen/agent_server -> origin/dev/robgruen/agent_server
+2026-10-14T06:10:28.7056372Z  * [new branch]          dev/robgruen/autoshell_readmine -> origin/dev/robgruen/autoshell_readmine
+2026-10-14T06:10:28.7057204Z  * [new branch]          dev/robgruen/azure_pipeline -> origin/dev/robgruen/azure_pipeline
+2026-10-14T06:10:28.7058008Z  * [new branch]          dev/robgruen/backport_fixes -> origin/dev/robgruen/backport_fixes
+2026-10-14T06:10:28.7058819Z  * [new branch]          dev/robgruen/backport_hotfix -> origin/dev/robgruen/backport_hotfix
+2026-10-14T06:10:28.7059786Z  * [new branch]          dev/robgruen/batchGrammar -> origin/dev/robgruen/batchGrammar
+2026-10-14T06:10:28.7060823Z  * [new branch]          dev/robgruen/build_cleanup -> origin/dev/robgruen/build_cleanup
+2026-10-14T06:10:28.7061588Z  * [new branch]          dev/robgruen/builtinTask_fix -> origin/dev/robgruen/builtinTask_fix
+2026-10-14T06:10:28.7062336Z  * [new branch]          dev/robgruen/chat_ui    -> origin/dev/robgruen/chat_ui
+2026-10-14T06:10:28.7062945Z  * [new branch]          dev/robgruen/ci_fix     -> origin/dev/robgruen/ci_fix
+2026-10-14T06:10:28.7063393Z  * [new branch]          dev/robgruen/cleanup    -> origin/dev/robgruen/cleanup
+2026-10-14T06:10:28.7063868Z  * [new branch]          dev/robgruen/cleanup_new -> origin/dev/robgruen/cleanup_new
+2026-10-14T06:10:28.7064595Z  * [new branch]          dev/robgruen/code_complexity -> origin/dev/robgruen/code_complexity
+2026-10-14T06:10:28.7065233Z  * [new branch]          dev/robgruen/codeql     -> origin/dev/robgruen/codeql
+2026-10-14T06:10:28.7065948Z  * [new branch]          dev/robgruen/codeql-fix -> origin/dev/robgruen/codeql-fix
+2026-10-14T06:10:28.7066746Z  * [new branch]          dev/robgruen/config     -> origin/dev/robgruen/config
+2026-10-14T06:10:28.7067487Z  * [new branch]          dev/robgruen/default_extensions -> origin/dev/robgruen/default_extensions
+2026-10-14T06:10:28.7068430Z  * [new branch]          dev/robgruen/deprecate_spelunker -> origin/dev/robgruen/deprecate_spelunker
+2026-10-14T06:10:28.7069420Z  * [new branch]          dev/robgruen/dispatcher_updates -> origin/dev/robgruen/dispatcher_updates
+2026-10-14T06:10:28.7070213Z  * [new branch]          dev/robgruen/docker_fix -> origin/dev/robgruen/docker_fix
+2026-10-14T06:10:28.7071018Z  * [new branch]          dev/robgruen/docker_pipeline_fix -> origin/dev/robgruen/docker_pipeline_fix
+2026-10-14T06:10:28.7071680Z  * [new branch]          dev/robgruen/docs_workflow_update -> origin/dev/robgruen/docs_workflow_update
+2026-10-14T06:10:28.7072174Z  * [new branch]          dev/robgruen/dogfooding -> origin/dev/robgruen/dogfooding
+2026-10-14T06:10:28.7072673Z  * [new branch]          dev/robgruen/dogfooding10 -> origin/dev/robgruen/dogfooding10
+2026-10-14T06:10:28.7073219Z  * [new branch]          dev/robgruen/dogfooding2 -> origin/dev/robgruen/dogfooding2
+2026-10-14T06:10:28.7073725Z  * [new branch]          dev/robgruen/dogfooding3 -> origin/dev/robgruen/dogfooding3
+2026-10-14T06:10:28.7074221Z  * [new branch]          dev/robgruen/dogfooding4 -> origin/dev/robgruen/dogfooding4
+2026-10-14T06:10:28.7074727Z  * [new branch]          dev/robgruen/dogfooding5 -> origin/dev/robgruen/dogfooding5
+2026-10-14T06:10:28.7075176Z  * [new branch]          dev/robgruen/dogfooding6 -> origin/dev/robgruen/dogfooding6
+2026-10-14T06:10:28.7075897Z  * [new branch]          dev/robgruen/dogfooding7 -> origin/dev/robgruen/dogfooding7
+2026-10-14T06:10:28.7076615Z  * [new branch]          dev/robgruen/dogfooding8 -> origin/dev/robgruen/dogfooding8
+2026-10-14T06:10:28.7077163Z  * [new branch]          dev/robgruen/dogfooding9 -> origin/dev/robgruen/dogfooding9
+2026-10-14T06:10:28.7077752Z  * [new branch]          dev/robgruen/embeddings-retry-logging -> origin/dev/robgruen/embeddings-retry-logging
+2026-10-14T06:10:28.7078510Z  * [new branch]          dev/robgruen/fixed_tests -> origin/dev/robgruen/fixed_tests
+2026-10-14T06:10:28.7079393Z  * [new branch]          dev/robgruen/flakey     -> origin/dev/robgruen/flakey
+2026-10-14T06:10:28.7080217Z  * [new branch]          dev/robgruen/flakey_tests -> origin/dev/robgruen/flakey_tests
+2026-10-14T06:10:28.7081098Z  * [new branch]          dev/robgruen/foundry_update -> origin/dev/robgruen/foundry_update
+2026-10-14T06:10:28.7082033Z  * [new branch]          dev/robgruen/getKeys_yaml_merge -> origin/dev/robgruen/getKeys_yaml_merge
+2026-10-14T06:10:28.7082954Z  * [new branch]          dev/robgruen/getnpmrc_hotfix -> origin/dev/robgruen/getnpmrc_hotfix
+2026-10-14T06:10:28.7083729Z  * [new branch]          dev/robgruen/ghc        -> origin/dev/robgruen/ghc
+2026-10-14T06:10:28.7084496Z  * [new branch]          dev/robgruen/glassworm  -> origin/dev/robgruen/glassworm
+2026-10-14T06:10:28.7085359Z  * [new branch]          dev/robgruen/heal_lockfile -> origin/dev/robgruen/heal_lockfile
+2026-10-14T06:10:28.7086394Z  * [new branch]          dev/robgruen/mcp_non_blocking_loading -> origin/dev/robgruen/mcp_non_blocking_loading
+2026-10-14T06:10:28.7086941Z  * [new branch]          dev/robgruen/mongodb_migration -> origin/dev/robgruen/mongodb_migration
+2026-10-14T06:10:28.7087463Z  * [new branch]          dev/robgruen/mongodb_migration2 -> origin/dev/robgruen/mongodb_migration2
+2026-10-14T06:10:28.7087979Z  * [new branch]          dev/robgruen/mongodb_migration3 -> origin/dev/robgruen/mongodb_migration3
+2026-10-14T06:10:28.7088475Z  * [new branch]          dev/robgruen/mongodb_migration4 -> origin/dev/robgruen/mongodb_migration4
+2026-10-14T06:10:28.7089218Z  * [new branch]          dev/robgruen/nl_commands -> origin/dev/robgruen/nl_commands
+2026-10-14T06:10:28.7089717Z  * [new branch]          dev/robgruen/node_20_deprecation -> origin/dev/robgruen/node_20_deprecation
+2026-10-14T06:10:28.7090211Z  * [new branch]          dev/robgruen/npmrc_hotfix -> origin/dev/robgruen/npmrc_hotfix
+2026-10-14T06:10:28.7090665Z  * [new branch]          dev/robgruen/oct_fixes  -> origin/dev/robgruen/oct_fixes
+2026-10-14T06:10:28.7091227Z  * [new branch]          dev/robgruen/onboarding_agent -> origin/dev/robgruen/onboarding_agent
+2026-10-14T06:10:28.7091685Z  * [new branch]          dev/robgruen/patch_html -> origin/dev/robgruen/patch_html
+2026-10-14T06:10:28.7092215Z  * [new branch]          dev/robgruen/pipeline_fix2 -> origin/dev/robgruen/pipeline_fix2
+2026-10-14T06:10:28.7092724Z  * [new branch]          dev/robgruen/pipeline_trigger_fix -> origin/dev/robgruen/pipeline_trigger_fix
+2026-10-14T06:10:28.7093215Z  * [new branch]          dev/robgruen/pipeline_update -> origin/dev/robgruen/pipeline_update
+2026-10-14T06:10:28.7093697Z  * [new branch]          dev/robgruen/playPlaylist -> origin/dev/robgruen/playPlaylist
+2026-10-14T06:10:28.7094223Z  * [new branch]          dev/robgruen/pnpm_cache_hotfix -> origin/dev/robgruen/pnpm_cache_hotfix
+2026-10-14T06:10:28.7094760Z  * [new branch]          dev/robgruen/pnpm_version_upgrade -> origin/dev/robgruen/pnpm_version_upgrade
+2026-10-14T06:10:28.7095231Z  * [new branch]          dev/robgruen/pooling    -> origin/dev/robgruen/pooling
+2026-10-14T06:10:28.7095673Z  * [new branch]          dev/robgruen/reasoning  -> origin/dev/robgruen/reasoning
+2026-10-14T06:10:28.7096132Z  * [new branch]          dev/robgruen/reasoning_subagent -> origin/dev/robgruen/reasoning_subagent
+2026-10-14T06:10:28.7096610Z  * [new branch]          dev/robgruen/rem-memory -> origin/dev/robgruen/rem-memory
+2026-10-14T06:10:28.7097098Z  * [new branch]          dev/robgruen/session_update -> origin/dev/robgruen/session_update
+2026-10-14T06:10:28.7097578Z  * [new branch]          dev/robgruen/shell_chat_ui -> origin/dev/robgruen/shell_chat_ui
+2026-10-14T06:10:28.7098064Z  * [new branch]          dev/robgruen/shell_test_stability -> origin/dev/robgruen/shell_test_stability
+2026-10-14T06:10:28.7098586Z  * [new branch]          dev/robgruen/smart_prettier -> origin/dev/robgruen/smart_prettier
+2026-10-14T06:10:28.7099248Z  * [new branch]          dev/robgruen/smoke_test_fix -> origin/dev/robgruen/smoke_test_fix
+2026-10-14T06:10:28.7099731Z  * [new branch]          dev/robgruen/structured_output -> origin/dev/robgruen/structured_output
+2026-10-14T06:10:28.7100180Z  * [new branch]          dev/robgruen/ui         -> origin/dev/robgruen/ui
+2026-10-14T06:10:28.7100643Z  * [new branch]          dev/robgruen/userData-testing -> origin/dev/robgruen/userData-testing
+2026-10-14T06:10:28.7101129Z  * [new branch]          dev/robgruen/user_feedback -> origin/dev/robgruen/user_feedback
+2026-10-14T06:10:28.7101590Z  * [new branch]          dev/talzacc/codeql-fixes -> origin/dev/talzacc/codeql-fixes
+2026-10-14T06:10:28.7102098Z  * [new branch]          dev/talzacc/dependabot-version-bumps -> origin/dev/talzacc/dependabot-version-bumps
+2026-10-14T06:10:28.7102631Z  * [new branch]          dev/talzacc/exifreader-type-fix -> origin/dev/talzacc/exifreader-type-fix
+2026-10-14T06:10:28.7103324Z  * [new branch]          dev/talzacc/fix-chat-ui-xss-sanitizer -> origin/dev/talzacc/fix-chat-ui-xss-sanitizer
+2026-10-14T06:10:28.7103917Z  * [new branch]          dev/talzacc/fix-dep-clean-rebuild-verify -> origin/dev/talzacc/fix-dep-clean-rebuild-verify
+2026-10-14T06:10:28.7104507Z  * [new branch]          dev/talzacc/fix-dep-resolved-versions -> origin/dev/talzacc/fix-dep-resolved-versions
+2026-10-14T06:10:28.7105054Z  * [new branch]          dev/talzacc/fix-dep-token-refresh -> origin/dev/talzacc/fix-dep-token-refresh
+2026-10-14T06:10:28.7105596Z  * [new branch]          dev/talzacc/fix-dependabot-workflow -> origin/dev/talzacc/fix-dependabot-workflow
+2026-10-14T06:10:28.7106116Z  * [new branch]          dev/talzacc/loopback-binding -> origin/dev/talzacc/loopback-binding
+2026-10-14T06:10:28.7106601Z  * [new branch]          dev/talzacc/pin-exifreader -> origin/dev/talzacc/pin-exifreader
+2026-10-14T06:10:28.7107068Z  * [new branch]          dev/talzacc/player-fixes -> origin/dev/talzacc/player-fixes
+2026-10-14T06:10:28.7107580Z  * [new branch]          dev/talzacc/player-fixes-clean-main -> origin/dev/talzacc/player-fixes-clean-main
+2026-10-14T06:10:28.7108169Z  * [new branch]          dev/talzacc/player_fixes -> origin/dev/talzacc/player_fixes
+2026-10-14T06:10:28.7108617Z  * [new branch]          dev/talzacc/setup_script -> origin/dev/talzacc/setup_script
+2026-10-14T06:10:28.7109153Z  * [new branch]          dfa-ast-parity-benchmark -> origin/dfa-ast-parity-benchmark
+2026-10-14T06:10:28.7109600Z  * [new branch]          dfa-correctness-tests   -> origin/dfa-correctness-tests
+2026-10-14T06:10:28.7110038Z  * [new branch]          dfa-space-optimization  -> origin/dfa-space-optimization
+2026-10-14T06:10:28.7110530Z  * [new branch]          domnguyen/action-parameters-grader -> origin/domnguyen/action-parameters-grader
+2026-10-14T06:10:28.7111143Z  * [new branch]          domnguyen/action-parameters-grader-1k-audit -> origin/domnguyen/action-parameters-grader-1k-audit
+2026-10-14T06:10:28.7111772Z  * [new branch]          domnguyen/actionTemplate-union-arms -> origin/domnguyen/actionTemplate-union-arms
+2026-10-14T06:10:28.7112328Z  * [new branch]          domnguyen/agent-harness-hooks -> origin/domnguyen/agent-harness-hooks
+2026-10-14T06:10:28.7112850Z  * [new branch]          domnguyen/agr-optional-group-fix -> origin/domnguyen/agr-optional-group-fix
+2026-10-14T06:10:28.7113498Z  * [new branch]          domnguyen/agr-quantifier-special-chars -> origin/domnguyen/agr-quantifier-special-chars
+2026-10-14T06:10:28.7114048Z  * [new branch]          domnguyen/aiclient-cached-tokens -> origin/domnguyen/aiclient-cached-tokens
+2026-10-14T06:10:28.7114577Z  * [new branch]          domnguyen/aiclient-wire-api -> origin/domnguyen/aiclient-wire-api
+2026-10-14T06:10:28.7115088Z  * [new branch]          domnguyen/bench-empty-gold-tokens -> origin/domnguyen/bench-empty-gold-tokens
+2026-10-14T06:10:28.7115614Z  * [new branch]          domnguyen/bench-grader-name-sets -> origin/domnguyen/bench-grader-name-sets
+2026-10-14T06:10:28.7116184Z  * [new branch]          domnguyen/bench-python-literal-scanners -> origin/domnguyen/bench-python-literal-scanners
+2026-10-14T06:10:28.7116785Z  * [new branch]          domnguyen/benchmark-source-input-validation -> origin/domnguyen/benchmark-source-input-validation
+2026-10-14T06:10:28.7117341Z  * [new branch]          domnguyen/benchmarks-filejson -> origin/domnguyen/benchmarks-filejson
+2026-10-14T06:10:28.7117842Z  * [new branch]          domnguyen/benchmarks-rawjsonscan -> origin/domnguyen/benchmarks-rawjsonscan
+2026-10-14T06:10:28.7118339Z  * [new branch]          domnguyen/benchmarks-synthtext -> origin/domnguyen/benchmarks-synthtext
+2026-10-14T06:10:28.7118888Z  * [new branch]          domnguyen/calendar-natural-schedule-find -> origin/domnguyen/calendar-natural-schedule-find
+2026-10-14T06:10:28.7119571Z  * [new branch]          domnguyen/capture-translation-model-calls -> origin/domnguyen/capture-translation-model-calls
+2026-10-14T06:10:28.7120255Z  * [new branch]          domnguyen/ci-git-story-fast-lane -> origin/domnguyen/ci-git-story-fast-lane
+2026-10-14T06:10:28.7120845Z  * [new branch]          domnguyen/clear-history-on-session-open -> origin/domnguyen/clear-history-on-session-open
+2026-10-14T06:10:28.7121471Z  * [new branch]          domnguyen/copilot-memory-foundation -> origin/domnguyen/copilot-memory-foundation
+2026-10-14T06:10:28.7121999Z  * [new branch]          domnguyen/copilot-memory-runtime -> origin/domnguyen/copilot-memory-runtime
+2026-10-14T06:10:28.7122541Z  * [new branch]          domnguyen/default-model-gpt-5-6-luna -> origin/domnguyen/default-model-gpt-5-6-luna
+2026-10-14T06:10:28.7123072Z  * [new branch]          domnguyen/default-model-gpt-6 -> origin/domnguyen/default-model-gpt-6
+2026-10-14T06:10:28.7123612Z  * [new branch]          domnguyen/dispatcher-unknown-abstention -> origin/domnguyen/dispatcher-unknown-abstention
+2026-10-14T06:10:28.7124154Z  * [new branch]          domnguyen/droidcall-evaluation -> origin/domnguyen/droidcall-evaluation
+2026-10-14T06:10:28.7124683Z  * [new branch]          domnguyen/droidcall-official-grader -> origin/domnguyen/droidcall-official-grader
+2026-10-14T06:10:28.7125312Z  * [new branch]          domnguyen/droidcall-raw-actions -> origin/domnguyen/droidcall-raw-actions
+2026-10-14T06:10:28.7125843Z  * [new branch]          domnguyen/embedding-runtime-config -> origin/domnguyen/embedding-runtime-config
+2026-10-14T06:10:28.7126394Z  * [new branch]          domnguyen/endpoint-pool-secure-rng -> origin/domnguyen/endpoint-pool-secure-rng
+2026-10-14T06:10:28.7126928Z  * [new branch]          domnguyen/faster-pr-pipelines -> origin/domnguyen/faster-pr-pipelines
+2026-10-14T06:10:28.7127495Z  * [new branch]          domnguyen/fix-dfa-phrase-set-false-negatives -> origin/domnguyen/fix-dfa-phrase-set-false-negatives
+2026-10-14T06:10:28.7128118Z  * [new branch]          domnguyen/fix-gh-action -> origin/domnguyen/fix-gh-action
+2026-10-14T06:10:28.7128638Z  * [new branch]          domnguyen/fix-knowpro-levenshtein-import -> origin/domnguyen/fix-knowpro-levenshtein-import
+2026-10-14T06:10:28.7129319Z  * [new branch]          domnguyen/fix-mq-agc-action-grammar-race -> origin/domnguyen/fix-mq-agc-action-grammar-race
+2026-10-14T06:10:28.7129923Z  * [new branch]          domnguyen/fix-optional-rule-ref-match -> origin/domnguyen/fix-optional-rule-ref-match
+2026-10-14T06:10:28.7130499Z  * [new branch]          domnguyen/fix-schema-union-coercion -> origin/domnguyen/fix-schema-union-coercion
+2026-10-14T06:10:28.7131077Z  * [new branch]          domnguyen/fix-short-flag-values -> origin/domnguyen/fix-short-flag-values
+2026-10-14T06:10:28.7131608Z  * [new branch]          domnguyen/fix-workqueue-drain-task -> origin/domnguyen/fix-workqueue-drain-task
+2026-10-14T06:10:28.7132114Z  * [new branch]          domnguyen/gate-shell-e2e -> origin/domnguyen/gate-shell-e2e
+2026-10-14T06:10:28.7132636Z  * [new branch]          domnguyen/git-commit-story-init -> origin/domnguyen/git-commit-story-init
+2026-10-14T06:10:28.7133206Z  * [new branch]          domnguyen/git-commit-story-scaffold -> origin/domnguyen/git-commit-story-scaffold
+2026-10-14T06:10:28.7133691Z  * [new branch]          domnguyen/git-story     -> origin/domnguyen/git-story
+2026-10-14T06:10:28.7134154Z  * [new branch]          domnguyen/git-story-daemon -> origin/domnguyen/git-story-daemon
+2026-10-14T06:10:28.7134660Z  * [new branch]          domnguyen/git-story-daemon-client -> origin/domnguyen/git-story-daemon-client
+2026-10-14T06:10:28.7135179Z  * [new branch]          domnguyen/git-story-git-hooks -> origin/domnguyen/git-story-git-hooks
+2026-10-14T06:10:28.7135670Z  * [new branch]          domnguyen/git-story-hook-tests -> origin/domnguyen/git-story-hook-tests
+2026-10-14T06:10:28.7136199Z  * [new branch]          domnguyen/git-story-pre-commit-hook -> origin/domnguyen/git-story-pre-commit-hook
+2026-10-14T06:10:28.7136760Z  * [new branch]          domnguyen/git-story-prepare-commit-msg -> origin/domnguyen/git-story-prepare-commit-msg
+2026-10-14T06:10:28.7137413Z  * [new branch]          domnguyen/git-story-session-hooks -> origin/domnguyen/git-story-session-hooks
+2026-10-14T06:10:28.7137932Z  * [new branch]          domnguyen/git-story-session-start -> origin/domnguyen/git-story-session-start
+2026-10-14T06:10:28.7138477Z  * [new branch]          domnguyen/git-story-sqlite -> origin/domnguyen/git-story-sqlite
+2026-10-14T06:10:28.7139127Z  * [new branch]          domnguyen/git-story-tool-filter -> origin/domnguyen/git-story-tool-filter
+2026-10-14T06:10:28.7139635Z  * [new branch]          domnguyen/git-story-v2  -> origin/domnguyen/git-story-v2
+2026-10-14T06:10:28.7140104Z  * [new branch]          domnguyen/git-story-v2-capture -> origin/domnguyen/git-story-v2-capture
+2026-10-14T06:10:28.7140669Z  * [new branch]          domnguyen/honor-assistant-selection-model -> origin/domnguyen/honor-assistant-selection-model
+2026-10-14T06:10:28.7141319Z  * [new branch]          domnguyen/keep-attachment-send-enabled -> origin/domnguyen/keep-attachment-send-enabled
+2026-10-14T06:10:28.7141894Z  * [new branch]          domnguyen/knowpro-addexact-hitcount -> origin/domnguyen/knowpro-addexact-hitcount
+2026-10-14T06:10:28.7142482Z  * [new branch]          domnguyen/knowpro-embedding-config-followup -> origin/domnguyen/knowpro-embedding-config-followup
+2026-10-14T06:10:28.7143205Z  * [new branch]          domnguyen/knowpro-local-embedding -> origin/domnguyen/knowpro-local-embedding
+2026-10-14T06:10:28.7143795Z  * [new branch]          domnguyen/knowpro-message-index-chunk-ordinals -> origin/domnguyen/knowpro-message-index-chunk-ordinals
+2026-10-14T06:10:28.7144395Z  * [new branch]          domnguyen/list-determiner-listname -> origin/domnguyen/list-determiner-listname
+2026-10-14T06:10:28.7144929Z  * [new branch]          domnguyen/list-placeholder-reject -> origin/domnguyen/list-placeholder-reject
+2026-10-14T06:10:28.7145446Z  * [new branch]          domnguyen/memory-lock-fencing -> origin/domnguyen/memory-lock-fencing
+2026-10-14T06:10:28.7145960Z  * [new branch]          domnguyen/memory-tag-before-prompt -> origin/domnguyen/memory-tag-before-prompt
+2026-10-14T06:10:28.7146567Z  * [new branch]          domnguyen/part-4-llm-judge-action-param-filter -> origin/domnguyen/part-4-llm-judge-action-param-filter
+2026-10-14T06:10:28.7147209Z  * [new branch]          domnguyen/powershell-grammar-misroute-fix -> origin/domnguyen/powershell-grammar-misroute-fix
+2026-10-14T06:10:28.7147775Z  * [new branch]          domnguyen/pr3119-smoke-validation -> origin/domnguyen/pr3119-smoke-validation
+2026-10-14T06:10:28.7148285Z  * [new branch]          domnguyen/remove-git-story -> origin/domnguyen/remove-git-story
+2026-10-14T06:10:28.7148812Z  * [new branch]          domnguyen/remove-models-dev-attribution -> origin/domnguyen/remove-models-dev-attribution
+2026-10-14T06:10:28.7149528Z  * [new branch]          domnguyen/repro-translation-negatives -> origin/domnguyen/repro-translation-negatives
+2026-10-14T06:10:28.7150167Z  * [new branch]          domnguyen/rollback-agent-startup-failures -> origin/domnguyen/rollback-agent-startup-failures
+2026-10-14T06:10:28.7150743Z  * [new branch]          domnguyen/run-command-files-from-cli -> origin/domnguyen/run-command-files-from-cli
+2026-10-14T06:10:28.7151316Z  * [new branch]          domnguyen/seal-tools-evaluation -> origin/domnguyen/seal-tools-evaluation
+2026-10-14T06:10:28.7151860Z  * [new branch]          domnguyen/show-grammar-load-warnings -> origin/domnguyen/show-grammar-load-warnings
+2026-10-14T06:10:28.7152408Z  * [new branch]          domnguyen/tb-action-discovery-cues -> origin/domnguyen/tb-action-discovery-cues
+2026-10-14T06:10:28.7152946Z  * [new branch]          domnguyen/tb-action-policy-loader -> origin/domnguyen/tb-action-policy-loader
+2026-10-14T06:10:28.7153472Z  * [new branch]          domnguyen/tb-ambiguity-analysis -> origin/domnguyen/tb-ambiguity-analysis
+2026-10-14T06:10:28.7153993Z  * [new branch]          domnguyen/tb-assessment-paths -> origin/domnguyen/tb-assessment-paths
+2026-10-14T06:10:28.7154489Z  * [new branch]          domnguyen/tb-checkpoint-merge -> origin/domnguyen/tb-checkpoint-merge
+2026-10-14T06:10:28.7155134Z  * [new branch]          domnguyen/tb-checkpoint-primitives -> origin/domnguyen/tb-checkpoint-primitives
+2026-10-14T06:10:28.7155683Z  * [new branch]          domnguyen/tb-cli-shared -> origin/domnguyen/tb-cli-shared
+2026-10-14T06:10:28.7156175Z  * [new branch]          domnguyen/tb-confusable-pairs -> origin/domnguyen/tb-confusable-pairs
+2026-10-14T06:10:28.7156706Z  * [new branch]          domnguyen/tb-ec-unknown-abstention -> origin/domnguyen/tb-ec-unknown-abstention
+2026-10-14T06:10:28.7157265Z  * [new branch]          domnguyen/tb-empty-gold-utterance -> origin/domnguyen/tb-empty-gold-utterance
+2026-10-14T06:10:28.7157833Z  * [new branch]          domnguyen/tb-generation-validation -> origin/domnguyen/tb-generation-validation
+2026-10-14T06:10:28.7158421Z  * [new branch]          domnguyen/tb-gold-action-validation -> origin/domnguyen/tb-gold-action-validation
+2026-10-14T06:10:28.7158939Z  * [new branch]          domnguyen/tb-gold-schema -> origin/domnguyen/tb-gold-schema
+2026-10-14T06:10:28.7159509Z  * [new branch]          domnguyen/tb-keep-empty-params -> origin/domnguyen/tb-keep-empty-params
+2026-10-14T06:10:28.7160099Z  * [new branch]          domnguyen/tb-negative-fairness -> origin/domnguyen/tb-negative-fairness
+2026-10-14T06:10:28.7160641Z  * [new branch]          domnguyen/tb-negative-fairness-helper -> origin/domnguyen/tb-negative-fairness-helper
+2026-10-14T06:10:28.7161234Z  * [new branch]          domnguyen/tb-param-score-robustness -> origin/domnguyen/tb-param-score-robustness
+2026-10-14T06:10:28.7161781Z  * [new branch]          domnguyen/tb-parameter-specs -> origin/domnguyen/tb-parameter-specs
+2026-10-14T06:10:28.7162279Z  * [new branch]          domnguyen/tb-policy-allowlist -> origin/domnguyen/tb-policy-allowlist
+2026-10-14T06:10:28.7162758Z  * [new branch]          domnguyen/tb-run-config -> origin/domnguyen/tb-run-config
+2026-10-14T06:10:28.7163250Z  * [new branch]          domnguyen/tb-run-config-schema -> origin/domnguyen/tb-run-config-schema
+2026-10-14T06:10:28.7163771Z  * [new branch]          domnguyen/tb-runner-and-evaluation -> origin/domnguyen/tb-runner-and-evaluation
+2026-10-14T06:10:28.7164292Z  * [new branch]          domnguyen/tb-scoring-fairness -> origin/domnguyen/tb-scoring-fairness
+2026-10-14T06:10:28.7164813Z  * [new branch]          domnguyen/tb-synthesis-quality-gates -> origin/domnguyen/tb-synthesis-quality-gates
+2026-10-14T06:10:28.7165358Z  * [new branch]          domnguyen/tb-token-estimate -> origin/domnguyen/tb-token-estimate
+2026-10-14T06:10:28.7165846Z  * [new branch]          domnguyen/tb-tpm-rate-limiter -> origin/domnguyen/tb-tpm-rate-limiter
+2026-10-14T06:10:28.7166381Z  * [new branch]          domnguyen/tb-utterance-disambiguation -> origin/domnguyen/tb-utterance-disambiguation
+2026-10-14T06:10:28.7166950Z  * [new branch]          domnguyen/tb-zero-action-negatives -> origin/domnguyen/tb-zero-action-negatives
+2026-10-14T06:10:28.7167503Z  * [new branch]          domnguyen/test-git-story-fast-lane -> origin/domnguyen/test-git-story-fast-lane
+2026-10-14T06:10:28.7168024Z  * [new branch]          domnguyen/test-git-story-only -> origin/domnguyen/test-git-story-only
+2026-10-14T06:10:28.7168586Z  * [new branch]          domnguyen/translation-bench-action-selection -> origin/domnguyen/translation-bench-action-selection
+2026-10-14T06:10:28.7169371Z  * [new branch]          domnguyen/translation-bench-parameter-policy -> origin/domnguyen/translation-bench-parameter-policy
+2026-10-14T06:10:28.7169983Z  * [new branch]          domnguyen/translation-bench-part1 -> origin/domnguyen/translation-bench-part1
+2026-10-14T06:10:28.7170602Z  * [new branch]          domnguyen/translation-bench-part3-synthesizer -> origin/domnguyen/translation-bench-part3-synthesizer
+2026-10-14T06:10:28.7171291Z  * [new branch]          domnguyen/translation-bench-policy -> origin/domnguyen/translation-bench-policy
+2026-10-14T06:10:28.7171882Z  * [new branch]          domnguyen/translation-bench-policy-runner -> origin/domnguyen/translation-bench-policy-runner
+2026-10-14T06:10:28.7172617Z  * [new branch]          domnguyen/translation-bench-policy-validation -> origin/domnguyen/translation-bench-policy-validation
+2026-10-14T06:10:28.7173219Z  * [new branch]          domnguyen/translation-bench-quality -> origin/domnguyen/translation-bench-quality
+2026-10-14T06:10:28.7173760Z  * [new branch]          domnguyen/translation-bench-runner -> origin/domnguyen/translation-bench-runner
+2026-10-14T06:10:28.7174347Z  * [new branch]          domnguyen/translation-runtime-support -> origin/domnguyen/translation-runtime-support
+2026-10-14T06:10:28.7174931Z  * [new branch]          domnguyen/typeagent-core-fixes -> origin/domnguyen/typeagent-core-fixes
+2026-10-14T06:10:28.7175452Z  * [new branch]          domnguyen/typeagent-explorer-lsp -> origin/domnguyen/typeagent-explorer-lsp
+2026-10-14T06:10:28.7175994Z  * [new branch]          email-calendar-improvements -> origin/email-calendar-improvements
+2026-10-14T06:10:28.7176542Z  * [new branch]          feature/agent-memory-milestones-0-1 -> origin/feature/agent-memory-milestones-0-1
+2026-10-14T06:10:28.7177134Z  * [new branch]          feature/server-side-message-queue-phase1 -> origin/feature/server-side-message-queue-phase1
+2026-10-14T06:10:28.7177790Z  * [new branch]          fix-markdown-model-resolution -> origin/fix-markdown-model-resolution
+2026-10-14T06:10:28.7178317Z  * [new branch]          fix-ordinal-environment-pop -> origin/fix-ordinal-environment-pop
+2026-10-14T06:10:28.7178825Z  * [new branch]          fix/browser-tab-label-rendering -> origin/fix/browser-tab-label-rendering
+2026-10-14T06:10:28.7179484Z  * [new branch]          fix/smoke-test-pr-authorization -> origin/fix/smoke-test-pr-authorization
+2026-10-14T06:10:28.7179977Z  * [new branch]          fix/spotify-device-cache -> origin/fix/spotify-device-cache
+2026-10-14T06:10:28.7180463Z  * [new branch]          fix/whisper-audio-input-limits -> origin/fix/whisper-audio-input-limits
+2026-10-14T06:10:28.7180983Z  * [new branch]          fix/workspace-dependency-refresh -> origin/fix/workspace-dependency-refresh
+2026-10-14T06:10:28.7181438Z  * [new branch]          g1                      -> origin/g1
+2026-10-14T06:10:28.7181924Z  * [new branch]          george/otel-phase1-1-trace-contract -> origin/george/otel-phase1-1-trace-contract
+2026-10-14T06:10:28.7182492Z  * [new branch]          george/otel-phase1-2-root-request-span -> origin/george/otel-phase1-2-root-request-span
+2026-10-14T06:10:28.7183071Z  * [new branch]          george/otel-phase1-3-translation-span -> origin/george/otel-phase1-3-translation-span
+2026-10-14T06:10:28.7183627Z  * [new branch]          george/otel-phase1-4-action-span -> origin/george/otel-phase1-4-action-span
+2026-10-14T06:10:28.7184167Z  * [new branch]          george/otel-phase1-5-reasoning-span -> origin/george/otel-phase1-5-reasoning-span
+2026-10-14T06:10:28.7184712Z  * [new branch]          georgeng/fix-flaky-ci-timing-tests -> origin/georgeng/fix-flaky-ci-timing-tests
+2026-10-14T06:10:28.7185276Z  * [new branch]          georgeng/git-story-session-watcher-stubs -> origin/georgeng/git-story-session-watcher-stubs
+2026-10-14T06:10:28.7185845Z  * [new branch]          georgeng/restore-shell-queue-chips -> origin/georgeng/restore-shell-queue-chips
+2026-10-14T06:10:28.7186401Z  * [new branch]          georgengmsft-bind-markdown-loopback -> origin/georgengmsft-bind-markdown-loopback
+2026-10-14T06:10:28.7186991Z  * [new branch]          georgengmsft-clean-agent-startup-logging -> origin/georgengmsft-clean-agent-startup-logging
+2026-10-14T06:10:28.7187583Z  * [new branch]          georgengmsft-copilot-direct-actions -> origin/georgengmsft-copilot-direct-actions
+2026-10-14T06:10:28.7188150Z  * [new branch]          georgengmsft-failure-semantics-layer -> origin/georgengmsft-failure-semantics-layer
+2026-10-14T06:10:28.7188805Z  * [new branch]          georgengmsft-fix-markdown-path-traversal -> origin/georgengmsft-fix-markdown-path-traversal
+2026-10-14T06:10:28.7189588Z  * [new branch]          georgengmsft-fix-windows-cli-switches -> origin/georgengmsft-fix-windows-cli-switches
+2026-10-14T06:10:28.7190313Z  * [new branch]          georgengmsft-fixed-lgtm-ports -> origin/georgengmsft-fixed-lgtm-ports
+2026-10-14T06:10:28.7190891Z  * [new branch]          georgengmsft-ghcp-eval-followup-fixes -> origin/georgengmsft-ghcp-eval-followup-fixes
+2026-10-14T06:10:28.7191519Z  * [new branch]          georgengmsft-ghcp-eval-implementation -> origin/georgengmsft-ghcp-eval-implementation
+2026-10-14T06:10:28.7192151Z  * [new branch]          georgengmsft-git-story-interfaces -> origin/georgengmsft-git-story-interfaces
+2026-10-14T06:10:28.7192783Z  * [new branch]          georgengmsft-github-pr-diagnostics -> origin/georgengmsft-github-pr-diagnostics
+2026-10-14T06:10:28.7193361Z  * [new branch]          georgengmsft-guarded-action-execution -> origin/georgengmsft-guarded-action-execution
+2026-10-14T06:10:28.7193941Z  * [new branch]          georgengmsft-list-inventory-result -> origin/georgengmsft-list-inventory-result
+2026-10-14T06:10:28.7194508Z  * [new branch]          georgengmsft-llm-attribution-layer -> origin/georgengmsft-llm-attribution-layer
+2026-10-14T06:10:28.7195088Z  * [new branch]          georgengmsft-macro-replay-classification -> origin/georgengmsft-macro-replay-classification
+2026-10-14T06:10:28.7195743Z  * [new branch]          georgengmsft-macro-review-fixes -> origin/georgengmsft-macro-review-fixes
+2026-10-14T06:10:28.7196296Z  * [new branch]          georgengmsft-macro-runner-tool-access -> origin/georgengmsft-macro-runner-tool-access
+2026-10-14T06:10:28.7196902Z  * [new branch]          georgengmsft-markdown-browser-persistence -> origin/georgengmsft-markdown-browser-persistence
+2026-10-14T06:10:28.7197505Z  * [new branch]          georgengmsft-markdown-browser-server -> origin/georgengmsft-markdown-browser-server
+2026-10-14T06:10:28.7198083Z  * [new branch]          georgengmsft-markdown-durable-updates -> origin/georgengmsft-markdown-durable-updates
+2026-10-14T06:10:28.7198653Z  * [new branch]          georgengmsft-markdown-safe-updates -> origin/georgengmsft-markdown-safe-updates
+2026-10-14T06:10:28.7199310Z  * [new branch]          georgengmsft-markdown-workspace-create -> origin/georgengmsft-markdown-workspace-create
+2026-10-14T06:10:28.7199899Z  * [new branch]          georgengmsft-merge-conflict-action -> origin/georgengmsft-merge-conflict-action
+2026-10-14T06:10:28.7200466Z  * [new branch]          georgengmsft-mixed-mcp-shared-context -> origin/georgengmsft-mixed-mcp-shared-context
+2026-10-14T06:10:28.7201065Z  * [new branch]          georgengmsft-msi-copyable-signin-command -> origin/georgengmsft-msi-copyable-signin-command
+2026-10-14T06:10:28.7201673Z  * [new branch]          georgengmsft-msi-installer-diagnostics -> origin/georgengmsft-msi-installer-diagnostics
+2026-10-14T06:10:28.7202264Z  * [new branch]          georgengmsft-msi-plugin-registration -> origin/georgengmsft-msi-plugin-registration
+2026-10-14T06:10:28.7202866Z  * [new branch]          georgengmsft-msi-plugin-registration-d8d -> origin/georgengmsft-msi-plugin-registration-d8d
+2026-10-14T06:10:28.7203483Z  * [new branch]          georgengmsft-msi-vscode-shell-extension -> origin/georgengmsft-msi-vscode-shell-extension
+2026-10-14T06:10:28.7204079Z  * [new branch]          georgengmsft-plugin-and-mcp-validation -> origin/georgengmsft-plugin-and-mcp-validation
+2026-10-14T06:10:28.7204674Z  * [new branch]          georgengmsft-read-only-action-policies -> origin/georgengmsft-read-only-action-policies
+2026-10-14T06:10:28.7205275Z  * [new branch]          georgengmsft-result-entity-handoff-fixes -> origin/georgengmsft-result-entity-handoff-fixes
+2026-10-14T06:10:28.7205846Z  * [new branch]          georgengmsft-review-codetasks-2 -> origin/georgengmsft-review-codetasks-2
+2026-10-14T06:10:28.7206383Z  * [new branch]          georgengmsft-rpc-lifecycle-layer -> origin/georgengmsft-rpc-lifecycle-layer
+2026-10-14T06:10:28.7207000Z  * [new branch]          georgengmsft-secure-agent-websocket-origin -> origin/georgengmsft-secure-agent-websocket-origin
+2026-10-14T06:10:28.7207809Z  * [new branch]          georgengmsft-share-dispatcher-cancellation -> origin/georgengmsft-share-dispatcher-cancellation
+2026-10-14T06:10:28.7208416Z  * [new branch]          georgengmsft-show-request-trace-ids -> origin/georgengmsft-show-request-trace-ids
+2026-10-14T06:10:28.7209105Z  * [new branch]          georgengmsft-structured-action-adapters -> origin/georgengmsft-structured-action-adapters
+2026-10-14T06:10:28.7209928Z  * [new branch]          georgengmsft-structured-action-contracts -> origin/georgengmsft-structured-action-contracts
+2026-10-14T06:10:28.7210554Z  * [new branch]          georgengmsft-structured-command-execution -> origin/georgengmsft-structured-command-execution
+2026-10-14T06:10:28.7211175Z  * [new branch]          georgengmsft-typeagent-conversation-error -> origin/georgengmsft-typeagent-conversation-error
+2026-10-14T06:10:28.7211772Z  * [new branch]          georgengmsft-vscode-git-diff-action -> origin/georgengmsft-vscode-git-diff-action
+2026-10-14T06:10:28.7212378Z  * [new branch]          georgengmsft-watcher-capture-and-resume -> origin/georgengmsft-watcher-capture-and-resume
+2026-10-14T06:10:28.7213013Z  * [new branch]          georgengmsft-watcher-daemon-hook-integration -> origin/georgengmsft-watcher-daemon-hook-integration
+2026-10-14T06:10:28.7213749Z  * [new branch]          georgengmsft-watcher-foundation-integration -> origin/georgengmsft-watcher-foundation-integration
+2026-10-14T06:10:28.7214402Z  * [new branch]          georgengmsft-watcher-lifecycle-implementation -> origin/georgengmsft-watcher-lifecycle-implementation
+2026-10-14T06:10:28.7215078Z  * [new branch]          georgengmsft-watcher-normalization-and-metadata -> origin/georgengmsft-watcher-normalization-and-metadata
+2026-10-14T06:10:28.7215712Z  * [new branch]          georgengmsft-watcher-privacy-handoff -> origin/georgengmsft-watcher-privacy-handoff
+2026-10-14T06:10:28.7216331Z  * [new branch]          georgengmsft/fix-copilot-plugin-registration -> origin/georgengmsft/fix-copilot-plugin-registration
+2026-10-14T06:10:28.7216942Z  * [new branch]          georgengmsft/fix-copilot-plugin-update -> origin/georgengmsft/fix-copilot-plugin-update
+2026-10-14T06:10:28.7217541Z  * [new branch]          georgengmsft/harden-copilot-plugin-update -> origin/georgengmsft/harden-copilot-plugin-update
+2026-10-14T06:10:28.7218122Z  * [new branch]          grammar-warmer-distribution -> origin/grammar-warmer-distribution
+2026-10-14T06:10:28.7218549Z  * [new branch]          gt2                     -> origin/gt2
+2026-10-14T06:10:28.7219216Z  * [new branch]          jebrans-dev/jebransyed/powershell-trust-foundati -> origin/jebrans-dev/jebransyed/powershell-trust-foundati
+2026-10-14T06:10:28.7219723Z  * [new branch]          main                    -> origin/main
+2026-10-14T06:10:28.7220152Z  * [new branch]          memory/views-build-merge -> origin/memory/views-build-merge
+2026-10-14T06:10:28.7220612Z  * [new branch]          memory/views-foundation -> origin/memory/views-foundation
+2026-10-14T06:10:28.7221073Z  * [new branch]          memory/views-maintenance -> origin/memory/views-maintenance
+2026-10-14T06:10:28.7221558Z  * [new branch]          memory/views-project-brief -> origin/memory/views-project-brief
+2026-10-14T06:10:28.7222059Z  * [new branch]          memory/views-publication-search -> origin/memory/views-publication-search
+2026-10-14T06:10:28.7222544Z  * [new branch]          memory/views-timeline   -> origin/memory/views-timeline
+2026-10-14T06:10:28.7223040Z  * [new branch]          memory/views-wiki-lifecycle -> origin/memory/views-wiki-lifecycle
+2026-10-14T06:10:28.7223498Z  * [new branch]          nfa-char-phase-1        -> origin/nfa-char-phase-1
+2026-10-14T06:10:28.7223938Z  * [new branch]          nfa-dfa-investigation   -> origin/nfa-dfa-investigation
+2026-10-14T06:10:28.7224389Z  * [new branch]          nfa-token-path-fixes    -> origin/nfa-token-path-fixes
+2026-10-14T06:10:28.7224835Z  * [new branch]          nfa/token-normalization -> origin/nfa/token-normalization
+2026-10-14T06:10:28.7225305Z  * [new branch]          oss-security-bot/pin-actions -> origin/oss-security-bot/pin-actions
+2026-10-14T06:10:28.7225857Z  * [new branch]          player-visuals          -> origin/player-visuals
+2026-10-14T06:10:28.7226287Z  * [new branch]          reconcileChanges        -> origin/reconcileChanges
+2026-10-14T06:10:28.7226724Z  * [new branch]          robgruen-patch-1        -> origin/robgruen-patch-1
+2026-10-14T06:10:28.7227240Z  * [new branch]          robgruen-patch-2        -> origin/robgruen-patch-2
+2026-10-14T06:10:28.7227685Z  * [new branch]          robgruen-patch-3        -> origin/robgruen-patch-3
+2026-10-14T06:10:28.7228157Z  * [new branch]          snips-action-grammar-benchmark -> origin/snips-action-grammar-benchmark
+2026-10-14T06:10:28.7228623Z  * [new branch]          sshcontainer            -> origin/sshcontainer
+2026-10-14T06:10:28.7229150Z  * [new branch]          talzacc/autoshell_refactor -> origin/talzacc/autoshell_refactor
+2026-10-14T06:10:28.7229666Z  * [new branch]          talzacc/browser-agent-migration -> origin/talzacc/browser-agent-migration
+2026-10-14T06:10:28.7230271Z  * [new branch]          talzacc/code-and-localview-migration -> origin/talzacc/code-and-localview-migration
+2026-10-14T06:10:28.7230881Z  * [new branch]          talzacc/com_reference_fix -> origin/talzacc/com_reference_fix
+2026-10-14T06:10:28.7231375Z  * [new branch]          talzacc/dangling-ports-phase-a -> origin/talzacc/dangling-ports-phase-a
+2026-10-14T06:10:28.7231909Z  * [new branch]          talzacc/diagnose-windows-backstack -> origin/talzacc/diagnose-windows-backstack
+2026-10-14T06:10:28.7232400Z  * [new branch]          talzacc/first_action    -> origin/talzacc/first_action
+2026-10-14T06:10:28.7232867Z  * [new branch]          talzacc/fix-pages-deployment -> origin/talzacc/fix-pages-deployment
+2026-10-14T06:10:28.7233368Z  * [new branch]          talzacc/fix-smoke-yaml-config -> origin/talzacc/fix-smoke-yaml-config
+2026-10-14T06:10:28.7233899Z  * [new branch]          talzacc/fix-windows-command-backstack -> origin/talzacc/fix-windows-command-backstack
+2026-10-14T06:10:28.7234443Z  * [new branch]          talzacc/fix_security_issues -> origin/talzacc/fix_security_issues
+2026-10-14T06:10:28.7234977Z  * [new branch]          talzacc/onboarding-scaffolder-migration -> origin/talzacc/onboarding-scaffolder-migration
+2026-10-14T06:10:28.7235544Z  * [new branch]          talzacc/port-registrar-foundation -> origin/talzacc/port-registrar-foundation
+2026-10-14T06:10:28.7236035Z  * [new branch]          talzacc/security_script -> origin/talzacc/security_script
+2026-10-14T06:10:28.7236578Z  * [new branch]          talzacc/shell-scripts-restore-arg-forwarding -> origin/talzacc/shell-scripts-restore-arg-forwarding
+2026-10-14T06:10:28.7237182Z  * [new branch]          talzacc/strip-usocket-from-dbus-next -> origin/talzacc/strip-usocket-from-dbus-next
+2026-10-14T06:10:28.7237715Z  * [new branch]          talzacc/system-ports-command -> origin/talzacc/system-ports-command
+2026-10-14T06:10:28.7238247Z  * [new branch]          talzacc/visualstudio-agent-migration -> origin/talzacc/visualstudio-agent-migration
+2026-10-14T06:10:28.7238799Z  * [new branch]          talzaccai-rest-handler-openapi -> origin/talzaccai-rest-handler-openapi
+2026-10-14T06:10:28.7239403Z  * [new branch]          talzaccai-studio-new-agent-wizard -> origin/talzaccai-studio-new-agent-wizard
+2026-10-14T06:10:28.7239886Z  * [new branch]          testBranch              -> origin/testBranch
+2026-10-14T06:10:28.7240271Z  * [new branch]          time                    -> origin/time
+2026-10-14T06:10:28.7240670Z  * [new branch]          umeshma/dev             -> origin/umeshma/dev
+2026-10-14T06:10:28.7241077Z  * [new branch]          wiki_update_2           -> origin/wiki_update_2
+2026-10-14T06:10:28.7241463Z  * [new tag]             v0.1.0-py               -> v0.1.0-py
+2026-10-14T06:10:28.7242160Z  * [new tag]             v0.1.1-py               -> v0.1.1-py
+2026-10-14T06:10:28.7242700Z  * [new tag]             v0.1.2-py               -> v0.1.2-py
+2026-10-14T06:10:28.7243166Z  * [new tag]             v0.1.3-py               -> v0.1.3-py
+2026-10-14T06:10:28.7243812Z  * [new tag]             v0.1.4-py               -> v0.1.4-py
+2026-10-14T06:10:28.7244402Z  * [new tag]             v0.1.5-py               -> v0.1.5-py
+2026-10-14T06:10:28.7244870Z  * [new tag]             v0.1.6-py               -> v0.1.6-py
+2026-10-14T06:10:28.7245409Z  * [new tag]             v0.1.7-py               -> v0.1.7-py
+2026-10-14T06:10:28.7245935Z  * [new tag]             v0.1.8-py               -> v0.1.8-py
+2026-10-14T06:10:28.7263021Z ##[endgroup]
+2026-10-14T06:10:28.7263510Z ##[group]Determining the checkout info
+2026-10-14T06:10:28.7263988Z [command]/usr/bin/git branch --list --remote origin/fix/workspace-dependency-refresh
+2026-10-14T06:10:28.7264516Z   origin/fix/workspace-dependency-refresh
+2026-10-14T06:10:28.7265299Z ##[endgroup]
+2026-10-14T06:10:28.7265593Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T06:10:28.7266407Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T06:10:28.7267297Z ##[group]Checking out the ref
+2026-10-14T06:10:28.7267833Z [command]/usr/bin/git checkout --progress --force -B fix/workspace-dependency-refresh refs/remotes/origin/fix/workspace-dependency-refresh
+2026-10-14T06:10:29.4670652Z Switched to a new branch 'fix/workspace-dependency-refresh'
+2026-10-14T06:10:29.4672586Z branch 'fix/workspace-dependency-refresh' set up to track 'origin/fix/workspace-dependency-refresh'.
+2026-10-14T06:10:29.4718367Z ##[endgroup]
+2026-10-14T06:10:29.4756118Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T06:10:29.4781864Z 48ff4ab3fba4df7bc776aa4eb73376b2a099c220
+2026-10-14T06:10:29.4919734Z ##[group]Run git fetch origin main
+2026-10-14T06:10:29.4920013Z [36;1mgit fetch origin main[0m
+2026-10-14T06:10:29.4976176Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:10:29.4976384Z env:
+2026-10-14T06:10:29.4976561Z   HAS_APP_CREDS: false
+2026-10-14T06:10:29.4976752Z ##[endgroup]
+2026-10-14T06:10:29.7561261Z From https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:29.7561787Z  * branch                main       -> FETCH_HEAD
+2026-10-14T06:10:29.7638746Z ##[group]Run pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86
+2026-10-14T06:10:29.7639234Z with:
+2026-10-14T06:10:29.7639413Z   package_json_file: ts/package.json
+2026-10-14T06:10:29.7639627Z   dest: ~/setup-pnpm
+2026-10-14T06:10:29.7639796Z   run_install: null
+2026-10-14T06:10:29.7639963Z   cache: false
+2026-10-14T06:10:29.7640142Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-14T06:10:29.7640352Z   standalone: false
+2026-10-14T06:10:29.7640528Z env:
+2026-10-14T06:10:29.7640691Z   HAS_APP_CREDS: false
+2026-10-14T06:10:29.7640867Z ##[endgroup]
+2026-10-14T06:10:29.8576636Z ##[group]Running self-installer...
+2026-10-14T06:10:31.0501824Z 
+2026-10-14T06:10:31.0502401Z added 1 package, and audited 2 packages in 1s
+2026-10-14T06:10:31.0502741Z 
+2026-10-14T06:10:31.0502887Z 1 package is looking for funding
+2026-10-14T06:10:31.0503252Z   run `npm fund` for details
+2026-10-14T06:10:31.0506810Z 
+2026-10-14T06:10:31.0507330Z found 0 vulnerabilities
+2026-10-14T06:10:31.4293424Z Checking for updates...
+2026-10-14T06:10:31.7540772Z Switching pnpm from v11.19.0 to v11.9.0...
+2026-10-14T06:10:32.3032784Z .../v11/8a8-1a13908ac5e-6b697dcf67190e5c | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:32.3044262Z .../v11/8a8-1a13908ac5e-6b697dcf67190e5c |   +1 +
+2026-10-14T06:10:32.4409374Z .../v11/8a8-1a13908ac5e-6b697dcf67190e5c | Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-14T06:10:32.8093284Z [WARN] Detected a pnpm v10 installation layout at PNPM_HOME. The pnpm shims at PNPM_HOME have been refreshed so the new version is active, but pnpm v11 expects bins in PNPM_HOME/bin. Run "pnpm setup" to migrate your PATH to the v11 layout.
+2026-10-14T06:10:32.8120830Z Successfully updated pnpm to v11.9.0
+2026-10-14T06:10:32.8362780Z ##[endgroup]
+2026-10-14T06:10:32.8363110Z Installation Completed!
+2026-10-14T06:10:32.8492470Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-10-14T06:10:32.8492747Z with:
+2026-10-14T06:10:32.8492915Z   node-version: 22
+2026-10-14T06:10:32.8493084Z   cache: pnpm
+2026-10-14T06:10:32.8493275Z   cache-dependency-path: ts/pnpm-lock.yaml
+2026-10-14T06:10:32.8493548Z   check-latest: false
+2026-10-14T06:10:32.8494948Z   token: ***
+2026-10-14T06:10:32.8495123Z   package-manager-cache: true
+2026-10-14T06:10:32.8495313Z env:
+2026-10-14T06:10:32.8495470Z   HAS_APP_CREDS: false
+2026-10-14T06:10:32.8495678Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:32.8495907Z ##[endgroup]
+2026-10-14T06:10:32.9356692Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-14T06:10:32.9359417Z ##[group]Environment details
+2026-10-14T06:10:33.2021168Z node: v22.23.3
+2026-10-14T06:10:33.2037524Z npm: 10.9.9
+2026-10-14T06:10:33.2037881Z yarn: 1.22.22
+2026-10-14T06:10:33.2038659Z ##[endgroup]
+2026-10-14T06:10:33.2039421Z [command]/home/runner/setup-pnpm/node_modules/.bin/bin/pnpm store path --silent
+2026-10-14T06:10:33.4629958Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:10:33.6247963Z pnpm cache is not found
+2026-10-14T06:10:33.6344872Z ##[group]Run pnpm install --frozen-lockfile --strict-peer-dependencies
+2026-10-14T06:10:33.6345394Z [36;1mpnpm install --frozen-lockfile --strict-peer-dependencies[0m
+2026-10-14T06:10:33.6399244Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:10:33.6399464Z env:
+2026-10-14T06:10:33.6399644Z   HAS_APP_CREDS: false
+2026-10-14T06:10:33.6399885Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:33.6400124Z ##[endgroup]
+2026-10-14T06:10:34.0134147Z Scope: all 150 workspace projects
+2026-10-14T06:10:34.1773889Z ? Verifying lockfile against supply-chain policies (2965 entries)...
+2026-10-14T06:10:34.2538588Z Lockfile is up to date, resolution step is skipped
+2026-10-14T06:10:34.3484660Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:34.4934864Z Packages: +2795
+2026-10-14T06:10:34.4935364Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-14T06:10:35.3777546Z Progress: resolved 2795, reused 0, downloaded 111, added 5
+2026-10-14T06:10:36.3886147Z Progress: resolved 2795, reused 0, downloaded 263, added 17
+2026-10-14T06:10:37.3968281Z Progress: resolved 2795, reused 0, downloaded 516, added 38
+2026-10-14T06:10:38.3965278Z Progress: resolved 2795, reused 0, downloaded 906, added 85
+2026-10-14T06:10:39.3981700Z Progress: resolved 2795, reused 0, downloaded 1166, added 111
+2026-10-14T06:10:40.3996837Z Progress: resolved 2795, reused 0, downloaded 1348, added 129
+2026-10-14T06:10:41.4010495Z Progress: resolved 2795, reused 0, downloaded 1521, added 143
+2026-10-14T06:10:42.4080834Z Progress: resolved 2795, reused 0, downloaded 1628, added 153
+2026-10-14T06:10:43.4293642Z Progress: resolved 2795, reused 0, downloaded 1721, added 161
+2026-10-14T06:10:44.4365338Z Progress: resolved 2795, reused 0, downloaded 1857, added 171
+2026-10-14T06:10:45.4419403Z Progress: resolved 2795, reused 0, downloaded 2044, added 191
+2026-10-14T06:10:46.4474421Z Progress: resolved 2795, reused 0, downloaded 2200, added 203
+2026-10-14T06:10:47.4500644Z Progress: resolved 2795, reused 0, downloaded 2464, added 236
+2026-10-14T06:10:47.9625947Z ✓ Lockfile passes supply-chain policies (2965 entries in 13.7s)
+2026-10-14T06:10:48.4511531Z Progress: resolved 2795, reused 0, downloaded 2585, added 244
+2026-10-14T06:10:49.4537467Z Progress: resolved 2795, reused 0, downloaded 2699, added 602
+2026-10-14T06:10:50.4535938Z Progress: resolved 2795, reused 0, downloaded 2699, added 1395
+2026-10-14T06:10:51.4539348Z Progress: resolved 2795, reused 0, downloaded 2699, added 1927
+2026-10-14T06:10:52.4535464Z Progress: resolved 2795, reused 0, downloaded 2700, added 2365
+2026-10-14T06:10:53.4538188Z Progress: resolved 2795, reused 0, downloaded 2700, added 2655
+2026-10-14T06:10:54.4190102Z Progress: resolved 2795, reused 0, downloaded 2700, added 2795, done
+2026-10-14T06:10:55.6269986Z .../node_modules/exifreader postinstall$ node bin/build.js --only-with-config
+2026-10-14T06:10:55.6517264Z .../node_modules/better-sqlite3 install$ prebuild-install || node-gyp rebuild --release
+2026-10-14T06:10:55.6739405Z .../node_modules/exifreader postinstall: Done
+2026-10-14T06:10:55.6805332Z .../.pnpm/koffi@3.2.1/node_modules/koffi install$ node ./cnoke.cjs -P . -D src/koffi --prebuild --release
+2026-10-14T06:10:55.6812741Z .../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:55.7063974Z .../esbuild@0.28.1/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:55.7672786Z .../.pnpm/koffi@3.2.1/node_modules/koffi install: Done
+2026-10-14T06:10:55.7700410Z .../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:55.7955688Z .../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:55.7964377Z .../esbuild@0.28.1/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:55.8010571Z .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:55.8510662Z .../@azure/msal-node-runtime install$ node ./copyBinaries.js
+2026-10-14T06:10:55.8742459Z .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:55.8752439Z .../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:55.8773215Z .../keytar@7.9.0/node_modules/keytar install$ prebuild-install || npm run build
+2026-10-14T06:10:55.9132140Z .../@azure/msal-node-runtime install: Done
+2026-10-14T06:10:55.9148580Z .../node_modules/onnxruntime-node postinstall$ node ./script/install
+2026-10-14T06:10:55.9467448Z .../koffi@2.11.0/node_modules/koffi install$ node src/cnoke/cnoke.js -p . -d src/koffi --prebuild
+2026-10-14T06:10:55.9850847Z .../node_modules/@vscode/vsce-sign postinstall$ node ./src/postinstall.js
+2026-10-14T06:10:56.0299590Z .../node_modules/better-sqlite3 install: Done
+2026-10-14T06:10:56.0360531Z .../node_modules/onnxruntime-node postinstall: `nvcc` not found. Assuming CUDA 12.
+2026-10-14T06:10:56.0391124Z .../node_modules/onnxruntime-node postinstall: Downloading "https://github.com/microsoft/onnxruntime/releases/download/v1.21.0/onnxruntime-linux-x64-gpu-1.21.0.tgz"...
+2026-10-14T06:10:56.0551938Z .../koffi@2.11.0/node_modules/koffi install: Done
+2026-10-14T06:10:56.0834269Z .../node_modules/electron postinstall$ node install.js
+2026-10-14T06:10:56.1830604Z .../keytar@7.9.0/node_modules/keytar install: Done
+2026-10-14T06:10:56.1892100Z .../node_modules/electron-winstaller install$ node ./script/select-7z-arch.js
+2026-10-14T06:10:56.2380611Z .../node_modules/electron-winstaller install: Selecting 7-Zip for arch x64
+2026-10-14T06:10:56.2425389Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_cuda.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:56.2915103Z .../node_modules/@vscode/vsce-sign postinstall: Done
+2026-10-14T06:10:56.4522497Z .../node_modules/electron-winstaller install: Done
+2026-10-14T06:10:57.9701138Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime.so.1.21.0" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:57.9710482Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_cuda.so".
+2026-10-14T06:10:58.0492220Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_shared.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:58.0494448Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_shared.so".
+2026-10-14T06:10:58.0496162Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_tensorrt.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:58.0497732Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime.so.1.21.0".
+2026-10-14T06:10:58.0530097Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_tensorrt.so".
+2026-10-14T06:10:58.0841308Z .../node_modules/onnxruntime-node postinstall: Done
+2026-10-14T06:10:58.8425160Z .../node_modules/electron postinstall: Done
+2026-10-14T06:11:01.7337963Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:01.7341788Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:01.7345493Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:01.7923378Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:01.7928181Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:01.7928674Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:01.9381966Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/lsp/dist/index.js'
+2026-10-14T06:11:02.0235064Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/memory/mcp-server/dist/server.js'
+2026-10-14T06:11:02.1083735Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/studio-service/dist/main.js'
+2026-10-14T06:11:02.2906735Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:11:02.2908555Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:11:02.4786766Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:11:02.4787969Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:11:03.2140429Z 
+2026-10-14T06:11:03.2141164Z devDependencies:
+2026-10-14T06:11:03.2141657Z + @fluidframework/build-tools 0.57.0
+2026-10-14T06:11:03.2142087Z + @types/node 22.15.18
+2026-10-14T06:11:03.2142443Z + esbuild 0.28.1
+2026-10-14T06:11:03.2142766Z + eslint 10.6.0
+2026-10-14T06:11:03.2143161Z + eslint-plugin-sonarjs 4.1.0
+2026-10-14T06:11:03.2143510Z + jscpd 4.2.5
+2026-10-14T06:11:03.2143867Z + knip 6.24.0
+2026-10-14T06:11:03.2144250Z + madge 8.0.0
+2026-10-14T06:11:03.2144614Z + markdown-link-check 3.14.2
+2026-10-14T06:11:03.2144981Z + prettier 3.5.3
+2026-10-14T06:11:03.2145311Z + shx 0.4.0
+2026-10-14T06:11:03.2145679Z + tsx 4.21.0
+2026-10-14T06:11:03.2146093Z + typescript-eslint 8.62.1
+2026-10-14T06:11:03.2146369Z 
+2026-10-14T06:11:03.2919513Z . postinstall$ pnpm run postinstall:better-sqlite3-node-copy && pnpm run postinstall:better-sqlite3-node-restore && pnpm run postinstall:merge-driver
+2026-10-14T06:11:03.5726812Z . postinstall: $ node ./tools/scripts/copy-better-sqlite3-node.js
+2026-10-14T06:11:03.6113829Z . postinstall: 📦 Processing better-sqlite3@12.8.0:
+2026-10-14T06:11:03.6118106Z . postinstall:     /home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3
+2026-10-14T06:11:03.6417969Z . postinstall: ✅ Copied compatible binary from build/Release/
+2026-10-14T06:11:03.6425496Z . postinstall:  →  /home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3/prebuild-node/better_sqlite3.node
+2026-10-14T06:11:03.6604469Z . postinstall: 🔌 Provisioning Electron 41.10.3 (ABI 145) binaries
+2026-10-14T06:11:03.6606419Z . postinstall: ⬇️  Downloading Electron (ABI 145) prebuilt: better-sqlite3-v12.8.0-electron-v145-linux-x64.tar.gz
+2026-10-14T06:11:04.0076957Z . postinstall: ✅ Electron binary saved to prebuild-electron/ (ABI 145)
+2026-10-14T06:11:04.2853361Z . postinstall: $ node ./tools/scripts/restore-better-sqlite3-node.js
+2026-10-14T06:11:04.3262719Z . postinstall: ✅ better-sqlite3@12.8.0: build/Release already Node-compatible
+2026-10-14T06:11:04.6030330Z . postinstall: $ node tools/scripts/setup-merge-driver.mjs
+2026-10-14T06:11:05.0125969Z . postinstall: Done
+2026-10-14T06:11:05.2074434Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/workflow-lsp/dist/index.js'
+2026-10-14T06:11:05.6204732Z packages/agents/browserExtension prepare$ node ./scripts/prepare.mjs .
+2026-10-14T06:11:05.7142200Z packages/agents/browserExtension prepare: Done
+2026-10-14T06:11:05.9908205Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/@typeagent/studio-service/dist/main.js'
+2026-10-14T06:11:06.0093234Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/@typeagent/memory-mcp-server/dist/server.js'
+2026-10-14T06:11:06.1355591Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/status.js'
+2026-10-14T06:11:06.1357347Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:11:06.1436120Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/status.js'
+2026-10-14T06:11:06.1437540Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:11:06.1478340Z packages/shell postinstall$ run-script-os
+2026-10-14T06:11:06.2755694Z packages/shell postinstall: > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:11:06.2756584Z packages/shell postinstall: > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:11:06.5738316Z packages/shell postinstall:   • electron-builder  version=26.15.3
+2026-10-14T06:11:06.5773188Z packages/shell postinstall:   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:11:06.8830745Z packages/shell postinstall:   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:11:06.8837429Z packages/shell postinstall:   • executing @electron/rebuild  electronVersion=41.10.3 arch=x64 buildFromSource=false workspaceRoot=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:11:06.8838560Z packages/shell postinstall:   • installing native dependencies  arch=x64
+2026-10-14T06:11:07.2555688Z packages/shell postinstall:   • preparing       moduleName=better-sqlite3 arch=x64
+2026-10-14T06:12:00.5234777Z packages/shell postinstall:   • finished        moduleName=better-sqlite3 arch=x64
+2026-10-14T06:12:00.5236581Z packages/shell postinstall:   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:12:00.5901496Z packages/shell postinstall:   • finished        moduleName=keytar arch=x64
+2026-10-14T06:12:00.5902883Z packages/shell postinstall:   • completed installing native dependencies
+2026-10-14T06:12:00.6106851Z packages/shell postinstall: Done
+2026-10-14T06:12:00.6417014Z Done in 1m 26.9s using pnpm v11.9.0
+2026-10-14T06:12:00.7958086Z ##[group]Run node tools/scripts/prettier-changed.mjs --base origin/main --write
+2026-10-14T06:12:00.7958535Z [36;1mnode tools/scripts/prettier-changed.mjs --base origin/main --write[0m
+2026-10-14T06:12:00.8009873Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:12:00.8010075Z env:
+2026-10-14T06:12:00.8010245Z   HAS_APP_CREDS: false
+2026-10-14T06:12:00.8010458Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:12:00.8010701Z ##[endgroup]
+2026-10-14T06:12:01.8563467Z packages/agentServer/bundledRuntime/package.json 21ms (unchanged)
+2026-10-14T06:12:01.8630662Z packages/agents/montage/package.json 1ms (unchanged)
+2026-10-14T06:12:01.8670512Z packages/knowledgeProcessor/package.json 1ms (unchanged)
+2026-10-14T06:12:02.0056254Z packages/knowledgeProcessor/src/images/image.ts 135ms (unchanged)
+2026-10-14T06:12:02.0153700Z packages/memory/conversation/package.json 1ms (unchanged)
+2026-10-14T06:12:02.0361350Z packages/memory/conversation/test/emailImport.spec.ts 9ms (unchanged)
+2026-10-14T06:12:02.0451941Z packages/shell/package.json 4ms (unchanged)
+2026-10-14T06:12:02.1112929Z packages/vscode-shell/README.md 62ms (unchanged)
+2026-10-14T06:12:02.1370440Z pnpm-workspace.yaml 18ms (unchanged)
+2026-10-14T06:12:02.1706694Z ##[group]Run node tools/scripts/repo-policy-check.mjs --fix
+2026-10-14T06:12:02.1707043Z [36;1mnode tools/scripts/repo-policy-check.mjs --fix[0m
+2026-10-14T06:12:02.1759441Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:12:02.1759643Z env:
+2026-10-14T06:12:02.1759816Z   HAS_APP_CREDS: false
+2026-10-14T06:12:02.1760033Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:12:02.1760276Z ##[endgroup]
+2026-10-14T06:12:02.2546727Z docs/package.json:
+2026-10-14T06:12:02.2547406Z   npm-package-sort-metadata: Fixed
+2026-10-14T06:12:02.2554624Z   Saved changes
+2026-10-14T06:12:02.2555989Z 
+2026-10-14T06:12:02.6703450Z 
+2026-10-14T06:12:02.6703989Z Rule summary:
+2026-10-14T06:12:02.6704434Z   ts-js-copyright-header: 3699 checked
+2026-10-14T06:12:02.6704835Z   cs-copyright-header: 495 checked
+2026-10-14T06:12:02.6705187Z   less-copyright-header: 5 checked
+2026-10-14T06:12:02.6705530Z   py-copyright-header: 40 checked
+2026-10-14T06:12:02.6706061Z   yaml-copyright-header: 37 checked
+2026-10-14T06:12:02.6706403Z   html-copyright-header: 56 checked
+2026-10-14T06:12:02.6706745Z   batch-copyright-header: 13 checked
+2026-10-14T06:12:02.6707115Z   shellscript-copyright-header: 13 checked
+2026-10-14T06:12:02.6707488Z   npm-package-metadata: 151 checked
+2026-10-14T06:12:02.6707817Z   package-name: 151 checked
+2026-10-14T06:12:02.6708163Z   npm-package-sort-metadata: 151 checked
+2026-10-14T06:12:02.6708525Z   npm-package-readme-file: 151 checked
+2026-10-14T06:12:02.6708894Z   npm-package-license-file: 151 checked
+2026-10-14T06:12:02.6709492Z   readme-trademark: 186 checked
+2026-10-14T06:12:02.6709811Z   license-content: 114 checked
+2026-10-14T06:12:02.6711376Z   invisible-unicode: 5229 checked
+2026-10-14T06:12:02.6711585Z   agent-keyword: 151 checked
+2026-10-14T06:12:02.6711786Z   agent-default-name: 151 checked
+2026-10-14T06:12:02.6711914Z 
+2026-10-14T06:12:02.6711992Z File summary:
+2026-10-14T06:12:02.6712190Z   Total:    6415
+2026-10-14T06:12:02.6712355Z   Excluded: 6
+2026-10-14T06:12:02.6712562Z   Skipped:  875 (no rules matched)
+2026-10-14T06:12:02.6712771Z   Checked:  5534
+2026-10-14T06:12:02.6712868Z 
+2026-10-14T06:12:02.6712962Z Passed 10944 checks. Fixed 1
+2026-10-14T06:12:02.6848454Z ##[group]Run stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d
+2026-10-14T06:12:02.6848764Z with:
+2026-10-14T06:12:02.6849208Z   commit_message: style: apply prettier formatting and policy fixes
+2026-10-14T06:12:02.6849475Z   commit_user_name: typeagent-bot
+2026-10-14T06:12:02.6849723Z   commit_user_email: typeagent-bot[bot]@users.noreply.github.com
+2026-10-14T06:12:02.6850045Z   commit_author: typeagent-bot <typeagent-bot[bot]@users.noreply.github.com>
+2026-10-14T06:12:02.6850454Z   branch: fix/workspace-dependency-refresh
+2026-10-14T06:12:02.6850661Z   file_pattern: .
+2026-10-14T06:12:02.6850824Z   repository: .
+2026-10-14T06:12:02.6850990Z   skip_dirty_check: false
+2026-10-14T06:12:02.6851165Z   skip_fetch: false
+2026-10-14T06:12:02.6851329Z   skip_checkout: false
+2026-10-14T06:12:02.6851498Z   skip_push: false
+2026-10-14T06:12:02.6851661Z   disable_globbing: false
+2026-10-14T06:12:02.6851836Z   create_branch: false
+2026-10-14T06:12:02.6852034Z   create_git_tag_only: false
+2026-10-14T06:12:02.6852243Z   disable_pull_request_target_trigger_warning: false
+2026-10-14T06:12:02.6852469Z   internal_git_binary: git
+2026-10-14T06:12:02.6852646Z env:
+2026-10-14T06:12:02.6852800Z   HAS_APP_CREDS: false
+2026-10-14T06:12:02.6853001Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:12:02.6853221Z ##[endgroup]
+2026-10-14T06:12:02.7047328Z Started: bash /home/runner/work/_actions/stefanzweifel/git-auto-commit-action/4a55954c782fc1ea30b9056cd3e7a2b40ca8887d/entrypoint.sh
+2026-10-14T06:12:02.7079399Z INPUT_REPOSITORY value: .
+2026-10-14T06:12:02.7094245Z INPUT_STATUS_OPTIONS: 
+2026-10-14T06:12:02.7094704Z INPUT_FILE_PATTERN: .
+2026-10-14T06:12:02.7571750Z INPUT_BRANCH value: fix/workspace-dependency-refresh
+2026-10-14T06:12:08.8974056Z Already on 'fix/workspace-dependency-refresh'
+2026-10-14T06:12:08.8975809Z M	docs/package.json
+2026-10-14T06:12:08.8976263Z Your branch is up to date with 'origin/fix/workspace-dependency-refresh'.
+2026-10-14T06:12:08.8981161Z INPUT_ADD_OPTIONS: 
+2026-10-14T06:12:08.8981688Z INPUT_FILE_PATTERN: .
+2026-10-14T06:12:08.9253579Z INPUT_COMMIT_OPTIONS: 
+2026-10-14T06:12:08.9254200Z INPUT_COMMIT_USER_NAME: typeagent-bot
+2026-10-14T06:12:08.9254530Z INPUT_COMMIT_USER_EMAIL: typeagent-bot[bot]@users.noreply.github.com
+2026-10-14T06:12:08.9254907Z INPUT_COMMIT_MESSAGE: style: apply prettier formatting and policy fixes
+2026-10-14T06:12:08.9255295Z INPUT_COMMIT_AUTHOR: typeagent-bot <typeagent-bot[bot]@users.noreply.github.com>
+2026-10-14T06:12:08.9360082Z [fix/workspace-dependency-refresh 2ef166b9e] style: apply prettier formatting and policy fixes
+2026-10-14T06:12:08.9360501Z  1 file changed, 1 insertion(+), 1 deletion(-)
+2026-10-14T06:12:08.9381072Z INPUT_TAG_NAME: 
+2026-10-14T06:12:08.9381408Z INPUT_TAGGING_MESSAGE: 
+2026-10-14T06:12:08.9381813Z Neither tag nor tag message is set. No tag will be added.
+2026-10-14T06:12:08.9382490Z INPUT_BRANCH value: fix/workspace-dependency-refresh
+2026-10-14T06:12:08.9382993Z INPUT_PUSH_OPTIONS: 
+2026-10-14T06:12:10.9959149Z To https://github.com/microsoft/TypeAgent
+2026-10-14T06:12:10.9959730Z    48ff4ab3f..2ef166b9e  HEAD -> fix/workspace-dependency-refresh
+2026-10-14T06:12:11.0003114Z branch 'fix/workspace-dependency-refresh' set up to track 'origin/fix/workspace-dependency-refresh'.
+2026-10-14T06:12:11.0120820Z Post job cleanup.
+2026-10-14T06:12:11.0952680Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/TypeAgent/TypeAgent --files-from manifest.txt --use-compress-program zstdmt
+2026-10-14T06:12:19.2135925Z Sent 134217728 of 1085851877 (12.4%), 127.9 MBs/sec
+2026-10-14T06:12:20.2162783Z Sent 884525285 of 1085851877 (81.5%), 421.6 MBs/sec
+2026-10-14T06:12:20.7306378Z Sent 1085851877 of 1085851877 (100.0%), 411.3 MBs/sec
+2026-10-14T06:12:21.0117459Z Cache saved with the key: node-cache-Linux-x64-pnpm-376d081277e1a2dc37952a7b00233cb53ee72de66fc441195b0b64c08a9dcb91
+2026-10-14T06:12:21.0223384Z Post job cleanup.
+2026-10-14T06:12:21.1220453Z Pruning is unnecessary.
+2026-10-14T06:12:21.1335045Z Post job cleanup.
+2026-10-14T06:12:21.1897424Z [command]/usr/bin/git version
+2026-10-14T06:12:21.1925848Z git version 2.55.0
+2026-10-14T06:12:21.1943954Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/cde011ba-3522-4e8a-9238-80089a67d2fb/.gitconfig'
+2026-10-14T06:12:21.1949638Z Temporarily overriding HOME='/home/runner/work/_temp/cde011ba-3522-4e8a-9238-80089a67d2fb' before making global git config changes
+2026-10-14T06:12:21.1950898Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:12:21.1953155Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:12:21.1982016Z Removing SSH command configuration
+2026-10-14T06:12:21.1986024Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:12:21.2013661Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:12:21.2193768Z Removing HTTP extra header
+2026-10-14T06:12:21.2197956Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:12:21.2227891Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:12:21.2420836Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:12:21.2426093Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:12:21.2453701Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:12:21.2454515Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:12:21.2455215Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:12:21.2455951Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:12:21.2461521Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:12:21.2481732Z /home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:12:21.2491520Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-dff60477\-cada\-4eee\-91db\-ae4760ee511c\.config
+2026-10-14T06:12:21.2530475Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:12:21.2553423Z /home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:12:21.2561250Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-dff60477\-cada\-4eee\-91db\-ae4760ee511c\.config
+2026-10-14T06:12:21.2586249Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:12:21.2603395Z /github/runner_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:12:21.2608619Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-dff60477\-cada\-4eee\-91db\-ae4760ee511c\.config
+2026-10-14T06:12:21.2632898Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:12:21.2648854Z /github/runner_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config
+2026-10-14T06:12:21.2655301Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-dff60477\-cada\-4eee\-91db\-ae4760ee511c\.config
+2026-10-14T06:12:21.2682449Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:12:21.2852645Z Removing credentials config '/home/runner/work/_temp/git-credentials-dff60477-cada-4eee-91db-ae4760ee511c.config'
+2026-10-14T06:12:21.2975384Z Cleaning up orphan processes

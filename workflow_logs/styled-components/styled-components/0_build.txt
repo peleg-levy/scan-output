@@ -1,0 +1,380 @@
+﻿2026-10-13T18:36:10.2340799Z Current runner version: '2.337.0'
+2026-10-13T18:36:10.2365783Z ##[group]Runner Image Provisioner
+2026-10-13T18:36:10.2366770Z Hosted Compute Agent
+2026-10-13T18:36:10.2367411Z Version: 20261002.596
+2026-10-13T18:36:10.2368103Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T18:36:10.2368883Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T18:36:10.2369567Z Worker ID: {4b492c90-d1df-4e80-b3f9-550c27c179e9}
+2026-10-13T18:36:10.2370350Z Region: westus2
+2026-10-13T18:36:10.2370934Z Cloud: Azure
+2026-10-13T18:36:10.2371495Z ##[endgroup]
+2026-10-13T18:36:10.2372926Z ##[group]Operating System
+2026-10-13T18:36:10.2373572Z Ubuntu
+2026-10-13T18:36:10.2374176Z 24.04.5
+2026-10-13T18:36:10.2375220Z LTS
+2026-10-13T18:36:10.2375751Z ##[endgroup]
+2026-10-13T18:36:10.2376407Z ##[group]Runner Image
+2026-10-13T18:36:10.2377068Z Image: ubuntu-24.04
+2026-10-13T18:36:10.2377701Z Version: 20261004.327.1
+2026-10-13T18:36:10.2379027Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T18:36:10.2380721Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T18:36:10.2381726Z ##[endgroup]
+2026-10-13T18:36:10.2382905Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T18:36:10.2385067Z Contents: read
+2026-10-13T18:36:10.2385805Z Metadata: read
+2026-10-13T18:36:10.2386412Z ##[endgroup]
+2026-10-13T18:36:10.2388908Z Secret source: None
+2026-10-13T18:36:10.2390029Z Cache mode: write
+2026-10-13T18:36:10.2390712Z Prepare workflow directory
+2026-10-13T18:36:10.2789735Z Prepare all required actions
+2026-10-13T18:36:10.2838736Z Getting action download info
+2026-10-13T18:36:10.6376075Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-13T18:36:10.7635693Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-10-13T18:36:11.6989371Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-13T18:36:12.1473976Z Complete job name: build
+2026-10-13T18:36:12.3143047Z ##[group]Run actions/checkout@v4
+2026-10-13T18:36:12.3144219Z with:
+2026-10-13T18:36:12.3145303Z   repository: styled-components/styled-components
+2026-10-13T18:36:12.3153720Z   token: ***
+2026-10-13T18:36:12.3154247Z   ssh-strict: true
+2026-10-13T18:36:12.3155118Z   ssh-user: git
+2026-10-13T18:36:12.3155687Z   persist-credentials: true
+2026-10-13T18:36:12.3156334Z   clean: true
+2026-10-13T18:36:12.3156893Z   sparse-checkout-cone-mode: true
+2026-10-13T18:36:12.3157591Z   fetch-depth: 1
+2026-10-13T18:36:12.3158142Z   fetch-tags: false
+2026-10-13T18:36:12.3158750Z   show-progress: true
+2026-10-13T18:36:12.3159348Z   lfs: false
+2026-10-13T18:36:12.3159892Z   submodules: false
+2026-10-13T18:36:12.3160473Z   set-safe-directory: true
+2026-10-13T18:36:12.3161160Z   allow-unsafe-pr-checkout: false
+2026-10-13T18:36:12.3162226Z ##[endgroup]
+2026-10-13T18:36:12.4319941Z Syncing repository: styled-components/styled-components
+2026-10-13T18:36:12.4322658Z ##[group]Getting Git version info
+2026-10-13T18:36:12.4324209Z Working directory is '/home/runner/work/styled-components/styled-components'
+2026-10-13T18:36:12.4326440Z [command]/usr/bin/git version
+2026-10-13T18:36:12.4507781Z git version 2.55.0
+2026-10-13T18:36:12.4527863Z ##[endgroup]
+2026-10-13T18:36:12.4543084Z Temporarily overriding HOME='/home/runner/work/_temp/7b963f32-e8cc-4ed5-a794-e7b29a93d390' before making global git config changes
+2026-10-13T18:36:12.4546682Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T18:36:12.4550287Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:12.4867297Z Deleting the contents of '/home/runner/work/styled-components/styled-components'
+2026-10-13T18:36:12.4871541Z ##[group]Initializing the repository
+2026-10-13T18:36:12.4878293Z [command]/usr/bin/git init /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:12.5522566Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T18:36:12.5525621Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T18:36:12.5528449Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T18:36:12.5530552Z hint: call:
+2026-10-13T18:36:12.5531700Z hint:
+2026-10-13T18:36:12.5532958Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T18:36:12.5534962Z hint:
+2026-10-13T18:36:12.5536651Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T18:36:12.5539216Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T18:36:12.5541646Z hint:
+2026-10-13T18:36:12.5542687Z hint: 	git branch -m <name>
+2026-10-13T18:36:12.5543893Z hint:
+2026-10-13T18:36:12.5546650Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T18:36:12.5560044Z Initialized empty Git repository in /home/runner/work/styled-components/styled-components/.git/
+2026-10-13T18:36:12.5567885Z [command]/usr/bin/git remote add origin https://github.com/styled-components/styled-components
+2026-10-13T18:36:12.6499212Z ##[endgroup]
+2026-10-13T18:36:12.6500697Z ##[group]Disabling automatic garbage collection
+2026-10-13T18:36:12.6503450Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T18:36:12.8384878Z ##[endgroup]
+2026-10-13T18:36:12.8386389Z ##[group]Setting up auth
+2026-10-13T18:36:12.8387721Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T18:36:12.8426232Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T18:36:13.0721822Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T18:36:13.0758458Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T18:36:13.1005139Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T18:36:13.1039241Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T18:36:13.1260047Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T18:36:13.1295503Z ##[endgroup]
+2026-10-13T18:36:13.1297475Z ##[group]Fetching the repository
+2026-10-13T18:36:13.1305416Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +29e1d2190bd5b1dd29a57ba30274f83a2aac2876:refs/remotes/pull/5837/merge
+2026-10-13T18:36:13.9182764Z From https://github.com/styled-components/styled-components
+2026-10-13T18:36:13.9185788Z  * [new ref]         29e1d2190bd5b1dd29a57ba30274f83a2aac2876 -> pull/5837/merge
+2026-10-13T18:36:13.9191546Z ##[endgroup]
+2026-10-13T18:36:13.9193481Z ##[group]Determining the checkout info
+2026-10-13T18:36:13.9196016Z ##[endgroup]
+2026-10-13T18:36:13.9197317Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T18:36:13.9249124Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T18:36:13.9279682Z ##[group]Checking out the ref
+2026-10-13T18:36:13.9282540Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5837/merge
+2026-10-13T18:36:13.9531974Z Note: switching to 'refs/remotes/pull/5837/merge'.
+2026-10-13T18:36:13.9533573Z 
+2026-10-13T18:36:13.9534880Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-13T18:36:13.9537282Z changes and commit them, and you can discard any commits you make in this
+2026-10-13T18:36:13.9539996Z state without impacting any branches by switching back to a branch.
+2026-10-13T18:36:13.9542121Z 
+2026-10-13T18:36:13.9543662Z If you want to create a new branch to retain commits you create, you may
+2026-10-13T18:36:13.9547805Z do so (now or later) by using -c with the switch command. Example:
+2026-10-13T18:36:13.9549536Z 
+2026-10-13T18:36:13.9550433Z   git switch -c <new-branch-name>
+2026-10-13T18:36:13.9551782Z 
+2026-10-13T18:36:13.9552578Z Or undo this operation with:
+2026-10-13T18:36:13.9553738Z 
+2026-10-13T18:36:13.9554700Z   git switch -
+2026-10-13T18:36:13.9555921Z 
+2026-10-13T18:36:13.9556909Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-13T18:36:13.9558285Z 
+2026-10-13T18:36:13.9559608Z HEAD is now at 29e1d21 Merge e545904901fdd9c3878a0d24df383a164378b9e0 into 689ce25717773b8b3096db44ee8618318212e0ca
+2026-10-13T18:36:13.9565307Z ##[endgroup]
+2026-10-13T18:36:13.9588147Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T18:36:13.9611146Z 29e1d2190bd5b1dd29a57ba30274f83a2aac2876
+2026-10-13T18:36:13.9996718Z ##[group]Run pnpm/action-setup@v4
+2026-10-13T18:36:13.9997806Z with:
+2026-10-13T18:36:13.9998657Z   dest: ~/setup-pnpm
+2026-10-13T18:36:13.9999544Z   run_install: null
+2026-10-13T18:36:14.0000417Z   cache: false
+2026-10-13T18:36:14.0001317Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-13T18:36:14.0002437Z   package_json_file: package.json
+2026-10-13T18:36:14.0003448Z   standalone: false
+2026-10-13T18:36:14.0004311Z ##[endgroup]
+2026-10-13T18:36:14.1502453Z ##[group]Running self-installer...
+2026-10-13T18:36:14.5613422Z (node:2325) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T18:36:14.5615835Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:36:14.7448934Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-13T18:36:15.1030726Z 
+2026-10-13T18:36:15.1031532Z dependencies:
+2026-10-13T18:36:15.1032017Z + pnpm 10.0.0
+2026-10-13T18:36:15.1032239Z 
+2026-10-13T18:36:15.1155340Z Packages: +1
+2026-10-13T18:36:15.1156138Z +
+2026-10-13T18:36:15.1828800Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-13T18:36:15.2038693Z Done in 882ms
+2026-10-13T18:36:15.2197982Z ##[endgroup]
+2026-10-13T18:36:15.2198296Z Installation Completed!
+2026-10-13T18:36:15.2399823Z ##[group]Run actions/setup-node@v4
+2026-10-13T18:36:15.2400157Z with:
+2026-10-13T18:36:15.2400375Z   cache: pnpm
+2026-10-13T18:36:15.2400596Z   node-version-file: .nvmrc
+2026-10-13T18:36:15.2400837Z   always-auth: false
+2026-10-13T18:36:15.2401059Z   check-latest: false
+2026-10-13T18:36:15.2403427Z   token: ***
+2026-10-13T18:36:15.2403626Z env:
+2026-10-13T18:36:15.2403880Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:15.2404193Z ##[endgroup]
+2026-10-13T18:36:15.3777324Z Node version file is not JSON file
+2026-10-13T18:36:15.3779204Z Resolved .nvmrc as 24
+2026-10-13T18:36:15.3832796Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-13T18:36:15.3837582Z (node:2339) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T18:36:15.3838594Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:36:15.3840677Z ##[group]Environment details
+2026-10-13T18:36:15.7749730Z node: v24.21.0
+2026-10-13T18:36:15.7750508Z npm: 11.19.0
+2026-10-13T18:36:15.7751013Z yarn: 1.22.22
+2026-10-13T18:36:15.7751998Z ##[endgroup]
+2026-10-13T18:36:15.7776994Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-10-13T18:36:16.1921145Z /home/runner/setup-pnpm/node_modules/.bin/store/v10
+2026-10-13T18:36:16.4481033Z Cache hit for: node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3
+2026-10-13T18:36:16.4586446Z (node:2339) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T18:36:17.7140255Z Received 4194304 of 242263551 (1.7%), 4.0 MBs/sec
+2026-10-13T18:36:18.7142360Z Received 121634816 of 242263551 (50.2%), 58.0 MBs/sec
+2026-10-13T18:36:19.7150498Z Received 233874943 of 242263551 (96.5%), 74.3 MBs/sec
+2026-10-13T18:36:19.8332114Z Received 242263551 of 242263551 (100.0%), 74.1 MBs/sec
+2026-10-13T18:36:19.8335528Z Cache Size: ~231 MB (242263551 B)
+2026-10-13T18:36:19.8458382Z [command]/usr/bin/tar -xf /home/runner/work/_temp/70755bfa-db09-46c7-b5b2-69ab8dd3cb9e/cache.tzst -P -C /home/runner/work/styled-components/styled-components --use-compress-program unzstd
+2026-10-13T18:36:22.1129780Z Cache restored successfully
+2026-10-13T18:36:22.1264702Z Cache restored from key: node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3
+2026-10-13T18:36:22.1432371Z ##[group]Run pnpm install --frozen-lockfile
+2026-10-13T18:36:22.1432793Z [36;1mpnpm install --frozen-lockfile[0m
+2026-10-13T18:36:22.1722662Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:22.1722972Z env:
+2026-10-13T18:36:22.1723299Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:22.1723691Z ##[endgroup]
+2026-10-13T18:36:22.5008299Z Scope: all 5 workspace projects
+2026-10-13T18:36:22.5580537Z Lockfile is up to date, resolution step is skipped
+2026-10-13T18:36:22.8116616Z Packages: +1196
+2026-10-13T18:36:22.8117127Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-13T18:36:22.8148124Z Progress: resolved 0, reused 1, downloaded 0, added 0
+2026-10-13T18:36:23.8209436Z Progress: resolved 0, reused 1082, downloaded 0, added 169
+2026-10-13T18:36:24.6536104Z Progress: resolved 0, reused 1082, downloaded 0, added 1196, done
+2026-10-13T18:36:24.8487042Z 
+2026-10-13T18:36:24.8488178Z The following dependencies have build scripts that were ignored: unrs-resolver
+2026-10-13T18:36:24.8489803Z To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+2026-10-13T18:36:24.8490858Z 
+2026-10-13T18:36:24.9633112Z . postinstall$ pnpm --filter styled-components generateErrors
+2026-10-13T18:36:25.2968493Z . postinstall: > styled-components@6.6.0 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:25.2970063Z . postinstall: > node scripts/generateErrorMap.js
+2026-10-13T18:36:25.3313131Z . postinstall: Done
+2026-10-13T18:36:25.3318035Z . prepare$ husky
+2026-10-13T18:36:25.3747722Z . prepare: Done
+2026-10-13T18:36:25.3785776Z Done in 3.1s
+2026-10-13T18:36:25.4272344Z ##[group]Run pnpm build
+2026-10-13T18:36:25.4272648Z [36;1mpnpm build[0m
+2026-10-13T18:36:25.4334212Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:25.4334647Z env:
+2026-10-13T18:36:25.4334912Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:25.4335256Z   BUNDLEWATCH_GITHUB_TOKEN: 
+2026-10-13T18:36:25.4335501Z ##[endgroup]
+2026-10-13T18:36:25.7432631Z 
+2026-10-13T18:36:25.7433782Z > styled-components-project@ build /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:25.7434902Z > pnpm --filter styled-components build
+2026-10-13T18:36:25.7435177Z 
+2026-10-13T18:36:26.0764767Z 
+2026-10-13T18:36:26.0766192Z > styled-components@6.6.0 prebuild /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:26.0767181Z > rimraf dist && pnpm run generateErrors && pnpm run typecheck
+2026-10-13T18:36:26.0767531Z 
+2026-10-13T18:36:26.4193367Z 
+2026-10-13T18:36:26.4195377Z > styled-components@6.6.0 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:26.4196879Z > node scripts/generateErrorMap.js
+2026-10-13T18:36:26.4197202Z 
+2026-10-13T18:36:26.7557277Z 
+2026-10-13T18:36:26.7558696Z > styled-components@6.6.0 typecheck /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:26.7559813Z > tsc --noEmit
+2026-10-13T18:36:26.7559991Z 
+2026-10-13T18:36:32.0550051Z 
+2026-10-13T18:36:32.0551404Z > styled-components@6.6.0 build /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:32.0552783Z > rollup -c
+2026-10-13T18:36:32.0552975Z 
+2026-10-13T18:36:32.4518922Z [36m
+2026-10-13T18:36:32.4519657Z [1m./src/index-standalone.ts[22m → [1mdist/styled-components.js[22m...[39m
+2026-10-13T18:36:39.0166465Z [32mcreated [1mdist/styled-components.js[22m in [1m6.5s[22m[39m
+2026-10-13T18:36:39.0185206Z [36m
+2026-10-13T18:36:39.0186156Z [1m./src/index-standalone.ts[22m → [1mdist/styled-components.min.js[22m...[39m
+2026-10-13T18:36:41.5928621Z [32mcreated [1mdist/styled-components.min.js[22m in [1m2.5s[22m[39m
+2026-10-13T18:36:41.5929389Z [36m
+2026-10-13T18:36:41.5930467Z [1m./src/index.ts[22m → [1mdist/styled-components.esm.js, dist/styled-components.cjs.js[22m...[39m
+2026-10-13T18:36:44.1262804Z [32mcreated [1mdist/styled-components.esm.js, dist/styled-components.cjs.js[22m in [1m2.5s[22m[39m
+2026-10-13T18:36:44.1263807Z [36m
+2026-10-13T18:36:44.1265386Z [1m./src/index.ts[22m → [1mdist/styled-components.browser.esm.js, dist/styled-components.browser.cjs.js[22m...[39m
+2026-10-13T18:36:46.4673486Z [32mcreated [1mdist/styled-components.browser.esm.js, dist/styled-components.browser.cjs.js[22m in [1m2.3s[22m[39m
+2026-10-13T18:36:46.4675007Z [36m
+2026-10-13T18:36:46.4675926Z [1m./src/native/index.ts[22m → [1mnative/dist/styled-components.native.cjs.js, native/dist/styled-components.native.esm.js[22m...[39m
+2026-10-13T18:36:53.0092922Z [32mcreated [1mnative/dist/styled-components.native.cjs.js, native/dist/styled-components.native.esm.js[22m in [1m6.5s[22m[39m
+2026-10-13T18:36:53.1153756Z 
+2026-10-13T18:36:53.1155417Z > styled-components@6.6.0 postbuild /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:53.1156430Z > pnpm run test:build
+2026-10-13T18:36:53.1156676Z 
+2026-10-13T18:36:53.4107860Z 
+2026-10-13T18:36:53.4108973Z > styled-components@6.6.0 test:build /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:53.4110255Z > jest -c jest.config.build.js
+2026-10-13T18:36:53.4110491Z 
+2026-10-13T18:36:56.1952867Z   console.log
+2026-10-13T18:36:56.1953286Z       styled-components.min.js: 12.46kB gzip
+2026-10-13T18:36:56.1953559Z 
+2026-10-13T18:36:56.1953786Z       at Object.log (src/test/treeshake.test.ts:290:13)
+2026-10-13T18:36:56.1954075Z 
+2026-10-13T18:36:56.6171013Z   console.log
+2026-10-13T18:36:56.6171467Z       production bundle (webpack): 8.26kB gzip
+2026-10-13T18:36:56.6172058Z 
+2026-10-13T18:36:56.6172297Z       at Object.log (src/test/treeshake.test.ts:343:15)
+2026-10-13T18:36:56.6172588Z 
+2026-10-13T18:36:56.6256663Z PASS src/test/treeshake.test.ts
+2026-10-13T18:36:56.6259549Z   findFreeNodeGlobalRefs
+2026-10-13T18:36:56.6262279Z     ✓ flags a free reference reached through a member expression (6 ms)
+2026-10-13T18:36:56.6263154Z     ✓ flags a free reference used as a call target (1 ms)
+2026-10-13T18:36:56.6263955Z     ✓ allows the direct operand of typeof (2 ms)
+2026-10-13T18:36:56.6264900Z     ✓ allows process.env member access
+2026-10-13T18:36:56.6266031Z     ✓ does not flag a string literal that merely contains the word "process" (1 ms)
+2026-10-13T18:36:56.6267076Z     ✓ covers every documented Node-only global name (2 ms)
+2026-10-13T18:36:56.6268055Z     ✓ does not flag a declaration that happens to share a global's name (1 ms)
+2026-10-13T18:36:56.6268923Z   dead-code elimination: browser build
+2026-10-13T18:36:56.6269567Z     ✓ eliminates __SERVER__ identifier
+2026-10-13T18:36:56.6270230Z     ✓ eliminates IS_RSC createContext check (1 ms)
+2026-10-13T18:36:56.6270924Z     ✓ exports createTheme
+2026-10-13T18:36:56.6271792Z     ✓ never references a Node-only global outside a typeof guard or process.env (73 ms)
+2026-10-13T18:36:56.6272809Z     ✓ eliminates ServerStyleSheet streaming internals (1 ms)
+2026-10-13T18:36:56.6273458Z   edge runtime guard: browser build
+2026-10-13T18:36:56.6274181Z     ✓ throws error 19 when React has no createContext (270 ms)
+2026-10-13T18:36:56.6275360Z     ✓ loads when React has createContext (2 ms)
+2026-10-13T18:36:56.6275752Z   dead-code elimination: server build
+2026-10-13T18:36:56.6276132Z     ✓ eliminates __SERVER__ identifier
+2026-10-13T18:36:56.6276498Z     ✓ exports createTheme (1 ms)
+2026-10-13T18:36:56.6276872Z   dead-code elimination: standalone production build
+2026-10-13T18:36:56.6277297Z     ✓ eliminates __SERVER__ identifier
+2026-10-13T18:36:56.6277686Z     ✓ eliminates IS_RSC createContext check
+2026-10-13T18:36:56.6278119Z     ✓ eliminates development-only code (1 ms)
+2026-10-13T18:36:56.6278449Z   native build isolation
+2026-10-13T18:36:56.6278838Z     ✓ does not contain unguarded document or window references
+2026-10-13T18:36:56.6301212Z     ✓ does not contain createTheme (requires DOM)
+2026-10-13T18:36:56.6302019Z     ✓ eliminates IS_RSC createContext check
+2026-10-13T18:36:56.6302570Z     ✓ does not contain StyleSheetManager (web-only)
+2026-10-13T18:36:56.6303020Z   stylisPluginRSC tree-shaking
+2026-10-13T18:36:56.6303446Z     ✓ is excluded from the standalone UMD bundle
+2026-10-13T18:36:56.6303906Z     ✓ is available in ESM builds for downstream tree-shaking
+2026-10-13T18:36:56.6304626Z     ✓ is eliminated by webpack when unused (1187 ms)
+2026-10-13T18:36:56.6305016Z   bundle size
+2026-10-13T18:36:56.6305391Z     ✓ standalone minified bundle is under 13kB gzip (11 ms)
+2026-10-13T18:36:56.6305919Z     ✓ production bundle size with real bundler tree-shaking (422 ms)
+2026-10-13T18:36:56.6306325Z   ESM tree-shakeability
+2026-10-13T18:36:56.6306632Z     ✓ browser ESM uses named exports
+2026-10-13T18:36:56.6306966Z     ✓ server ESM uses named exports
+2026-10-13T18:36:56.6307337Z     ✓ package.json declares sideEffects: false
+2026-10-13T18:36:56.6307856Z     ✓ package.json has browser field for build-specific resolution (1 ms)
+2026-10-13T18:36:56.6308271Z   published type dependencies
+2026-10-13T18:36:56.6308649Z     ✓ declares no @types package as a peer dependency
+2026-10-13T18:36:56.6309282Z     ✓ carries a matching @types dependency for every untyped dependency the declarations import (3 ms)
+2026-10-13T18:36:56.6309699Z 
+2026-10-13T18:36:56.6309849Z Test Suites: 1 passed, 1 total
+2026-10-13T18:36:56.6310153Z Tests:       34 passed, 34 total
+2026-10-13T18:36:56.6310422Z Snapshots:   0 total
+2026-10-13T18:36:56.6310657Z Time:        2.836 s
+2026-10-13T18:36:56.6310889Z Ran all test suites.
+2026-10-13T18:36:56.7917322Z ##[group]Run pnpm --filter styled-components type-perf
+2026-10-13T18:36:56.7917770Z [36;1mpnpm --filter styled-components type-perf[0m
+2026-10-13T18:36:56.7978359Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:56.7978610Z env:
+2026-10-13T18:36:56.7978865Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:56.7979180Z ##[endgroup]
+2026-10-13T18:36:57.1350400Z 
+2026-10-13T18:36:57.1351997Z > styled-components@6.6.0 type-perf /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:57.1352784Z > node scripts/typePerf.mjs
+2026-10-13T18:36:57.1353016Z 
+2026-10-13T18:36:59.9245360Z type-perf: 100 components, TypeScript 5.9.3, @types/react 18.3.28
+2026-10-13T18:36:59.9379973Z   types:          36,886
+2026-10-13T18:36:59.9380596Z   instantiations: 738,335
+2026-10-13T18:36:59.9381113Z   memory:         190 MB
+2026-10-13T18:36:59.9382073Z type-perf: within budget
+2026-10-13T18:36:59.9563039Z ##[group]Run pnpm --filter styled-components type-perf:augment
+2026-10-13T18:36:59.9563542Z [36;1mpnpm --filter styled-components type-perf:augment[0m
+2026-10-13T18:36:59.9625091Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:59.9625349Z env:
+2026-10-13T18:36:59.9625604Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:59.9625929Z ##[endgroup]
+2026-10-13T18:37:00.3022145Z 
+2026-10-13T18:37:00.3023233Z > styled-components@6.6.0 type-perf:augment /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:37:00.3024095Z > node scripts/typePerf.mjs --augment
+2026-10-13T18:37:00.3024607Z 
+2026-10-13T18:37:03.4262031Z type-perf (augmented): 100 components, TypeScript 5.9.3, @types/react 18.3.28
+2026-10-13T18:37:03.4396420Z   types:          37,045
+2026-10-13T18:37:03.4397001Z   instantiations: 812,680
+2026-10-13T18:37:03.4397514Z   memory:         190 MB
+2026-10-13T18:37:03.4398343Z type-perf: within budget
+2026-10-13T18:37:03.4578065Z ##[group]Run pnpm --filter styled-components test:types:dist
+2026-10-13T18:37:03.4578541Z [36;1mpnpm --filter styled-components test:types:dist[0m
+2026-10-13T18:37:03.4639638Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:37:03.4639893Z env:
+2026-10-13T18:37:03.4640146Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:37:03.4640465Z ##[endgroup]
+2026-10-13T18:37:03.8020651Z 
+2026-10-13T18:37:03.8021961Z > styled-components@6.6.0 test:types:dist /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:37:03.8023135Z > node scripts/typeCheckDist.mjs
+2026-10-13T18:37:03.8023467Z 
+2026-10-13T18:37:11.3987564Z type-check-dist: @types/react 16.14.41 + @types/react-dom 16.9.19 -- dist declarations and consumer fixture compile clean
+2026-10-13T18:37:15.9987578Z type-check-dist: @types/react 17.0.59 + @types/react-dom 17.0.20 -- dist declarations and consumer fixture compile clean
+2026-10-13T18:37:20.0230871Z type-check-dist: @types/react 18.2.6 + @types/react-dom 18.2.6 -- dist declarations and consumer fixture compile clean
+2026-10-13T18:37:23.7254102Z type-check-dist: @types/react 18.3.28 + @types/react-dom 18.3.7 -- dist declarations and consumer fixture compile clean
+2026-10-13T18:37:27.7418232Z type-check-dist: @types/react 19.2.18 + @types/react-dom 19.2.3 -- dist declarations and consumer fixture compile clean
+2026-10-13T18:37:27.9071974Z Post job cleanup.
+2026-10-13T18:37:28.0319455Z (node:2726) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T18:37:28.0320378Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:37:28.0323040Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3, not saving cache.
+2026-10-13T18:37:28.0427634Z Post job cleanup.
+2026-10-13T18:37:28.1947305Z Pruning is unnecessary.
+2026-10-13T18:37:28.2109352Z Post job cleanup.
+2026-10-13T18:37:28.2969631Z [command]/usr/bin/git version
+2026-10-13T18:37:28.3007005Z git version 2.55.0
+2026-10-13T18:37:28.3044677Z Temporarily overriding HOME='/home/runner/work/_temp/136166b1-598d-442b-a258-ea5a55e8eba8' before making global git config changes
+2026-10-13T18:37:28.3046257Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T18:37:28.3049692Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-13T18:37:28.3087520Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T18:37:28.3122799Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T18:37:28.3349072Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T18:37:28.3375099Z http.https://github.com/.extraheader
+2026-10-13T18:37:28.3387439Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T18:37:28.3421594Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T18:37:28.3643573Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T18:37:28.3675484Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T18:37:28.4040509Z Cleaning up orphan processes
+2026-10-13T18:37:28.4349138Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

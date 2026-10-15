@@ -1,0 +1,1109 @@
+﻿2026-10-14T06:10:25.3733110Z Current runner version: '2.337.0'
+2026-10-14T06:10:25.3750270Z ##[group]Runner Image Provisioner
+2026-10-14T06:10:25.3750890Z Hosted Compute Agent
+2026-10-14T06:10:25.3751370Z Version: 20260828.587
+2026-10-14T06:10:25.3751990Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-10-14T06:10:25.3752510Z Build Date: 2026-08-28T16:44:25Z
+2026-10-14T06:10:25.3753030Z Worker ID: {ab0419a3-d4ac-4c21-b16c-a301d661e22b}
+2026-10-14T06:10:25.3753550Z Azure Region: westus
+2026-10-14T06:10:25.3753950Z ##[endgroup]
+2026-10-14T06:10:25.3755080Z ##[group]Operating System
+2026-10-14T06:10:25.3755590Z macOS
+2026-10-14T06:10:25.3755960Z 26.6.2
+2026-10-14T06:10:25.3756330Z 25G83
+2026-10-14T06:10:25.3756720Z ##[endgroup]
+2026-10-14T06:10:25.3757110Z ##[group]Runner Image
+2026-10-14T06:10:25.3757640Z Image: macos-26-arm64
+2026-10-14T06:10:25.3758100Z Version: 20260907.0351.1
+2026-10-14T06:10:25.3759140Z Included Software: https://github.com/actions/runner-images/blob/macos-26-arm64/20260907.0351/images/macos/macos-26-arm64-Readme.md
+2026-10-14T06:10:25.3760290Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-26-arm64%2F20260907.0351
+2026-10-14T06:10:25.3761040Z ##[endgroup]
+2026-10-14T06:10:25.3762070Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T06:10:25.3763450Z Contents: read
+2026-10-14T06:10:25.3763840Z Metadata: read
+2026-10-14T06:10:25.3764240Z PullRequests: read
+2026-10-14T06:10:25.3764610Z ##[endgroup]
+2026-10-14T06:10:25.3766240Z Secret source: Actions
+2026-10-14T06:10:25.3766910Z Cache mode: write
+2026-10-14T06:10:25.3767400Z Prepare workflow directory
+2026-10-14T06:10:25.4136820Z Prepare all required actions
+2026-10-14T06:10:25.4171390Z Getting action download info
+2026-10-14T06:10:25.6899350Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T06:10:26.0257490Z Download action repository 'dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d' (SHA:ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d)
+2026-10-14T06:10:26.3941320Z Download action repository 'pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86' (SHA:0977fd99725f1db4007ccb2928dbb4e90d06cc86)
+2026-10-14T06:10:26.7772100Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-14T06:10:26.9605030Z Complete job name: build_package_shell (macos-latest, 22)
+2026-10-14T06:10:27.0026990Z ##[group]Run git config --global core.autocrlf false
+2026-10-14T06:10:27.0028090Z [36;1mgit config --global core.autocrlf false[0m
+2026-10-14T06:10:27.0078040Z shell: /bin/bash -e {0}
+2026-10-14T06:10:27.0079020Z env:
+2026-10-14T06:10:27.0079930Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:27.0081370Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:27.0082410Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:27.0083080Z ##[endgroup]
+2026-10-14T06:10:27.1657870Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-14T06:10:27.1658950Z with:
+2026-10-14T06:10:27.1659530Z   repository: microsoft/TypeAgent
+2026-10-14T06:10:27.1665080Z   token: ***
+2026-10-14T06:10:27.1665600Z   ssh-strict: true
+2026-10-14T06:10:27.1666140Z   ssh-user: git
+2026-10-14T06:10:27.1666840Z   persist-credentials: true
+2026-10-14T06:10:27.1667450Z   clean: true
+2026-10-14T06:10:27.1667970Z   sparse-checkout-cone-mode: true
+2026-10-14T06:10:27.1668730Z   fetch-depth: 1
+2026-10-14T06:10:27.1669430Z   fetch-tags: false
+2026-10-14T06:10:27.1670110Z   show-progress: true
+2026-10-14T06:10:27.1670750Z   lfs: false
+2026-10-14T06:10:27.1671260Z   submodules: false
+2026-10-14T06:10:27.1671830Z   set-safe-directory: true
+2026-10-14T06:10:27.1672440Z   allow-unsafe-pr-checkout: false
+2026-10-14T06:10:27.1673090Z env:
+2026-10-14T06:10:27.1675000Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:27.1676770Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:27.1679360Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:27.1680270Z ##[endgroup]
+2026-10-14T06:10:27.5603680Z Syncing repository: microsoft/TypeAgent
+2026-10-14T06:10:27.5605830Z ##[group]Getting Git version info
+2026-10-14T06:10:27.5606810Z Working directory is '/Users/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:27.5628620Z [command]/opt/homebrew/bin/git version
+2026-10-14T06:10:27.5664050Z git version 2.55.0
+2026-10-14T06:10:27.5675730Z ##[endgroup]
+2026-10-14T06:10:27.5681500Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/5cc4ca89-1b98-45c1-8b16-f93b4883fb0b/.gitconfig'
+2026-10-14T06:10:27.5686330Z Temporarily overriding HOME='/Users/runner/work/_temp/5cc4ca89-1b98-45c1-8b16-f93b4883fb0b' before making global git config changes
+2026-10-14T06:10:27.5688480Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:10:27.5690330Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:27.5754700Z Deleting the contents of '/Users/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:27.5758410Z ##[group]Determining repository object format
+2026-10-14T06:10:27.5759910Z ##[endgroup]
+2026-10-14T06:10:27.5761310Z ##[group]Initializing the repository
+2026-10-14T06:10:27.5762640Z [command]/opt/homebrew/bin/git init /Users/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:27.5970680Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T06:10:27.5972390Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T06:10:27.5973850Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T06:10:27.5974990Z hint: call:
+2026-10-14T06:10:27.5975570Z hint:
+2026-10-14T06:10:27.5976280Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T06:10:27.5977210Z hint:
+2026-10-14T06:10:27.5978220Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T06:10:27.5979690Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T06:10:27.5980860Z hint:
+2026-10-14T06:10:27.5981580Z hint: 	git branch -m <name>
+2026-10-14T06:10:27.5982350Z hint:
+2026-10-14T06:10:27.5983320Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T06:10:27.5984810Z Initialized empty Git repository in /Users/runner/work/TypeAgent/TypeAgent/.git/
+2026-10-14T06:10:27.5987520Z [command]/opt/homebrew/bin/git remote add origin https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:27.6073870Z ##[endgroup]
+2026-10-14T06:10:27.6075110Z ##[group]Disabling automatic garbage collection
+2026-10-14T06:10:27.6076070Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-10-14T06:10:27.6141480Z ##[endgroup]
+2026-10-14T06:10:27.6142570Z ##[group]Setting up auth
+2026-10-14T06:10:27.6143330Z Removing SSH command configuration
+2026-10-14T06:10:27.6146740Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:10:27.6215190Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:10:27.7312160Z Removing HTTP extra header
+2026-10-14T06:10:27.7316250Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:10:27.7386120Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:10:27.8417750Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:10:27.8428850Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:10:27.8520280Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:10:27.9390660Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T06:10:27.9461330Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git.path /Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:10:27.9524300Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:10:27.9595120Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:10:27.9669130Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:10:27.9742620Z ##[endgroup]
+2026-10-14T06:10:27.9747710Z ##[group]Fetching the repository
+2026-10-14T06:10:27.9749710Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fe0244810392a7b6d6347f0e1f5c5049481c1b75:refs/remotes/pull/3178/merge
+2026-10-14T06:10:32.6040420Z From https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:32.6041400Z  * [new ref]         fe0244810392a7b6d6347f0e1f5c5049481c1b75 -> pull/3178/merge
+2026-10-14T06:10:32.6043510Z ##[endgroup]
+2026-10-14T06:10:32.6044020Z ##[group]Determining the checkout info
+2026-10-14T06:10:32.6044440Z ##[endgroup]
+2026-10-14T06:10:32.6048360Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-10-14T06:10:32.6135020Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T06:10:32.6198330Z ##[group]Checking out the ref
+2026-10-14T06:10:32.6201700Z [command]/opt/homebrew/bin/git checkout --progress --force refs/remotes/pull/3178/merge
+2026-10-14T06:10:33.7271970Z Updating files:  70% (4524/6415)
+2026-10-14T06:10:33.7355870Z Updating files:  71% (4555/6415)
+2026-10-14T06:10:33.7514340Z Updating files:  72% (4619/6415)
+2026-10-14T06:10:33.7684050Z Updating files:  73% (4683/6415)
+2026-10-14T06:10:33.7807410Z Updating files:  74% (4748/6415)
+2026-10-14T06:10:33.7891910Z Updating files:  75% (4812/6415)
+2026-10-14T06:10:33.8036370Z Updating files:  76% (4876/6415)
+2026-10-14T06:10:33.8095890Z Updating files:  77% (4940/6415)
+2026-10-14T06:10:33.8220890Z Updating files:  78% (5004/6415)
+2026-10-14T06:10:33.8686690Z Updating files:  79% (5068/6415)
+2026-10-14T06:10:33.8765930Z Updating files:  80% (5132/6415)
+2026-10-14T06:10:33.8831300Z Updating files:  81% (5197/6415)
+2026-10-14T06:10:33.8927090Z Updating files:  82% (5261/6415)
+2026-10-14T06:10:33.8992340Z Updating files:  83% (5325/6415)
+2026-10-14T06:10:33.9068850Z Updating files:  84% (5389/6415)
+2026-10-14T06:10:33.9161650Z Updating files:  85% (5453/6415)
+2026-10-14T06:10:33.9255320Z Updating files:  86% (5517/6415)
+2026-10-14T06:10:33.9329090Z Updating files:  87% (5582/6415)
+2026-10-14T06:10:33.9416730Z Updating files:  88% (5646/6415)
+2026-10-14T06:10:33.9477880Z Updating files:  89% (5710/6415)
+2026-10-14T06:10:33.9538410Z Updating files:  90% (5774/6415)
+2026-10-14T06:10:33.9610890Z Updating files:  91% (5838/6415)
+2026-10-14T06:10:33.9695710Z Updating files:  92% (5902/6415)
+2026-10-14T06:10:33.9765610Z Updating files:  93% (5966/6415)
+2026-10-14T06:10:33.9820630Z Updating files:  94% (6031/6415)
+2026-10-14T06:10:33.9884980Z Updating files:  95% (6095/6415)
+2026-10-14T06:10:34.0006810Z Updating files:  96% (6159/6415)
+2026-10-14T06:10:34.0083850Z Updating files:  97% (6223/6415)
+2026-10-14T06:10:34.0179220Z Updating files:  98% (6287/6415)
+2026-10-14T06:10:34.0266500Z Updating files:  99% (6351/6415)
+2026-10-14T06:10:34.0273670Z Updating files: 100% (6415/6415)
+2026-10-14T06:10:34.0273930Z Updating files: 100% (6415/6415), done.
+2026-10-14T06:10:34.0417420Z HEAD is now at fe02448 Merge 48ff4ab3fba4df7bc776aa4eb73376b2a099c220 into e2c819c2b0ab10ec5524c4f644abab22e41e097d
+2026-10-14T06:10:34.0558220Z ##[endgroup]
+2026-10-14T06:10:34.0683710Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-10-14T06:10:34.0766350Z fe0244810392a7b6d6347f0e1f5c5049481c1b75
+2026-10-14T06:10:34.1007560Z ##[group]Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d
+2026-10-14T06:10:34.1007890Z with:
+2026-10-14T06:10:34.1008330Z   filters: ts:
+  - "ts/**"
+  - "dotnet/powerShellSandboxBroker/**"
+  - ".github/workflows/build-package-shell.yml"
+
+2026-10-14T06:10:34.1010390Z   token: ***
+2026-10-14T06:10:34.1010530Z   list-files: none
+2026-10-14T06:10:34.1010690Z   initial-fetch-depth: 100
+2026-10-14T06:10:34.1010940Z   predicate-quantifier: some
+2026-10-14T06:10:34.1011120Z env:
+2026-10-14T06:10:34.1011340Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:34.1011810Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:34.1012160Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:34.1012360Z ##[endgroup]
+2026-10-14T06:10:34.2164510Z ##[group]Fetching list of changed files for PR#3178 from GitHub API
+2026-10-14T06:10:34.2169130Z Invoking listFiles(pull_number: 3178, per_page: 100)
+2026-10-14T06:10:34.5894350Z Received 13 items
+2026-10-14T06:10:34.5894790Z [modified] docs/package.json
+2026-10-14T06:10:34.5895270Z [modified] docs/pnpm-lock.yaml
+2026-10-14T06:10:34.5897330Z [modified] ts/packages/agentServer/bundledRuntime/package.json
+2026-10-14T06:10:34.5898480Z [modified] ts/packages/agents/montage/package.json
+2026-10-14T06:10:34.5898930Z [modified] ts/packages/knowledgeProcessor/package.json
+2026-10-14T06:10:34.5899270Z [modified] ts/packages/knowledgeProcessor/src/images/image.ts
+2026-10-14T06:10:34.5899640Z [modified] ts/packages/memory/conversation/package.json
+2026-10-14T06:10:34.5900110Z [added] ts/packages/memory/conversation/test/emailImport.spec.ts
+2026-10-14T06:10:34.5900580Z [modified] ts/packages/shell/package.json
+2026-10-14T06:10:34.5900860Z [modified] ts/packages/vscode-shell/README.md
+2026-10-14T06:10:34.5901170Z [removed] ts/packages/vscode-shell/package-lock.json
+2026-10-14T06:10:34.5901500Z [modified] ts/pnpm-lock.yaml
+2026-10-14T06:10:34.5901730Z [modified] ts/pnpm-workspace.yaml
+2026-10-14T06:10:34.5902450Z ##[endgroup]
+2026-10-14T06:10:34.5902740Z Detected 13 changed files
+2026-10-14T06:10:34.5905390Z Results:
+2026-10-14T06:10:34.5905820Z ##[group]Filter ts = true
+2026-10-14T06:10:34.5906060Z Matching files:
+2026-10-14T06:10:34.5906360Z ts/packages/agentServer/bundledRuntime/package.json [modified]
+2026-10-14T06:10:34.5906850Z ts/packages/agents/montage/package.json [modified]
+2026-10-14T06:10:34.5907280Z ts/packages/knowledgeProcessor/package.json [modified]
+2026-10-14T06:10:34.5907750Z ts/packages/knowledgeProcessor/src/images/image.ts [modified]
+2026-10-14T06:10:34.5908300Z ts/packages/memory/conversation/package.json [modified]
+2026-10-14T06:10:34.5908700Z ts/packages/memory/conversation/test/emailImport.spec.ts [added]
+2026-10-14T06:10:34.5909070Z ts/packages/shell/package.json [modified]
+2026-10-14T06:10:34.5909540Z ts/packages/vscode-shell/README.md [modified]
+2026-10-14T06:10:34.5909970Z ts/packages/vscode-shell/package-lock.json [deleted]
+2026-10-14T06:10:34.5910370Z ts/pnpm-lock.yaml [modified]
+2026-10-14T06:10:34.5910790Z ts/pnpm-workspace.yaml [modified]
+2026-10-14T06:10:34.5931450Z ##[endgroup]
+2026-10-14T06:10:34.5934050Z Changes output set to ["ts"]
+2026-10-14T06:10:34.6298950Z ##[group]Run pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86
+2026-10-14T06:10:34.6299270Z with:
+2026-10-14T06:10:34.6299440Z   package_json_file: ts/package.json
+2026-10-14T06:10:34.6299640Z   dest: ~/setup-pnpm
+2026-10-14T06:10:34.6299820Z   run_install: null
+2026-10-14T06:10:34.6299970Z   cache: false
+2026-10-14T06:10:34.6300470Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-14T06:10:34.6300720Z   standalone: false
+2026-10-14T06:10:34.6300940Z env:
+2026-10-14T06:10:34.6301240Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:34.6301700Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:34.6302070Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:34.6302280Z ##[endgroup]
+2026-10-14T06:10:34.7697710Z ##[group]Running self-installer...
+2026-10-14T06:10:36.9585080Z 
+2026-10-14T06:10:36.9585660Z added 1 package, and audited 2 packages in 2s
+2026-10-14T06:10:36.9586010Z 
+2026-10-14T06:10:36.9586160Z 1 package is looking for funding
+2026-10-14T06:10:36.9586730Z   run `npm fund` for details
+2026-10-14T06:10:36.9594320Z 
+2026-10-14T06:10:36.9594560Z found 0 vulnerabilities
+2026-10-14T06:10:37.7338000Z Checking for updates...
+2026-10-14T06:10:38.0668130Z Switching pnpm from v11.19.0 to v11.9.0...
+2026-10-14T06:10:38.6578340Z .../v11/4cd-1a13908c536-2bb025f42c68b58f | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:38.6594710Z .../v11/4cd-1a13908c536-2bb025f42c68b58f |   +1 +
+2026-10-14T06:10:38.9088060Z .../v11/4cd-1a13908c536-2bb025f42c68b58f | Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-14T06:10:39.6077160Z [WARN] Detected a pnpm v10 installation layout at PNPM_HOME. The pnpm shims at PNPM_HOME have been refreshed so the new version is active, but pnpm v11 expects bins in PNPM_HOME/bin. Run "pnpm setup" to migrate your PATH to the v11 layout.
+2026-10-14T06:10:39.6110310Z Successfully updated pnpm to v11.9.0
+2026-10-14T06:10:39.6354710Z ##[endgroup]
+2026-10-14T06:10:39.6355150Z Installation Completed!
+2026-10-14T06:10:39.6504370Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-10-14T06:10:39.6504710Z with:
+2026-10-14T06:10:39.6504940Z   node-version: 22
+2026-10-14T06:10:39.6505100Z   cache: pnpm
+2026-10-14T06:10:39.6505310Z   cache-dependency-path: ts/pnpm-lock.yaml
+2026-10-14T06:10:39.6505580Z   check-latest: false
+2026-10-14T06:10:39.6507550Z   token: ***
+2026-10-14T06:10:39.6507780Z   package-manager-cache: true
+2026-10-14T06:10:39.6508090Z env:
+2026-10-14T06:10:39.6508420Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:39.6509020Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:39.6509430Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:39.6509760Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:39.6510080Z ##[endgroup]
+2026-10-14T06:10:39.8330840Z Found in cache @ /Users/runner/hostedtoolcache/node/22.23.2/arm64
+2026-10-14T06:10:39.8337330Z ##[group]Environment details
+2026-10-14T06:10:40.2934310Z node: v22.23.2
+2026-10-14T06:10:40.2934600Z npm: 10.9.8
+2026-10-14T06:10:40.2934810Z yarn: 1.22.22
+2026-10-14T06:10:40.2935330Z ##[endgroup]
+2026-10-14T06:10:40.2950830Z [command]/Users/runner/setup-pnpm/node_modules/.bin/bin/pnpm store path --silent
+2026-10-14T06:10:40.7583040Z /Users/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:10:40.9433270Z pnpm cache is not found
+2026-10-14T06:10:40.9525650Z ##[group]Run pnpm install --frozen-lockfile --strict-peer-dependencies
+2026-10-14T06:10:40.9526110Z [36;1mpnpm install --frozen-lockfile --strict-peer-dependencies[0m
+2026-10-14T06:10:40.9568920Z shell: /bin/bash -e {0}
+2026-10-14T06:10:40.9569160Z env:
+2026-10-14T06:10:40.9569500Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:40.9570040Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:40.9570450Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:40.9570710Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:40.9570980Z ##[endgroup]
+2026-10-14T06:10:41.4732100Z Scope: all 150 workspace projects
+2026-10-14T06:10:41.6495840Z ? Verifying lockfile against supply-chain policies (2965 entries)...
+2026-10-14T06:10:41.7287670Z Lockfile is up to date, resolution step is skipped
+2026-10-14T06:10:41.8967750Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:42.0407200Z Packages: +2796
+2026-10-14T06:10:42.0412050Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-14T06:10:42.9005600Z Progress: resolved 2796, reused 0, downloaded 0, added 0
+2026-10-14T06:10:45.0700160Z Progress: resolved 2796, reused 0, downloaded 1, added 0
+2026-10-14T06:10:46.0790340Z Progress: resolved 2796, reused 0, downloaded 81, added 4
+2026-10-14T06:10:47.0928450Z Progress: resolved 2796, reused 0, downloaded 123, added 6
+2026-10-14T06:10:48.1015940Z Progress: resolved 2796, reused 0, downloaded 184, added 11
+2026-10-14T06:10:49.1093850Z Progress: resolved 2796, reused 0, downloaded 226, added 12
+2026-10-14T06:10:50.1097150Z Progress: resolved 2796, reused 0, downloaded 298, added 20
+2026-10-14T06:10:51.1261690Z Progress: resolved 2796, reused 0, downloaded 388, added 24
+2026-10-14T06:10:52.1297920Z Progress: resolved 2796, reused 0, downloaded 471, added 30
+2026-10-14T06:10:53.1590520Z Progress: resolved 2796, reused 0, downloaded 556, added 36
+2026-10-14T06:10:54.1628110Z Progress: resolved 2796, reused 0, downloaded 677, added 45
+2026-10-14T06:10:55.1651790Z Progress: resolved 2796, reused 0, downloaded 797, added 53
+2026-10-14T06:10:56.1667180Z Progress: resolved 2796, reused 0, downloaded 918, added 63
+2026-10-14T06:10:56.9916790Z ✓ Lockfile passes supply-chain policies (2965 entries in 15.3s)
+2026-10-14T06:10:57.1682070Z Progress: resolved 2796, reused 0, downloaded 968, added 65
+2026-10-14T06:10:58.1683640Z Progress: resolved 2796, reused 0, downloaded 1028, added 69
+2026-10-14T06:10:59.1692450Z Progress: resolved 2796, reused 0, downloaded 1156, added 80
+2026-10-14T06:11:00.1738350Z Progress: resolved 2796, reused 0, downloaded 1219, added 84
+2026-10-14T06:11:01.1822960Z Progress: resolved 2796, reused 0, downloaded 1260, added 85
+2026-10-14T06:11:02.1853480Z Progress: resolved 2796, reused 0, downloaded 1273, added 88
+2026-10-14T06:11:03.1884560Z Progress: resolved 2796, reused 0, downloaded 1283, added 88
+2026-10-14T06:11:04.2001170Z Progress: resolved 2796, reused 0, downloaded 1320, added 89
+2026-10-14T06:11:05.1983840Z Progress: resolved 2796, reused 0, downloaded 1331, added 92
+2026-10-14T06:11:06.1990500Z Progress: resolved 2796, reused 0, downloaded 1358, added 92
+2026-10-14T06:11:07.2057220Z Progress: resolved 2796, reused 0, downloaded 1415, added 96
+2026-10-14T06:11:08.8089470Z Progress: resolved 2796, reused 0, downloaded 1416, added 96
+2026-10-14T06:11:09.8068500Z Progress: resolved 2796, reused 0, downloaded 1486, added 101
+2026-10-14T06:11:10.8115860Z Progress: resolved 2796, reused 0, downloaded 1528, added 104
+2026-10-14T06:11:11.8123460Z Progress: resolved 2796, reused 0, downloaded 1586, added 108
+2026-10-14T06:11:12.8140700Z Progress: resolved 2796, reused 0, downloaded 1604, added 109
+2026-10-14T06:11:13.8188970Z Progress: resolved 2796, reused 0, downloaded 1642, added 112
+2026-10-14T06:11:14.8192400Z Progress: resolved 2796, reused 0, downloaded 1664, added 113
+2026-10-14T06:11:15.8241810Z Progress: resolved 2796, reused 0, downloaded 1780, added 121
+2026-10-14T06:11:16.8272860Z Progress: resolved 2796, reused 0, downloaded 1822, added 124
+2026-10-14T06:11:17.8295850Z Progress: resolved 2796, reused 0, downloaded 1883, added 128
+2026-10-14T06:11:18.8295590Z Progress: resolved 2796, reused 0, downloaded 1942, added 132
+2026-10-14T06:11:19.8304120Z Progress: resolved 2796, reused 0, downloaded 1972, added 136
+2026-10-14T06:11:20.8358940Z Progress: resolved 2796, reused 0, downloaded 2001, added 136
+2026-10-14T06:11:21.8466650Z Progress: resolved 2796, reused 0, downloaded 2078, added 144
+2026-10-14T06:11:22.8549150Z Progress: resolved 2796, reused 0, downloaded 2142, added 148
+2026-10-14T06:11:23.8535880Z Progress: resolved 2796, reused 0, downloaded 2180, added 148
+2026-10-14T06:11:24.8577730Z Progress: resolved 2796, reused 0, downloaded 2268, added 156
+2026-10-14T06:11:25.8667140Z Progress: resolved 2796, reused 0, downloaded 2330, added 160
+2026-10-14T06:11:26.8696400Z Progress: resolved 2796, reused 0, downloaded 2384, added 164
+2026-10-14T06:11:27.8703270Z Progress: resolved 2796, reused 0, downloaded 2439, added 168
+2026-10-14T06:11:28.8834320Z Progress: resolved 2796, reused 0, downloaded 2525, added 172
+2026-10-14T06:11:29.8717690Z Progress: resolved 2796, reused 0, downloaded 2605, added 180
+2026-10-14T06:11:30.8734480Z Progress: resolved 2796, reused 0, downloaded 2670, added 184
+2026-10-14T06:11:31.8763040Z Progress: resolved 2796, reused 0, downloaded 2701, added 243
+2026-10-14T06:11:32.8764550Z Progress: resolved 2796, reused 0, downloaded 2701, added 331
+2026-10-14T06:11:33.8785950Z Progress: resolved 2796, reused 0, downloaded 2701, added 350
+2026-10-14T06:11:34.8821380Z Progress: resolved 2796, reused 0, downloaded 2701, added 427
+2026-10-14T06:11:35.8825560Z Progress: resolved 2796, reused 0, downloaded 2701, added 570
+2026-10-14T06:11:36.8865070Z Progress: resolved 2796, reused 0, downloaded 2701, added 779
+2026-10-14T06:11:37.8908120Z Progress: resolved 2796, reused 0, downloaded 2701, added 969
+2026-10-14T06:11:38.9078690Z Progress: resolved 2796, reused 0, downloaded 2701, added 1027
+2026-10-14T06:11:39.8947460Z Progress: resolved 2796, reused 0, downloaded 2701, added 1082
+2026-10-14T06:11:40.8967800Z Progress: resolved 2796, reused 0, downloaded 2701, added 1111
+2026-10-14T06:11:41.8986540Z Progress: resolved 2796, reused 0, downloaded 2701, added 1230
+2026-10-14T06:11:42.9025840Z Progress: resolved 2796, reused 0, downloaded 2701, added 1282
+2026-10-14T06:11:43.9041210Z Progress: resolved 2796, reused 0, downloaded 2701, added 1326
+2026-10-14T06:11:44.9060630Z Progress: resolved 2796, reused 0, downloaded 2701, added 1336
+2026-10-14T06:11:45.9078850Z Progress: resolved 2796, reused 0, downloaded 2701, added 1350
+2026-10-14T06:11:46.9102530Z Progress: resolved 2796, reused 0, downloaded 2701, added 1389
+2026-10-14T06:11:47.9140320Z Progress: resolved 2796, reused 0, downloaded 2701, added 1432
+2026-10-14T06:11:48.9150630Z Progress: resolved 2796, reused 0, downloaded 2701, added 1520
+2026-10-14T06:11:49.9178980Z Progress: resolved 2796, reused 0, downloaded 2701, added 1594
+2026-10-14T06:11:50.9189570Z Progress: resolved 2796, reused 0, downloaded 2701, added 1689
+2026-10-14T06:11:51.9200230Z Progress: resolved 2796, reused 0, downloaded 2701, added 1729
+2026-10-14T06:11:52.9210570Z Progress: resolved 2796, reused 0, downloaded 2701, added 1783
+2026-10-14T06:11:53.9231840Z Progress: resolved 2796, reused 0, downloaded 2701, added 1901
+2026-10-14T06:11:54.9238630Z Progress: resolved 2796, reused 0, downloaded 2701, added 1982
+2026-10-14T06:11:55.9258550Z Progress: resolved 2796, reused 0, downloaded 2701, added 2047
+2026-10-14T06:11:56.9298890Z Progress: resolved 2796, reused 0, downloaded 2701, added 2111
+2026-10-14T06:11:57.9326580Z Progress: resolved 2796, reused 0, downloaded 2701, added 2257
+2026-10-14T06:11:58.9332950Z Progress: resolved 2796, reused 0, downloaded 2701, added 2390
+2026-10-14T06:11:59.9348280Z Progress: resolved 2796, reused 0, downloaded 2701, added 2568
+2026-10-14T06:12:00.9487230Z Progress: resolved 2796, reused 0, downloaded 2701, added 2635
+2026-10-14T06:12:01.9393340Z Progress: resolved 2796, reused 0, downloaded 2701, added 2642
+2026-10-14T06:12:02.9406200Z Progress: resolved 2796, reused 0, downloaded 2701, added 2665
+2026-10-14T06:12:03.9422170Z Progress: resolved 2796, reused 0, downloaded 2701, added 2682
+2026-10-14T06:12:04.9958530Z Progress: resolved 2796, reused 0, downloaded 2701, added 2687
+2026-10-14T06:12:05.9888070Z Progress: resolved 2796, reused 0, downloaded 2701, added 2725
+2026-10-14T06:12:06.9916040Z Progress: resolved 2796, reused 0, downloaded 2701, added 2752
+2026-10-14T06:12:07.9974270Z Progress: resolved 2796, reused 0, downloaded 2701, added 2792
+2026-10-14T06:12:08.2585760Z Progress: resolved 2796, reused 0, downloaded 2701, added 2796, done
+2026-10-14T06:12:10.1806550Z .../node_modules/exifreader postinstall$ node bin/build.js --only-with-config
+2026-10-14T06:12:10.2014410Z .../node_modules/better-sqlite3 install$ prebuild-install || node-gyp rebuild --release
+2026-10-14T06:12:10.2192530Z .../esbuild@0.28.1/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:12:10.2206890Z .../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:12:10.2540960Z .../.pnpm/koffi@3.2.1/node_modules/koffi install$ node ./cnoke.cjs -P . -D src/koffi --prebuild --release
+2026-10-14T06:12:10.3430700Z .../node_modules/exifreader postinstall: Done
+2026-10-14T06:12:10.4772440Z .../esbuild@0.28.1/node_modules/esbuild postinstall: Done
+2026-10-14T06:12:10.4908640Z .../.pnpm/koffi@3.2.1/node_modules/koffi install: Done
+2026-10-14T06:12:10.4951770Z .../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+2026-10-14T06:12:10.4981630Z .../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:12:10.5652490Z .../@azure/msal-node-runtime install$ node ./copyBinaries.js
+2026-10-14T06:12:10.5858490Z .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:12:10.6067830Z .../keytar@7.9.0/node_modules/keytar install$ prebuild-install || npm run build
+2026-10-14T06:12:10.6369590Z .../@azure/msal-node-runtime install: Done
+2026-10-14T06:12:10.6816530Z .../node_modules/onnxruntime-node postinstall$ node ./script/install
+2026-10-14T06:12:10.6946930Z .../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+2026-10-14T06:12:10.7930000Z .../koffi@2.11.0/node_modules/koffi install$ node src/cnoke/cnoke.js -p . -d src/koffi --prebuild
+2026-10-14T06:12:10.8686910Z .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+2026-10-14T06:12:10.9005260Z .../node_modules/@vscode/vsce-sign postinstall$ node ./src/postinstall.js
+2026-10-14T06:12:11.0455440Z .../koffi@2.11.0/node_modules/koffi install: Done
+2026-10-14T06:12:11.0557280Z .../node_modules/onnxruntime-node postinstall: Done
+2026-10-14T06:12:11.0822010Z .../node_modules/better-sqlite3 install: Done
+2026-10-14T06:12:11.0936230Z .../node_modules/@vscode/vsce-sign postinstall: Done
+2026-10-14T06:12:11.2276180Z .../keytar@7.9.0/node_modules/keytar install: Done
+2026-10-14T06:12:11.5413370Z .../node_modules/electron postinstall$ node install.js
+2026-10-14T06:12:11.5512980Z .../node_modules/electron-winstaller install$ node ./script/select-7z-arch.js
+2026-10-14T06:12:11.6412650Z .../node_modules/electron-winstaller install: Selecting 7-Zip for arch arm64
+2026-10-14T06:12:11.6415860Z .../node_modules/electron-winstaller install: Done
+2026-10-14T06:12:13.5749060Z .../node_modules/electron postinstall: Done
+2026-10-14T06:12:15.1102440Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:12:15.1167860Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:12:15.1172220Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:12:15.1248110Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:12:15.1256110Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:12:15.1315050Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:12:15.5476420Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/lsp/dist/index.js'
+2026-10-14T06:12:15.7244820Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/memory/mcp-server/dist/server.js'
+2026-10-14T06:12:15.8558490Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/studio-service/dist/main.js'
+2026-10-14T06:12:16.0360270Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:12:16.0376420Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:12:16.3133690Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:12:16.3135700Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:12:17.0350780Z 
+2026-10-14T06:12:17.0365090Z devDependencies:
+2026-10-14T06:12:17.0366740Z + @fluidframework/build-tools 0.57.0
+2026-10-14T06:12:17.0368080Z + @types/node 22.15.18
+2026-10-14T06:12:17.0368500Z + esbuild 0.28.1
+2026-10-14T06:12:17.0368930Z + eslint 10.6.0
+2026-10-14T06:12:17.0373870Z + eslint-plugin-sonarjs 4.1.0
+2026-10-14T06:12:17.0374270Z + jscpd 4.2.5
+2026-10-14T06:12:17.0374630Z + knip 6.24.0
+2026-10-14T06:12:17.0376410Z + madge 8.0.0
+2026-10-14T06:12:17.0376860Z + markdown-link-check 3.14.2
+2026-10-14T06:12:17.0377300Z + prettier 3.5.3
+2026-10-14T06:12:17.0377630Z + shx 0.4.0
+2026-10-14T06:12:17.0379120Z + tsx 4.21.0
+2026-10-14T06:12:17.0379550Z + typescript-eslint 8.62.1
+2026-10-14T06:12:17.0380450Z 
+2026-10-14T06:12:17.1458570Z . postinstall$ pnpm run postinstall:better-sqlite3-node-copy && pnpm run postinstall:better-sqlite3-node-restore && pnpm run postinstall:merge-driver
+2026-10-14T06:12:17.7796210Z . postinstall: $ node ./tools/scripts/copy-better-sqlite3-node.js
+2026-10-14T06:12:17.8819400Z . postinstall: 📦 Processing better-sqlite3@12.8.0:
+2026-10-14T06:12:17.8829740Z . postinstall:     /Users/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3
+2026-10-14T06:12:17.9377970Z . postinstall: ✅ Copied compatible binary from build/Release/
+2026-10-14T06:12:17.9390580Z . postinstall:  →  /Users/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3/prebuild-node/better_sqlite3.node
+2026-10-14T06:12:17.9809600Z . postinstall: 🔌 Provisioning Electron 41.10.3 (ABI 145) binaries
+2026-10-14T06:12:17.9829080Z . postinstall: ⬇️  Downloading Electron (ABI 145) prebuilt: better-sqlite3-v12.8.0-electron-v145-darwin-arm64.tar.gz
+2026-10-14T06:12:18.3283390Z . postinstall: ✅ Electron binary saved to prebuild-electron/ (ABI 145)
+2026-10-14T06:12:18.8141400Z . postinstall: $ node ./tools/scripts/restore-better-sqlite3-node.js
+2026-10-14T06:12:18.9432620Z . postinstall: ✅ better-sqlite3@12.8.0: build/Release already Node-compatible
+2026-10-14T06:12:19.4181720Z . postinstall: $ node tools/scripts/setup-merge-driver.mjs
+2026-10-14T06:12:19.6563330Z . postinstall: Done
+2026-10-14T06:12:19.9483380Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/workflow-lsp/dist/index.js'
+2026-10-14T06:12:20.6043270Z packages/agents/browserExtension prepare$ node ./scripts/prepare.mjs .
+2026-10-14T06:12:20.6963800Z packages/agents/browserExtension prepare: Done
+2026-10-14T06:12:21.1269250Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/@typeagent/studio-service/dist/main.js'
+2026-10-14T06:12:21.2071150Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/@typeagent/memory-mcp-server/dist/server.js'
+2026-10-14T06:12:21.3325780Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:12:21.3327930Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/status.js'
+2026-10-14T06:12:21.3370820Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:12:21.3376480Z [WARN] Failed to create bin at /Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/Users/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/status.js'
+2026-10-14T06:12:21.3435710Z packages/shell postinstall$ run-script-os
+2026-10-14T06:12:21.6853990Z packages/shell postinstall: > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:12:21.6858200Z packages/shell postinstall: > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:12:22.5043140Z packages/shell postinstall:   • electron-builder  version=26.15.3
+2026-10-14T06:12:22.5092030Z packages/shell postinstall:   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:12:23.0264130Z packages/shell postinstall:   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:12:23.0276500Z packages/shell postinstall:   • executing @electron/rebuild  electronVersion=41.10.3 arch=arm64 buildFromSource=false workspaceRoot=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:12:23.0279390Z packages/shell postinstall:   • installing native dependencies  arch=arm64
+2026-10-14T06:12:24.2140330Z packages/shell postinstall:   • preparing       moduleName=better-sqlite3 arch=arm64
+2026-10-14T06:13:06.9602840Z packages/shell postinstall:   • finished        moduleName=better-sqlite3 arch=arm64
+2026-10-14T06:13:06.9665810Z packages/shell postinstall:   • preparing       moduleName=keytar arch=arm64
+2026-10-14T06:13:07.2094240Z packages/shell postinstall:   • finished        moduleName=keytar arch=arm64
+2026-10-14T06:13:07.2097000Z packages/shell postinstall:   • completed installing native dependencies
+2026-10-14T06:13:07.2852810Z packages/shell postinstall: Done
+2026-10-14T06:13:07.3547310Z Done in 2m 26.3s using pnpm v11.9.0
+2026-10-14T06:13:07.7528770Z ##[group]Run pnpm run build:shell
+2026-10-14T06:13:07.7530640Z [36;1mpnpm run build:shell[0m
+2026-10-14T06:13:07.9441470Z shell: /bin/bash -e {0}
+2026-10-14T06:13:07.9441730Z env:
+2026-10-14T06:13:07.9442090Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:13:07.9442570Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:13:07.9448150Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:13:07.9448660Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:13:07.9448970Z   DEBUG_DEMB: true
+2026-10-14T06:13:07.9449220Z ##[endgroup]
+2026-10-14T06:13:09.1516650Z $ fluid-build agent-shell -t build --dep
+2026-10-14T06:13:10.7098860Z Build Root: /Users/runner/work/TypeAgent/TypeAgent/ts ([93minferred packages and tasks[39m)
+2026-10-14T06:13:10.7390990Z 
+2026-10-14T06:13:10.7398510Z [K[?25l⠋ Creating build graph...
+2026-10-14T06:13:10.7593610Z 
+2026-10-14T06:13:10.7602330Z [K[1A
+2026-10-14T06:13:10.7617490Z [K[?25l✔ Build graph created.
+2026-10-14T06:13:11.0457780Z [?25h
+2026-10-14T06:13:11.0458930Z [K[?25l⠋ Checking incremental build task status...
+2026-10-14T06:13:11.0928220Z 
+2026-10-14T06:13:11.0931080Z [K[1A
+2026-10-14T06:13:11.0931730Z [K[?25l✔ Tasks loaded.
+2026-10-14T06:13:11.0932450Z [?25hStart tasks '[96mbuild[39m' in 87 matched packages (212 total tasks in 87 packages)
+2026-10-14T06:13:13.8435310Z [  1/212] [92m✓[39m [37m@typeagent/common-utils[39m: tsc -b - 2.737s
+2026-10-14T06:13:14.9413490Z [  2/212] [92m✓[39m [37m@typeagent/action-schema[39m: tsc -b - 3.837s
+2026-10-14T06:13:16.6779330Z [  3/212] [92m✓[39m [92m@typeagent/config[39m: tsc -b - 5.573s
+2026-10-14T06:13:16.9818190Z [  4/212] [92m✓[39m [90m@typeagent/action-schema-compiler[39m: tsc -b - 2.046s
+2026-10-14T06:13:17.3261630Z [  5/212] [92m✓[39m [94m@typeagent/agent-sdk[39m: tsc -b - 3.489s
+2026-10-14T06:13:18.7522250Z [  6/212] [92m✓[39m [91m@typeagent/completion-ui[39m: tsc -b - 1.761s
+2026-10-14T06:13:18.9733830Z [  7/212] [92m✓[39m [34m@typeagent/dispatcher-types[39m: tsc -b - 1.646s
+2026-10-14T06:13:19.1652350Z [  8/212] [92m✓[39m [91m@typeagent/completion-ui[39m: copyfiles -u 1 "src/styles.css" dist - 0.189s
+2026-10-14T06:13:21.8323870Z [  9/212] [92m✓[39m [97m@typeagent/telemetry[39m: tsc -b - 5.157s
+2026-10-14T06:13:22.2027630Z [ 10/212] [92m✓[39m [91m@typeagent/agent-flows[39m: tsc -b - 3.458s
+2026-10-14T06:13:22.8027970Z [ 11/212] [92m✓[39m [93m@typeagent/copilot-macros[39m: tsc -b - 3.632s
+2026-10-14T06:13:24.6598990Z [ 12/212] [92m✓[39m [31m@typeagent/taskflow-typeagent[39m: tsc -b - 1.864s
+2026-10-14T06:13:25.3320740Z [ 13/212] [92m✓[39m [93m@typeagent/agent-rpc[39m: tsc -b - 3.128s
+2026-10-14T06:13:27.5459470Z [ 14/212] [92m✓[39m [92m@typeagent/websocket-utils[39m: tsc -b - 2.214s
+2026-10-14T06:13:27.7197900Z [ 15/212] [92m✓[39m [94m@typeagent/aiclient[39m: tsc -b - 5.885s
+2026-10-14T06:13:29.2198730Z [ 16/212] [92m✓[39m [33m@typeagent/chat-ui[39m: tsc -b - 4.557s (non-incremental)
+2026-10-14T06:13:29.7882680Z [ 17/212] [92m✓[39m [33m@typeagent/dispatcher-rpc[39m: tsc -b - 2.240s
+2026-10-14T06:13:33.4845460Z [ 18/212] [92m✓[39m [90m@typeagent/typechat-utils[39m: tsc -b - 3.693s
+2026-10-14T06:13:33.8279890Z [ 19/212] [92m✓[39m [33m@typeagent/agent-runtime[39m: tsc -b - 4.598s
+2026-10-14T06:13:35.8713560Z [ 20/212] [92m✓[39m [31mtest-lib[39m: tsc -b - 2.379s
+2026-10-14T06:13:38.0761410Z [ 21/212] [92m✓[39m [91m@typeagent/websocket-channel-server[39m: tsc -b src test - 2.209s
+2026-10-14T06:13:40.3470070Z [ 22/212] [92m✓[39m [94m@typeagent/knowledge-processor[39m: tsc -b - 6.526s
+2026-10-14T06:13:40.3573390Z [ 23/212] [92m✓[39m [35m@typeagent/action-grammar[39m: tsc -b - 12.631s
+2026-10-14T06:13:40.5177880Z [ 24/212] [92m✓[39m [94m@typeagent/knowledge-processor[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.163s
+2026-10-14T06:13:41.7616810Z [ 25/212] [92m✓[39m [96m@typeagent/azure-ai-foundry[39m: tsc -b - 3.682s
+2026-10-14T06:13:41.9653370Z [ 26/212] [92m✓[39m [36m@typeagent/action-grammar-compiler[39m: tsc -b - 1.610s
+2026-10-14T06:13:44.5249320Z [ 27/212] [92m✓[39m [32m@typeagent/textpro[39m: tsc -b - 2.764s
+2026-10-14T06:13:44.5650860Z [ 28/212] [92m✓[39m [95m@typeagent/skill-catalog[39m: tsc -b - 2.593s
+2026-10-14T06:13:44.6864110Z [ 29/212] [92m✓[39m [96m@typeagent/azure-ai-foundry[39m: copyfiles -f ../../examples/websiteAliases/cache/phrases.json dist - 0.160s
+2026-10-14T06:13:45.9697600Z [ 30/212] [92m✓[39m [92m@typeagent/knowpro[39m: tsc -b - 5.449s
+2026-10-14T06:13:46.1624990Z [ 31/212] [92m✓[39m [92m@typeagent/knowpro[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.194s
+2026-10-14T06:13:47.0498550Z [ 32/212] [92m✓[39m [37mgrammar-tools-core[39m: tsc -b - 2.355s
+2026-10-14T06:13:50.0645880Z [ 33/212] [92m✓[39m [31m@typeagent/agent-cache[39m: tsc -b - 5.498s
+2026-10-14T06:13:50.1347740Z [ 34/212] [92m✓[39m [36m@typeagent/memory-storage[39m: tsc -b - 3.975s
+2026-10-14T06:13:50.2853060Z [ 35/212] [92m✓[39m [36m@typeagent/memory-storage[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.152s
+2026-10-14T06:13:50.6757790Z [ 36/212] [92m✓[39m [37m@typeagent/website-memory[39m: tsc -b - 3.638s
+2026-10-14T06:13:53.0607100Z [ 37/212] [92m✓[39m [95m@typeagent/selfhelp[39m: tsc -b - 2.991s
+2026-10-14T06:13:53.1548640Z [ 38/212] [92m✓[39m [95m@typeagent/selfhelp[39m: node scripts/copyCatalog.mjs - 0.100s (non-incremental)
+2026-10-14T06:13:53.9533520Z [ 39/212] [92m✓[39m [33m@typeagent/image-memory[39m: tsc -b - 3.272s
+2026-10-14T06:13:54.1338540Z [ 40/212] [92m✓[39m [33m@typeagent/image-memory[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.178s
+2026-10-14T06:13:54.8852500Z [ 41/212] [92m✓[39m [32m@typeagent/conversation-memory[39m: tsc -b - 4.600s
+2026-10-14T06:13:55.1165650Z [ 42/212] [92m✓[39m [32m@typeagent/conversation-memory[39m: copyfiles -u 1 "src/**/*Schema*.ts" "src/**/*.json" "src/**/*.txt" dist - 0.229s
+2026-10-14T06:13:57.0880380Z [ 43/212] [92m✓[39m [31mworkflow-model[39m: tsc -b - 3.933s
+2026-10-14T06:13:59.5366660Z [ 44/212] [92m✓[39m [35m@typeagent/montage-agent[39m: tsc -b tsconfig.json - 5.403s
+2026-10-14T06:14:03.7971110Z [ 45/212] [92m✓[39m [94mworkflow-dsl[39m: tsc -b - 6.703s
+2026-10-14T06:14:04.9683600Z [ 46/212] [92m✓[39m [35m@typeagent/montage-agent[39m: webpack - 5.435s
+2026-10-14T06:14:09.2954650Z [ 47/212] [92m✓[39m [34m@typeagent/core[39m: tsc -b - 5.497s
+2026-10-14T06:14:12.4453270Z [ 48/212] [92m✓[39m [95mworkflow-engine[39m: tsc -b - 7.480s
+2026-10-14T06:14:12.7181170Z [ 49/212] [92m✓[39m [35m@typeagent/memory-service[39m: tsc -b - 17.600s
+2026-10-14T06:14:15.2968660Z [ 50/212] [92m✓[39m [90m@typeagent/chat-agent[39m: tsc -b - 2.834s
+2026-10-14T06:14:16.8399440Z [ 51/212] [92m✓[39m [90m@typeagent/procedure-artifacts[39m: tsc -b - 4.111s
+2026-10-14T06:14:20.8789240Z [ 52/212] [92m✓[39m [31m@typeagent/agent-server-protocol[39m: tsc -b - 4.046s
+2026-10-14T06:14:23.2255630Z [ 53/212] [92m✓[39m [35m@typeagent/browser-control-rpc[39m: tsc -b - 7.936s
+2026-10-14T06:14:23.3585210Z [ 54/212] [92m✓[39m [35m@typeagent/browser-control-rpc[39m: node ../../../tools/scripts/converters/pdfToMarkdown/build-artifacts.mjs - 0.126s (non-incremental)
+2026-10-14T06:14:24.8628360Z [ 55/212] [92m✓[39m [33m@typeagent/graph-utils[39m: tsc -p src - 15.569s
+2026-10-14T06:14:26.7859110Z [ 56/212] [92m✓[39m [97m@typeagent/agent-server-client[39m: tsc -b src test - 5.898s
+2026-10-14T06:14:28.5806030Z [ 57/212] [92m✓[39m [36m@typeagent/browser-extension[39m: tsc -p src/electron/tsconfig.json - 1.796s
+2026-10-14T06:14:34.9975590Z [ 58/212] [92m✓[39m [36m@typeagent/browser-extension[39m: tsc -p src/extension/tsconfig.json - 6.412s
+2026-10-14T06:14:38.7751170Z [ 59/212] [92m✓[39m [31m@typeagent/memory-client[39m: tsc -b - 15.417s
+2026-10-14T06:14:39.0436960Z [34m@typeagent/core[39m: warning during command 'node scripts/inlinePrivateDeps.mjs'
+2026-10-14T06:14:39.0444860Z [ 60/212] [92m✓[39m [34m@typeagent/core[39m: node scripts/inlinePrivateDeps.mjs - 0.274s (non-incremental)
+2026-10-14T06:14:39.0547300Z [34m@typeagent/core[39m: [bundle:private] inlined -> dist/collisions/scanner.js
+2026-10-14T06:14:39.0648480Z [34m@typeagent/core[39m: [bundle:private] inlined -> dist/replay/resolutionTraceCapture.js
+2026-10-14T06:14:39.0752540Z [34m@typeagent/core[39m: [bundle:private] done (2 file(s)).
+2026-10-14T06:14:40.7727620Z [ 61/212] [92m✓[39m [93mworkflow-compiler[39m: tsc -b - 1.722s
+2026-10-14T06:14:41.6228610Z [ 62/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/discovery/discoverySchema.ts -o ./dist/discoverySchema.pas.json -t DiscoveryActions - 0.844s
+2026-10-14T06:14:42.4843340Z [ 63/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/grammarGen/grammarGenSchema.ts -o ./dist/grammarGenSchema.pas.json -t GrammarGenActions - 0.872s
+2026-10-14T06:14:43.3837610Z [ 64/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/onboardingSchema.ts -o ./dist/onboardingSchema.pas.json -t OnboardingActions - 0.898s
+2026-10-14T06:14:44.6335730Z [ 65/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/packaging/packagingSchema.ts -o ./dist/packagingSchema.pas.json -t PackagingActions - 1.243s
+2026-10-14T06:14:45.7532470Z [ 66/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/phraseGen/phraseGenSchema.ts -o ./dist/phraseGenSchema.pas.json -t PhraseGenActions - 1.125s
+2026-10-14T06:14:46.5260580Z [ 67/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/scaffolder/scaffolderSchema.ts -o ./dist/scaffolderSchema.pas.json -t ScaffolderActions - 0.770s
+2026-10-14T06:14:47.2613600Z [ 68/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/schemaGen/schemaGenSchema.ts -o ./dist/schemaGenSchema.pas.json -t SchemaGenActions - 0.736s
+2026-10-14T06:14:48.1860280Z [ 69/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/testing/testingSchema.ts -o ./dist/testingSchema.pas.json -t TestingActions - 0.919s
+2026-10-14T06:14:49.1455450Z [ 70/212] [92m✓[39m [31magent-dispatcher[39m: tsc -b - 24.275s
+2026-10-14T06:14:50.3800040Z [ 71/212] [92m✓[39m [36m@typeagent/browser-extension[39m: build-extension - 15.380s
+2026-10-14T06:14:51.0611520Z [ 72/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/shared/tsconfig.json - 0.684s
+2026-10-14T06:14:51.1725540Z [ 73/212] [92m✓[39m [96m@typeagent/kp[39m: tsc -b - 2.993s
+2026-10-14T06:14:52.0881920Z [ 74/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/discovery/discoverySchema.agr -o ./dist/discoverySchema.ag.json - 1.020s
+2026-10-14T06:14:52.1282210Z [ 75/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/grammarGen/grammarGenSchema.agr -o ./dist/grammarGenSchema.ag.json - 0.955s
+2026-10-14T06:14:53.0012920Z [ 76/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/packaging/packagingSchema.agr -o ./dist/packagingSchema.ag.json - 0.871s
+2026-10-14T06:14:53.0115300Z [ 77/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/onboardingSchema.agr -o ./dist/onboardingSchema.ag.json - 0.928s
+2026-10-14T06:14:53.6744800Z [ 78/212] [92m✓[39m [32mdispatcher-node-providers[39m: tsc -b - 4.535s
+2026-10-14T06:14:53.9054320Z [ 79/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/scaffolder/scaffolderSchema.agr -o ./dist/scaffolderSchema.ag.json - 0.892s
+2026-10-14T06:14:53.9156510Z [ 80/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/phraseGen/phraseGenSchema.agr -o ./dist/phraseGenSchema.ag.json - 0.904s
+2026-10-14T06:14:54.0701830Z [ 81/212] [92m✓[39m [90m@typeagent/chat-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.165s
+2026-10-14T06:14:54.2462940Z [ 82/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/schemaGen/schemaGenSchema.agr -o ./dist/schemaGenSchema.ag.json - 0.564s
+2026-10-14T06:14:54.5213020Z [ 83/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/testing/testingSchema.agr -o ./dist/testingSchema.ag.json - 0.619s
+2026-10-14T06:14:56.0692710Z [33mworkflow-examples[39m: warning during command 'wfc "dsl/*.wf" -o built'
+2026-10-14T06:14:56.0796370Z [33mworkflow-examples[39m: [wfc] wrote /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/branch-reorganize.json
+2026-10-14T06:14:56.0797520Z [ 84/212] [92m✓[39m [33mworkflow-examples[39m: wfc "dsl/*.wf" -o built - 1.836s
+2026-10-14T06:14:56.0841440Z [33mworkflow-examples[39m: [wfc] wrote /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/d1-standup-prep.json
+2026-10-14T06:14:56.0844940Z [33mworkflow-examples[39m: [wfc] wrote /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/d8-summarize-url.json
+2026-10-14T06:14:56.0846290Z [33mworkflow-examples[39m: [wfc] wrote /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/pipeline.json
+2026-10-14T06:14:56.0847440Z [33mworkflow-examples[39m: [wfc] wrote /Users/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/writing.json
+2026-10-14T06:14:56.6969800Z [ 85/212] [92m✓[39m [96m@typeagent/studio-service[39m: tsc -b src test - 2.620s
+2026-10-14T06:14:57.0985300Z [ 86/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/client/pdf/tsconfig.json - 2.580s
+2026-10-14T06:14:57.7171480Z [ 87/212] [92m✓[39m [34m@typeagent/browser[39m: asc -i ./src/agent/browserActionSchema.mts -o ./dist/agent/browserSchema.pas.json -t BrowserActions -e BrowserEntities - 0.615s
+2026-10-14T06:14:58.3672140Z [ 88/212] [92m✓[39m [37m@typeagent/calendar[39m: asc -i ./src/calendarActionsSchemaV3.ts -o ./dist/calendarSchema.pas.json -t CalendarActionV3 -e CalendarEntities - 0.656s
+2026-10-14T06:14:59.0397850Z [ 89/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/codeActionsSchema.ts -o ./dist/codeSchema.pas.json -t CodeActions -a CodeActivity - 0.663s
+2026-10-14T06:14:59.6160600Z [ 90/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/debugActionsSchema.ts -o ./dist/debugSchema.pas.json -t CodeDebugActions - 0.586s
+2026-10-14T06:15:00.5424260Z [ 91/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/displayActionsSchema.ts -o ./dist/displaySchema.pas.json -t CodeDisplayActions - 0.921s
+2026-10-14T06:15:00.8809930Z [ 92/212] [92m✓[39m [36monboarding-agent[39m: tsc -b - 4.807s
+2026-10-14T06:15:01.2410730Z [ 93/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/generalActionsSchema.ts -o ./dist/generalSchema.pas.json -t CodeGeneralActions - 0.704s
+2026-10-14T06:15:01.5777060Z [ 94/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/editorCodeActionsSchema.ts -o ./dist/editorSchema.pas.json -t EditorCodeActions - 0.690s
+2026-10-14T06:15:01.9459890Z [ 95/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/workbenchCommandActionsSchema.ts -o ./dist/workbenchSchema.pas.json -t CodeWorkbenchActions - 0.699s
+2026-10-14T06:15:02.2314990Z [ 96/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/extensionsActionsSchema.ts -o ./dist/extensionSchema.pas.json -t CodeWorkbenchExtensionActions - 0.659s
+2026-10-14T06:15:02.7361440Z [ 97/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/actionsSchema.ts -o ./dist/desktopSchema.pas.json -t DesktopActions - 0.796s
+2026-10-14T06:15:02.8378260Z [ 98/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/displayActionsSchema.ts -o ./dist/displaySchema.pas.json -t DesktopDisplayActions - 0.600s
+2026-10-14T06:15:03.3334590Z [ 99/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/personalizationActionsSchema.ts -o ./dist/personalizationSchema.pas.json -t DesktopPersonalizationActions - 0.595s
+2026-10-14T06:15:03.3598940Z [100/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/taskbarActionsSchema.ts -o ./dist/taskbarSchema.pas.json -t DesktopTaskbarActions - 0.527s
+2026-10-14T06:15:03.9461540Z [101/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/inputActionsSchema.ts -o ./dist/inputSchema.pas.json -t DesktopInputActions - 0.608s
+2026-10-14T06:15:04.0171630Z [102/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/privacyActionsSchema.ts -o ./dist/privacySchema.pas.json -t DesktopPrivacyActions - 0.659s
+2026-10-14T06:15:04.7442870Z [103/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/powerActionsSchema.ts -o ./dist/powerSchema.pas.json -t DesktopPowerActions - 0.802s
+2026-10-14T06:15:04.8144450Z [104/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/systemActionsSchema.ts -o ./dist/systemSchema.pas.json -t DesktopSystemActions - 0.797s
+2026-10-14T06:15:05.4668820Z [105/212] [92m✓[39m [93m@typeagent/discord-agent[39m: asc -i ./src/discordSchema.ts -o ./dist/discordSchema.pas.json -t DiscordActions - 0.724s
+2026-10-14T06:15:05.5072540Z [106/212] [92m✓[39m [94m@typeagent/email[39m: asc -i ./src/emailActionsSchema.ts -o ./dist/emailSchema.pas.json -t EmailAction - 0.692s
+2026-10-14T06:15:06.3353360Z [107/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: asc -i ./src/github-cliSchema.ts -o ./dist/github-cliSchema.pas.json -t GithubCliActions - 0.867s
+2026-10-14T06:15:06.3561220Z [108/212] [92m✓[39m [97m@typeagent/image-agent[39m: asc -i ./src/imageActionSchema.ts -o ./dist/imageSchema.pas.json -t ImageAction - 0.849s
+2026-10-14T06:15:07.1419830Z [109/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: asc -i ./src/ipconfigSchema.ts -o ./dist/ipconfigSchema.pas.json -t IpconfigActions - 0.799s
+2026-10-14T06:15:07.2149100Z [110/212] [92m✓[39m [32m@typeagent/list-agent[39m: asc -i ./src/listSchema.ts -o ./dist/listSchema.pas.json -t ListAction -a ListActivity - 0.857s
+2026-10-14T06:15:07.8010710Z [111/212] [92m✓[39m [91m@typeagent/music[39m: asc -i ./src/agent/playerSchema.ts -o ./dist/agent/playerSchema.pas.json -t PlayerActions -e PlayerEntities - 0.661s
+2026-10-14T06:15:07.9280710Z [112/212] [92m✓[39m [92m@typeagent/music-local[39m: asc -i ./src/agent/localPlayerSchema.ts -o ./dist/agent/localPlayerSchema.pas.json -t LocalPlayerActions -e LocalPlayerEntities - 0.711s
+2026-10-14T06:15:08.5791330Z [113/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: asc -i ./src/osNotificationsSchema.ts -o ./dist/osNotificationsSchema.pas.json -t OsNotificationsActions - 0.776s
+2026-10-14T06:15:08.7406190Z [114/212] [92m✓[39m [90m@typeagent/photo-agent[39m: asc -i ./src/photoSchema.ts -o ./dist/photoSchema.pas.json -t PhotoAction - 0.809s
+2026-10-14T06:15:09.4110680Z [115/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/schema/scriptActions.mts -o ./dist/powershellSchema.pas.json -t PowerShellActions - 0.835s
+2026-10-14T06:15:09.5657770Z [116/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/files/filesActionsSchema.mts -o ./dist/filesSchema.pas.json -t PowerShellFilesActions - 0.826s
+2026-10-14T06:15:10.0476480Z [117/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/processes/processesActionsSchema.mts -o ./dist/processesSchema.pas.json -t PowerShellProcessesActions - 0.641s
+2026-10-14T06:15:10.2476930Z [118/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/system/systemActionsSchema.mts -o ./dist/systemSchema.pas.json -t PowerShellSystemActions - 0.684s
+2026-10-14T06:15:10.8412070Z [119/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/services/servicesActionsSchema.mts -o ./dist/servicesSchema.pas.json -t PowerShellServicesActions - 0.791s
+2026-10-14T06:15:10.9340480Z [120/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/network/networkActionsSchema.mts -o ./dist/networkSchema.pas.json -t PowerShellNetworkActions - 0.687s
+2026-10-14T06:15:11.5252230Z [121/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/data/dataActionsSchema.mts -o ./dist/dataSchema.pas.json -t PowerShellDataActions - 0.676s
+2026-10-14T06:15:11.6094570Z [122/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/archives/archivesActionsSchema.mts -o ./dist/archivesSchema.pas.json -t PowerShellArchivesActions - 0.672s
+2026-10-14T06:15:12.1880930Z [123/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: asc -i ./src/screencaptureSchema.ts -o ./dist/screencaptureSchema.pas.json -t ScreencaptureAction -a ScreencaptureActivity - 0.667s
+2026-10-14T06:15:12.2995590Z [124/212] [92m✓[39m [97m@typeagent/studio-agent[39m: asc -i ./src/studioSchema.ts -o ./dist/studioSchema.pas.json -t StudioActions - 0.690s
+2026-10-14T06:15:12.8204690Z [125/212] [92m✓[39m [33m@typeagent/timer-agent[39m: asc -i ./src/timerSchema.ts -o ./dist/timerSchema.pas.json -t TimerAction - 0.633s
+2026-10-14T06:15:12.9889710Z [126/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: asc -i ./src/utilitySchema.mts -o ./dist/utilitySchema.pas.json -t UtilityAction - 0.694s
+2026-10-14T06:15:13.5186310Z [127/212] [92m✓[39m [37m@typeagent/video-agent[39m: asc -i ./src/videoActionSchema.ts -o ./dist/videoSchema.pas.json -t VideoAction - 0.701s
+2026-10-14T06:15:13.6951870Z [128/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: asc -i ./src/visualStudioSchema.ts -o ./dist/visualStudioSchema.pas.json -t VisualStudioActions - 0.700s
+2026-10-14T06:15:14.2251630Z [129/212] [92m✓[39m [92m@typeagent/weather-agent[39m: asc -i ./src/weatherSchema.ts -o ./dist/weatherSchema.pas.json -t WeatherAction - 0.701s
+2026-10-14T06:15:14.4365450Z [130/212] [92m✓[39m [93mwindowsclock-agent[39m: asc -i ./src/windowsClockSchema.ts -o ./dist/windowsClockSchema.pas.json -t WindowsClockAction - 0.744s
+2026-10-14T06:15:15.0428230Z [131/212] [92m✓[39m [91mworkflow-agent[39m: asc -i ./src/workflowSchema.ts -o ./dist/workflowSchema.pas.json -t WorkflowAction - 0.821s
+2026-10-14T06:15:16.6327300Z [132/212] [92m✓[39m [90m@typeagent/photo-agent[39m: tsc -b - 2.193s
+2026-10-14T06:15:21.8090750Z [133/212] [92m✓[39m [33m@typeagent/markdown-agent[39m: vite build - 25.100s
+2026-10-14T06:15:23.5075060Z [134/212] [92m✓[39m [97m@typeagent/image-agent[39m: tsc -b - 6.870s
+2026-10-14T06:15:24.9654650Z [135/212] [92m✓[39m [34m@typeagent/browser[39m: agc -i ./src/agent/browserSchema.agr -o ./dist/agent/browserSchema.ag.json - 1.462s
+2026-10-14T06:15:26.0465360Z [136/212] [92m✓[39m [37m@typeagent/video-agent[39m: tsc -b - 4.248s
+2026-10-14T06:15:26.5780150Z [137/212] [92m✓[39m [37m@typeagent/calendar[39m: agc -i ./src/calendarSchema.agr -o ./dist/calendarSchema.ag.json - 1.611s
+2026-10-14T06:15:28.8577860Z [138/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/codeSchema.agr -o ./dist/codeSchema.ag.json - 2.279s
+2026-10-14T06:15:32.5845670Z [139/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/debugActionsSchema.agr -o ./dist/debugSchema.ag.json - 3.726s
+2026-10-14T06:15:32.8753640Z [140/212] [92m✓[39m [33m@typeagent/markdown-agent[39m: tsc -b - 17.812s
+2026-10-14T06:15:33.6951650Z [141/212] [92m✓[39m [91m@typeagent/code-agent[39m: tsc -b src test - 7.644s
+2026-10-14T06:15:34.7800040Z [142/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/displayActionsSchema.agr -o ./dist/displaySchema.ag.json - 2.189s
+2026-10-14T06:15:35.0270610Z [143/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/generalActionsSchema.agr -o ./dist/generalSchema.ag.json - 2.160s
+2026-10-14T06:15:35.7227050Z [144/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/workbenchCommandActionsSchema.agr -o ./dist/workbenchSchema.ag.json - 2.026s
+2026-10-14T06:15:36.6450040Z [145/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/extensionsActionsSchema.agr -o ./dist/extensionSchema.ag.json - 1.858s
+2026-10-14T06:15:36.8713930Z [92m@typeagent/desktop-automation[39m: warning during command 'agc -i ./src/desktopSchema.agr -o ./dist/desktopSchema.ag.json'
+2026-10-14T06:15:36.8716720Z [146/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/desktopSchema.agr -o ./dist/desktopSchema.ag.json - 1.840s
+2026-10-14T06:15:36.8727510Z [92m@typeagent/desktop-automation[39m: Action grammar written: ./dist/desktopSchema.ag.json
+2026-10-14T06:15:36.8830620Z [92m@typeagent/desktop-automation[39m: Grammar source map written: ./dist/desktopSchema.ag.map.json
+2026-10-14T06:15:36.8933600Z [92m@typeagent/desktop-automation[39m: 
+2026-10-14T06:15:36.9059410Z [92m@typeagent/desktop-automation[39m: src/desktopSchema.agr(95,1): warning: Rule '<ListThemes>' is defined but never used.
+2026-10-14T06:15:37.5604530Z [147/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/displaySchema.agr -o ./dist/displaySchema.ag.json - 1.842s
+2026-10-14T06:15:38.5725060Z [148/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/personalizationSchema.agr -o ./dist/personalizationSchema.ag.json - 1.936s
+2026-10-14T06:15:38.9921740Z [149/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/taskbarSchema.agr -o ./dist/taskbarSchema.ag.json - 2.116s
+2026-10-14T06:15:39.1820400Z [150/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/inputSchema.agr -o ./dist/inputSchema.ag.json - 1.617s
+2026-10-14T06:15:39.7396200Z [151/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/privacySchema.agr -o ./dist/privacySchema.ag.json - 1.167s
+2026-10-14T06:15:40.0553800Z [152/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/powerSchema.agr -o ./dist/powerSchema.ag.json - 1.064s
+2026-10-14T06:15:40.4172990Z [153/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/systemSchema.agr -o ./dist/systemSchema.ag.json - 1.238s
+2026-10-14T06:15:41.6640010Z [154/212] [92m✓[39m [93m@typeagent/discord-agent[39m: agc -i ./src/discordSchema.agr -o ./dist/discordSchema.ag.json - 1.612s
+2026-10-14T06:15:43.4303980Z [155/212] [92m✓[39m [93m@typeagent/discord-agent[39m: tsc -b - 3.690s
+2026-10-14T06:15:43.4406780Z [156/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: agc -i ./src/github-cliSchema.agr -o ./dist/github-cliSchema.ag.json - 1.772s
+2026-10-14T06:15:44.9087770Z [157/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: agc -i ./src/ipconfigSchema.agr -o ./dist/ipconfigSchema.ag.json - 1.464s
+2026-10-14T06:15:45.9651350Z [158/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: tsc -b src test - 5.537s
+2026-10-14T06:15:46.0861500Z [159/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: tsc -b - 2.657s
+2026-10-14T06:15:47.2078600Z [160/212] [92m✓[39m [32m@typeagent/list-agent[39m: agc -i ./src/listSchema.agr -o ./dist/listSchema.ag.json - 1.246s
+2026-10-14T06:15:47.7871150Z [161/212] [92m✓[39m [32m@typeagent/list-agent[39m: tsc -b - 2.881s
+2026-10-14T06:15:48.3932010Z [162/212] [92m✓[39m [91m@typeagent/music[39m: agc -i ./src/agent/playerSchema.agr -o ./dist/agent/playerSchema.ag.json - 1.180s
+2026-10-14T06:15:49.4841880Z [163/212] [92m✓[39m [92m@typeagent/music-local[39m: agc -i ./src/agent/localPlayerSchema.agr -o ./dist/agent/localPlayerSchema.ag.json - 1.097s
+2026-10-14T06:15:50.4459360Z Warning: no config file found; assuming /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/playerLocal/tsconfig.json
+2026-10-14T06:15:50.4471350Z [164/212] [92m✓[39m [92m@typeagent/music-local[39m: tsc -b src test - 2.661s (non-incremental)
+2026-10-14T06:15:51.6980070Z Warning: no config file found; assuming /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/player/tsconfig.json
+2026-10-14T06:15:51.6997530Z [165/212] [92m✓[39m [91m@typeagent/music[39m: tsc -b src test - 5.612s (non-incremental)
+2026-10-14T06:15:51.8618190Z [166/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: agc -i ./src/osNotificationsSchema.agr -o ./dist/osNotificationsSchema.ag.json - 1.408s
+2026-10-14T06:15:52.4489370Z [167/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: tsc -b src test - 2.960s
+2026-10-14T06:15:52.9828820Z [168/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/powershellSchema.agr -o ./dist/powershellSchema.ag.json - 1.121s
+2026-10-14T06:15:53.4880490Z [169/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/files/filesSchema.agr -o ./dist/filesSchema.ag.json - 1.043s
+2026-10-14T06:15:54.2785400Z [170/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/processes/processesSchema.agr -o ./dist/processesSchema.ag.json - 1.302s
+2026-10-14T06:15:54.7227880Z [171/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/system/systemSchema.agr -o ./dist/systemSchema.ag.json - 1.227s
+2026-10-14T06:15:55.1860230Z [172/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/services/servicesSchema.agr -o ./dist/servicesSchema.ag.json - 0.907s
+2026-10-14T06:15:55.7287610Z [173/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/network/networkSchema.agr -o ./dist/networkSchema.ag.json - 1.012s
+2026-10-14T06:15:56.3027380Z [174/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/data/dataSchema.agr -o ./dist/dataSchema.ag.json - 1.112s
+2026-10-14T06:15:56.3730980Z [175/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: node scripts/buildBroker.mjs - 0.068s (non-incremental)
+2026-10-14T06:15:56.5041610Z [176/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: tsc -b - 4.808s
+2026-10-14T06:15:56.6948330Z [177/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/archives/archivesSchema.agr -o ./dist/archivesSchema.ag.json - 0.968s
+2026-10-14T06:15:57.6451700Z [178/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: agc -i ./src/screencaptureSchema.agr -o ./dist/screencaptureSchema.ag.json - 1.140s
+2026-10-14T06:15:58.2535510Z [179/212] [92m✓[39m [33m@typeagent/timer-agent[39m: tsc -b - 1.556s
+2026-10-14T06:15:58.4666060Z [180/212] [92m✓[39m [33m@typeagent/timer-agent[39m: agc -i ./src/timerSchema.agr -o ./dist/timerSchema.ag.json - 0.818s
+2026-10-14T06:15:59.0534800Z [181/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: agc -i ./src/utilitySchema.agr -o ./dist/utilitySchema.ag.json - 0.794s
+2026-10-14T06:15:59.3645730Z [182/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: tsc -b src test - 2.996s
+2026-10-14T06:15:59.9381200Z [183/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: agc -i ./src/visualStudioSchema.agr -o ./dist/visualStudioSchema.ag.json - 0.891s
+2026-10-14T06:16:00.0358520Z [184/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: tsc -b - 1.569s
+2026-10-14T06:16:01.1441410Z [185/212] [92m✓[39m [92m@typeagent/weather-agent[39m: agc -i ./src/weatherSchema.agr -o ./dist/weatherSchema.ag.json - 1.207s
+2026-10-14T06:16:01.1543520Z [186/212] [92m✓[39m [92m@typeagent/weather-agent[39m: tsc -b - 1.788s
+2026-10-14T06:16:03.8158510Z Warning: no config file found; assuming /Users/runner/work/TypeAgent/TypeAgent/ts/packages/agents/desktop/tsconfig.json
+2026-10-14T06:16:03.8161050Z [187/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: tsc -b src test - 3.771s (non-incremental)
+2026-10-14T06:16:04.1676170Z [188/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: tsc -b src test - 3.007s
+2026-10-14T06:16:06.1043720Z [189/212] [92m✓[39m [34m@typeagent/memory-agent[39m: tsc -b - 4.952s
+2026-10-14T06:16:08.0859110Z [190/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/puppeteer/tsconfig.json - 1.984s
+2026-10-14T06:16:09.0825470Z [191/212] [92m✓[39m [37m@typeagent/calendar[39m: tsc -b src test - 5.270s
+2026-10-14T06:16:14.8180200Z [192/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/server/tsconfig.json - 6.726s
+2026-10-14T06:16:16.5322420Z [193/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/agent/tsconfig.json - 12.369s
+2026-10-14T06:16:18.5025360Z [194/212] [92m✓[39m [94m@typeagent/email[39m: tsc -b - 3.683s
+2026-10-14T06:16:19.7925210Z [195/212] [92m✓[39m [96mgreeting-agent[39m: tsc -b - 3.259s
+2026-10-14T06:16:20.5226790Z [196/212] [92m✓[39m [96msettings-agent[39m: tsc -b - 2.020s
+2026-10-14T06:16:22.7616650Z [197/212] [92m✓[39m [91mworkflow-agent[39m: tsc -b - 2.956s
+2026-10-14T06:16:23.7178950Z [198/212] [92m✓[39m [97m@typeagent/studio-agent[39m: tsc -b src test - 3.195s
+2026-10-14T06:16:24.1438920Z [199/212] [92m✓[39m [36monboarding-agent[39m: copyfiles -u 1 "src/**/discoveryLlmSchema.ts" "src/**/exploreLlmSchema.ts" "src/**/synthesisLlmSchema.ts" "src/**/reconLlmSchema.ts" "src/**/iterativeReconLlmSchema.ts" dist - 0.410s
+2026-10-14T06:16:26.1064980Z [200/212] [92m✓[39m [93mwindowsclock-agent[39m: tsc -b - 1.967s
+2026-10-14T06:16:31.8945390Z [201/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/client/library/tsconfig.json - 9.125s
+2026-10-14T06:16:32.1259350Z [202/212] [92m✓[39m [96mgreeting-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.234s
+2026-10-14T06:16:32.3065940Z [203/212] [92m✓[39m [96msettings-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.187s
+2026-10-14T06:16:43.3707000Z [204/212] [92m✓[39m [34m@typeagent/memory-mcp-server[39m: tsc -b - 17.265s
+2026-10-14T06:16:52.2699460Z [205/212] [92m✓[39m [34m@typeagent/browser[39m: vite build - 43.178s
+2026-10-14T06:17:00.5649190Z [206/212] [92m✓[39m [97mdefault-agent-provider[39m: tsc -b - 8.301s
+2026-10-14T06:17:07.0591840Z [207/212] [92m✓[39m [32magent-server[39m: tsc -b - 6.487s
+2026-10-14T06:17:08.4986190Z [208/212] [92m✓[39m [94magent-shell[39m: electron-vite build src/preload --config electron.vite.preload-cjs.config.mts --logLevel error - 1.409s
+2026-10-14T06:17:11.7507620Z [209/212] [92m✓[39m [94magent-shell[39m: tsc -p tsconfig.web.json - 4.670s
+2026-10-14T06:17:13.5000700Z [210/212] [92m✓[39m [94magent-shell[39m: tsc -p tsconfig.node.json - 6.436s
+2026-10-14T06:17:15.5278970Z Warning: no config file found; assuming /Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/tsconfig.json
+2026-10-14T06:17:15.5280210Z [211/212] [92m✓[39m [94magent-shell[39m: tsc -b src test - 3.766s (non-incremental)
+2026-10-14T06:17:29.8972110Z [212/212] [92m✓[39m [94magent-shell[39m: electron-vite build - 21.392s
+2026-10-14T06:17:29.9045700Z Build [92msucceeded[39m
+2026-10-14T06:17:29.9147320Z Total time: 259.298s (4m 19.298s)
+2026-10-14T06:17:30.0105070Z ##[group]Run for attempt in 1 2 3; do
+2026-10-14T06:17:30.0105950Z [36;1mfor attempt in 1 2 3; do[0m
+2026-10-14T06:17:30.0106550Z [36;1m  if pnpm run shell:package; then[0m
+2026-10-14T06:17:30.0106990Z [36;1m    exit 0[0m
+2026-10-14T06:17:30.0107280Z [36;1m  fi[0m
+2026-10-14T06:17:30.0107810Z [36;1m[0m
+2026-10-14T06:17:30.0108410Z [36;1m  if [ "$attempt" -lt 3 ]; then[0m
+2026-10-14T06:17:30.0109020Z [36;1m    echo "Shell packaging failed; retrying in 30 seconds (attempt $((attempt + 1)) of 3)."[0m
+2026-10-14T06:17:30.0109550Z [36;1m    sleep 30[0m
+2026-10-14T06:17:30.0109940Z [36;1m  fi[0m
+2026-10-14T06:17:30.0110210Z [36;1mdone[0m
+2026-10-14T06:17:30.0110580Z [36;1m[0m
+2026-10-14T06:17:30.0110990Z [36;1mexit 1[0m
+2026-10-14T06:17:30.0399650Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T06:17:30.0400240Z env:
+2026-10-14T06:17:30.0400630Z   ELECTRON_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:17:30.0401830Z   ELECTRON_BUILDER_CACHE: /Users/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:17:30.0402430Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:17:30.0402840Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:17:30.0403440Z ##[endgroup]
+2026-10-14T06:17:30.8082300Z $ pnpm -C packages/shell run package
+2026-10-14T06:17:31.2552280Z $ run-script-os
+2026-10-14T06:17:31.7488990Z 
+2026-10-14T06:17:31.7489840Z > agent-shell@0.0.1 package:macos
+2026-10-14T06:17:31.7492020Z > pnpm run package:macos:x64 && pnpm run package:macos:arm64
+2026-10-14T06:17:31.7492570Z 
+2026-10-14T06:17:32.3087410Z $ ELECTRON_BUILDER_ARCH=x64 pnpm run package:default --mac --x64
+2026-10-14T06:17:32.9740600Z $ pnpm run deploy:app && electron-builder --projectDir deploy --config ../electron-builder.config.js -p never  --mac --x64
+2026-10-14T06:17:33.5956620Z $ rimraf ./deploy && pnpm --filter=agent-shell deploy --prod ./deploy --ignore-scripts && pnpm -C deploy run postinstall && node ../../tools/scripts/prune-shell-deploy.mjs ./deploy
+2026-10-14T06:17:34.9314580Z [WARN] Shared workspace lockfile detected but configuration forces legacy deploy implementation.
+2026-10-14T06:17:35.0996900Z Packages are cloned from the content-addressable store to the virtual store.
+2026-10-14T06:17:35.0999720Z   Content-addressable store is at: /Users/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:17:35.1374350Z   Virtual store is at:             deploy/node_modules/.pnpm
+2026-10-14T06:17:35.1467400Z ✓ Lockfile passes supply-chain policies (verified 6m ago)
+2026-10-14T06:17:36.3613490Z ../..                                    | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:17:37.3841600Z ../..                                    | Progress: resolved 69, reused 0, downloaded 7, added 0
+2026-10-14T06:17:37.9980270Z ../agentServer/bundledRuntime            | [WARN] deprecated @modelcontextprotocol/server-filesystem@2026.1.14
+2026-10-14T06:17:38.3993060Z ../..                                    | Progress: resolved 90, reused 0, downloaded 14, added 0
+2026-10-14T06:17:39.3995010Z ../..                                    | Progress: resolved 99, reused 0, downloaded 26, added 0
+2026-10-14T06:17:40.4199070Z ../..                                    | Progress: resolved 108, reused 0, downloaded 46, added 0
+2026-10-14T06:17:41.4296580Z ../..                                    | Progress: resolved 128, reused 0, downloaded 68, added 0
+2026-10-14T06:17:42.5087690Z ../..                                    | Progress: resolved 138, reused 0, downloaded 73, added 0
+2026-10-14T06:17:43.6003140Z ../..                                    | Progress: resolved 140, reused 0, downloaded 77, added 0
+2026-10-14T06:17:44.7325130Z ../..                                    | Progress: resolved 145, reused 0, downloaded 86, added 0
+2026-10-14T06:17:46.1135910Z ../..                                    | Progress: resolved 156, reused 0, downloaded 100, added 0
+2026-10-14T06:17:47.1203220Z ../..                                    | Progress: resolved 186, reused 0, downloaded 114, added 0
+2026-10-14T06:17:48.1224110Z ../..                                    | Progress: resolved 210, reused 0, downloaded 124, added 0
+2026-10-14T06:17:49.1418430Z ../..                                    | Progress: resolved 220, reused 0, downloaded 136, added 0
+2026-10-14T06:17:50.1468390Z ../..                                    | Progress: resolved 240, reused 0, downloaded 143, added 0
+2026-10-14T06:17:51.1485050Z ../..                                    | Progress: resolved 253, reused 0, downloaded 153, added 0
+2026-10-14T06:17:52.1587930Z ../..                                    | Progress: resolved 265, reused 0, downloaded 167, added 0
+2026-10-14T06:17:53.1758430Z ../..                                    | Progress: resolved 286, reused 0, downloaded 177, added 0
+2026-10-14T06:17:54.1809130Z ../..                                    | Progress: resolved 298, reused 0, downloaded 179, added 0
+2026-10-14T06:17:55.5784040Z [WARN] Request took 18561ms: https://registry.npmjs.org/vite
+2026-10-14T06:17:55.8944190Z ../..                                    | Progress: resolved 318, reused 0, downloaded 180, added 0
+2026-10-14T06:17:56.8854810Z ../..                                    | Progress: resolved 322, reused 0, downloaded 193, added 0
+2026-10-14T06:17:57.8890600Z ../..                                    | Progress: resolved 349, reused 0, downloaded 201, added 0
+2026-10-14T06:17:58.8905270Z ../..                                    | Progress: resolved 387, reused 0, downloaded 208, added 0
+2026-10-14T06:17:59.8916140Z ../..                                    | Progress: resolved 397, reused 0, downloaded 217, added 0
+2026-10-14T06:18:00.8918970Z ../..                                    | Progress: resolved 417, reused 0, downloaded 235, added 0
+2026-10-14T06:18:01.8944540Z ../..                                    | Progress: resolved 423, reused 0, downloaded 239, added 0
+2026-10-14T06:18:02.9537700Z ../..                                    | Progress: resolved 437, reused 0, downloaded 250, added 0
+2026-10-14T06:18:03.9530360Z ../..                                    | Progress: resolved 463, reused 0, downloaded 269, added 0
+2026-10-14T06:18:04.9542850Z ../..                                    | Progress: resolved 491, reused 0, downloaded 297, added 0
+2026-10-14T06:18:05.9568740Z ../..                                    | Progress: resolved 520, reused 0, downloaded 326, added 0
+2026-10-14T06:18:06.9586150Z ../..                                    | Progress: resolved 553, reused 0, downloaded 358, added 0
+2026-10-14T06:18:07.9608630Z ../..                                    | Progress: resolved 577, reused 0, downloaded 382, added 0
+2026-10-14T06:18:08.9632590Z ../..                                    | Progress: resolved 587, reused 0, downloaded 390, added 0
+2026-10-14T06:18:09.9645530Z ../..                                    | Progress: resolved 605, reused 0, downloaded 413, added 0
+2026-10-14T06:18:11.0097170Z ../..                                    | Progress: resolved 660, reused 0, downloaded 466, added 0
+2026-10-14T06:18:12.0088010Z ../..                                    | Progress: resolved 719, reused 0, downloaded 522, added 0
+2026-10-14T06:18:13.0121780Z ../..                                    | Progress: resolved 726, reused 0, downloaded 540, added 0
+2026-10-14T06:18:14.0123000Z ../..                                    | Progress: resolved 754, reused 0, downloaded 582, added 0
+2026-10-14T06:18:15.0465580Z ../..                                    | Progress: resolved 817, reused 0, downloaded 597, added 0
+2026-10-14T06:18:16.3123810Z ../..                                    | Progress: resolved 834, reused 0, downloaded 603, added 0
+2026-10-14T06:18:18.4663790Z ../..                                    | Progress: resolved 834, reused 0, downloaded 604, added 0
+2026-10-14T06:18:19.4709090Z ../..                                    | Progress: resolved 843, reused 0, downloaded 614, added 0
+2026-10-14T06:18:20.5089530Z ../..                                    | Progress: resolved 850, reused 0, downloaded 625, added 0
+2026-10-14T06:18:21.7360240Z ../..                                    | Progress: resolved 853, reused 0, downloaded 625, added 0
+2026-10-14T06:18:22.7548830Z ../..                                    | Progress: resolved 864, reused 0, downloaded 635, added 0
+2026-10-14T06:18:23.7463800Z ../..                                    | Progress: resolved 867, reused 0, downloaded 640, added 0
+2026-10-14T06:18:24.8417480Z ../..                                    | Progress: resolved 868, reused 0, downloaded 641, added 0
+2026-10-14T06:18:25.8069910Z ../..                                    | Progress: resolved 868, reused 0, downloaded 642, added 0
+2026-10-14T06:18:26.8064080Z ../..                                    | Progress: resolved 876, reused 0, downloaded 651, added 0
+2026-10-14T06:18:27.8105770Z ../..                                    | Progress: resolved 883, reused 0, downloaded 656, added 0
+2026-10-14T06:18:28.8152410Z ../..                                    | Progress: resolved 891, reused 0, downloaded 664, added 0
+2026-10-14T06:18:29.8168650Z ../..                                    | Progress: resolved 907, reused 0, downloaded 680, added 0
+2026-10-14T06:18:30.8173800Z ../..                                    | Progress: resolved 922, reused 0, downloaded 697, added 0
+2026-10-14T06:18:31.8357890Z ../..                                    | Progress: resolved 938, reused 0, downloaded 710, added 0
+2026-10-14T06:18:33.0785030Z ../..                                    | Progress: resolved 945, reused 0, downloaded 719, added 0
+2026-10-14T06:18:35.3536280Z ../..                                    | Progress: resolved 947, reused 0, downloaded 721, added 0
+2026-10-14T06:18:36.3658560Z ../..                                    | Progress: resolved 976, reused 0, downloaded 748, added 0
+2026-10-14T06:18:37.3870370Z ../..                                    | Progress: resolved 991, reused 0, downloaded 763, added 0
+2026-10-14T06:18:38.3887940Z ../..                                    | Progress: resolved 1007, reused 0, downloaded 778, added 0
+2026-10-14T06:18:39.3904430Z ../..                                    | Progress: resolved 1025, reused 0, downloaded 795, added 0
+2026-10-14T06:18:40.4474660Z ../..                                    | Progress: resolved 1053, reused 0, downloaded 823, added 0
+2026-10-14T06:18:41.4525620Z ../..                                    | Progress: resolved 1100, reused 0, downloaded 866, added 0
+2026-10-14T06:18:42.4512770Z ../..                                    | Progress: resolved 1150, reused 0, downloaded 909, added 0
+2026-10-14T06:18:43.6776500Z ../..                                    | Progress: resolved 1157, reused 0, downloaded 921, added 0
+2026-10-14T06:18:44.6765900Z ../..                                    | Progress: resolved 1213, reused 0, downloaded 967, added 0
+2026-10-14T06:18:45.7041310Z ../..                                    | Progress: resolved 1245, reused 0, downloaded 1004, added 0
+2026-10-14T06:18:46.7039850Z ../..                                    | Progress: resolved 1294, reused 0, downloaded 1057, added 0
+2026-10-14T06:18:47.7044380Z ../..                                    | Progress: resolved 1334, reused 0, downloaded 1094, added 0
+2026-10-14T06:18:48.7113980Z ../..                                    | Progress: resolved 1415, reused 0, downloaded 1175, added 0
+2026-10-14T06:18:49.7182990Z ../..                                    | Progress: resolved 1509, reused 0, downloaded 1256, added 0
+2026-10-14T06:18:50.7188630Z ../..                                    | Progress: resolved 1622, reused 0, downloaded 1372, added 0
+2026-10-14T06:18:51.8738480Z ../..                                    | Progress: resolved 1692, reused 0, downloaded 1454, added 0
+2026-10-14T06:18:52.8687030Z ../..                                    | Progress: resolved 1733, reused 0, downloaded 1474, added 0
+2026-10-14T06:18:53.8798470Z ../..                                    | Progress: resolved 1835, reused 0, downloaded 1559, added 0
+2026-10-14T06:18:54.8694130Z ../..                                    | Progress: resolved 1881, reused 0, downloaded 1617, added 0
+2026-10-14T06:18:55.9672400Z ../..                                    | Progress: resolved 1955, reused 0, downloaded 1684, added 0
+2026-10-14T06:18:57.1039800Z ../..                                    | Progress: resolved 1977, reused 0, downloaded 1703, added 0
+2026-10-14T06:18:58.1108090Z ../..                                    | Progress: resolved 2019, reused 0, downloaded 1742, added 0
+2026-10-14T06:18:59.1114090Z ../..                                    | Progress: resolved 2072, reused 0, downloaded 1793, added 0
+2026-10-14T06:19:00.1157450Z ../..                                    | Progress: resolved 2168, reused 0, downloaded 1891, added 0
+2026-10-14T06:19:01.1234720Z ../..                                    | Progress: resolved 2196, reused 0, downloaded 1942, added 0
+2026-10-14T06:19:02.1170850Z ../..                                    | Progress: resolved 2239, reused 0, downloaded 1977, added 0
+2026-10-14T06:19:03.1261120Z ../..                                    | Progress: resolved 2269, reused 0, downloaded 2000, added 0
+2026-10-14T06:19:04.1207760Z ../..                                    | Progress: resolved 2293, reused 0, downloaded 2024, added 0
+2026-10-14T06:19:05.1227170Z ../..                                    | Progress: resolved 2397, reused 0, downloaded 2127, added 0
+2026-10-14T06:19:06.1235580Z ../..                                    | Progress: resolved 2477, reused 0, downloaded 2205, added 0
+2026-10-14T06:19:07.1248110Z ../..                                    | Progress: resolved 2514, reused 0, downloaded 2245, added 0
+2026-10-14T06:19:08.1430160Z ../..                                    | Progress: resolved 2605, reused 0, downloaded 2332, added 0
+2026-10-14T06:19:09.1455430Z ../..                                    | Progress: resolved 2676, reused 0, downloaded 2416, added 0
+2026-10-14T06:19:10.6031300Z ../..                                    | Progress: resolved 2747, reused 0, downloaded 2474, added 0
+2026-10-14T06:19:11.6155000Z ../..                                    | Progress: resolved 2835, reused 0, downloaded 2569, added 0
+2026-10-14T06:19:12.6260520Z ../..                                    | Progress: resolved 2950, reused 0, downloaded 2686, added 0
+2026-10-14T06:19:13.6714580Z ../..                                    | Progress: resolved 3046, reused 0, downloaded 2805, added 0
+2026-10-14T06:19:14.7886690Z ../..                                    | Progress: resolved 3048, reused 0, downloaded 2839, added 0
+2026-10-14T06:19:18.5742340Z ../..                                    | Progress: resolved 3049, reused 0, downloaded 2839, added 0
+2026-10-14T06:19:20.9038950Z [WARN] 3 deprecated subdependencies found: @types/minimatch@6.0.0, uuid@8.3.2, uuid@9.0.1
+2026-10-14T06:19:20.9042280Z ../..                                    | Progress: resolved 3049, reused 0, downloaded 2839, added 0, done
+2026-10-14T06:19:20.9233420Z [WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+2026-10-14T06:19:21.0585340Z ../..                                    | +613 ++++++++++++++++++++++++++++++++
+2026-10-14T06:19:43.8034030Z $ run-script-os
+2026-10-14T06:19:44.4366420Z 
+2026-10-14T06:19:44.4367270Z > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:19:44.4368810Z > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:19:44.4369350Z 
+2026-10-14T06:19:45.7953900Z   • electron-builder  version=26.15.3
+2026-10-14T06:19:45.8026870Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:19:46.4123240Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:19:46.4233250Z   • executing @electron/rebuild  electronVersion=41.10.3 arch=x64 buildFromSource=false workspaceRoot=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:19:46.4234540Z   • installing native dependencies  arch=x64
+2026-10-14T06:19:48.0074460Z   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:19:48.3884740Z   • finished        moduleName=keytar arch=x64
+2026-10-14T06:19:48.3886070Z   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:19:48.5346280Z   • finished        moduleName=keytar arch=x64
+2026-10-14T06:19:48.5347300Z   • completed installing native dependencies
+2026-10-14T06:19:48.6400080Z prune-shell-deploy: pruning deploy/node_modules (dropping @github/copilot-sdk + @anthropic-ai/claude-agent-sdk platform natives and the local-embedding runtime; connect-only shell delegates all model work to the agent-server)
+2026-10-14T06:19:48.6495020Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-darwin-arm64@0.3.162
+2026-10-14T06:19:48.6518360Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-darwin-x64@0.3.162
+2026-10-14T06:19:48.6550650Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64
+2026-10-14T06:19:48.6617760Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64
+2026-10-14T06:19:48.9103950Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-darwin-arm64@1.0.13
+2026-10-14T06:19:48.9273360Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-darwin-x64@1.0.13
+2026-10-14T06:19:48.9290610Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-darwin-arm64
+2026-10-14T06:19:48.9291850Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-darwin-x64
+2026-10-14T06:19:49.0028960Z   removed dir   node_modules/.pnpm/@huggingface+transformers@3.8.1_@types+node@22.20.1
+2026-10-14T06:19:49.0824700Z   removed link  node_modules/.pnpm/@typeagent+aiclient@file+packages+aiclient_@types+node@22.20.1_socks@2.8.7_typescript@5.4.5_zod@4.4.3/node_modules/@huggingface/transformers
+2026-10-14T06:19:49.3812830Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64
+2026-10-14T06:19:49.3814210Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64
+2026-10-14T06:19:49.3829500Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-darwin-arm64
+2026-10-14T06:19:49.3831160Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-darwin-x64
+2026-10-14T06:19:49.3831930Z   removed link  node_modules/.pnpm/node_modules/@huggingface/transformers
+2026-10-14T06:19:49.3848330Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-node
+2026-10-14T06:19:49.3851140Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-web
+2026-10-14T06:19:49.4071890Z   removed dir   node_modules/.pnpm/onnxruntime-node@1.21.0
+2026-10-14T06:19:49.4703140Z   removed dir   node_modules/.pnpm/onnxruntime-web@1.22.0-dev.20250409-89f8206ba4
+2026-10-14T06:19:49.5463950Z prune-shell-deploy: done (~964 MB of real files removed).
+2026-10-14T06:19:50.0378890Z   • electron-builder  version=26.15.3 os=25.6.0
+2026-10-14T06:19:50.0437830Z   • loaded configuration  file=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/electron-builder.config.js
+2026-10-14T06:19:50.0462130Z   • Specified application directory equals to project dir — superfluous or wrong configuration  appDirectory=.
+2026-10-14T06:19:50.4767530Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:19:50.9894030Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:19:50.9999040Z   • skipped dependencies rebuild  reason=npmRebuild is set to false
+2026-10-14T06:19:51.0000380Z   • packaging       platform=darwin arch=x64 electron=41.10.3 appOutDir=dist/mac
+2026-10-14T06:19:51.2154740Z   • downloaded      label=electron progress=100%
+2026-10-14T06:19:54.4828040Z   • downloaded electron zip extracted successfully  output=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/dist/mac
+2026-10-14T06:19:54.4979370Z   • searching for node modules  pm=pnpm searchDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:19:58.3942800Z   • duplicate dependency references  dependencies=["@azure/identity@4.10.0","@azure/msal-node-extensions@1.5.13","debug@4.4.1","dompurify@3.4.13","js-yaml@4.3.2","markdown-it@14.2.0","microsoft-cognitiveservices-speech-sdk@1.43.1","typechat@0.1.1","keytar@7.9.0","linkify-it@5.0.2","fs-extra@10.1.0","@typespec/ts-http-runtime@0.2.2","@azure/core-auth@1.11.0","@azure/core-tracing@1.4.0","@azure/core-util@1.14.0","@azure/logger@1.4.0","prebuild-install@7.1.3","debug@4.4.3","http-proxy-agent@7.0.2","https-proxy-agent@7.0.6","@azure/abort-controller@2.2.0","once@1.4.0","readable-stream@3.6.2"]
+2026-10-14T06:19:58.3950630Z   • unresolved duplicate dependency references  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:19:58.3958790Z   • cannot find path for dependency  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:20:03.8191880Z   • default Electron icon is used  reason=application icon is not set
+2026-10-14T06:20:03.9928200Z   • Current build is a part of pull request, code signing will be skipped.
+2026-10-14T06:20:03.9929180Z Set env CSC_FOR_PULL_REQUEST to true to force code signing.
+2026-10-14T06:20:03.9934700Z There are serious security concerns with CSC_FOR_PULL_REQUEST=true (see the  CircleCI documentation (https://circleci.com/docs/1.0/fork-pr-builds/) for details)
+2026-10-14T06:20:03.9936630Z If you have SSH keys, sensitive env vars or AWS credentials stored in your project settings and untrusted forks can make pull requests against your repo, then this option isn't for you.
+2026-10-14T06:20:03.9941030Z   • building        target=macOS zip arch=x64 file=dist/typeagentshell-0.0.1-darwin-x64.zip
+2026-10-14T06:20:03.9942310Z   • building        target=DMG arch=x64 file=dist/typeagentshell-0.0.1-darwin-x64.dmg
+2026-10-14T06:20:04.1524490Z   • downloaded      label=dmgbuild-bundle-arm64-75c8a6c.tar.gz progress=100%
+2026-10-14T06:20:25.0540830Z   • building block map  blockMapFile=dist/typeagentshell-0.0.1-darwin-x64.zip.blockmap
+2026-10-14T06:20:41.2342650Z   • building block map  blockMapFile=dist/typeagentshell-0.0.1-darwin-x64.dmg.blockmap
+2026-10-14T06:20:46.9049420Z $ ELECTRON_BUILDER_ARCH=arm64 pnpm run package:default --mac --arm64
+2026-10-14T06:20:47.4114090Z $ pnpm run deploy:app && electron-builder --projectDir deploy --config ../electron-builder.config.js -p never  --mac --arm64
+2026-10-14T06:20:47.9764840Z $ rimraf ./deploy && pnpm --filter=agent-shell deploy --prod ./deploy --ignore-scripts && pnpm -C deploy run postinstall && node ../../tools/scripts/prune-shell-deploy.mjs ./deploy
+2026-10-14T06:20:53.2926850Z [WARN] Shared workspace lockfile detected but configuration forces legacy deploy implementation.
+2026-10-14T06:20:53.3955550Z Packages are cloned from the content-addressable store to the virtual store.
+2026-10-14T06:20:53.3956630Z   Content-addressable store is at: /Users/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:20:53.3957940Z   Virtual store is at:             deploy/node_modules/.pnpm
+2026-10-14T06:20:53.3975620Z ✓ Lockfile passes supply-chain policies (verified 9m ago)
+2026-10-14T06:20:54.4225270Z ../..                                    | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:20:55.4453750Z ../..                                    | Progress: resolved 84, reused 0, downloaded 12, added 0
+2026-10-14T06:20:55.4496300Z ../agentServer/bundledRuntime            | [WARN] deprecated @modelcontextprotocol/server-filesystem@2026.1.14
+2026-10-14T06:20:56.5046360Z ../..                                    | Progress: resolved 108, reused 0, downloaded 29, added 0
+2026-10-14T06:20:57.5227560Z ../..                                    | Progress: resolved 134, reused 0, downloaded 55, added 0
+2026-10-14T06:20:58.5313910Z ../..                                    | Progress: resolved 156, reused 0, downloaded 88, added 0
+2026-10-14T06:20:59.5417980Z ../..                                    | Progress: resolved 164, reused 0, downloaded 99, added 0
+2026-10-14T06:21:00.5951870Z ../..                                    | Progress: resolved 188, reused 0, downloaded 118, added 0
+2026-10-14T06:21:01.6039410Z ../..                                    | Progress: resolved 200, reused 0, downloaded 133, added 0
+2026-10-14T06:21:02.6214180Z ../..                                    | Progress: resolved 220, reused 0, downloaded 156, added 0
+2026-10-14T06:21:03.6226610Z ../..                                    | Progress: resolved 232, reused 0, downloaded 176, added 0
+2026-10-14T06:21:04.6262640Z ../..                                    | Progress: resolved 255, reused 0, downloaded 189, added 0
+2026-10-14T06:21:05.6332810Z ../..                                    | Progress: resolved 264, reused 0, downloaded 199, added 0
+2026-10-14T06:21:06.6377510Z ../..                                    | Progress: resolved 289, reused 0, downloaded 212, added 0
+2026-10-14T06:21:07.7490020Z ../..                                    | Progress: resolved 293, reused 0, downloaded 215, added 0
+2026-10-14T06:21:08.7897480Z ../..                                    | Progress: resolved 316, reused 0, downloaded 235, added 0
+2026-10-14T06:21:09.8449770Z ../..                                    | Progress: resolved 321, reused 0, downloaded 240, added 0
+2026-10-14T06:21:10.8409460Z ../..                                    | Progress: resolved 333, reused 0, downloaded 250, added 0
+2026-10-14T06:21:11.9104030Z ../..                                    | Progress: resolved 351, reused 0, downloaded 264, added 0
+2026-10-14T06:21:13.0569690Z ../..                                    | Progress: resolved 387, reused 0, downloaded 271, added 0
+2026-10-14T06:21:14.0650920Z ../..                                    | Progress: resolved 391, reused 0, downloaded 279, added 0
+2026-10-14T06:21:18.2816050Z ../..                                    | Progress: resolved 392, reused 0, downloaded 279, added 0
+2026-10-14T06:21:19.2883440Z ../..                                    | Progress: resolved 483, reused 0, downloaded 316, added 0
+2026-10-14T06:21:20.2988020Z ../..                                    | Progress: resolved 523, reused 0, downloaded 332, added 0
+2026-10-14T06:21:21.2987670Z ../..                                    | Progress: resolved 564, reused 0, downloaded 372, added 0
+2026-10-14T06:21:22.3014210Z ../..                                    | Progress: resolved 583, reused 0, downloaded 390, added 0
+2026-10-14T06:21:23.3148830Z ../..                                    | Progress: resolved 646, reused 0, downloaded 454, added 0
+2026-10-14T06:21:24.3394320Z ../..                                    | Progress: resolved 743, reused 0, downloaded 553, added 0
+2026-10-14T06:21:25.3693520Z ../..                                    | Progress: resolved 797, reused 0, downloaded 583, added 0
+2026-10-14T06:21:26.4036750Z ../..                                    | Progress: resolved 816, reused 0, downloaded 596, added 0
+2026-10-14T06:21:27.4518330Z ../..                                    | Progress: resolved 859, reused 0, downloaded 641, added 0
+2026-10-14T06:21:28.5106530Z ../..                                    | Progress: resolved 872, reused 0, downloaded 647, added 0
+2026-10-14T06:21:30.6182730Z ../..                                    | Progress: resolved 872, reused 0, downloaded 648, added 0
+2026-10-14T06:21:32.1401560Z ../..                                    | Progress: resolved 872, reused 0, downloaded 649, added 0
+2026-10-14T06:21:33.1408830Z ../..                                    | Progress: resolved 875, reused 0, downloaded 650, added 0
+2026-10-14T06:21:34.3620680Z ../..                                    | Progress: resolved 875, reused 0, downloaded 651, added 0
+2026-10-14T06:21:36.5518980Z ../..                                    | Progress: resolved 875, reused 0, downloaded 652, added 0
+2026-10-14T06:21:39.1082650Z ../..                                    | Progress: resolved 880, reused 0, downloaded 656, added 0
+2026-10-14T06:21:40.1495820Z ../..                                    | Progress: resolved 884, reused 0, downloaded 661, added 0
+2026-10-14T06:21:41.1395940Z ../..                                    | Progress: resolved 896, reused 0, downloaded 672, added 0
+2026-10-14T06:21:42.1453070Z ../..                                    | Progress: resolved 908, reused 0, downloaded 684, added 0
+2026-10-14T06:21:43.1445670Z ../..                                    | Progress: resolved 932, reused 0, downloaded 707, added 0
+2026-10-14T06:21:44.1475370Z ../..                                    | Progress: resolved 934, reused 0, downloaded 708, added 0
+2026-10-14T06:21:45.1503530Z ../..                                    | Progress: resolved 934, reused 0, downloaded 709, added 0
+2026-10-14T06:21:46.3602050Z ../..                                    | Progress: resolved 944, reused 0, downloaded 723, added 0
+2026-10-14T06:21:47.3968330Z ../..                                    | Progress: resolved 978, reused 0, downloaded 753, added 0
+2026-10-14T06:21:48.3993070Z ../..                                    | Progress: resolved 995, reused 0, downloaded 768, added 0
+2026-10-14T06:21:49.4034340Z ../..                                    | Progress: resolved 1009, reused 0, downloaded 782, added 0
+2026-10-14T06:21:50.4196460Z ../..                                    | Progress: resolved 1035, reused 0, downloaded 808, added 0
+2026-10-14T06:21:51.4322160Z ../..                                    | Progress: resolved 1073, reused 0, downloaded 848, added 0
+2026-10-14T06:21:52.4340600Z ../..                                    | Progress: resolved 1140, reused 0, downloaded 899, added 0
+2026-10-14T06:21:53.4457370Z ../..                                    | Progress: resolved 1159, reused 0, downloaded 927, added 0
+2026-10-14T06:21:54.4493280Z ../..                                    | Progress: resolved 1212, reused 0, downloaded 969, added 0
+2026-10-14T06:21:55.4538500Z ../..                                    | Progress: resolved 1243, reused 0, downloaded 1003, added 0
+2026-10-14T06:21:56.4532590Z ../..                                    | Progress: resolved 1327, reused 0, downloaded 1084, added 0
+2026-10-14T06:21:57.4555290Z ../..                                    | Progress: resolved 1406, reused 0, downloaded 1165, added 0
+2026-10-14T06:21:58.4637000Z ../..                                    | Progress: resolved 1514, reused 0, downloaded 1264, added 0
+2026-10-14T06:21:59.4651580Z ../..                                    | Progress: resolved 1710, reused 0, downloaded 1455, added 0
+2026-10-14T06:22:00.4658500Z ../..                                    | Progress: resolved 1758, reused 0, downloaded 1502, added 0
+2026-10-14T06:22:01.4712280Z ../..                                    | Progress: resolved 1875, reused 0, downloaded 1602, added 0
+2026-10-14T06:22:02.5220110Z ../..                                    | Progress: resolved 1914, reused 0, downloaded 1654, added 0
+2026-10-14T06:22:03.6004570Z ../..                                    | Progress: resolved 1952, reused 0, downloaded 1682, added 0
+2026-10-14T06:22:04.6808290Z ../..                                    | Progress: resolved 1988, reused 0, downloaded 1721, added 0
+2026-10-14T06:22:05.6816480Z ../..                                    | Progress: resolved 2020, reused 0, downloaded 1744, added 0
+2026-10-14T06:22:06.7162700Z ../..                                    | Progress: resolved 2105, reused 0, downloaded 1827, added 0
+2026-10-14T06:22:07.7162790Z ../..                                    | Progress: resolved 2201, reused 0, downloaded 1918, added 0
+2026-10-14T06:22:08.7176700Z ../..                                    | Progress: resolved 2346, reused 0, downloaded 2053, added 0
+2026-10-14T06:22:09.7190280Z ../..                                    | Progress: resolved 2435, reused 0, downloaded 2140, added 0
+2026-10-14T06:22:10.7204300Z ../..                                    | Progress: resolved 2603, reused 0, downloaded 2307, added 0
+2026-10-14T06:22:11.7205180Z ../..                                    | Progress: resolved 2735, reused 0, downloaded 2438, added 0
+2026-10-14T06:22:12.7608880Z ../..                                    | Progress: resolved 2908, reused 0, downloaded 2613, added 0
+2026-10-14T06:22:13.7752290Z ../..                                    | Progress: resolved 3046, reused 0, downloaded 2803, added 0
+2026-10-14T06:22:14.7880110Z ../..                                    | Progress: resolved 3048, reused 0, downloaded 2839, added 0
+2026-10-14T06:22:19.4475830Z ../..                                    | Progress: resolved 3049, reused 0, downloaded 2839, added 0
+2026-10-14T06:22:20.7989450Z [WARN] 3 deprecated subdependencies found: @types/minimatch@6.0.0, uuid@8.3.2, uuid@9.0.1
+2026-10-14T06:22:20.7995500Z ../..                                    | Progress: resolved 3049, reused 0, downloaded 2839, added 0, done
+2026-10-14T06:22:20.8117880Z [WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+2026-10-14T06:22:20.8907960Z ../..                                    | +613 ++++++++++++++++++++++++++++++++
+2026-10-14T06:22:34.5817840Z $ run-script-os
+2026-10-14T06:22:35.0327080Z 
+2026-10-14T06:22:35.0327710Z > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:22:35.0328760Z > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:22:35.0329370Z 
+2026-10-14T06:22:35.8593040Z   • electron-builder  version=26.15.3
+2026-10-14T06:22:35.8598060Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:22:36.3531270Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:22:36.3535390Z   • executing @electron/rebuild  electronVersion=41.10.3 arch=arm64 buildFromSource=false workspaceRoot=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:22:36.3541360Z   • installing native dependencies  arch=arm64
+2026-10-14T06:22:38.1883300Z   • preparing       moduleName=keytar arch=arm64
+2026-10-14T06:22:38.3150850Z   • finished        moduleName=keytar arch=arm64
+2026-10-14T06:22:38.3151510Z   • preparing       moduleName=keytar arch=arm64
+2026-10-14T06:22:38.4764300Z   • finished        moduleName=keytar arch=arm64
+2026-10-14T06:22:38.4765200Z   • completed installing native dependencies
+2026-10-14T06:22:38.5451410Z prune-shell-deploy: pruning deploy/node_modules (dropping @github/copilot-sdk + @anthropic-ai/claude-agent-sdk platform natives and the local-embedding runtime; connect-only shell delegates all model work to the agent-server)
+2026-10-14T06:22:38.5522150Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-darwin-arm64@0.3.162
+2026-10-14T06:22:38.5532640Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-darwin-x64@0.3.162
+2026-10-14T06:22:38.5547770Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64
+2026-10-14T06:22:38.5549730Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64
+2026-10-14T06:22:38.7444220Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-darwin-arm64@1.0.13
+2026-10-14T06:22:38.7548980Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-darwin-x64@1.0.13
+2026-10-14T06:22:38.7564100Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-darwin-arm64
+2026-10-14T06:22:38.7564910Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-darwin-x64
+2026-10-14T06:22:38.8082070Z   removed dir   node_modules/.pnpm/@huggingface+transformers@3.8.1_@types+node@22.20.1
+2026-10-14T06:22:38.8575370Z   removed link  node_modules/.pnpm/@typeagent+aiclient@file+packages+aiclient_@types+node@22.20.1_socks@2.8.7_typescript@5.4.5_zod@4.4.3/node_modules/@huggingface/transformers
+2026-10-14T06:22:39.0478730Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64
+2026-10-14T06:22:39.0494020Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64
+2026-10-14T06:22:39.0500000Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-darwin-arm64
+2026-10-14T06:22:39.0506250Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-darwin-x64
+2026-10-14T06:22:39.0508460Z   removed link  node_modules/.pnpm/node_modules/@huggingface/transformers
+2026-10-14T06:22:39.0510730Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-node
+2026-10-14T06:22:39.0514890Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-web
+2026-10-14T06:22:39.0650210Z   removed dir   node_modules/.pnpm/onnxruntime-node@1.21.0
+2026-10-14T06:22:39.1050590Z   removed dir   node_modules/.pnpm/onnxruntime-web@1.22.0-dev.20250409-89f8206ba4
+2026-10-14T06:22:39.1583810Z prune-shell-deploy: done (~964 MB of real files removed).
+2026-10-14T06:22:39.5805940Z   • electron-builder  version=26.15.3 os=25.6.0
+2026-10-14T06:22:39.5861340Z   • loaded configuration  file=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/electron-builder.config.js
+2026-10-14T06:22:39.5883940Z   • Specified application directory equals to project dir — superfluous or wrong configuration  appDirectory=.
+2026-10-14T06:22:39.9609810Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:22:40.3926050Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/Users/runner/work/TypeAgent/TypeAgent/ts projectDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:22:40.4034570Z   • skipped dependencies rebuild  reason=npmRebuild is set to false
+2026-10-14T06:22:40.4035470Z   • packaging       platform=darwin arch=arm64 electron=41.10.3 appOutDir=dist/mac-arm64
+2026-10-14T06:22:40.6168620Z   • downloaded      label=electron progress=100%
+2026-10-14T06:22:42.5855710Z   • downloaded electron zip extracted successfully  output=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/dist/mac-arm64
+2026-10-14T06:22:42.6002730Z   • searching for node modules  pm=pnpm searchDir=/Users/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:22:46.3029370Z   • duplicate dependency references  dependencies=["@azure/identity@4.10.0","@azure/msal-node-extensions@1.5.13","debug@4.4.1","dompurify@3.4.13","js-yaml@4.3.2","markdown-it@14.2.0","microsoft-cognitiveservices-speech-sdk@1.43.1","typechat@0.1.1","keytar@7.9.0","linkify-it@5.0.2","fs-extra@10.1.0","@typespec/ts-http-runtime@0.2.2","@azure/core-auth@1.11.0","@azure/core-tracing@1.4.0","@azure/core-util@1.14.0","@azure/logger@1.4.0","prebuild-install@7.1.3","debug@4.4.3","http-proxy-agent@7.0.2","https-proxy-agent@7.0.6","@azure/abort-controller@2.2.0","once@1.4.0","readable-stream@3.6.2"]
+2026-10-14T06:22:46.3048350Z   • unresolved duplicate dependency references  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:22:46.3062930Z   • cannot find path for dependency  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:22:50.9861040Z   • default Electron icon is used  reason=application icon is not set
+2026-10-14T06:22:51.0930100Z   • Current build is a part of pull request, code signing will be skipped.
+2026-10-14T06:22:51.0931610Z Set env CSC_FOR_PULL_REQUEST to true to force code signing.
+2026-10-14T06:22:51.0934360Z There are serious security concerns with CSC_FOR_PULL_REQUEST=true (see the  CircleCI documentation (https://circleci.com/docs/1.0/fork-pr-builds/) for details)
+2026-10-14T06:22:51.0939640Z If you have SSH keys, sensitive env vars or AWS credentials stored in your project settings and untrusted forks can make pull requests against your repo, then this option isn't for you.
+2026-10-14T06:22:51.0943710Z   • building        target=macOS zip arch=arm64 file=dist/typeagentshell-0.0.1-darwin-arm64.zip
+2026-10-14T06:22:51.0948480Z   • building        target=DMG arch=arm64 file=dist/typeagentshell-0.0.1-darwin-arm64.dmg
+2026-10-14T06:23:05.1509310Z   • building block map  blockMapFile=dist/typeagentshell-0.0.1-darwin-arm64.dmg.blockmap
+2026-10-14T06:23:08.2679990Z   • building block map  blockMapFile=dist/typeagentshell-0.0.1-darwin-arm64.zip.blockmap
+2026-10-14T06:23:15.5877080Z Post job cleanup.
+2026-10-14T06:23:16.4018930Z [command]/opt/homebrew/bin/gtar --posix -cf cache.tzst --exclude cache.tzst -P -C /Users/runner/work/TypeAgent/TypeAgent --files-from manifest.txt --delay-directory-restore --use-compress-program zstdmt
+2026-10-14T06:25:10.8474280Z Sent 0 of 1896754762 (0.0%), 0.0 MBs/sec
+2026-10-14T06:25:11.8497880Z Sent 0 of 1896754762 (0.0%), 0.0 MBs/sec
+2026-10-14T06:25:12.8500790Z Sent 0 of 1896754762 (0.0%), 0.0 MBs/sec
+2026-10-14T06:25:13.8501290Z Sent 0 of 1896754762 (0.0%), 0.0 MBs/sec
+2026-10-14T06:25:14.8565510Z Sent 536870912 of 1896754762 (28.3%), 102.2 MBs/sec
+2026-10-14T06:25:15.8540380Z Sent 536870912 of 1896754762 (28.3%), 85.2 MBs/sec
+2026-10-14T06:25:16.8653480Z Sent 536870912 of 1896754762 (28.3%), 73.0 MBs/sec
+2026-10-14T06:25:17.8629600Z Sent 536870912 of 1896754762 (28.3%), 63.9 MBs/sec
+2026-10-14T06:25:18.8610340Z Sent 671088640 of 1896754762 (35.4%), 71.0 MBs/sec
+2026-10-14T06:25:19.8639680Z Sent 1073741824 of 1896754762 (56.6%), 102.2 MBs/sec
+2026-10-14T06:25:20.8651210Z Sent 1073741824 of 1896754762 (56.6%), 92.9 MBs/sec
+2026-10-14T06:25:21.8628490Z Sent 1073741824 of 1896754762 (56.6%), 85.2 MBs/sec
+2026-10-14T06:25:22.8649770Z Sent 1073741824 of 1896754762 (56.6%), 78.7 MBs/sec
+2026-10-14T06:25:23.8633220Z Sent 1610612736 of 1896754762 (84.9%), 109.6 MBs/sec
+2026-10-14T06:25:24.8652660Z Sent 1628319306 of 1896754762 (85.8%), 103.4 MBs/sec
+2026-10-14T06:25:25.8644650Z Sent 1695428170 of 1896754762 (89.4%), 100.9 MBs/sec
+2026-10-14T06:25:26.3850390Z Sent 1896754762 of 1896754762 (100.0%), 109.4 MBs/sec
+2026-10-14T06:25:26.6798830Z Cache saved with the key: node-cache-macOS-arm64-pnpm-376d081277e1a2dc37952a7b00233cb53ee72de66fc441195b0b64c08a9dcb91
+2026-10-14T06:25:26.7393640Z Post job cleanup.
+2026-10-14T06:25:27.0112920Z Pruning is unnecessary.
+2026-10-14T06:25:27.0340010Z Post job cleanup.
+2026-10-14T06:25:27.1761970Z [command]/opt/homebrew/bin/git version
+2026-10-14T06:25:27.2693350Z git version 2.55.0
+2026-10-14T06:25:27.2737310Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/c3fe16fc-f96f-4389-b02d-0ff43f56a22d/.gitconfig'
+2026-10-14T06:25:27.2772170Z Temporarily overriding HOME='/Users/runner/work/_temp/c3fe16fc-f96f-4389-b02d-0ff43f56a22d' before making global git config changes
+2026-10-14T06:25:27.2774740Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:25:27.2784240Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:25:27.3019250Z Removing SSH command configuration
+2026-10-14T06:25:27.3025430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:25:27.3144430Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:25:27.4981490Z Removing HTTP extra header
+2026-10-14T06:25:27.4986450Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:25:27.5155630Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:25:27.6415440Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:25:27.6425310Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:25:27.6578300Z includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:25:27.6584190Z includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:25:27.6584840Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:25:27.6586200Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:25:27.6587920Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:25:27.6683680Z /Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:25:27.6701870Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-5bea29fd\-0f7e\-4acd\-9ef3\-bff2687c8e2a\.config
+2026-10-14T06:25:27.6854800Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:25:27.6962460Z /Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:25:27.6992040Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-5bea29fd\-0f7e\-4acd\-9ef3\-bff2687c8e2a\.config
+2026-10-14T06:25:27.7194840Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:25:27.7278470Z /github/runner_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:25:27.7357170Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-5bea29fd\-0f7e\-4acd\-9ef3\-bff2687c8e2a\.config
+2026-10-14T06:25:27.7365800Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:25:27.7430510Z /github/runner_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config
+2026-10-14T06:25:27.7439170Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-5bea29fd\-0f7e\-4acd\-9ef3\-bff2687c8e2a\.config
+2026-10-14T06:25:27.7528950Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:25:27.8716410Z Removing credentials config '/Users/runner/work/_temp/git-credentials-5bea29fd-0f7e-4acd-9ef3-bff2687c8e2a.config'
+2026-10-14T06:25:27.8861430Z Cleaning up orphan processes

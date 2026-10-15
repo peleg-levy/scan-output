@@ -1,0 +1,1045 @@
+﻿2026-10-13T13:01:39.0642874Z Current runner version: '2.337.0'
+2026-10-13T13:01:39.0677250Z ##[group]Runner Image Provisioner
+2026-10-13T13:01:39.0678544Z Hosted Compute Agent
+2026-10-13T13:01:39.0679614Z Version: 20261002.596
+2026-10-13T13:01:39.0680739Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T13:01:39.0682012Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T13:01:39.0683412Z Worker ID: {1e015ced-ad59-4f2b-b211-badd45b4cef0}
+2026-10-13T13:01:39.0684700Z Region: eastus2
+2026-10-13T13:01:39.0685692Z Cloud: Azure
+2026-10-13T13:01:39.0686620Z ##[endgroup]
+2026-10-13T13:01:39.0688930Z ##[group]Operating System
+2026-10-13T13:01:39.0689987Z Ubuntu
+2026-10-13T13:01:39.0690872Z 24.04.5
+2026-10-13T13:01:39.0691843Z LTS
+2026-10-13T13:01:39.0692694Z ##[endgroup]
+2026-10-13T13:01:39.0693968Z ##[group]Runner Image
+2026-10-13T13:01:39.0695027Z Image: ubuntu-24.04
+2026-10-13T13:01:39.0695942Z Version: 20261004.327.1
+2026-10-13T13:01:39.0698582Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T13:01:39.0701360Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T13:01:39.0703013Z ##[endgroup]
+2026-10-13T13:01:39.0705253Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T13:01:39.0708116Z Contents: read
+2026-10-13T13:01:39.0709134Z Metadata: read
+2026-10-13T13:01:39.0710037Z ##[endgroup]
+2026-10-13T13:01:39.0712846Z Secret source: Actions
+2026-10-13T13:01:39.0714790Z Cache mode: write
+2026-10-13T13:01:39.0716203Z Prepare workflow directory
+2026-10-13T13:01:39.1267514Z Prepare all required actions
+2026-10-13T13:01:39.1336880Z Getting action download info
+2026-10-13T13:01:39.3499030Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-10-13T13:01:39.4493984Z Download action repository 'actions/setup-node@v5' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+2026-10-13T13:01:39.6936907Z Complete job name: test (20.x)
+2026-10-13T13:01:39.7607083Z ##[group]Run actions/checkout@v5
+2026-10-13T13:01:39.7607983Z with:
+2026-10-13T13:01:39.7608435Z   repository: uuidjs/uuid
+2026-10-13T13:01:39.7612351Z   token: ***
+2026-10-13T13:01:39.7612796Z   ssh-strict: true
+2026-10-13T13:01:39.7613457Z   ssh-user: git
+2026-10-13T13:01:39.7613950Z   persist-credentials: true
+2026-10-13T13:01:39.7614444Z   clean: true
+2026-10-13T13:01:39.7614899Z   sparse-checkout-cone-mode: true
+2026-10-13T13:01:39.7615427Z   fetch-depth: 1
+2026-10-13T13:01:39.7615865Z   fetch-tags: false
+2026-10-13T13:01:39.7616323Z   show-progress: true
+2026-10-13T13:01:39.7616788Z   lfs: false
+2026-10-13T13:01:39.7617211Z   submodules: false
+2026-10-13T13:01:39.7617673Z   set-safe-directory: true
+2026-10-13T13:01:39.7618195Z   allow-unsafe-pr-checkout: false
+2026-10-13T13:01:39.7618952Z env:
+2026-10-13T13:01:39.7619360Z   LEFTHOOK: 0
+2026-10-13T13:01:39.7619793Z ##[endgroup]
+2026-10-13T13:01:39.8576187Z Syncing repository: uuidjs/uuid
+2026-10-13T13:01:39.8577974Z ##[group]Getting Git version info
+2026-10-13T13:01:39.8578679Z Working directory is '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:39.8579707Z [command]/usr/bin/git version
+2026-10-13T13:01:39.8649660Z git version 2.55.0
+2026-10-13T13:01:39.8671045Z ##[endgroup]
+2026-10-13T13:01:39.8684947Z Temporarily overriding HOME='/home/runner/work/_temp/78f5898d-bbeb-4327-a277-cf79eaf6af88' before making global git config changes
+2026-10-13T13:01:39.8687081Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:01:39.8689735Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:01:39.8734438Z Deleting the contents of '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:39.8739004Z ##[group]Initializing the repository
+2026-10-13T13:01:39.8742830Z [command]/usr/bin/git init /home/runner/work/uuid/uuid
+2026-10-13T13:01:39.8846574Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T13:01:39.8848163Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T13:01:39.8849541Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T13:01:39.8850835Z hint: call:
+2026-10-13T13:01:39.8851265Z hint:
+2026-10-13T13:01:39.8851825Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T13:01:39.8852474Z hint:
+2026-10-13T13:01:39.8853223Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T13:01:39.8854163Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T13:01:39.8854895Z hint:
+2026-10-13T13:01:39.8855345Z hint: 	git branch -m <name>
+2026-10-13T13:01:39.8855993Z hint:
+2026-10-13T13:01:39.8856799Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T13:01:39.8857772Z Initialized empty Git repository in /home/runner/work/uuid/uuid/.git/
+2026-10-13T13:01:39.8861476Z [command]/usr/bin/git remote add origin https://github.com/uuidjs/uuid
+2026-10-13T13:01:39.8907426Z ##[endgroup]
+2026-10-13T13:01:39.8908263Z ##[group]Disabling automatic garbage collection
+2026-10-13T13:01:39.8910746Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T13:01:39.8938944Z ##[endgroup]
+2026-10-13T13:01:39.8939707Z ##[group]Setting up auth
+2026-10-13T13:01:39.8945625Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:01:39.8974928Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:01:39.9299378Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:01:39.9329014Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:01:39.9542648Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:01:39.9573969Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:01:39.9786373Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T13:01:39.9820033Z ##[endgroup]
+2026-10-13T13:01:39.9820854Z ##[group]Fetching the repository
+2026-10-13T13:01:39.9828692Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b9ed7c753ec7c6db913849a7117be0efc0a3c186:refs/remotes/origin/main
+2026-10-13T13:01:40.3351371Z From https://github.com/uuidjs/uuid
+2026-10-13T13:01:40.3352219Z  * [new ref]         b9ed7c753ec7c6db913849a7117be0efc0a3c186 -> origin/main
+2026-10-13T13:01:40.3356305Z ##[endgroup]
+2026-10-13T13:01:40.3357069Z ##[group]Determining the checkout info
+2026-10-13T13:01:40.3358463Z ##[endgroup]
+2026-10-13T13:01:40.3363833Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T13:01:40.3473689Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T13:01:40.3477127Z ##[group]Checking out the ref
+2026-10-13T13:01:40.3478733Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T13:01:40.3578577Z Switched to a new branch 'main'
+2026-10-13T13:01:40.3583734Z branch 'main' set up to track 'origin/main'.
+2026-10-13T13:01:40.3594208Z ##[endgroup]
+2026-10-13T13:01:40.3630172Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T13:01:40.3654430Z b9ed7c753ec7c6db913849a7117be0efc0a3c186
+2026-10-13T13:01:40.4038902Z ##[group]Run actions/setup-node@v5
+2026-10-13T13:01:40.4040084Z with:
+2026-10-13T13:01:40.4040891Z   node-version: 20.x
+2026-10-13T13:01:40.4041784Z   cache: npm
+2026-10-13T13:01:40.4042610Z   always-auth: false
+2026-10-13T13:01:40.4043818Z   check-latest: false
+2026-10-13T13:01:40.4054481Z   token: ***
+2026-10-13T13:01:40.4055394Z   package-manager-cache: true
+2026-10-13T13:01:40.4056414Z env:
+2026-10-13T13:01:40.4057403Z   LEFTHOOK: 0
+2026-10-13T13:01:40.4058180Z ##[endgroup]
+2026-10-13T13:01:40.5887791Z Attempting to download 20.x...
+2026-10-13T13:01:40.5994860Z (node:2279) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:01:41.1216128Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:01:41.1280903Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-13T13:01:41.5050542Z Extracting ...
+2026-10-13T13:01:41.5261612Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/63c7d563-fe8d-48fc-829a-7da4bf30e962 -f /home/runner/work/_temp/1262a364-f82a-4eaa-8068-aed7fef7236b
+2026-10-13T13:01:42.5689416Z Adding to the cache ...
+2026-10-13T13:01:44.3113842Z ##[group]Environment details
+2026-10-13T13:01:44.6567731Z node: v20.20.2
+2026-10-13T13:01:44.6568216Z npm: 10.8.2
+2026-10-13T13:01:44.6569022Z yarn: 1.22.22
+2026-10-13T13:01:44.6569565Z ##[endgroup]
+2026-10-13T13:01:44.6602631Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-10-13T13:01:44.7599099Z /home/runner/.npm
+2026-10-13T13:01:44.8817141Z Cache hit for: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:44.8929267Z (node:2279) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T13:01:45.4424421Z Received 97682533 of 97682533 (100.0%), 176.1 MBs/sec
+2026-10-13T13:01:45.4425321Z Cache Size: ~93 MB (97682533 B)
+2026-10-13T13:01:45.4457886Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0544a72e-c725-48d4-8f33-e7e581de078f/cache.tzst -P -C /home/runner/work/uuid/uuid --use-compress-program unzstd
+2026-10-13T13:01:45.7722658Z Cache restored successfully
+2026-10-13T13:01:45.7772835Z Cache restored from key: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:45.7994275Z ##[group]Run npm ci
+2026-10-13T13:01:45.7994576Z [36;1mnpm ci[0m
+2026-10-13T13:01:45.8251369Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:45.8251652Z env:
+2026-10-13T13:01:45.8251858Z   LEFTHOOK: 0
+2026-10-13T13:01:45.8252066Z ##[endgroup]
+2026-10-13T13:01:46.4709038Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4710220Z npm warn EBADENGINE   package: '@commitlint/cli@21.2.2',
+2026-10-13T13:01:46.4711254Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4712331Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4713501Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4714161Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4715134Z npm warn EBADENGINE   package: '@commitlint/config-conventional@21.2.2',
+2026-10-13T13:01:46.4716133Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4717108Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4717888Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4718485Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4719414Z npm warn EBADENGINE   package: '@commitlint/config-validator@21.2.0',
+2026-10-13T13:01:46.4720387Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4721338Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4722111Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4722747Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4723889Z npm warn EBADENGINE   package: '@commitlint/ensure@21.2.0',
+2026-10-13T13:01:46.4724794Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4725752Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4726470Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4727014Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4728244Z npm warn EBADENGINE   package: '@commitlint/execute-rule@21.0.1',
+2026-10-13T13:01:46.4729201Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4730217Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4730973Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4731574Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4732459Z npm warn EBADENGINE   package: '@commitlint/format@21.2.2',
+2026-10-13T13:01:46.4733637Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4734593Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4735346Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4735958Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4736831Z npm warn EBADENGINE   package: '@commitlint/is-ignored@21.2.2',
+2026-10-13T13:01:46.4737801Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4738721Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4739480Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4740099Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4740932Z npm warn EBADENGINE   package: '@commitlint/lint@21.2.2',
+2026-10-13T13:01:46.4741833Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4742763Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4743762Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4744409Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4745231Z npm warn EBADENGINE   package: '@commitlint/load@21.2.2',
+2026-10-13T13:01:46.4746095Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4747036Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4747774Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4748385Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4749246Z npm warn EBADENGINE   package: '@commitlint/message@21.2.0',
+2026-10-13T13:01:46.4750172Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4751438Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4752219Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4752812Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4753911Z npm warn EBADENGINE   package: '@commitlint/parse@21.2.2',
+2026-10-13T13:01:46.4754775Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4755655Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4756394Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4756996Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4757837Z npm warn EBADENGINE   package: '@commitlint/read@21.2.1',
+2026-10-13T13:01:46.4758697Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4759589Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4760313Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4760903Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4761794Z npm warn EBADENGINE   package: '@commitlint/resolve-extends@21.2.2',
+2026-10-13T13:01:46.4762721Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4763874Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4764561Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4765141Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4765993Z npm warn EBADENGINE   package: '@commitlint/rules@21.2.2',
+2026-10-13T13:01:46.4766835Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4767747Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4768463Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4769033Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4769872Z npm warn EBADENGINE   package: '@commitlint/to-lines@21.0.1',
+2026-10-13T13:01:46.4770778Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4771977Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4772741Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4773588Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4774414Z npm warn EBADENGINE   package: '@commitlint/top-level@21.2.0',
+2026-10-13T13:01:46.4775298Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4776173Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4776861Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4777469Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4778268Z npm warn EBADENGINE   package: '@commitlint/types@21.2.0',
+2026-10-13T13:01:46.4779106Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4780050Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4780807Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4781402Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4782349Z npm warn EBADENGINE   package: '@conventional-changelog/git-client@3.1.2',
+2026-10-13T13:01:46.4783529Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4784445Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4785165Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4785752Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4786668Z npm warn EBADENGINE   package: '@conventional-changelog/template@1.4.0',
+2026-10-13T13:01:46.4787589Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4788476Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4789199Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4789792Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4790742Z npm warn EBADENGINE   package: '@google-automations/git-file-utils@3.2.0',
+2026-10-13T13:01:46.4791717Z npm warn EBADENGINE   required: { node: '>= 22' },
+2026-10-13T13:01:46.4792612Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4793645Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4794523Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4795466Z npm warn EBADENGINE   package: '@simple-libs/child-process-utils@2.0.0',
+2026-10-13T13:01:46.4796367Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4797216Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4797923Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4798483Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4799358Z npm warn EBADENGINE   package: '@simple-libs/stream-utils@2.0.0',
+2026-10-13T13:01:46.4800246Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4801131Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4801831Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4802434Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4803427Z npm warn EBADENGINE   package: 'argue-cli@3.2.0',
+2026-10-13T13:01:46.4804231Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4805121Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4805833Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4806407Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4807129Z npm warn EBADENGINE   package: 'commander@15.0.0',
+2026-10-13T13:01:46.4807907Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:46.4808791Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4809446Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4810010Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4810916Z npm warn EBADENGINE   package: 'conventional-changelog-angular@9.4.0',
+2026-10-13T13:01:46.4811822Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4812715Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4813641Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4814489Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4815511Z npm warn EBADENGINE   package: 'conventional-changelog-conventionalcommits@10.4.0',
+2026-10-13T13:01:46.4816539Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4817405Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4818119Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4818697Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4819554Z npm warn EBADENGINE   package: 'conventional-commits-parser@7.1.2',
+2026-10-13T13:01:46.4820400Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4821241Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4821914Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4837374Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4838195Z npm warn EBADENGINE   package: 'lint-staged@17.5.1',
+2026-10-13T13:01:46.4839021Z npm warn EBADENGINE   required: { node: '>=22.22.1' },
+2026-10-13T13:01:46.4839961Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4840707Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4841384Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4842310Z npm warn EBADENGINE   package: 'npm-normalize-package-bin@6.0.0',
+2026-10-13T13:01:46.4843713Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:46.4844792Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4845534Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4846159Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4846939Z npm warn EBADENGINE   package: 'npm-run-all2@9.0.3',
+2026-10-13T13:01:46.4847964Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0', npm: '>= 10' },
+2026-10-13T13:01:46.4849049Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4849732Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4850287Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4851059Z npm warn EBADENGINE   package: 'ansi-styles@7.0.0',
+2026-10-13T13:01:46.4852098Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:46.4853713Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4854508Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4855109Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4855847Z npm warn EBADENGINE   package: 'which@7.0.0',
+2026-10-13T13:01:46.4856821Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:46.4857874Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4858585Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4859143Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4859955Z npm warn EBADENGINE   package: 'read-package-json-fast@6.0.0',
+2026-10-13T13:01:46.4860945Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:46.4861949Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4862652Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4863462Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4864364Z npm warn EBADENGINE   package: 'json-parse-even-better-errors@6.0.0',
+2026-10-13T13:01:46.4865454Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:46.4866484Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4867220Z npm warn EBADENGINE }
+2026-10-13T13:01:46.4867792Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:46.4868573Z npm warn EBADENGINE   package: 'release-please@17.11.2',
+2026-10-13T13:01:46.4869403Z npm warn EBADENGINE   required: { node: '>=22.0.0' },
+2026-10-13T13:01:46.4870301Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:46.4870999Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5282020Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T13:01:49.5766106Z npm warn deprecated stringify-package@1.0.1: This module is not used anymore, and has been replaced by @npmcli/package-json
+2026-10-13T13:01:49.6329225Z npm warn deprecated git-semver-tags@4.1.1: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:49.6474863Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:49.6477146Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:49.8323883Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:49.9164884Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2026-10-13T13:01:49.9167461Z npm warn deprecated
+2026-10-13T13:01:49.9168438Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2026-10-13T13:01:50.7213322Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:53.3453832Z 
+2026-10-13T13:01:53.3454546Z > uuid@14.0.3 prepare
+2026-10-13T13:01:53.3455255Z > if [ -d .git ]; then npx lefthook install; fi
+2026-10-13T13:01:53.3455520Z 
+2026-10-13T13:01:53.6780171Z sync hooks: ✔️(commit-msg, pre-commit)
+2026-10-13T13:01:53.6987245Z 
+2026-10-13T13:01:53.6987875Z added 886 packages, and audited 887 packages in 8s
+2026-10-13T13:01:53.6988311Z 
+2026-10-13T13:01:53.6988590Z 220 packages are looking for funding
+2026-10-13T13:01:53.6988915Z   run `npm fund` for details
+2026-10-13T13:01:53.7369569Z 
+2026-10-13T13:01:53.7370119Z 26 vulnerabilities (20 moderate, 4 high, 2 critical)
+2026-10-13T13:01:53.7370530Z 
+2026-10-13T13:01:53.7370761Z To address issues that do not require attention, run:
+2026-10-13T13:01:53.7371104Z   npm audit fix
+2026-10-13T13:01:53.7371241Z 
+2026-10-13T13:01:53.7371510Z To address all issues possible (including breaking changes), run:
+2026-10-13T13:01:53.7371885Z   npm audit fix --force
+2026-10-13T13:01:53.7372039Z 
+2026-10-13T13:01:53.7372481Z Some issues need review, and may require choosing
+2026-10-13T13:01:53.7373203Z a different dependency.
+2026-10-13T13:01:53.7373465Z 
+2026-10-13T13:01:53.7373672Z Run `npm audit` for details.
+2026-10-13T13:01:53.7842403Z ##[group]Run npm run test
+2026-10-13T13:01:53.7842694Z [36;1mnpm run test[0m
+2026-10-13T13:01:53.7906034Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:53.7906286Z env:
+2026-10-13T13:01:53.7906473Z   LEFTHOOK: 0
+2026-10-13T13:01:53.7906672Z ##[endgroup]
+2026-10-13T13:01:53.9027930Z 
+2026-10-13T13:01:53.9028385Z > uuid@14.0.3 pretest
+2026-10-13T13:01:53.9028976Z > if [ -d .git ]; then npm run build; fi
+2026-10-13T13:01:53.9029315Z 
+2026-10-13T13:01:54.0180970Z 
+2026-10-13T13:01:54.0181707Z > uuid@14.0.3 build
+2026-10-13T13:01:54.0182222Z > ./scripts/build.sh
+2026-10-13T13:01:54.0182498Z 
+2026-10-13T13:01:54.0259474Z Building in /home/runner/work/uuid/uuid/dist and /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:01:54.0286327Z Compiling TypeScript files to /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:01:55.5689441Z Packing tarball
+2026-10-13T13:01:58.1154320Z -- fin --
+2026-10-13T13:01:58.1211535Z 
+2026-10-13T13:01:58.1211981Z > uuid@14.0.3 test
+2026-10-13T13:01:58.1212650Z > node --test --enable-source-maps dist-node/test/*.js
+2026-10-13T13:01:58.1212910Z 
+2026-10-13T13:01:58.1684099Z TAP version 13
+2026-10-13T13:01:58.2164269Z # Subtest: parse
+2026-10-13T13:01:58.2165374Z     # Subtest: String -> bytes parsing
+2026-10-13T13:01:58.2193861Z     ok 1 - String -> bytes parsing
+2026-10-13T13:01:58.2213874Z       ---
+2026-10-13T13:01:58.2214619Z       duration_ms: 1.499333
+2026-10-13T13:01:58.2216487Z       ...
+2026-10-13T13:01:58.2217236Z     # Subtest: String -> bytes -> string symmetry for assorted uuids
+2026-10-13T13:01:58.2218220Z     ok 2 - String -> bytes -> string symmetry for assorted uuids
+2026-10-13T13:01:58.2218951Z       ---
+2026-10-13T13:01:58.2219429Z       duration_ms: 8.173494
+2026-10-13T13:01:58.2219988Z       ...
+2026-10-13T13:01:58.2220690Z     # Subtest: Case neutrality
+2026-10-13T13:01:58.2221326Z     ok 3 - Case neutrality
+2026-10-13T13:01:58.2222009Z       ---
+2026-10-13T13:01:58.2222669Z       duration_ms: 0.222696
+2026-10-13T13:01:58.2223499Z       ...
+2026-10-13T13:01:58.2224076Z     # Subtest: Null UUID case
+2026-10-13T13:01:58.2224725Z     ok 4 - Null UUID case
+2026-10-13T13:01:58.2225340Z       ---
+2026-10-13T13:01:58.2225844Z       duration_ms: 0.260516
+2026-10-13T13:01:58.2226393Z       ...
+2026-10-13T13:01:58.2226952Z     # Subtest: UUID validation
+2026-10-13T13:01:58.2227533Z     ok 5 - UUID validation
+2026-10-13T13:01:58.2228086Z       ---
+2026-10-13T13:01:58.2228768Z       duration_ms: 0.287067
+2026-10-13T13:01:58.2229331Z       ...
+2026-10-13T13:01:58.2229806Z     1..5
+2026-10-13T13:01:58.2230313Z ok 1 - parse
+2026-10-13T13:01:58.2230815Z   ---
+2026-10-13T13:01:58.2231358Z   duration_ms: 11.914757
+2026-10-13T13:01:58.2231775Z   type: 'suite'
+2026-10-13T13:01:58.2232119Z   ...
+2026-10-13T13:01:58.2342163Z # Subtest: rng
+2026-10-13T13:01:58.2343141Z     # Subtest: Node.js RNG
+2026-10-13T13:01:58.2345620Z     ok 1 - Node.js RNG
+2026-10-13T13:01:58.2346421Z       ---
+2026-10-13T13:01:58.2347067Z       duration_ms: 5.42498
+2026-10-13T13:01:58.2347763Z       ...
+2026-10-13T13:01:58.2348375Z     1..1
+2026-10-13T13:01:58.2349016Z ok 2 - rng
+2026-10-13T13:01:58.2349665Z   ---
+2026-10-13T13:01:58.2350306Z   duration_ms: 6.998511
+2026-10-13T13:01:58.2350987Z   type: 'suite'
+2026-10-13T13:01:58.2351636Z   ...
+2026-10-13T13:01:58.2457672Z # Subtest: stringify
+2026-10-13T13:01:58.2483811Z     # Subtest: Stringify Array (unsafe)
+2026-10-13T13:01:58.2491561Z     ok 1 - Stringify Array (unsafe)
+2026-10-13T13:01:58.2492293Z       ---
+2026-10-13T13:01:58.2492845Z       duration_ms: 1.498581
+2026-10-13T13:01:58.2493849Z       ...
+2026-10-13T13:01:58.2494505Z     # Subtest: Stringify w/ offset (unsafe)
+2026-10-13T13:01:58.2495286Z     ok 2 - Stringify w/ offset (unsafe)
+2026-10-13T13:01:58.2495977Z       ---
+2026-10-13T13:01:58.2496542Z       duration_ms: 0.337551
+2026-10-13T13:01:58.2497227Z       ...
+2026-10-13T13:01:58.2497838Z     # Subtest: Stringify Array (safe)
+2026-10-13T13:01:58.2498610Z     ok 3 - Stringify Array (safe)
+2026-10-13T13:01:58.2505507Z       ---
+2026-10-13T13:01:58.2506702Z       duration_ms: 0.398775
+2026-10-13T13:01:58.2507533Z       ...
+2026-10-13T13:01:58.2508405Z     # Subtest: Throws on not enough values (safe)
+2026-10-13T13:01:58.2509375Z     ok 4 - Throws on not enough values (safe)
+2026-10-13T13:01:58.2510221Z       ---
+2026-10-13T13:01:58.2510879Z       duration_ms: 0.48687
+2026-10-13T13:01:58.2511578Z       ...
+2026-10-13T13:01:58.2512207Z     1..4
+2026-10-13T13:01:58.2512814Z ok 3 - stringify
+2026-10-13T13:01:58.2513721Z   ---
+2026-10-13T13:01:58.2514316Z   duration_ms: 4.846439
+2026-10-13T13:01:58.2514954Z   type: 'suite'
+2026-10-13T13:01:58.2515549Z   ...
+2026-10-13T13:01:58.2776520Z # Subtest: /home/runner/work/uuid/uuid/dist-node/test/test_constants.js
+2026-10-13T13:01:58.2804274Z ok 4 - /home/runner/work/uuid/uuid/dist-node/test/test_constants.js
+2026-10-13T13:01:58.2821756Z   ---
+2026-10-13T13:01:58.2822374Z   duration_ms: 41.544851
+2026-10-13T13:01:58.2825315Z   ...
+2026-10-13T13:01:58.3254010Z # Subtest: v1
+2026-10-13T13:01:58.3255160Z     # Subtest: v1 sort order (default)
+2026-10-13T13:01:58.3284184Z     ok 1 - v1 sort order (default)
+2026-10-13T13:01:58.3307029Z       ---
+2026-10-13T13:01:58.3370405Z       duration_ms: 4.883447
+2026-10-13T13:01:58.3386849Z       ...
+2026-10-13T13:01:58.3414175Z     # Subtest: v1 sort order (time option)
+2026-10-13T13:01:58.3415282Z     ok 2 - v1 sort order (time option)
+2026-10-13T13:01:58.3416073Z       ---
+2026-10-13T13:01:58.3416724Z       duration_ms: 0.55631
+2026-10-13T13:01:58.3417436Z       ...
+2026-10-13T13:01:58.3418237Z     # Subtest: v1 timestamp carries nsecs into time_mid
+2026-10-13T13:01:58.3419258Z     ok 3 - v1 timestamp carries nsecs into time_mid
+2026-10-13T13:01:58.3420099Z       ---
+2026-10-13T13:01:58.3420747Z       duration_ms: 1.93128
+2026-10-13T13:01:58.3421442Z       ...
+2026-10-13T13:01:58.3422322Z     # Subtest: v1 sort order (time_low overflow)
+2026-10-13T13:01:58.3423489Z     ok 4 - v1 sort order (time_low overflow)
+2026-10-13T13:01:58.3424259Z       ---
+2026-10-13T13:01:58.3424887Z       duration_ms: 0.435584
+2026-10-13T13:01:58.3425532Z       ...
+2026-10-13T13:01:58.3426125Z     # Subtest: v1(options)
+2026-10-13T13:01:58.3426926Z     ok 5 - v1(options)
+2026-10-13T13:01:58.3427544Z       ---
+2026-10-13T13:01:58.3428138Z       duration_ms: 0.241632
+2026-10-13T13:01:58.3428792Z       ...
+2026-10-13T13:01:58.3429437Z     # Subtest: v1(options) equality
+2026-10-13T13:01:58.3430291Z     ok 6 - v1(options) equality
+2026-10-13T13:01:58.3430934Z       ---
+2026-10-13T13:01:58.3431489Z       duration_ms: 0.343842
+2026-10-13T13:01:58.3432088Z       ...
+2026-10-13T13:01:58.3432785Z     # Subtest: fills one UUID into a buffer as expected
+2026-10-13T13:01:58.3433994Z     ok 7 - fills one UUID into a buffer as expected
+2026-10-13T13:01:58.3434730Z       ---
+2026-10-13T13:01:58.3435286Z       duration_ms: 0.265726
+2026-10-13T13:01:58.3435927Z       ...
+2026-10-13T13:01:58.3436632Z     # Subtest: fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.3452595Z     ok 8 - fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.3510393Z       ---
+2026-10-13T13:01:58.3574040Z       duration_ms: 0.226864
+2026-10-13T13:01:58.3578658Z       ...
+2026-10-13T13:01:58.3579329Z     # Subtest: v1() state transitions
+2026-10-13T13:01:58.3580090Z     ok 9 - v1() state transitions
+2026-10-13T13:01:58.3580767Z       ---
+2026-10-13T13:01:58.3581338Z       duration_ms: 0.456082
+2026-10-13T13:01:58.3582028Z       ...
+2026-10-13T13:01:58.3582692Z     # Subtest: random node has multicast bit set
+2026-10-13T13:01:58.3583783Z     ok 10 - random node has multicast bit set
+2026-10-13T13:01:58.3584494Z       ---
+2026-10-13T13:01:58.3585063Z       duration_ms: 2.819149
+2026-10-13T13:01:58.3585675Z       ...
+2026-10-13T13:01:58.3586365Z     # Subtest: throws when option.random is too short
+2026-10-13T13:01:58.3587239Z     ok 11 - throws when option.random is too short
+2026-10-13T13:01:58.3588003Z       ---
+2026-10-13T13:01:58.3588557Z       duration_ms: 0.435905
+2026-10-13T13:01:58.3589181Z       ...
+2026-10-13T13:01:58.3590013Z     # Subtest: throws when options.rng() is too short
+2026-10-13T13:01:58.3590577Z     ok 12 - throws when options.rng() is too short
+2026-10-13T13:01:58.3591015Z       ---
+2026-10-13T13:01:58.3591368Z       duration_ms: 0.260728
+2026-10-13T13:01:58.3591807Z       ...
+2026-10-13T13:01:58.3592323Z     # Subtest: throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.3593476Z     ok 13 - throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.3594281Z       ---
+2026-10-13T13:01:58.3594857Z       duration_ms: 0.661547
+2026-10-13T13:01:58.3595473Z       ...
+2026-10-13T13:01:58.3596014Z     1..13
+2026-10-13T13:01:58.3596565Z ok 5 - v1
+2026-10-13T13:01:58.3597085Z   ---
+2026-10-13T13:01:58.3597615Z   duration_ms: 16.042515
+2026-10-13T13:01:58.3598209Z   type: 'suite'
+2026-10-13T13:01:58.3599045Z   ...
+2026-10-13T13:01:58.3712865Z # Subtest: v35
+2026-10-13T13:01:58.3744058Z     # Subtest: sha1(node) HASH_SAMPLES[0]
+2026-10-13T13:01:58.3745001Z     ok 1 - sha1(node) HASH_SAMPLES[0]
+2026-10-13T13:01:58.3746087Z       ---
+2026-10-13T13:01:58.3756242Z       duration_ms: 2.447845
+2026-10-13T13:01:58.3756957Z       ...
+2026-10-13T13:01:58.3757677Z     # Subtest: sha1(node) HASH_SAMPLES[1]
+2026-10-13T13:01:58.3758600Z     ok 2 - sha1(node) HASH_SAMPLES[1]
+2026-10-13T13:01:58.3759353Z       ---
+2026-10-13T13:01:58.3759991Z       duration_ms: 0.202168
+2026-10-13T13:01:58.3760765Z       ...
+2026-10-13T13:01:58.3761477Z     # Subtest: sha1(node) HASH_SAMPLES[2]
+2026-10-13T13:01:58.3762356Z     ok 3 - sha1(node) HASH_SAMPLES[2]
+2026-10-13T13:01:58.3763508Z       ---
+2026-10-13T13:01:58.3764162Z       duration_ms: 0.210383
+2026-10-13T13:01:58.3764858Z       ...
+2026-10-13T13:01:58.3765511Z     # Subtest: md5(node) HASH_SAMPLES[0]
+2026-10-13T13:01:58.3766318Z     ok 4 - md5(node) HASH_SAMPLES[0]
+2026-10-13T13:01:58.3767096Z       ---
+2026-10-13T13:01:58.3767859Z       duration_ms: 0.286255
+2026-10-13T13:01:58.3825516Z       ...
+2026-10-13T13:01:58.3853757Z     # Subtest: md5(node) HASH_SAMPLES[1]
+2026-10-13T13:01:58.3854760Z     ok 5 - md5(node) HASH_SAMPLES[1]
+2026-10-13T13:01:58.3874218Z       ---
+2026-10-13T13:01:58.3874831Z       duration_ms: 0.200154
+2026-10-13T13:01:58.3914207Z       ...
+2026-10-13T13:01:58.3961885Z     # Subtest: md5(node) HASH_SAMPLES[2]
+2026-10-13T13:01:58.4020952Z     ok 6 - md5(node) HASH_SAMPLES[2]
+2026-10-13T13:01:58.4021662Z       ---
+2026-10-13T13:01:58.4022113Z       duration_ms: 0.19265
+2026-10-13T13:01:58.4022665Z       ...
+2026-10-13T13:01:58.4023349Z     # Subtest: v3
+2026-10-13T13:01:58.4023890Z     ok 7 - v3
+2026-10-13T13:01:58.4024369Z       ---
+2026-10-13T13:01:58.4024904Z       duration_ms: 0.828108
+2026-10-13T13:01:58.4025634Z       ...
+2026-10-13T13:01:58.4026107Z     # Subtest: v3 namespace.toUpperCase
+2026-10-13T13:01:58.4026848Z     ok 8 - v3 namespace.toUpperCase
+2026-10-13T13:01:58.4029013Z       ---
+2026-10-13T13:01:58.4045437Z       duration_ms: 0.461723
+2026-10-13T13:01:58.4046394Z       ...
+2026-10-13T13:01:58.4047229Z     # Subtest: v3 namespace string validation
+2026-10-13T13:01:58.4048175Z     ok 9 - v3 namespace string validation
+2026-10-13T13:01:58.4048956Z       ---
+2026-10-13T13:01:58.4049620Z       duration_ms: 0.652723
+2026-10-13T13:01:58.4050305Z       ...
+2026-10-13T13:01:58.4051052Z     # Subtest: v3 namespace buffer validation
+2026-10-13T13:01:58.4051991Z     ok 10 - v3 namespace buffer validation
+2026-10-13T13:01:58.4052789Z       ---
+2026-10-13T13:01:58.4053677Z       duration_ms: 0.28863
+2026-10-13T13:01:58.4054349Z       ...
+2026-10-13T13:01:58.4054954Z     # Subtest: v3 fill buffer
+2026-10-13T13:01:58.4055629Z     ok 11 - v3 fill buffer
+2026-10-13T13:01:58.4056303Z       ---
+2026-10-13T13:01:58.4056875Z       duration_ms: 0.7219
+2026-10-13T13:01:58.4057468Z       ...
+2026-10-13T13:01:58.4058107Z     # Subtest: v3 undefined/null
+2026-10-13T13:01:58.4058870Z     ok 12 - v3 undefined/null
+2026-10-13T13:01:58.4059503Z       ---
+2026-10-13T13:01:58.4060090Z       duration_ms: 0.255477
+2026-10-13T13:01:58.4060740Z       ...
+2026-10-13T13:01:58.4061804Z     # Subtest: v3 throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4063333Z     ok 13 - v3 throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4064169Z       ---
+2026-10-13T13:01:58.4064756Z       duration_ms: 0.517427
+2026-10-13T13:01:58.4065387Z       ...
+2026-10-13T13:01:58.4065955Z     # Subtest: v5
+2026-10-13T13:01:58.4066545Z     ok 14 - v5
+2026-10-13T13:01:58.4067120Z       ---
+2026-10-13T13:01:58.4067704Z       duration_ms: 0.27827
+2026-10-13T13:01:58.4068307Z       ...
+2026-10-13T13:01:58.4068971Z     # Subtest: v5 namespace.toUpperCase
+2026-10-13T13:01:58.4069996Z     ok 15 - v5 namespace.toUpperCase
+2026-10-13T13:01:58.4070818Z       ---
+2026-10-13T13:01:58.4071424Z       duration_ms: 0.254976
+2026-10-13T13:01:58.4072054Z       ...
+2026-10-13T13:01:58.4072707Z     # Subtest: v5 namespace string validation
+2026-10-13T13:01:58.4074565Z     ok 16 - v5 namespace string validation
+2026-10-13T13:01:58.4075284Z       ---
+2026-10-13T13:01:58.4075919Z       duration_ms: 0.244888
+2026-10-13T13:01:58.4076607Z       ...
+2026-10-13T13:01:58.4077295Z     # Subtest: v5 namespace buffer validation
+2026-10-13T13:01:58.4078113Z     ok 17 - v5 namespace buffer validation
+2026-10-13T13:01:58.4078820Z       ---
+2026-10-13T13:01:58.4079404Z       duration_ms: 0.204573
+2026-10-13T13:01:58.4080032Z       ...
+2026-10-13T13:01:58.4080591Z     # Subtest: v5 fill buffer
+2026-10-13T13:01:58.4081269Z     ok 18 - v5 fill buffer
+2026-10-13T13:01:58.4081889Z       ---
+2026-10-13T13:01:58.4082440Z       duration_ms: 0.323274
+2026-10-13T13:01:58.4083314Z       ...
+2026-10-13T13:01:58.4084032Z     # Subtest: v5 undefined/null
+2026-10-13T13:01:58.4084810Z     ok 19 - v5 undefined/null
+2026-10-13T13:01:58.4085501Z       ---
+2026-10-13T13:01:58.4086146Z       duration_ms: 0.40655
+2026-10-13T13:01:58.4086831Z       ...
+2026-10-13T13:01:58.4087608Z     # Subtest: v5 throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4088613Z     ok 20 - v5 throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4089441Z       ---
+2026-10-13T13:01:58.4090078Z       duration_ms: 0.460711
+2026-10-13T13:01:58.4090753Z       ...
+2026-10-13T13:01:58.4091432Z     # Subtest: v3/v5 constants
+2026-10-13T13:01:58.4092208Z     ok 21 - v3/v5 constants
+2026-10-13T13:01:58.4093019Z       ---
+2026-10-13T13:01:58.4093885Z       duration_ms: 0.303718
+2026-10-13T13:01:58.4094411Z       ...
+2026-10-13T13:01:58.4094854Z     1..21
+2026-10-13T13:01:58.4095299Z ok 6 - v35
+2026-10-13T13:01:58.4095757Z   ---
+2026-10-13T13:01:58.4096220Z   duration_ms: 12.801336
+2026-10-13T13:01:58.4096741Z   type: 'suite'
+2026-10-13T13:01:58.4097208Z   ...
+2026-10-13T13:01:58.4097651Z # Subtest: v4
+2026-10-13T13:01:58.4098229Z     # Subtest: subsequent UUIDs are different
+2026-10-13T13:01:58.4098930Z     ok 1 - subsequent UUIDs are different
+2026-10-13T13:01:58.4099532Z       ---
+2026-10-13T13:01:58.4100001Z       duration_ms: 3.57525
+2026-10-13T13:01:58.4100519Z       ...
+2026-10-13T13:01:58.4101198Z     # Subtest: should use native randomUUID() if no option is passed
+2026-10-13T13:01:58.4102131Z     ok 2 - should use native randomUUID() if no option is passed
+2026-10-13T13:01:58.4102819Z       ---
+2026-10-13T13:01:58.4104449Z       duration_ms: 0.722791
+2026-10-13T13:01:58.4105153Z       ...
+2026-10-13T13:01:58.4105980Z     # Subtest: should not use native randomUUID() if an option is passed
+2026-10-13T13:01:58.4107145Z     ok 3 - should not use native randomUUID() if an option is passed
+2026-10-13T13:01:58.4108042Z       ---
+2026-10-13T13:01:58.4108655Z       duration_ms: 1.245238
+2026-10-13T13:01:58.4109315Z       ...
+2026-10-13T13:01:58.4110117Z     # Subtest: explicit options.random produces expected result
+2026-10-13T13:01:58.4111203Z     ok 4 - explicit options.random produces expected result
+2026-10-13T13:01:58.4112041Z       ---
+2026-10-13T13:01:58.4112629Z       duration_ms: 0.253163
+2026-10-13T13:01:58.4113521Z       ...
+2026-10-13T13:01:58.4114298Z     # Subtest: explicit options.rng produces expected result
+2026-10-13T13:01:58.4115464Z     ok 5 - explicit options.rng produces expected result
+2026-10-13T13:01:58.4116234Z       ---
+2026-10-13T13:01:58.4116776Z       duration_ms: 0.226333
+2026-10-13T13:01:58.4117388Z       ...
+2026-10-13T13:01:58.4118088Z     # Subtest: fills one UUID into a buffer as expected
+2026-10-13T13:01:58.4119816Z     ok 6 - fills one UUID into a buffer as expected
+2026-10-13T13:01:58.4120589Z       ---
+2026-10-13T13:01:58.4121071Z       duration_ms: 0.834139
+2026-10-13T13:01:58.4121597Z       ...
+2026-10-13T13:01:58.4122195Z     # Subtest: fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.4122983Z     ok 7 - fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.4123963Z       ---
+2026-10-13T13:01:58.4124558Z       duration_ms: 1.211284
+2026-10-13T13:01:58.4125194Z       ...
+2026-10-13T13:01:58.4125941Z     # Subtest: throws when option.random is too short
+2026-10-13T13:01:58.4127172Z     ok 8 - throws when option.random is too short
+2026-10-13T13:01:58.4127915Z       ---
+2026-10-13T13:01:58.4128540Z       duration_ms: 0.418752
+2026-10-13T13:01:58.4129114Z       ...
+2026-10-13T13:01:58.4129748Z     # Subtest: throws when options.rng() is too short
+2026-10-13T13:01:58.4130608Z     ok 9 - throws when options.rng() is too short
+2026-10-13T13:01:58.4131284Z       ---
+2026-10-13T13:01:58.4131792Z       duration_ms: 0.383517
+2026-10-13T13:01:58.4132350Z       ...
+2026-10-13T13:01:58.4132997Z     # Subtest: throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4134197Z     ok 10 - throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.4134893Z       ---
+2026-10-13T13:01:58.4135427Z       duration_ms: 0.654603
+2026-10-13T13:01:58.4136012Z       ...
+2026-10-13T13:01:58.4136488Z     1..10
+2026-10-13T13:01:58.4136976Z ok 7 - v4
+2026-10-13T13:01:58.4137449Z   ---
+2026-10-13T13:01:58.4137956Z   duration_ms: 11.907053
+2026-10-13T13:01:58.4138539Z   type: 'suite'
+2026-10-13T13:01:58.4139061Z   ...
+2026-10-13T13:01:58.4764058Z # Subtest: v6
+2026-10-13T13:01:58.4793837Z     # Subtest: default behavior
+2026-10-13T13:01:58.4900736Z     ok 1 - default behavior
+2026-10-13T13:01:58.4952564Z       ---
+2026-10-13T13:01:58.4958081Z       duration_ms: 5.797395
+2026-10-13T13:01:58.4998708Z       ...
+2026-10-13T13:01:58.5053756Z     # Subtest: default behavior (binary type)
+2026-10-13T13:01:58.5055050Z     ok 2 - default behavior (binary type)
+2026-10-13T13:01:58.5093583Z       ---
+2026-10-13T13:01:58.5113805Z       duration_ms: 0.924678
+2026-10-13T13:01:58.5123906Z       ...
+2026-10-13T13:01:58.5163775Z     # Subtest: all options
+2026-10-13T13:01:58.5187082Z     ok 3 - all options
+2026-10-13T13:01:58.5214215Z       ---
+2026-10-13T13:01:58.5214843Z       duration_ms: 0.236032
+2026-10-13T13:01:58.5215494Z       ...
+2026-10-13T13:01:58.5216270Z     # Subtest: sort by creation time
+2026-10-13T13:01:58.5217033Z     ok 4 - sort by creation time
+2026-10-13T13:01:58.5217718Z       ---
+2026-10-13T13:01:58.5218281Z       duration_ms: 0.632482
+2026-10-13T13:01:58.5218885Z       ...
+2026-10-13T13:01:58.5219612Z     # Subtest: sort by creation time (time_low overflow)
+2026-10-13T13:01:58.5220527Z     ok 5 - sort by creation time (time_low overflow)
+2026-10-13T13:01:58.5221262Z       ---
+2026-10-13T13:01:58.5221825Z       duration_ms: 0.618617
+2026-10-13T13:01:58.5222425Z       ...
+2026-10-13T13:01:58.5223268Z     # Subtest: creating at array offset
+2026-10-13T13:01:58.5224080Z     ok 6 - creating at array offset
+2026-10-13T13:01:58.5224736Z       ---
+2026-10-13T13:01:58.5225286Z       duration_ms: 0.435995
+2026-10-13T13:01:58.5225908Z       ...
+2026-10-13T13:01:58.5226616Z     # Subtest: throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.5227543Z     ok 7 - throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.5228278Z       ---
+2026-10-13T13:01:58.5228910Z       duration_ms: 0.762696
+2026-10-13T13:01:58.5229512Z       ...
+2026-10-13T13:01:58.5230198Z     # Subtest: random node has multicast bit set
+2026-10-13T13:01:58.5231062Z     ok 8 - random node has multicast bit set
+2026-10-13T13:01:58.5231784Z       ---
+2026-10-13T13:01:58.5232636Z       duration_ms: 5.138645
+2026-10-13T13:01:58.5233545Z       ...
+2026-10-13T13:01:58.5234177Z     # Subtest: v1 -> v6 conversion
+2026-10-13T13:01:58.5234917Z     ok 9 - v1 -> v6 conversion
+2026-10-13T13:01:58.5235551Z       ---
+2026-10-13T13:01:58.5236125Z       duration_ms: 0.35854
+2026-10-13T13:01:58.5236720Z       ...
+2026-10-13T13:01:58.5237331Z     # Subtest: v6 -> v1 conversion
+2026-10-13T13:01:58.5238047Z     ok 10 - v6 -> v1 conversion
+2026-10-13T13:01:58.5238630Z       ---
+2026-10-13T13:01:58.5239134Z       duration_ms: 0.361225
+2026-10-13T13:01:58.5239686Z       ...
+2026-10-13T13:01:58.5240149Z     1..10
+2026-10-13T13:01:58.5240632Z ok 8 - v6
+2026-10-13T13:01:58.5241098Z   ---
+2026-10-13T13:01:58.5241582Z   duration_ms: 18.028186
+2026-10-13T13:01:58.5242147Z   type: 'suite'
+2026-10-13T13:01:58.5243003Z   ...
+2026-10-13T13:01:58.6334231Z # Subtest: v7
+2026-10-13T13:01:58.6335234Z     # Subtest: subsequent UUIDs are different
+2026-10-13T13:01:58.6347905Z     ok 1 - subsequent UUIDs are different
+2026-10-13T13:01:58.6348625Z       ---
+2026-10-13T13:01:58.6349217Z       duration_ms: 4.731363
+2026-10-13T13:01:58.6349822Z       ...
+2026-10-13T13:01:58.6350715Z     # Subtest: explicit options.random and options.msecs produces expected result
+2026-10-13T13:01:58.6352014Z     ok 2 - explicit options.random and options.msecs produces expected result
+2026-10-13T13:01:58.6352934Z       ---
+2026-10-13T13:01:58.6353773Z       duration_ms: 0.26246
+2026-10-13T13:01:58.6354388Z       ...
+2026-10-13T13:01:58.6355128Z     # Subtest: explicit options.rng produces expected result
+2026-10-13T13:01:58.6356134Z     ok 3 - explicit options.rng produces expected result
+2026-10-13T13:01:58.6356941Z       ---
+2026-10-13T13:01:58.6357500Z       duration_ms: 0.284753
+2026-10-13T13:01:58.6358106Z       ...
+2026-10-13T13:01:58.6358908Z     # Subtest: explicit options.msecs produces expected result
+2026-10-13T13:01:58.6359876Z     ok 4 - explicit options.msecs produces expected result
+2026-10-13T13:01:58.6360364Z       ---
+2026-10-13T13:01:58.6360591Z       duration_ms: 0.253644
+2026-10-13T13:01:58.6360832Z       ...
+2026-10-13T13:01:58.6361120Z     # Subtest: fills one UUID into a buffer as expected
+2026-10-13T13:01:58.6361509Z     ok 5 - fills one UUID into a buffer as expected
+2026-10-13T13:01:58.6361800Z       ---
+2026-10-13T13:01:58.6362006Z       duration_ms: 1.011711
+2026-10-13T13:01:58.6362225Z       ...
+2026-10-13T13:01:58.6362527Z     # Subtest: fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.6365793Z     ok 6 - fills two UUIDs into a buffer as expected
+2026-10-13T13:01:58.6366599Z       ---
+2026-10-13T13:01:58.6367252Z       duration_ms: 0.273571
+2026-10-13T13:01:58.6367938Z       ...
+2026-10-13T13:01:58.6372380Z     # Subtest: lexicographical sorting is preserved
+2026-10-13T13:01:58.6382845Z     ok 7 - lexicographical sorting is preserved
+2026-10-13T13:01:58.6383640Z       ---
+2026-10-13T13:01:58.6399712Z       duration_ms: 138.316113
+2026-10-13T13:01:58.6399984Z       ...
+2026-10-13T13:01:58.6400224Z     # Subtest: can supply seq
+2026-10-13T13:01:58.6423977Z     ok 8 - can supply seq
+2026-10-13T13:01:58.6424574Z       ---
+2026-10-13T13:01:58.6425142Z       duration_ms: 0.205514
+2026-10-13T13:01:58.6425734Z       ...
+2026-10-13T13:01:58.6426466Z     # Subtest: internal seq is reset upon timestamp change
+2026-10-13T13:01:58.6427373Z     ok 9 - internal seq is reset upon timestamp change
+2026-10-13T13:01:58.6428099Z       ---
+2026-10-13T13:01:58.6428643Z       duration_ms: 0.341999
+2026-10-13T13:01:58.6429223Z       ...
+2026-10-13T13:01:58.6429787Z     # Subtest: v7() state transitions
+2026-10-13T13:01:58.6430304Z     ok 10 - v7() state transitions
+2026-10-13T13:01:58.6430645Z       ---
+2026-10-13T13:01:58.6430859Z       duration_ms: 0.402683
+2026-10-13T13:01:58.6431089Z       ...
+2026-10-13T13:01:58.6431354Z     # Subtest: flipping bits changes the result
+2026-10-13T13:01:58.6431696Z     ok 11 - flipping bits changes the result
+2026-10-13T13:01:58.6431973Z       ---
+2026-10-13T13:01:58.6432618Z       duration_ms: 1.233505
+2026-10-13T13:01:58.6433032Z       ...
+2026-10-13T13:01:58.6454510Z     # Subtest: throws when option.random is too short
+2026-10-13T13:01:58.6455368Z     ok 12 - throws when option.random is too short
+2026-10-13T13:01:58.6456128Z       ---
+2026-10-13T13:01:58.6456678Z       duration_ms: 0.367957
+2026-10-13T13:01:58.6457262Z       ...
+2026-10-13T13:01:58.6457903Z     # Subtest: throws when options.rng() is too short
+2026-10-13T13:01:58.6458744Z     ok 13 - throws when options.rng() is too short
+2026-10-13T13:01:58.6459457Z       ---
+2026-10-13T13:01:58.6459991Z       duration_ms: 0.177682
+2026-10-13T13:01:58.6460569Z       ...
+2026-10-13T13:01:58.6461259Z     # Subtest: throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.6462077Z     ok 14 - throws RangeError for out-of-range indexes
+2026-10-13T13:01:58.6462895Z       ---
+2026-10-13T13:01:58.6463466Z       duration_ms: 0.418212
+2026-10-13T13:01:58.6463925Z       ...
+2026-10-13T13:01:58.6464676Z     # Subtest: default seq (no explicit seq option) is consistent with updateV7State formula
+2026-10-13T13:01:58.6465846Z     ok 15 - default seq (no explicit seq option) is consistent with updateV7State formula
+2026-10-13T13:01:58.6466574Z       ---
+2026-10-13T13:01:58.6466920Z       duration_ms: 0.271728
+2026-10-13T13:01:58.6467315Z       ...
+2026-10-13T13:01:58.6473839Z     1..15
+2026-10-13T13:01:58.6493795Z ok 9 - v7
+2026-10-13T13:01:58.6503807Z   ---
+2026-10-13T13:01:58.6509808Z   duration_ms: 158.405692
+2026-10-13T13:01:58.6510258Z   type: 'suite'
+2026-10-13T13:01:58.6510632Z   ...
+2026-10-13T13:01:58.6587585Z # Subtest: validate()
+2026-10-13T13:01:58.6588122Z     # Subtest: TESTS cases
+2026-10-13T13:01:58.6588609Z     ok 1 - TESTS cases
+2026-10-13T13:01:58.6589029Z       ---
+2026-10-13T13:01:58.6589407Z       duration_ms: 1.939595
+2026-10-13T13:01:58.6589858Z       ...
+2026-10-13T13:01:58.6590372Z     1..1
+2026-10-13T13:01:58.6590813Z ok 10 - validate()
+2026-10-13T13:01:58.6591220Z   ---
+2026-10-13T13:01:58.6591602Z   duration_ms: 3.523676
+2026-10-13T13:01:58.6592026Z   type: 'suite'
+2026-10-13T13:01:58.6592401Z   ...
+2026-10-13T13:01:58.6592768Z # Subtest: version()
+2026-10-13T13:01:58.6593448Z     # Subtest: TESTS cases
+2026-10-13T13:01:58.6593907Z     ok 1 - TESTS cases
+2026-10-13T13:01:58.6594326Z       ---
+2026-10-13T13:01:58.6594706Z       duration_ms: 5.019762
+2026-10-13T13:01:58.6595300Z       ...
+2026-10-13T13:01:58.6595687Z     1..1
+2026-10-13T13:01:58.6596110Z ok 11 - version()
+2026-10-13T13:01:58.6596535Z   ---
+2026-10-13T13:01:58.6596936Z   duration_ms: 6.604595
+2026-10-13T13:01:58.6597503Z   type: 'suite'
+2026-10-13T13:01:58.6597923Z   ...
+2026-10-13T13:01:58.6598320Z 1..11
+2026-10-13T13:01:58.6598662Z # tests 82
+2026-10-13T13:01:58.6599009Z # suites 10
+2026-10-13T13:01:58.6599371Z # pass 82
+2026-10-13T13:01:58.6599716Z # fail 0
+2026-10-13T13:01:58.6600074Z # cancelled 0
+2026-10-13T13:01:58.6600457Z # skipped 0
+2026-10-13T13:01:58.6600802Z # todo 0
+2026-10-13T13:01:58.6601394Z # duration_ms 509.957167
+2026-10-13T13:01:58.6721555Z ##[group]Run npm run test:node
+2026-10-13T13:01:58.6721872Z [36;1mnpm run test:node[0m
+2026-10-13T13:01:58.6782316Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:58.6782563Z env:
+2026-10-13T13:01:58.6782755Z   LEFTHOOK: 0
+2026-10-13T13:01:58.6782950Z ##[endgroup]
+2026-10-13T13:01:58.7888815Z 
+2026-10-13T13:01:58.7889150Z > uuid@14.0.3 pretest:node
+2026-10-13T13:01:58.7889640Z > npm run build
+2026-10-13T13:01:58.7889883Z 
+2026-10-13T13:01:58.8989257Z 
+2026-10-13T13:01:58.8989582Z > uuid@14.0.3 build
+2026-10-13T13:01:58.8990016Z > ./scripts/build.sh
+2026-10-13T13:01:58.8990270Z 
+2026-10-13T13:01:58.9059213Z Building in /home/runner/work/uuid/uuid/dist and /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:01:58.9104144Z Compiling TypeScript files to /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:02:00.4822330Z Packing tarball
+2026-10-13T13:02:03.0319840Z -- fin --
+2026-10-13T13:02:03.0378757Z 
+2026-10-13T13:02:03.0379071Z > uuid@14.0.3 test:node
+2026-10-13T13:02:03.0379770Z > npm-run-all --parallel examples:node:**
+2026-10-13T13:02:03.0380004Z 
+2026-10-13T13:02:03.2583867Z 
+2026-10-13T13:02:03.2613293Z > uuid@14.0.3 examples:node:typescript:test
+2026-10-13T13:02:03.2614355Z > cd examples/typescript && npm test
+2026-10-13T13:02:03.2615099Z 
+2026-10-13T13:02:03.2733330Z 
+2026-10-13T13:02:03.2736035Z > uuid@14.0.3 examples:node:esmodules:test
+2026-10-13T13:02:03.2736993Z > cd examples/node-esmodules && npm test
+2026-10-13T13:02:03.2737563Z 
+2026-10-13T13:02:03.2760877Z 
+2026-10-13T13:02:03.2762221Z > uuid@14.0.3 examples:node:jest:test
+2026-10-13T13:02:03.2763314Z > cd examples/node-jest && npm test
+2026-10-13T13:02:03.2763861Z 
+2026-10-13T13:02:03.4123763Z 
+2026-10-13T13:02:03.4124269Z > uuid-example-node-jest@0.0.0 pretest
+2026-10-13T13:02:03.4124778Z > rm -fr node_modules && npm install --no-package-lock
+2026-10-13T13:02:03.4125521Z 
+2026-10-13T13:02:03.4203686Z 
+2026-10-13T13:02:03.4204123Z > pretest
+2026-10-13T13:02:03.4205125Z > rm -fr node_modules && npm install --no-package-lock
+2026-10-13T13:02:03.4205793Z 
+2026-10-13T13:02:03.4324337Z 
+2026-10-13T13:02:03.4364037Z > uuid-example-node-esmodules@0.0.0 pretest
+2026-10-13T13:02:03.4365121Z > rm -fr node_modules && npm install --no-package-lock
+2026-10-13T13:02:03.4373624Z 
+2026-10-13T13:02:04.0903552Z 
+2026-10-13T13:02:04.0904299Z added 1 package, and audited 2 packages in 579ms
+2026-10-13T13:02:04.0904746Z 
+2026-10-13T13:02:04.0905007Z 1 package is looking for funding
+2026-10-13T13:02:04.0905496Z   run `npm fund` for details
+2026-10-13T13:02:04.0912185Z 
+2026-10-13T13:02:04.0912665Z found 0 vulnerabilities
+2026-10-13T13:02:04.0966259Z 
+2026-10-13T13:02:04.0966773Z > uuid-example-node-esmodules@0.0.0 test
+2026-10-13T13:02:04.0967652Z > npm-run-all test:*
+2026-10-13T13:02:04.0967845Z 
+2026-10-13T13:02:04.1864223Z 
+2026-10-13T13:02:04.1866360Z added 1 package, and audited 2 packages in 670ms
+2026-10-13T13:02:04.1867201Z 
+2026-10-13T13:02:04.1868909Z 1 package is looking for funding
+2026-10-13T13:02:04.1869686Z   run `npm fund` for details
+2026-10-13T13:02:04.1870457Z 
+2026-10-13T13:02:04.1870681Z found 0 vulnerabilities
+2026-10-13T13:02:04.1954730Z 
+2026-10-13T13:02:04.1955240Z > test
+2026-10-13T13:02:04.1956077Z > npx -y --package=typescript@5.4.3 -- tsc --noEmit
+2026-10-13T13:02:04.1956500Z 
+2026-10-13T13:02:04.3222296Z 
+2026-10-13T13:02:04.3234957Z > uuid-example-node-esmodules@0.0.0 test:package
+2026-10-13T13:02:04.3236242Z > ( node --version | grep -vq 'v20' ) || ( node package.mjs )
+2026-10-13T13:02:04.3237028Z 
+2026-10-13T13:02:04.3725677Z (node:3114) V8: file:///home/runner/work/uuid/uuid/examples/node-esmodules/package.mjs:1 'assert' is deprecated in import statements and support will be removed in a future version; use 'with' instead
+2026-10-13T13:02:04.3734604Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-13T13:02:04.3736145Z pkg.name uuid
+2026-10-13T13:02:04.5391467Z 
+2026-10-13T13:02:04.5404513Z > uuid-example-node-esmodules@0.0.0 test:example
+2026-10-13T13:02:04.5405617Z > node example.mjs
+2026-10-13T13:02:04.5405957Z 
+2026-10-13T13:02:04.6155776Z uuidv1() 49bdc220-c706-11f1-96ba-237bc4fcae5f
+2026-10-13T13:02:04.6184172Z uuidv4() d26eb9dd-43ee-43af-83e7-85a6b2f2fbe2
+2026-10-13T13:02:04.6185205Z uuidv7() 01a1355b-1748-7418-ba23-1da225c6f61c
+2026-10-13T13:02:04.6185964Z uuidv3() DNS 9125a8dc-52ee-365b-a5aa-81b0b3681cf6
+2026-10-13T13:02:04.6214250Z uuidv3() URL c6235813-3ba4-3801-ae84-e0a6ebb7d138
+2026-10-13T13:02:04.6246864Z uuidv3() MY_NAMESPACE f5a52d34-dcd7-30f7-b581-0112fab43d0c
+2026-10-13T13:02:04.6254120Z uuidv5() DNS fdda765f-fc57-5604-a269-52a7df8164ec
+2026-10-13T13:02:04.6255158Z uuidv5() URL 3bbcee75-cecc-5b56-8031-b6641c1ed1f1
+2026-10-13T13:02:04.6256162Z uuidv5() MY_NAMESPACE c49c5142-4d9a-5940-a926-612ede0ec632
+2026-10-13T13:02:04.6257231Z uuidv6() 1f1c7064-9bef-6aa0-9a5c-1f69b8299846
+2026-10-13T13:02:04.6259547Z uuidv1ToV6() 1ef21d2f-1207-6660-8c4f-419efbd44d48
+2026-10-13T13:02:04.6260445Z uuidv6ToV1() f1207660-21d2-11ef-8c4f-419efbd44d48
+2026-10-13T13:02:04.6261279Z NIL_UUID 00000000-0000-0000-0000-000000000000
+2026-10-13T13:02:04.6262118Z MAX_UUID ffffffff-ffff-ffff-ffff-ffffffffffff
+2026-10-13T13:02:04.6262869Z uuidParse() Uint8Array(16) [
+2026-10-13T13:02:04.6263750Z    85,  35, 141,  21, 201, 38,
+2026-10-13T13:02:04.6264358Z    69, 152, 180, 157, 207, 78,
+2026-10-13T13:02:04.6264912Z   145,  59, 161,  60
+2026-10-13T13:02:04.6265429Z ]
+2026-10-13T13:02:04.6266155Z uuidStringify() 55238d15-c926-4598-b49d-cf4e913ba13c
+2026-10-13T13:02:04.6266903Z uuidValidate() true
+2026-10-13T13:02:04.6267441Z uuidVersion() 4
+2026-10-13T13:02:04.6267997Z Same with default export
+2026-10-13T13:02:04.6268730Z uuid.v1() 49bf96e0-c706-11f1-96ba-237bc4fcae5f
+2026-10-13T13:02:04.6269639Z uuid.v4() 8630c025-9950-4317-9add-62e131981da9
+2026-10-13T13:02:04.6270422Z uuid.v7() 01a1355b-174e-768d-bc42-206a5d38a646
+2026-10-13T13:02:04.6271726Z uuid.v3() DNS 9125a8dc-52ee-365b-a5aa-81b0b3681cf6
+2026-10-13T13:02:04.6272601Z uuid.v3() URL c6235813-3ba4-3801-ae84-e0a6ebb7d138
+2026-10-13T13:02:04.6273754Z uuid.v3() MY_NAMESPACE f5a52d34-dcd7-30f7-b581-0112fab43d0c
+2026-10-13T13:02:04.6274604Z uuid.v5() DNS fdda765f-fc57-5604-a269-52a7df8164ec
+2026-10-13T13:02:04.6275475Z uuid.v5() URL 3bbcee75-cecc-5b56-8031-b6641c1ed1f1
+2026-10-13T13:02:04.6276406Z uuid.v5() MY_NAMESPACE c49c5142-4d9a-5940-a926-612ede0ec632
+2026-10-13T13:02:04.6277318Z uuid.v6() 1f1c7064-9bf9-66e1-9492-35565eebb08f
+2026-10-13T13:02:04.6278223Z uuid.v1ToV6() 1ef21d2f-1207-6660-8c4f-419efbd44d48
+2026-10-13T13:02:04.6279188Z uuid.v6ToV1() f1207660-21d2-11ef-8c4f-419efbd44d48
+2026-10-13T13:02:04.6280156Z uuid.NIL 00000000-0000-0000-0000-000000000000
+2026-10-13T13:02:04.6281089Z uuid.MAX ffffffff-ffff-ffff-ffff-ffffffffffff
+2026-10-13T13:02:04.6281961Z uuid.parse() Uint8Array(16) [
+2026-10-13T13:02:04.6282704Z    85,  35, 141,  21, 201, 38,
+2026-10-13T13:02:04.6283687Z    69, 152, 180, 157, 207, 78,
+2026-10-13T13:02:04.6284367Z   145,  59, 161,  60
+2026-10-13T13:02:04.6284976Z ]
+2026-10-13T13:02:04.6285756Z uuid.stringify() 55238d15-c926-4598-b49d-cf4e913ba13c
+2026-10-13T13:02:04.6286628Z uuid.validate() true
+2026-10-13T13:02:04.6287305Z uuid.version() 4
+2026-10-13T13:02:04.6287912Z pkg.name uuid
+2026-10-13T13:02:12.9398581Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T13:02:13.1022038Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:02:13.2985424Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-13T13:02:13.7394964Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:02:16.1777817Z 
+2026-10-13T13:02:16.1778516Z added 340 packages, and audited 341 packages in 13s
+2026-10-13T13:02:16.1778985Z 
+2026-10-13T13:02:16.1779521Z 52 packages are looking for funding
+2026-10-13T13:02:16.1780039Z   run `npm fund` for details
+2026-10-13T13:02:16.2453421Z 
+2026-10-13T13:02:16.2453964Z 34 vulnerabilities (5 moderate, 29 high)
+2026-10-13T13:02:16.2457745Z 
+2026-10-13T13:02:16.2458142Z To address issues that do not require attention, run:
+2026-10-13T13:02:16.2458637Z   npm audit fix
+2026-10-13T13:02:16.2458782Z 
+2026-10-13T13:02:16.2458915Z To address all issues, run:
+2026-10-13T13:02:16.2459235Z   npm audit fix --force
+2026-10-13T13:02:16.2459412Z 
+2026-10-13T13:02:16.2459618Z Run `npm audit` for details.
+2026-10-13T13:02:16.2688536Z 
+2026-10-13T13:02:16.2689109Z > uuid-example-node-jest@0.0.0 test
+2026-10-13T13:02:16.2689877Z > NODE_OPTIONS="--experimental-vm-modules" jest
+2026-10-13T13:02:16.2690268Z 
+2026-10-13T13:02:17.1386247Z (node:3200) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+2026-10-13T13:02:17.1387794Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-13T13:02:17.1429381Z PASS ./node.test.js
+2026-10-13T13:02:17.4275745Z (node:3199) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+2026-10-13T13:02:17.4277194Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-13T13:02:17.4313754Z PASS ./jsdom.test.js
+2026-10-13T13:02:17.4658800Z 
+2026-10-13T13:02:17.4661605Z Test Suites: 2 passed, 2 total
+2026-10-13T13:02:17.4662254Z Tests:       4 passed, 4 total
+2026-10-13T13:02:17.4662743Z Snapshots:   0 total
+2026-10-13T13:02:17.4663911Z Time:        0.845 s
+2026-10-13T13:02:17.4664336Z Ran all test suites.
+2026-10-13T13:02:17.5549833Z Post job cleanup.
+2026-10-13T13:02:17.6755665Z (node:3228) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:02:17.6756495Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:02:17.6760656Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd, not saving cache.
+2026-10-13T13:02:17.6911465Z Post job cleanup.
+2026-10-13T13:02:17.7731563Z [command]/usr/bin/git version
+2026-10-13T13:02:17.7767394Z git version 2.55.0
+2026-10-13T13:02:17.7803686Z Temporarily overriding HOME='/home/runner/work/_temp/2818ffac-76ca-40fe-b85e-505ff08aaf1b' before making global git config changes
+2026-10-13T13:02:17.7804556Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:02:17.7808442Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:02:17.7844374Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:02:17.7877062Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:02:17.8095398Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:02:17.8117427Z http.https://github.com/.extraheader
+2026-10-13T13:02:17.8129427Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T13:02:17.8161281Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:02:17.8373744Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:02:17.8434102Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:02:17.8842314Z Cleaning up orphan processes

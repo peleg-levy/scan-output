@@ -1,0 +1,278 @@
+﻿2026-10-14T15:44:26.2497340Z Current runner version: '2.337.0'
+2026-10-14T15:44:26.2534989Z ##[group]Runner Image Provisioner
+2026-10-14T15:44:26.2536300Z Hosted Compute Agent
+2026-10-14T15:44:26.2537328Z Version: 20260901.588
+2026-10-14T15:44:26.2538465Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-14T15:44:26.2540048Z Build Date: 2026-09-01T19:56:44Z
+2026-10-14T15:44:26.2541241Z Worker ID: {3df1b3f8-a9c4-4b52-8ffb-9c361eccc390}
+2026-10-14T15:44:26.2542488Z Azure Region: eastus2
+2026-10-14T15:44:26.2543494Z ##[endgroup]
+2026-10-14T15:44:26.2545588Z ##[group]Operating System
+2026-10-14T15:44:26.2546698Z Microsoft Windows Server 2025
+2026-10-14T15:44:26.2547759Z 10.0.26100
+2026-10-14T15:44:26.2548763Z Datacenter
+2026-10-14T15:44:26.2549767Z ##[endgroup]
+2026-10-14T15:44:26.2550845Z ##[group]Runner Image
+2026-10-14T15:44:26.2551946Z Image: windows-2025-vs2026
+2026-10-14T15:44:26.2553015Z Version: 20260925.250.1
+2026-10-14T15:44:26.2555717Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-14T15:44:26.2557505Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-14T15:44:26.2558496Z ##[endgroup]
+2026-10-14T15:44:26.2560053Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:44:26.2561973Z Contents: read
+2026-10-14T15:44:26.2562595Z Metadata: read
+2026-10-14T15:44:26.2563122Z PullRequests: read
+2026-10-14T15:44:26.2563691Z ##[endgroup]
+2026-10-14T15:44:26.2565682Z Secret source: Actions
+2026-10-14T15:44:26.2566578Z Cache mode: write
+2026-10-14T15:44:26.2567301Z Prepare workflow directory
+2026-10-14T15:44:26.2920501Z Prepare all required actions
+2026-10-14T15:44:26.2967423Z Getting action download info
+2026-10-14T15:44:26.4937633Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T15:44:26.6373078Z Download action repository 'dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d' (SHA:ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d)
+2026-10-14T15:44:26.8216485Z Download action repository 'microsoft/setup-msbuild@30375c66a4eea26614e0d39710365f22f8b0af57' (SHA:30375c66a4eea26614e0d39710365f22f8b0af57)
+2026-10-14T15:44:26.9580254Z Download action repository 'NuGet/setup-nuget@fd55a6f3b34392fa83fde1454582407d8c714123' (SHA:fd55a6f3b34392fa83fde1454582407d8c714123)
+2026-10-14T15:44:27.1185529Z Download action repository 'pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86' (SHA:0977fd99725f1db4007ccb2928dbb4e90d06cc86)
+2026-10-14T15:44:27.2705844Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-14T15:44:27.5764284Z Complete job name: build_dotnet (Release)
+2026-10-14T15:44:27.7151333Z ##[group]Run git config --global core.autocrlf false
+2026-10-14T15:44:27.7152268Z [36;1mgit config --global core.autocrlf false[0m
+2026-10-14T15:44:27.7741551Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-14T15:44:27.7742726Z ##[endgroup]
+2026-10-14T15:44:28.7409852Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-14T15:44:28.7411469Z with:
+2026-10-14T15:44:28.7412296Z   repository: microsoft/TypeAgent
+2026-10-14T15:44:28.7420961Z   token: ***
+2026-10-14T15:44:28.7421783Z   ssh-strict: true
+2026-10-14T15:44:28.7422605Z   ssh-user: git
+2026-10-14T15:44:28.7423450Z   persist-credentials: true
+2026-10-14T15:44:28.7424419Z   clean: true
+2026-10-14T15:44:28.7425268Z   sparse-checkout-cone-mode: true
+2026-10-14T15:44:28.7426313Z   fetch-depth: 1
+2026-10-14T15:44:28.7427150Z   fetch-tags: false
+2026-10-14T15:44:28.7428199Z   show-progress: true
+2026-10-14T15:44:28.7429268Z   lfs: false
+2026-10-14T15:44:28.7430066Z   submodules: false
+2026-10-14T15:44:28.7430938Z   set-safe-directory: true
+2026-10-14T15:44:28.7431979Z   allow-unsafe-pr-checkout: false
+2026-10-14T15:44:28.7433005Z ##[endgroup]
+2026-10-14T15:44:28.8859312Z Syncing repository: microsoft/TypeAgent
+2026-10-14T15:44:28.8865026Z ##[group]Getting Git version info
+2026-10-14T15:44:28.8866309Z Working directory is 'D:\a\TypeAgent\TypeAgent'
+2026-10-14T15:44:28.9794796Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-14T15:44:29.0066819Z git version 2.55.0.windows.5
+2026-10-14T15:44:29.0114156Z ##[endgroup]
+2026-10-14T15:44:29.0124612Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\7cf77817-74b5-4208-8a82-c43689d2ff35\.gitconfig'
+2026-10-14T15:44:29.0145035Z Temporarily overriding HOME='D:\a\_temp\7cf77817-74b5-4208-8a82-c43689d2ff35' before making global git config changes
+2026-10-14T15:44:29.0147731Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:44:29.0154790Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\TypeAgent\TypeAgent
+2026-10-14T15:44:29.0441836Z Deleting the contents of 'D:\a\TypeAgent\TypeAgent'
+2026-10-14T15:44:29.0447465Z ##[group]Determining repository object format
+2026-10-14T15:44:29.0450739Z ##[endgroup]
+2026-10-14T15:44:29.0452990Z ##[group]Initializing the repository
+2026-10-14T15:44:29.0459517Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\TypeAgent\TypeAgent
+2026-10-14T15:44:29.1277446Z Initialized empty Git repository in D:/a/TypeAgent/TypeAgent/.git/
+2026-10-14T15:44:29.1326445Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/microsoft/TypeAgent
+2026-10-14T15:44:29.2058191Z ##[endgroup]
+2026-10-14T15:44:29.2059735Z ##[group]Disabling automatic garbage collection
+2026-10-14T15:44:29.2065330Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-14T15:44:29.2369029Z ##[endgroup]
+2026-10-14T15:44:29.2370455Z ##[group]Setting up auth
+2026-10-14T15:44:29.2371477Z Removing SSH command configuration
+2026-10-14T15:44:29.2379436Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:44:29.2712864Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-14T15:44:30.7756732Z Removing HTTP extra header
+2026-10-14T15:44:30.7760324Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:44:30.8147755Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-14T15:44:31.3658973Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:44:31.3671858Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:44:31.4025879Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-14T15:44:31.9671332Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-14T15:44:32.0077021Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/TypeAgent/TypeAgent/.git.path D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:32.0445332Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/TypeAgent/TypeAgent/.git/worktrees/*.path D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:32.0822716Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:32.1144799Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:32.1476027Z ##[endgroup]
+2026-10-14T15:44:32.1476624Z ##[group]Fetching the repository
+2026-10-14T15:44:32.1491325Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +699dd2645086f92f868287aee285003e604168d6:refs/remotes/pull/3178/merge
+2026-10-14T15:44:37.0928586Z From https://github.com/microsoft/TypeAgent
+2026-10-14T15:44:37.0929456Z  * [new ref]         699dd2645086f92f868287aee285003e604168d6 -> pull/3178/merge
+2026-10-14T15:44:37.0980167Z ##[endgroup]
+2026-10-14T15:44:37.0980798Z ##[group]Determining the checkout info
+2026-10-14T15:44:37.0982650Z ##[endgroup]
+2026-10-14T15:44:37.0992808Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-14T15:44:37.1487204Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-14T15:44:37.1781458Z ##[group]Checking out the ref
+2026-10-14T15:44:37.1793869Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/3178/merge
+2026-10-14T15:44:38.2273958Z Updating files:  23% (1534/6415)
+2026-10-14T15:44:38.2462817Z Updating files:  24% (1540/6415)
+2026-10-14T15:44:38.2682340Z Updating files:  25% (1604/6415)
+2026-10-14T15:44:38.2885536Z Updating files:  26% (1668/6415)
+2026-10-14T15:44:38.3048819Z Updating files:  27% (1733/6415)
+2026-10-14T15:44:38.3253012Z Updating files:  28% (1797/6415)
+2026-10-14T15:44:38.3421366Z Updating files:  29% (1861/6415)
+2026-10-14T15:44:38.3600045Z Updating files:  30% (1925/6415)
+2026-10-14T15:44:38.3791200Z Updating files:  31% (1989/6415)
+2026-10-14T15:44:38.3982790Z Updating files:  32% (2053/6415)
+2026-10-14T15:44:38.4171906Z Updating files:  33% (2117/6415)
+2026-10-14T15:44:38.4382690Z Updating files:  34% (2182/6415)
+2026-10-14T15:44:38.4574838Z Updating files:  35% (2246/6415)
+2026-10-14T15:44:38.4755928Z Updating files:  36% (2310/6415)
+2026-10-14T15:44:38.4945111Z Updating files:  37% (2374/6415)
+2026-10-14T15:44:38.5121656Z Updating files:  38% (2438/6415)
+2026-10-14T15:44:38.5304388Z Updating files:  39% (2502/6415)
+2026-10-14T15:44:38.5498802Z Updating files:  40% (2566/6415)
+2026-10-14T15:44:38.5683695Z Updating files:  41% (2631/6415)
+2026-10-14T15:44:38.5898252Z Updating files:  42% (2695/6415)
+2026-10-14T15:44:38.6133307Z Updating files:  43% (2759/6415)
+2026-10-14T15:44:38.6332890Z Updating files:  44% (2823/6415)
+2026-10-14T15:44:38.6513722Z Updating files:  45% (2887/6415)
+2026-10-14T15:44:38.6690952Z Updating files:  46% (2951/6415)
+2026-10-14T15:44:38.6870156Z Updating files:  47% (3016/6415)
+2026-10-14T15:44:38.7046852Z Updating files:  48% (3080/6415)
+2026-10-14T15:44:38.7225957Z Updating files:  49% (3144/6415)
+2026-10-14T15:44:38.7411719Z Updating files:  50% (3208/6415)
+2026-10-14T15:44:38.7621839Z Updating files:  51% (3272/6415)
+2026-10-14T15:44:38.7795948Z Updating files:  52% (3336/6415)
+2026-10-14T15:44:38.7961860Z Updating files:  53% (3400/6415)
+2026-10-14T15:44:38.8127977Z Updating files:  54% (3465/6415)
+2026-10-14T15:44:38.8286397Z Updating files:  55% (3529/6415)
+2026-10-14T15:44:38.8523648Z Updating files:  56% (3593/6415)
+2026-10-14T15:44:38.8700550Z Updating files:  57% (3657/6415)
+2026-10-14T15:44:38.8875081Z Updating files:  58% (3721/6415)
+2026-10-14T15:44:38.9083527Z Updating files:  59% (3785/6415)
+2026-10-14T15:44:38.9261535Z Updating files:  60% (3849/6415)
+2026-10-14T15:44:38.9420875Z Updating files:  61% (3914/6415)
+2026-10-14T15:44:38.9604643Z Updating files:  62% (3978/6415)
+2026-10-14T15:44:38.9783700Z Updating files:  63% (4042/6415)
+2026-10-14T15:44:38.9975673Z Updating files:  64% (4106/6415)
+2026-10-14T15:44:39.0159369Z Updating files:  65% (4170/6415)
+2026-10-14T15:44:39.0345486Z Updating files:  66% (4234/6415)
+2026-10-14T15:44:39.0561161Z Updating files:  67% (4299/6415)
+2026-10-14T15:44:39.0759441Z Updating files:  68% (4363/6415)
+2026-10-14T15:44:39.0966579Z Updating files:  69% (4427/6415)
+2026-10-14T15:44:39.1142686Z Updating files:  70% (4491/6415)
+2026-10-14T15:44:39.1351039Z Updating files:  71% (4555/6415)
+2026-10-14T15:44:39.1525201Z Updating files:  72% (4619/6415)
+2026-10-14T15:44:39.1698437Z Updating files:  73% (4683/6415)
+2026-10-14T15:44:39.1880309Z Updating files:  74% (4748/6415)
+2026-10-14T15:44:39.2065936Z Updating files:  75% (4812/6415)
+2026-10-14T15:44:39.2249469Z Updating files:  76% (4876/6415)
+2026-10-14T15:44:39.2385560Z Updating files:  77% (4940/6415)
+2026-10-14T15:44:39.2423280Z Updating files:  77% (4992/6415)
+2026-10-14T15:44:39.2595364Z Updating files:  78% (5004/6415)
+2026-10-14T15:44:39.3223121Z Updating files:  79% (5068/6415)
+2026-10-14T15:44:39.3394504Z Updating files:  80% (5132/6415)
+2026-10-14T15:44:39.3568169Z Updating files:  81% (5197/6415)
+2026-10-14T15:44:39.3753055Z Updating files:  82% (5261/6415)
+2026-10-14T15:44:39.3932840Z Updating files:  83% (5325/6415)
+2026-10-14T15:44:39.4122088Z Updating files:  84% (5389/6415)
+2026-10-14T15:44:39.4299904Z Updating files:  85% (5453/6415)
+2026-10-14T15:44:39.4482537Z Updating files:  86% (5517/6415)
+2026-10-14T15:44:39.4661521Z Updating files:  87% (5582/6415)
+2026-10-14T15:44:39.4831024Z Updating files:  88% (5646/6415)
+2026-10-14T15:44:39.7088954Z Updating files:  89% (5710/6415)
+2026-10-14T15:44:39.7265187Z Updating files:  90% (5774/6415)
+2026-10-14T15:44:39.7431756Z Updating files:  91% (5838/6415)
+2026-10-14T15:44:39.7622462Z Updating files:  92% (5902/6415)
+2026-10-14T15:44:39.7795468Z Updating files:  93% (5966/6415)
+2026-10-14T15:44:39.7951014Z Updating files:  94% (6031/6415)
+2026-10-14T15:44:39.8108387Z Updating files:  95% (6095/6415)
+2026-10-14T15:44:39.8347485Z Updating files:  96% (6159/6415)
+2026-10-14T15:44:39.8513622Z Updating files:  97% (6223/6415)
+2026-10-14T15:44:39.8737184Z Updating files:  98% (6287/6415)
+2026-10-14T15:44:39.8910277Z Updating files:  99% (6351/6415)
+2026-10-14T15:44:39.8910864Z Updating files: 100% (6415/6415)
+2026-10-14T15:44:39.8911283Z Updating files: 100% (6415/6415), done.
+2026-10-14T15:44:39.9091407Z Note: switching to 'refs/remotes/pull/3178/merge'.
+2026-10-14T15:44:39.9091660Z 
+2026-10-14T15:44:39.9091853Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T15:44:39.9092328Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T15:44:39.9092772Z state without impacting any branches by switching back to a branch.
+2026-10-14T15:44:39.9093038Z 
+2026-10-14T15:44:39.9093214Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T15:44:39.9093627Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T15:44:39.9093866Z 
+2026-10-14T15:44:39.9093974Z   git switch -c <new-branch-name>
+2026-10-14T15:44:39.9094136Z 
+2026-10-14T15:44:39.9094228Z Or undo this operation with:
+2026-10-14T15:44:39.9094374Z 
+2026-10-14T15:44:39.9094462Z   git switch -
+2026-10-14T15:44:39.9094573Z 
+2026-10-14T15:44:39.9095140Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T15:44:39.9095717Z 
+2026-10-14T15:44:39.9096814Z HEAD is now at 699dd26 Merge 2ef166b9e1bd958a6761c332221ac89b651b7ba8 into e2c819c2b0ab10ec5524c4f644abab22e41e097d
+2026-10-14T15:44:39.9299043Z ##[endgroup]
+2026-10-14T15:44:39.9706706Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-14T15:44:39.9978049Z 699dd2645086f92f868287aee285003e604168d6
+2026-10-14T15:44:40.0352290Z ##[group]Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d
+2026-10-14T15:44:40.0352729Z with:
+2026-10-14T15:44:40.0353399Z   filters: dotnet:
+  - "dotnet/**"
+  - "ts/packages/agents/powershell/**"
+  - "ts/packages/config/**"
+  - "ts/packages/agents/desktop/src/**Schema.ts"
+  - ".github/workflows/build-dotnet.yml"
+
+2026-10-14T15:44:40.0356313Z   token: ***
+2026-10-14T15:44:40.0356500Z   list-files: none
+2026-10-14T15:44:40.0356910Z   initial-fetch-depth: 100
+2026-10-14T15:44:40.0357135Z   predicate-quantifier: some
+2026-10-14T15:44:40.0357348Z ##[endgroup]
+2026-10-14T15:44:40.1443712Z ##[group]Fetching list of changed files for PR#3178 from GitHub API
+2026-10-14T15:44:40.1465239Z Invoking listFiles(pull_number: 3178, per_page: 100)
+2026-10-14T15:44:40.5197734Z Received 13 items
+2026-10-14T15:44:40.5198460Z [modified] docs/package.json
+2026-10-14T15:44:40.5199696Z [modified] docs/pnpm-lock.yaml
+2026-10-14T15:44:40.5200383Z [modified] ts/packages/agentServer/bundledRuntime/package.json
+2026-10-14T15:44:40.5201635Z [modified] ts/packages/agents/montage/package.json
+2026-10-14T15:44:40.5202256Z [modified] ts/packages/knowledgeProcessor/package.json
+2026-10-14T15:44:40.5202924Z [modified] ts/packages/knowledgeProcessor/src/images/image.ts
+2026-10-14T15:44:40.5203595Z [modified] ts/packages/memory/conversation/package.json
+2026-10-14T15:44:40.5204278Z [added] ts/packages/memory/conversation/test/emailImport.spec.ts
+2026-10-14T15:44:40.5204923Z [modified] ts/packages/shell/package.json
+2026-10-14T15:44:40.5205426Z [modified] ts/packages/vscode-shell/README.md
+2026-10-14T15:44:40.5205982Z [removed] ts/packages/vscode-shell/package-lock.json
+2026-10-14T15:44:40.5206531Z [modified] ts/pnpm-lock.yaml
+2026-10-14T15:44:40.5206936Z [modified] ts/pnpm-workspace.yaml
+2026-10-14T15:44:40.5207729Z ##[endgroup]
+2026-10-14T15:44:40.5208035Z Detected 13 changed files
+2026-10-14T15:44:40.5213198Z Results:
+2026-10-14T15:44:40.5215176Z ##[group]Filter dotnet = false
+2026-10-14T15:44:40.5215509Z Matching files: none
+2026-10-14T15:44:40.5233363Z ##[endgroup]
+2026-10-14T15:44:40.5233941Z Changes output set to []
+2026-10-14T15:44:40.5878539Z Post job cleanup.
+2026-10-14T15:44:40.7825712Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-14T15:44:40.8188566Z git version 2.55.0.windows.5
+2026-10-14T15:44:40.8258988Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\16d646b0-6ffa-43af-871e-142624a79ff5\.gitconfig'
+2026-10-14T15:44:40.8281132Z Temporarily overriding HOME='D:\a\_temp\16d646b0-6ffa-43af-871e-142624a79ff5' before making global git config changes
+2026-10-14T15:44:40.8282522Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:44:40.8296675Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\TypeAgent\TypeAgent
+2026-10-14T15:44:40.8625117Z Removing SSH command configuration
+2026-10-14T15:44:40.8636434Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:44:40.9181160Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-14T15:44:41.4800124Z Removing HTTP extra header
+2026-10-14T15:44:41.4810651Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:44:41.5113952Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-14T15:44:42.0525704Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:44:42.0536329Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:44:42.0805942Z includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git.path
+2026-10-14T15:44:42.0806620Z includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T15:44:42.0807016Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:44:42.0807679Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:44:42.0850427Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git.path
+2026-10-14T15:44:42.1116677Z D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:42.1165586Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git.path D\:\\a\\_temp\\git\-credentials\-1db18876\-9516\-4b8a\-9cd2\-0ad372bdec79\.config
+2026-10-14T15:44:42.1485459Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T15:44:42.1801813Z D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:42.1853961Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/TypeAgent/TypeAgent/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-1db18876\-9516\-4b8a\-9cd2\-0ad372bdec79\.config
+2026-10-14T15:44:42.2218300Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:44:42.2484944Z /github/runner_temp/git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:42.2549217Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-1db18876\-9516\-4b8a\-9cd2\-0ad372bdec79\.config
+2026-10-14T15:44:42.2901924Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:44:42.3151264Z /github/runner_temp/git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config
+2026-10-14T15:44:42.3228531Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-1db18876\-9516\-4b8a\-9cd2\-0ad372bdec79\.config
+2026-10-14T15:44:42.3535291Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-14T15:44:42.9891083Z Removing credentials config 'D:\a\_temp\git-credentials-1db18876-9516-4b8a-9cd2-0ad372bdec79.config'
+2026-10-14T15:44:43.0084460Z Cleaning up orphan processes

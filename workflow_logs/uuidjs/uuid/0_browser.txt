@@ -1,0 +1,615 @@
+﻿2026-10-13T13:01:39.7241160Z Current runner version: '2.337.0'
+2026-10-13T13:01:39.7266480Z ##[group]Runner Image Provisioner
+2026-10-13T13:01:39.7267484Z Hosted Compute Agent
+2026-10-13T13:01:39.7268169Z Version: 20261002.596
+2026-10-13T13:01:39.7268973Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T13:01:39.7269772Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T13:01:39.7270525Z Worker ID: {d12f4bde-b857-499c-a7db-d2999420c3bb}
+2026-10-13T13:01:39.7271439Z Region: westcentralus
+2026-10-13T13:01:39.7272131Z Cloud: Azure
+2026-10-13T13:01:39.7273028Z ##[endgroup]
+2026-10-13T13:01:39.7274558Z ##[group]Operating System
+2026-10-13T13:01:39.7275833Z Ubuntu
+2026-10-13T13:01:39.7276484Z 24.04.5
+2026-10-13T13:01:39.7277057Z LTS
+2026-10-13T13:01:39.7277733Z ##[endgroup]
+2026-10-13T13:01:39.7278366Z ##[group]Runner Image
+2026-10-13T13:01:39.7279048Z Image: ubuntu-24.04
+2026-10-13T13:01:39.7279727Z Version: 20261004.327.1
+2026-10-13T13:01:39.7281155Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T13:01:39.7282850Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T13:01:39.7283965Z ##[endgroup]
+2026-10-13T13:01:39.7285194Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T13:01:39.7287488Z Contents: read
+2026-10-13T13:01:39.7288150Z Metadata: read
+2026-10-13T13:01:39.7288828Z ##[endgroup]
+2026-10-13T13:01:39.7290991Z Secret source: Actions
+2026-10-13T13:01:39.7292074Z Cache mode: write
+2026-10-13T13:01:39.7293059Z Prepare workflow directory
+2026-10-13T13:01:39.7734622Z Prepare all required actions
+2026-10-13T13:01:39.7781871Z Getting action download info
+2026-10-13T13:01:40.0856647Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-10-13T13:01:40.3305444Z Download action repository 'actions/setup-node@v5' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+2026-10-13T13:01:40.5572971Z Complete job name: browser
+2026-10-13T13:01:40.6329357Z ##[group]Run actions/checkout@v5
+2026-10-13T13:01:40.6330248Z with:
+2026-10-13T13:01:40.6330708Z   fetch-depth: 10
+2026-10-13T13:01:40.6331199Z   repository: uuidjs/uuid
+2026-10-13T13:01:40.6335122Z   token: ***
+2026-10-13T13:01:40.6335602Z   ssh-strict: true
+2026-10-13T13:01:40.6336072Z   ssh-user: git
+2026-10-13T13:01:40.6336545Z   persist-credentials: true
+2026-10-13T13:01:40.6337070Z   clean: true
+2026-10-13T13:01:40.6337556Z   sparse-checkout-cone-mode: true
+2026-10-13T13:01:40.6338114Z   fetch-tags: false
+2026-10-13T13:01:40.6338582Z   show-progress: true
+2026-10-13T13:01:40.6339054Z   lfs: false
+2026-10-13T13:01:40.6339493Z   submodules: false
+2026-10-13T13:01:40.6339969Z   set-safe-directory: true
+2026-10-13T13:01:40.6340499Z   allow-unsafe-pr-checkout: false
+2026-10-13T13:01:40.6341214Z env:
+2026-10-13T13:01:40.6341631Z   LEFTHOOK: 0
+2026-10-13T13:01:40.6342067Z ##[endgroup]
+2026-10-13T13:01:40.7385477Z Syncing repository: uuidjs/uuid
+2026-10-13T13:01:40.7387570Z ##[group]Getting Git version info
+2026-10-13T13:01:40.7388268Z Working directory is '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:40.7389239Z [command]/usr/bin/git version
+2026-10-13T13:01:40.7434473Z git version 2.55.0
+2026-10-13T13:01:40.7454762Z ##[endgroup]
+2026-10-13T13:01:40.7469486Z Temporarily overriding HOME='/home/runner/work/_temp/67831a22-0c1f-4097-b3de-6dc8f1e8a8b9' before making global git config changes
+2026-10-13T13:01:40.7471424Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:01:40.7474614Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:01:40.7524524Z Deleting the contents of '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:40.7529018Z ##[group]Initializing the repository
+2026-10-13T13:01:40.7533150Z [command]/usr/bin/git init /home/runner/work/uuid/uuid
+2026-10-13T13:01:40.7612630Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T13:01:40.7614498Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T13:01:40.7616785Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T13:01:40.7618924Z hint: call:
+2026-10-13T13:01:40.7619563Z hint:
+2026-10-13T13:01:40.7620342Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T13:01:40.7621322Z hint:
+2026-10-13T13:01:40.7622426Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T13:01:40.7623884Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T13:01:40.7624981Z hint:
+2026-10-13T13:01:40.7625602Z hint: 	git branch -m <name>
+2026-10-13T13:01:40.7626355Z hint:
+2026-10-13T13:01:40.7627405Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T13:01:40.7628934Z Initialized empty Git repository in /home/runner/work/uuid/uuid/.git/
+2026-10-13T13:01:40.7631448Z [command]/usr/bin/git remote add origin https://github.com/uuidjs/uuid
+2026-10-13T13:01:40.7676454Z ##[endgroup]
+2026-10-13T13:01:40.7677804Z ##[group]Disabling automatic garbage collection
+2026-10-13T13:01:40.7679729Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T13:01:40.7716024Z ##[endgroup]
+2026-10-13T13:01:40.7717555Z ##[group]Setting up auth
+2026-10-13T13:01:40.7722936Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:01:40.7759353Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:01:40.8105837Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:01:40.8141533Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:01:40.8394481Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:01:40.8429684Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:01:40.8664471Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T13:01:40.8703048Z ##[endgroup]
+2026-10-13T13:01:40.8704258Z ##[group]Fetching the repository
+2026-10-13T13:01:40.8712139Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=10 origin +b9ed7c753ec7c6db913849a7117be0efc0a3c186:refs/remotes/origin/main
+2026-10-13T13:01:41.4600960Z From https://github.com/uuidjs/uuid
+2026-10-13T13:01:41.4602928Z  * [new ref]         b9ed7c753ec7c6db913849a7117be0efc0a3c186 -> origin/main
+2026-10-13T13:01:41.4606781Z ##[endgroup]
+2026-10-13T13:01:41.4608296Z ##[group]Determining the checkout info
+2026-10-13T13:01:41.4609947Z ##[endgroup]
+2026-10-13T13:01:41.4613253Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T13:01:41.4666733Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T13:01:41.4702081Z ##[group]Checking out the ref
+2026-10-13T13:01:41.4707716Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T13:01:41.4851352Z Switched to a new branch 'main'
+2026-10-13T13:01:41.4854198Z branch 'main' set up to track 'origin/main'.
+2026-10-13T13:01:41.4861670Z ##[endgroup]
+2026-10-13T13:01:41.4910086Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T13:01:41.4939899Z b9ed7c753ec7c6db913849a7117be0efc0a3c186
+2026-10-13T13:01:41.5328195Z ##[group]Run actions/setup-node@v5
+2026-10-13T13:01:41.5329388Z with:
+2026-10-13T13:01:41.5330249Z   node-version: 20.x
+2026-10-13T13:01:41.5331197Z   always-auth: false
+2026-10-13T13:01:41.5332126Z   check-latest: false
+2026-10-13T13:01:41.5341357Z   token: ***
+2026-10-13T13:01:41.5342359Z   package-manager-cache: true
+2026-10-13T13:01:41.5343433Z env:
+2026-10-13T13:01:41.5344200Z   LEFTHOOK: 0
+2026-10-13T13:01:41.5345331Z ##[endgroup]
+2026-10-13T13:01:41.6914686Z Attempting to download 20.x...
+2026-10-13T13:01:41.7025706Z (node:2357) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:01:41.7030206Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:01:42.7189191Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-13T13:01:43.3605289Z Extracting ...
+2026-10-13T13:01:43.3727573Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/f9637340-59f8-44fe-a936-07bbb0d86e74 -f /home/runner/work/_temp/52cc2798-5fd7-4858-91da-1fc6fb3ab5c1
+2026-10-13T13:01:44.4886954Z Adding to the cache ...
+2026-10-13T13:01:46.1414605Z ##[group]Environment details
+2026-10-13T13:01:46.3665792Z node: v20.20.2
+2026-10-13T13:01:46.3666476Z npm: 10.8.2
+2026-10-13T13:01:46.3666803Z yarn: 1.22.22
+2026-10-13T13:01:46.3667676Z ##[endgroup]
+2026-10-13T13:01:46.3693050Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-10-13T13:01:46.4802925Z /home/runner/.npm
+2026-10-13T13:01:46.7505482Z Cache hit for: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:46.7621284Z (node:2357) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T13:01:47.9693928Z Received 33554432 of 97682533 (34.4%), 32.0 MBs/sec
+2026-10-13T13:01:48.4617421Z Received 97682533 of 97682533 (100.0%), 62.3 MBs/sec
+2026-10-13T13:01:48.4618779Z Cache Size: ~93 MB (97682533 B)
+2026-10-13T13:01:48.4769772Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3db81e54-a1c9-4eb6-ac6d-95b6e896ee6a/cache.tzst -P -C /home/runner/work/uuid/uuid --use-compress-program unzstd
+2026-10-13T13:01:48.8403668Z Cache restored successfully
+2026-10-13T13:01:48.8467805Z Cache restored from key: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:48.8764220Z ##[group]Run npm ci
+2026-10-13T13:01:48.8764594Z [36;1mnpm ci[0m
+2026-10-13T13:01:48.9013734Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:48.9014114Z env:
+2026-10-13T13:01:48.9014380Z   LEFTHOOK: 0
+2026-10-13T13:01:48.9014630Z ##[endgroup]
+2026-10-13T13:01:49.5947497Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5948162Z npm warn EBADENGINE   package: '@commitlint/cli@21.2.2',
+2026-10-13T13:01:49.5948745Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5949439Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5949835Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5950225Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5950757Z npm warn EBADENGINE   package: '@commitlint/config-conventional@21.2.2',
+2026-10-13T13:01:49.5951452Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5952179Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5952879Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5953214Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5953702Z npm warn EBADENGINE   package: '@commitlint/config-validator@21.2.0',
+2026-10-13T13:01:49.5954203Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5954702Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5955107Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5955482Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5956204Z npm warn EBADENGINE   package: '@commitlint/ensure@21.2.0',
+2026-10-13T13:01:49.5956894Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5957394Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5957784Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5958671Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5959150Z npm warn EBADENGINE   package: '@commitlint/execute-rule@21.0.1',
+2026-10-13T13:01:49.5959807Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5960384Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5960762Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5961086Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5961565Z npm warn EBADENGINE   package: '@commitlint/format@21.2.2',
+2026-10-13T13:01:49.5962052Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5962857Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5963250Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5963668Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5964285Z npm warn EBADENGINE   package: '@commitlint/is-ignored@21.2.2',
+2026-10-13T13:01:49.5964761Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5965285Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5965656Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5966141Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5966707Z npm warn EBADENGINE   package: '@commitlint/lint@21.2.2',
+2026-10-13T13:01:49.5967166Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5967671Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5968172Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5968478Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5968887Z npm warn EBADENGINE   package: '@commitlint/load@21.2.2',
+2026-10-13T13:01:49.5969519Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5969976Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5970424Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5970787Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5971207Z npm warn EBADENGINE   package: '@commitlint/message@21.2.0',
+2026-10-13T13:01:49.5971674Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5972674Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5973160Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5973485Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5973896Z npm warn EBADENGINE   package: '@commitlint/parse@21.2.2',
+2026-10-13T13:01:49.5974502Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5975082Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5975511Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5975886Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5976308Z npm warn EBADENGINE   package: '@commitlint/read@21.2.1',
+2026-10-13T13:01:49.5976880Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5977357Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5977873Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5978186Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5978656Z npm warn EBADENGINE   package: '@commitlint/resolve-extends@21.2.2',
+2026-10-13T13:01:49.5979142Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5979593Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5979956Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5980484Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5981191Z npm warn EBADENGINE   package: '@commitlint/rules@21.2.2',
+2026-10-13T13:01:49.5981735Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5982477Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5982912Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5983239Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5983672Z npm warn EBADENGINE   package: '@commitlint/to-lines@21.0.1',
+2026-10-13T13:01:49.5984125Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5984856Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5985253Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5985555Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5985995Z npm warn EBADENGINE   package: '@commitlint/top-level@21.2.0',
+2026-10-13T13:01:49.5986443Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5986898Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5987256Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5987576Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5988180Z npm warn EBADENGINE   package: '@commitlint/types@21.2.0',
+2026-10-13T13:01:49.5988640Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.5989085Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5989460Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5989774Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5990313Z npm warn EBADENGINE   package: '@conventional-changelog/git-client@3.1.2',
+2026-10-13T13:01:49.5990911Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.5991467Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5991884Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5992388Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5992913Z npm warn EBADENGINE   package: '@conventional-changelog/template@1.4.0',
+2026-10-13T13:01:49.5993439Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.5993942Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5994353Z npm warn EBADENGINE }
+2026-10-13T13:01:49.5994687Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.5995217Z npm warn EBADENGINE   package: '@google-automations/git-file-utils@3.2.0',
+2026-10-13T13:01:49.5995743Z npm warn EBADENGINE   required: { node: '>= 22' },
+2026-10-13T13:01:49.5996267Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.5996659Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6000965Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6001665Z npm warn EBADENGINE   package: '@simple-libs/child-process-utils@2.0.0',
+2026-10-13T13:01:49.6002418Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6003017Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6003427Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6003783Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6004286Z npm warn EBADENGINE   package: '@simple-libs/stream-utils@2.0.0',
+2026-10-13T13:01:49.6004757Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6005249Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6005642Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6008509Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6008923Z npm warn EBADENGINE   package: 'argue-cli@3.2.0',
+2026-10-13T13:01:49.6009427Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6009936Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6010316Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6017127Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6017555Z npm warn EBADENGINE   package: 'commander@15.0.0',
+2026-10-13T13:01:49.6018028Z npm warn EBADENGINE   required: { node: '>=22.12.0' },
+2026-10-13T13:01:49.6018751Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6019142Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6019503Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6020137Z npm warn EBADENGINE   package: 'conventional-changelog-angular@9.4.0',
+2026-10-13T13:01:49.6020753Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6021239Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6021638Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6022412Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6023058Z npm warn EBADENGINE   package: 'conventional-changelog-conventionalcommits@10.4.0',
+2026-10-13T13:01:49.6023628Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6024132Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6024520Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6026907Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6027415Z npm warn EBADENGINE   package: 'conventional-commits-parser@7.1.2',
+2026-10-13T13:01:49.6027933Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6028417Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6028833Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6063854Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6082052Z npm warn EBADENGINE   package: 'lint-staged@17.5.1',
+2026-10-13T13:01:49.6083299Z npm warn EBADENGINE   required: { node: '>=22.22.1' },
+2026-10-13T13:01:49.6084455Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6085190Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6085731Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6086310Z npm warn EBADENGINE   package: 'npm-normalize-package-bin@6.0.0',
+2026-10-13T13:01:49.6086957Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:49.6087597Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6088039Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6088431Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6088886Z npm warn EBADENGINE   package: 'npm-run-all2@9.0.3',
+2026-10-13T13:01:49.6089567Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0', npm: '>= 10' },
+2026-10-13T13:01:49.6090238Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6090718Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6091137Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6091685Z npm warn EBADENGINE   package: 'ansi-styles@7.0.0',
+2026-10-13T13:01:49.6092993Z npm warn EBADENGINE   required: { node: '>=22' },
+2026-10-13T13:01:49.6093541Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6093928Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6094257Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6094654Z npm warn EBADENGINE   package: 'which@7.0.0',
+2026-10-13T13:01:49.6095188Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:49.6095755Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6096156Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6096475Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6096949Z npm warn EBADENGINE   package: 'read-package-json-fast@6.0.0',
+2026-10-13T13:01:49.6097518Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:49.6098212Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6098785Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6099371Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6100151Z npm warn EBADENGINE   package: 'json-parse-even-better-errors@6.0.0',
+2026-10-13T13:01:49.6101033Z npm warn EBADENGINE   required: { node: '^22.22.2 || ^24.15.0 || >=26.0.0' },
+2026-10-13T13:01:49.6101889Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6102669Z npm warn EBADENGINE }
+2026-10-13T13:01:49.6103174Z npm warn EBADENGINE Unsupported engine {
+2026-10-13T13:01:49.6103868Z npm warn EBADENGINE   package: 'release-please@17.11.2',
+2026-10-13T13:01:49.6104575Z npm warn EBADENGINE   required: { node: '>=22.0.0' },
+2026-10-13T13:01:49.6105318Z npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+2026-10-13T13:01:49.6105878Z npm warn EBADENGINE }
+2026-10-13T13:01:52.7850305Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T13:01:52.8281453Z npm warn deprecated stringify-package@1.0.1: This module is not used anymore, and has been replaced by @npmcli/package-json
+2026-10-13T13:01:52.9014254Z npm warn deprecated git-semver-tags@4.1.1: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:52.9126615Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:52.9136605Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:53.1099784Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:53.1897991Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2026-10-13T13:01:53.1899532Z npm warn deprecated
+2026-10-13T13:01:53.1900086Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2026-10-13T13:01:54.0641639Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:56.4745354Z 
+2026-10-13T13:01:56.4745958Z > uuid@14.0.3 prepare
+2026-10-13T13:01:56.4746923Z > if [ -d .git ]; then npx lefthook install; fi
+2026-10-13T13:01:56.4747336Z 
+2026-10-13T13:01:56.8257909Z sync hooks: ✔️(pre-commit, commit-msg)
+2026-10-13T13:01:56.8499050Z 
+2026-10-13T13:01:56.8500096Z added 886 packages, and audited 887 packages in 8s
+2026-10-13T13:01:56.8500548Z 
+2026-10-13T13:01:56.8500821Z 220 packages are looking for funding
+2026-10-13T13:01:56.8501321Z   run `npm fund` for details
+2026-10-13T13:01:56.8870929Z 
+2026-10-13T13:01:56.8871816Z 26 vulnerabilities (20 moderate, 4 high, 2 critical)
+2026-10-13T13:01:56.8872634Z 
+2026-10-13T13:01:56.8873230Z To address issues that do not require attention, run:
+2026-10-13T13:01:56.8873805Z   npm audit fix
+2026-10-13T13:01:56.8874023Z 
+2026-10-13T13:01:56.8874551Z To address all issues possible (including breaking changes), run:
+2026-10-13T13:01:56.8875255Z   npm audit fix --force
+2026-10-13T13:01:56.8875594Z 
+2026-10-13T13:01:56.8876022Z Some issues need review, and may require choosing
+2026-10-13T13:01:56.8876592Z a different dependency.
+2026-10-13T13:01:56.8876929Z 
+2026-10-13T13:01:56.8877326Z Run `npm audit` for details.
+2026-10-13T13:01:56.9444791Z ##[group]Run npm run test:browser
+2026-10-13T13:01:56.9445122Z [36;1mnpm run test:browser[0m
+2026-10-13T13:01:56.9516465Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:56.9516746Z env:
+2026-10-13T13:01:56.9516967Z   LEFTHOOK: 0
+2026-10-13T13:01:56.9517211Z   CI: true
+2026-10-13T13:01:56.9517647Z   BROWSERSTACK_USER: ***
+2026-10-13T13:01:56.9517960Z   BROWSERSTACK_ACCESS_KEY: ***
+2026-10-13T13:01:56.9518233Z ##[endgroup]
+2026-10-13T13:01:57.0724531Z 
+2026-10-13T13:01:57.0725051Z > uuid@14.0.3 pretest:browser
+2026-10-13T13:01:57.0726329Z > ./scripts/iodd && npm run build && npm-run-all --parallel examples:browser:**
+2026-10-13T13:01:57.0727014Z 
+2026-10-13T13:01:57.1231510Z Running:  npm install --no-save @wdio/browserstack-service@9.27.0 @wdio/cli@9.27.0 @wdio/jasmine-framework@9.27.0 @wdio/local-runner@9.27.0 @wdio/spec-reporter@9.27.0 @wdio/static-server-service@9.27.0
+2026-10-13T13:02:19.9388640Z 
+2026-10-13T13:02:19.9389328Z > uuid@14.0.3 build
+2026-10-13T13:02:19.9389802Z > ./scripts/build.sh
+2026-10-13T13:02:19.9389972Z 
+2026-10-13T13:02:19.9469637Z Building in /home/runner/work/uuid/uuid/dist and /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:02:19.9496271Z Compiling TypeScript files to /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:02:21.5243243Z Packing tarball
+2026-10-13T13:02:24.3011731Z -- fin --
+2026-10-13T13:02:24.4953524Z 
+2026-10-13T13:02:24.4954594Z > uuid@14.0.3 examples:browser:rollup:build
+2026-10-13T13:02:24.4955360Z > cd examples/browser-rollup && npm run build
+2026-10-13T13:02:24.4955724Z 
+2026-10-13T13:02:24.4964851Z 
+2026-10-13T13:02:24.4965893Z > uuid@14.0.3 examples:browser:webpack:build
+2026-10-13T13:02:24.4966864Z > cd examples/browser-webpack && npm run build
+2026-10-13T13:02:24.4967241Z 
+2026-10-13T13:02:24.6146620Z 
+2026-10-13T13:02:24.6153796Z > uuid-example-browser-rollup@0.0.0 build
+2026-10-13T13:02:24.6155048Z > rm -fr node_modules && npm install --no-package-lock && rm -rf dist && rollup -c
+2026-10-13T13:02:24.6155846Z 
+2026-10-13T13:02:24.6172859Z 
+2026-10-13T13:02:24.6173298Z > uuid-example-browser-webpack@0.0.0 build
+2026-10-13T13:02:24.6173894Z > rm -fr node_modules && npm install --no-package-lock && rm -rf dist && webpack
+2026-10-13T13:02:24.6174230Z 
+2026-10-13T13:02:27.5731434Z 
+2026-10-13T13:02:27.5732635Z added 34 packages, and audited 35 packages in 3s
+2026-10-13T13:02:27.5733248Z 
+2026-10-13T13:02:27.5733884Z 7 packages are looking for funding
+2026-10-13T13:02:27.5734599Z   run `npm fund` for details
+2026-10-13T13:02:27.5767235Z 
+2026-10-13T13:02:27.5767910Z 2 vulnerabilities (1 moderate, 1 high)
+2026-10-13T13:02:27.5768293Z 
+2026-10-13T13:02:27.5768717Z To address all issues (including breaking changes), run:
+2026-10-13T13:02:27.5769313Z   npm audit fix --force
+2026-10-13T13:02:27.5769946Z 
+2026-10-13T13:02:27.5770205Z Run `npm audit` for details.
+2026-10-13T13:02:27.6800540Z (node:2838) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/runner/work/uuid/uuid/examples/browser-rollup/rollup.config.js is not specified and it doesn't parse as CommonJS.
+2026-10-13T13:02:27.6807746Z Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+2026-10-13T13:02:27.6809488Z To eliminate this warning, add "type": "module" to /home/runner/work/uuid/uuid/examples/browser-rollup/package.json.
+2026-10-13T13:02:27.6811287Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-13T13:02:27.7663807Z [36m
+2026-10-13T13:02:27.7664362Z [1m./example-all.js[22m → [1mdist/all.js[22m...[39m
+2026-10-13T13:02:28.3369884Z [32mcreated [1mdist/all.js[22m in [1m572ms[22m[39m
+2026-10-13T13:02:28.3371255Z [36m
+2026-10-13T13:02:28.3372877Z [1m./example-v1.js[22m → [1mdist/v1.js[22m...[39m
+2026-10-13T13:02:28.6192902Z [32mcreated [1mdist/v1.js[22m in [1m283ms[22m[39m
+2026-10-13T13:02:28.6193704Z [36m
+2026-10-13T13:02:28.6194885Z [1m./example-v4.js[22m → [1mdist/v4.js[22m...[39m
+2026-10-13T13:02:28.8793206Z [32mcreated [1mdist/v4.js[22m in [1m260ms[22m[39m
+2026-10-13T13:02:28.8794935Z [36m
+2026-10-13T13:02:28.8796064Z [1m./example-v7.js[22m → [1mdist/v7.js[22m...[39m
+2026-10-13T13:02:29.1245217Z [32mcreated [1mdist/v7.js[22m in [1m245ms[22m[39m
+2026-10-13T13:02:29.1247213Z [36m
+2026-10-13T13:02:29.1250600Z [1m./size-v1.js[22m → [1mdist/v1-size.js[22m...[39m
+2026-10-13T13:02:29.3550502Z [32mcreated [1mdist/v1-size.js[22m in [1m230ms[22m[39m
+2026-10-13T13:02:29.3551216Z [36m
+2026-10-13T13:02:29.3552075Z [1m./size-v3.js[22m → [1mdist/v3-size.js[22m...[39m
+2026-10-13T13:02:29.4680614Z 
+2026-10-13T13:02:29.4683244Z added 127 packages, and audited 128 packages in 5s
+2026-10-13T13:02:29.4683888Z 
+2026-10-13T13:02:29.4684369Z 21 packages are looking for funding
+2026-10-13T13:02:29.4684874Z   run `npm fund` for details
+2026-10-13T13:02:29.4775882Z 
+2026-10-13T13:02:29.4776777Z 1 moderate severity vulnerability
+2026-10-13T13:02:29.4777334Z 
+2026-10-13T13:02:29.4777735Z To address all issues, run:
+2026-10-13T13:02:29.4778279Z   npm audit fix --force
+2026-10-13T13:02:29.4778537Z 
+2026-10-13T13:02:29.4778719Z Run `npm audit` for details.
+2026-10-13T13:02:29.5186804Z [32mcreated [1mdist/v3-size.js[22m in [1m163ms[22m[39m
+2026-10-13T13:02:29.5188385Z [36m
+2026-10-13T13:02:29.5189469Z [1m./size-v4.js[22m → [1mdist/v4-size.js[22m...[39m
+2026-10-13T13:02:29.7466232Z [32mcreated [1mdist/v4-size.js[22m in [1m229ms[22m[39m
+2026-10-13T13:02:29.7467273Z [36m
+2026-10-13T13:02:29.7468570Z [1m./size-v5.js[22m → [1mdist/v5-size.js[22m...[39m
+2026-10-13T13:02:29.8934523Z [32mcreated [1mdist/v5-size.js[22m in [1m146ms[22m[39m
+2026-10-13T13:02:29.8935391Z [36m
+2026-10-13T13:02:29.8936143Z [1m./size-v6.js[22m → [1mdist/v6-size.js[22m...[39m
+2026-10-13T13:02:30.1055464Z [32mcreated [1mdist/v6-size.js[22m in [1m212ms[22m[39m
+2026-10-13T13:02:30.1056563Z [36m
+2026-10-13T13:02:30.1057657Z [1m./size-v7.js[22m → [1mdist/v7-size.js[22m...[39m
+2026-10-13T13:02:30.3336423Z [32mcreated [1mdist/v7-size.js[22m in [1m228ms[22m[39m
+2026-10-13T13:02:31.0889278Z asset [1m[32mall.js[39m[22m 11.6 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: all)
+2026-10-13T13:02:31.0890674Z asset [1m[32mv3-size.js[39m[22m 4.72 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v3-size)
+2026-10-13T13:02:31.0922644Z asset [1m[32mv5-size.js[39m[22m 2.78 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v5-size)
+2026-10-13T13:02:31.0924515Z asset [1m[32mv6-size.js[39m[22m 2.51 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v6-size)
+2026-10-13T13:02:31.0925917Z asset [1m[32mv1.js[39m[22m 2.23 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v1)
+2026-10-13T13:02:31.0927246Z asset [1m[32mv7.js[39m[22m 1.94 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v7)
+2026-10-13T13:02:31.0928639Z asset [1m[32mv1-size.js[39m[22m 1.52 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v1-size)
+2026-10-13T13:02:31.0929661Z asset [1m[32mv4.js[39m[22m 1.44 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v4)
+2026-10-13T13:02:31.0930634Z asset [1m[32mv7-size.js[39m[22m 1.18 KiB [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v7-size)
+2026-10-13T13:02:31.0931499Z asset [1m[32mv4-size.js[39m[22m 732 bytes [1m[32m[emitted][39m[22m [1m[32m[minimized][39m[22m (name: v4-size)
+2026-10-13T13:02:31.0932192Z orphan modules 21.9 KiB [1m[33m[orphan][39m[22m 21 modules
+2026-10-13T13:02:31.0933130Z cacheable modules 68.6 KiB
+2026-10-13T13:02:31.0933942Z   [1m./example-all.js + 20 modules[39m[22m 24.6 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0934794Z   [1m./example-v1.js + 4 modules[39m[22m 5.1 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0936015Z   [1m./example-v4.js + 4 modules[39m[22m 3.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0936793Z   [1m./example-v7.js + 4 modules[39m[22m 4.49 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0937549Z   [1m./size-v1.js + 3 modules[39m[22m 3.93 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0938278Z   [1m./size-v3.js + 7 modules[39m[22m 9.38 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0939102Z   [1m./size-v4.js + 3 modules[39m[22m 2.13 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0961717Z   [1m./size-v5.js + 7 modules[39m[22m 6.03 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0962970Z   [1m./size-v6.js + 8 modules[39m[22m 6.27 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0964080Z   [1m./size-v7.js + 3 modules[39m[22m 3.32 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+2026-10-13T13:02:31.0964804Z webpack 5.93.0 compiled [1m[32msuccessfully[39m[22m in 1050 ms
+2026-10-13T13:02:31.1249072Z 
+2026-10-13T13:02:31.1250016Z > uuid@14.0.3 test:browser
+2026-10-13T13:02:31.1250551Z > wdio run ./wdio.conf.js
+2026-10-13T13:02:31.1250850Z 
+2026-10-13T13:02:32.5081891Z 2026-10-13T13:02:32.507Z WARN @wdio/browserstack-service: Accessibility Automation will run only on Chrome browsers.
+2026-10-13T13:02:32.5083954Z 2026-10-13T13:02:32.508Z WARN @wdio/browserstack-service: Accessibility Automation will run only on Chrome browsers.
+2026-10-13T13:02:32.5085561Z 2026-10-13T13:02:32.508Z WARN @wdio/browserstack-service: Accessibility Automation will run only on Chrome browsers.
+2026-10-13T13:02:37.6397989Z 
+2026-10-13T13:02:37.6398902Z Execution of 4 workers started at 2026-10-13T13:02:37.639Z
+2026-10-13T13:02:37.6399410Z 
+2026-10-13T13:02:39.9053957Z [1-0] RUNNING in Firefox(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:02:42.3479198Z [3-0] RUNNING in Safari(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:02:42.4069568Z [0-0] RUNNING in Chrome(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:02:42.4506658Z [2-0] RUNNING in Edge(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:03:14.2143237Z [0-0] PASSED in Chrome(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:03:14.4349743Z [2-0] PASSED in Edge(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:03:18.4410085Z [1-0] PASSED in Firefox(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1653849Z [3-0] PASSED in Safari(latest) - file:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1655855Z 
+2026-10-13T13:05:30.1656065Z  "spec" Reporter:
+2026-10-13T13:05:30.1658585Z ------------------------------------------------------------------
+2026-10-13T13:05:30.1659798Z [chrome 155.0.8059.40 windows #0-0] Running: chrome (v155.0.8059.40) on windows
+2026-10-13T13:05:30.1661187Z [chrome 155.0.8059.40 windows #0-0] Session ID: cc662693d9a6b1bec6ec8e0e294dfe65e699ae1c
+2026-10-13T13:05:30.1662165Z [chrome 155.0.8059.40 windows #0-0]
+2026-10-13T13:05:30.1663382Z [chrome 155.0.8059.40 windows #0-0] » ile:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1664063Z [chrome 155.0.8059.40 windows #0-0] BrowserStack Local Testing
+2026-10-13T13:05:30.1664694Z [chrome 155.0.8059.40 windows #0-0]     webpack
+2026-10-13T13:05:30.1665686Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders all
+2026-10-13T13:05:30.1666609Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1667455Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1668070Z [chrome 155.0.8059.40 windows #0-0]
+2026-10-13T13:05:30.1668620Z [chrome 155.0.8059.40 windows #0-0]     rollup
+2026-10-13T13:05:30.1669333Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders all
+2026-10-13T13:05:30.1670083Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1670771Z [chrome 155.0.8059.40 windows #0-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1671591Z [chrome 155.0.8059.40 windows #0-0]
+2026-10-13T13:05:30.1672142Z [chrome 155.0.8059.40 windows #0-0] 6 passing (26.4s)
+2026-10-13T13:05:30.1672911Z ------------------------------------------------------------------
+2026-10-13T13:05:30.1673548Z [MicrosoftEdge 154.0.4258.37 windows #2-0] Running: MicrosoftEdge (v154.0.4258.37) on windows
+2026-10-13T13:05:30.1674252Z [MicrosoftEdge 154.0.4258.37 windows #2-0] Session ID: 167822dc245c2b8e89fad669e0944da9082fc45c
+2026-10-13T13:05:30.1674758Z [MicrosoftEdge 154.0.4258.37 windows #2-0]
+2026-10-13T13:05:30.1675381Z [MicrosoftEdge 154.0.4258.37 windows #2-0] » ile:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1675958Z [MicrosoftEdge 154.0.4258.37 windows #2-0] BrowserStack Local Testing
+2026-10-13T13:05:30.1676460Z [MicrosoftEdge 154.0.4258.37 windows #2-0]     webpack
+2026-10-13T13:05:30.1677206Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders all
+2026-10-13T13:05:30.1677796Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1678387Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1678810Z [MicrosoftEdge 154.0.4258.37 windows #2-0]
+2026-10-13T13:05:30.1679193Z [MicrosoftEdge 154.0.4258.37 windows #2-0]     rollup
+2026-10-13T13:05:30.1679702Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders all
+2026-10-13T13:05:30.1680237Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1680774Z [MicrosoftEdge 154.0.4258.37 windows #2-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1681169Z [MicrosoftEdge 154.0.4258.37 windows #2-0]
+2026-10-13T13:05:30.1681584Z [MicrosoftEdge 154.0.4258.37 windows #2-0] 6 passing (25.4s)
+2026-10-13T13:05:30.1682047Z ------------------------------------------------------------------
+2026-10-13T13:05:30.1682842Z [firefox 157.0 windows #1-0] Running: firefox (v157.0) on windows
+2026-10-13T13:05:30.1683394Z [firefox 157.0 windows #1-0] Session ID: a8c4701e21a886b2ed2fabe9c45e5a901a118aa0
+2026-10-13T13:05:30.1683834Z [firefox 157.0 windows #1-0]
+2026-10-13T13:05:30.1684303Z [firefox 157.0 windows #1-0] » ile:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1684759Z [firefox 157.0 windows #1-0] BrowserStack Local Testing
+2026-10-13T13:05:30.1685131Z [firefox 157.0 windows #1-0]     webpack
+2026-10-13T13:05:30.1685549Z [firefox 157.0 windows #1-0]        ✓ renders all
+2026-10-13T13:05:30.1685980Z [firefox 157.0 windows #1-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1686425Z [firefox 157.0 windows #1-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1686770Z [firefox 157.0 windows #1-0]
+2026-10-13T13:05:30.1687123Z [firefox 157.0 windows #1-0]     rollup
+2026-10-13T13:05:30.1687533Z [firefox 157.0 windows #1-0]        ✓ renders all
+2026-10-13T13:05:30.1687977Z [firefox 157.0 windows #1-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1688428Z [firefox 157.0 windows #1-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1688767Z [firefox 157.0 windows #1-0]
+2026-10-13T13:05:30.1689102Z [firefox 157.0 windows #1-0] 6 passing (26.3s)
+2026-10-13T13:05:30.1689538Z ------------------------------------------------------------------
+2026-10-13T13:05:30.1689988Z [Safari 26.4 macOS #3-0] Running: Safari (v26.4) on macOS
+2026-10-13T13:05:30.1690506Z [Safari 26.4 macOS #3-0] Session ID: cd6a308594576aa997323db10b421e67d229e305
+2026-10-13T13:05:30.1690902Z [Safari 26.4 macOS #3-0]
+2026-10-13T13:05:30.1691345Z [Safari 26.4 macOS #3-0] » ile:///test/browser/browser.spec.js
+2026-10-13T13:05:30.1691775Z [Safari 26.4 macOS #3-0] BrowserStack Local Testing
+2026-10-13T13:05:30.1692149Z [Safari 26.4 macOS #3-0]     webpack
+2026-10-13T13:05:30.1692928Z [Safari 26.4 macOS #3-0]        ✓ renders all
+2026-10-13T13:05:30.1693370Z [Safari 26.4 macOS #3-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1693802Z [Safari 26.4 macOS #3-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1694133Z [Safari 26.4 macOS #3-0]
+2026-10-13T13:05:30.1694426Z [Safari 26.4 macOS #3-0]     rollup
+2026-10-13T13:05:30.1694810Z [Safari 26.4 macOS #3-0]        ✓ renders all
+2026-10-13T13:05:30.1695367Z [Safari 26.4 macOS #3-0]        ✓ renders v1 only
+2026-10-13T13:05:30.1695778Z [Safari 26.4 macOS #3-0]        ✓ renders v4 only
+2026-10-13T13:05:30.1696078Z [Safari 26.4 macOS #3-0]
+2026-10-13T13:05:30.1696386Z [Safari 26.4 macOS #3-0] 6 passing (2m 37.8s)
+2026-10-13T13:05:30.1696583Z 
+2026-10-13T13:05:30.1696589Z 
+2026-10-13T13:05:30.1696842Z Spec Files:	 4 passed, 4 total (100% completed) in 00:02:52  
+2026-10-13T13:05:30.1697099Z 
+2026-10-13T13:05:30.6527307Z 
+2026-10-13T13:05:30.6528651Z Visit https://automation.browserstack.com/builds/rlgtlcmiwbqrf11yn73kkakpukox3hoobfvt771l to view build report, insights, and many more debugging information all at one place!
+2026-10-13T13:05:30.6529383Z 
+2026-10-13T13:05:31.6050591Z ##[group]Run npx bundlewatch --config bundlewatch.config.json
+2026-10-13T13:05:31.6051299Z [36;1mnpx bundlewatch --config bundlewatch.config.json[0m
+2026-10-13T13:05:31.6119297Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:05:31.6119573Z env:
+2026-10-13T13:05:31.6119780Z   LEFTHOOK: 0
+2026-10-13T13:05:31.6120232Z   BUNDLEWATCH_GITHUB_TOKEN: ***
+2026-10-13T13:05:31.6120498Z ##[endgroup]
+2026-10-13T13:05:32.8521598Z [INFO] Retrieving comparison
+2026-10-13T13:05:33.4232580Z [INFO] Saving results
+2026-10-13T13:05:34.5686631Z 
+2026-10-13T13:05:34.5687714Z Result breakdown at: https://ja2r7.app.goo.gl/udBUupzyDwjVoeJUA
+2026-10-13T13:05:34.5688414Z 
+2026-10-13T13:05:34.5690422Z PASS ./examples/browser-rollup/dist/v1-size.js: 691B < 1KB (no difference) (gzip)
+2026-10-13T13:05:34.5691503Z PASS ./examples/browser-rollup/dist/v3-size.js: 181B < 2.1KB (no difference) (gzip)
+2026-10-13T13:05:34.5692687Z PASS ./examples/browser-rollup/dist/v4-size.js: 334B < 716B (no difference) (gzip)
+2026-10-13T13:05:34.5693835Z PASS ./examples/browser-rollup/dist/v5-size.js: 181B < 1.5KB (no difference) (gzip)
+2026-10-13T13:05:34.5694911Z PASS ./examples/browser-rollup/dist/v6-size.js: 1.12KB < 1.6KB (no difference) (gzip)
+2026-10-13T13:05:34.5695950Z PASS ./examples/browser-rollup/dist/v7-size.js: 614B < 819B (no difference) (gzip)
+2026-10-13T13:05:34.5696963Z PASS ./examples/browser-webpack/dist/v1-size.js: 791B < 1KB (no difference) (gzip)
+2026-10-13T13:05:34.5698010Z PASS ./examples/browser-webpack/dist/v3-size.js: 1.92KB < 2.1KB (no difference) (gzip)
+2026-10-13T13:05:34.5699054Z PASS ./examples/browser-webpack/dist/v4-size.js: 441B < 716B (no difference) (gzip)
+2026-10-13T13:05:34.5699784Z PASS ./examples/browser-webpack/dist/v5-size.js: 1.3KB < 1.5KB (no difference) (gzip)
+2026-10-13T13:05:34.5700444Z PASS ./examples/browser-webpack/dist/v6-size.js: 1.13KB < 1.6KB (no difference) (gzip)
+2026-10-13T13:05:34.5701159Z PASS ./examples/browser-webpack/dist/v7-size.js: 630B < 819B (no difference) (gzip)
+2026-10-13T13:05:34.5701502Z 
+2026-10-13T13:05:34.5701632Z bundlewatch PASS
+2026-10-13T13:05:34.5702350Z Everything is in check (+0B, -0B, ±0.0%)
+2026-10-13T13:05:34.5702635Z 
+2026-10-13T13:05:34.5926241Z Post job cleanup.
+2026-10-13T13:05:34.7272712Z (node:3169) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:05:34.7274031Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:05:34.7276091Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd, not saving cache.
+2026-10-13T13:05:34.7438996Z Post job cleanup.
+2026-10-13T13:05:34.8311898Z [command]/usr/bin/git version
+2026-10-13T13:05:34.8351050Z git version 2.55.0
+2026-10-13T13:05:34.8387515Z Temporarily overriding HOME='/home/runner/work/_temp/4ddeee68-cc72-4d58-9388-5f77b8efbc87' before making global git config changes
+2026-10-13T13:05:34.8388996Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:05:34.8393835Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:05:34.8430464Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:05:34.8464807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:05:34.8702566Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:05:34.8729122Z http.https://github.com/.extraheader
+2026-10-13T13:05:34.8739961Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T13:05:34.8774071Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:05:34.9065172Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:05:34.9107667Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:05:34.9544931Z Cleaning up orphan processes

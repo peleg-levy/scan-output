@@ -1,0 +1,257 @@
+﻿2026-07-20T10:56:41.4717532Z Current runner version: '2.335.1'
+2026-07-20T10:56:41.4743488Z ##[group]Runner Image Provisioner
+2026-07-20T10:56:41.4744431Z Hosted Compute Agent
+2026-07-20T10:56:41.4745044Z Version: 20260707.563
+2026-07-20T10:56:41.4745654Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-20T10:56:41.4746457Z Build Date: 2026-07-07T19:33:50Z
+2026-07-20T10:56:41.4747161Z Worker ID: {8a4bfbe4-d0d5-43cd-b03c-6ddd9f156148}
+2026-07-20T10:56:41.4747870Z Azure Region: westus
+2026-07-20T10:56:41.4748484Z ##[endgroup]
+2026-07-20T10:56:41.4749993Z ##[group]Operating System
+2026-07-20T10:56:41.4750725Z Ubuntu
+2026-07-20T10:56:41.4751646Z 24.04.4
+2026-07-20T10:56:41.4752163Z LTS
+2026-07-20T10:56:41.4752730Z ##[endgroup]
+2026-07-20T10:56:41.4753271Z ##[group]Runner Image
+2026-07-20T10:56:41.4753851Z Image: ubuntu-24.04
+2026-07-20T10:56:41.4754510Z Version: 20260714.240.1
+2026-07-20T10:56:41.4755761Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-20T10:56:41.4757398Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+2026-07-20T10:56:41.4758378Z ##[endgroup]
+2026-07-20T10:56:41.4759627Z ##[group]GITHUB_TOKEN Permissions
+2026-07-20T10:56:41.4761987Z Contents: read
+2026-07-20T10:56:41.4762717Z Metadata: read
+2026-07-20T10:56:41.4763280Z PullRequests: read
+2026-07-20T10:56:41.4763864Z ##[endgroup]
+2026-07-20T10:56:41.4766139Z Secret source: None
+2026-07-20T10:56:41.4767155Z Prepare workflow directory
+2026-07-20T10:56:41.5174830Z Prepare all required actions
+2026-07-20T10:56:41.5214363Z Getting action download info
+2026-07-20T10:56:41.8921979Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-07-20T10:56:42.0125512Z Download action repository 'projectdiscovery/actions@v1' (SHA:3873640690165ae484e5f44607d89d0b7e77d91a)
+2026-07-20T10:56:42.2652445Z Download action repository 'actions/github-script@v7' (SHA:f28e40c7f34bde8b3046d885e986cb6290c5673b)
+2026-07-20T10:56:42.6969304Z Getting action download info
+2026-07-20T10:56:42.8373929Z Download action repository 'dwisiswant0/setup-go@main' (SHA:d49d516376e53cadc7072ad8774b18d628baab29)
+2026-07-20T10:56:43.3238483Z Complete job name: validate-domains
+2026-07-20T10:56:43.4125211Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T10:56:43.4137135Z ##[group]Run actions/checkout@v4
+2026-07-20T10:56:43.4138428Z with:
+2026-07-20T10:56:43.4139518Z   repository: projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:43.4149671Z   token: ***
+2026-07-20T10:56:43.4150544Z   ssh-strict: true
+2026-07-20T10:56:43.4151787Z   ssh-user: git
+2026-07-20T10:56:43.4152696Z   persist-credentials: true
+2026-07-20T10:56:43.4153682Z   clean: true
+2026-07-20T10:56:43.4154606Z   sparse-checkout-cone-mode: true
+2026-07-20T10:56:43.4155678Z   fetch-depth: 1
+2026-07-20T10:56:43.4156559Z   fetch-tags: false
+2026-07-20T10:56:43.4157470Z   show-progress: true
+2026-07-20T10:56:43.4158361Z   lfs: false
+2026-07-20T10:56:43.4159241Z   submodules: false
+2026-07-20T10:56:43.4160156Z   set-safe-directory: true
+2026-07-20T10:56:43.4161733Z ##[endgroup]
+2026-07-20T10:56:43.5247620Z Syncing repository: projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:43.5251405Z ##[group]Getting Git version info
+2026-07-20T10:56:43.5253318Z Working directory is '/home/runner/work/public-bugbounty-programs/public-bugbounty-programs'
+2026-07-20T10:56:43.5255964Z [command]/usr/bin/git version
+2026-07-20T10:56:43.5345418Z git version 2.54.0
+2026-07-20T10:56:43.5371350Z ##[endgroup]
+2026-07-20T10:56:43.5388656Z Temporarily overriding HOME='/home/runner/work/_temp/51a321e1-d275-435f-a4bd-53723fce0313' before making global git config changes
+2026-07-20T10:56:43.5394248Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T10:56:43.5399684Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:43.5460466Z Deleting the contents of '/home/runner/work/public-bugbounty-programs/public-bugbounty-programs'
+2026-07-20T10:56:43.5465830Z ##[group]Initializing the repository
+2026-07-20T10:56:43.5472763Z [command]/usr/bin/git init /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:43.5605996Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-20T10:56:43.5609706Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-20T10:56:43.5613509Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-20T10:56:43.5616417Z hint: call:
+2026-07-20T10:56:43.5617871Z hint:
+2026-07-20T10:56:43.5619699Z hint: 	git config --global init.defaultBranch <name>
+2026-07-20T10:56:43.5622363Z hint:
+2026-07-20T10:56:43.5624589Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-20T10:56:43.5627983Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-20T10:56:43.5636094Z hint:
+2026-07-20T10:56:43.5637670Z hint: 	git branch -m <name>
+2026-07-20T10:56:43.5639380Z hint:
+2026-07-20T10:56:43.5641933Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-20T10:56:43.5646546Z Initialized empty Git repository in /home/runner/work/public-bugbounty-programs/public-bugbounty-programs/.git/
+2026-07-20T10:56:43.5654289Z [command]/usr/bin/git remote add origin https://github.com/projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:43.5680428Z ##[endgroup]
+2026-07-20T10:56:43.5683499Z ##[group]Disabling automatic garbage collection
+2026-07-20T10:56:43.5685921Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-20T10:56:43.5723135Z ##[endgroup]
+2026-07-20T10:56:43.5726326Z ##[group]Setting up auth
+2026-07-20T10:56:43.5733932Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T10:56:43.5777954Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T10:56:43.6156945Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T10:56:43.6191630Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T10:56:43.6412363Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T10:56:43.6444967Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T10:56:43.6670703Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-20T10:56:43.6705626Z ##[endgroup]
+2026-07-20T10:56:43.6707172Z ##[group]Fetching the repository
+2026-07-20T10:56:43.6716057Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +916c738b8194c33d251e702933f63fd3d73801a4:refs/remotes/pull/1102/merge
+2026-07-20T10:56:44.1681774Z From https://github.com/projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:44.1685049Z  * [new ref]         916c738b8194c33d251e702933f63fd3d73801a4 -> pull/1102/merge
+2026-07-20T10:56:44.1723389Z ##[endgroup]
+2026-07-20T10:56:44.1725810Z ##[group]Determining the checkout info
+2026-07-20T10:56:44.1728534Z ##[endgroup]
+2026-07-20T10:56:44.1730197Z [command]/usr/bin/git sparse-checkout disable
+2026-07-20T10:56:44.1777972Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-20T10:56:44.1808266Z ##[group]Checking out the ref
+2026-07-20T10:56:44.1811944Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1102/merge
+2026-07-20T10:56:44.1889990Z Note: switching to 'refs/remotes/pull/1102/merge'.
+2026-07-20T10:56:44.1891900Z 
+2026-07-20T10:56:44.1892976Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-07-20T10:56:44.1896542Z changes and commit them, and you can discard any commits you make in this
+2026-07-20T10:56:44.1900143Z state without impacting any branches by switching back to a branch.
+2026-07-20T10:56:44.1902703Z 
+2026-07-20T10:56:44.1904326Z If you want to create a new branch to retain commits you create, you may
+2026-07-20T10:56:44.1907515Z do so (now or later) by using -c with the switch command. Example:
+2026-07-20T10:56:44.1909489Z 
+2026-07-20T10:56:44.1910168Z   git switch -c <new-branch-name>
+2026-07-20T10:56:44.1911418Z 
+2026-07-20T10:56:44.1912077Z Or undo this operation with:
+2026-07-20T10:56:44.1912900Z 
+2026-07-20T10:56:44.1913472Z   git switch -
+2026-07-20T10:56:44.1914176Z 
+2026-07-20T10:56:44.1915507Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-07-20T10:56:44.1917799Z 
+2026-07-20T10:56:44.1919924Z HEAD is now at 916c738 Merge 0e274c4d294f1107e1b8c783a1f5c3108ec35d7d into ecce42189ec1a95aea8626804baf2dc63c3b2524
+2026-07-20T10:56:44.1926185Z ##[endgroup]
+2026-07-20T10:56:44.1940238Z [command]/usr/bin/git log -1 --format=%H
+2026-07-20T10:56:44.1962111Z 916c738b8194c33d251e702933f63fd3d73801a4
+2026-07-20T10:56:44.2328985Z ##[group]Run projectdiscovery/actions/setup/go@v1
+2026-07-20T10:56:44.2330213Z with:
+2026-07-20T10:56:44.2331272Z   check-latest: true
+2026-07-20T10:56:44.2339946Z   token: ***
+2026-07-20T10:56:44.2340730Z   cache: true
+2026-07-20T10:56:44.2341863Z   cache-dependency-path: **/go.mod
+2026-07-20T10:56:44.2342886Z ##[endgroup]
+2026-07-20T10:56:44.2507243Z ##[group]Run dwisiswant0/setup-go@main
+2026-07-20T10:56:44.2508316Z with:
+2026-07-20T10:56:44.2509098Z   go-version-file: go.mod
+2026-07-20T10:56:44.2510015Z   check-latest: true
+2026-07-20T10:56:44.2518977Z   token: ***
+2026-07-20T10:56:44.2519778Z   cache: true
+2026-07-20T10:56:44.2520620Z   cache-dependency-path: **/go.mod
+2026-07-20T10:56:44.2521821Z ##[endgroup]
+2026-07-20T10:56:44.3853140Z Setup go version spec 1.26
+2026-07-20T10:56:44.3859795Z Attempting to resolve the latest version from the manifest...
+2026-07-20T10:56:45.2059654Z matching 1.26...
+2026-07-20T10:56:45.2092525Z Resolved as '1.26.5'
+2026-07-20T10:56:45.2107521Z Found in cache @ /opt/hostedtoolcache/go/1.26.5/x64
+2026-07-20T10:56:45.2123470Z Added go to the path
+2026-07-20T10:56:45.2124196Z Successfully set up Go version 1.26
+2026-07-20T10:56:45.9321047Z [command]/opt/hostedtoolcache/go/1.26.5/x64/bin/go env GOMODCACHE
+2026-07-20T10:56:45.9354261Z [command]/opt/hostedtoolcache/go/1.26.5/x64/bin/go env GOCACHE
+2026-07-20T10:56:45.9401806Z /home/runner/go/pkg/mod
+2026-07-20T10:56:45.9418596Z /home/runner/.cache/go-build
+2026-07-20T10:56:46.1948914Z Cache hit for: setup-go-Linux-x64-ubuntu24-go-1.26.5-8817808378803099ab23483e39667443269d260e5add00674b9709609cc39e1c
+2026-07-20T10:56:47.5026417Z Received 0 of 64360067 (0.0%), 0.0 MBs/sec
+2026-07-20T10:56:48.2229368Z Received 64360067 of 64360067 (100.0%), 35.7 MBs/sec
+2026-07-20T10:56:48.2230715Z Cache Size: ~61 MB (64360067 B)
+2026-07-20T10:56:48.2348789Z [command]/usr/bin/tar -xf /home/runner/work/_temp/dbf82ad2-33b6-4b75-ae3b-422167769720/cache.tzst -P -C /home/runner/work/public-bugbounty-programs/public-bugbounty-programs --use-compress-program unzstd
+2026-07-20T10:56:48.7770218Z Cache restored successfully
+2026-07-20T10:56:48.7807471Z Cache restored from key: setup-go-Linux-x64-ubuntu24-go-1.26.5-8817808378803099ab23483e39667443269d260e5add00674b9709609cc39e1c
+2026-07-20T10:56:48.7860125Z go version go1.26.5 linux/amd64
+2026-07-20T10:56:48.7871589Z 
+2026-07-20T10:56:48.7872142Z ##[group]go env
+2026-07-20T10:56:48.8349021Z AR='ar'
+2026-07-20T10:56:48.8349479Z CC='gcc'
+2026-07-20T10:56:48.8349906Z CGO_CFLAGS='-O2 -g'
+2026-07-20T10:56:48.8350306Z CGO_CPPFLAGS=''
+2026-07-20T10:56:48.8351292Z CGO_CXXFLAGS='-O2 -g'
+2026-07-20T10:56:48.8351766Z CGO_ENABLED='1'
+2026-07-20T10:56:48.8352106Z CGO_FFLAGS='-O2 -g'
+2026-07-20T10:56:48.8352455Z CGO_LDFLAGS='-O2 -g'
+2026-07-20T10:56:48.8352799Z CXX='g++'
+2026-07-20T10:56:48.8353109Z GCCGO='gccgo'
+2026-07-20T10:56:48.8353421Z GO111MODULE=''
+2026-07-20T10:56:48.8353761Z GOAMD64='v1'
+2026-07-20T10:56:48.8354069Z GOARCH='amd64'
+2026-07-20T10:56:48.8354378Z GOAUTH='netrc'
+2026-07-20T10:56:48.8354730Z GOBIN=''
+2026-07-20T10:56:48.8355104Z GOCACHE='/home/runner/.cache/go-build'
+2026-07-20T10:56:48.8355587Z GOCACHEPROG=''
+2026-07-20T10:56:48.8355950Z GODEBUG=''
+2026-07-20T10:56:48.8356303Z GOENV='/home/runner/.config/go/env'
+2026-07-20T10:56:48.8356756Z GOEXE=''
+2026-07-20T10:56:48.8357069Z GOEXPERIMENT=''
+2026-07-20T10:56:48.8357411Z GOFIPS140='off'
+2026-07-20T10:56:48.8357756Z GOFLAGS=''
+2026-07-20T10:56:48.8358871Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build556864087=/tmp/go-build -gno-record-gcc-switches'
+2026-07-20T10:56:48.8360113Z GOHOSTARCH='amd64'
+2026-07-20T10:56:48.8360485Z GOHOSTOS='linux'
+2026-07-20T10:56:48.8361107Z GOINSECURE=''
+2026-07-20T10:56:48.8361832Z GOMOD='/home/runner/work/public-bugbounty-programs/public-bugbounty-programs/go.mod'
+2026-07-20T10:56:48.8362614Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-07-20T10:56:48.8363061Z GONOPROXY=''
+2026-07-20T10:56:48.8363380Z GONOSUMDB=''
+2026-07-20T10:56:48.8364006Z GOOS='linux'
+2026-07-20T10:56:48.8364369Z GOPATH='/home/runner/go'
+2026-07-20T10:56:48.8364742Z GOPRIVATE=''
+2026-07-20T10:56:48.8365167Z GOPROXY='https://proxy.golang.org,direct'
+2026-07-20T10:56:48.8365729Z GOROOT='/opt/hostedtoolcache/go/1.26.5/x64'
+2026-07-20T10:56:48.8366230Z GOSUMDB='sum.golang.org'
+2026-07-20T10:56:48.8366607Z GOTELEMETRY='local'
+2026-07-20T10:56:48.8367032Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-07-20T10:56:48.8367598Z GOTMPDIR=''
+2026-07-20T10:56:48.8367925Z GOTOOLCHAIN='local'
+2026-07-20T10:56:48.8368477Z GOTOOLDIR='/opt/hostedtoolcache/go/1.26.5/x64/pkg/tool/linux_amd64'
+2026-07-20T10:56:48.8369163Z GOVCS=''
+2026-07-20T10:56:48.8369478Z GOVERSION='go1.26.5'
+2026-07-20T10:56:48.8369804Z GOWORK=''
+2026-07-20T10:56:48.8370116Z PKG_CONFIG='pkg-config'
+2026-07-20T10:56:48.8370361Z 
+2026-07-20T10:56:48.8371198Z ##[endgroup]
+2026-07-20T10:56:48.8538775Z ##[group]Run set -o pipefail
+2026-07-20T10:56:48.8539229Z [36;1mset -o pipefail[0m
+2026-07-20T10:56:48.8539582Z [36;1mmake validate-domains | tee validate-domains.log[0m
+2026-07-20T10:56:48.8540017Z [36;1mecho "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"[0m
+2026-07-20T10:56:48.8540403Z [36;1mif [ -s validate-domains.log ]; then[0m
+2026-07-20T10:56:48.8540761Z [36;1m  echo "has_output=true" >> "$GITHUB_OUTPUT"[0m
+2026-07-20T10:56:48.8541514Z [36;1m  {[0m
+2026-07-20T10:56:48.8541727Z [36;1m    echo "body<<EOF"[0m
+2026-07-20T10:56:48.8541994Z [36;1m    echo "## Validate Domains Check"[0m
+2026-07-20T10:56:48.8542492Z [36;1m    echo[0m
+2026-07-20T10:56:48.8542957Z [36;1m    echo "Invalid domains were found during the check:"[0m
+2026-07-20T10:56:48.8543530Z [36;1m    echo[0m
+2026-07-20T10:56:48.8543893Z [36;1m    echo '```text'[0m
+2026-07-20T10:56:48.8544359Z [36;1m    head -c 60000 validate-domains.log[0m
+2026-07-20T10:56:48.8544860Z [36;1m    echo[0m
+2026-07-20T10:56:48.8545230Z [36;1m    echo '```'[0m
+2026-07-20T10:56:48.8545587Z [36;1m    echo "EOF"[0m
+2026-07-20T10:56:48.8545931Z [36;1m  } >> "$GITHUB_OUTPUT"[0m
+2026-07-20T10:56:48.8546335Z [36;1melse[0m
+2026-07-20T10:56:48.8546800Z [36;1m  echo "has_output=false" >> "$GITHUB_OUTPUT"[0m
+2026-07-20T10:56:48.8547324Z [36;1mfi[0m
+2026-07-20T10:56:48.8634015Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-20T10:56:48.8634454Z env:
+2026-07-20T10:56:48.8634667Z   GOTOOLCHAIN: local
+2026-07-20T10:56:48.8634900Z ##[endgroup]
+2026-07-20T10:56:53.7025281Z Post job cleanup.
+2026-07-20T10:56:53.7094380Z Post job cleanup.
+2026-07-20T10:56:53.8307888Z [command]/opt/hostedtoolcache/go/1.26.5/x64/bin/go env GOMODCACHE
+2026-07-20T10:56:53.8354217Z [command]/opt/hostedtoolcache/go/1.26.5/x64/bin/go env GOCACHE
+2026-07-20T10:56:53.8382711Z /home/runner/go/pkg/mod
+2026-07-20T10:56:53.8404678Z /home/runner/.cache/go-build
+2026-07-20T10:56:53.8416581Z Cache hit occurred on the primary key setup-go-Linux-x64-ubuntu24-go-1.26.5-8817808378803099ab23483e39667443269d260e5add00674b9709609cc39e1c, not saving cache.
+2026-07-20T10:56:53.8573759Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T10:56:53.8575048Z Post job cleanup.
+2026-07-20T10:56:53.9478379Z [command]/usr/bin/git version
+2026-07-20T10:56:53.9521718Z git version 2.54.0
+2026-07-20T10:56:53.9595676Z Temporarily overriding HOME='/home/runner/work/_temp/bf9f44a5-cb9b-40c1-8d90-5fc049bd9ff7' before making global git config changes
+2026-07-20T10:56:53.9597287Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T10:56:53.9602562Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:53.9646297Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T10:56:53.9684315Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T10:56:53.9938313Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T10:56:53.9969522Z http.https://github.com/.extraheader
+2026-07-20T10:56:53.9982970Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-20T10:56:54.0020460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T10:56:54.0269560Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T10:56:54.0307261Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T10:56:54.0726360Z Cleaning up orphan processes
+2026-07-20T10:56:54.0993116Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,2418 @@
+﻿2026-10-03T23:09:52.3170980Z Current runner version: '2.337.0'
+2026-10-03T23:09:52.3195661Z ##[group]Runner Image Provisioner
+2026-10-03T23:09:52.3196544Z Hosted Compute Agent
+2026-10-03T23:09:52.3197266Z Version: 20260901.588
+2026-10-03T23:09:52.3197959Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-03T23:09:52.3198791Z Build Date: 2026-09-01T19:56:44Z
+2026-10-03T23:09:52.3199647Z Worker ID: {c61d45ec-72dd-4b25-8597-a78bbd79f961}
+2026-10-03T23:09:52.3200809Z Azure Region: eastus
+2026-10-03T23:09:52.3201491Z ##[endgroup]
+2026-10-03T23:09:52.3203419Z ##[group]Operating System
+2026-10-03T23:09:52.3204103Z Ubuntu
+2026-10-03T23:09:52.3204868Z 24.04.5
+2026-10-03T23:09:52.3205416Z LTS
+2026-10-03T23:09:52.3206005Z ##[endgroup]
+2026-10-03T23:09:52.3206663Z ##[group]Runner Image
+2026-10-03T23:09:52.3207709Z Image: ubuntu-24.04
+2026-10-03T23:09:52.3208366Z Version: 20260927.320.1
+2026-10-03T23:09:52.3210166Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-03T23:09:52.3212095Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-03T23:09:52.3213248Z ##[endgroup]
+2026-10-03T23:09:52.3214500Z ##[group]GITHUB_TOKEN Permissions
+2026-10-03T23:09:52.3216739Z Contents: read
+2026-10-03T23:09:52.3217435Z Metadata: read
+2026-10-03T23:09:52.3217999Z Packages: write
+2026-10-03T23:09:52.3218644Z ##[endgroup]
+2026-10-03T23:09:52.3220941Z Secret source: Actions
+2026-10-03T23:09:52.3222032Z Cache mode: write
+2026-10-03T23:09:52.3223021Z Prepare workflow directory
+2026-10-03T23:09:52.3743794Z Prepare all required actions
+2026-10-03T23:09:52.3794094Z Getting action download info
+2026-10-03T23:09:52.6037492Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-03T23:09:52.7137583Z Download action repository 'docker/login-action@dbcb813823bdd20940b903addbd779551569679f' (SHA:dbcb813823bdd20940b903addbd779551569679f)
+2026-10-03T23:09:52.9418258Z Download action repository 'docker/setup-qemu-action@v4' (SHA:99012661954931238ded8c8b007157a8430204e1)
+2026-10-03T23:09:53.1125076Z Download action repository 'docker/setup-buildx-action@v4' (SHA:f87e5991a6d7451dcb8d9637bfbc97413f497069)
+2026-10-03T23:09:53.2805756Z Download action repository 'docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302' (SHA:dc802804100637a589fabce1cb79ff13a1411302)
+2026-10-03T23:09:53.4572105Z Download action repository 'docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc' (SHA:c3c9e263c25d99ce0380d002d59b67737d91b0dc)
+2026-10-03T23:09:53.8090632Z Complete job name: build-and-push-image
+2026-10-03T23:09:53.8996712Z ##[group]Run actions/checkout@v7
+2026-10-03T23:09:53.8998114Z with:
+2026-10-03T23:09:53.8998966Z   repository: mosajjal/sniproxy
+2026-10-03T23:09:53.9010022Z   token: ***
+2026-10-03T23:09:53.9010887Z   ssh-strict: true
+2026-10-03T23:09:53.9011768Z   ssh-user: git
+2026-10-03T23:09:53.9012662Z   persist-credentials: true
+2026-10-03T23:09:53.9013653Z   clean: true
+2026-10-03T23:09:53.9014574Z   sparse-checkout-cone-mode: true
+2026-10-03T23:09:53.9015642Z   fetch-depth: 1
+2026-10-03T23:09:53.9016498Z   fetch-tags: false
+2026-10-03T23:09:53.9017400Z   show-progress: true
+2026-10-03T23:09:53.9018246Z   lfs: false
+2026-10-03T23:09:53.9019033Z   submodules: false
+2026-10-03T23:09:53.9020086Z   set-safe-directory: true
+2026-10-03T23:09:53.9021092Z   allow-unsafe-pr-checkout: false
+2026-10-03T23:09:53.9022412Z env:
+2026-10-03T23:09:53.9023212Z   REGISTRY: ghcr.io
+2026-10-03T23:09:53.9024118Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:09:53.9025118Z ##[endgroup]
+2026-10-03T23:09:54.0127720Z Syncing repository: mosajjal/sniproxy
+2026-10-03T23:09:54.0132068Z ##[group]Getting Git version info
+2026-10-03T23:09:54.0134373Z Working directory is '/home/runner/work/sniproxy/sniproxy'
+2026-10-03T23:09:54.0225139Z [command]/usr/bin/git version
+2026-10-03T23:09:54.0227731Z git version 2.55.0
+2026-10-03T23:09:54.0261546Z ##[endgroup]
+2026-10-03T23:09:54.0273059Z Temporarily overriding HOME='/home/runner/work/_temp/fd1b2636-1306-4691-845f-5d8f24f133f8' before making global git config changes
+2026-10-03T23:09:54.0278347Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T23:09:54.0283061Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:09:54.0294509Z Deleting the contents of '/home/runner/work/sniproxy/sniproxy'
+2026-10-03T23:09:54.0306092Z ##[group]Determining repository object format
+2026-10-03T23:09:54.0321807Z ##[endgroup]
+2026-10-03T23:09:54.0324760Z ##[group]Initializing the repository
+2026-10-03T23:09:54.0327812Z [command]/usr/bin/git init /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:09:54.0426044Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-03T23:09:54.0429323Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-03T23:09:54.0432673Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-03T23:09:54.0435126Z hint: call:
+2026-10-03T23:09:54.0436354Z hint:
+2026-10-03T23:09:54.0437953Z hint: 	git config --global init.defaultBranch <name>
+2026-10-03T23:09:54.0440054Z hint:
+2026-10-03T23:09:54.0441892Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-03T23:09:54.0445011Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-03T23:09:54.0447467Z hint:
+2026-10-03T23:09:54.0448766Z hint: 	git branch -m <name>
+2026-10-03T23:09:54.0454859Z hint:
+2026-10-03T23:09:54.0456955Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-03T23:09:54.0460560Z Initialized empty Git repository in /home/runner/work/sniproxy/sniproxy/.git/
+2026-10-03T23:09:54.0465875Z [command]/usr/bin/git remote add origin https://github.com/mosajjal/sniproxy
+2026-10-03T23:09:54.0522108Z ##[endgroup]
+2026-10-03T23:09:54.0524559Z ##[group]Disabling automatic garbage collection
+2026-10-03T23:09:54.0526846Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-03T23:09:54.0558298Z ##[endgroup]
+2026-10-03T23:09:54.0560945Z ##[group]Setting up auth
+2026-10-03T23:09:54.0562656Z Removing SSH command configuration
+2026-10-03T23:09:54.0565254Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T23:09:54.0599313Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-03T23:09:54.0960357Z Removing HTTP extra header
+2026-10-03T23:09:54.0966585Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T23:09:54.1007722Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-03T23:09:54.1238961Z Removing includeIf entries pointing to credentials config files
+2026-10-03T23:09:54.1245724Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T23:09:54.1292829Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-03T23:09:54.1540315Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-03T23:09:54.1585026Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path /home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:09:54.1623561Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:09:54.1663168Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:09:54.1699391Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:09:54.1731614Z ##[endgroup]
+2026-10-03T23:09:54.1733345Z ##[group]Fetching the repository
+2026-10-03T23:09:54.1737158Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/tags/v2.4.2:refs/tags/v2.4.2
+2026-10-03T23:09:54.4194196Z From https://github.com/mosajjal/sniproxy
+2026-10-03T23:09:54.4196516Z  * [new tag]         v2.4.2     -> v2.4.2
+2026-10-03T23:09:54.4207225Z [command]/usr/bin/git tag --list v2.4.2
+2026-10-03T23:09:54.4243954Z v2.4.2
+2026-10-03T23:09:54.4252355Z [command]/usr/bin/git rev-parse refs/tags/v2.4.2^{commit}
+2026-10-03T23:09:54.4283027Z 1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:09:54.4288029Z ##[endgroup]
+2026-10-03T23:09:54.4289437Z ##[group]Determining the checkout info
+2026-10-03T23:09:54.4291763Z ##[endgroup]
+2026-10-03T23:09:54.4292890Z [command]/usr/bin/git sparse-checkout disable
+2026-10-03T23:09:54.4348817Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-03T23:09:54.4386076Z ##[group]Checking out the ref
+2026-10-03T23:09:54.4388693Z [command]/usr/bin/git checkout --progress --force refs/tags/v2.4.2
+2026-10-03T23:09:54.4478602Z Note: switching to 'refs/tags/v2.4.2'.
+2026-10-03T23:09:54.4479283Z 
+2026-10-03T23:09:54.4480389Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-03T23:09:54.4481853Z changes and commit them, and you can discard any commits you make in this
+2026-10-03T23:09:54.4483264Z state without impacting any branches by switching back to a branch.
+2026-10-03T23:09:54.4484027Z 
+2026-10-03T23:09:54.4484694Z If you want to create a new branch to retain commits you create, you may
+2026-10-03T23:09:54.4486674Z do so (now or later) by using -c with the switch command. Example:
+2026-10-03T23:09:54.4488069Z 
+2026-10-03T23:09:54.4488923Z   git switch -c <new-branch-name>
+2026-10-03T23:09:54.4490201Z 
+2026-10-03T23:09:54.4491171Z Or undo this operation with:
+2026-10-03T23:09:54.4492351Z 
+2026-10-03T23:09:54.4493249Z   git switch -
+2026-10-03T23:09:54.4494268Z 
+2026-10-03T23:09:54.4495436Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-03T23:09:54.4496996Z 
+2026-10-03T23:09:54.4498172Z HEAD is now at 1429d6d Merge pull request #213 from mosajjal/fix/installer
+2026-10-03T23:09:54.4502637Z ##[endgroup]
+2026-10-03T23:09:54.4542517Z [command]/usr/bin/git log -1 --format=%H
+2026-10-03T23:09:54.4572252Z 1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:09:54.4843578Z ##[group]Run docker/login-action@dbcb813823bdd20940b903addbd779551569679f
+2026-10-03T23:09:54.4844667Z with:
+2026-10-03T23:09:54.4845434Z   registry: ghcr.io
+2026-10-03T23:09:54.4846227Z   username: mosajjal
+2026-10-03T23:09:54.4850804Z   password: ***
+2026-10-03T23:09:54.4851665Z   logout: true
+2026-10-03T23:09:54.4852431Z env:
+2026-10-03T23:09:54.4853190Z   REGISTRY: ghcr.io
+2026-10-03T23:09:54.4854001Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:09:54.4854846Z ##[endgroup]
+2026-10-03T23:09:54.6997016Z Logging into ghcr.io...
+2026-10-03T23:09:54.9603381Z Login Succeeded!
+2026-10-03T23:09:54.9773379Z ##[group]Run docker/setup-qemu-action@v4
+2026-10-03T23:09:54.9773842Z with:
+2026-10-03T23:09:54.9774208Z   image: docker.io/tonistiigi/binfmt:latest
+2026-10-03T23:09:54.9774662Z   platforms: all
+2026-10-03T23:09:54.9775017Z   reset: false
+2026-10-03T23:09:54.9775359Z   cache-image: true
+2026-10-03T23:09:54.9775704Z env:
+2026-10-03T23:09:54.9776027Z   REGISTRY: ghcr.io
+2026-10-03T23:09:54.9776399Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:09:54.9776788Z ##[endgroup]
+2026-10-03T23:09:55.1208037Z ##[group]Docker info
+2026-10-03T23:09:55.1266040Z [command]/usr/bin/docker version
+2026-10-03T23:09:55.1557571Z Client: Docker Engine - Community
+2026-10-03T23:09:55.1559199Z  Version:           28.0.4
+2026-10-03T23:09:55.1560649Z  API version:       1.48
+2026-10-03T23:09:55.1561901Z  Go version:        go1.23.7
+2026-10-03T23:09:55.1563293Z  Git commit:        b8034c0
+2026-10-03T23:09:55.1564747Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-03T23:09:55.1566343Z  OS/Arch:           linux/amd64
+2026-10-03T23:09:55.1567574Z  Context:           default
+2026-10-03T23:09:55.1568656Z 
+2026-10-03T23:09:55.1569349Z Server: Docker Engine - Community
+2026-10-03T23:09:55.1570950Z  Engine:
+2026-10-03T23:09:55.1571834Z   Version:          28.0.4
+2026-10-03T23:09:55.1573004Z   API version:      1.48 (minimum version 1.24)
+2026-10-03T23:09:55.1574270Z   Go version:       go1.23.7
+2026-10-03T23:09:55.1575279Z   Git commit:       6430e49
+2026-10-03T23:09:55.1576191Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-03T23:09:55.1577387Z   OS/Arch:          linux/amd64
+2026-10-03T23:09:55.1578490Z   Experimental:     false
+2026-10-03T23:09:55.1579386Z  containerd:
+2026-10-03T23:09:55.1580819Z   Version:          v2.3.6
+2026-10-03T23:09:55.1581758Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:09:55.1582708Z  runc:
+2026-10-03T23:09:55.1583450Z   Version:          1.5.1
+2026-10-03T23:09:55.1584272Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-03T23:09:55.1585150Z  docker-init:
+2026-10-03T23:09:55.1585905Z   Version:          0.19.0
+2026-10-03T23:09:55.1586723Z   GitCommit:        de40ad0
+2026-10-03T23:09:55.1655808Z [command]/usr/bin/docker info
+2026-10-03T23:09:57.5698417Z Client: Docker Engine - Community
+2026-10-03T23:09:57.5699638Z  Version:    28.0.4
+2026-10-03T23:09:57.5700778Z  Context:    default
+2026-10-03T23:09:57.5702249Z  Debug Mode: false
+2026-10-03T23:09:57.5702691Z  Plugins:
+2026-10-03T23:09:57.5703262Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-03T23:09:57.5703799Z     Version:  v0.37.1
+2026-10-03T23:09:57.5704460Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-03T23:09:57.5705161Z   compose: Docker Compose (Docker Inc.)
+2026-10-03T23:09:57.5705787Z     Version:  v2.38.2
+2026-10-03T23:09:57.5706423Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-03T23:09:57.5706917Z 
+2026-10-03T23:09:57.5707117Z Server:
+2026-10-03T23:09:57.5707507Z  Containers: 0
+2026-10-03T23:09:57.5707910Z   Running: 0
+2026-10-03T23:09:57.5708388Z   Paused: 0
+2026-10-03T23:09:57.5708802Z   Stopped: 0
+2026-10-03T23:09:57.5709239Z  Images: 6
+2026-10-03T23:09:57.5709655Z  Server Version: 28.0.4
+2026-10-03T23:09:57.5710578Z  Storage Driver: overlay2
+2026-10-03T23:09:57.5711150Z   Backing Filesystem: extfs
+2026-10-03T23:09:57.5711665Z   Supports d_type: true
+2026-10-03T23:09:57.5712177Z   Using metacopy: false
+2026-10-03T23:09:57.5712671Z   Native Overlay Diff: false
+2026-10-03T23:09:57.5713256Z   userxattr: false
+2026-10-03T23:09:57.5713779Z  Logging Driver: json-file
+2026-10-03T23:09:57.5714855Z  Cgroup Driver: systemd
+2026-10-03T23:09:57.5715805Z  Cgroup Version: 2
+2026-10-03T23:09:57.5716655Z  Plugins:
+2026-10-03T23:09:57.5717664Z   Volume: local
+2026-10-03T23:09:57.5718494Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-03T23:09:57.5719248Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-03T23:09:57.5720243Z  Swarm: inactive
+2026-10-03T23:09:57.5720696Z  Runtimes: io.containerd.runc.v2 runc
+2026-10-03T23:09:57.5721815Z  Default Runtime: runc
+2026-10-03T23:09:57.5722340Z  Init Binary: docker-init
+2026-10-03T23:09:57.5722998Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:09:57.5723741Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-03T23:09:57.5724344Z  init version: de40ad0
+2026-10-03T23:09:57.5724824Z  Security Options:
+2026-10-03T23:09:57.5725268Z   apparmor
+2026-10-03T23:09:57.5725640Z   seccomp
+2026-10-03T23:09:57.5726057Z    Profile: builtin
+2026-10-03T23:09:57.5726442Z   cgroupns
+2026-10-03T23:09:57.5726865Z  Kernel Version: 6.17.0-1022-azure
+2026-10-03T23:09:57.5727469Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-03T23:09:57.5728013Z  OSType: linux
+2026-10-03T23:09:57.5728692Z  Architecture: x86_64
+2026-10-03T23:09:57.5729136Z  CPUs: 4
+2026-10-03T23:09:57.5729502Z  Total Memory: 15.61GiB
+2026-10-03T23:09:57.5730433Z  Name: runnervm8df0l
+2026-10-03T23:09:57.5730901Z  ID: 96bc9d58-7015-4b4a-8357-8e592f0b19b5
+2026-10-03T23:09:57.5731425Z  Docker Root Dir: /var/lib/docker
+2026-10-03T23:09:57.5731924Z  Debug Mode: false
+2026-10-03T23:09:57.5732300Z  Username: githubactions
+2026-10-03T23:09:57.5732677Z  Experimental: false
+2026-10-03T23:09:57.5733019Z  Insecure Registries:
+2026-10-03T23:09:57.5737647Z   ::1/128
+2026-10-03T23:09:57.5738007Z   127.0.0.0/8
+2026-10-03T23:09:57.5738360Z  Live Restore Enabled: false
+2026-10-03T23:09:57.5738662Z 
+2026-10-03T23:09:57.5739605Z ##[endgroup]
+2026-10-03T23:09:57.5741149Z ##[group]Pulling binfmt Docker image
+2026-10-03T23:09:57.6339638Z [command]/usr/bin/docker pull docker.io/tonistiigi/binfmt:latest
+2026-10-03T23:09:57.8628193Z latest: Pulling from tonistiigi/binfmt
+2026-10-03T23:09:57.9372946Z 56685a25fbf3: Pulling fs layer
+2026-10-03T23:09:57.9373723Z 0c46aa6e9c41: Pulling fs layer
+2026-10-03T23:09:57.9876240Z 0c46aa6e9c41: Verifying Checksum
+2026-10-03T23:09:57.9881452Z 0c46aa6e9c41: Download complete
+2026-10-03T23:09:58.0875185Z 56685a25fbf3: Verifying Checksum
+2026-10-03T23:09:58.0875716Z 56685a25fbf3: Download complete
+2026-10-03T23:09:58.4595683Z 56685a25fbf3: Pull complete
+2026-10-03T23:09:58.5185439Z 0c46aa6e9c41: Pull complete
+2026-10-03T23:09:58.5224981Z Digest: sha256:400a4873b838d1b89194d982c45e5fb3cda4593fbfd7e08a02e76b03b21166f0
+2026-10-03T23:09:58.5238652Z Status: Downloaded newer image for tonistiigi/binfmt:latest
+2026-10-03T23:09:58.5245589Z docker.io/tonistiigi/binfmt:latest
+2026-10-03T23:09:58.5287699Z [command]/usr/bin/docker save -o /home/runner/work/_temp/docker-actions-toolkit-NmX0xE/749e64100d3fa0c09bdbc8a02e4fb9cb3ee64266f7f661c98371040689abacb3.tar docker.io/tonistiigi/binfmt:latest
+2026-10-03T23:09:58.9190028Z Copying /home/runner/work/_temp/docker-actions-toolkit-NmX0xE/749e64100d3fa0c09bdbc8a02e4fb9cb3ee64266f7f661c98371040689abacb3.tar to /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-03T23:09:58.9840793Z Image cached to /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-03T23:09:58.9842983Z ##[endgroup]
+2026-10-03T23:09:58.9844200Z ##[group]Image info
+2026-10-03T23:09:58.9863746Z [command]/usr/bin/docker image inspect docker.io/tonistiigi/binfmt:latest
+2026-10-03T23:09:59.0527695Z [
+2026-10-03T23:09:59.0528773Z     {
+2026-10-03T23:09:59.0530256Z         "Id": "sha256:15935d0512bf0a8e5afa1df990d971cf97a619ede08fa60f2d5966a62de6d6b7",
+2026-10-03T23:09:59.0531674Z         "RepoTags": [
+2026-10-03T23:09:59.0532418Z             "tonistiigi/binfmt:latest"
+2026-10-03T23:09:59.0533277Z         ],
+2026-10-03T23:09:59.0533901Z         "RepoDigests": [
+2026-10-03T23:09:59.0535350Z             "tonistiigi/binfmt@sha256:400a4873b838d1b89194d982c45e5fb3cda4593fbfd7e08a02e76b03b21166f0"
+2026-10-03T23:09:59.0537019Z         ],
+2026-10-03T23:09:59.0537618Z         "Parent": "",
+2026-10-03T23:09:59.0538373Z         "Comment": "buildkit.dockerfile.v0",
+2026-10-03T23:09:59.0539292Z         "Created": "2026-06-05T19:12:02.167333037Z",
+2026-10-03T23:09:59.0540348Z         "DockerVersion": "",
+2026-10-03T23:09:59.0541024Z         "Author": "",
+2026-10-03T23:09:59.0541962Z         "Config": {
+2026-10-03T23:09:59.0542547Z             "Hostname": "",
+2026-10-03T23:09:59.0543150Z             "Domainname": "",
+2026-10-03T23:09:59.0543699Z             "User": "",
+2026-10-03T23:09:59.0544041Z             "AttachStdin": false,
+2026-10-03T23:09:59.0544436Z             "AttachStdout": false,
+2026-10-03T23:09:59.0544826Z             "AttachStderr": false,
+2026-10-03T23:09:59.0545195Z             "Tty": false,
+2026-10-03T23:09:59.0545535Z             "OpenStdin": false,
+2026-10-03T23:09:59.0545904Z             "StdinOnce": false,
+2026-10-03T23:09:59.0546246Z             "Env": [
+2026-10-03T23:09:59.0546753Z                 "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+2026-10-03T23:09:59.0547587Z                 "QEMU_PRESERVE_ARGV0=1"
+2026-10-03T23:09:59.0547980Z             ],
+2026-10-03T23:09:59.0548250Z             "Cmd": null,
+2026-10-03T23:09:59.0548552Z             "Image": "",
+2026-10-03T23:09:59.0548842Z             "Volumes": {
+2026-10-03T23:09:59.0549209Z                 "/tmp": {}
+2026-10-03T23:09:59.0549672Z             },
+2026-10-03T23:09:59.0550335Z             "WorkingDir": "/",
+2026-10-03T23:09:59.0550869Z             "Entrypoint": [
+2026-10-03T23:09:59.0551376Z                 "/usr/bin/binfmt"
+2026-10-03T23:09:59.0551892Z             ],
+2026-10-03T23:09:59.0552313Z             "OnBuild": null,
+2026-10-03T23:09:59.0552821Z             "Labels": null
+2026-10-03T23:09:59.0553299Z         },
+2026-10-03T23:09:59.0553716Z         "Architecture": "amd64",
+2026-10-03T23:09:59.0554247Z         "Os": "linux",
+2026-10-03T23:09:59.0554704Z         "Size": 85304497,
+2026-10-03T23:09:59.0555191Z         "GraphDriver": {
+2026-10-03T23:09:59.0555703Z             "Data": {
+2026-10-03T23:09:59.0556785Z                 "LowerDir": "/var/lib/docker/overlay2/429641340af431a8f58064bfec53f5543f6bdf843e255fc4367cef13681614b4/diff",
+2026-10-03T23:09:59.0558565Z                 "MergedDir": "/var/lib/docker/overlay2/9205447a2b4fdff7442d6bdf9ad0e701398d71e510f13971fe5d5e7e3d4da8d4/merged",
+2026-10-03T23:09:59.0559896Z                 "UpperDir": "/var/lib/docker/overlay2/9205447a2b4fdff7442d6bdf9ad0e701398d71e510f13971fe5d5e7e3d4da8d4/diff",
+2026-10-03T23:09:59.0561054Z                 "WorkDir": "/var/lib/docker/overlay2/9205447a2b4fdff7442d6bdf9ad0e701398d71e510f13971fe5d5e7e3d4da8d4/work"
+2026-10-03T23:09:59.0561723Z             },
+2026-10-03T23:09:59.0561974Z             "Name": "overlay2"
+2026-10-03T23:09:59.0562377Z         },
+2026-10-03T23:09:59.0562608Z         "RootFS": {
+2026-10-03T23:09:59.0562866Z             "Type": "layers",
+2026-10-03T23:09:59.0563153Z             "Layers": [
+2026-10-03T23:09:59.0563600Z                 "sha256:c747b796d990a647df062f87e24f1ef5e4a90a312cd9c4ae8b7d09667d57befb",
+2026-10-03T23:09:59.0564303Z                 "sha256:6d831b0f477d9df7afe18e5a65c97e8084fef8fe10c2930b65f728ab68d0bb5b"
+2026-10-03T23:09:59.0564813Z             ]
+2026-10-03T23:09:59.0565132Z         },
+2026-10-03T23:09:59.0565402Z         "Metadata": {
+2026-10-03T23:09:59.0565723Z             "LastTagTime": "0001-01-01T00:00:00Z"
+2026-10-03T23:09:59.0566144Z         }
+2026-10-03T23:09:59.0566364Z     }
+2026-10-03T23:09:59.0566581Z ]
+2026-10-03T23:09:59.0567191Z ##[endgroup]
+2026-10-03T23:09:59.0567623Z ##[group]Binfmt version
+2026-10-03T23:09:59.0569796Z [command]/usr/bin/docker run --rm --privileged docker.io/tonistiigi/binfmt:latest --version
+2026-10-03T23:09:59.4783629Z binfmt/e29e7d7 qemu/v10.2.3 go/1.26.4
+2026-10-03T23:09:59.5462705Z ##[endgroup]
+2026-10-03T23:09:59.5463568Z ##[group]Installing QEMU static binaries
+2026-10-03T23:09:59.5481307Z [command]/usr/bin/docker run --rm --privileged docker.io/tonistiigi/binfmt:latest --install all
+2026-10-03T23:09:59.6786257Z installing: arm OK
+2026-10-03T23:09:59.6786689Z installing: s390x OK
+2026-10-03T23:09:59.6787345Z installing: ppc64le OK
+2026-10-03T23:09:59.6788025Z installing: riscv64 OK
+2026-10-03T23:09:59.6788849Z installing: mips64 OK
+2026-10-03T23:09:59.6789408Z installing: arm64 OK
+2026-10-03T23:09:59.6790715Z installing: mips64le OK
+2026-10-03T23:09:59.6791620Z installing: loong64 OK
+2026-10-03T23:09:59.7009707Z {
+2026-10-03T23:09:59.7010760Z   "supported": [
+2026-10-03T23:09:59.7011586Z     "linux/amd64",
+2026-10-03T23:09:59.7012106Z     "linux/amd64/v2",
+2026-10-03T23:09:59.7012852Z     "linux/amd64/v3",
+2026-10-03T23:09:59.7013276Z     "linux/arm64",
+2026-10-03T23:09:59.7013594Z     "linux/riscv64",
+2026-10-03T23:09:59.7014099Z     "linux/ppc64le",
+2026-10-03T23:09:59.7014539Z     "linux/s390x",
+2026-10-03T23:09:59.7014972Z     "linux/386",
+2026-10-03T23:09:59.7015394Z     "linux/mips64le",
+2026-10-03T23:09:59.7015837Z     "linux/mips64",
+2026-10-03T23:09:59.7016290Z     "linux/loong64",
+2026-10-03T23:09:59.7017142Z     "linux/arm/v7",
+2026-10-03T23:09:59.7017585Z     "linux/arm/v6"
+2026-10-03T23:09:59.7018012Z   ],
+2026-10-03T23:09:59.7018404Z   "emulators": [
+2026-10-03T23:09:59.7018832Z     "llvm-16-runtime.binfmt",
+2026-10-03T23:09:59.7019344Z     "llvm-17-runtime.binfmt",
+2026-10-03T23:09:59.7020255Z     "llvm-18-runtime.binfmt",
+2026-10-03T23:09:59.7020795Z     "python3.12",
+2026-10-03T23:09:59.7021140Z     "qemu-aarch64",
+2026-10-03T23:09:59.7021448Z     "qemu-arm",
+2026-10-03T23:09:59.7021816Z     "qemu-loongarch64",
+2026-10-03T23:09:59.7022183Z     "qemu-mips64",
+2026-10-03T23:09:59.7022499Z     "qemu-mips64el",
+2026-10-03T23:09:59.7022904Z     "qemu-ppc64le",
+2026-10-03T23:09:59.7023231Z     "qemu-riscv64",
+2026-10-03T23:09:59.7023533Z     "qemu-s390x"
+2026-10-03T23:09:59.7023816Z   ]
+2026-10-03T23:09:59.7024081Z }
+2026-10-03T23:09:59.7716229Z ##[endgroup]
+2026-10-03T23:09:59.7716793Z ##[group]Extracting available platforms
+2026-10-03T23:09:59.9829339Z linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6
+2026-10-03T23:09:59.9831214Z ##[endgroup]
+2026-10-03T23:10:00.0031590Z ##[group]Run docker/setup-buildx-action@v4
+2026-10-03T23:10:00.0031978Z with:
+2026-10-03T23:10:00.0032229Z   driver: docker-container
+2026-10-03T23:10:00.0032516Z   use: true
+2026-10-03T23:10:00.0032761Z   keep-state: false
+2026-10-03T23:10:00.0033019Z   cache-binary: true
+2026-10-03T23:10:00.0033281Z   cleanup: true
+2026-10-03T23:10:00.0033532Z env:
+2026-10-03T23:10:00.0033764Z   REGISTRY: ghcr.io
+2026-10-03T23:10:00.0034038Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:10:00.0034343Z ##[endgroup]
+2026-10-03T23:10:00.1966090Z ##[group]Docker info
+2026-10-03T23:10:00.1997842Z [command]/usr/bin/docker version
+2026-10-03T23:10:00.2273270Z Client: Docker Engine - Community
+2026-10-03T23:10:00.2274237Z  Version:           28.0.4
+2026-10-03T23:10:00.2275150Z  API version:       1.48
+2026-10-03T23:10:00.2276053Z  Go version:        go1.23.7
+2026-10-03T23:10:00.2276801Z  Git commit:        b8034c0
+2026-10-03T23:10:00.2277526Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-03T23:10:00.2278414Z  OS/Arch:           linux/amd64
+2026-10-03T23:10:00.2279245Z  Context:           default
+2026-10-03T23:10:00.2280036Z 
+2026-10-03T23:10:00.2280447Z Server: Docker Engine - Community
+2026-10-03T23:10:00.2281201Z  Engine:
+2026-10-03T23:10:00.2281848Z   Version:          28.0.4
+2026-10-03T23:10:00.2282618Z   API version:      1.48 (minimum version 1.24)
+2026-10-03T23:10:00.2283481Z   Go version:       go1.23.7
+2026-10-03T23:10:00.2284297Z   Git commit:       6430e49
+2026-10-03T23:10:00.2285193Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-03T23:10:00.2286020Z   OS/Arch:          linux/amd64
+2026-10-03T23:10:00.2286721Z   Experimental:     false
+2026-10-03T23:10:00.2287320Z  containerd:
+2026-10-03T23:10:00.2287953Z   Version:          v2.3.6
+2026-10-03T23:10:00.2289336Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:10:00.2290683Z  runc:
+2026-10-03T23:10:00.2291517Z   Version:          1.5.1
+2026-10-03T23:10:00.2292239Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-03T23:10:00.2293115Z  docker-init:
+2026-10-03T23:10:00.2293760Z   Version:          0.19.0
+2026-10-03T23:10:00.2294451Z   GitCommit:        de40ad0
+2026-10-03T23:10:00.2338789Z [command]/usr/bin/docker info
+2026-10-03T23:10:00.3050891Z Client: Docker Engine - Community
+2026-10-03T23:10:00.3051426Z  Version:    28.0.4
+2026-10-03T23:10:00.3051818Z  Context:    default
+2026-10-03T23:10:00.3052193Z  Debug Mode: false
+2026-10-03T23:10:00.3052528Z  Plugins:
+2026-10-03T23:10:00.3052870Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-03T23:10:00.3053335Z     Version:  v0.37.1
+2026-10-03T23:10:00.3053800Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-03T23:10:00.3054381Z   compose: Docker Compose (Docker Inc.)
+2026-10-03T23:10:00.3054824Z     Version:  v2.38.2
+2026-10-03T23:10:00.3055274Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-03T23:10:00.3056177Z 
+2026-10-03T23:10:00.3056270Z Server:
+2026-10-03T23:10:00.3056472Z  Containers: 0
+2026-10-03T23:10:00.3056700Z   Running: 0
+2026-10-03T23:10:00.3056905Z   Paused: 0
+2026-10-03T23:10:00.3057106Z   Stopped: 0
+2026-10-03T23:10:00.3057306Z  Images: 7
+2026-10-03T23:10:00.3057524Z  Server Version: 28.0.4
+2026-10-03T23:10:00.3057785Z  Storage Driver: overlay2
+2026-10-03T23:10:00.3058050Z   Backing Filesystem: extfs
+2026-10-03T23:10:00.3058319Z   Supports d_type: true
+2026-10-03T23:10:00.3058560Z   Using metacopy: false
+2026-10-03T23:10:00.3058803Z   Native Overlay Diff: false
+2026-10-03T23:10:00.3059052Z   userxattr: false
+2026-10-03T23:10:00.3059283Z  Logging Driver: json-file
+2026-10-03T23:10:00.3059538Z  Cgroup Driver: systemd
+2026-10-03T23:10:00.3060097Z  Cgroup Version: 2
+2026-10-03T23:10:00.3060447Z  Plugins:
+2026-10-03T23:10:00.3060791Z   Volume: local
+2026-10-03T23:10:00.3061239Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-03T23:10:00.3062043Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-03T23:10:00.3062772Z  Swarm: inactive
+2026-10-03T23:10:00.3063476Z  Runtimes: io.containerd.runc.v2 runc
+2026-10-03T23:10:00.3064022Z  Default Runtime: runc
+2026-10-03T23:10:00.3064431Z  Init Binary: docker-init
+2026-10-03T23:10:00.3065033Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:10:00.3065695Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-03T23:10:00.3066170Z  init version: de40ad0
+2026-10-03T23:10:00.3066579Z  Security Options:
+2026-10-03T23:10:00.3066960Z   apparmor
+2026-10-03T23:10:00.3067297Z   seccomp
+2026-10-03T23:10:00.3067616Z    Profile: builtin
+2026-10-03T23:10:00.3067956Z   cgroupns
+2026-10-03T23:10:00.3068292Z  Kernel Version: 6.17.0-1022-azure
+2026-10-03T23:10:00.3068743Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-03T23:10:00.3069184Z  OSType: linux
+2026-10-03T23:10:00.3069535Z  Architecture: x86_64
+2026-10-03T23:10:00.3070187Z  CPUs: 4
+2026-10-03T23:10:00.3070527Z  Total Memory: 15.61GiB
+2026-10-03T23:10:00.3070908Z  Name: runnervm8df0l
+2026-10-03T23:10:00.3071317Z  ID: 96bc9d58-7015-4b4a-8357-8e592f0b19b5
+2026-10-03T23:10:00.3071834Z  Docker Root Dir: /var/lib/docker
+2026-10-03T23:10:00.3072265Z  Debug Mode: false
+2026-10-03T23:10:00.3072615Z  Username: githubactions
+2026-10-03T23:10:00.3073004Z  Experimental: false
+2026-10-03T23:10:00.3073352Z  Insecure Registries:
+2026-10-03T23:10:00.3073746Z   ::1/128
+2026-10-03T23:10:00.3074038Z   127.0.0.0/8
+2026-10-03T23:10:00.3074372Z  Live Restore Enabled: false
+2026-10-03T23:10:00.3074632Z 
+2026-10-03T23:10:00.3093447Z ##[endgroup]
+2026-10-03T23:10:00.4471319Z ##[group]Buildx version
+2026-10-03T23:10:00.4495978Z [command]/usr/bin/docker buildx version
+2026-10-03T23:10:00.5158349Z github.com/docker/buildx v0.37.1 0b265a9f62db554fa9aba6dd19e1bd5704bc7d8a
+2026-10-03T23:10:00.5203155Z ##[endgroup]
+2026-10-03T23:10:00.5377494Z ##[group]Inspecting default docker context
+2026-10-03T23:10:00.5535857Z [
+2026-10-03T23:10:00.5536423Z   {
+2026-10-03T23:10:00.5536971Z     "Name": "default",
+2026-10-03T23:10:00.5537568Z     "Metadata": {},
+2026-10-03T23:10:00.5538153Z     "Endpoints": {
+2026-10-03T23:10:00.5538724Z       "docker": {
+2026-10-03T23:10:00.5539380Z         "Host": "unix:///var/run/docker.sock",
+2026-10-03T23:10:00.5540494Z         "SkipTLSVerify": false
+2026-10-03T23:10:00.5541162Z       }
+2026-10-03T23:10:00.5541670Z     },
+2026-10-03T23:10:00.5542178Z     "TLSMaterial": {},
+2026-10-03T23:10:00.5542823Z     "Storage": {
+2026-10-03T23:10:00.5543396Z       "MetadataPath": "<IN MEMORY>",
+2026-10-03T23:10:00.5544123Z       "TLSPath": "<IN MEMORY>"
+2026-10-03T23:10:00.5544766Z     }
+2026-10-03T23:10:00.5545279Z   }
+2026-10-03T23:10:00.5545755Z ]
+2026-10-03T23:10:00.5546614Z ##[endgroup]
+2026-10-03T23:10:00.6579268Z ##[group]Pulling BuildKit image(s)
+2026-10-03T23:10:00.6614556Z [command]/usr/bin/docker pull moby/buildkit:buildx-stable-1
+2026-10-03T23:10:00.8841295Z buildx-stable-1: Pulling from moby/buildkit
+2026-10-03T23:10:00.9546607Z d0c1d894c237: Pulling fs layer
+2026-10-03T23:10:00.9547592Z 7e798cef5121: Pulling fs layer
+2026-10-03T23:10:00.9548328Z 98c91a1a17d1: Pulling fs layer
+2026-10-03T23:10:00.9549338Z c8f0d8a79114: Pulling fs layer
+2026-10-03T23:10:00.9550283Z efab3150af2c: Pulling fs layer
+2026-10-03T23:10:00.9551288Z 19ed272c7ade: Pulling fs layer
+2026-10-03T23:10:00.9553875Z 1d8ab3a073db: Pulling fs layer
+2026-10-03T23:10:00.9554439Z efab3150af2c: Waiting
+2026-10-03T23:10:00.9554863Z 19ed272c7ade: Waiting
+2026-10-03T23:10:00.9555216Z 1d8ab3a073db: Waiting
+2026-10-03T23:10:00.9555471Z c8f0d8a79114: Waiting
+2026-10-03T23:10:00.9830445Z 98c91a1a17d1: Verifying Checksum
+2026-10-03T23:10:00.9831248Z 98c91a1a17d1: Download complete
+2026-10-03T23:10:01.0095920Z c8f0d8a79114: Verifying Checksum
+2026-10-03T23:10:01.0096908Z c8f0d8a79114: Download complete
+2026-10-03T23:10:01.0116992Z d0c1d894c237: Verifying Checksum
+2026-10-03T23:10:01.0123537Z d0c1d894c237: Download complete
+2026-10-03T23:10:01.0403829Z 19ed272c7ade: Verifying Checksum
+2026-10-03T23:10:01.0404725Z 19ed272c7ade: Download complete
+2026-10-03T23:10:01.0446256Z 7e798cef5121: Verifying Checksum
+2026-10-03T23:10:01.0446992Z 7e798cef5121: Download complete
+2026-10-03T23:10:01.0698028Z 1d8ab3a073db: Verifying Checksum
+2026-10-03T23:10:01.0698862Z 1d8ab3a073db: Download complete
+2026-10-03T23:10:01.1525961Z d0c1d894c237: Pull complete
+2026-10-03T23:10:01.3618302Z efab3150af2c: Verifying Checksum
+2026-10-03T23:10:01.3619229Z efab3150af2c: Download complete
+2026-10-03T23:10:01.5525632Z 7e798cef5121: Pull complete
+2026-10-03T23:10:01.5643083Z 98c91a1a17d1: Pull complete
+2026-10-03T23:10:01.5740605Z c8f0d8a79114: Pull complete
+2026-10-03T23:10:02.7082392Z efab3150af2c: Pull complete
+2026-10-03T23:10:02.7189243Z 19ed272c7ade: Pull complete
+2026-10-03T23:10:02.7308364Z 1d8ab3a073db: Pull complete
+2026-10-03T23:10:02.7345848Z Digest: sha256:cec9f139f45e93c5c69c60f8b07cfad9f43f4ef6b6a6cd917527fea5ff2e3dea
+2026-10-03T23:10:02.7360177Z Status: Downloaded newer image for moby/buildkit:buildx-stable-1
+2026-10-03T23:10:02.7367424Z docker.io/moby/buildkit:buildx-stable-1
+2026-10-03T23:10:02.7385631Z ##[endgroup]
+2026-10-03T23:10:02.7386330Z ##[group]Creating a new builder instance
+2026-10-03T23:10:02.8012043Z [command]/usr/bin/docker buildx create --name builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
+2026-10-03T23:10:02.9016098Z builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad
+2026-10-03T23:10:02.9063459Z ##[endgroup]
+2026-10-03T23:10:02.9064677Z ##[group]Booting builder
+2026-10-03T23:10:02.9119340Z [command]/usr/bin/docker buildx inspect --bootstrap --builder builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad
+2026-10-03T23:10:02.9646554Z #1 [internal] booting buildkit
+2026-10-03T23:10:03.1134240Z #1 pulling image moby/buildkit:buildx-stable-1 0.1s done
+2026-10-03T23:10:03.2661056Z #1 creating container buildx_buildkit_builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0
+2026-10-03T23:10:03.4465103Z #1 creating container buildx_buildkit_builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0 0.3s done
+2026-10-03T23:10:03.4784731Z #1 DONE 0.5s
+2026-10-03T23:10:03.5169105Z Name:          builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad
+2026-10-03T23:10:03.5187640Z Driver:        docker-container
+2026-10-03T23:10:03.5188077Z Last Activity: 2026-10-03 23:10:02 +0000 UTC
+2026-10-03T23:10:03.5188378Z 
+2026-10-03T23:10:03.5188492Z Nodes:
+2026-10-03T23:10:03.5188909Z Name:                  builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0
+2026-10-03T23:10:03.5189493Z Endpoint:              unix:///var/run/docker.sock
+2026-10-03T23:10:03.5190319Z Status:                running
+2026-10-03T23:10:03.5191662Z BuildKit daemon flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+2026-10-03T23:10:03.5193009Z BuildKit version:      v0.33.1
+2026-10-03T23:10:03.5194763Z Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/mips64le, linux/mips64, linux/loong64, linux/arm/v7, linux/arm/v6
+2026-10-03T23:10:03.5200298Z Labels:
+2026-10-03T23:10:03.5201025Z  org.mobyproject.buildkit.worker.executor:         oci
+2026-10-03T23:10:03.5202507Z  org.mobyproject.buildkit.worker.hostname:         d409a3a82e00
+2026-10-03T23:10:03.5203935Z  org.mobyproject.buildkit.worker.network:          host
+2026-10-03T23:10:03.5204988Z  org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+2026-10-03T23:10:03.5206192Z  org.mobyproject.buildkit.worker.selinux.enabled:  false
+2026-10-03T23:10:03.5207149Z  org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+2026-10-03T23:10:03.5207868Z GC Policy rule#0:
+2026-10-03T23:10:03.5208286Z  All:            false
+2026-10-03T23:10:03.5209016Z  Filters:        type==source.local type==exec.cachemount type==source.git.checkout
+2026-10-03T23:10:03.5210007Z  Keep Duration:  48h0m0s
+2026-10-03T23:10:03.5210483Z  Max Used Space: 488.3MiB
+2026-10-03T23:10:03.5210958Z GC Policy rule#1:
+2026-10-03T23:10:03.5211375Z  All:            false
+2026-10-03T23:10:03.5211812Z  Keep Duration:  1440h0m0s
+2026-10-03T23:10:03.5212280Z  Reserved Space: 9.313GiB
+2026-10-03T23:10:03.5212929Z  Max Used Space: 93.13GiB
+2026-10-03T23:10:03.5213199Z  Min Free Space: 27.01GiB
+2026-10-03T23:10:03.5213442Z GC Policy rule#2:
+2026-10-03T23:10:03.5213663Z  All:            false
+2026-10-03T23:10:03.5213895Z  Reserved Space: 9.313GiB
+2026-10-03T23:10:03.5214140Z  Max Used Space: 93.13GiB
+2026-10-03T23:10:03.5214496Z  Min Free Space: 27.01GiB
+2026-10-03T23:10:03.5214794Z GC Policy rule#3:
+2026-10-03T23:10:03.5215007Z  All:            true
+2026-10-03T23:10:03.5215359Z  Reserved Space: 9.313GiB
+2026-10-03T23:10:03.5215740Z  Max Used Space: 93.13GiB
+2026-10-03T23:10:03.5216131Z  Min Free Space: 27.01GiB
+2026-10-03T23:10:03.5224836Z ##[endgroup]
+2026-10-03T23:10:03.6243233Z ##[group]Inspect builder
+2026-10-03T23:10:03.6246051Z {
+2026-10-03T23:10:03.6246388Z   "nodes": [
+2026-10-03T23:10:03.6246891Z     {
+2026-10-03T23:10:03.6247312Z       "name": "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0",
+2026-10-03T23:10:03.6247846Z       "endpoint": "unix:///var/run/docker.sock",
+2026-10-03T23:10:03.6248519Z       "status": "running",
+2026-10-03T23:10:03.6249932Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2026-10-03T23:10:03.6251225Z       "buildkit": "v0.33.1",
+2026-10-03T23:10:03.6252946Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6",
+2026-10-03T23:10:03.6254656Z       "features": {
+2026-10-03T23:10:03.6255243Z         "Automatically load images to the Docker Engine image store": true,
+2026-10-03T23:10:03.6256009Z         "Cache export": true,
+2026-10-03T23:10:03.6256489Z         "Direct push": true,
+2026-10-03T23:10:03.6256966Z         "Docker exporter": true,
+2026-10-03T23:10:03.6257442Z         "Multi-platform build": true,
+2026-10-03T23:10:03.6258023Z         "OCI exporter": true
+2026-10-03T23:10:03.6258449Z       },
+2026-10-03T23:10:03.6258782Z       "labels": {
+2026-10-03T23:10:03.6259294Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2026-10-03T23:10:03.6260281Z         "org.mobyproject.buildkit.worker.hostname": "d409a3a82e00",
+2026-10-03T23:10:03.6261261Z         "org.mobyproject.buildkit.worker.network": "host",
+2026-10-03T23:10:03.6262160Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2026-10-03T23:10:03.6263084Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2026-10-03T23:10:03.6263988Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2026-10-03T23:10:03.6264744Z       },
+2026-10-03T23:10:03.6265134Z       "gcPolicy": [
+2026-10-03T23:10:03.6265530Z         {
+2026-10-03T23:10:03.6265909Z           "all": false,
+2026-10-03T23:10:03.6266335Z           "filter": [
+2026-10-03T23:10:03.6266704Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+2026-10-03T23:10:03.6267844Z           ],
+2026-10-03T23:10:03.6268261Z           "keepDuration": "48h0m0s",
+2026-10-03T23:10:03.6268825Z           "maxUsedSpace": "488.3MiB"
+2026-10-03T23:10:03.6269313Z         },
+2026-10-03T23:10:03.6270570Z         {
+2026-10-03T23:10:03.6270978Z           "all": false,
+2026-10-03T23:10:03.6271422Z           "keepDuration": "1440h0m0s",
+2026-10-03T23:10:03.6271981Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:03.6272576Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:03.6273089Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:03.6273544Z         },
+2026-10-03T23:10:03.6273923Z         {
+2026-10-03T23:10:03.6274307Z           "all": false,
+2026-10-03T23:10:03.6274774Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:03.6275319Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:03.6275819Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:03.6276265Z         },
+2026-10-03T23:10:03.6276557Z         {
+2026-10-03T23:10:03.6276762Z           "all": true,
+2026-10-03T23:10:03.6277026Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:03.6277632Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:03.6277954Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:03.6278232Z         }
+2026-10-03T23:10:03.6278438Z       ]
+2026-10-03T23:10:03.6278646Z     }
+2026-10-03T23:10:03.6278837Z   ],
+2026-10-03T23:10:03.6279119Z   "name": "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad",
+2026-10-03T23:10:03.6279485Z   "driver": "docker-container",
+2026-10-03T23:10:03.6280550Z   "lastActivity": "2026-10-03T23:10:02.000Z"
+2026-10-03T23:10:03.6280898Z }
+2026-10-03T23:10:03.6281332Z ##[endgroup]
+2026-10-03T23:10:03.6281782Z ##[group]BuildKit version
+2026-10-03T23:10:03.6282144Z builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0: v0.33.1
+2026-10-03T23:10:03.6282716Z ##[endgroup]
+2026-10-03T23:10:03.6442570Z ##[group]Run docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302
+2026-10-03T23:10:03.6443102Z with:
+2026-10-03T23:10:03.6443365Z   images: ghcr.io/mosajjal/sniproxy
+2026-10-03T23:10:03.6443692Z   context: workflow
+2026-10-03T23:10:03.6447195Z   github-token: ***
+2026-10-03T23:10:03.6447447Z env:
+2026-10-03T23:10:03.6447672Z   REGISTRY: ghcr.io
+2026-10-03T23:10:03.6447941Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:10:03.6448238Z ##[endgroup]
+2026-10-03T23:10:04.4125924Z ##[group]Context info
+2026-10-03T23:10:04.4126732Z eventName: release
+2026-10-03T23:10:04.4127543Z sha: 1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:10:04.4128534Z ref: refs/tags/v2.4.2
+2026-10-03T23:10:04.4129588Z workflow: Publish Container Image to Github Container Registry
+2026-10-03T23:10:04.4131026Z action: meta
+2026-10-03T23:10:04.4131692Z actor: mosajjal
+2026-10-03T23:10:04.4132391Z runNumber: 45
+2026-10-03T23:10:04.4133094Z runId: 37160861216
+2026-10-03T23:10:04.4134340Z commitDate: Sat Oct 03 2026 23:03:33 GMT+0000 (Coordinated Universal Time)
+2026-10-03T23:10:04.4136236Z ##[endgroup]
+2026-10-03T23:10:04.4138497Z ##[group]Processing images input
+2026-10-03T23:10:04.4139318Z name=ghcr.io/mosajjal/sniproxy,enable=true
+2026-10-03T23:10:04.4140620Z ##[endgroup]
+2026-10-03T23:10:04.4154546Z ##[group]Processing tags input
+2026-10-03T23:10:04.4155256Z type=schedule,pattern=nightly,enable=true,priority=1000
+2026-10-03T23:10:04.4156064Z type=ref,event=branch,enable=true,priority=600
+2026-10-03T23:10:04.4156835Z type=ref,event=tag,enable=true,priority=600
+2026-10-03T23:10:04.4157581Z type=ref,event=pr,prefix=pr-,enable=true,priority=600
+2026-10-03T23:10:04.4158631Z ##[endgroup]
+2026-10-03T23:10:04.4159397Z ##[group]Processing flavor input
+2026-10-03T23:10:04.4160169Z latest=auto
+2026-10-03T23:10:04.4160591Z prefix=
+2026-10-03T23:10:04.4161000Z prefixLatest=false
+2026-10-03T23:10:04.4161442Z suffix=
+2026-10-03T23:10:04.4161841Z suffixLatest=false
+2026-10-03T23:10:04.4162334Z ##[endgroup]
+2026-10-03T23:10:04.4203305Z ##[group]Docker image version
+2026-10-03T23:10:04.4203928Z v2.4.2
+2026-10-03T23:10:04.4204727Z ##[endgroup]
+2026-10-03T23:10:04.4209134Z ##[group]Docker tags
+2026-10-03T23:10:04.4210055Z ghcr.io/mosajjal/sniproxy:v2.4.2
+2026-10-03T23:10:04.4210860Z ghcr.io/mosajjal/sniproxy:latest
+2026-10-03T23:10:04.4211970Z ##[endgroup]
+2026-10-03T23:10:04.4285797Z ##[group]Docker labels
+2026-10-03T23:10:04.4286706Z org.opencontainers.image.created=2026-10-03T23:10:04.415Z
+2026-10-03T23:10:04.4288534Z org.opencontainers.image.description=SNI Proxy with Embedded DNS Server
+2026-10-03T23:10:04.4290464Z org.opencontainers.image.licenses=BSD-2-Clause
+2026-10-03T23:10:04.4292029Z org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:10:04.4293981Z org.opencontainers.image.source=https://github.com/mosajjal/sniproxy
+2026-10-03T23:10:04.4295587Z org.opencontainers.image.title=sniproxy
+2026-10-03T23:10:04.4296973Z org.opencontainers.image.url=https://github.com/mosajjal/sniproxy
+2026-10-03T23:10:04.4298452Z org.opencontainers.image.version=v2.4.2
+2026-10-03T23:10:04.4299988Z ##[endgroup]
+2026-10-03T23:10:04.4300856Z ##[group]Annotations
+2026-10-03T23:10:04.4301662Z manifest:org.opencontainers.image.created=2026-10-03T23:10:04.415Z
+2026-10-03T23:10:04.4303016Z manifest:org.opencontainers.image.description=SNI Proxy with Embedded DNS Server
+2026-10-03T23:10:04.4304314Z manifest:org.opencontainers.image.licenses=BSD-2-Clause
+2026-10-03T23:10:04.4305642Z manifest:org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab
+2026-10-03T23:10:04.4307192Z manifest:org.opencontainers.image.source=https://github.com/mosajjal/sniproxy
+2026-10-03T23:10:04.4308430Z manifest:org.opencontainers.image.title=sniproxy
+2026-10-03T23:10:04.4309621Z manifest:org.opencontainers.image.url=https://github.com/mosajjal/sniproxy
+2026-10-03T23:10:04.4310817Z manifest:org.opencontainers.image.version=v2.4.2
+2026-10-03T23:10:04.4311806Z ##[endgroup]
+2026-10-03T23:10:04.4312833Z ##[group]JSON output
+2026-10-03T23:10:04.4313288Z {
+2026-10-03T23:10:04.4313688Z   "tags": [
+2026-10-03T23:10:04.4314200Z     "ghcr.io/mosajjal/sniproxy:v2.4.2",
+2026-10-03T23:10:04.4314879Z     "ghcr.io/mosajjal/sniproxy:latest"
+2026-10-03T23:10:04.4315467Z   ],
+2026-10-03T23:10:04.4315856Z   "tag-names": [
+2026-10-03T23:10:04.4316285Z     "v2.4.2",
+2026-10-03T23:10:04.4316720Z     "latest"
+2026-10-03T23:10:04.4317115Z   ],
+2026-10-03T23:10:04.4317492Z   "labels": {
+2026-10-03T23:10:04.4318127Z     "org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:10:04.4318836Z     "org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:10:04.4319451Z     "org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:10:04.4320156Z     "org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:10:04.4320812Z     "org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4321393Z     "org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:10:04.4321891Z     "org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4322411Z     "org.opencontainers.image.version": "v2.4.2"
+2026-10-03T23:10:04.4322762Z   },
+2026-10-03T23:10:04.4322969Z   "annotations": [
+2026-10-03T23:10:04.4323349Z     "manifest:org.opencontainers.image.created=2026-10-03T23:10:04.415Z",
+2026-10-03T23:10:04.4324009Z     "manifest:org.opencontainers.image.description=SNI Proxy with Embedded DNS Server",
+2026-10-03T23:10:04.4324609Z     "manifest:org.opencontainers.image.licenses=BSD-2-Clause",
+2026-10-03T23:10:04.4325303Z     "manifest:org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:10:04.4326041Z     "manifest:org.opencontainers.image.source=https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4326642Z     "manifest:org.opencontainers.image.title=sniproxy",
+2026-10-03T23:10:04.4327208Z     "manifest:org.opencontainers.image.url=https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4337946Z     "manifest:org.opencontainers.image.version=v2.4.2"
+2026-10-03T23:10:04.4338523Z   ]
+2026-10-03T23:10:04.4338980Z }
+2026-10-03T23:10:04.4339444Z ##[endgroup]
+2026-10-03T23:10:04.4340155Z ##[group]Bake file definition (tags)
+2026-10-03T23:10:04.4340480Z {
+2026-10-03T23:10:04.4340699Z   "target": {
+2026-10-03T23:10:04.4340958Z     "docker-metadata-action": {
+2026-10-03T23:10:04.4341254Z       "tags": [
+2026-10-03T23:10:04.4341526Z         "ghcr.io/mosajjal/sniproxy:v2.4.2",
+2026-10-03T23:10:04.4341889Z         "ghcr.io/mosajjal/sniproxy:latest"
+2026-10-03T23:10:04.4342226Z       ],
+2026-10-03T23:10:04.4342434Z       "args": {
+2026-10-03T23:10:04.4342748Z         "DOCKER_META_IMAGES": "ghcr.io/mosajjal/sniproxy",
+2026-10-03T23:10:04.4343161Z         "DOCKER_META_VERSION": "v2.4.2"
+2026-10-03T23:10:04.4343470Z       }
+2026-10-03T23:10:04.4343668Z     }
+2026-10-03T23:10:04.4343885Z   }
+2026-10-03T23:10:04.4344097Z }
+2026-10-03T23:10:04.4344490Z ##[endgroup]
+2026-10-03T23:10:04.4344929Z ##[group]Bake file definition (labels)
+2026-10-03T23:10:04.4345242Z {
+2026-10-03T23:10:04.4345455Z   "target": {
+2026-10-03T23:10:04.4345701Z     "docker-metadata-action": {
+2026-10-03T23:10:04.4346006Z       "labels": {
+2026-10-03T23:10:04.4346377Z         "org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:10:04.4347002Z         "org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:10:04.4347611Z         "org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:10:04.4348213Z         "org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:10:04.4348922Z         "org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4349486Z         "org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:10:04.4350244Z         "org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4350964Z         "org.opencontainers.image.version": "v2.4.2"
+2026-10-03T23:10:04.4351341Z       }
+2026-10-03T23:10:04.4351557Z     }
+2026-10-03T23:10:04.4351771Z   }
+2026-10-03T23:10:04.4351967Z }
+2026-10-03T23:10:04.4352371Z ##[endgroup]
+2026-10-03T23:10:04.4352825Z ##[group]Bake file definition (annotations)
+2026-10-03T23:10:04.4353158Z {
+2026-10-03T23:10:04.4353356Z   "target": {
+2026-10-03T23:10:04.4353611Z     "docker-metadata-action": {
+2026-10-03T23:10:04.4353915Z       "annotations": [
+2026-10-03T23:10:04.4354333Z         "manifest:org.opencontainers.image.created=2026-10-03T23:10:04.415Z",
+2026-10-03T23:10:04.4355022Z         "manifest:org.opencontainers.image.description=SNI Proxy with Embedded DNS Server",
+2026-10-03T23:10:04.4355675Z         "manifest:org.opencontainers.image.licenses=BSD-2-Clause",
+2026-10-03T23:10:04.4356328Z         "manifest:org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:10:04.4357222Z         "manifest:org.opencontainers.image.source=https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4357917Z         "manifest:org.opencontainers.image.title=sniproxy",
+2026-10-03T23:10:04.4358485Z         "manifest:org.opencontainers.image.url=https://github.com/mosajjal/sniproxy",
+2026-10-03T23:10:04.4359057Z         "manifest:org.opencontainers.image.version=v2.4.2"
+2026-10-03T23:10:04.4359419Z       ]
+2026-10-03T23:10:04.4359637Z     }
+2026-10-03T23:10:04.4360070Z   }
+2026-10-03T23:10:04.4360267Z }
+2026-10-03T23:10:04.4360654Z ##[endgroup]
+2026-10-03T23:10:04.4537900Z ##[group]Run docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc
+2026-10-03T23:10:04.4538384Z with:
+2026-10-03T23:10:04.4538604Z   context: .
+2026-10-03T23:10:04.4538828Z   push: true
+2026-10-03T23:10:04.4539190Z   tags: ghcr.io/mosajjal/sniproxy:v2.4.2
+ghcr.io/mosajjal/sniproxy:latest
+2026-10-03T23:10:04.4541723Z   labels: org.opencontainers.image.created=2026-10-03T23:10:04.415Z
+org.opencontainers.image.description=SNI Proxy with Embedded DNS Server
+org.opencontainers.image.licenses=BSD-2-Clause
+org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab
+org.opencontainers.image.source=https://github.com/mosajjal/sniproxy
+org.opencontainers.image.title=sniproxy
+org.opencontainers.image.url=https://github.com/mosajjal/sniproxy
+org.opencontainers.image.version=v2.4.2
+2026-10-03T23:10:04.4544014Z   platforms: linux/amd64,linux/arm/v6,linux/arm64
+2026-10-03T23:10:04.4544353Z   load: false
+2026-10-03T23:10:04.4544579Z   no-cache: false
+2026-10-03T23:10:04.4544841Z   pull: false
+2026-10-03T23:10:04.4547802Z   github-token: ***
+2026-10-03T23:10:04.4548060Z env:
+2026-10-03T23:10:04.4548276Z   REGISTRY: ghcr.io
+2026-10-03T23:10:04.4548532Z   IMAGE_NAME: mosajjal/sniproxy
+2026-10-03T23:10:04.4548836Z   DOCKER_METADATA_OUTPUT_VERSION: v2.4.2
+2026-10-03T23:10:04.4549353Z   DOCKER_METADATA_OUTPUT_TAGS: ghcr.io/mosajjal/sniproxy:v2.4.2
+ghcr.io/mosajjal/sniproxy:latest
+2026-10-03T23:10:04.4550114Z   DOCKER_METADATA_OUTPUT_TAG_NAMES: v2.4.2
+latest
+2026-10-03T23:10:04.4552154Z   DOCKER_METADATA_OUTPUT_LABELS: org.opencontainers.image.created=2026-10-03T23:10:04.415Z
+org.opencontainers.image.description=SNI Proxy with Embedded DNS Server
+org.opencontainers.image.licenses=BSD-2-Clause
+org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab
+org.opencontainers.image.source=https://github.com/mosajjal/sniproxy
+org.opencontainers.image.title=sniproxy
+org.opencontainers.image.url=https://github.com/mosajjal/sniproxy
+org.opencontainers.image.version=v2.4.2
+2026-10-03T23:10:04.4556161Z   DOCKER_METADATA_OUTPUT_ANNOTATIONS: manifest:org.opencontainers.image.created=2026-10-03T23:10:04.415Z
+manifest:org.opencontainers.image.description=SNI Proxy with Embedded DNS Server
+manifest:org.opencontainers.image.licenses=BSD-2-Clause
+manifest:org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab
+manifest:org.opencontainers.image.source=https://github.com/mosajjal/sniproxy
+manifest:org.opencontainers.image.title=sniproxy
+manifest:org.opencontainers.image.url=https://github.com/mosajjal/sniproxy
+manifest:org.opencontainers.image.version=v2.4.2
+2026-10-03T23:10:04.4562750Z   DOCKER_METADATA_OUTPUT_JSON: {"tags":["ghcr.io/mosajjal/sniproxy:v2.4.2","ghcr.io/mosajjal/sniproxy:latest"],"tag-names":["v2.4.2","latest"],"labels":{"org.opencontainers.image.created":"2026-10-03T23:10:04.415Z","org.opencontainers.image.description":"SNI Proxy with Embedded DNS Server","org.opencontainers.image.licenses":"BSD-2-Clause","org.opencontainers.image.revision":"1429d6dbe7bed4767597470223f93a407b0d5dab","org.opencontainers.image.source":"https://github.com/mosajjal/sniproxy","org.opencontainers.image.title":"sniproxy","org.opencontainers.image.url":"https://github.com/mosajjal/sniproxy","org.opencontainers.image.version":"v2.4.2"},"annotations":["manifest:org.opencontainers.image.created=2026-10-03T23:10:04.415Z","manifest:org.opencontainers.image.description=SNI Proxy with Embedded DNS Server","manifest:org.opencontainers.image.licenses=BSD-2-Clause","manifest:org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab","manifest:org.opencontainers.image.source=https://github.com/mosajjal/sniproxy","manifest:org.opencontainers.image.title=sniproxy","manifest:org.opencontainers.image.url=https://github.com/mosajjal/sniproxy","manifest:org.opencontainers.image.version=v2.4.2"]}
+2026-10-03T23:10:04.4567564Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_TAGS: /home/runner/work/_temp/docker-actions-toolkit-jMSdQH/docker-metadata-action-bake-tags.json
+2026-10-03T23:10:04.4568680Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_LABELS: /home/runner/work/_temp/docker-actions-toolkit-jMSdQH/docker-metadata-action-bake-labels.json
+2026-10-03T23:10:04.4569904Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_ANNOTATIONS: /home/runner/work/_temp/docker-actions-toolkit-jMSdQH/docker-metadata-action-bake-annotations.json
+2026-10-03T23:10:04.4570917Z   DOCKER_METADATA_OUTPUT_BAKE_FILE: /home/runner/work/_temp/docker-actions-toolkit-jMSdQH/docker-metadata-action-bake.json
+2026-10-03T23:10:04.4571476Z ##[endgroup]
+2026-10-03T23:10:04.7111975Z ##[group]GitHub Actions runtime token ACs
+2026-10-03T23:10:04.7121816Z refs/heads/refs/tags/v2.4.2: read/write
+2026-10-03T23:10:04.7122397Z refs/heads/master: read
+2026-10-03T23:10:04.7123613Z ##[endgroup]
+2026-10-03T23:10:04.7124332Z ##[group]Docker info
+2026-10-03T23:10:04.7171077Z [command]/usr/bin/docker version
+2026-10-03T23:10:04.7414612Z Client: Docker Engine - Community
+2026-10-03T23:10:04.7419209Z  Version:           28.0.4
+2026-10-03T23:10:04.7420193Z  API version:       1.48
+2026-10-03T23:10:04.7420678Z  Go version:        go1.23.7
+2026-10-03T23:10:04.7421239Z  Git commit:        b8034c0
+2026-10-03T23:10:04.7421743Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-03T23:10:04.7422255Z  OS/Arch:           linux/amd64
+2026-10-03T23:10:04.7422571Z  Context:           default
+2026-10-03T23:10:04.7422755Z 
+2026-10-03T23:10:04.7422892Z Server: Docker Engine - Community
+2026-10-03T23:10:04.7423213Z  Engine:
+2026-10-03T23:10:04.7423464Z   Version:          28.0.4
+2026-10-03T23:10:04.7423811Z   API version:      1.48 (minimum version 1.24)
+2026-10-03T23:10:04.7424199Z   Go version:       go1.23.7
+2026-10-03T23:10:04.7424509Z   Git commit:       6430e49
+2026-10-03T23:10:04.7424854Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-03T23:10:04.7425213Z   OS/Arch:          linux/amd64
+2026-10-03T23:10:04.7425510Z   Experimental:     false
+2026-10-03T23:10:04.7425798Z  containerd:
+2026-10-03T23:10:04.7426038Z   Version:          v2.3.6
+2026-10-03T23:10:04.7426393Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:10:04.7426769Z  runc:
+2026-10-03T23:10:04.7426995Z   Version:          1.5.1
+2026-10-03T23:10:04.7427281Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-03T23:10:04.7427596Z  docker-init:
+2026-10-03T23:10:04.7427840Z   Version:          0.19.0
+2026-10-03T23:10:04.7428117Z   GitCommit:        de40ad0
+2026-10-03T23:10:04.7489327Z [command]/usr/bin/docker info
+2026-10-03T23:10:04.8136151Z Client: Docker Engine - Community
+2026-10-03T23:10:04.8137055Z  Version:    28.0.4
+2026-10-03T23:10:04.8137456Z  Context:    default
+2026-10-03T23:10:04.8137845Z  Debug Mode: false
+2026-10-03T23:10:04.8138199Z  Plugins:
+2026-10-03T23:10:04.8138585Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-03T23:10:04.8139038Z     Version:  v0.37.1
+2026-10-03T23:10:04.8139498Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-03T23:10:04.8140486Z   compose: Docker Compose (Docker Inc.)
+2026-10-03T23:10:04.8140935Z     Version:  v2.38.2
+2026-10-03T23:10:04.8141416Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-03T23:10:04.8141924Z 
+2026-10-03T23:10:04.8142059Z Server:
+2026-10-03T23:10:04.8142405Z  Containers: 1
+2026-10-03T23:10:04.8142741Z   Running: 1
+2026-10-03T23:10:04.8143070Z   Paused: 0
+2026-10-03T23:10:04.8143391Z   Stopped: 0
+2026-10-03T23:10:04.8143709Z  Images: 8
+2026-10-03T23:10:04.8144037Z  Server Version: 28.0.4
+2026-10-03T23:10:04.8144434Z  Storage Driver: overlay2
+2026-10-03T23:10:04.8144846Z   Backing Filesystem: extfs
+2026-10-03T23:10:04.8145268Z   Supports d_type: true
+2026-10-03T23:10:04.8145710Z   Using metacopy: false
+2026-10-03T23:10:04.8146137Z   Native Overlay Diff: false
+2026-10-03T23:10:04.8146550Z   userxattr: false
+2026-10-03T23:10:04.8146904Z  Logging Driver: json-file
+2026-10-03T23:10:04.8147282Z  Cgroup Driver: systemd
+2026-10-03T23:10:04.8147637Z  Cgroup Version: 2
+2026-10-03T23:10:04.8147960Z  Plugins:
+2026-10-03T23:10:04.8148259Z   Volume: local
+2026-10-03T23:10:04.8149067Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-03T23:10:04.8149957Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-03T23:10:04.8150585Z  Swarm: inactive
+2026-10-03T23:10:04.8150943Z  Runtimes: io.containerd.runc.v2 runc
+2026-10-03T23:10:04.8151374Z  Default Runtime: runc
+2026-10-03T23:10:04.8151726Z  Init Binary: docker-init
+2026-10-03T23:10:04.8152208Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-03T23:10:04.8152764Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-03T23:10:04.8153172Z  init version: de40ad0
+2026-10-03T23:10:04.8153529Z  Security Options:
+2026-10-03T23:10:04.8153858Z   apparmor
+2026-10-03T23:10:04.8154151Z   seccomp
+2026-10-03T23:10:04.8154690Z    Profile: builtin
+2026-10-03T23:10:04.8155018Z   cgroupns
+2026-10-03T23:10:04.8155383Z  Kernel Version: 6.17.0-1022-azure
+2026-10-03T23:10:04.8155813Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-03T23:10:04.8156246Z  OSType: linux
+2026-10-03T23:10:04.8156596Z  Architecture: x86_64
+2026-10-03T23:10:04.8156942Z  CPUs: 4
+2026-10-03T23:10:04.8157262Z  Total Memory: 15.61GiB
+2026-10-03T23:10:04.8157620Z  Name: runnervm8df0l
+2026-10-03T23:10:04.8157984Z  ID: 96bc9d58-7015-4b4a-8357-8e592f0b19b5
+2026-10-03T23:10:04.8158405Z  Docker Root Dir: /var/lib/docker
+2026-10-03T23:10:04.8158809Z  Debug Mode: false
+2026-10-03T23:10:04.8159144Z  Username: githubactions
+2026-10-03T23:10:04.8159502Z  Experimental: false
+2026-10-03T23:10:04.8160242Z  Insecure Registries:
+2026-10-03T23:10:04.8160604Z   ::1/128
+2026-10-03T23:10:04.8160876Z   127.0.0.0/8
+2026-10-03T23:10:04.8161194Z  Live Restore Enabled: false
+2026-10-03T23:10:04.8161439Z 
+2026-10-03T23:10:04.8161968Z ##[endgroup]
+2026-10-03T23:10:04.8162533Z ##[group]Proxy configuration
+2026-10-03T23:10:04.8162964Z No proxy configuration found
+2026-10-03T23:10:04.8163577Z ##[endgroup]
+2026-10-03T23:10:04.8872219Z ##[group]Buildx version
+2026-10-03T23:10:04.8902357Z [command]/usr/bin/docker buildx version
+2026-10-03T23:10:04.9431795Z github.com/docker/buildx v0.37.1 0b265a9f62db554fa9aba6dd19e1bd5704bc7d8a
+2026-10-03T23:10:04.9457472Z ##[endgroup]
+2026-10-03T23:10:04.9458175Z ##[group]Builder info
+2026-10-03T23:10:05.0449108Z {
+2026-10-03T23:10:05.0449545Z   "nodes": [
+2026-10-03T23:10:05.0450137Z     {
+2026-10-03T23:10:05.0450659Z       "name": "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0",
+2026-10-03T23:10:05.0451385Z       "endpoint": "unix:///var/run/docker.sock",
+2026-10-03T23:10:05.0451925Z       "status": "running",
+2026-10-03T23:10:05.0452855Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2026-10-03T23:10:05.0453797Z       "buildkit": "v0.33.1",
+2026-10-03T23:10:05.0454920Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6",
+2026-10-03T23:10:05.0456137Z       "features": {
+2026-10-03T23:10:05.0456568Z         "Automatically load images to the Docker Engine image store": true,
+2026-10-03T23:10:05.0457167Z         "Cache export": true,
+2026-10-03T23:10:05.0457603Z         "Direct push": true,
+2026-10-03T23:10:05.0457909Z         "Docker exporter": true,
+2026-10-03T23:10:05.0458344Z         "Multi-platform build": true,
+2026-10-03T23:10:05.0458707Z         "OCI exporter": true
+2026-10-03T23:10:05.0459040Z       },
+2026-10-03T23:10:05.0459332Z       "labels": {
+2026-10-03T23:10:05.0460265Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2026-10-03T23:10:05.0460946Z         "org.mobyproject.buildkit.worker.hostname": "d409a3a82e00",
+2026-10-03T23:10:05.0461642Z         "org.mobyproject.buildkit.worker.network": "host",
+2026-10-03T23:10:05.0462389Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2026-10-03T23:10:05.0463136Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2026-10-03T23:10:05.0463839Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2026-10-03T23:10:05.0464439Z       },
+2026-10-03T23:10:05.0465098Z       "gcPolicy": [
+2026-10-03T23:10:05.0465388Z         {
+2026-10-03T23:10:05.0465722Z           "all": false,
+2026-10-03T23:10:05.0466150Z           "filter": [
+2026-10-03T23:10:05.0466822Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+2026-10-03T23:10:05.0467556Z           ],
+2026-10-03T23:10:05.0467825Z           "keepDuration": "48h0m0s",
+2026-10-03T23:10:05.0468300Z           "maxUsedSpace": "488.3MiB"
+2026-10-03T23:10:05.0468689Z         },
+2026-10-03T23:10:05.0468976Z         {
+2026-10-03T23:10:05.0469265Z           "all": false,
+2026-10-03T23:10:05.0469644Z           "keepDuration": "1440h0m0s",
+2026-10-03T23:10:05.0470518Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:05.0471177Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:05.0471486Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:05.0471781Z         },
+2026-10-03T23:10:05.0472050Z         {
+2026-10-03T23:10:05.0472334Z           "all": false,
+2026-10-03T23:10:05.0472610Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:05.0473024Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:05.0473351Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:05.0473628Z         },
+2026-10-03T23:10:05.0473940Z         {
+2026-10-03T23:10:05.0474180Z           "all": true,
+2026-10-03T23:10:05.0474438Z           "reservedSpace": "9.313GiB",
+2026-10-03T23:10:05.0474875Z           "maxUsedSpace": "93.13GiB",
+2026-10-03T23:10:05.0475293Z           "minFreeSpace": "27.01GiB"
+2026-10-03T23:10:05.0475594Z         }
+2026-10-03T23:10:05.0475920Z       ]
+2026-10-03T23:10:05.0476127Z     }
+2026-10-03T23:10:05.0476377Z   ],
+2026-10-03T23:10:05.0476733Z   "name": "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad",
+2026-10-03T23:10:05.0477256Z   "driver": "docker-container",
+2026-10-03T23:10:05.0477594Z   "lastActivity": "2026-10-03T23:10:02.000Z"
+2026-10-03T23:10:05.0478017Z }
+2026-10-03T23:10:05.0478529Z ##[endgroup]
+2026-10-03T23:10:05.2222682Z [command]/usr/bin/docker buildx build --iidfile /home/runner/work/_temp/docker-actions-toolkit-MXuGB1/build-iidfile-3a4ba86ad4.txt --label org.opencontainers.image.created=2026-10-03T23:10:04.415Z --label org.opencontainers.image.description=SNI Proxy with Embedded DNS Server --label org.opencontainers.image.licenses=BSD-2-Clause --label org.opencontainers.image.revision=1429d6dbe7bed4767597470223f93a407b0d5dab --label org.opencontainers.image.source=https://github.com/mosajjal/sniproxy --label org.opencontainers.image.title=sniproxy --label org.opencontainers.image.url=https://github.com/mosajjal/sniproxy --label org.opencontainers.image.version=v2.4.2 --platform linux/amd64,linux/arm/v6,linux/arm64 --attest type=provenance,mode=max,builder-id=https://github.com/mosajjal/sniproxy/actions/runs/37160861216/attempts/1 --tag ghcr.io/mosajjal/sniproxy:v2.4.2 --tag ghcr.io/mosajjal/sniproxy:latest --metadata-file /home/runner/work/_temp/docker-actions-toolkit-MXuGB1/build-metadata-0dcf9bc0e5.json --push .
+2026-10-03T23:10:05.5773374Z #0 building with "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad" instance using docker-container driver
+2026-10-03T23:10:05.5774918Z 
+2026-10-03T23:10:05.5775380Z #1 [internal] load build definition from Dockerfile
+2026-10-03T23:10:05.5776535Z #1 transferring dockerfile: 807B 0.0s done
+2026-10-03T23:10:05.5778606Z #1 WARN: RedundantTargetPlatform: Setting platform to predefined ${TARGETPLATFORM:-linux/amd64} in FROM is redundant as this is the default behavior (line 1)
+2026-10-03T23:10:05.5780368Z #1 DONE 0.0s
+2026-10-03T23:10:05.5780909Z 
+2026-10-03T23:10:05.5781319Z #2 [auth] library/golang:pull token for registry-1.docker.io
+2026-10-03T23:10:05.5782349Z #2 DONE 0.0s
+2026-10-03T23:10:05.5782815Z 
+2026-10-03T23:10:05.5783678Z #3 [linux/arm/v6 internal] load metadata for docker.io/library/golang:1.26-alpine
+2026-10-03T23:10:05.7745510Z #3 ...
+2026-10-03T23:10:05.7746003Z 
+2026-10-03T23:10:05.7746722Z #4 [linux/arm64 internal] load metadata for docker.io/library/golang:1.26-alpine
+2026-10-03T23:10:05.7747584Z #4 DONE 0.4s
+2026-10-03T23:10:05.8967686Z 
+2026-10-03T23:10:05.8969044Z #5 [linux/amd64 internal] load metadata for docker.io/library/golang:1.26-alpine
+2026-10-03T23:10:05.8970416Z #5 DONE 0.4s
+2026-10-03T23:10:05.8970729Z 
+2026-10-03T23:10:05.8971309Z #3 [linux/arm/v6 internal] load metadata for docker.io/library/golang:1.26-alpine
+2026-10-03T23:10:05.8972348Z #3 DONE 0.4s
+2026-10-03T23:10:05.8972630Z 
+2026-10-03T23:10:05.8972879Z #6 [internal] load .dockerignore
+2026-10-03T23:10:05.8973501Z #6 transferring context: 2B done
+2026-10-03T23:10:05.8973966Z #6 DONE 0.0s
+2026-10-03T23:10:05.8974132Z 
+2026-10-03T23:10:05.8974265Z #7 [internal] load build context
+2026-10-03T23:10:05.8974678Z #7 transferring context: 453.76kB 0.0s done
+2026-10-03T23:10:05.8975302Z #7 DONE 0.1s
+2026-10-03T23:10:05.8975459Z 
+2026-10-03T23:10:05.8976107Z #8 [linux/arm64 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:05.8977757Z #8 resolve docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c done
+2026-10-03T23:10:05.8979980Z #8 sha256:1c522d23c63ba5abba715a4b79c16b23ad435a83db46c9e74756a214b4407337 126B / 126B 0.0s done
+2026-10-03T23:10:05.8981527Z #8 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 0.0s done
+2026-10-03T23:10:05.8983344Z #8 sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00 4.19MB / 4.19MB 0.0s done
+2026-10-03T23:10:06.0078084Z #8 extracting sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00
+2026-10-03T23:10:06.0081514Z #8 sha256:c0a950d26132f1fa89f86eab9e0be7f020b80281607d4bd2902c7b0be5862cd1 249.81kB / 249.81kB 0.0s done
+2026-10-03T23:10:06.1167959Z #8 sha256:51fb0b9b10a77a100f12ca35704e0bf2e54f625945c6087b132491dec45b4ed6 64.22MB / 64.22MB 0.3s done
+2026-10-03T23:10:06.2264597Z #8 extracting sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00 0.3s done
+2026-10-03T23:10:06.2266264Z #8 extracting sha256:c0a950d26132f1fa89f86eab9e0be7f020b80281607d4bd2902c7b0be5862cd1 0.1s done
+2026-10-03T23:10:06.2267952Z #8 DONE 0.4s
+2026-10-03T23:10:06.2268931Z 
+2026-10-03T23:10:06.2270002Z #9 [linux/arm/v6 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:06.2272883Z #9 resolve docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c done
+2026-10-03T23:10:06.2275465Z #9 sha256:903fd218442d7d734e6e4fcce6094501964804b5ff1fcc39dbb9d6af4d4a202f 248.48kB / 248.48kB 0.0s done
+2026-10-03T23:10:06.2278174Z #9 sha256:67df0bd364a831906c224108ce598c1abe5302992a1400cba987aad57a2e3ced 125B / 125B 0.0s done
+2026-10-03T23:10:06.2278974Z #9 sha256:f218cc0a85b16ce88f0b295e09ea08f059389ba0e628af7344be20a2700e9091 3.56MB / 3.56MB 0.0s done
+2026-10-03T23:10:06.2280979Z #9 extracting sha256:f218cc0a85b16ce88f0b295e09ea08f059389ba0e628af7344be20a2700e9091 0.2s done
+2026-10-03T23:10:06.2281918Z #9 sha256:4156a13a33a79c57e061c7bc88ad619b8a6c67e38936c6e71dda83cde648d80a 65.85MB / 65.85MB 0.3s done
+2026-10-03T23:10:06.2282602Z #9 extracting sha256:903fd218442d7d734e6e4fcce6094501964804b5ff1fcc39dbb9d6af4d4a202f
+2026-10-03T23:10:06.4716216Z #9 extracting sha256:903fd218442d7d734e6e4fcce6094501964804b5ff1fcc39dbb9d6af4d4a202f 0.1s done
+2026-10-03T23:10:06.4721542Z #9 extracting sha256:4156a13a33a79c57e061c7bc88ad619b8a6c67e38936c6e71dda83cde648d80a
+2026-10-03T23:10:11.4083054Z #9 extracting sha256:4156a13a33a79c57e061c7bc88ad619b8a6c67e38936c6e71dda83cde648d80a 5.2s done
+2026-10-03T23:10:11.4085040Z #9 DONE 5.6s
+2026-10-03T23:10:11.4086427Z 
+2026-10-03T23:10:11.4087892Z #10 [linux/amd64 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:11.4089982Z #10 resolve docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c done
+2026-10-03T23:10:11.4091910Z #10 sha256:e2de96513ba9eb53b431787ec8a65cdde380ac4772a3e4c4b714dcfde2a102b5 3.85MB / 3.85MB 0.0s done
+2026-10-03T23:10:11.4093156Z #10 extracting sha256:e2de96513ba9eb53b431787ec8a65cdde380ac4772a3e4c4b714dcfde2a102b5 0.2s done
+2026-10-03T23:10:11.4094250Z #10 sha256:68ed9cc945387f62e6993f95484c65db531f4a4c6c076363d90fd1d575e36633 126B / 126B 0.0s done
+2026-10-03T23:10:11.4095412Z #10 sha256:4009a0783f338ed55a73885b00ecad4c761c55b29337bc83f4ba5893b456a80c 247.52kB / 247.52kB 0.0s done
+2026-10-03T23:10:11.4096662Z #10 sha256:2cb3e687d353c47479f7eb82d6cc1b230f1d252bfefaddbeec9d3de57edf5d49 67.31MB / 67.31MB 0.4s done
+2026-10-03T23:10:11.4097852Z #10 extracting sha256:4009a0783f338ed55a73885b00ecad4c761c55b29337bc83f4ba5893b456a80c 0.1s done
+2026-10-03T23:10:11.4099455Z #10 extracting sha256:2cb3e687d353c47479f7eb82d6cc1b230f1d252bfefaddbeec9d3de57edf5d49
+2026-10-03T23:10:11.5291398Z #10 ...
+2026-10-03T23:10:11.5291772Z 
+2026-10-03T23:10:11.5292925Z #8 [linux/arm64 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:11.5294741Z #8 extracting sha256:51fb0b9b10a77a100f12ca35704e0bf2e54f625945c6087b132491dec45b4ed6 5.3s done
+2026-10-03T23:10:11.5295408Z #8 DONE 5.7s
+2026-10-03T23:10:11.5295579Z 
+2026-10-03T23:10:11.5296209Z #9 [linux/arm/v6 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:11.5297291Z #9 extracting sha256:67df0bd364a831906c224108ce598c1abe5302992a1400cba987aad57a2e3ced
+2026-10-03T23:10:11.8249230Z #9 extracting sha256:67df0bd364a831906c224108ce598c1abe5302992a1400cba987aad57a2e3ced 0.3s done
+2026-10-03T23:10:11.8251316Z #9 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+2026-10-03T23:10:11.8252623Z #9 DONE 5.9s
+2026-10-03T23:10:11.8253024Z 
+2026-10-03T23:10:11.8254019Z #8 [linux/arm64 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:11.8256087Z #8 extracting sha256:1c522d23c63ba5abba715a4b79c16b23ad435a83db46c9e74756a214b4407337 0.1s done
+2026-10-03T23:10:11.8257570Z #8 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+2026-10-03T23:10:11.8258589Z #8 DONE 5.9s
+2026-10-03T23:10:11.8258841Z 
+2026-10-03T23:10:11.8260045Z #10 [linux/amd64 stage-0 1/6] FROM docker.io/library/golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c
+2026-10-03T23:10:11.8261897Z #10 extracting sha256:2cb3e687d353c47479f7eb82d6cc1b230f1d252bfefaddbeec9d3de57edf5d49 5.3s done
+2026-10-03T23:10:11.8263404Z #10 extracting sha256:68ed9cc945387f62e6993f95484c65db531f4a4c6c076363d90fd1d575e36633 0.0s done
+2026-10-03T23:10:11.8264890Z #10 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+2026-10-03T23:10:11.8265951Z #10 DONE 5.9s
+2026-10-03T23:10:11.8266203Z 
+2026-10-03T23:10:11.8266509Z #11 [linux/amd64 stage-0 2/6] RUN apk add --no-cache git
+2026-10-03T23:10:12.2651911Z #11 0.591 ( 1/12) Installing brotli-libs (1.2.0-r1)
+2026-10-03T23:10:12.4065879Z #11 0.603 ( 2/12) Installing c-ares (1.34.8-r0)
+2026-10-03T23:10:12.4066716Z #11 0.608 ( 3/12) Installing libunistring (1.4.2-r0)
+2026-10-03T23:10:12.4069984Z #11 0.620 ( 4/12) Installing libidn2 (2.3.8-r0)
+2026-10-03T23:10:12.4071356Z #11 0.625 ( 5/12) Installing nghttp2-libs (1.70.0-r0)
+2026-10-03T23:10:12.4072026Z #11 0.628 ( 6/12) Installing libpsl (0.21.5-r3)
+2026-10-03T23:10:12.4072667Z #11 0.632 ( 7/12) Installing zstd-libs (1.5.7-r2)
+2026-10-03T23:10:12.4073363Z #11 0.640 ( 8/12) Installing libcurl (8.22.0-r0)
+2026-10-03T23:10:12.4073990Z #11 0.647 ( 9/12) Installing libexpat (2.8.5-r0)
+2026-10-03T23:10:12.4074691Z #11 0.651 (10/12) Installing pcre2 (10.49-r0)
+2026-10-03T23:10:12.4075593Z #11 0.659 (11/12) Installing git (2.54.0-r0)
+2026-10-03T23:10:12.4076564Z #11 0.732 (12/12) Installing git-init-template (2.54.0-r0)
+2026-10-03T23:10:12.5714222Z #11 0.737 Executing busybox-1.37.0-r31.trigger
+2026-10-03T23:10:12.5715527Z #11 0.747 OK: 20.6 MiB in 29 packages
+2026-10-03T23:10:14.4307370Z #11 DONE 2.8s
+2026-10-03T23:10:14.4307863Z 
+2026-10-03T23:10:14.4308141Z #12 [linux/arm/v6 stage-0 2/6] RUN apk add --no-cache git
+2026-10-03T23:10:14.4308756Z #12 2.354 ( 1/13) Installing brotli-libs (1.2.0-r1)
+2026-10-03T23:10:14.4309309Z #12 2.404 ( 2/13) Installing c-ares (1.34.8-r0)
+2026-10-03T23:10:14.4310113Z #12 2.422 ( 3/13) Installing libunistring (1.4.2-r0)
+2026-10-03T23:10:14.4310677Z #12 2.489 ( 4/13) Installing libidn2 (2.3.8-r0)
+2026-10-03T23:10:14.4311257Z #12 2.503 ( 5/13) Installing nghttp2-libs (1.70.0-r0)
+2026-10-03T23:10:14.4311812Z #12 2.513 ( 6/13) Installing libpsl (0.21.5-r3)
+2026-10-03T23:10:14.4312750Z #12 2.524 ( 7/13) Installing zstd-libs (1.5.7-r2)
+2026-10-03T23:10:14.4313317Z #12 2.563 ( 8/13) Installing libcurl (8.22.0-r0)
+2026-10-03T23:10:14.4313869Z #12 2.604 ( 9/13) Installing libgcc (15.2.0-r5)
+2026-10-03T23:10:14.4317684Z #12 2.611 (10/13) Installing libexpat (2.8.5-r0)
+2026-10-03T23:10:14.4318235Z #12 2.621 (11/13) Installing pcre2 (10.49-r0)
+2026-10-03T23:10:14.4318648Z #12 2.659 (12/13) Installing git (2.54.0-r0)
+2026-10-03T23:10:14.5516486Z #12 ...
+2026-10-03T23:10:14.5517398Z 
+2026-10-03T23:10:14.5518364Z #13 [linux/amd64 stage-0 3/6] RUN mkdir /app
+2026-10-03T23:10:14.5519431Z #13 DONE 0.1s
+2026-10-03T23:10:14.5522030Z 
+2026-10-03T23:10:14.5522615Z #14 [linux/amd64 stage-0 4/6] ADD . /app/
+2026-10-03T23:10:14.5523416Z #14 DONE 0.0s
+2026-10-03T23:10:14.6630790Z 
+2026-10-03T23:10:14.6631718Z #15 [linux/amd64 stage-0 5/6] WORKDIR /app/cmd/sniproxy
+2026-10-03T23:10:14.6632856Z #15 DONE 0.0s
+2026-10-03T23:10:14.6633563Z 
+2026-10-03T23:10:14.6635265Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:14.6638551Z #16 0.099 go: downloading github.com/deathowl/go-metrics-prometheus v0.0.0-20221009205350-f2a1482ba35b
+2026-10-03T23:10:14.7729098Z #16 0.099 go: downloading github.com/knadh/koanf v1.5.0
+2026-10-03T23:10:14.7733376Z #16 0.100 go: downloading github.com/google/uuid v1.6.0
+2026-10-03T23:10:14.7734624Z #16 0.182 go: downloading github.com/pkg/profile v1.7.0
+2026-10-03T23:10:14.7735839Z #16 0.184 go: downloading github.com/prometheus/client_golang v1.24.1
+2026-10-03T23:10:14.7737277Z #16 0.208 go: downloading github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9
+2026-10-03T23:10:14.9548706Z #16 ...
+2026-10-03T23:10:14.9558813Z 
+2026-10-03T23:10:14.9559716Z #17 [linux/arm64 stage-0 2/6] RUN apk add --no-cache git
+2026-10-03T23:10:14.9561088Z #17 2.265 ( 1/12) Installing brotli-libs (1.2.0-r1)
+2026-10-03T23:10:14.9562497Z #17 2.316 ( 2/12) Installing c-ares (1.34.8-r0)
+2026-10-03T23:10:14.9563682Z #17 2.330 ( 3/12) Installing libunistring (1.4.2-r0)
+2026-10-03T23:10:14.9564876Z #17 2.399 ( 4/12) Installing libidn2 (2.3.8-r0)
+2026-10-03T23:10:14.9565764Z #17 2.411 ( 5/12) Installing nghttp2-libs (1.70.0-r0)
+2026-10-03T23:10:14.9566258Z #17 2.421 ( 6/12) Installing libpsl (0.21.5-r3)
+2026-10-03T23:10:14.9566669Z #17 2.433 ( 7/12) Installing zstd-libs (1.5.7-r2)
+2026-10-03T23:10:14.9567016Z #17 2.464 ( 8/12) Installing libcurl (8.22.0-r0)
+2026-10-03T23:10:14.9567341Z #17 2.501 ( 9/12) Installing libexpat (2.8.5-r0)
+2026-10-03T23:10:14.9567664Z #17 2.524 (10/12) Installing pcre2 (10.49-r0)
+2026-10-03T23:10:14.9567986Z #17 2.570 (11/12) Installing git (2.54.0-r0)
+2026-10-03T23:10:14.9568337Z #17 2.945 (12/12) Installing git-init-template (2.54.0-r0)
+2026-10-03T23:10:14.9568701Z #17 2.955 Executing busybox-1.37.0-r31.trigger
+2026-10-03T23:10:14.9569014Z #17 3.035 OK: 21.5 MiB in 29 packages
+2026-10-03T23:10:14.9569288Z #17 DONE 3.2s
+2026-10-03T23:10:14.9569416Z 
+2026-10-03T23:10:14.9570580Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:14.9576491Z #16 0.236 go: downloading github.com/rs/zerolog v1.35.1
+2026-10-03T23:10:14.9581450Z #16 0.266 go: downloading github.com/spf13/cobra v1.10.2
+2026-10-03T23:10:14.9582185Z #16 0.388 go: downloading gopkg.in/yaml.v3 v3.0.1
+2026-10-03T23:10:15.0686154Z #16 ...
+2026-10-03T23:10:15.0689010Z 
+2026-10-03T23:10:15.0689269Z #18 [linux/arm64 stage-0 3/6] RUN mkdir /app
+2026-10-03T23:10:15.0690297Z #18 DONE 0.1s
+2026-10-03T23:10:15.0690566Z 
+2026-10-03T23:10:15.0690887Z #12 [linux/arm/v6 stage-0 2/6] RUN apk add --no-cache git
+2026-10-03T23:10:15.0691735Z #12 3.059 (13/13) Installing git-init-template (2.54.0-r0)
+2026-10-03T23:10:15.0692447Z #12 3.071 Executing busybox-1.37.0-r31.trigger
+2026-10-03T23:10:15.0693481Z #12 3.189 OK: 18.9 MiB in 30 packages
+2026-10-03T23:10:15.0694007Z #12 DONE 3.3s
+2026-10-03T23:10:15.0694272Z 
+2026-10-03T23:10:15.0694494Z #19 [linux/arm64 stage-0 4/6] ADD . /app/
+2026-10-03T23:10:15.0695293Z #19 DONE 0.1s
+2026-10-03T23:10:15.0695542Z 
+2026-10-03T23:10:15.0696065Z #20 [linux/arm64 stage-0 5/6] WORKDIR /app/cmd/sniproxy
+2026-10-03T23:10:15.0697172Z #20 DONE 0.0s
+2026-10-03T23:10:15.0697453Z 
+2026-10-03T23:10:15.0698949Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:15.0700925Z #16 0.389 go: downloading github.com/fsnotify/fsnotify v1.10.1
+2026-10-03T23:10:15.0701718Z #16 0.392 go: downloading github.com/mitchellh/copystructure v1.2.0
+2026-10-03T23:10:15.0702493Z #16 0.393 go: downloading github.com/mitchellh/mapstructure v1.5.0
+2026-10-03T23:10:15.0703933Z #16 0.419 go: downloading github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
+2026-10-03T23:10:15.0705785Z #16 0.422 go: downloading github.com/oschwald/maxminddb-golang v1.13.1
+2026-10-03T23:10:15.0706917Z #16 0.440 go: downloading github.com/yl2chen/cidranger v1.0.2
+2026-10-03T23:10:15.0707730Z #16 0.440 go: downloading inet.af/tcpproxy v0.0.0-20231102063150-2862066fc2a9
+2026-10-03T23:10:15.0708821Z #16 0.457 go: downloading github.com/folbricht/routedns v0.1.237
+2026-10-03T23:10:15.0709896Z #16 0.458 go: downloading github.com/miekg/dns v1.1.73
+2026-10-03T23:10:15.0711436Z #16 0.460 go: downloading github.com/mosajjal/doqd v0.0.0-20250722230636-f2af367ae3f6
+2026-10-03T23:10:15.1771562Z #16 ...
+2026-10-03T23:10:15.1771899Z 
+2026-10-03T23:10:15.1772121Z #21 [linux/arm/v6 stage-0 3/6] RUN mkdir /app
+2026-10-03T23:10:15.1772644Z #21 DONE 0.2s
+2026-10-03T23:10:15.1772860Z 
+2026-10-03T23:10:15.1773966Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:15.1777992Z #16 0.516 go: downloading github.com/txthinking/socks5 v0.0.0-20260601051520-339b044ab0eb
+2026-10-03T23:10:15.1779021Z #16 0.534 go: downloading golang.org/x/net v0.58.0
+2026-10-03T23:10:15.1780254Z #16 0.613 go: downloading github.com/gorilla/handlers v1.5.2
+2026-10-03T23:10:15.3020720Z #16 ...
+2026-10-03T23:10:15.3020995Z 
+2026-10-03T23:10:15.3021359Z #22 [linux/arm/v6 stage-0 4/6] ADD . /app/
+2026-10-03T23:10:15.3022228Z #22 DONE 0.0s
+2026-10-03T23:10:15.3022878Z 
+2026-10-03T23:10:15.3023427Z #23 [linux/arm/v6 stage-0 5/6] WORKDIR /app/cmd/sniproxy
+2026-10-03T23:10:15.3024169Z #23 DONE 0.0s
+2026-10-03T23:10:15.3024427Z 
+2026-10-03T23:10:15.3025528Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:15.3027156Z #16 0.643 go: downloading github.com/m13253/dns-over-https/v2 v2.3.10
+2026-10-03T23:10:15.3028130Z #16 0.735 go: downloading github.com/felixge/fgprof v0.9.5
+2026-10-03T23:10:15.4238846Z #16 0.761 go: downloading github.com/spf13/pflag v1.0.10
+2026-10-03T23:10:15.4239995Z #16 0.797 go: downloading github.com/mattn/go-colorable v0.1.15
+2026-10-03T23:10:15.4241088Z #16 0.859 go: downloading github.com/beorn7/perks v1.0.1
+2026-10-03T23:10:15.4241814Z #16 0.859 go: downloading github.com/cespare/xxhash/v2 v2.3.0
+2026-10-03T23:10:15.6697225Z #16 0.887 go: downloading github.com/prometheus/common v0.70.1
+2026-10-03T23:10:15.6698033Z #16 0.887 go: downloading github.com/prometheus/client_model v0.6.2
+2026-10-03T23:10:15.6698769Z #16 0.954 go: downloading github.com/prometheus/procfs v0.21.1
+2026-10-03T23:10:15.6699488Z #16 0.955 go: downloading google.golang.org/protobuf v1.36.12
+2026-10-03T23:10:15.6844633Z #16 1.120 go: downloading github.com/mitchellh/reflectwalk v1.0.2
+2026-10-03T23:10:15.8228600Z #16 1.122 go: downloading golang.org/x/sys v0.47.0
+2026-10-03T23:10:15.8230289Z #16 1.259 go: downloading github.com/quic-go/quic-go v0.61.0
+2026-10-03T23:10:16.2854781Z #16 1.687 go: downloading github.com/patrickmn/go-cache v2.1.0+incompatible
+2026-10-03T23:10:16.2855826Z #16 1.698 go: downloading github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
+2026-10-03T23:10:16.2856973Z #16 1.721 go: downloading github.com/felixge/httpsnoop v1.1.0
+2026-10-03T23:10:16.4092325Z #16 1.729 go: downloading github.com/0xERR0R/expiration-cache v0.2.0
+2026-10-03T23:10:16.4093321Z #16 1.730 go: downloading github.com/RackSec/srslog v0.0.0-20180709174129-a4725f04ec91
+2026-10-03T23:10:16.4095192Z #16 1.748 go: downloading github.com/cisco/go-hpke v0.0.0-20230407100446-246075f83609
+2026-10-03T23:10:16.4096570Z #16 1.773 go: downloading github.com/cloudflare/odoh-go v1.0.1-0.20230926114050-f39fa019b017
+2026-10-03T23:10:16.4097839Z #16 1.792 go: downloading github.com/jtacoma/uritemplates v1.0.0
+2026-10-03T23:10:16.4098908Z #16 1.809 go: downloading github.com/pion/dtls/v3 v3.1.5
+2026-10-03T23:10:16.4100081Z #16 1.845 go: downloading github.com/pkg/errors v0.9.1
+2026-10-03T23:10:16.5344189Z #16 1.861 go: downloading github.com/redis/go-redis/v9 v9.22.0
+2026-10-03T23:10:16.5345222Z #16 1.877 go: downloading github.com/yuin/gopher-lua v1.1.2
+2026-10-03T23:10:16.5350770Z #16 1.970 go: downloading github.com/infobloxopen/go-trees v0.0.0-20221216143356-66ceba885ebc
+2026-10-03T23:10:16.6571710Z #16 2.057 go: downloading github.com/google/pprof v0.0.0-20260802141513-ef3492d7dac3
+2026-10-03T23:10:16.6572887Z #16 2.093 go: downloading github.com/mattn/go-isatty v0.0.24
+2026-10-03T23:10:16.7598537Z #16 2.196 go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+2026-10-03T23:10:16.9203104Z #16 2.205 go: downloading golang.org/x/text v0.41.0
+2026-10-03T23:10:17.1229501Z #16 2.451 go: downloading github.com/hashicorp/golang-lru/v2 v2.0.7
+2026-10-03T23:10:17.1232521Z #16 2.484 go: downloading github.com/quic-go/qpack v0.6.0
+2026-10-03T23:10:17.1233565Z #16 2.512 go: downloading github.com/cisco/go-tls-syntax v0.0.0-20200617162716-46b0cfb76b9b
+2026-10-03T23:10:17.2432382Z #16 2.568 go: downloading github.com/cloudflare/circl v1.6.5
+2026-10-03T23:10:17.7120229Z #16 3.148 go: downloading golang.org/x/crypto v0.55.0
+2026-10-03T23:10:17.9445325Z #16 3.150 go: downloading github.com/pion/logging v0.2.4
+2026-10-03T23:10:17.9447339Z #16 3.229 go: downloading github.com/pion/transport/v4 v4.1.0
+2026-10-03T23:10:18.1754562Z #16 3.611 go: downloading go.uber.org/atomic v1.11.0
+2026-10-03T23:10:25.0942312Z #16 ...
+2026-10-03T23:10:25.0946791Z 
+2026-10-03T23:10:25.0948300Z #24 [linux/arm64 stage-0 6/6] RUN GOOS=linux GOARCH=arm64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:25.0950460Z #24 1.093 go: downloading github.com/deathowl/go-metrics-prometheus v0.0.0-20221009205350-f2a1482ba35b
+2026-10-03T23:10:25.0951369Z #24 1.094 go: downloading github.com/google/uuid v1.6.0
+2026-10-03T23:10:25.0952021Z #24 1.097 go: downloading github.com/knadh/koanf v1.5.0
+2026-10-03T23:10:25.0952613Z #24 1.936 go: downloading github.com/pkg/profile v1.7.0
+2026-10-03T23:10:25.0953245Z #24 1.955 go: downloading github.com/prometheus/client_golang v1.24.1
+2026-10-03T23:10:25.0954338Z #24 1.958 go: downloading github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9
+2026-10-03T23:10:25.0955187Z #24 2.016 go: downloading github.com/rs/zerolog v1.35.1
+2026-10-03T23:10:25.0955810Z #24 2.232 go: downloading github.com/spf13/cobra v1.10.2
+2026-10-03T23:10:25.0956452Z #24 3.442 go: downloading github.com/fsnotify/fsnotify v1.10.1
+2026-10-03T23:10:25.0957067Z #24 3.577 go: downloading gopkg.in/yaml.v3 v3.0.1
+2026-10-03T23:10:25.0957727Z #24 3.584 go: downloading github.com/mitchellh/copystructure v1.2.0
+2026-10-03T23:10:25.0958496Z #24 3.723 go: downloading github.com/mitchellh/mapstructure v1.5.0
+2026-10-03T23:10:25.0959416Z #24 3.819 go: downloading github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
+2026-10-03T23:10:25.0960862Z #24 4.071 go: downloading github.com/oschwald/maxminddb-golang v1.13.1
+2026-10-03T23:10:25.0961567Z #24 4.192 go: downloading github.com/yl2chen/cidranger v1.0.2
+2026-10-03T23:10:25.0962446Z #24 4.242 go: downloading inet.af/tcpproxy v0.0.0-20231102063150-2862066fc2a9
+2026-10-03T23:10:25.0963206Z #24 4.341 go: downloading github.com/gorilla/handlers v1.5.2
+2026-10-03T23:10:25.0963881Z #24 4.346 go: downloading github.com/m13253/dns-over-https/v2 v2.3.10
+2026-10-03T23:10:25.0964540Z #24 4.454 go: downloading github.com/miekg/dns v1.1.73
+2026-10-03T23:10:25.0965105Z #24 4.581 go: downloading golang.org/x/net v0.58.0
+2026-10-03T23:10:25.0965693Z #24 4.819 go: downloading github.com/folbricht/routedns v0.1.237
+2026-10-03T23:10:25.0966449Z #24 4.827 go: downloading github.com/mosajjal/doqd v0.0.0-20250722230636-f2af367ae3f6
+2026-10-03T23:10:25.0967338Z #24 5.054 go: downloading github.com/txthinking/socks5 v0.0.0-20260601051520-339b044ab0eb
+2026-10-03T23:10:25.0968140Z #24 5.411 go: downloading github.com/felixge/fgprof v0.9.5
+2026-10-03T23:10:25.0968769Z #24 6.149 go: downloading github.com/mattn/go-colorable v0.1.15
+2026-10-03T23:10:25.0969385Z #24 6.354 go: downloading github.com/spf13/pflag v1.0.10
+2026-10-03T23:10:25.0970462Z #24 7.517 go: downloading github.com/prometheus/client_model v0.6.2
+2026-10-03T23:10:25.0971200Z #24 7.521 go: downloading github.com/prometheus/common v0.70.1
+2026-10-03T23:10:25.0971856Z #24 7.684 go: downloading github.com/beorn7/perks v1.0.1
+2026-10-03T23:10:25.0972491Z #24 7.799 go: downloading github.com/cespare/xxhash/v2 v2.3.0
+2026-10-03T23:10:25.0973155Z #24 8.342 go: downloading github.com/prometheus/procfs v0.21.1
+2026-10-03T23:10:25.0973809Z #24 8.348 go: downloading google.golang.org/protobuf v1.36.12
+2026-10-03T23:10:25.2579622Z #24 ...
+2026-10-03T23:10:25.2584518Z 
+2026-10-03T23:10:25.2585962Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:25.2587478Z #25 0.827 go: downloading github.com/google/uuid v1.6.0
+2026-10-03T23:10:25.2588097Z #25 0.831 go: downloading github.com/knadh/koanf v1.5.0
+2026-10-03T23:10:25.2588981Z #25 0.835 go: downloading github.com/deathowl/go-metrics-prometheus v0.0.0-20221009205350-f2a1482ba35b
+2026-10-03T23:10:25.2590028Z #25 1.907 go: downloading github.com/pkg/profile v1.7.0
+2026-10-03T23:10:25.2590695Z #25 1.934 go: downloading github.com/prometheus/client_golang v1.24.1
+2026-10-03T23:10:25.2591549Z #25 1.942 go: downloading github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9
+2026-10-03T23:10:25.2592340Z #25 2.027 go: downloading github.com/rs/zerolog v1.35.1
+2026-10-03T23:10:25.2592930Z #25 2.394 go: downloading github.com/spf13/cobra v1.10.2
+2026-10-03T23:10:25.2593505Z #25 4.363 go: downloading gopkg.in/yaml.v3 v3.0.1
+2026-10-03T23:10:25.2594116Z #25 4.380 go: downloading github.com/fsnotify/fsnotify v1.10.1
+2026-10-03T23:10:25.2594818Z #25 4.547 go: downloading github.com/mitchellh/copystructure v1.2.0
+2026-10-03T23:10:25.2595531Z #25 4.709 go: downloading github.com/mitchellh/mapstructure v1.5.0
+2026-10-03T23:10:25.2596408Z #25 4.878 go: downloading github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
+2026-10-03T23:10:25.2597683Z #25 4.971 go: downloading github.com/oschwald/maxminddb-golang v1.13.1
+2026-10-03T23:10:25.2598445Z #25 4.982 go: downloading github.com/yl2chen/cidranger v1.0.2
+2026-10-03T23:10:25.2599166Z #25 5.147 go: downloading inet.af/tcpproxy v0.0.0-20231102063150-2862066fc2a9
+2026-10-03T23:10:25.2600124Z #25 5.308 go: downloading github.com/gorilla/handlers v1.5.2
+2026-10-03T23:10:25.2600993Z #25 5.391 go: downloading github.com/m13253/dns-over-https/v2 v2.3.10
+2026-10-03T23:10:25.2601664Z #25 5.438 go: downloading github.com/miekg/dns v1.1.73
+2026-10-03T23:10:25.2602227Z #25 5.559 go: downloading golang.org/x/net v0.58.0
+2026-10-03T23:10:25.2602829Z #25 5.749 go: downloading github.com/folbricht/routedns v0.1.237
+2026-10-03T23:10:25.2603857Z #25 5.891 go: downloading github.com/mosajjal/doqd v0.0.0-20250722230636-f2af367ae3f6
+2026-10-03T23:10:25.2604778Z #25 6.195 go: downloading github.com/txthinking/socks5 v0.0.0-20260601051520-339b044ab0eb
+2026-10-03T23:10:25.2605574Z #25 6.975 go: downloading github.com/felixge/fgprof v0.9.5
+2026-10-03T23:10:25.2606224Z #25 8.378 go: downloading github.com/mattn/go-colorable v0.1.15
+2026-10-03T23:10:25.2606856Z #25 8.801 go: downloading github.com/spf13/pflag v1.0.10
+2026-10-03T23:10:25.2607527Z #25 9.717 go: downloading github.com/prometheus/client_model v0.6.2
+2026-10-03T23:10:25.2608224Z #25 9.727 go: downloading github.com/prometheus/common v0.70.1
+2026-10-03T23:10:25.2608853Z #25 9.932 go: downloading github.com/beorn7/perks v1.0.1
+2026-10-03T23:10:25.2609468Z #25 10.04 go: downloading github.com/cespare/xxhash/v2 v2.3.0
+2026-10-03T23:10:25.8631523Z #25 ...
+2026-10-03T23:10:25.8633221Z 
+2026-10-03T23:10:25.8634470Z #24 [linux/arm64 stage-0 6/6] RUN GOOS=linux GOARCH=arm64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:25.8636209Z #24 10.79 go: downloading github.com/mitchellh/reflectwalk v1.0.2
+2026-10-03T23:10:25.9899728Z #24 10.92 go: downloading golang.org/x/sys v0.47.0
+2026-10-03T23:10:26.1842344Z #24 10.96 go: downloading github.com/felixge/httpsnoop v1.1.0
+2026-10-03T23:10:26.3077997Z #24 11.24 go: downloading github.com/infobloxopen/go-trees v0.0.0-20221216143356-66ceba885ebc
+2026-10-03T23:10:27.7047614Z #24 12.63 go: downloading github.com/quic-go/quic-go v0.61.0
+2026-10-03T23:10:31.1996133Z #24 16.13 go: downloading github.com/patrickmn/go-cache v2.1.0+incompatible
+2026-10-03T23:10:31.3864414Z #24 16.32 go: downloading github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
+2026-10-03T23:10:31.6043489Z #24 16.37 go: downloading github.com/google/pprof v0.0.0-20260802141513-ef3492d7dac3
+2026-10-03T23:10:31.6044637Z #24 16.38 go: downloading github.com/0xERR0R/expiration-cache v0.2.0
+2026-10-03T23:10:31.6045611Z #24 16.38 go: downloading github.com/RackSec/srslog v0.0.0-20180709174129-a4725f04ec91
+2026-10-03T23:10:31.8040664Z #24 16.73 go: downloading github.com/cisco/go-hpke v0.0.0-20230407100446-246075f83609
+2026-10-03T23:10:32.0160356Z #24 16.95 go: downloading github.com/cloudflare/odoh-go v1.0.1-0.20230926114050-f39fa019b017
+2026-10-03T23:10:32.1173036Z #24 17.05 go: downloading github.com/jtacoma/uritemplates v1.0.0
+2026-10-03T23:10:32.2704789Z #24 17.14 go: downloading github.com/pion/dtls/v3 v3.1.5
+2026-10-03T23:10:32.2707072Z #24 17.20 go: downloading github.com/pkg/errors v0.9.1
+2026-10-03T23:10:32.4680811Z #24 17.40 go: downloading github.com/redis/go-redis/v9 v9.22.0
+2026-10-03T23:10:34.9737281Z #24 19.90 go: downloading github.com/yuin/gopher-lua v1.1.2
+2026-10-03T23:10:35.7860042Z #24 20.72 go: downloading github.com/mattn/go-isatty v0.0.24
+2026-10-03T23:10:35.9689532Z #24 ...
+2026-10-03T23:10:35.9692766Z 
+2026-10-03T23:10:35.9694210Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:35.9695779Z #25 10.73 go: downloading github.com/prometheus/procfs v0.21.1
+2026-10-03T23:10:35.9696782Z #25 10.73 go: downloading google.golang.org/protobuf v1.36.12
+2026-10-03T23:10:35.9697511Z #25 13.96 go: downloading github.com/mitchellh/reflectwalk v1.0.2
+2026-10-03T23:10:35.9698152Z #25 14.03 go: downloading golang.org/x/sys v0.47.0
+2026-10-03T23:10:35.9698768Z #25 14.69 go: downloading github.com/felixge/httpsnoop v1.1.0
+2026-10-03T23:10:35.9699586Z #25 15.03 go: downloading github.com/infobloxopen/go-trees v0.0.0-20221216143356-66ceba885ebc
+2026-10-03T23:10:35.9700600Z #25 16.60 go: downloading github.com/quic-go/quic-go v0.61.0
+2026-10-03T23:10:35.9701329Z #25 20.20 go: downloading github.com/patrickmn/go-cache v2.1.0+incompatible
+2026-10-03T23:10:35.9702253Z #25 20.20 go: downloading github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
+2026-10-03T23:10:35.9703503Z #25 20.36 go: downloading github.com/google/pprof v0.0.0-20260802141513-ef3492d7dac3
+2026-10-03T23:10:35.9704316Z #25 20.41 go: downloading github.com/0xERR0R/expiration-cache v0.2.0
+2026-10-03T23:10:35.9705134Z #25 20.60 go: downloading github.com/RackSec/srslog v0.0.0-20180709174129-a4725f04ec91
+2026-10-03T23:10:36.0646952Z #25 ...
+2026-10-03T23:10:36.0649184Z 
+2026-10-03T23:10:36.0650916Z #24 [linux/arm64 stage-0 6/6] RUN GOOS=linux GOARCH=arm64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:36.0652898Z #24 20.99 go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+2026-10-03T23:10:36.2380877Z #24 21.02 go: downloading golang.org/x/text v0.41.0
+2026-10-03T23:10:37.3080863Z #24 22.24 go: downloading github.com/hashicorp/golang-lru/v2 v2.0.7
+2026-10-03T23:10:37.4987190Z #24 22.43 go: downloading github.com/quic-go/qpack v0.6.0
+2026-10-03T23:10:37.6266016Z #24 22.56 go: downloading github.com/cisco/go-tls-syntax v0.0.0-20200617162716-46b0cfb76b9b
+2026-10-03T23:10:37.8297211Z #24 22.65 go: downloading github.com/cloudflare/circl v1.6.5
+2026-10-03T23:10:43.6987587Z #24 ...
+2026-10-03T23:10:43.6989958Z 
+2026-10-03T23:10:43.6991428Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:43.6993102Z #25 21.14 go: downloading github.com/cisco/go-hpke v0.0.0-20230407100446-246075f83609
+2026-10-03T23:10:43.6994130Z #25 22.35 go: downloading github.com/cloudflare/odoh-go v1.0.1-0.20230926114050-f39fa019b017
+2026-10-03T23:10:43.6995034Z #25 22.61 go: downloading github.com/jtacoma/uritemplates v1.0.0
+2026-10-03T23:10:43.6995602Z #25 22.75 go: downloading github.com/pion/dtls/v3 v3.1.5
+2026-10-03T23:10:43.6996122Z #25 24.45 go: downloading github.com/pkg/errors v0.9.1
+2026-10-03T23:10:43.6996781Z #25 24.62 go: downloading github.com/redis/go-redis/v9 v9.22.0
+2026-10-03T23:10:43.6997461Z #25 25.88 go: downloading github.com/yuin/gopher-lua v1.1.2
+2026-10-03T23:10:43.6998134Z #25 26.49 go: downloading github.com/mattn/go-isatty v0.0.24
+2026-10-03T23:10:43.6999008Z #25 26.68 go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+2026-10-03T23:10:43.7000039Z #25 26.69 go: downloading golang.org/x/text v0.41.0
+2026-10-03T23:10:43.7000726Z #25 28.33 go: downloading github.com/hashicorp/golang-lru/v2 v2.0.7
+2026-10-03T23:10:43.7623118Z #25 28.55 go: downloading github.com/quic-go/qpack v0.6.0
+2026-10-03T23:10:44.0098596Z #25 28.79 go: downloading github.com/cisco/go-tls-syntax v0.0.0-20200617162716-46b0cfb76b9b
+2026-10-03T23:10:44.2464628Z #25 28.88 go: downloading github.com/cloudflare/circl v1.6.5
+2026-10-03T23:10:45.5084723Z #25 ...
+2026-10-03T23:10:45.5085877Z 
+2026-10-03T23:10:45.5087105Z #24 [linux/arm64 stage-0 6/6] RUN GOOS=linux GOARCH=arm64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:45.5089081Z #24 30.44 go: downloading golang.org/x/crypto v0.55.0
+2026-10-03T23:10:47.0858776Z #24 32.02 go: downloading github.com/pion/logging v0.2.4
+2026-10-03T23:10:47.2395462Z #24 32.02 go: downloading github.com/pion/transport/v4 v4.1.0
+2026-10-03T23:10:48.7399030Z #24 33.67 go: downloading go.uber.org/atomic v1.11.0
+2026-10-03T23:10:54.9167366Z #24 ...
+2026-10-03T23:10:54.9168998Z 
+2026-10-03T23:10:54.9170878Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:10:54.9172584Z #25 39.70 go: downloading golang.org/x/crypto v0.55.0
+2026-10-03T23:10:55.0800456Z #25 39.71 go: downloading github.com/pion/logging v0.2.4
+2026-10-03T23:10:55.2616965Z #25 40.05 go: downloading github.com/pion/transport/v4 v4.1.0
+2026-10-03T23:11:01.5371756Z #25 46.32 go: downloading go.uber.org/atomic v1.11.0
+2026-10-03T23:12:13.4096266Z #25 ...
+2026-10-03T23:12:13.4096547Z 
+2026-10-03T23:12:13.4098098Z #16 [linux/amd64 stage-0 6/6] RUN GOOS=linux GOARCH=amd64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:12:13.4100449Z #16 DONE 118.8s
+2026-10-03T23:12:13.5971362Z 
+2026-10-03T23:12:13.5974363Z #26 [linux/amd64 stage-1 1/1] COPY --from=0 /app/cmd/sniproxy/sniproxy /sniproxy
+2026-10-03T23:12:13.5975388Z #26 DONE 0.0s
+2026-10-03T23:12:13.5975820Z 
+2026-10-03T23:12:13.5977013Z #24 [linux/arm64 stage-0 6/6] RUN GOOS=linux GOARCH=arm64 GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:28:36.3366569Z #24 DONE 1101.3s
+2026-10-03T23:28:36.3370384Z 
+2026-10-03T23:28:36.3372369Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:28:36.5237740Z #25 ...
+2026-10-03T23:28:36.5238208Z 
+2026-10-03T23:28:36.5238948Z #27 [linux/arm64 stage-1 1/1] COPY --from=0 /app/cmd/sniproxy/sniproxy /sniproxy
+2026-10-03T23:28:36.5240421Z #27 DONE 0.0s
+2026-10-03T23:28:36.6729191Z 
+2026-10-03T23:28:36.6730871Z #25 [linux/arm/v6 stage-0 6/6] RUN GOOS=linux GOARCH=arm GOFLAGS=-buildvcs=false go build -ldflags "-s -w -X main.version=$(git describe --tags) -X main.commit=$(git rev-parse HEAD)" -o sniproxy .
+2026-10-03T23:28:37.3011435Z #25 DONE 1102.1s
+2026-10-03T23:28:37.4808108Z 
+2026-10-03T23:28:37.4809004Z #28 [linux/arm/v6 stage-1 1/1] COPY --from=0 /app/cmd/sniproxy/sniproxy /sniproxy
+2026-10-03T23:28:37.4810155Z #28 DONE 0.0s
+2026-10-03T23:28:37.4810425Z 
+2026-10-03T23:28:37.4810635Z #29 exporting to image
+2026-10-03T23:28:37.4811159Z #29 exporting layers
+2026-10-03T23:28:38.0775310Z #29 exporting layers 0.7s done
+2026-10-03T23:28:38.2964845Z #29 ...
+2026-10-03T23:28:38.2965279Z 
+2026-10-03T23:28:38.2965767Z #30 [auth] mosajjal/sniproxy:pull,push token for ghcr.io
+2026-10-03T23:28:38.2966828Z #30 DONE 0.0s
+2026-10-03T23:28:38.2967191Z 
+2026-10-03T23:28:38.2967509Z #29 exporting to image
+2026-10-03T23:28:38.2968915Z #29 exporting manifest sha256:5c5136f31d80818387eff27f1fd08f5a228fc8068aa98277d7fe593e7d000c33 done
+2026-10-03T23:28:38.2971407Z #29 exporting config sha256:51891d1d282c29d26db79a79138d3c9e0d272546912f98f71a8fb85165d1978a done
+2026-10-03T23:28:38.2973875Z #29 exporting attestation manifest sha256:5c7ae3832cc59238909f91c449f3465cffcb7961fbcd8855e7a2f7bac3261c81 done
+2026-10-03T23:28:38.2976322Z #29 exporting manifest sha256:71f9014d491fc5cc3905440e3dc8890465d02e76f5f19bc46070710023321e5f done
+2026-10-03T23:28:38.2978352Z #29 exporting config sha256:4a7d5815cbb288f5e0f120d810a24e7abd3991844ba1083303614f0b6d4b2742 done
+2026-10-03T23:28:38.2980384Z #29 exporting attestation manifest sha256:39434d4c260ca2f5347f94eae226acf4780a4c6e8375599352a656858c20329e done
+2026-10-03T23:28:38.2982251Z #29 exporting manifest sha256:2376cf6f895886bef5e2a886fc7940701e86c71731c3f2c59b81273f446034d2 done
+2026-10-03T23:28:38.2984365Z #29 exporting config sha256:d10f4322f58a3b9e35f1a832b36eaad6aef06b1730799e51ac2c1331c3312e52 done
+2026-10-03T23:28:38.2986231Z #29 exporting attestation manifest sha256:2eecf3973058aecbd538e946b50c34ff97fd27f048c1d2fc9291b9ae911b047b done
+2026-10-03T23:28:38.2988027Z #29 exporting manifest list sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208 done
+2026-10-03T23:28:38.2988731Z #29 pushing layers
+2026-10-03T23:28:40.4471466Z #29 pushing layers 2.3s done
+2026-10-03T23:28:40.4472952Z #29 pushing manifest for ghcr.io/mosajjal/sniproxy:v2.4.2@sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208
+2026-10-03T23:28:42.9297116Z #29 pushing manifest for ghcr.io/mosajjal/sniproxy:v2.4.2@sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208 2.5s done
+2026-10-03T23:28:43.1361068Z #29 pushing layers 0.1s done
+2026-10-03T23:28:43.1362780Z #29 pushing manifest for ghcr.io/mosajjal/sniproxy:latest@sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208
+2026-10-03T23:28:43.5951594Z #29 pushing manifest for ghcr.io/mosajjal/sniproxy:latest@sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208 0.6s done
+2026-10-03T23:28:43.5953055Z #29 DONE 6.3s
+2026-10-03T23:28:43.6422508Z 
+2026-10-03T23:28:43.6423138Z #31 resolving provenance for metadata file
+2026-10-03T23:28:43.6423831Z #31 DONE 0.0s
+2026-10-03T23:28:43.6424061Z 
+2026-10-03T23:28:43.6424755Z  [33m1 warning found (use docker --debug to expand):
+2026-10-03T23:28:43.6426309Z [0m - RedundantTargetPlatform: Setting platform to predefined ${TARGETPLATFORM:-linux/amd64} in FROM is redundant as this is the default behavior (line 1)
+2026-10-03T23:28:43.6520387Z ##[group]ImageID
+2026-10-03T23:28:43.6520913Z sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208
+2026-10-03T23:28:43.6522363Z ##[endgroup]
+2026-10-03T23:28:43.6523033Z ##[group]Digest
+2026-10-03T23:28:43.6523663Z sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208
+2026-10-03T23:28:43.6524724Z ##[endgroup]
+2026-10-03T23:28:43.6525344Z ##[group]Metadata
+2026-10-03T23:28:43.6534960Z ::stop-commands::***
+2026-10-03T23:28:43.6535846Z {
+2026-10-03T23:28:43.6536317Z   "buildx.build.provenance/linux/amd64": {
+2026-10-03T23:28:43.6536963Z     "builder": {
+2026-10-03T23:28:43.6537713Z       "id": "https://github.com/mosajjal/sniproxy/actions/runs/37160861216/attempts/1"
+2026-10-03T23:28:43.6538515Z     },
+2026-10-03T23:28:43.6539027Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2026-10-03T23:28:43.6539669Z     "materials": [
+2026-10-03T23:28:43.6540294Z       {
+2026-10-03T23:28:43.6540837Z         "uri": "pkg:docker/golang@1.26-alpine?platform=linux%2Famd64",
+2026-10-03T23:28:43.6541518Z         "digest": {
+2026-10-03T23:28:43.6542228Z           "sha256": "8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+2026-10-03T23:28:43.6543084Z         }
+2026-10-03T23:28:43.6543436Z       }
+2026-10-03T23:28:43.6543798Z     ],
+2026-10-03T23:28:43.6544176Z     "invocation": {
+2026-10-03T23:28:43.6544590Z       "configSource": {
+2026-10-03T23:28:43.6545024Z         "entryPoint": "Dockerfile"
+2026-10-03T23:28:43.6545332Z       },
+2026-10-03T23:28:43.6545586Z       "parameters": {
+2026-10-03T23:28:43.6545883Z         "frontend": "dockerfile.v0",
+2026-10-03T23:28:43.6546196Z         "args": {
+2026-10-03T23:28:43.6546594Z           "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6547300Z           "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6547960Z           "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6548644Z           "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6549435Z           "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6551096Z           "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6551791Z           "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6552900Z           "label:org.opencontainers.image.version": "v2.4.2"
+2026-10-03T23:28:43.6553280Z         },
+2026-10-03T23:28:43.6553498Z         "locals": [
+2026-10-03T23:28:43.6553725Z           {
+2026-10-03T23:28:43.6553945Z             "name": "context"
+2026-10-03T23:28:43.6554224Z           },
+2026-10-03T23:28:43.6554529Z           {
+2026-10-03T23:28:43.6555121Z             "name": "dockerfile"
+2026-10-03T23:28:43.6555553Z           }
+2026-10-03T23:28:43.6555767Z         ],
+2026-10-03T23:28:43.6555975Z         "root": {
+2026-10-03T23:28:43.6556210Z           "configSource": {
+2026-10-03T23:28:43.6556483Z             "path": "Dockerfile"
+2026-10-03T23:28:43.6556980Z           },
+2026-10-03T23:28:43.6557200Z           "request": {
+2026-10-03T23:28:43.6557464Z             "args": {
+2026-10-03T23:28:43.6557849Z               "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6558860Z               "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6560021Z               "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6560984Z               "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6562103Z               "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6563062Z               "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6563948Z               "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6564530Z               "label:org.opencontainers.image.version": "v2.4.2",
+2026-10-03T23:28:43.6564984Z               "vcs:localdir:context": ".",
+2026-10-03T23:28:43.6565338Z               "vcs:localdir:dockerfile": ".",
+2026-10-03T23:28:43.6565766Z               "vcs:revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6566233Z               "vcs:source": "https://github.com/mosajjal/sniproxy"
+2026-10-03T23:28:43.6566602Z             }
+2026-10-03T23:28:43.6566853Z           }
+2026-10-03T23:28:43.6567113Z         },
+2026-10-03T23:28:43.6567369Z         "compatibilityVersion": 30
+2026-10-03T23:28:43.6567677Z       },
+2026-10-03T23:28:43.6567916Z       "environment": {
+2026-10-03T23:28:43.6568221Z         "dockerfileVersion": "1.27.0",
+2026-10-03T23:28:43.6568537Z         "github_actor": "mosajjal",
+2026-10-03T23:28:43.6568836Z         "github_actor_id": "10158936",
+2026-10-03T23:28:43.6569141Z         "github_event_name": "release",
+2026-10-03T23:28:43.6569476Z         "github_event_payload": {
+2026-10-03T23:28:43.6570063Z           "action": "published",
+2026-10-03T23:28:43.6570394Z           "release": {
+2026-10-03T23:28:43.6570660Z             "assets": [],
+2026-10-03T23:28:43.6571164Z             "assets_url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754/assets",
+2026-10-03T23:28:43.6571717Z             "author": {
+2026-10-03T23:28:43.6572129Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6572684Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6573236Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6573797Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6574380Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6574856Z               "gravatar_id": "",
+2026-10-03T23:28:43.6575236Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6575600Z               "id": 10158936,
+2026-10-03T23:28:43.6575874Z               "login": "mosajjal",
+2026-10-03T23:28:43.6576212Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6576675Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6577477Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6578198Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6578822Z               "site_admin": false,
+2026-10-03T23:28:43.6579387Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6603216Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6604121Z               "type": "User",
+2026-10-03T23:28:43.6604646Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6605224Z               "user_view_type": "public"
+2026-10-03T23:28:43.6606035Z             },
+2026-10-03T23:28:43.6621099Z             "body": "Bug-fix release. No config changes are required to upgrade.\n\n## Fragmented ClientHellos are now proxied (#210, #211)\n\nsniproxy read the TLS ClientHello with a single socket read. If the ClientHello arrived in more than one TCP segment, the SNI parser saw a partial record and dropped the connection, logging `extension looks bonkers` or `not enough bytes for the cipher list`.\n\nThis used to be rare. Current browsers and OpenSSL 3.5+ send a post-quantum key share (X25519MLKEM768), which pushes the ClientHello to about 1.7-1.9 KB, past one segment. Busy instances saw hundreds of these failures per minute, and each one was a client that could not connect.\n\nsniproxy now reads the record header and then the whole record before parsing. The 10 s read deadline still bounds slow clients. One case is still not handled: a ClientHello split across several TLS records.\n\nThanks to @hamedafra for the report and reproduction script, and to @alz, who proposed the same fix in #181.\n\n## Fresh installs start without manual fixes (#189, #212)\n\n- **IPv4-only hosts.** A failed public IPv6 lookup was fatal unless `preferred_version` was `ipv4only`, so the default config crashed on hosts without IPv6. sniproxy now logs a warning and runs IPv4 only. Startup still fails if neither address family has an address.\n- **DoT and DoQ without a certificate.** Leaving `tls_cert` and `tls_key` empty is supposed to generate a self-signed pair, but config validation rejected DoT/DoQ before that step ran. It now starts. Setting only one of the two is still an error.\n\n## Additional listener ports (#209, #212)\n\n`bind_http_additional` and `bind_https_additional` only worked as a YAML list. The comma-separated form shown in the default config, a single bare port, and the `SNIPROXY_GENERAL__BIND_HTTPS_ADDITIONAL` environment variable were all silently ignored. All of these work now:\n\n```yaml\nbind_https_additional: \"8443,8444-8446\"\nbind_https_additional: [8443, \"8444-8446\"]\nbind_https_additional: 8443\n```\n\n## Installer (#191, #213)\n\nThe install script is fetched from master, so these fixes are already live:\n\n- The latest release is found through the github.com release redirect instead of the GitHub API, whose 60-requests-per-hour limit shared VPS addresses often exhausted.\n- Custom TLS certificate paths are written correctly; they were saved as the literal text `$certPath`.\n- Entering a domain list URL no longer breaks the config step.\n- arm64 hosts get the arm64 build of yq.\n\n**Full changelog:** https://github.com/mosajjal/sniproxy/compare/v2.4.1...v2.4.2\n",
+2026-10-03T23:28:43.6631466Z             "created_at": "2026-10-03T23:03:33Z",
+2026-10-03T23:28:43.6631805Z             "draft": false,
+2026-10-03T23:28:43.6632227Z             "html_url": "https://github.com/mosajjal/sniproxy/releases/tag/v2.4.2",
+2026-10-03T23:28:43.6632682Z             "id": 402727754,
+2026-10-03T23:28:43.6632954Z             "immutable": false,
+2026-10-03T23:28:43.6633241Z             "mentions_count": 2,
+2026-10-03T23:28:43.6633522Z             "name": "v2.4.2",
+2026-10-03T23:28:43.6633812Z             "node_id": "RE_kwDOEsXQTM4YASNK",
+2026-10-03T23:28:43.6634149Z             "prerelease": false,
+2026-10-03T23:28:43.6634650Z             "published_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6634990Z             "tag_name": "v2.4.2",
+2026-10-03T23:28:43.6635444Z             "tarball_url": "https://api.github.com/repos/mosajjal/sniproxy/tarball/v2.4.2",
+2026-10-03T23:28:43.6635945Z             "target_commitish": "master",
+2026-10-03T23:28:43.6636367Z             "updated_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6637194Z             "upload_url": "https://uploads.github.com/repos/mosajjal/sniproxy/releases/402727754/assets{?name,label}",
+2026-10-03T23:28:43.6638115Z             "url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754",
+2026-10-03T23:28:43.6639042Z             "zipball_url": "https://api.github.com/repos/mosajjal/sniproxy/zipball/v2.4.2"
+2026-10-03T23:28:43.6640289Z           },
+2026-10-03T23:28:43.6640690Z           "repository": {
+2026-10-03T23:28:43.6641179Z             "allow_forking": true,
+2026-10-03T23:28:43.6642058Z             "archive_url": "https://api.github.com/repos/mosajjal/sniproxy/{archive_format}{/ref}",
+2026-10-03T23:28:43.6642924Z             "archived": false,
+2026-10-03T23:28:43.6643650Z             "assignees_url": "https://api.github.com/repos/mosajjal/sniproxy/assignees{/user}",
+2026-10-03T23:28:43.6644687Z             "blobs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/blobs{/sha}",
+2026-10-03T23:28:43.6645724Z             "branches_url": "https://api.github.com/repos/mosajjal/sniproxy/branches{/branch}",
+2026-10-03T23:28:43.6646656Z             "clone_url": "https://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6647702Z             "collaborators_url": "https://api.github.com/repos/mosajjal/sniproxy/collaborators{/collaborator}",
+2026-10-03T23:28:43.6648921Z             "comments_url": "https://api.github.com/repos/mosajjal/sniproxy/comments{/number}",
+2026-10-03T23:28:43.6650101Z             "commits_url": "https://api.github.com/repos/mosajjal/sniproxy/commits{/sha}",
+2026-10-03T23:28:43.6651045Z             "compare_url": "https://api.github.com/repos/mosajjal/sniproxy/compare/{base}...{head}",
+2026-10-03T23:28:43.6652079Z             "contents_url": "https://api.github.com/repos/mosajjal/sniproxy/contents/{+path}",
+2026-10-03T23:28:43.6653093Z             "contributors_url": "https://api.github.com/repos/mosajjal/sniproxy/contributors",
+2026-10-03T23:28:43.6653850Z             "created_at": "2020-11-22T03:47:00Z",
+2026-10-03T23:28:43.6654335Z             "default_branch": "master",
+2026-10-03T23:28:43.6655037Z             "deployments_url": "https://api.github.com/repos/mosajjal/sniproxy/deployments",
+2026-10-03T23:28:43.6655941Z             "description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6656568Z             "disabled": false,
+2026-10-03T23:28:43.6657252Z             "downloads_url": "https://api.github.com/repos/mosajjal/sniproxy/downloads",
+2026-10-03T23:28:43.6658144Z             "events_url": "https://api.github.com/repos/mosajjal/sniproxy/events",
+2026-10-03T23:28:43.6658748Z             "fork": false,
+2026-10-03T23:28:43.6659085Z             "forks": 58,
+2026-10-03T23:28:43.6659426Z             "forks_count": 58,
+2026-10-03T23:28:43.6660123Z             "forks_url": "https://api.github.com/repos/mosajjal/sniproxy/forks",
+2026-10-03T23:28:43.6660776Z             "full_name": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6661520Z             "git_commits_url": "https://api.github.com/repos/mosajjal/sniproxy/git/commits{/sha}",
+2026-10-03T23:28:43.6662433Z             "git_refs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/refs{/sha}",
+2026-10-03T23:28:43.6663284Z             "git_tags_url": "https://api.github.com/repos/mosajjal/sniproxy/git/tags{/sha}",
+2026-10-03T23:28:43.6664015Z             "git_url": "git://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6664558Z             "has_discussions": true,
+2026-10-03T23:28:43.6664991Z             "has_downloads": false,
+2026-10-03T23:28:43.6665393Z             "has_issues": true,
+2026-10-03T23:28:43.6665749Z             "has_pages": false,
+2026-10-03T23:28:43.6666344Z             "has_projects": false,
+2026-10-03T23:28:43.6666805Z             "has_pull_requests": true,
+2026-10-03T23:28:43.6667235Z             "has_wiki": false,
+2026-10-03T23:28:43.6667627Z             "homepage": null,
+2026-10-03T23:28:43.6668201Z             "hooks_url": "https://api.github.com/repos/mosajjal/sniproxy/hooks",
+2026-10-03T23:28:43.6668917Z             "html_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6669438Z             "id": 314953804,
+2026-10-03T23:28:43.6670077Z             "is_template": false,
+2026-10-03T23:28:43.6670831Z             "issue_comment_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/comments{/number}",
+2026-10-03T23:28:43.6672050Z             "issue_events_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/events{/number}",
+2026-10-03T23:28:43.6673015Z             "issues_url": "https://api.github.com/repos/mosajjal/sniproxy/issues{/number}",
+2026-10-03T23:28:43.6673912Z             "keys_url": "https://api.github.com/repos/mosajjal/sniproxy/keys{/key_id}",
+2026-10-03T23:28:43.6674793Z             "labels_url": "https://api.github.com/repos/mosajjal/sniproxy/labels{/name}",
+2026-10-03T23:28:43.6675464Z             "language": "Go",
+2026-10-03T23:28:43.6676061Z             "languages_url": "https://api.github.com/repos/mosajjal/sniproxy/languages",
+2026-10-03T23:28:43.6676699Z             "license": {
+2026-10-03T23:28:43.6677077Z               "key": "bsd-2-clause",
+2026-10-03T23:28:43.6677595Z               "name": "BSD 2-Clause \"Simplified\" License",
+2026-10-03T23:28:43.6678128Z               "node_id": "MDc6TGljZW5zZTQ=",
+2026-10-03T23:28:43.6678607Z               "spdx_id": "BSD-2-Clause",
+2026-10-03T23:28:43.6679135Z               "url": "https://api.github.com/licenses/bsd-2-clause"
+2026-10-03T23:28:43.6679667Z             },
+2026-10-03T23:28:43.6680415Z             "merges_url": "https://api.github.com/repos/mosajjal/sniproxy/merges",
+2026-10-03T23:28:43.6681329Z             "milestones_url": "https://api.github.com/repos/mosajjal/sniproxy/milestones{/number}",
+2026-10-03T23:28:43.6682066Z             "mirror_url": null,
+2026-10-03T23:28:43.6682425Z             "name": "sniproxy",
+2026-10-03T23:28:43.6682708Z             "node_id": "MDEwOlJlcG9zaXRvcnkzMTQ5NTM4MDQ=",
+2026-10-03T23:28:43.6683283Z             "notifications_url": "https://api.github.com/repos/mosajjal/sniproxy/notifications{?since,all,participating}",
+2026-10-03T23:28:43.6683814Z             "open_issues": 2,
+2026-10-03T23:28:43.6684053Z             "open_issues_count": 2,
+2026-10-03T23:28:43.6684290Z             "owner": {
+2026-10-03T23:28:43.6684621Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6685125Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6685596Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6686098Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6686604Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6686964Z               "gravatar_id": "",
+2026-10-03T23:28:43.6687232Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6687626Z               "id": 10158936,
+2026-10-03T23:28:43.6688002Z               "login": "mosajjal",
+2026-10-03T23:28:43.6688395Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6688791Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6689302Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6690215Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6690603Z               "site_admin": false,
+2026-10-03T23:28:43.6690989Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6691706Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6692114Z               "type": "User",
+2026-10-03T23:28:43.6692388Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6692709Z               "user_view_type": "public"
+2026-10-03T23:28:43.6692958Z             },
+2026-10-03T23:28:43.6693151Z             "private": false,
+2026-10-03T23:28:43.6693407Z             "pull_request_creation_policy": "all",
+2026-10-03T23:28:43.6693815Z             "pulls_url": "https://api.github.com/repos/mosajjal/sniproxy/pulls{/number}",
+2026-10-03T23:28:43.6694230Z             "pushed_at": "2026-10-03T23:09:46Z",
+2026-10-03T23:28:43.6694752Z             "releases_url": "https://api.github.com/repos/mosajjal/sniproxy/releases{/id}",
+2026-10-03T23:28:43.6695150Z             "size": 750,
+2026-10-03T23:28:43.6695418Z             "ssh_url": "git@github.com:mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6695729Z             "stargazers_count": 275,
+2026-10-03T23:28:43.6696124Z             "stargazers_url": "https://api.github.com/repos/mosajjal/sniproxy/stargazers",
+2026-10-03T23:28:43.6696661Z             "statuses_url": "https://api.github.com/repos/mosajjal/sniproxy/statuses/{sha}",
+2026-10-03T23:28:43.6697200Z             "subscribers_url": "https://api.github.com/repos/mosajjal/sniproxy/subscribers",
+2026-10-03T23:28:43.6697746Z             "subscription_url": "https://api.github.com/repos/mosajjal/sniproxy/subscription",
+2026-10-03T23:28:43.6698204Z             "svn_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6698597Z             "tags_url": "https://api.github.com/repos/mosajjal/sniproxy/tags",
+2026-10-03T23:28:43.6699057Z             "teams_url": "https://api.github.com/repos/mosajjal/sniproxy/teams",
+2026-10-03T23:28:43.6699423Z             "topics": [],
+2026-10-03T23:28:43.6700071Z             "trees_url": "https://api.github.com/repos/mosajjal/sniproxy/git/trees{/sha}",
+2026-10-03T23:28:43.6700505Z             "updated_at": "2026-10-03T23:03:38Z",
+2026-10-03T23:28:43.6700863Z             "url": "https://api.github.com/repos/mosajjal/sniproxy",
+2026-10-03T23:28:43.6701203Z             "visibility": "public",
+2026-10-03T23:28:43.6701456Z             "watchers": 275,
+2026-10-03T23:28:43.6701697Z             "watchers_count": 275,
+2026-10-03T23:28:43.6701969Z             "web_commit_signoff_required": false
+2026-10-03T23:28:43.6702246Z           },
+2026-10-03T23:28:43.6702435Z           "sender": {
+2026-10-03T23:28:43.6702775Z             "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6703286Z             "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6703790Z             "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6704315Z             "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6704839Z             "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6705218Z             "gravatar_id": "",
+2026-10-03T23:28:43.6705493Z             "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6705794Z             "id": 10158936,
+2026-10-03T23:28:43.6706025Z             "login": "mosajjal",
+2026-10-03T23:28:43.6706290Z             "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6706679Z             "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6707200Z             "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6707702Z             "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6708059Z             "site_admin": false,
+2026-10-03T23:28:43.6708436Z             "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6708984Z             "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6709528Z             "type": "User",
+2026-10-03T23:28:43.6710083Z             "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6710548Z             "user_view_type": "public"
+2026-10-03T23:28:43.6710816Z           }
+2026-10-03T23:28:43.6710996Z         },
+2026-10-03T23:28:43.6711213Z         "github_job": "build-and-push-image",
+2026-10-03T23:28:43.6711552Z         "github_ref": "refs/tags/v2.4.2",
+2026-10-03T23:28:43.6711838Z         "github_ref_name": "v2.4.2",
+2026-10-03T23:28:43.6712107Z         "github_ref_protected": "false",
+2026-10-03T23:28:43.6712389Z         "github_ref_type": "tag",
+2026-10-03T23:28:43.6712673Z         "github_repository": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6713123Z         "github_repository_id": "314953804",
+2026-10-03T23:28:43.6713418Z         "github_repository_owner": "mosajjal",
+2026-10-03T23:28:43.6713719Z         "github_repository_owner_id": "10158936",
+2026-10-03T23:28:43.6714013Z         "github_run_attempt": "1",
+2026-10-03T23:28:43.6714283Z         "github_run_id": "37160861216",
+2026-10-03T23:28:43.6714547Z         "github_run_number": "45",
+2026-10-03T23:28:43.6714801Z         "github_runner_arch": "X64",
+2026-10-03T23:28:43.6715102Z         "github_runner_environment": "github-hosted",
+2026-10-03T23:28:43.6715425Z         "github_runner_image_os": "ubuntu24",
+2026-10-03T23:28:43.6715740Z         "github_runner_image_version": "20260927.320.1",
+2026-10-03T23:28:43.6716086Z         "github_runner_name": "GitHub Actions 1000003760",
+2026-10-03T23:28:43.6716399Z         "github_runner_os": "Linux",
+2026-10-03T23:28:43.6716773Z         "github_runner_tracking_id": "github_49f7738a-0d58-48ed-9609-422b8a2be2cd",
+2026-10-03T23:28:43.6717200Z         "github_server_url": "https://github.com",
+2026-10-03T23:28:43.6717528Z         "github_triggering_actor": "mosajjal",
+2026-10-03T23:28:43.6717932Z         "github_workflow": "Publish Container Image to Github Container Registry",
+2026-10-03T23:28:43.6718512Z         "github_workflow_ref": "mosajjal/sniproxy/.github/workflows/ghcr.yml@refs/tags/v2.4.2",
+2026-10-03T23:28:43.6719047Z         "github_workflow_sha": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6719415Z         "platform": "linux/amd64"
+2026-10-03T23:28:43.6719659Z       }
+2026-10-03T23:28:43.6720057Z     }
+2026-10-03T23:28:43.6720236Z   },
+2026-10-03T23:28:43.6720450Z   "buildx.build.provenance/linux/arm/v6": {
+2026-10-03T23:28:43.6720736Z     "builder": {
+2026-10-03T23:28:43.6721076Z       "id": "https://github.com/mosajjal/sniproxy/actions/runs/37160861216/attempts/1"
+2026-10-03T23:28:43.6721480Z     },
+2026-10-03T23:28:43.6721719Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2026-10-03T23:28:43.6722030Z     "materials": [
+2026-10-03T23:28:43.6722231Z       {
+2026-10-03T23:28:43.6722511Z         "uri": "pkg:docker/golang@1.26-alpine?platform=linux%2Farm%2Fv6",
+2026-10-03T23:28:43.6722869Z         "digest": {
+2026-10-03T23:28:43.6723214Z           "sha256": "8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+2026-10-03T23:28:43.6723623Z         }
+2026-10-03T23:28:43.6723802Z       }
+2026-10-03T23:28:43.6723971Z     ],
+2026-10-03T23:28:43.6724156Z     "invocation": {
+2026-10-03T23:28:43.6724366Z       "configSource": {
+2026-10-03T23:28:43.6724598Z         "entryPoint": "Dockerfile"
+2026-10-03T23:28:43.6724839Z       },
+2026-10-03T23:28:43.6725028Z       "parameters": {
+2026-10-03T23:28:43.6725252Z         "frontend": "dockerfile.v0",
+2026-10-03T23:28:43.6725502Z         "args": {
+2026-10-03T23:28:43.6725827Z           "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6726386Z           "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6726917Z           "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6727440Z           "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6728230Z           "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6728743Z           "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6729217Z           "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6729928Z           "label:org.opencontainers.image.version": "v2.4.2"
+2026-10-03T23:28:43.6730324Z         },
+2026-10-03T23:28:43.6730509Z         "locals": [
+2026-10-03T23:28:43.6730705Z           {
+2026-10-03T23:28:43.6730899Z             "name": "context"
+2026-10-03T23:28:43.6731128Z           },
+2026-10-03T23:28:43.6731340Z           {
+2026-10-03T23:28:43.6731534Z             "name": "dockerfile"
+2026-10-03T23:28:43.6731772Z           }
+2026-10-03T23:28:43.6732088Z         ],
+2026-10-03T23:28:43.6732279Z         "root": {
+2026-10-03T23:28:43.6732502Z           "configSource": {
+2026-10-03T23:28:43.6732752Z             "path": "Dockerfile"
+2026-10-03T23:28:43.6733002Z           },
+2026-10-03T23:28:43.6733204Z           "request": {
+2026-10-03T23:28:43.6733433Z             "args": {
+2026-10-03T23:28:43.6733781Z               "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6734385Z               "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6734963Z               "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6735532Z               "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6736192Z               "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6736729Z               "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6737246Z               "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6737773Z               "label:org.opencontainers.image.version": "v2.4.2",
+2026-10-03T23:28:43.6738137Z               "vcs:localdir:context": ".",
+2026-10-03T23:28:43.6738449Z               "vcs:localdir:dockerfile": ".",
+2026-10-03T23:28:43.6738817Z               "vcs:revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6739239Z               "vcs:source": "https://github.com/mosajjal/sniproxy"
+2026-10-03T23:28:43.6739575Z             }
+2026-10-03T23:28:43.6740037Z           }
+2026-10-03T23:28:43.6740237Z         },
+2026-10-03T23:28:43.6740454Z         "compatibilityVersion": 30
+2026-10-03T23:28:43.6740722Z       },
+2026-10-03T23:28:43.6740921Z       "environment": {
+2026-10-03T23:28:43.6741168Z         "dockerfileVersion": "1.27.0",
+2026-10-03T23:28:43.6741466Z         "github_actor": "mosajjal",
+2026-10-03T23:28:43.6741743Z         "github_actor_id": "10158936",
+2026-10-03T23:28:43.6742033Z         "github_event_name": "release",
+2026-10-03T23:28:43.6742322Z         "github_event_payload": {
+2026-10-03T23:28:43.6742593Z           "action": "published",
+2026-10-03T23:28:43.6742853Z           "release": {
+2026-10-03T23:28:43.6743086Z             "assets": [],
+2026-10-03T23:28:43.6743525Z             "assets_url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754/assets",
+2026-10-03T23:28:43.6744006Z             "author": {
+2026-10-03T23:28:43.6744363Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6744908Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6745437Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6746000Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6746561Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6746972Z               "gravatar_id": "",
+2026-10-03T23:28:43.6747273Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6747591Z               "id": 10158936,
+2026-10-03T23:28:43.6747982Z               "login": "mosajjal",
+2026-10-03T23:28:43.6748282Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6748704Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6749263Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6750087Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6750471Z               "site_admin": false,
+2026-10-03T23:28:43.6750889Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6751471Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6752044Z               "type": "User",
+2026-10-03T23:28:43.6752343Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6752686Z               "user_view_type": "public"
+2026-10-03T23:28:43.6752960Z             },
+2026-10-03T23:28:43.6762692Z             "body": "Bug-fix release. No config changes are required to upgrade.\n\n## Fragmented ClientHellos are now proxied (#210, #211)\n\nsniproxy read the TLS ClientHello with a single socket read. If the ClientHello arrived in more than one TCP segment, the SNI parser saw a partial record and dropped the connection, logging `extension looks bonkers` or `not enough bytes for the cipher list`.\n\nThis used to be rare. Current browsers and OpenSSL 3.5+ send a post-quantum key share (X25519MLKEM768), which pushes the ClientHello to about 1.7-1.9 KB, past one segment. Busy instances saw hundreds of these failures per minute, and each one was a client that could not connect.\n\nsniproxy now reads the record header and then the whole record before parsing. The 10 s read deadline still bounds slow clients. One case is still not handled: a ClientHello split across several TLS records.\n\nThanks to @hamedafra for the report and reproduction script, and to @alz, who proposed the same fix in #181.\n\n## Fresh installs start without manual fixes (#189, #212)\n\n- **IPv4-only hosts.** A failed public IPv6 lookup was fatal unless `preferred_version` was `ipv4only`, so the default config crashed on hosts without IPv6. sniproxy now logs a warning and runs IPv4 only. Startup still fails if neither address family has an address.\n- **DoT and DoQ without a certificate.** Leaving `tls_cert` and `tls_key` empty is supposed to generate a self-signed pair, but config validation rejected DoT/DoQ before that step ran. It now starts. Setting only one of the two is still an error.\n\n## Additional listener ports (#209, #212)\n\n`bind_http_additional` and `bind_https_additional` only worked as a YAML list. The comma-separated form shown in the default config, a single bare port, and the `SNIPROXY_GENERAL__BIND_HTTPS_ADDITIONAL` environment variable were all silently ignored. All of these work now:\n\n```yaml\nbind_https_additional: \"8443,8444-8446\"\nbind_https_additional: [8443, \"8444-8446\"]\nbind_https_additional: 8443\n```\n\n## Installer (#191, #213)\n\nThe install script is fetched from master, so these fixes are already live:\n\n- The latest release is found through the github.com release redirect instead of the GitHub API, whose 60-requests-per-hour limit shared VPS addresses often exhausted.\n- Custom TLS certificate paths are written correctly; they were saved as the literal text `$certPath`.\n- Entering a domain list URL no longer breaks the config step.\n- arm64 hosts get the arm64 build of yq.\n\n**Full changelog:** https://github.com/mosajjal/sniproxy/compare/v2.4.1...v2.4.2\n",
+2026-10-03T23:28:43.6773277Z             "created_at": "2026-10-03T23:03:33Z",
+2026-10-03T23:28:43.6773602Z             "draft": false,
+2026-10-03T23:28:43.6774005Z             "html_url": "https://github.com/mosajjal/sniproxy/releases/tag/v2.4.2",
+2026-10-03T23:28:43.6774450Z             "id": 402727754,
+2026-10-03T23:28:43.6774723Z             "immutable": false,
+2026-10-03T23:28:43.6775005Z             "mentions_count": 2,
+2026-10-03T23:28:43.6775429Z             "name": "v2.4.2",
+2026-10-03T23:28:43.6775725Z             "node_id": "RE_kwDOEsXQTM4YASNK",
+2026-10-03T23:28:43.6776053Z             "prerelease": false,
+2026-10-03T23:28:43.6776354Z             "published_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6776685Z             "tag_name": "v2.4.2",
+2026-10-03T23:28:43.6777132Z             "tarball_url": "https://api.github.com/repos/mosajjal/sniproxy/tarball/v2.4.2",
+2026-10-03T23:28:43.6777640Z             "target_commitish": "master",
+2026-10-03T23:28:43.6777964Z             "updated_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6778576Z             "upload_url": "https://uploads.github.com/repos/mosajjal/sniproxy/releases/402727754/assets{?name,label}",
+2026-10-03T23:28:43.6779428Z             "url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754",
+2026-10-03T23:28:43.6780289Z             "zipball_url": "https://api.github.com/repos/mosajjal/sniproxy/zipball/v2.4.2"
+2026-10-03T23:28:43.6780764Z           },
+2026-10-03T23:28:43.6780993Z           "repository": {
+2026-10-03T23:28:43.6781271Z             "allow_forking": true,
+2026-10-03T23:28:43.6781755Z             "archive_url": "https://api.github.com/repos/mosajjal/sniproxy/{archive_format}{/ref}",
+2026-10-03T23:28:43.6782267Z             "archived": false,
+2026-10-03T23:28:43.6782721Z             "assignees_url": "https://api.github.com/repos/mosajjal/sniproxy/assignees{/user}",
+2026-10-03T23:28:43.6783375Z             "blobs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/blobs{/sha}",
+2026-10-03T23:28:43.6784021Z             "branches_url": "https://api.github.com/repos/mosajjal/sniproxy/branches{/branch}",
+2026-10-03T23:28:43.6784603Z             "clone_url": "https://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6785253Z             "collaborators_url": "https://api.github.com/repos/mosajjal/sniproxy/collaborators{/collaborator}",
+2026-10-03T23:28:43.6785997Z             "comments_url": "https://api.github.com/repos/mosajjal/sniproxy/comments{/number}",
+2026-10-03T23:28:43.6786647Z             "commits_url": "https://api.github.com/repos/mosajjal/sniproxy/commits{/sha}",
+2026-10-03T23:28:43.6787315Z             "compare_url": "https://api.github.com/repos/mosajjal/sniproxy/compare/{base}...{head}",
+2026-10-03T23:28:43.6788001Z             "contents_url": "https://api.github.com/repos/mosajjal/sniproxy/contents/{+path}",
+2026-10-03T23:28:43.6788670Z             "contributors_url": "https://api.github.com/repos/mosajjal/sniproxy/contributors",
+2026-10-03T23:28:43.6789179Z             "created_at": "2020-11-22T03:47:00Z",
+2026-10-03T23:28:43.6789514Z             "default_branch": "master",
+2026-10-03T23:28:43.6790410Z             "deployments_url": "https://api.github.com/repos/mosajjal/sniproxy/deployments",
+2026-10-03T23:28:43.6790985Z             "description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6791361Z             "disabled": false,
+2026-10-03T23:28:43.6791794Z             "downloads_url": "https://api.github.com/repos/mosajjal/sniproxy/downloads",
+2026-10-03T23:28:43.6792388Z             "events_url": "https://api.github.com/repos/mosajjal/sniproxy/events",
+2026-10-03T23:28:43.6792842Z             "fork": false,
+2026-10-03T23:28:43.6793097Z             "forks": 58,
+2026-10-03T23:28:43.6793358Z             "forks_count": 58,
+2026-10-03T23:28:43.6793745Z             "forks_url": "https://api.github.com/repos/mosajjal/sniproxy/forks",
+2026-10-03T23:28:43.6794195Z             "full_name": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6794703Z             "git_commits_url": "https://api.github.com/repos/mosajjal/sniproxy/git/commits{/sha}",
+2026-10-03T23:28:43.6795363Z             "git_refs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/refs{/sha}",
+2026-10-03T23:28:43.6795996Z             "git_tags_url": "https://api.github.com/repos/mosajjal/sniproxy/git/tags{/sha}",
+2026-10-03T23:28:43.6796534Z             "git_url": "git://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6796911Z             "has_discussions": true,
+2026-10-03T23:28:43.6797373Z             "has_downloads": false,
+2026-10-03T23:28:43.6797670Z             "has_issues": true,
+2026-10-03T23:28:43.6797947Z             "has_pages": false,
+2026-10-03T23:28:43.6798225Z             "has_projects": false,
+2026-10-03T23:28:43.6798529Z             "has_pull_requests": true,
+2026-10-03T23:28:43.6798827Z             "has_wiki": false,
+2026-10-03T23:28:43.6799099Z             "homepage": null,
+2026-10-03T23:28:43.6799490Z             "hooks_url": "https://api.github.com/repos/mosajjal/sniproxy/hooks",
+2026-10-03T23:28:43.6800198Z             "html_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6800563Z             "id": 314953804,
+2026-10-03T23:28:43.6800960Z             "is_template": false,
+2026-10-03T23:28:43.6801475Z             "issue_comment_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/comments{/number}",
+2026-10-03T23:28:43.6802233Z             "issue_events_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/events{/number}",
+2026-10-03T23:28:43.6802923Z             "issues_url": "https://api.github.com/repos/mosajjal/sniproxy/issues{/number}",
+2026-10-03T23:28:43.6803535Z             "keys_url": "https://api.github.com/repos/mosajjal/sniproxy/keys{/key_id}",
+2026-10-03T23:28:43.6804144Z             "labels_url": "https://api.github.com/repos/mosajjal/sniproxy/labels{/name}",
+2026-10-03T23:28:43.6804609Z             "language": "Go",
+2026-10-03T23:28:43.6805028Z             "languages_url": "https://api.github.com/repos/mosajjal/sniproxy/languages",
+2026-10-03T23:28:43.6805492Z             "license": {
+2026-10-03T23:28:43.6805751Z               "key": "bsd-2-clause",
+2026-10-03T23:28:43.6806095Z               "name": "BSD 2-Clause \"Simplified\" License",
+2026-10-03T23:28:43.6806465Z               "node_id": "MDc6TGljZW5zZTQ=",
+2026-10-03T23:28:43.6806789Z               "spdx_id": "BSD-2-Clause",
+2026-10-03T23:28:43.6807161Z               "url": "https://api.github.com/licenses/bsd-2-clause"
+2026-10-03T23:28:43.6807534Z             },
+2026-10-03T23:28:43.6807888Z             "merges_url": "https://api.github.com/repos/mosajjal/sniproxy/merges",
+2026-10-03T23:28:43.6808523Z             "milestones_url": "https://api.github.com/repos/mosajjal/sniproxy/milestones{/number}",
+2026-10-03T23:28:43.6809045Z             "mirror_url": null,
+2026-10-03T23:28:43.6809321Z             "name": "sniproxy",
+2026-10-03T23:28:43.6809648Z             "node_id": "MDEwOlJlcG9zaXRvcnkzMTQ5NTM4MDQ=",
+2026-10-03T23:28:43.6810528Z             "notifications_url": "https://api.github.com/repos/mosajjal/sniproxy/notifications{?since,all,participating}",
+2026-10-03T23:28:43.6811152Z             "open_issues": 2,
+2026-10-03T23:28:43.6811436Z             "open_issues_count": 2,
+2026-10-03T23:28:43.6811725Z             "owner": {
+2026-10-03T23:28:43.6812104Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6812686Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6813261Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6813863Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6814471Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6814907Z               "gravatar_id": "",
+2026-10-03T23:28:43.6815228Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6815568Z               "id": 10158936,
+2026-10-03T23:28:43.6815839Z               "login": "mosajjal",
+2026-10-03T23:28:43.6816150Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6816607Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6817209Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6817781Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6818323Z               "site_admin": false,
+2026-10-03T23:28:43.6818766Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6819393Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6820115Z               "type": "User",
+2026-10-03T23:28:43.6820445Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6820817Z               "user_view_type": "public"
+2026-10-03T23:28:43.6821109Z             },
+2026-10-03T23:28:43.6821345Z             "private": false,
+2026-10-03T23:28:43.6821647Z             "pull_request_creation_policy": "all",
+2026-10-03T23:28:43.6822277Z             "pulls_url": "https://api.github.com/repos/mosajjal/sniproxy/pulls{/number}",
+2026-10-03T23:28:43.6822767Z             "pushed_at": "2026-10-03T23:09:46Z",
+2026-10-03T23:28:43.6823249Z             "releases_url": "https://api.github.com/repos/mosajjal/sniproxy/releases{/id}",
+2026-10-03T23:28:43.6823730Z             "size": 750,
+2026-10-03T23:28:43.6824039Z             "ssh_url": "git@github.com:mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6824413Z             "stargazers_count": 275,
+2026-10-03T23:28:43.6824871Z             "stargazers_url": "https://api.github.com/repos/mosajjal/sniproxy/stargazers",
+2026-10-03T23:28:43.6825512Z             "statuses_url": "https://api.github.com/repos/mosajjal/sniproxy/statuses/{sha}",
+2026-10-03T23:28:43.6826158Z             "subscribers_url": "https://api.github.com/repos/mosajjal/sniproxy/subscribers",
+2026-10-03T23:28:43.6826816Z             "subscription_url": "https://api.github.com/repos/mosajjal/sniproxy/subscription",
+2026-10-03T23:28:43.6827394Z             "svn_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6827866Z             "tags_url": "https://api.github.com/repos/mosajjal/sniproxy/tags",
+2026-10-03T23:28:43.6828400Z             "teams_url": "https://api.github.com/repos/mosajjal/sniproxy/teams",
+2026-10-03T23:28:43.6828827Z             "topics": [],
+2026-10-03T23:28:43.6829234Z             "trees_url": "https://api.github.com/repos/mosajjal/sniproxy/git/trees{/sha}",
+2026-10-03T23:28:43.6829964Z             "updated_at": "2026-10-03T23:03:38Z",
+2026-10-03T23:28:43.6830378Z             "url": "https://api.github.com/repos/mosajjal/sniproxy",
+2026-10-03T23:28:43.6830770Z             "visibility": "public",
+2026-10-03T23:28:43.6831057Z             "watchers": 275,
+2026-10-03T23:28:43.6831359Z             "watchers_count": 275,
+2026-10-03T23:28:43.6831671Z             "web_commit_signoff_required": false
+2026-10-03T23:28:43.6831993Z           },
+2026-10-03T23:28:43.6832211Z           "sender": {
+2026-10-03T23:28:43.6832603Z             "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6833148Z             "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6833680Z             "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6834233Z             "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6834791Z             "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6835197Z             "gravatar_id": "",
+2026-10-03T23:28:43.6835487Z             "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6835804Z             "id": 10158936,
+2026-10-03T23:28:43.6836048Z             "login": "mosajjal",
+2026-10-03T23:28:43.6836329Z             "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6836743Z             "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6837309Z             "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6837837Z             "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6838210Z             "site_admin": false,
+2026-10-03T23:28:43.6838754Z             "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6839338Z             "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6840004Z             "type": "User",
+2026-10-03T23:28:43.6840300Z             "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6840641Z             "user_view_type": "public"
+2026-10-03T23:28:43.6840910Z           }
+2026-10-03T23:28:43.6841102Z         },
+2026-10-03T23:28:43.6841329Z         "github_job": "build-and-push-image",
+2026-10-03T23:28:43.6841642Z         "github_ref": "refs/tags/v2.4.2",
+2026-10-03T23:28:43.6841937Z         "github_ref_name": "v2.4.2",
+2026-10-03T23:28:43.6842357Z         "github_ref_protected": "false",
+2026-10-03T23:28:43.6842650Z         "github_ref_type": "tag",
+2026-10-03T23:28:43.6842944Z         "github_repository": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6843270Z         "github_repository_id": "314953804",
+2026-10-03T23:28:43.6843586Z         "github_repository_owner": "mosajjal",
+2026-10-03T23:28:43.6843915Z         "github_repository_owner_id": "10158936",
+2026-10-03T23:28:43.6844226Z         "github_run_attempt": "1",
+2026-10-03T23:28:43.6844498Z         "github_run_id": "37160861216",
+2026-10-03T23:28:43.6844780Z         "github_run_number": "45",
+2026-10-03T23:28:43.6845050Z         "github_runner_arch": "X64",
+2026-10-03T23:28:43.6845363Z         "github_runner_environment": "github-hosted",
+2026-10-03T23:28:43.6845713Z         "github_runner_image_os": "ubuntu24",
+2026-10-03T23:28:43.6846047Z         "github_runner_image_version": "20260927.320.1",
+2026-10-03T23:28:43.6846411Z         "github_runner_name": "GitHub Actions 1000003760",
+2026-10-03T23:28:43.6846749Z         "github_runner_os": "Linux",
+2026-10-03T23:28:43.6847147Z         "github_runner_tracking_id": "github_49f7738a-0d58-48ed-9609-422b8a2be2cd",
+2026-10-03T23:28:43.6847600Z         "github_server_url": "https://github.com",
+2026-10-03T23:28:43.6847945Z         "github_triggering_actor": "mosajjal",
+2026-10-03T23:28:43.6848377Z         "github_workflow": "Publish Container Image to Github Container Registry",
+2026-10-03T23:28:43.6848977Z         "github_workflow_ref": "mosajjal/sniproxy/.github/workflows/ghcr.yml@refs/tags/v2.4.2",
+2026-10-03T23:28:43.6849542Z         "github_workflow_sha": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6850150Z         "platform": "linux/amd64"
+2026-10-03T23:28:43.6850407Z       }
+2026-10-03T23:28:43.6850600Z     }
+2026-10-03T23:28:43.6850788Z   },
+2026-10-03T23:28:43.6851009Z   "buildx.build.provenance/linux/arm64": {
+2026-10-03T23:28:43.6851303Z     "builder": {
+2026-10-03T23:28:43.6851659Z       "id": "https://github.com/mosajjal/sniproxy/actions/runs/37160861216/attempts/1"
+2026-10-03T23:28:43.6852090Z     },
+2026-10-03T23:28:43.6852353Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2026-10-03T23:28:43.6852684Z     "materials": [
+2026-10-03T23:28:43.6852882Z       {
+2026-10-03T23:28:43.6853145Z         "uri": "pkg:docker/golang@1.26-alpine?platform=linux%2Farm64",
+2026-10-03T23:28:43.6853481Z         "digest": {
+2026-10-03T23:28:43.6853822Z           "sha256": "8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+2026-10-03T23:28:43.6854225Z         }
+2026-10-03T23:28:43.6854408Z       }
+2026-10-03T23:28:43.6854580Z     ],
+2026-10-03T23:28:43.6854760Z     "invocation": {
+2026-10-03T23:28:43.6854966Z       "configSource": {
+2026-10-03T23:28:43.6855197Z         "entryPoint": "Dockerfile"
+2026-10-03T23:28:43.6855437Z       },
+2026-10-03T23:28:43.6855628Z       "parameters": {
+2026-10-03T23:28:43.6855853Z         "frontend": "dockerfile.v0",
+2026-10-03T23:28:43.6856102Z         "args": {
+2026-10-03T23:28:43.6856423Z           "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6856979Z           "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6857505Z           "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6858165Z           "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6858780Z           "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6859287Z           "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6859959Z           "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6860445Z           "label:org.opencontainers.image.version": "v2.4.2"
+2026-10-03T23:28:43.6860760Z         },
+2026-10-03T23:28:43.6860953Z         "locals": [
+2026-10-03T23:28:43.6861148Z           {
+2026-10-03T23:28:43.6861464Z             "name": "context"
+2026-10-03T23:28:43.6861688Z           },
+2026-10-03T23:28:43.6861872Z           {
+2026-10-03T23:28:43.6862062Z             "name": "dockerfile"
+2026-10-03T23:28:43.6862299Z           }
+2026-10-03T23:28:43.6862481Z         ],
+2026-10-03T23:28:43.6862663Z         "root": {
+2026-10-03T23:28:43.6862877Z           "configSource": {
+2026-10-03T23:28:43.6863115Z             "path": "Dockerfile"
+2026-10-03T23:28:43.6863345Z           },
+2026-10-03T23:28:43.6863531Z           "request": {
+2026-10-03T23:28:43.6863741Z             "args": {
+2026-10-03T23:28:43.6864072Z               "label:org.opencontainers.image.created": "2026-10-03T23:10:04.415Z",
+2026-10-03T23:28:43.6864642Z               "label:org.opencontainers.image.description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6865187Z               "label:org.opencontainers.image.licenses": "BSD-2-Clause",
+2026-10-03T23:28:43.6865728Z               "label:org.opencontainers.image.revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6866361Z               "label:org.opencontainers.image.source": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6866874Z               "label:org.opencontainers.image.title": "sniproxy",
+2026-10-03T23:28:43.6867356Z               "label:org.opencontainers.image.url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6867848Z               "label:org.opencontainers.image.version": "v2.4.2",
+2026-10-03T23:28:43.6868191Z               "vcs:localdir:context": ".",
+2026-10-03T23:28:43.6868478Z               "vcs:localdir:dockerfile": ".",
+2026-10-03T23:28:43.6868828Z               "vcs:revision": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6869227Z               "vcs:source": "https://github.com/mosajjal/sniproxy"
+2026-10-03T23:28:43.6869541Z             }
+2026-10-03T23:28:43.6869960Z           }
+2026-10-03T23:28:43.6870150Z         },
+2026-10-03T23:28:43.6870353Z         "compatibilityVersion": 30
+2026-10-03T23:28:43.6870600Z       },
+2026-10-03T23:28:43.6870799Z       "environment": {
+2026-10-03T23:28:43.6871030Z         "dockerfileVersion": "1.27.0",
+2026-10-03T23:28:43.6871303Z         "github_actor": "mosajjal",
+2026-10-03T23:28:43.6871561Z         "github_actor_id": "10158936",
+2026-10-03T23:28:43.6871841Z         "github_event_name": "release",
+2026-10-03T23:28:43.6872115Z         "github_event_payload": {
+2026-10-03T23:28:43.6872377Z           "action": "published",
+2026-10-03T23:28:43.6872619Z           "release": {
+2026-10-03T23:28:43.6872834Z             "assets": [],
+2026-10-03T23:28:43.6873241Z             "assets_url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754/assets",
+2026-10-03T23:28:43.6873685Z             "author": {
+2026-10-03T23:28:43.6874025Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6874537Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6875036Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6875566Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6876092Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6876607Z               "gravatar_id": "",
+2026-10-03T23:28:43.6876892Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6877201Z               "id": 10158936,
+2026-10-03T23:28:43.6877437Z               "login": "mosajjal",
+2026-10-03T23:28:43.6877712Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6878106Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6878627Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6879133Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6879488Z               "site_admin": false,
+2026-10-03T23:28:43.6880227Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6880789Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6881205Z               "type": "User",
+2026-10-03T23:28:43.6881494Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6881820Z               "user_view_type": "public"
+2026-10-03T23:28:43.6882075Z             },
+2026-10-03T23:28:43.6891149Z             "body": "Bug-fix release. No config changes are required to upgrade.\n\n## Fragmented ClientHellos are now proxied (#210, #211)\n\nsniproxy read the TLS ClientHello with a single socket read. If the ClientHello arrived in more than one TCP segment, the SNI parser saw a partial record and dropped the connection, logging `extension looks bonkers` or `not enough bytes for the cipher list`.\n\nThis used to be rare. Current browsers and OpenSSL 3.5+ send a post-quantum key share (X25519MLKEM768), which pushes the ClientHello to about 1.7-1.9 KB, past one segment. Busy instances saw hundreds of these failures per minute, and each one was a client that could not connect.\n\nsniproxy now reads the record header and then the whole record before parsing. The 10 s read deadline still bounds slow clients. One case is still not handled: a ClientHello split across several TLS records.\n\nThanks to @hamedafra for the report and reproduction script, and to @alz, who proposed the same fix in #181.\n\n## Fresh installs start without manual fixes (#189, #212)\n\n- **IPv4-only hosts.** A failed public IPv6 lookup was fatal unless `preferred_version` was `ipv4only`, so the default config crashed on hosts without IPv6. sniproxy now logs a warning and runs IPv4 only. Startup still fails if neither address family has an address.\n- **DoT and DoQ without a certificate.** Leaving `tls_cert` and `tls_key` empty is supposed to generate a self-signed pair, but config validation rejected DoT/DoQ before that step ran. It now starts. Setting only one of the two is still an error.\n\n## Additional listener ports (#209, #212)\n\n`bind_http_additional` and `bind_https_additional` only worked as a YAML list. The comma-separated form shown in the default config, a single bare port, and the `SNIPROXY_GENERAL__BIND_HTTPS_ADDITIONAL` environment variable were all silently ignored. All of these work now:\n\n```yaml\nbind_https_additional: \"8443,8444-8446\"\nbind_https_additional: [8443, \"8444-8446\"]\nbind_https_additional: 8443\n```\n\n## Installer (#191, #213)\n\nThe install script is fetched from master, so these fixes are already live:\n\n- The latest release is found through the github.com release redirect instead of the GitHub API, whose 60-requests-per-hour limit shared VPS addresses often exhausted.\n- Custom TLS certificate paths are written correctly; they were saved as the literal text `$certPath`.\n- Entering a domain list URL no longer breaks the config step.\n- arm64 hosts get the arm64 build of yq.\n\n**Full changelog:** https://github.com/mosajjal/sniproxy/compare/v2.4.1...v2.4.2\n",
+2026-10-03T23:28:43.6900472Z             "created_at": "2026-10-03T23:03:33Z",
+2026-10-03T23:28:43.6900758Z             "draft": false,
+2026-10-03T23:28:43.6901257Z             "html_url": "https://github.com/mosajjal/sniproxy/releases/tag/v2.4.2",
+2026-10-03T23:28:43.6901668Z             "id": 402727754,
+2026-10-03T23:28:43.6901925Z             "immutable": false,
+2026-10-03T23:28:43.6902169Z             "mentions_count": 2,
+2026-10-03T23:28:43.6902414Z             "name": "v2.4.2",
+2026-10-03T23:28:43.6902673Z             "node_id": "RE_kwDOEsXQTM4YASNK",
+2026-10-03T23:28:43.6902960Z             "prerelease": false,
+2026-10-03T23:28:43.6903225Z             "published_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6903517Z             "tag_name": "v2.4.2",
+2026-10-03T23:28:43.6903907Z             "tarball_url": "https://api.github.com/repos/mosajjal/sniproxy/tarball/v2.4.2",
+2026-10-03T23:28:43.6904342Z             "target_commitish": "master",
+2026-10-03T23:28:43.6904742Z             "updated_at": "2026-10-03T23:09:47Z",
+2026-10-03T23:28:43.6905271Z             "upload_url": "https://uploads.github.com/repos/mosajjal/sniproxy/releases/402727754/assets{?name,label}",
+2026-10-03T23:28:43.6905927Z             "url": "https://api.github.com/repos/mosajjal/sniproxy/releases/402727754",
+2026-10-03T23:28:43.6906474Z             "zipball_url": "https://api.github.com/repos/mosajjal/sniproxy/zipball/v2.4.2"
+2026-10-03T23:28:43.6906882Z           },
+2026-10-03T23:28:43.6907075Z           "repository": {
+2026-10-03T23:28:43.6907308Z             "allow_forking": true,
+2026-10-03T23:28:43.6907733Z             "archive_url": "https://api.github.com/repos/mosajjal/sniproxy/{archive_format}{/ref}",
+2026-10-03T23:28:43.6908189Z             "archived": false,
+2026-10-03T23:28:43.6908592Z             "assignees_url": "https://api.github.com/repos/mosajjal/sniproxy/assignees{/user}",
+2026-10-03T23:28:43.6909167Z             "blobs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/blobs{/sha}",
+2026-10-03T23:28:43.6909871Z             "branches_url": "https://api.github.com/repos/mosajjal/sniproxy/branches{/branch}",
+2026-10-03T23:28:43.6910378Z             "clone_url": "https://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6910953Z             "collaborators_url": "https://api.github.com/repos/mosajjal/sniproxy/collaborators{/collaborator}",
+2026-10-03T23:28:43.6911615Z             "comments_url": "https://api.github.com/repos/mosajjal/sniproxy/comments{/number}",
+2026-10-03T23:28:43.6912181Z             "commits_url": "https://api.github.com/repos/mosajjal/sniproxy/commits{/sha}",
+2026-10-03T23:28:43.6912763Z             "compare_url": "https://api.github.com/repos/mosajjal/sniproxy/compare/{base}...{head}",
+2026-10-03T23:28:43.6913345Z             "contents_url": "https://api.github.com/repos/mosajjal/sniproxy/contents/{+path}",
+2026-10-03T23:28:43.6913901Z             "contributors_url": "https://api.github.com/repos/mosajjal/sniproxy/contributors",
+2026-10-03T23:28:43.6914345Z             "created_at": "2020-11-22T03:47:00Z",
+2026-10-03T23:28:43.6914627Z             "default_branch": "master",
+2026-10-03T23:28:43.6915035Z             "deployments_url": "https://api.github.com/repos/mosajjal/sniproxy/deployments",
+2026-10-03T23:28:43.6915503Z             "description": "SNI Proxy with Embedded DNS Server",
+2026-10-03T23:28:43.6915820Z             "disabled": false,
+2026-10-03T23:28:43.6916187Z             "downloads_url": "https://api.github.com/repos/mosajjal/sniproxy/downloads",
+2026-10-03T23:28:43.6916688Z             "events_url": "https://api.github.com/repos/mosajjal/sniproxy/events",
+2026-10-03T23:28:43.6917057Z             "fork": false,
+2026-10-03T23:28:43.6917281Z             "forks": 58,
+2026-10-03T23:28:43.6917500Z             "forks_count": 58,
+2026-10-03T23:28:43.6917827Z             "forks_url": "https://api.github.com/repos/mosajjal/sniproxy/forks",
+2026-10-03T23:28:43.6918216Z             "full_name": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6918651Z             "git_commits_url": "https://api.github.com/repos/mosajjal/sniproxy/git/commits{/sha}",
+2026-10-03T23:28:43.6919207Z             "git_refs_url": "https://api.github.com/repos/mosajjal/sniproxy/git/refs{/sha}",
+2026-10-03T23:28:43.6919968Z             "git_tags_url": "https://api.github.com/repos/mosajjal/sniproxy/git/tags{/sha}",
+2026-10-03T23:28:43.6920427Z             "git_url": "git://github.com/mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6920753Z             "has_discussions": true,
+2026-10-03T23:28:43.6921010Z             "has_downloads": false,
+2026-10-03T23:28:43.6921257Z             "has_issues": true,
+2026-10-03T23:28:43.6921490Z             "has_pages": false,
+2026-10-03T23:28:43.6921724Z             "has_projects": false,
+2026-10-03T23:28:43.6921979Z             "has_pull_requests": true,
+2026-10-03T23:28:43.6922239Z             "has_wiki": false,
+2026-10-03T23:28:43.6922499Z             "homepage": null,
+2026-10-03T23:28:43.6922831Z             "hooks_url": "https://api.github.com/repos/mosajjal/sniproxy/hooks",
+2026-10-03T23:28:43.6923359Z             "html_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6923672Z             "id": 314953804,
+2026-10-03T23:28:43.6923899Z             "is_template": false,
+2026-10-03T23:28:43.6924339Z             "issue_comment_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/comments{/number}",
+2026-10-03T23:28:43.6924983Z             "issue_events_url": "https://api.github.com/repos/mosajjal/sniproxy/issues/events{/number}",
+2026-10-03T23:28:43.6925563Z             "issues_url": "https://api.github.com/repos/mosajjal/sniproxy/issues{/number}",
+2026-10-03T23:28:43.6926080Z             "keys_url": "https://api.github.com/repos/mosajjal/sniproxy/keys{/key_id}",
+2026-10-03T23:28:43.6926589Z             "labels_url": "https://api.github.com/repos/mosajjal/sniproxy/labels{/name}",
+2026-10-03T23:28:43.6926982Z             "language": "Go",
+2026-10-03T23:28:43.6927343Z             "languages_url": "https://api.github.com/repos/mosajjal/sniproxy/languages",
+2026-10-03T23:28:43.6927736Z             "license": {
+2026-10-03T23:28:43.6927960Z               "key": "bsd-2-clause",
+2026-10-03T23:28:43.6928248Z               "name": "BSD 2-Clause \"Simplified\" License",
+2026-10-03T23:28:43.6928566Z               "node_id": "MDc6TGljZW5zZTQ=",
+2026-10-03T23:28:43.6928844Z               "spdx_id": "BSD-2-Clause",
+2026-10-03T23:28:43.6929164Z               "url": "https://api.github.com/licenses/bsd-2-clause"
+2026-10-03T23:28:43.6929480Z             },
+2026-10-03T23:28:43.6929898Z             "merges_url": "https://api.github.com/repos/mosajjal/sniproxy/merges",
+2026-10-03T23:28:43.6930434Z             "milestones_url": "https://api.github.com/repos/mosajjal/sniproxy/milestones{/number}",
+2026-10-03T23:28:43.6930869Z             "mirror_url": null,
+2026-10-03T23:28:43.6931103Z             "name": "sniproxy",
+2026-10-03T23:28:43.6931416Z             "node_id": "MDEwOlJlcG9zaXRvcnkzMTQ5NTM4MDQ=",
+2026-10-03T23:28:43.6931986Z             "notifications_url": "https://api.github.com/repos/mosajjal/sniproxy/notifications{?since,all,participating}",
+2026-10-03T23:28:43.6932520Z             "open_issues": 2,
+2026-10-03T23:28:43.6932755Z             "open_issues_count": 2,
+2026-10-03T23:28:43.6932992Z             "owner": {
+2026-10-03T23:28:43.6933322Z               "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6933818Z               "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6934302Z               "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6934806Z               "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6935310Z               "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6935677Z               "gravatar_id": "",
+2026-10-03T23:28:43.6935960Z               "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6936254Z               "id": 10158936,
+2026-10-03T23:28:43.6936487Z               "login": "mosajjal",
+2026-10-03T23:28:43.6936753Z               "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6942019Z               "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6942829Z               "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6943364Z               "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6943721Z               "site_admin": false,
+2026-10-03T23:28:43.6944122Z               "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6944677Z               "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6945102Z               "type": "User",
+2026-10-03T23:28:43.6945382Z               "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6945818Z               "user_view_type": "public"
+2026-10-03T23:28:43.6946074Z             },
+2026-10-03T23:28:43.6946275Z             "private": false,
+2026-10-03T23:28:43.6946542Z             "pull_request_creation_policy": "all",
+2026-10-03T23:28:43.6947013Z             "pulls_url": "https://api.github.com/repos/mosajjal/sniproxy/pulls{/number}",
+2026-10-03T23:28:43.6947458Z             "pushed_at": "2026-10-03T23:09:46Z",
+2026-10-03T23:28:43.6947892Z             "releases_url": "https://api.github.com/repos/mosajjal/sniproxy/releases{/id}",
+2026-10-03T23:28:43.6948310Z             "size": 750,
+2026-10-03T23:28:43.6948585Z             "ssh_url": "git@github.com:mosajjal/sniproxy.git",
+2026-10-03T23:28:43.6948912Z             "stargazers_count": 275,
+2026-10-03T23:28:43.6949318Z             "stargazers_url": "https://api.github.com/repos/mosajjal/sniproxy/stargazers",
+2026-10-03T23:28:43.6950077Z             "statuses_url": "https://api.github.com/repos/mosajjal/sniproxy/statuses/{sha}",
+2026-10-03T23:28:43.6950661Z             "subscribers_url": "https://api.github.com/repos/mosajjal/sniproxy/subscribers",
+2026-10-03T23:28:43.6951258Z             "subscription_url": "https://api.github.com/repos/mosajjal/sniproxy/subscription",
+2026-10-03T23:28:43.6951742Z             "svn_url": "https://github.com/mosajjal/sniproxy",
+2026-10-03T23:28:43.6952161Z             "tags_url": "https://api.github.com/repos/mosajjal/sniproxy/tags",
+2026-10-03T23:28:43.6952636Z             "teams_url": "https://api.github.com/repos/mosajjal/sniproxy/teams",
+2026-10-03T23:28:43.6953018Z             "topics": [],
+2026-10-03T23:28:43.6953381Z             "trees_url": "https://api.github.com/repos/mosajjal/sniproxy/git/trees{/sha}",
+2026-10-03T23:28:43.6953813Z             "updated_at": "2026-10-03T23:03:38Z",
+2026-10-03T23:28:43.6954161Z             "url": "https://api.github.com/repos/mosajjal/sniproxy",
+2026-10-03T23:28:43.6954508Z             "visibility": "public",
+2026-10-03T23:28:43.6954766Z             "watchers": 275,
+2026-10-03T23:28:43.6955069Z             "watchers_count": 275,
+2026-10-03T23:28:43.6955345Z             "web_commit_signoff_required": false
+2026-10-03T23:28:43.6955619Z           },
+2026-10-03T23:28:43.6955807Z           "sender": {
+2026-10-03T23:28:43.6956145Z             "avatar_url": "https://avatars.githubusercontent.com/u/10158936?v=4",
+2026-10-03T23:28:43.6956679Z             "events_url": "https://api.github.com/users/mosajjal/events{/privacy}",
+2026-10-03T23:28:43.6957186Z             "followers_url": "https://api.github.com/users/mosajjal/followers",
+2026-10-03T23:28:43.6957714Z             "following_url": "https://api.github.com/users/mosajjal/following{/other_user}",
+2026-10-03T23:28:43.6958238Z             "gists_url": "https://api.github.com/users/mosajjal/gists{/gist_id}",
+2026-10-03T23:28:43.6958621Z             "gravatar_id": "",
+2026-10-03T23:28:43.6958898Z             "html_url": "https://github.com/mosajjal",
+2026-10-03T23:28:43.6959201Z             "id": 10158936,
+2026-10-03T23:28:43.6959438Z             "login": "mosajjal",
+2026-10-03T23:28:43.6959823Z             "node_id": "MDQ6VXNlcjEwMTU4OTM2",
+2026-10-03T23:28:43.6960224Z             "organizations_url": "https://api.github.com/users/mosajjal/orgs",
+2026-10-03T23:28:43.6960888Z             "received_events_url": "https://api.github.com/users/mosajjal/received_events",
+2026-10-03T23:28:43.6961393Z             "repos_url": "https://api.github.com/users/mosajjal/repos",
+2026-10-03T23:28:43.6961751Z             "site_admin": false,
+2026-10-03T23:28:43.6962135Z             "starred_url": "https://api.github.com/users/mosajjal/starred{/owner}{/repo}",
+2026-10-03T23:28:43.6962686Z             "subscriptions_url": "https://api.github.com/users/mosajjal/subscriptions",
+2026-10-03T23:28:43.6963099Z             "type": "User",
+2026-10-03T23:28:43.6963372Z             "url": "https://api.github.com/users/mosajjal",
+2026-10-03T23:28:43.6963694Z             "user_view_type": "public"
+2026-10-03T23:28:43.6963952Z           }
+2026-10-03T23:28:43.6964242Z         },
+2026-10-03T23:28:43.6964459Z         "github_job": "build-and-push-image",
+2026-10-03T23:28:43.6964756Z         "github_ref": "refs/tags/v2.4.2",
+2026-10-03T23:28:43.6965034Z         "github_ref_name": "v2.4.2",
+2026-10-03T23:28:43.6965301Z         "github_ref_protected": "false",
+2026-10-03T23:28:43.6965584Z         "github_ref_type": "tag",
+2026-10-03T23:28:43.6965860Z         "github_repository": "mosajjal/sniproxy",
+2026-10-03T23:28:43.6966166Z         "github_repository_id": "314953804",
+2026-10-03T23:28:43.6966458Z         "github_repository_owner": "mosajjal",
+2026-10-03T23:28:43.6966762Z         "github_repository_owner_id": "10158936",
+2026-10-03T23:28:43.6967054Z         "github_run_attempt": "1",
+2026-10-03T23:28:43.6967317Z         "github_run_id": "37160861216",
+2026-10-03T23:28:43.6967577Z         "github_run_number": "45",
+2026-10-03T23:28:43.6967832Z         "github_runner_arch": "X64",
+2026-10-03T23:28:43.6968127Z         "github_runner_environment": "github-hosted",
+2026-10-03T23:28:43.6968451Z         "github_runner_image_os": "ubuntu24",
+2026-10-03T23:28:43.6968765Z         "github_runner_image_version": "20260927.320.1",
+2026-10-03T23:28:43.6969114Z         "github_runner_name": "GitHub Actions 1000003760",
+2026-10-03T23:28:43.6969430Z         "github_runner_os": "Linux",
+2026-10-03T23:28:43.6969934Z         "github_runner_tracking_id": "github_49f7738a-0d58-48ed-9609-422b8a2be2cd",
+2026-10-03T23:28:43.6970365Z         "github_server_url": "https://github.com",
+2026-10-03T23:28:43.6970677Z         "github_triggering_actor": "mosajjal",
+2026-10-03T23:28:43.6971076Z         "github_workflow": "Publish Container Image to Github Container Registry",
+2026-10-03T23:28:43.6971650Z         "github_workflow_ref": "mosajjal/sniproxy/.github/workflows/ghcr.yml@refs/tags/v2.4.2",
+2026-10-03T23:28:43.6972187Z         "github_workflow_sha": "1429d6dbe7bed4767597470223f93a407b0d5dab",
+2026-10-03T23:28:43.6972553Z         "platform": "linux/amd64"
+2026-10-03T23:28:43.6972792Z       }
+2026-10-03T23:28:43.6972970Z     }
+2026-10-03T23:28:43.6973144Z   },
+2026-10-03T23:28:43.6973721Z   "buildx.build.ref": "builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad/builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0/a709ouq0s651wg0mvn4pobkf2",
+2026-10-03T23:28:43.6974389Z   "buildx.build.warnings": [
+2026-10-03T23:28:43.6974623Z     {
+2026-10-03T23:28:43.6974973Z       "vertex": "sha256:ca003ba0b071cb9676557eef616f6f33e9a6e3bec8359ef8cb1699d9a4adbe7d",
+2026-10-03T23:28:43.6975405Z       "level": 1,
+2026-10-03T23:28:43.6976623Z       "short": "UmVkdW5kYW50VGFyZ2V0UGxhdGZvcm06IFNldHRpbmcgcGxhdGZvcm0gdG8gcHJlZGVmaW5lZCAke1RBUkdFVFBMQVRGT1JNOi1saW51eC9hbWQ2NH0gaW4gRlJPTSBpcyByZWR1bmRhbnQgYXMgdGhpcyBpcyB0aGUgZGVmYXVsdCBiZWhhdmlvciAobGluZSAxKQ==",
+2026-10-03T23:28:43.6977900Z       "detail": [
+2026-10-03T23:28:43.6978641Z         "U2V0dGluZyBwbGF0Zm9ybSB0byBwcmVkZWZpbmVkICRUQVJHRVRQTEFURk9STSBpbiBGUk9NIGlzIHJlZHVuZGFudCBhcyB0aGlzIGlzIHRoZSBkZWZhdWx0IGJlaGF2aW9y"
+2026-10-03T23:28:43.6979445Z       ],
+2026-10-03T23:28:43.6979960Z       "url": "https://docs.docker.com/go/dockerfile/rule/redundant-target-platform/",
+2026-10-03T23:28:43.6980380Z       "sourceInfo": {
+2026-10-03T23:28:43.6980606Z         "filename": "Dockerfile",
+2026-10-03T23:28:43.6993865Z         "data": "RlJPTSAtLXBsYXRmb3JtPSR7VEFSR0VUUExBVEZPUk06LWxpbnV4L2FtZDY0fSBnb2xhbmc6MS4yNi1hbHBpbmUKTEFCRUwgbWFpbnRhaW5lcj0iQWxpIE1vc2FqamFsIDxoaUBuMHAubWU+IgoKQVJHIFRBUkdFVFBMQVRGT1JNCkFSRyBCVUlMRFBMQVRGT1JNCkFSRyBUQVJHRVRPUwpBUkcgVEFSR0VUQVJDSAoKUlVOIGFwayBhZGQgLS1uby1jYWNoZSBnaXQKUlVOIG1rZGlyIC9hcHAKQUREIC4gL2FwcC8KV09SS0RJUiAvYXBwL2NtZC9zbmlwcm94eQpFTlYgQ0dPX0VOQUJMRUQ9MAojIG9wdC1pbiBHbyAxLjI2IGV4cGVyaW1lbnRzOiBydW50aW1lIGdvcm91dGluZSBsZWFrIHByb2ZpbGUsIGFuZCB0aGUgdjIKIyBlbmNvZGluZy9qc29uIGltcGxlbWVudGF0aW9uLiBCb3RoIGJlY29tZSB0aGUgZGVmYXVsdCBpbiBHbyAxLjI3LgpFTlYgR09FWFBFUklNRU5UPWdvcm91dGluZWxlYWtwcm9maWxlLGpzb252MgpSVU4gR09PUz0ke1RBUkdFVE9TfSBHT0FSQ0g9JHtUQVJHRVRBUkNIfSBHT0ZMQUdTPS1idWlsZHZjcz1mYWxzZSBnbyBidWlsZCAtbGRmbGFncyAiLXMgLXcgLVggbWFpbi52ZXJzaW9uPSQoZ2l0IGRlc2NyaWJlIC0tdGFncykgLVggbWFpbi5jb21taXQ9JChnaXQgcmV2LXBhcnNlIEhFQUQpIiAtbyBzbmlwcm94eSAuCkNNRCBbIi9hcHAvY21kL3NuaXByb3h5L3NuaXByb3h5Il0KCkZST00gc2NyYXRjaApDT1BZIC0tZnJvbT0wIC9hcHAvY21kL3NuaXByb3h5L3NuaXByb3h5IC9zbmlwcm94eQpFTlRSWVBPSU5UIFsiL3NuaXByb3h5Il0K",
+2026-10-03T23:28:43.7007077Z         "language": "Dockerfile"
+2026-10-03T23:28:43.7007315Z       },
+2026-10-03T23:28:43.7007491Z       "range": [
+2026-10-03T23:28:43.7007674Z         {
+2026-10-03T23:28:43.7007852Z           "start": {
+2026-10-03T23:28:43.7008052Z             "line": 1
+2026-10-03T23:28:43.7008244Z           },
+2026-10-03T23:28:43.7008418Z           "end": {
+2026-10-03T23:28:43.7008607Z             "line": 1
+2026-10-03T23:28:43.7008795Z           }
+2026-10-03T23:28:43.7008965Z         }
+2026-10-03T23:28:43.7009133Z       ]
+2026-10-03T23:28:43.7009304Z     }
+2026-10-03T23:28:43.7009471Z   ],
+2026-10-03T23:28:43.7009663Z   "containerimage.descriptor": {
+2026-10-03T23:28:43.7010090Z     "mediaType": "application/vnd.oci.image.index.v1+json",
+2026-10-03T23:28:43.7010568Z     "digest": "sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208",
+2026-10-03T23:28:43.7010979Z     "size": 2382
+2026-10-03T23:28:43.7011165Z   },
+2026-10-03T23:28:43.7011550Z   "containerimage.digest": "sha256:271a92fdf70c1577346de8ea3dbc54e9595aa6b99fb01677b31691ee4fe1f208",
+2026-10-03T23:28:43.7012178Z   "image.name": "ghcr.io/mosajjal/sniproxy:v2.4.2,ghcr.io/mosajjal/sniproxy:latest"
+2026-10-03T23:28:43.7012575Z }
+2026-10-03T23:28:43.7013133Z ::***::
+2026-10-03T23:28:43.7013490Z ##[endgroup]
+2026-10-03T23:28:43.7013814Z ##[group]Reference
+2026-10-03T23:28:43.7014335Z builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad/builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad0/a709ouq0s651wg0mvn4pobkf2
+2026-10-03T23:28:43.7015019Z ##[endgroup]
+2026-10-03T23:28:43.7015721Z ##[group]Generating GitHub annotations (1 build checks found)
+2026-10-03T23:28:43.7034834Z ##[warning]RedundantTargetPlatform: Setting platform to predefined ${TARGETPLATFORM:-linux/amd64} in FROM is redundant as this is the default behavior
+More info: https://docs.docker.com/go/dockerfile/rule/redundant-target-platform/
+2026-10-03T23:28:43.7043647Z ##[endgroup]
+2026-10-03T23:28:43.7044036Z ##[group]Check build summary support
+2026-10-03T23:28:43.7044472Z Build summary supported!
+2026-10-03T23:28:43.7044834Z ##[endgroup]
+2026-10-03T23:28:43.7149280Z Post job cleanup.
+2026-10-03T23:28:43.9618093Z ##[group]Generating build summary
+2026-10-03T23:28:44.0508627Z exporting build record to /home/runner/work/_temp/docker-actions-toolkit-YFZR9L/export
+2026-10-03T23:28:44.2330147Z [command]/usr/bin/docker buildx history export --builder builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad --output /home/runner/work/_temp/docker-actions-toolkit-YFZR9L/export/mosajjal~sniproxy~A709OU.dockerbuild a709ouq0s651wg0mvn4pobkf2 --finalize
+2026-10-03T23:28:44.5435080Z Build record written to /home/runner/work/_temp/docker-actions-toolkit-YFZR9L/export/mosajjal~sniproxy~A709OU.dockerbuild (97.01 KB)
+2026-10-03T23:28:44.5450951Z Uploading mosajjal~sniproxy~A709OU.dockerbuild as an artifact
+2026-10-03T23:28:44.5471041Z Artifact name is valid!
+2026-10-03T23:28:44.5480991Z Root directory input is valid!
+2026-10-03T23:28:44.7289071Z Uploading artifact: mosajjal~sniproxy~A709OU.dockerbuild
+2026-10-03T23:28:44.7356219Z Beginning upload of artifact content to blob storage
+2026-10-03T23:28:44.8195974Z Uploaded bytes 99335
+2026-10-03T23:28:44.8605405Z Finished uploading artifact content to blob storage!
+2026-10-03T23:28:44.8606845Z SHA256 digest of uploaded artifact is 77e36ca76f2b7e2714cd1320dcd378057ce8634caf54ceb2e7e5728bba22bf6b
+2026-10-03T23:28:44.8608945Z Finalizing artifact upload
+2026-10-03T23:28:45.1566080Z Artifact mosajjal~sniproxy~A709OU.dockerbuild successfully finalized. Artifact ID 11287144240
+2026-10-03T23:28:45.1569078Z Artifact download URL: https://github.com/mosajjal/sniproxy/actions/runs/37160861216/artifacts/11287144240
+2026-10-03T23:28:45.1605536Z Writing summary
+2026-10-03T23:28:45.1617246Z ##[endgroup]
+2026-10-03T23:28:45.1618174Z ##[group]Removing temp folder /home/runner/work/_temp/docker-actions-toolkit-MXuGB1
+2026-10-03T23:28:45.1622212Z ##[endgroup]
+2026-10-03T23:28:45.1622936Z ##[group]Post cache
+2026-10-03T23:28:45.1623593Z State not set
+2026-10-03T23:28:45.1624467Z ##[endgroup]
+2026-10-03T23:28:45.1818439Z Post job cleanup.
+2026-10-03T23:28:45.3708460Z ##[group]Removing builder
+2026-10-03T23:28:45.4850473Z [command]/usr/bin/docker buildx rm builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad
+2026-10-03T23:28:52.5954787Z builder-9f7bc067-6234-4cc0-b2ed-b59cdd2aadad removed
+2026-10-03T23:28:52.5996890Z ##[endgroup]
+2026-10-03T23:28:52.5997569Z ##[group]Cleaning up certificates
+2026-10-03T23:28:52.5998731Z ##[endgroup]
+2026-10-03T23:28:52.5999218Z ##[group]Post cache
+2026-10-03T23:28:52.6001064Z State not set
+2026-10-03T23:28:52.6001608Z ##[endgroup]
+2026-10-03T23:28:52.6182264Z Post job cleanup.
+2026-10-03T23:28:52.7579178Z ##[group]Post cache
+2026-10-03T23:28:52.7582830Z Caching docker.io--tonistiigi--binfmt-latest-linux-x64 to GitHub Actions cache
+2026-10-03T23:28:52.7811145Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/sniproxy/sniproxy --files-from manifest.txt --use-compress-program zstdmt
+2026-10-03T23:28:53.6545437Z Sent 32265056 of 32265056 (100.0%), 75.4 MBs/sec
+2026-10-03T23:28:53.7813761Z ##[endgroup]
+2026-10-03T23:28:53.7990329Z Post job cleanup.
+2026-10-03T23:28:54.0065514Z ##[group]Logout from ghcr.io
+2026-10-03T23:28:54.0127672Z [command]/usr/bin/docker logout ghcr.io
+2026-10-03T23:28:54.0282764Z Removing login credentials for ghcr.io
+2026-10-03T23:28:54.0321457Z ##[endgroup]
+2026-10-03T23:28:54.0322205Z ##[group]Post cache
+2026-10-03T23:28:54.0322705Z State not set
+2026-10-03T23:28:54.0323434Z ##[endgroup]
+2026-10-03T23:28:54.0577975Z Post job cleanup.
+2026-10-03T23:28:54.1505724Z [command]/usr/bin/git version
+2026-10-03T23:28:54.1555378Z git version 2.55.0
+2026-10-03T23:28:54.1607411Z Temporarily overriding HOME='/home/runner/work/_temp/bb74f4a1-c24a-430c-ab3c-dbae67a37fd2' before making global git config changes
+2026-10-03T23:28:54.1608588Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T23:28:54.1613598Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sniproxy/sniproxy
+2026-10-03T23:28:54.1647807Z Removing SSH command configuration
+2026-10-03T23:28:54.1655361Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T23:28:54.1692803Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-03T23:28:54.1954959Z Removing HTTP extra header
+2026-10-03T23:28:54.1956190Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T23:28:54.1998442Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-03T23:28:54.2264834Z Removing includeIf entries pointing to credentials config files
+2026-10-03T23:28:54.2273191Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T23:28:54.2308538Z includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path
+2026-10-03T23:28:54.2310351Z includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path
+2026-10-03T23:28:54.2311263Z includeif.gitdir:/github/workspace/.git.path
+2026-10-03T23:28:54.2312241Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-03T23:28:54.2351853Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path
+2026-10-03T23:28:54.2392590Z /home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:28:54.2417521Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-06dbaade\-de35\-442e\-9d9f\-646a33ad742c\.config
+2026-10-03T23:28:54.2454491Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path
+2026-10-03T23:28:54.2494161Z /home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:28:54.2506144Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sniproxy/sniproxy/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-06dbaade\-de35\-442e\-9d9f\-646a33ad742c\.config
+2026-10-03T23:28:54.2552430Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-03T23:28:54.2594186Z /github/runner_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:28:54.2604311Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-06dbaade\-de35\-442e\-9d9f\-646a33ad742c\.config
+2026-10-03T23:28:54.2656822Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-03T23:28:54.2693415Z /github/runner_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config
+2026-10-03T23:28:54.2722752Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-06dbaade\-de35\-442e\-9d9f\-646a33ad742c\.config
+2026-10-03T23:28:54.2757027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-03T23:28:54.3000517Z Removing credentials config '/home/runner/work/_temp/git-credentials-06dbaade-de35-442e-9d9f-646a33ad742c.config'
+2026-10-03T23:28:54.3157318Z Cleaning up orphan processes

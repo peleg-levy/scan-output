@@ -1,0 +1,91 @@
+﻿2026-10-14T15:53:04.9903931Z Current runner version: '2.337.0'
+2026-10-14T15:53:04.9929280Z ##[group]Runner Image Provisioner
+2026-10-14T15:53:04.9930486Z Hosted Compute Agent
+2026-10-14T15:53:04.9931136Z Version: 20261002.596
+2026-10-14T15:53:04.9931765Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T15:53:04.9932619Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T15:53:04.9933294Z Worker ID: {2fcdcdc8-2124-4028-b989-0afb9744a521}
+2026-10-14T15:53:04.9934032Z Region: westus2
+2026-10-14T15:53:04.9934585Z Cloud: Azure
+2026-10-14T15:53:04.9935117Z ##[endgroup]
+2026-10-14T15:53:04.9936740Z ##[group]Operating System
+2026-10-14T15:53:04.9937371Z Ubuntu
+2026-10-14T15:53:04.9937861Z 24.04.5
+2026-10-14T15:53:04.9938446Z LTS
+2026-10-14T15:53:04.9938948Z ##[endgroup]
+2026-10-14T15:53:04.9939523Z ##[group]Runner Image
+2026-10-14T15:53:04.9940433Z Image: ubuntu-24.04
+2026-10-14T15:53:04.9941027Z Version: 20261004.327.1
+2026-10-14T15:53:04.9942382Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T15:53:04.9944050Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T15:53:04.9945019Z ##[endgroup]
+2026-10-14T15:53:04.9946319Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:53:04.9948272Z Contents: read
+2026-10-14T15:53:04.9948860Z Issues: write
+2026-10-14T15:53:04.9949587Z Metadata: read
+2026-10-14T15:53:04.9950145Z PullRequests: write
+2026-10-14T15:53:04.9950987Z ##[endgroup]
+2026-10-14T15:53:04.9953090Z Secret source: Actions
+2026-10-14T15:53:04.9954134Z Cache mode: read
+2026-10-14T15:53:04.9954847Z Prepare workflow directory
+2026-10-14T15:53:05.0327092Z Prepare all required actions
+2026-10-14T15:53:05.0453261Z Complete job name: auto-label
+2026-10-14T15:53:05.1369911Z ##[group]Run # --paginate: a handful of PRs touch more than 100 files
+2026-10-14T15:53:05.1372488Z [36;1m# --paginate: a handful of PRs touch more than 100 files[0m
+2026-10-14T15:53:05.1374134Z [36;1mpr_files=$(gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files" \[0m
+2026-10-14T15:53:05.1375834Z [36;1m  --jq '.[] | .status + " " + .filename')[0m
+2026-10-14T15:53:05.1377081Z [36;1m[0m
+2026-10-14T15:53:05.1378091Z [36;1mif [ -z "$pr_files" ]; then[0m
+2026-10-14T15:53:05.1379294Z [36;1m  echo "PR has no files; nothing to do."[0m
+2026-10-14T15:53:05.1380699Z [36;1m  exit 0[0m
+2026-10-14T15:53:05.1381752Z [36;1mfi[0m
+2026-10-14T15:53:05.1382660Z [36;1m[0m
+2026-10-14T15:53:05.1383673Z [36;1mfiles=$(sed 's/^[a-z]* //' <<< "$pr_files")[0m
+2026-10-14T15:53:05.1385072Z [36;1madded=$(sed -n 's/^added //p' <<< "$pr_files")[0m
+2026-10-14T15:53:05.1386261Z [36;1m[0m
+2026-10-14T15:53:05.1387316Z [36;1mtotal=$(wc -l <<< "$files")[0m
+2026-10-14T15:53:05.1388882Z [36;1min_contents=$(grep -cE '^contents/' <<< "$files" || true)[0m
+2026-10-14T15:53:05.1390837Z [36;1min_handbook=$(grep -cE '^contents/handbook/' <<< "$files" || true)[0m
+2026-10-14T15:53:05.1393030Z [36;1min_website=$(grep -cE '^(src|gatsby|api|plugins|static)/|^gatsby-(config|node|browser|ssr)\.' <<< "$files" || true)[0m
+2026-10-14T15:53:05.1395076Z [36;1m[0m
+2026-10-14T15:53:05.1396028Z [36;1madd=()[0m
+2026-10-14T15:53:05.1396944Z [36;1mremove=()[0m
+2026-10-14T15:53:05.1397840Z [36;1m[0m
+2026-10-14T15:53:05.1398766Z [36;1m# Add-only rules[0m
+2026-10-14T15:53:05.1399996Z [36;1mif [ "$IS_DOCS" = "true" ]; then[0m
+2026-10-14T15:53:05.1401629Z [36;1m  add+=(docs)[0m
+2026-10-14T15:53:05.1402628Z [36;1mfi[0m
+2026-10-14T15:53:05.1403760Z [36;1mif grep -qE '^contents/blog/.+\.mdx?$' <<< "$added"; then[0m
+2026-10-14T15:53:05.1405069Z [36;1m  add+=(blog)[0m
+2026-10-14T15:53:05.1406078Z [36;1mfi[0m
+2026-10-14T15:53:05.1407017Z [36;1m[0m
+2026-10-14T15:53:05.1408217Z [36;1m# "Only touches" rules: label iff every file in the PR matches[0m
+2026-10-14T15:53:05.1409631Z [36;1mmanage() {[0m
+2026-10-14T15:53:05.1411214Z [36;1m  if [ "$2" -eq "$total" ]; then add+=("$1"); else remove+=("$1"); fi[0m
+2026-10-14T15:53:05.1412547Z [36;1m}[0m
+2026-10-14T15:53:05.1413918Z [36;1mmanage content "$in_contents"[0m
+2026-10-14T15:53:05.1415208Z [36;1mmanage handbook "$in_handbook"[0m
+2026-10-14T15:53:05.1416371Z [36;1mmanage website "$in_website"[0m
+2026-10-14T15:53:05.1417450Z [36;1m[0m
+2026-10-14T15:53:05.1418709Z [36;1mecho "Files: $total | add: ${add[*]:-none} | remove: ${remove[*]:-none}"[0m
+2026-10-14T15:53:05.1420472Z [36;1m[0m
+2026-10-14T15:53:05.1502890Z [36;1m# Labels passed to gh come only from the fixed sets above.[0m
+2026-10-14T15:53:05.1504507Z [36;1m# Removing a label the PR doesn't have is a no-op.[0m
+2026-10-14T15:53:05.1505765Z [36;1mcmd=(gh pr edit "$PR_NUMBER" --repo "$REPO")[0m
+2026-10-14T15:53:05.1506860Z [36;1mif [ "${#add[@]}" -gt 0 ]; then[0m
+2026-10-14T15:53:05.1508048Z [36;1m  cmd+=(--add-label "$(IFS=,; echo "${add[*]}")")[0m
+2026-10-14T15:53:05.1509104Z [36;1mfi[0m
+2026-10-14T15:53:05.1509867Z [36;1mif [ "${#remove[@]}" -gt 0 ]; then[0m
+2026-10-14T15:53:05.1511364Z [36;1m  cmd+=(--remove-label "$(IFS=,; echo "${remove[*]}")")[0m
+2026-10-14T15:53:05.1512507Z [36;1mfi[0m
+2026-10-14T15:53:05.1513202Z [36;1m"${cmd[@]}"[0m
+2026-10-14T15:53:05.2373666Z shell: /usr/bin/bash -e {0}
+2026-10-14T15:53:05.2375076Z env:
+2026-10-14T15:53:05.2382745Z   GH_TOKEN: ***
+2026-10-14T15:53:05.2383543Z   PR_NUMBER: 21204
+2026-10-14T15:53:05.2384369Z   REPO: PostHog/posthog.com
+2026-10-14T15:53:05.2385224Z   IS_DOCS: false
+2026-10-14T15:53:05.2385951Z ##[endgroup]
+2026-10-14T15:53:05.8828436Z Files: 1 | add: content | remove: handbook website
+2026-10-14T15:53:08.0113074Z https://github.com/PostHog/posthog.com/pull/21204
+2026-10-14T15:53:08.0281671Z Cleaning up orphan processes

@@ -1,0 +1,842 @@
+﻿2026-07-29T14:17:41.8042442Z Current runner version: '2.336.0'
+2026-07-29T14:17:41.8075416Z ##[group]Runner Image Provisioner
+2026-07-29T14:17:41.8076770Z Hosted Compute Agent
+2026-07-29T14:17:41.8077758Z Version: 20260707.563
+2026-07-29T14:17:41.8078830Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-29T14:17:41.8080161Z Build Date: 2026-07-07T19:33:50Z
+2026-07-29T14:17:41.8081351Z Worker ID: {7290bb7c-cf39-42d0-adb9-0c65d72ff351}
+2026-07-29T14:17:41.8082607Z Azure Region: eastus
+2026-07-29T14:17:41.8083583Z ##[endgroup]
+2026-07-29T14:17:41.8086380Z ##[group]Operating System
+2026-07-29T14:17:41.8087492Z Ubuntu
+2026-07-29T14:17:41.8088376Z 24.04.4
+2026-07-29T14:17:41.8089225Z LTS
+2026-07-29T14:17:41.8090062Z ##[endgroup]
+2026-07-29T14:17:41.8091054Z ##[group]Runner Image
+2026-07-29T14:17:41.8092097Z Image: ubuntu-24.04
+2026-07-29T14:17:41.8092971Z Version: 20260720.247.2
+2026-07-29T14:17:41.8095413Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-29T14:17:41.8098131Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-29T14:17:41.8099851Z ##[endgroup]
+2026-07-29T14:17:41.8101813Z ##[group]GITHUB_TOKEN Permissions
+2026-07-29T14:17:41.8104727Z Contents: read
+2026-07-29T14:17:41.8105951Z Metadata: read
+2026-07-29T14:17:41.8106930Z Packages: read
+2026-07-29T14:17:41.8107806Z ##[endgroup]
+2026-07-29T14:17:41.8110744Z Secret source: Actions
+2026-07-29T14:17:41.8113006Z Prepare workflow directory
+2026-07-29T14:17:41.8583506Z Prepare all required actions
+2026-07-29T14:17:41.8653255Z Getting action download info
+2026-07-29T14:17:42.1991772Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-07-29T14:17:42.4300203Z Download action repository 'oke-py/npm-audit-action@v4' (SHA:828ccb3b0710dfb351b6e9aaadec963c6953cacf)
+2026-07-29T14:17:42.8221866Z Complete job name: test-npm-audit-prod
+2026-07-29T14:17:42.9109702Z ##[group]Run actions/checkout@v6
+2026-07-29T14:17:42.9110713Z with:
+2026-07-29T14:17:42.9111277Z   repository: invoice-collector/invoice-collector
+2026-07-29T14:17:42.9115546Z   token: ***
+2026-07-29T14:17:42.9116041Z   ssh-strict: true
+2026-07-29T14:17:42.9116524Z   ssh-user: git
+2026-07-29T14:17:42.9117011Z   persist-credentials: true
+2026-07-29T14:17:42.9117554Z   clean: true
+2026-07-29T14:17:42.9118058Z   sparse-checkout-cone-mode: true
+2026-07-29T14:17:42.9118647Z   fetch-depth: 1
+2026-07-29T14:17:42.9119132Z   fetch-tags: false
+2026-07-29T14:17:42.9119636Z   show-progress: true
+2026-07-29T14:17:42.9120137Z   lfs: false
+2026-07-29T14:17:42.9120588Z   submodules: false
+2026-07-29T14:17:42.9121081Z   set-safe-directory: true
+2026-07-29T14:17:42.9121642Z   allow-unsafe-pr-checkout: false
+2026-07-29T14:17:42.9122511Z ##[endgroup]
+2026-07-29T14:17:43.0156406Z Syncing repository: invoice-collector/invoice-collector
+2026-07-29T14:17:43.0158630Z ##[group]Getting Git version info
+2026-07-29T14:17:43.0159696Z Working directory is '/home/runner/work/invoice-collector/invoice-collector'
+2026-07-29T14:17:43.0161258Z [command]/usr/bin/git version
+2026-07-29T14:17:43.0213021Z git version 2.54.0
+2026-07-29T14:17:43.0238392Z ##[endgroup]
+2026-07-29T14:17:43.0257139Z Temporarily overriding HOME='/home/runner/work/_temp/36eec1c3-41e6-4c1a-a997-272a3e1eab57' before making global git config changes
+2026-07-29T14:17:43.0260579Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-29T14:17:43.0263818Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-07-29T14:17:43.0315291Z Deleting the contents of '/home/runner/work/invoice-collector/invoice-collector'
+2026-07-29T14:17:43.0320260Z ##[group]Determining repository object format
+2026-07-29T14:17:43.0323241Z ##[endgroup]
+2026-07-29T14:17:43.0324757Z ##[group]Initializing the repository
+2026-07-29T14:17:43.0329468Z [command]/usr/bin/git init /home/runner/work/invoice-collector/invoice-collector
+2026-07-29T14:17:43.0423020Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-29T14:17:43.0424758Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-29T14:17:43.0426259Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-29T14:17:43.0427216Z hint: call:
+2026-07-29T14:17:43.0427795Z hint:
+2026-07-29T14:17:43.0428512Z hint: 	git config --global init.defaultBranch <name>
+2026-07-29T14:17:43.0429302Z hint:
+2026-07-29T14:17:43.0430074Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-29T14:17:43.0431229Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-29T14:17:43.0432172Z hint:
+2026-07-29T14:17:43.0432747Z hint: 	git branch -m <name>
+2026-07-29T14:17:43.0433402Z hint:
+2026-07-29T14:17:43.0434214Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-29T14:17:43.0442432Z Initialized empty Git repository in /home/runner/work/invoice-collector/invoice-collector/.git/
+2026-07-29T14:17:43.0454450Z [command]/usr/bin/git remote add origin https://github.com/invoice-collector/invoice-collector
+2026-07-29T14:17:43.0509823Z ##[endgroup]
+2026-07-29T14:17:43.0511858Z ##[group]Disabling automatic garbage collection
+2026-07-29T14:17:43.0513403Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-29T14:17:43.0547258Z ##[endgroup]
+2026-07-29T14:17:43.0549365Z ##[group]Setting up auth
+2026-07-29T14:17:43.0551700Z Removing SSH command configuration
+2026-07-29T14:17:43.0556071Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-29T14:17:43.0597753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-29T14:17:43.0979635Z Removing HTTP extra header
+2026-07-29T14:17:43.0988862Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-29T14:17:43.1037684Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-29T14:17:43.1265797Z Removing includeIf entries pointing to credentials config files
+2026-07-29T14:17:43.1272982Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-29T14:17:43.1308455Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-29T14:17:43.1535965Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-29T14:17:43.1578462Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git.path /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:17:43.1612689Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:17:43.1649875Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:17:43.1683522Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:17:43.1713919Z ##[endgroup]
+2026-07-29T14:17:43.1715275Z ##[group]Fetching the repository
+2026-07-29T14:17:43.1722424Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5b9de86746c6ad4561152c08e7dc73f6c3ba1da1:refs/remotes/pull/543/merge
+2026-07-29T14:17:43.7526392Z From https://github.com/invoice-collector/invoice-collector
+2026-07-29T14:17:43.7530201Z  * [new ref]           5b9de86746c6ad4561152c08e7dc73f6c3ba1da1 -> pull/543/merge
+2026-07-29T14:17:43.7563849Z ##[endgroup]
+2026-07-29T14:17:43.7565859Z ##[group]Determining the checkout info
+2026-07-29T14:17:43.7567559Z ##[endgroup]
+2026-07-29T14:17:43.7571443Z [command]/usr/bin/git sparse-checkout disable
+2026-07-29T14:17:43.7625654Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-29T14:17:43.7669321Z ##[group]Checking out the ref
+2026-07-29T14:17:43.7672353Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/543/merge
+2026-07-29T14:17:44.7210603Z Note: switching to 'refs/remotes/pull/543/merge'.
+2026-07-29T14:17:44.7212914Z 
+2026-07-29T14:17:44.7213920Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-07-29T14:17:44.7215161Z changes and commit them, and you can discard any commits you make in this
+2026-07-29T14:17:44.7216372Z state without impacting any branches by switching back to a branch.
+2026-07-29T14:17:44.7217037Z 
+2026-07-29T14:17:44.7217478Z If you want to create a new branch to retain commits you create, you may
+2026-07-29T14:17:44.7218514Z do so (now or later) by using -c with the switch command. Example:
+2026-07-29T14:17:44.7219421Z 
+2026-07-29T14:17:44.7219753Z   git switch -c <new-branch-name>
+2026-07-29T14:17:44.7220169Z 
+2026-07-29T14:17:44.7220497Z Or undo this operation with:
+2026-07-29T14:17:44.7220860Z 
+2026-07-29T14:17:44.7221238Z   git switch -
+2026-07-29T14:17:44.7221566Z 
+2026-07-29T14:17:44.7222226Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-07-29T14:17:44.7222864Z 
+2026-07-29T14:17:44.7223615Z HEAD is now at 5b9de867 Merge b97cd5326398da0059045f50f3ae3d20a8571ac6 into e1a4ce9165d8c5e25b8829a7230a4de9b745f2ae
+2026-07-29T14:17:44.8907764Z ##[endgroup]
+2026-07-29T14:17:44.8956016Z [command]/usr/bin/git log -1 --format=%H
+2026-07-29T14:17:44.8985100Z 5b9de86746c6ad4561152c08e7dc73f6c3ba1da1
+2026-07-29T14:17:44.9229581Z ##[group]Run npm ci
+2026-07-29T14:17:44.9230055Z [36;1mnpm ci[0m
+2026-07-29T14:17:44.9281908Z shell: /usr/bin/bash -e {0}
+2026-07-29T14:17:44.9282342Z ##[endgroup]
+2026-07-29T14:17:47.3648644Z npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-07-29T14:17:47.8084172Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-07-29T14:17:49.0996446Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:17:49.1243933Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:17:49.3441549Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-07-29T14:17:50.5177341Z npm warn deprecated glob@11.1.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:17:50.5287109Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:17:50.5411126Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:17:50.5416911Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-29T14:18:02.1599975Z 
+2026-07-29T14:18:02.1600796Z added 683 packages, and audited 684 packages in 17s
+2026-07-29T14:18:02.1601200Z 
+2026-07-29T14:18:02.1601365Z 125 packages are looking for funding
+2026-07-29T14:18:02.1601792Z   run `npm fund` for details
+2026-07-29T14:18:02.1954339Z 
+2026-07-29T14:18:02.1955379Z 22 high severity vulnerabilities
+2026-07-29T14:18:02.1955759Z 
+2026-07-29T14:18:02.1956033Z To address issues that do not require attention, run:
+2026-07-29T14:18:02.1956611Z   npm audit fix
+2026-07-29T14:18:02.1956854Z 
+2026-07-29T14:18:02.1957204Z To address all issues possible (including breaking changes), run:
+2026-07-29T14:18:02.1957880Z   npm audit fix --force
+2026-07-29T14:18:02.1958151Z 
+2026-07-29T14:18:02.1958388Z Some issues need review, and may require choosing
+2026-07-29T14:18:02.1958948Z a different dependency.
+2026-07-29T14:18:02.1959213Z 
+2026-07-29T14:18:02.1959396Z Run `npm audit` for details.
+2026-07-29T14:18:02.2789255Z ##[group]Run oke-py/npm-audit-action@v4
+2026-07-29T14:18:02.2789577Z with:
+2026-07-29T14:18:02.2789776Z   audit_level: low
+2026-07-29T14:18:02.2792133Z   github_token: ***
+2026-07-29T14:18:02.2792358Z   create_issues: false
+2026-07-29T14:18:02.2792590Z   create_pr_comments: false
+2026-07-29T14:18:02.2792839Z   production_flag: true
+2026-07-29T14:18:02.2793075Z   fail_on_vulnerabilities: true
+2026-07-29T14:18:02.2793329Z   dedupe_issues: false
+2026-07-29T14:18:02.2901837Z   github_context: {
+  "token": "***",
+  "job": "test-npm-audit-prod",
+  "ref": "refs/pull/543/merge",
+  "sha": "5b9de86746c6ad4561152c08e7dc73f6c3ba1da1",
+  "repository": "invoice-collector/invoice-collector",
+  "repository_owner": "invoice-collector",
+  "repository_owner_id": "154613923",
+  "repositoryUrl": "git://github.com/invoice-collector/invoice-collector.git",
+  "run_id": "30460148759",
+  "run_number": "3",
+  "retention_days": "90",
+  "run_attempt": "1",
+  "artifact_cache_size_limit": "10",
+  "repository_visibility": "public",
+  "actor_id": "27858218",
+  "actor": "LucBerge",
+  "workflow": "Check npm audit prod",
+  "head_ref": "upgrade-packages",
+  "base_ref": "master",
+  "event_name": "pull_request",
+  "server_url": "https://github.com",
+  "api_url": "https://api.github.com",
+  "graphql_url": "https://api.github.com/graphql",
+  "ref_name": "543/merge",
+  "ref_protected": false,
+  "ref_type": "branch",
+  "secret_source": "Actions",
+  "event": {
+    "action": "opened",
+    "number": 543,
+    "organization": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+      "description": null,
+      "events_url": "https://api.github.com/orgs/invoice-collector/events",
+      "hooks_url": "https://api.github.com/orgs/invoice-collector/hooks",
+      "id": 154613923,
+      "issues_url": "https://api.github.com/orgs/invoice-collector/issues",
+      "login": "invoice-collector",
+      "members_url": "https://api.github.com/orgs/invoice-collector/members{/member}",
+      "node_id": "O_kgDOCTc4ow",
+      "public_members_url": "https://api.github.com/orgs/invoice-collector/public_members{/member}",
+      "repos_url": "https://api.github.com/orgs/invoice-collector/repos",
+      "url": "https://api.github.com/orgs/invoice-collector"
+    },
+    "pull_request": {
+      "_links": {
+        "comments": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/543/comments"
+        },
+        "commits": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543/commits"
+        },
+        "html": {
+          "href": "https://github.com/invoice-collector/invoice-collector/pull/543"
+        },
+        "issue": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/543"
+        },
+        "review_comment": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/comments{/number}"
+        },
+        "review_comments": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543/comments"
+        },
+        "self": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543"
+        },
+        "statuses": {
+          "href": "https://api.github.com/repos/invoice-collector/invoice-collector/statuses/b97cd5326398da0059045f50f3ae3d20a8571ac6"
+        }
+      },
+      "active_lock_reason": null,
+      "additions": 429,
+      "assignee": null,
+      "assignees": [],
+      "author_association": "CONTRIBUTOR",
+      "auto_merge": null,
+      "base": {
+        "label": "invoice-collector:master",
+        "ref": "master",
+        "repo": {
+          "allow_auto_merge": false,
+          "allow_forking": true,
+          "allow_merge_commit": true,
+          "allow_rebase_merge": false,
+          "allow_squash_merge": false,
+          "allow_update_branch": false,
+          "archive_url": "https://api.github.com/repos/invoice-collector/invoice-collector/{archive_format}{/ref}",
+          "archived": false,
+          "assignees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/assignees{/user}",
+          "blobs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/blobs{/sha}",
+          "branches_url": "https://api.github.com/repos/invoice-collector/invoice-collector/branches{/branch}",
+          "clone_url": "https://github.com/invoice-collector/invoice-collector.git",
+          "collaborators_url": "https://api.github.com/repos/invoice-collector/invoice-collector/collaborators{/collaborator}",
+          "comments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/comments{/number}",
+          "commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/commits{/sha}",
+          "compare_url": "https://api.github.com/repos/invoice-collector/invoice-collector/compare/{base}...{head}",
+          "contents_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contents/{+path}",
+          "contributors_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contributors",
+          "created_at": "2023-12-22T15:26:12Z",
+          "default_branch": "master",
+          "delete_branch_on_merge": false,
+          "deployments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/deployments",
+          "description": "Free automatic invoice collector 🧾 Collect your invoices in seconds ⏰ Docker container 🐳",
+          "disabled": false,
+          "downloads_url": "https://api.github.com/repos/invoice-collector/invoice-collector/downloads",
+          "events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/events",
+          "fork": false,
+          "forks": 14,
+          "forks_count": 14,
+          "forks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/forks",
+          "full_name": "invoice-collector/invoice-collector",
+          "git_commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/commits{/sha}",
+          "git_refs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/refs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/tags{/sha}",
+          "git_url": "git://github.com/invoice-collector/invoice-collector.git",
+          "has_discussions": false,
+          "has_downloads": false,
+          "has_issues": true,
+          "has_pages": false,
+          "has_projects": true,
+          "has_pull_requests": true,
+          "has_wiki": true,
+          "homepage": "https://invoice-collector.com",
+          "hooks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/hooks",
+          "html_url": "https://github.com/invoice-collector/invoice-collector",
+          "id": 734774968,
+          "is_template": false,
+          "issue_comment_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/comments{/number}",
+          "issue_events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/events{/number}",
+          "issues_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues{/number}",
+          "keys_url": "https://api.github.com/repos/invoice-collector/invoice-collector/keys{/key_id}",
+          "labels_url": "https://api.github.com/repos/invoice-collector/invoice-collector/labels{/name}",
+          "language": "TypeScript",
+          "languages_url": "https://api.github.com/repos/invoice-collector/invoice-collector/languages",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "node_id": "MDc6TGljZW5zZTA=",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          },
+          "merge_commit_message": "PR_BODY",
+          "merge_commit_title": "PR_TITLE",
+          "merges_url": "https://api.github.com/repos/invoice-collector/invoice-collector/merges",
+          "milestones_url": "https://api.github.com/repos/invoice-collector/invoice-collector/milestones{/number}",
+          "mirror_url": null,
+          "name": "invoice-collector",
+          "node_id": "R_kgDOK8vGuA",
+          "notifications_url": "https://api.github.com/repos/invoice-collector/invoice-collector/notifications{?since,all,participating}",
+          "open_issues": 41,
+          "open_issues_count": 41,
+          "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+            "events_url": "https://api.github.com/users/invoice-collector/events{/privacy}",
+            "followers_url": "https://api.github.com/users/invoice-collector/followers",
+            "following_url": "https://api.github.com/users/invoice-collector/following{/other_user}",
+            "gists_url": "https://api.github.com/users/invoice-collector/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/invoice-collector",
+            "id": 154613923,
+            "login": "invoice-collector",
+            "node_id": "O_kgDOCTc4ow",
+            "organizations_url": "https://api.github.com/users/invoice-collector/orgs",
+            "received_events_url": "https://api.github.com/users/invoice-collector/received_events",
+            "repos_url": "https://api.github.com/users/invoice-collector/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/invoice-collector/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/invoice-collector/subscriptions",
+            "type": "Organization",
+            "url": "https://api.github.com/users/invoice-collector",
+            "user_view_type": "public"
+          },
+          "private": false,
+          "pull_request_creation_policy": "all",
+          "pulls_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls{/number}",
+          "pushed_at": "2026-07-29T14:16:50Z",
+          "releases_url": "https://api.github.com/repos/invoice-collector/invoice-collector/releases{/id}",
+          "size": 16746,
+          "squash_merge_commit_message": "COMMIT_MESSAGES",
+          "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+          "ssh_url": "git@github.com:invoice-collector/invoice-collector.git",
+          "stargazers_count": 118,
+          "stargazers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/stargazers",
+          "statuses_url": "https://api.github.com/repos/invoice-collector/invoice-collector/statuses/{sha}",
+          "subscribers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscribers",
+          "subscription_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscription",
+          "svn_url": "https://github.com/invoice-collector/invoice-collector",
+          "tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/tags",
+          "teams_url": "https://api.github.com/repos/invoice-collector/invoice-collector/teams",
+          "topics": [
+            "api",
+            "bill",
+            "cloud",
+            "collect",
+            "collector",
+            "connector",
+            "container",
+            "docker",
+            "free",
+            "invoice",
+            "merchant",
+            "open-source",
+            "payment",
+            "receipt",
+            "scrapper",
+            "scrapping",
+            "self-hosted"
+          ],
+          "trees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/trees{/sha}",
+          "updated_at": "2026-07-27T14:26:44Z",
+          "url": "https://api.github.com/repos/invoice-collector/invoice-collector",
+          "use_squash_pr_title_as_default": false,
+          "visibility": "public",
+          "watchers": 118,
+          "watchers_count": 118,
+          "web_commit_signoff_required": false
+        },
+        "sha": "e1a4ce9165d8c5e25b8829a7230a4de9b745f2ae",
+        "user": {
+          "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+          "events_url": "https://api.github.com/users/invoice-collector/events{/privacy}",
+          "followers_url": "https://api.github.com/users/invoice-collector/followers",
+          "following_url": "https://api.github.com/users/invoice-collector/following{/other_user}",
+          "gists_url": "https://api.github.com/users/invoice-collector/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/invoice-collector",
+          "id": 154613923,
+          "login": "invoice-collector",
+          "node_id": "O_kgDOCTc4ow",
+          "organizations_url": "https://api.github.com/users/invoice-collector/orgs",
+          "received_events_url": "https://api.github.com/users/invoice-collector/received_events",
+          "repos_url": "https://api.github.com/users/invoice-collector/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/invoice-collector/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/invoice-collector/subscriptions",
+          "type": "Organization",
+          "url": "https://api.github.com/users/invoice-collector",
+          "user_view_type": "public"
+        }
+      },
+      "body": "- Upgrade package `mongodb`\r\n- Upgrade package `cron`\r\n- Upgrade package `express`\r\n- Include digits in search algorithm",
+      "changed_files": 3,
+      "closed_at": null,
+      "comments": 0,
+      "comments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/543/comments",
+      "commits": 2,
+      "commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543/commits",
+      "created_at": "2026-07-29T14:17:29Z",
+      "deletions": 298,
+      "diff_url": "https://github.com/invoice-collector/invoice-collector/pull/543.diff",
+      "draft": false,
+      "head": {
+        "label": "invoice-collector:upgrade-packages",
+        "ref": "upgrade-packages",
+        "repo": {
+          "allow_auto_merge": false,
+          "allow_forking": true,
+          "allow_merge_commit": true,
+          "allow_rebase_merge": false,
+          "allow_squash_merge": false,
+          "allow_update_branch": false,
+          "archive_url": "https://api.github.com/repos/invoice-collector/invoice-collector/{archive_format}{/ref}",
+          "archived": false,
+          "assignees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/assignees{/user}",
+          "blobs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/blobs{/sha}",
+          "branches_url": "https://api.github.com/repos/invoice-collector/invoice-collector/branches{/branch}",
+          "clone_url": "https://github.com/invoice-collector/invoice-collector.git",
+          "collaborators_url": "https://api.github.com/repos/invoice-collector/invoice-collector/collaborators{/collaborator}",
+          "comments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/comments{/number}",
+          "commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/commits{/sha}",
+          "compare_url": "https://api.github.com/repos/invoice-collector/invoice-collector/compare/{base}...{head}",
+          "contents_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contents/{+path}",
+          "contributors_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contributors",
+          "created_at": "2023-12-22T15:26:12Z",
+          "default_branch": "master",
+          "delete_branch_on_merge": false,
+          "deployments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/deployments",
+          "description": "Free automatic invoice collector 🧾 Collect your invoices in seconds ⏰ Docker container 🐳",
+          "disabled": false,
+          "downloads_url": "https://api.github.com/repos/invoice-collector/invoice-collector/downloads",
+          "events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/events",
+          "fork": false,
+          "forks": 14,
+          "forks_count": 14,
+          "forks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/forks",
+          "full_name": "invoice-collector/invoice-collector",
+          "git_commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/commits{/sha}",
+          "git_refs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/refs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/tags{/sha}",
+          "git_url": "git://github.com/invoice-collector/invoice-collector.git",
+          "has_discussions": false,
+          "has_downloads": false,
+          "has_issues": true,
+          "has_pages": false,
+          "has_projects": true,
+          "has_pull_requests": true,
+          "has_wiki": true,
+          "homepage": "https://invoice-collector.com",
+          "hooks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/hooks",
+          "html_url": "https://github.com/invoice-collector/invoice-collector",
+          "id": 734774968,
+          "is_template": false,
+          "issue_comment_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/comments{/number}",
+          "issue_events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/events{/number}",
+          "issues_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues{/number}",
+          "keys_url": "https://api.github.com/repos/invoice-collector/invoice-collector/keys{/key_id}",
+          "labels_url": "https://api.github.com/repos/invoice-collector/invoice-collector/labels{/name}",
+          "language": "TypeScript",
+          "languages_url": "https://api.github.com/repos/invoice-collector/invoice-collector/languages",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "node_id": "MDc6TGljZW5zZTA=",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          },
+          "merge_commit_message": "PR_BODY",
+          "merge_commit_title": "PR_TITLE",
+          "merges_url": "https://api.github.com/repos/invoice-collector/invoice-collector/merges",
+          "milestones_url": "https://api.github.com/repos/invoice-collector/invoice-collector/milestones{/number}",
+          "mirror_url": null,
+          "name": "invoice-collector",
+          "node_id": "R_kgDOK8vGuA",
+          "notifications_url": "https://api.github.com/repos/invoice-collector/invoice-collector/notifications{?since,all,participating}",
+          "open_issues": 41,
+          "open_issues_count": 41,
+          "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+            "events_url": "https://api.github.com/users/invoice-collector/events{/privacy}",
+            "followers_url": "https://api.github.com/users/invoice-collector/followers",
+            "following_url": "https://api.github.com/users/invoice-collector/following{/other_user}",
+            "gists_url": "https://api.github.com/users/invoice-collector/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/invoice-collector",
+            "id": 154613923,
+            "login": "invoice-collector",
+            "node_id": "O_kgDOCTc4ow",
+            "organizations_url": "https://api.github.com/users/invoice-collector/orgs",
+            "received_events_url": "https://api.github.com/users/invoice-collector/received_events",
+            "repos_url": "https://api.github.com/users/invoice-collector/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/invoice-collector/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/invoice-collector/subscriptions",
+            "type": "Organization",
+            "url": "https://api.github.com/users/invoice-collector",
+            "user_view_type": "public"
+          },
+          "private": false,
+          "pull_request_creation_policy": "all",
+          "pulls_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls{/number}",
+          "pushed_at": "2026-07-29T14:16:50Z",
+          "releases_url": "https://api.github.com/repos/invoice-collector/invoice-collector/releases{/id}",
+          "size": 16746,
+          "squash_merge_commit_message": "COMMIT_MESSAGES",
+          "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+          "ssh_url": "git@github.com:invoice-collector/invoice-collector.git",
+          "stargazers_count": 118,
+          "stargazers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/stargazers",
+          "statuses_url": "https://api.github.com/repos/invoice-collector/invoice-collector/statuses/{sha}",
+          "subscribers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscribers",
+          "subscription_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscription",
+          "svn_url": "https://github.com/invoice-collector/invoice-collector",
+          "tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/tags",
+          "teams_url": "https://api.github.com/repos/invoice-collector/invoice-collector/teams",
+          "topics": [
+            "api",
+            "bill",
+            "cloud",
+            "collect",
+            "collector",
+            "connector",
+            "container",
+            "docker",
+            "free",
+            "invoice",
+            "merchant",
+            "open-source",
+            "payment",
+            "receipt",
+            "scrapper",
+            "scrapping",
+            "self-hosted"
+          ],
+          "trees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/trees{/sha}",
+          "updated_at": "2026-07-27T14:26:44Z",
+          "url": "https://api.github.com/repos/invoice-collector/invoice-collector",
+          "use_squash_pr_title_as_default": false,
+          "visibility": "public",
+          "watchers": 118,
+          "watchers_count": 118,
+          "web_commit_signoff_required": false
+        },
+        "sha": "b97cd5326398da0059045f50f3ae3d20a8571ac6",
+        "user": {
+          "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+          "events_url": "https://api.github.com/users/invoice-collector/events{/privacy}",
+          "followers_url": "https://api.github.com/users/invoice-collector/followers",
+          "following_url": "https://api.github.com/users/invoice-collector/following{/other_user}",
+          "gists_url": "https://api.github.com/users/invoice-collector/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/invoice-collector",
+          "id": 154613923,
+          "login": "invoice-collector",
+          "node_id": "O_kgDOCTc4ow",
+          "organizations_url": "https://api.github.com/users/invoice-collector/orgs",
+          "received_events_url": "https://api.github.com/users/invoice-collector/received_events",
+          "repos_url": "https://api.github.com/users/invoice-collector/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/invoice-collector/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/invoice-collector/subscriptions",
+          "type": "Organization",
+          "url": "https://api.github.com/users/invoice-collector",
+          "user_view_type": "public"
+        }
+      },
+      "html_url": "https://github.com/invoice-collector/invoice-collector/pull/543",
+      "id": 4161322250,
+      "issue_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/543",
+      "labels": [],
+      "locked": false,
+      "maintainer_can_modify": false,
+      "merge_commit_sha": null,
+      "mergeable": null,
+      "mergeable_state": "unknown",
+      "merged": false,
+      "merged_at": null,
+      "merged_by": null,
+      "milestone": null,
+      "node_id": "PR_kwDOK8vGuM74CL0K",
+      "number": 543,
+      "patch_url": "https://github.com/invoice-collector/invoice-collector/pull/543.patch",
+      "rebaseable": null,
+      "requested_reviewers": [],
+      "requested_teams": [],
+      "review_comment_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/comments{/number}",
+      "review_comments": 0,
+      "review_comments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543/comments",
+      "state": "open",
+      "statuses_url": "https://api.github.com/repos/invoice-collector/invoice-collector/statuses/b97cd5326398da0059045f50f3ae3d20a8571ac6",
+      "title": "Upgrade packages",
+      "updated_at": "2026-07-29T14:17:29Z",
+      "url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls/543",
+      "user": {
+        "avatar_url": "https://avatars.githubusercontent.com/u/27858218?v=4",
+        "events_url": "https://api.github.com/users/LucBerge/events{/privacy}",
+        "followers_url": "https://api.github.com/users/LucBerge/followers",
+        "following_url": "https://api.github.com/users/LucBerge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LucBerge/gists{/gist_id}",
+        "gravatar_id": "",
+        "html_url": "https://github.com/LucBerge",
+        "id": 27858218,
+        "login": "LucBerge",
+        "node_id": "MDQ6VXNlcjI3ODU4MjE4",
+        "organizations_url": "https://api.github.com/users/LucBerge/orgs",
+        "received_events_url": "https://api.github.com/users/LucBerge/received_events",
+        "repos_url": "https://api.github.com/users/LucBerge/repos",
+        "site_admin": false,
+        "starred_url": "https://api.github.com/users/LucBerge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LucBerge/subscriptions",
+        "type": "User",
+        "url": "https://api.github.com/users/LucBerge",
+        "user_view_type": "public"
+      }
+    },
+    "repository": {
+      "allow_forking": true,
+      "archive_url": "https://api.github.com/repos/invoice-collector/invoice-collector/{archive_format}{/ref}",
+      "archived": false,
+      "assignees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/assignees{/user}",
+      "blobs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/blobs{/sha}",
+      "branches_url": "https://api.github.com/repos/invoice-collector/invoice-collector/branches{/branch}",
+      "clone_url": "https://github.com/invoice-collector/invoice-collector.git",
+      "collaborators_url": "https://api.github.com/repos/invoice-collector/invoice-collector/collaborators{/collaborator}",
+      "comments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/comments{/number}",
+      "commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/commits{/sha}",
+      "compare_url": "https://api.github.com/repos/invoice-collector/invoice-collector/compare/{base}...{head}",
+      "contents_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contents/{+path}",
+      "contributors_url": "https://api.github.com/repos/invoice-collector/invoice-collector/contributors",
+      "created_at": "2023-12-22T15:26:12Z",
+      "custom_properties": {},
+      "default_branch": "master",
+      "deployments_url": "https://api.github.com/repos/invoice-collector/invoice-collector/deployments",
+      "description": "Free automatic invoice collector 🧾 Collect your invoices in seconds ⏰ Docker container 🐳",
+      "disabled": false,
+      "downloads_url": "https://api.github.com/repos/invoice-collector/invoice-collector/downloads",
+      "events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/events",
+      "fork": false,
+      "forks": 14,
+      "forks_count": 14,
+      "forks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/forks",
+      "full_name": "invoice-collector/invoice-collector",
+      "git_commits_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/commits{/sha}",
+      "git_refs_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/refs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/tags{/sha}",
+      "git_url": "git://github.com/invoice-collector/invoice-collector.git",
+      "has_discussions": false,
+      "has_downloads": false,
+      "has_issues": true,
+      "has_pages": false,
+      "has_projects": true,
+      "has_pull_requests": true,
+      "has_wiki": true,
+      "homepage": "https://invoice-collector.com",
+      "hooks_url": "https://api.github.com/repos/invoice-collector/invoice-collector/hooks",
+      "html_url": "https://github.com/invoice-collector/invoice-collector",
+      "id": 734774968,
+      "is_template": false,
+      "issue_comment_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/comments{/number}",
+      "issue_events_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues/events{/number}",
+      "issues_url": "https://api.github.com/repos/invoice-collector/invoice-collector/issues{/number}",
+      "keys_url": "https://api.github.com/repos/invoice-collector/invoice-collector/keys{/key_id}",
+      "labels_url": "https://api.github.com/repos/invoice-collector/invoice-collector/labels{/name}",
+      "language": "TypeScript",
+      "languages_url": "https://api.github.com/repos/invoice-collector/invoice-collector/languages",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "node_id": "MDc6TGljZW5zZTA=",
+        "spdx_id": "NOASSERTION",
+        "url": null
+      },
+      "merges_url": "https://api.github.com/repos/invoice-collector/invoice-collector/merges",
+      "milestones_url": "https://api.github.com/repos/invoice-collector/invoice-collector/milestones{/number}",
+      "mirror_url": null,
+      "name": "invoice-collector",
+      "node_id": "R_kgDOK8vGuA",
+      "notifications_url": "https://api.github.com/repos/invoice-collector/invoice-collector/notifications{?since,all,participating}",
+      "open_issues": 41,
+      "open_issues_count": 41,
+      "owner": {
+        "avatar_url": "https://avatars.githubusercontent.com/u/154613923?v=4",
+        "events_url": "https://api.github.com/users/invoice-collector/events{/privacy}",
+        "followers_url": "https://api.github.com/users/invoice-collector/followers",
+        "following_url": "https://api.github.com/users/invoice-collector/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invoice-collector/gists{/gist_id}",
+        "gravatar_id": "",
+        "html_url": "https://github.com/invoice-collector",
+        "id": 154613923,
+        "login": "invoice-collector",
+        "node_id": "O_kgDOCTc4ow",
+        "organizations_url": "https://api.github.com/users/invoice-collector/orgs",
+        "received_events_url": "https://api.github.com/users/invoice-collector/received_events",
+        "repos_url": "https://api.github.com/users/invoice-collector/repos",
+        "site_admin": false,
+        "starred_url": "https://api.github.com/users/invoice-collector/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invoice-collector/subscriptions",
+        "type": "Organization",
+        "url": "https://api.github.com/users/invoice-collector",
+        "user_view_type": "public"
+      },
+      "private": false,
+      "pull_request_creation_policy": "all",
+      "pulls_url": "https://api.github.com/repos/invoice-collector/invoice-collector/pulls{/number}",
+      "pushed_at": "2026-07-29T14:16:50Z",
+      "releases_url": "https://api.github.com/repos/invoice-collector/invoice-collector/releases{/id}",
+      "size": 16746,
+      "ssh_url": "git@github.com:invoice-collector/invoice-collector.git",
+      "stargazers_count": 118,
+      "stargazers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/stargazers",
+      "statuses_url": "https://api.github.com/repos/invoice-collector/invoice-collector/statuses/{sha}",
+      "subscribers_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscribers",
+      "subscription_url": "https://api.github.com/repos/invoice-collector/invoice-collector/subscription",
+      "svn_url": "https://github.com/invoice-collector/invoice-collector",
+      "tags_url": "https://api.github.com/repos/invoice-collector/invoice-collector/tags",
+      "teams_url": "https://api.github.com/repos/invoice-collector/invoice-collector/teams",
+      "topics": [
+        "api",
+        "bill",
+        "cloud",
+        "collect",
+        "collector",
+        "connector",
+        "container",
+        "docker",
+        "free",
+        "invoice",
+        "merchant",
+        "open-source",
+        "payment",
+        "receipt",
+        "scrapper",
+        "scrapping",
+        "self-hosted"
+      ],
+      "trees_url": "https://api.github.com/repos/invoice-collector/invoice-collector/git/trees{/sha}",
+      "updated_at": "2026-07-27T14:26:44Z",
+      "url": "https://api.github.com/repos/invoice-collector/invoice-collector",
+      "visibility": "public",
+      "watchers": 118,
+      "watchers_count": 118,
+      "web_commit_signoff_required": false
+    },
+    "sender": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/27858218?v=4",
+      "events_url": "https://api.github.com/users/LucBerge/events{/privacy}",
+      "followers_url": "https://api.github.com/users/LucBerge/followers",
+      "following_url": "https://api.github.com/users/LucBerge/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LucBerge/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/LucBerge",
+      "id": 27858218,
+      "login": "LucBerge",
+      "node_id": "MDQ6VXNlcjI3ODU4MjE4",
+      "organizations_url": "https://api.github.com/users/LucBerge/orgs",
+      "received_events_url": "https://api.github.com/users/LucBerge/received_events",
+      "repos_url": "https://api.github.com/users/LucBerge/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/LucBerge/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LucBerge/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/LucBerge",
+      "user_view_type": "public"
+    }
+  },
+  "workflow_ref": "invoice-collector/invoice-collector/.github/workflows/test.audit.prod.yml@refs/pull/543/merge",
+  "workflow_sha": "5b9de86746c6ad4561152c08e7dc73f6c3ba1da1",
+  "repository_id": "734774968",
+  "triggering_actor": "LucBerge",
+  "workspace": "/home/runner/work/invoice-collector/invoice-collector",
+  "action": "__oke-py_npm-audit-action",
+  "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
+  "action_repository": "oke-py/npm-audit-action",
+  "action_ref": "v4",
+  "path": "/home/runner/work/_temp/_runner_file_commands/add_path_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "env": "/home/runner/work/_temp/_runner_file_commands/set_env_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "state": "/home/runner/work/_temp/_runner_file_commands/save_state_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "output": "/home/runner/work/_temp/_runner_file_commands/set_output_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "artifacts": "/home/runner/work/_temp/_runner_file_commands/artifacts_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838",
+  "artifacts_list": "/home/runner/work/_temp/_runner_file_commands/artifacts_list_6bb666e0-6f82-4f28-b0b7-9d9a1e8ee838"
+}
+2026-07-29T14:18:02.3009415Z   issue_title: npm audit found vulnerabilities
+2026-07-29T14:18:02.3009726Z   json_flag: false
+2026-07-29T14:18:02.3009943Z ##[endgroup]
+2026-07-29T14:18:02.4024656Z Current working directory: /home/runner/work/invoice-collector/invoice-collector
+2026-07-29T14:18:02.9185800Z found 0 vulnerabilities
+2026-07-29T14:18:02.9186818Z 
+2026-07-29T14:18:02.9427990Z Post job cleanup.
+2026-07-29T14:18:03.0318630Z [command]/usr/bin/git version
+2026-07-29T14:18:03.0365358Z git version 2.54.0
+2026-07-29T14:18:03.0413421Z Temporarily overriding HOME='/home/runner/work/_temp/1a4a0cf8-97c0-459c-b983-385763343f6a' before making global git config changes
+2026-07-29T14:18:03.0415445Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-29T14:18:03.0420773Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-07-29T14:18:03.0456288Z Removing SSH command configuration
+2026-07-29T14:18:03.0463671Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-29T14:18:03.0503664Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-29T14:18:03.0791287Z Removing HTTP extra header
+2026-07-29T14:18:03.0799669Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-29T14:18:03.0840062Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-29T14:18:03.1118826Z Removing includeIf entries pointing to credentials config files
+2026-07-29T14:18:03.1126740Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-29T14:18:03.1159221Z includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git.path
+2026-07-29T14:18:03.1160746Z includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git/worktrees/*.path
+2026-07-29T14:18:03.1162191Z includeif.gitdir:/github/workspace/.git.path
+2026-07-29T14:18:03.1163316Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-07-29T14:18:03.1172659Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git.path
+2026-07-29T14:18:03.1202565Z /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1217061Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git.path /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1296118Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git/worktrees/*.path
+2026-07-29T14:18:03.1331886Z /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1346782Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/invoice-collector/invoice-collector/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1387327Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-07-29T14:18:03.1414079Z /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1422918Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1460117Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-07-29T14:18:03.1485851Z /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1496351Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config
+2026-07-29T14:18:03.1536054Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-29T14:18:03.1790014Z Removing credentials config '/home/runner/work/_temp/git-credentials-a9fa0f59-af47-4969-8846-1cc1e0b1bae4.config'
+2026-07-29T14:18:03.1943371Z Cleaning up orphan processes

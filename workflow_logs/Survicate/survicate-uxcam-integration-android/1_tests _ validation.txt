@@ -1,0 +1,523 @@
+﻿2026-07-21T13:40:50.5545053Z Current runner version: '2.335.1'
+2026-07-21T13:40:50.5567792Z ##[group]Runner Image Provisioner
+2026-07-21T13:40:50.5568593Z Hosted Compute Agent
+2026-07-21T13:40:50.5569149Z Version: 20260707.563
+2026-07-21T13:40:50.5569694Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-21T13:40:50.5570365Z Build Date: 2026-07-07T19:33:50Z
+2026-07-21T13:40:50.5571003Z Worker ID: {870db1b7-5629-4cef-9066-e439f79d7dec}
+2026-07-21T13:40:50.5571626Z Azure Region: westus3
+2026-07-21T13:40:50.5572203Z ##[endgroup]
+2026-07-21T13:40:50.5573683Z ##[group]Operating System
+2026-07-21T13:40:50.5574286Z Ubuntu
+2026-07-21T13:40:50.5574763Z 24.04.4
+2026-07-21T13:40:50.5575219Z LTS
+2026-07-21T13:40:50.5575724Z ##[endgroup]
+2026-07-21T13:40:50.5576211Z ##[group]Runner Image
+2026-07-21T13:40:50.5576733Z Image: ubuntu-24.04
+2026-07-21T13:40:50.5577249Z Version: 20260714.240.1
+2026-07-21T13:40:50.5578355Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-21T13:40:50.5579714Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+2026-07-21T13:40:50.5580524Z ##[endgroup]
+2026-07-21T13:40:50.5581532Z ##[group]GITHUB_TOKEN Permissions
+2026-07-21T13:40:50.5583609Z Contents: read
+2026-07-21T13:40:50.5584218Z Metadata: read
+2026-07-21T13:40:50.5584702Z ##[endgroup]
+2026-07-21T13:40:50.5586709Z Secret source: Actions
+2026-07-21T13:40:50.5587608Z Prepare workflow directory
+2026-07-21T13:40:50.5895884Z Prepare all required actions
+2026-07-21T13:40:50.5935876Z Getting action download info
+2026-07-21T13:40:50.9969452Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-07-21T13:40:51.6651717Z Download action repository 'actions/setup-java@v5' (SHA:03ad4de0992f5dab5e18fcb136590ce7c4a0ac95)
+2026-07-21T13:40:52.6800371Z Download action repository 'gradle/actions@v5' (SHA:0723195856401067f7a2779048b490ace7a47d7c)
+2026-07-21T13:40:54.5536308Z Uses: Survicate/survicate-uxcam-integration-android/.github/workflows/testing.yaml@refs/heads/master (34adccd4c3dd58fa8cbae379506806936f6f9538)
+2026-07-21T13:40:54.5540201Z Complete job name: tests / validation
+2026-07-21T13:40:54.6271178Z ##[group]Run actions/checkout@v6
+2026-07-21T13:40:54.6271806Z with:
+2026-07-21T13:40:54.6272161Z   repository: Survicate/survicate-uxcam-integration-android
+2026-07-21T13:40:54.6275109Z   token: ***
+2026-07-21T13:40:54.6275357Z   ssh-strict: true
+2026-07-21T13:40:54.6275604Z   ssh-user: git
+2026-07-21T13:40:54.6275860Z   persist-credentials: true
+2026-07-21T13:40:54.6276138Z   clean: true
+2026-07-21T13:40:54.6276390Z   sparse-checkout-cone-mode: true
+2026-07-21T13:40:54.6276680Z   fetch-depth: 1
+2026-07-21T13:40:54.6276940Z   fetch-tags: false
+2026-07-21T13:40:54.6277182Z   show-progress: true
+2026-07-21T13:40:54.6277421Z   lfs: false
+2026-07-21T13:40:54.6277655Z   submodules: false
+2026-07-21T13:40:54.6277902Z   set-safe-directory: true
+2026-07-21T13:40:54.6278186Z   allow-unsafe-pr-checkout: false
+2026-07-21T13:40:54.6278728Z ##[endgroup]
+2026-07-21T13:40:54.7240629Z Syncing repository: Survicate/survicate-uxcam-integration-android
+2026-07-21T13:40:54.7242999Z ##[group]Getting Git version info
+2026-07-21T13:40:54.7244247Z Working directory is '/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android'
+2026-07-21T13:40:54.7245737Z [command]/usr/bin/git version
+2026-07-21T13:40:54.9559446Z git version 2.54.0
+2026-07-21T13:40:54.9584427Z ##[endgroup]
+2026-07-21T13:40:54.9598059Z Temporarily overriding HOME='/home/runner/work/_temp/b999db3d-bc37-43ac-953d-90e3a12d43a3' before making global git config changes
+2026-07-21T13:40:54.9599442Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-21T13:40:54.9603323Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android
+2026-07-21T13:40:55.0010586Z Deleting the contents of '/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android'
+2026-07-21T13:40:55.0014930Z ##[group]Determining repository object format
+2026-07-21T13:40:55.0017934Z ##[endgroup]
+2026-07-21T13:40:55.0018557Z ##[group]Initializing the repository
+2026-07-21T13:40:55.0024511Z [command]/usr/bin/git init /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android
+2026-07-21T13:40:55.0562277Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-21T13:40:55.0563660Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-21T13:40:55.0564532Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-21T13:40:55.0565355Z hint: call:
+2026-07-21T13:40:55.0566333Z hint:
+2026-07-21T13:40:55.0566918Z hint: 	git config --global init.defaultBranch <name>
+2026-07-21T13:40:55.0567477Z hint:
+2026-07-21T13:40:55.0568028Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-21T13:40:55.0568956Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-21T13:40:55.0569683Z hint:
+2026-07-21T13:40:55.0570039Z hint: 	git branch -m <name>
+2026-07-21T13:40:55.0570444Z hint:
+2026-07-21T13:40:55.0571040Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-21T13:40:55.0574593Z Initialized empty Git repository in /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git/
+2026-07-21T13:40:55.0587199Z [command]/usr/bin/git remote add origin https://github.com/Survicate/survicate-uxcam-integration-android
+2026-07-21T13:40:55.1105097Z ##[endgroup]
+2026-07-21T13:40:55.1105946Z ##[group]Disabling automatic garbage collection
+2026-07-21T13:40:55.1110830Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-21T13:40:55.1135764Z ##[endgroup]
+2026-07-21T13:40:55.1136338Z ##[group]Setting up auth
+2026-07-21T13:40:55.1137339Z Removing SSH command configuration
+2026-07-21T13:40:55.1143605Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-21T13:40:55.1172887Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-21T13:40:55.1504117Z Removing HTTP extra header
+2026-07-21T13:40:55.1509754Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-21T13:40:55.1534728Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-21T13:40:55.1707814Z Removing includeIf entries pointing to credentials config files
+2026-07-21T13:40:55.1714009Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-21T13:40:55.1740828Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-21T13:40:55.1925185Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-21T13:40:55.1959249Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git.path /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:40:55.1986884Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:40:55.2014803Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:40:55.2041774Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:40:55.2064452Z ##[endgroup]
+2026-07-21T13:40:55.2065158Z ##[group]Fetching the repository
+2026-07-21T13:40:55.2073979Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +34adccd4c3dd58fa8cbae379506806936f6f9538:refs/remotes/origin/master
+2026-07-21T13:40:55.7084260Z From https://github.com/Survicate/survicate-uxcam-integration-android
+2026-07-21T13:40:55.7085231Z  * [new ref]         34adccd4c3dd58fa8cbae379506806936f6f9538 -> origin/master
+2026-07-21T13:40:55.7120113Z [command]/usr/bin/git branch --list --remote origin/master
+2026-07-21T13:40:55.7144417Z   origin/master
+2026-07-21T13:40:55.7152913Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-07-21T13:40:55.7171305Z 34adccd4c3dd58fa8cbae379506806936f6f9538
+2026-07-21T13:40:55.7174302Z ##[endgroup]
+2026-07-21T13:40:55.7175064Z ##[group]Determining the checkout info
+2026-07-21T13:40:55.7176001Z ##[endgroup]
+2026-07-21T13:40:55.7181265Z [command]/usr/bin/git sparse-checkout disable
+2026-07-21T13:40:55.7217032Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-21T13:40:55.7236730Z ##[group]Checking out the ref
+2026-07-21T13:40:55.7240147Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-07-21T13:40:55.7299210Z Reset branch 'master'
+2026-07-21T13:40:55.7300185Z branch 'master' set up to track 'origin/master'.
+2026-07-21T13:40:55.7305458Z ##[endgroup]
+2026-07-21T13:40:55.7339312Z [command]/usr/bin/git log -1 --format=%H
+2026-07-21T13:40:55.7357604Z 34adccd4c3dd58fa8cbae379506806936f6f9538
+2026-07-21T13:40:55.7606867Z ##[group]Run actions/setup-java@v5
+2026-07-21T13:40:55.7607138Z with:
+2026-07-21T13:40:55.7607324Z   java-version: 17
+2026-07-21T13:40:55.7607519Z   distribution: temurin
+2026-07-21T13:40:55.7607730Z   java-package: jdk
+2026-07-21T13:40:55.7607941Z   check-latest: false
+2026-07-21T13:40:55.7608140Z   set-default: true
+2026-07-21T13:40:55.7608344Z   verify-signature: false
+2026-07-21T13:40:55.7608563Z   server-id: github
+2026-07-21T13:40:55.7608761Z   server-username: GITHUB_ACTOR
+2026-07-21T13:40:55.7608996Z   server-password: GITHUB_TOKEN
+2026-07-21T13:40:55.7609230Z   overwrite-settings: true
+2026-07-21T13:40:55.7609452Z   job-status: success
+2026-07-21T13:40:55.7611734Z   token: ***
+2026-07-21T13:40:55.7611936Z   show-download-progress: false
+2026-07-21T13:40:55.7612245Z ##[endgroup]
+2026-07-21T13:40:55.9068130Z ##[group]Installed distributions
+2026-07-21T13:40:55.9242819Z Resolved Java 17.0.19+10 from tool-cache
+2026-07-21T13:40:55.9243545Z Setting Java 17.0.19+10 as the default
+2026-07-21T13:40:55.9253345Z Creating toolchains.xml for JDK version 17 from temurin
+2026-07-21T13:40:55.9322452Z Writing to /home/runner/.m2/toolchains.xml
+2026-07-21T13:40:55.9323543Z 
+2026-07-21T13:40:55.9333728Z Java configuration:
+2026-07-21T13:40:55.9334139Z   Distribution: temurin
+2026-07-21T13:40:55.9334505Z   Version: 17.0.19+10
+2026-07-21T13:40:55.9334988Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:55.9335481Z 
+2026-07-21T13:40:55.9335920Z ##[endgroup]
+2026-07-21T13:40:55.9362737Z Creating settings.xml with server-id: github
+2026-07-21T13:40:55.9363475Z Writing to /home/runner/.m2/settings.xml
+2026-07-21T13:40:55.9364252Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-07-21T13:40:55.9440537Z ##[group]Run gradle/actions/wrapper-validation@v5
+2026-07-21T13:40:55.9440852Z with:
+2026-07-21T13:40:55.9441043Z   min-wrapper-count: 1
+2026-07-21T13:40:55.9441271Z   allow-snapshots: false
+2026-07-21T13:40:55.9441487Z env:
+2026-07-21T13:40:55.9441768Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:55.9442231Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:55.9442706Z   MAVEN_ARGS: -ntp
+2026-07-21T13:40:55.9442905Z ##[endgroup]
+2026-07-21T13:40:56.2177165Z ✓ Found known Gradle Wrapper JAR files:
+2026-07-21T13:40:56.2177825Z   7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172 gradle/wrapper/gradle-wrapper.jar
+2026-07-21T13:40:56.2395931Z ##[group]Run gradle/actions/setup-gradle@v5
+2026-07-21T13:40:56.2396230Z with:
+2026-07-21T13:40:56.2396419Z   cache-disabled: false
+2026-07-21T13:40:56.2396635Z   cache-read-only: false
+2026-07-21T13:40:56.2396857Z   cache-write-only: false
+2026-07-21T13:40:56.2397092Z   cache-overwrite-existing: false
+2026-07-21T13:40:56.2397340Z   cache-cleanup: on-success
+2026-07-21T13:40:56.2397619Z   gradle-home-cache-includes: caches
+notifications
+
+2026-07-21T13:40:56.2397927Z   add-job-summary: always
+2026-07-21T13:40:56.2398166Z   add-job-summary-as-pr-comment: never
+2026-07-21T13:40:56.2398426Z   dependency-graph: disabled
+2026-07-21T13:40:56.2398712Z   dependency-graph-report-dir: dependency-graph-reports
+2026-07-21T13:40:56.2399078Z   dependency-graph-continue-on-failure: true
+2026-07-21T13:40:56.2399363Z   build-scan-publish: false
+2026-07-21T13:40:56.2399594Z   validate-wrappers: true
+2026-07-21T13:40:56.2399824Z   allow-snapshot-wrappers: false
+2026-07-21T13:40:56.2400112Z   gradle-home-cache-strict-match: false
+2026-07-21T13:40:56.2400376Z   workflow-job-context: null
+2026-07-21T13:40:56.2402791Z   github-token: ***
+2026-07-21T13:40:56.2402991Z env:
+2026-07-21T13:40:56.2403516Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:56.2403993Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:56.2404371Z   MAVEN_ARGS: -ntp
+2026-07-21T13:40:56.2404623Z   GRADLE_ACTION_ID: gradle/actions/wrapper-validation
+2026-07-21T13:40:56.2404911Z ##[endgroup]
+2026-07-21T13:40:57.6974624Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-07-21T13:40:57.6975351Z Preparing cache for cleanup.
+2026-07-21T13:40:57.6975939Z ##[group]Restore Gradle state from cache
+2026-07-21T13:40:57.9387995Z Gradle User Home cache not found. Will initialize empty.
+2026-07-21T13:40:57.9388845Z ##[endgroup]
+2026-07-21T13:40:57.9502854Z ##[group]All Gradle Wrapper jars are valid
+2026-07-21T13:40:57.9503985Z ✓ Found known Gradle Wrapper JAR files:
+2026-07-21T13:40:57.9504613Z   7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172 gradle/wrapper/gradle-wrapper.jar
+2026-07-21T13:40:57.9505361Z ##[endgroup]
+2026-07-21T13:40:57.9600644Z ##[group]Run chmod +x gradlew
+2026-07-21T13:40:57.9600998Z [36;1mchmod +x gradlew[0m
+2026-07-21T13:40:57.9648194Z shell: /usr/bin/bash -e {0}
+2026-07-21T13:40:57.9648445Z env:
+2026-07-21T13:40:57.9648743Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:57.9649226Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:57.9649589Z   MAVEN_ARGS: -ntp
+2026-07-21T13:40:57.9649821Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-07-21T13:40:57.9650130Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-07-21T13:40:57.9650398Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-07-21T13:40:57.9650678Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-07-21T13:40:57.9651083Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-07-21T13:40:57.9651524Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-07-21T13:40:57.9651876Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-07-21T13:40:57.9652123Z ##[endgroup]
+2026-07-21T13:40:57.9833845Z ##[group]Run ./gradlew :lib:testDebugUnitTest
+2026-07-21T13:40:57.9834342Z [36;1m./gradlew :lib:testDebugUnitTest[0m
+2026-07-21T13:40:57.9866095Z shell: /usr/bin/bash -e {0}
+2026-07-21T13:40:57.9866344Z env:
+2026-07-21T13:40:57.9866643Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:57.9867122Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:40:57.9867593Z   MAVEN_ARGS: -ntp
+2026-07-21T13:40:57.9867829Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-07-21T13:40:57.9868128Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-07-21T13:40:57.9868404Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-07-21T13:40:57.9868687Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-07-21T13:40:57.9869095Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-07-21T13:40:57.9869547Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-07-21T13:40:57.9869900Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-07-21T13:40:57.9870144Z ##[endgroup]
+2026-07-21T13:40:58.3839097Z Downloading https://services.gradle.org/distributions/gradle-8.14.4-bin.zip
+2026-07-21T13:41:00.8026672Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-07-21T13:41:03.0581861Z 
+2026-07-21T13:41:03.0585109Z Welcome to Gradle 8.14.4!
+2026-07-21T13:41:03.0585979Z 
+2026-07-21T13:41:03.0599282Z Here are the highlights of this release:
+2026-07-21T13:41:03.0600210Z  - Java 24 support
+2026-07-21T13:41:03.0600998Z  - GraalVM Native Image toolchain selection
+2026-07-21T13:41:03.0601727Z  - Enhancements to test reporting
+2026-07-21T13:41:03.0602403Z  - Build Authoring improvements
+2026-07-21T13:41:03.0602855Z 
+2026-07-21T13:41:03.0603575Z For more details see https://docs.gradle.org/8.14.4/release-notes.html
+2026-07-21T13:41:03.0604224Z 
+2026-07-21T13:41:03.1571241Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-07-21T13:42:03.8618941Z > Task :lib:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-07-21T13:42:03.8645226Z > Task :lib:preBuild UP-TO-DATE
+2026-07-21T13:42:03.8673872Z > Task :lib:preDebugBuild UP-TO-DATE
+2026-07-21T13:42:04.0571650Z > Task :lib:generateDebugResValues
+2026-07-21T13:42:04.0617720Z > Task :lib:generateDebugResources
+2026-07-21T13:42:04.1570843Z > Task :lib:packageDebugResources
+2026-07-21T13:42:04.1571203Z > Task :lib:processDebugNavigationResources
+2026-07-21T13:42:06.1586252Z > Task :lib:preDebugUnitTestBuild UP-TO-DATE
+2026-07-21T13:42:06.1586970Z > Task :lib:javaPreCompileDebug
+2026-07-21T13:42:06.1589147Z > Task :lib:javaPreCompileDebugUnitTest
+2026-07-21T13:42:06.1589890Z > Task :lib:parseDebugLocalResources
+2026-07-21T13:42:06.2571127Z > Task :lib:generateDebugRFile
+2026-07-21T13:42:23.9594284Z > Task :lib:generateDebugUnitTestStubRFile
+2026-07-21T13:42:24.4570788Z > Task :lib:compileDebugKotlin
+2026-07-21T13:42:24.4571446Z > Task :lib:compileDebugJavaWithJavac NO-SOURCE
+2026-07-21T13:42:24.5585862Z > Task :lib:bundleLibRuntimeToJarDebug
+2026-07-21T13:42:24.5586489Z > Task :lib:bundleLibCompileToJarDebug
+2026-07-21T13:42:24.5587013Z > Task :lib:processDebugJavaRes
+2026-07-21T13:42:26.9584208Z > Task :lib:compileDebugUnitTestKotlin
+2026-07-21T13:42:26.9614155Z > Task :lib:compileDebugUnitTestJavaWithJavac NO-SOURCE
+2026-07-21T13:42:26.9633833Z > Task :lib:processDebugUnitTestJavaRes
+2026-07-21T13:42:30.2574090Z > Task :lib:testDebugUnitTest
+2026-07-21T13:42:30.3571598Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1784641268369.json
+2026-07-21T13:42:30.3623784Z 
+2026-07-21T13:42:30.3625503Z [Incubating] Problems report is available at: file:///home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/build/reports/problems/problems-report.html
+2026-07-21T13:42:30.3633682Z 
+2026-07-21T13:42:30.3635024Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-07-21T13:42:30.3635918Z 
+2026-07-21T13:42:30.3636794Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-07-21T13:42:30.3637829Z 
+2026-07-21T13:42:30.3638940Z For more on this, please refer to https://docs.gradle.org/8.14.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-07-21T13:42:30.3640326Z 
+2026-07-21T13:42:30.3640645Z BUILD SUCCESSFUL in 1m 32s
+2026-07-21T13:42:30.3641179Z 16 actionable tasks: 16 executed
+2026-07-21T13:42:30.7162775Z ##[group]Run ./gradlew :lib:lintDebug
+2026-07-21T13:42:30.7163262Z [36;1m./gradlew :lib:lintDebug[0m
+2026-07-21T13:42:30.7196059Z shell: /usr/bin/bash -e {0}
+2026-07-21T13:42:30.7196320Z env:
+2026-07-21T13:42:30.7196622Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:42:30.7197100Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-21T13:42:30.7197465Z   MAVEN_ARGS: -ntp
+2026-07-21T13:42:30.7197698Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-07-21T13:42:30.7197985Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-07-21T13:42:30.7198247Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-07-21T13:42:30.7198521Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-07-21T13:42:30.7198926Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-07-21T13:42:30.7199383Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-07-21T13:42:30.7199721Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-07-21T13:42:30.7199963Z ##[endgroup]
+2026-07-21T13:42:32.0633784Z > Task :lib:preBuild UP-TO-DATE
+2026-07-21T13:42:32.0676487Z > Task :lib:preDebugBuild UP-TO-DATE
+2026-07-21T13:42:32.1604405Z > Task :lib:checkDebugAarMetadata
+2026-07-21T13:42:32.1623879Z > Task :lib:mergeDebugJniLibFolders
+2026-07-21T13:42:32.1624393Z > Task :lib:mergeDebugNativeLibs NO-SOURCE
+2026-07-21T13:42:32.1624879Z > Task :lib:stripDebugDebugSymbols NO-SOURCE
+2026-07-21T13:42:32.2618510Z > Task :lib:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-07-21T13:42:32.2647156Z > Task :lib:copyDebugJniLibsProjectAndLocalJars
+2026-07-21T13:42:32.2648044Z > Task :lib:generateDebugResValues UP-TO-DATE
+2026-07-21T13:42:32.2648790Z > Task :lib:generateDebugResources UP-TO-DATE
+2026-07-21T13:42:32.2649509Z > Task :lib:packageDebugResources UP-TO-DATE
+2026-07-21T13:42:32.2650291Z > Task :lib:processDebugNavigationResources UP-TO-DATE
+2026-07-21T13:42:32.2651100Z > Task :lib:parseDebugLocalResources UP-TO-DATE
+2026-07-21T13:42:32.2651815Z > Task :lib:generateDebugRFile UP-TO-DATE
+2026-07-21T13:42:32.2652477Z > Task :lib:compileDebugKotlin UP-TO-DATE
+2026-07-21T13:42:37.7620442Z > Task :lib:extractDebugAnnotations
+2026-07-21T13:42:37.7650411Z > Task :lib:extractDeepLinksForAarDebug
+2026-07-21T13:42:37.7782092Z > Task :lib:mergeDebugShaders
+2026-07-21T13:42:37.7790482Z > Task :lib:compileDebugShaders NO-SOURCE
+2026-07-21T13:42:37.7794069Z > Task :lib:generateDebugAssets UP-TO-DATE
+2026-07-21T13:42:37.7826401Z > Task :lib:mergeDebugAssets
+2026-07-21T13:42:37.7848004Z > Task :lib:javaPreCompileDebug UP-TO-DATE
+2026-07-21T13:42:37.7871674Z > Task :lib:compileDebugJavaWithJavac NO-SOURCE
+2026-07-21T13:42:37.7881188Z > Task :lib:mergeDebugGeneratedProguardFiles
+2026-07-21T13:42:37.7881960Z > Task :lib:mergeDebugConsumerProguardFiles
+2026-07-21T13:42:37.7882754Z > Task :lib:prepareDebugArtProfile
+2026-07-21T13:42:37.7883618Z > Task :lib:prepareLintJarForPublish
+2026-07-21T13:42:37.7884306Z > Task :lib:processDebugJavaRes UP-TO-DATE
+2026-07-21T13:42:37.8627022Z > Task :lib:bundleLibRuntimeToJarDebug UP-TO-DATE
+2026-07-21T13:42:37.8638497Z > Task :lib:createFullJarDebug
+2026-07-21T13:42:37.8639621Z > Task :lib:preDebugAndroidTestBuild UP-TO-DATE
+2026-07-21T13:42:37.8640240Z > Task :lib:writeDebugAarMetadata
+2026-07-21T13:42:37.8640779Z > Task :lib:generateDebugAndroidTestResValues
+2026-07-21T13:42:37.8641346Z > Task :lib:writeDebugLintModelMetadata
+2026-07-21T13:42:37.8641844Z > Task :lib:extractProguardFiles
+2026-07-21T13:42:37.8642356Z > Task :lib:preDebugUnitTestBuild UP-TO-DATE
+2026-07-21T13:42:37.8642906Z > Task :lib:processDebugManifest
+2026-07-21T13:42:37.9604196Z > Task :lib:mergeDebugJavaResource
+2026-07-21T13:42:38.9614166Z > Task :lib:generateDebugLintReportModel
+2026-07-21T13:42:38.9643901Z > Task :lib:syncDebugLibJars
+2026-07-21T13:42:38.9664004Z > Task :lib:bundleDebugLocalLintAar
+2026-07-21T13:42:39.0616177Z > Task :lib:generateDebugAndroidTestLintModel
+2026-07-21T13:42:39.1653878Z > Task :lib:generateDebugUnitTestLintModel
+2026-07-21T13:42:43.7596595Z > Task :lib:lintAnalyzeDebugAndroidTest
+2026-07-21T13:42:46.3594624Z > Task :lib:lintAnalyzeDebugUnitTest
+2026-07-21T13:42:50.5605564Z > Task :lib:lintAnalyzeDebug
+2026-07-21T13:42:50.6380050Z 
+2026-07-21T13:42:50.6417712Z > Task :lib:lintReportDebug
+2026-07-21T13:42:50.6420683Z Wrote HTML report to file:///home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/lib/build/reports/lint-results-debug.html
+2026-07-21T13:42:50.6422031Z 
+2026-07-21T13:42:50.6422271Z > Task :lib:lintDebug
+2026-07-21T13:42:50.6423378Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1784641351323.json
+2026-07-21T13:42:50.6424821Z 
+2026-07-21T13:42:50.6426114Z [Incubating] Problems report is available at: file:///home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/build/reports/problems/problems-report.html
+2026-07-21T13:42:50.6427487Z 
+2026-07-21T13:42:50.6428074Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-07-21T13:42:50.6428792Z 
+2026-07-21T13:42:50.6429630Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-07-21T13:42:50.6430459Z 
+2026-07-21T13:42:50.6431394Z For more on this, please refer to https://docs.gradle.org/8.14.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-07-21T13:42:50.6432476Z 
+2026-07-21T13:42:50.6432730Z BUILD SUCCESSFUL in 19s
+2026-07-21T13:42:50.6433398Z 38 actionable tasks: 28 executed, 10 up-to-date
+2026-07-21T13:42:50.6778633Z Post job cleanup.
+2026-07-21T13:42:51.0132878Z In post-action step
+2026-07-21T13:42:51.0143392Z ##[group]Stopping Gradle daemons
+2026-07-21T13:42:51.0144203Z Stopping Gradle daemons for /home/runner/.gradle/wrapper/dists/gradle-8.14.4-bin/92wwslzcyst3phie3o264zltu/gradle-8.14.4
+2026-07-21T13:42:51.0158855Z [command]/home/runner/.gradle/wrapper/dists/gradle-8.14.4-bin/92wwslzcyst3phie3o264zltu/gradle-8.14.4/bin/gradle --stop
+2026-07-21T13:42:51.5766710Z Stopping Daemon(s)
+2026-07-21T13:42:51.5769228Z 1 Daemon stopped
+2026-07-21T13:42:51.5828322Z ##[endgroup]
+2026-07-21T13:42:51.5852879Z ##[group]Provision Gradle >= 8.14.4
+2026-07-21T13:42:54.5503516Z Gradle version 9.6.1 is available at /usr/bin/gradle and >= 8.14.4. Not installing.
+2026-07-21T13:42:54.5504723Z ##[endgroup]
+2026-07-21T13:42:54.5508130Z ##[group]Executing Gradle to clean up caches
+2026-07-21T13:42:54.5508808Z Cleaning up caches last used before 1784641257697
+2026-07-21T13:42:54.5514789Z [command]/usr/bin/gradle -g /home/runner/.gradle -I init.gradle --info --no-daemon --no-scan --build-cache -DGITHUB_DEPENDENCY_GRAPH_ENABLED=false -DGRADLE_ACTIONS_SKIP_BUILD_RESULT_CAPTURE=true noop
+2026-07-21T13:42:54.9068743Z Initialized native services in: /home/runner/.gradle/native
+2026-07-21T13:42:54.9105700Z Initialized jansi services in: /home/runner/.gradle/native
+2026-07-21T13:42:55.0460217Z The current JVM process isn't compatible with build requirement. The maximum heap size is insufficient.
+2026-07-21T13:42:55.0460636Z 
+2026-07-21T13:42:55.2485902Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-07-21T13:42:55.2492252Z Starting process 'Gradle build daemon'. Working directory: /home/runner/.gradle/daemon/9.6.1 Command: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED -XX:MaxMetaspaceSize=384m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -cp /usr/share/gradle-9.6.1/lib/gradle-daemon-main-9.6.1.jar -javaagent:/usr/share/gradle-9.6.1/lib/agents/gradle-instrumentation-agent-9.6.1.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 9.6.1
+2026-07-21T13:42:55.3450589Z Successfully started process 'Gradle build daemon'
+2026-07-21T13:42:57.9454340Z An attempt to start the daemon took 2.663 secs.
+2026-07-21T13:42:57.9464913Z The client will now receive all logging from the daemon (pid: 2882). The daemon log file: /home/runner/.gradle/daemon/9.6.1/daemon-2882.out.log
+2026-07-21T13:42:57.9466089Z Daemon will be stopped at the end of the build 
+2026-07-21T13:42:58.6451368Z Using 4 worker leases.
+2026-07-21T13:42:58.7453759Z Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, isolatedProjectsDiagnostics=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, resilientModelBuilding=false, vintage=true}
+2026-07-21T13:42:59.2453227Z Received JVM installation metadata from '/usr/lib/jvm/temurin-17-jdk-amd64': {JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64, JAVA_VERSION=17.0.19, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.19+10, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.19+10, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+2026-07-21T13:42:59.6458644Z Watching the file system is configured to be enabled if available
+2026-07-21T13:42:59.7474562Z Now considering [/home/runner/work/_temp/dummy-cleanup-project] as hierarchies to watch
+2026-07-21T13:42:59.7475394Z File system watching is active
+2026-07-21T13:43:00.3449992Z Caching disabled for Groovy DSL script compilation (cp_init) because:
+2026-07-21T13:43:00.3450707Z   Build cache is disabled
+2026-07-21T13:43:00.3451094Z   Not worth caching.
+2026-07-21T13:43:00.3451942Z Compiling initialization script '/home/runner/work/_temp/dummy-cleanup-project/init.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:01.2469146Z Caching disabled for Groovy DSL script compilation (init) because:
+2026-07-21T13:43:01.2478354Z   Build cache is disabled
+2026-07-21T13:43:01.2498029Z   Not worth caching.
+2026-07-21T13:43:01.2501490Z Compiling initialization script '/home/runner/work/_temp/dummy-cleanup-project/init.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:01.8464454Z Caching disabled for Groovy DSL script compilation (cp_init) because:
+2026-07-21T13:43:01.8494057Z   Build cache is disabled
+2026-07-21T13:43:01.8494536Z   Not worth caching.
+2026-07-21T13:43:01.8514931Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.build-result-capture.init.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:02.5467801Z Caching disabled for Groovy DSL script compilation (init) because:
+2026-07-21T13:43:02.5468756Z   Build cache is disabled
+2026-07-21T13:43:02.5469378Z   Not worth caching.
+2026-07-21T13:43:02.5470613Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.build-result-capture.init.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:02.8455463Z gradle/actions: Not capturing build results
+2026-07-21T13:43:02.8464510Z Caching disabled for Groovy DSL script compilation (cp_init) because:
+2026-07-21T13:43:02.8465632Z   Build cache is disabled
+2026-07-21T13:43:02.8466246Z   Not worth caching.
+2026-07-21T13:43:02.8467683Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.github-dependency-graph.init.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:02.9474382Z Caching disabled for Groovy DSL script compilation (init) because:
+2026-07-21T13:43:02.9496973Z   Build cache is disabled
+2026-07-21T13:43:02.9523788Z   Not worth caching.
+2026-07-21T13:43:02.9526446Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.github-dependency-graph.init.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:03.0460762Z Caching disabled for Groovy DSL script compilation (cp_init) because:
+2026-07-21T13:43:03.0461326Z   Build cache is disabled
+2026-07-21T13:43:03.0461798Z   Not worth caching.
+2026-07-21T13:43:03.0462707Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.inject-develocity.init.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:03.7524291Z Caching disabled for Groovy DSL script compilation (init) because:
+2026-07-21T13:43:03.7553730Z   Build cache is disabled
+2026-07-21T13:43:03.7554201Z   Not worth caching.
+2026-07-21T13:43:03.7555246Z Compiling initialization script '/home/runner/.gradle/init.d/gradle-actions.inject-develocity.init.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:04.0451865Z Starting Build
+2026-07-21T13:43:04.1459088Z Caching disabled for Groovy DSL script compilation (cp_settings) because:
+2026-07-21T13:43:04.1460305Z   Build cache is disabled
+2026-07-21T13:43:04.1460911Z   Not worth caching.
+2026-07-21T13:43:04.1462114Z Compiling settings file '/home/runner/work/_temp/dummy-cleanup-project/settings.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:04.1463793Z Caching disabled for Groovy DSL script compilation (settings) because:
+2026-07-21T13:43:04.1464708Z   Build cache is disabled
+2026-07-21T13:43:04.1465775Z   Not worth caching.
+2026-07-21T13:43:04.1470368Z Compiling settings file '/home/runner/work/_temp/dummy-cleanup-project/settings.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:04.1472207Z Settings evaluated using settings file '/home/runner/work/_temp/dummy-cleanup-project/settings.gradle'.
+2026-07-21T13:43:04.1474188Z Using local directory build cache for the root build (location = /home/runner/.gradle/caches/build-cache-1, remove unused entries = older than 2026-07-21 13:40:57 UTC).
+2026-07-21T13:43:04.2453321Z Projects loaded. Root project using build file '/home/runner/work/_temp/dummy-cleanup-project/build.gradle'.
+2026-07-21T13:43:04.2456251Z Included projects: [root project 'dummy-cleanup-project']
+2026-07-21T13:43:04.5450769Z 
+2026-07-21T13:43:04.5500647Z > Configure project :
+2026-07-21T13:43:04.5514662Z Evaluating root project 'dummy-cleanup-project' using build file '/home/runner/work/_temp/dummy-cleanup-project/build.gradle'.
+2026-07-21T13:43:04.5516071Z Caching disabled for Groovy DSL script compilation (cp_proj) because:
+2026-07-21T13:43:04.5516773Z   Not worth caching.
+2026-07-21T13:43:04.5520167Z Compiling build file '/home/runner/work/_temp/dummy-cleanup-project/build.gradle' using SubsetScriptTransformer.
+2026-07-21T13:43:04.5521698Z Caching disabled for Groovy DSL script compilation (proj) because:
+2026-07-21T13:43:04.5522439Z   Not worth caching.
+2026-07-21T13:43:04.5523574Z Compiling build file '/home/runner/work/_temp/dummy-cleanup-project/build.gradle' using BuildScriptTransformer.
+2026-07-21T13:43:04.5524557Z All projects evaluated.
+2026-07-21T13:43:04.5525080Z Task name matched 'noop'
+2026-07-21T13:43:04.5525629Z Selected primary task 'noop' from project :
+2026-07-21T13:43:04.5526287Z Tasks to be executed: [task ':noop']
+2026-07-21T13:43:04.5526899Z Tasks that were excluded: []
+2026-07-21T13:43:04.5527611Z Resolve mutations for :noop (Thread[Execution worker,5,main]) started.
+2026-07-21T13:43:04.5528434Z :noop (Thread[Execution worker,5,main]) started.
+2026-07-21T13:43:04.5528921Z 
+2026-07-21T13:43:04.5529209Z > Task :noop UP-TO-DATE
+2026-07-21T13:43:04.5529737Z Skipping task ':noop' as it has no actions.
+2026-07-21T13:43:04.6471826Z 
+2026-07-21T13:43:04.6487495Z BUILD SUCCESSFUL in 9s
+2026-07-21T13:43:04.6517737Z Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.1/userguide/configuration_cache_enabling.html
+2026-07-21T13:43:04.6536587Z jars (/home/runner/.gradle/caches/jars-9) cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6537994Z jars (/home/runner/.gradle/caches/jars-9) removing files not accessed on or after Tue Jul 21 13:40:57 UTC 2026.
+2026-07-21T13:43:04.6539130Z jars (/home/runner/.gradle/caches/jars-9) cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6539959Z jars (/home/runner/.gradle/caches/jars-9) cleaned up in 0.005 secs.
+2026-07-21T13:43:04.6540898Z artifact cache (/home/runner/.gradle/caches/modules-2) cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6587619Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/resources-2.1] cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6599540Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/resources-2.1] removing files not accessed on or after Tue Jul 21 13:40:57 UTC 2026.
+2026-07-21T13:43:04.6644424Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/resources-2.1] cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6654389Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/files-2.1] cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.6674505Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/files-2.1] removing files not accessed on or after Tue Jul 21 13:40:57 UTC 2026.
+2026-07-21T13:43:04.7485295Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/files-2.1] cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.7487262Z artifact cache (/home/runner/.gradle/caches/modules-2) [subdir: /home/runner/.gradle/caches/modules-2/metadata-2.107] cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.7488772Z artifact cache (/home/runner/.gradle/caches/modules-2) cleanup deleted 0 files/directories.
+2026-07-21T13:43:04.7489825Z artifact cache (/home/runner/.gradle/caches/modules-2) cleaned up in 0.126 secs.
+2026-07-21T13:43:04.8479475Z ##[endgroup]
+2026-07-21T13:43:04.8480182Z ##[group]Caching Gradle state
+2026-07-21T13:43:04.8819731Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:04.8852668Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:05.5545246Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:05.6074844Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:05.6375547Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:05.8184168Z Failed to save cache entry with path '/home/runner/.gradle/wrapper/dists/gradle-8.14.4-bin/92wwslzcyst3phie3o264zltu' and key: gradle-wrapper-zips-v1-b8bc683b7ad90698f6029bfbbde61640: ReserveCacheError: Unable to reserve cache with key gradle-wrapper-zips-v1-b8bc683b7ad90698f6029bfbbde61640, another job may be creating this cache.
+2026-07-21T13:43:05.8867423Z Failed to save cache entry with path '/home/runner/.gradle/caches/8.14.4/generated-gradle-jars/gradle-api-8.14.4.jar' and key: gradle-generated-gradle-jars-v1-78b2bbffc9a7cedbf2b57f67a900f15a: ReserveCacheError: Unable to reserve cache with key gradle-generated-gradle-jars-v1-78b2bbffc9a7cedbf2b57f67a900f15a, another job may be creating this cache.
+2026-07-21T13:43:05.9178355Z Failed to save cache entry with path '/home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/,/home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/' and key: gradle-kotlin-dsl-v1-71104c3c3fa865c3ae2292b13637b6fe: ReserveCacheError: Unable to reserve cache with key gradle-kotlin-dsl-v1-71104c3c3fa865c3ae2292b13637b6fe, another job may be creating this cache.
+2026-07-21T13:43:06.0759041Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:06.2462309Z Sent 129728 of 129728 (100.0%), 0.3 MBs/sec
+2026-07-21T13:43:06.3013679Z Sent 204840 of 204840 (100.0%), 0.5 MBs/sec
+2026-07-21T13:43:06.3989788Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:06.5344492Z Saved cache entry with key gradle-instrumented-jars-v1-ea89307f7f3c8f874e70d2de0ce47671 from /home/runner/.gradle/caches/jars-*/*/ in 1027ms
+2026-07-21T13:43:06.5794530Z Saved cache entry with key gradle-groovy-dsl-v1-b24eda66172ea4aafb42d7d83b3ff170 from /home/runner/.gradle/caches/*/groovy-dsl/*/ in 992ms
+2026-07-21T13:43:07.6570090Z Failed to save cache entry with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and key: gradle-dependencies-v1-d13f8333179460380db608d8464a0ea6: ReserveCacheError: Unable to reserve cache with key gradle-dependencies-v1-d13f8333179460380db608d8464a0ea6, another job may be creating this cache.
+2026-07-21T13:43:08.0012485Z Failed to save cache entry with path '/home/runner/.gradle/caches/transforms-4/*/,/home/runner/.gradle/caches/*/transforms/*/' and key: gradle-transforms-v1-b824636c8ce075fa42f655433b269acb: ReserveCacheError: Unable to reserve cache with key gradle-transforms-v1-b824636c8ce075fa42f655433b269acb, another job may be creating this cache.
+2026-07-21T13:43:08.1900317Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android --files-from manifest.txt --use-compress-program zstdmt
+2026-07-21T13:43:08.9376316Z Sent 655318 of 655318 (100.0%), 1.3 MBs/sec
+2026-07-21T13:43:09.1901208Z Saved cache entry with key gradle-home-v1|Linux-X64|validation[7cabe8e807b15b37b07df47bf3327d34]-34adccd4c3dd58fa8cbae379506806936f6f9538 from /home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle in 1007ms
+2026-07-21T13:43:09.1902577Z ##[endgroup]
+2026-07-21T13:43:09.1909614Z Generating Job Summary
+2026-07-21T13:43:09.1922059Z Completed post-action step
+2026-07-21T13:43:09.2090890Z Post job cleanup.
+2026-07-21T13:43:09.3363869Z Post job cleanup.
+2026-07-21T13:43:09.4177650Z [command]/usr/bin/git version
+2026-07-21T13:43:09.4213338Z git version 2.54.0
+2026-07-21T13:43:09.4250376Z Temporarily overriding HOME='/home/runner/work/_temp/5e57cd0b-018d-4d93-9c04-3671ef4f9bb0' before making global git config changes
+2026-07-21T13:43:09.4251829Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-21T13:43:09.4257176Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android
+2026-07-21T13:43:09.4286585Z Removing SSH command configuration
+2026-07-21T13:43:09.4295025Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-21T13:43:09.4328434Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-21T13:43:09.4515682Z Removing HTTP extra header
+2026-07-21T13:43:09.4520567Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-21T13:43:09.4548822Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-21T13:43:09.4710547Z Removing includeIf entries pointing to credentials config files
+2026-07-21T13:43:09.4716555Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-21T13:43:09.4738516Z includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git.path
+2026-07-21T13:43:09.4740059Z includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git/worktrees/*.path
+2026-07-21T13:43:09.4741086Z includeif.gitdir:/github/workspace/.git.path
+2026-07-21T13:43:09.4741740Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-07-21T13:43:09.4747726Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git.path
+2026-07-21T13:43:09.4764652Z /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4773668Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git.path /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4799807Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git/worktrees/*.path
+2026-07-21T13:43:09.4816108Z /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4823880Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/survicate-uxcam-integration-android/survicate-uxcam-integration-android/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4848395Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-07-21T13:43:09.4864271Z /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4870087Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4892684Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-07-21T13:43:09.4908313Z /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4915490Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config
+2026-07-21T13:43:09.4941202Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-21T13:43:09.5103412Z Removing credentials config '/home/runner/work/_temp/git-credentials-ae489b01-4df0-45a6-a7b3-ed2267b16222.config'
+2026-07-21T13:43:09.5218900Z Cleaning up orphan processes

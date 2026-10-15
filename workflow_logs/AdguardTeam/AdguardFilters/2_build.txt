@@ -1,0 +1,611 @@
+﻿2026-10-14T15:28:26.9404922Z Current runner version: '2.337.0'
+2026-10-14T15:28:26.9424881Z ##[group]Runner Image Provisioner
+2026-10-14T15:28:26.9425569Z Hosted Compute Agent
+2026-10-14T15:28:26.9426094Z Version: 20261002.596
+2026-10-14T15:28:26.9426823Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T15:28:26.9427407Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T15:28:26.9428022Z Worker ID: {123560df-70ef-4d3d-811e-d4f8c23a404c}
+2026-10-14T15:28:26.9428604Z Region: westus3
+2026-10-14T15:28:26.9429087Z Cloud: Azure
+2026-10-14T15:28:26.9429575Z ##[endgroup]
+2026-10-14T15:28:26.9430726Z ##[group]Operating System
+2026-10-14T15:28:26.9431285Z Ubuntu
+2026-10-14T15:28:26.9431713Z 24.04.5
+2026-10-14T15:28:26.9432124Z LTS
+2026-10-14T15:28:26.9432671Z ##[endgroup]
+2026-10-14T15:28:26.9433140Z ##[group]Runner Image
+2026-10-14T15:28:26.9433679Z Image: ubuntu-24.04
+2026-10-14T15:28:26.9434147Z Version: 20261004.327.1
+2026-10-14T15:28:26.9435220Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T15:28:26.9436453Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T15:28:26.9437399Z ##[endgroup]
+2026-10-14T15:28:26.9438355Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:28:26.9440150Z Contents: read
+2026-10-14T15:28:26.9440629Z Metadata: read
+2026-10-14T15:28:26.9441077Z Pages: write
+2026-10-14T15:28:26.9441579Z ##[endgroup]
+2026-10-14T15:28:26.9443460Z Secret source: Actions
+2026-10-14T15:28:26.9444254Z Cache mode: read
+2026-10-14T15:28:26.9445005Z Prepare workflow directory
+2026-10-14T15:28:26.9710734Z Prepare all required actions
+2026-10-14T15:28:26.9763186Z Getting action download info
+2026-10-14T15:28:27.2772844Z Download action repository 'actions/checkout@v7.0.1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T15:28:27.5157673Z Download action repository 'actions/jekyll-build-pages@v1' (SHA:44a6e6beabd48582f863aeeb6cb2151cc1716697)
+2026-10-14T15:28:28.1943443Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-10-14T15:28:28.5143598Z Getting action download info
+2026-10-14T15:28:28.6463004Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-14T15:28:28.8993903Z Complete job name: build
+2026-10-14T15:28:28.9399223Z ##[group]Pull down action image 'ghcr.io/actions/jekyll-build-pages:v1.0.13'
+2026-10-14T15:28:28.9990733Z ##[command]/usr/bin/docker pull ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-10-14T15:28:30.4008347Z v1.0.13: Pulling from actions/jekyll-build-pages
+2026-10-14T15:28:30.4008845Z efc2b5ad9eec: Pulling fs layer
+2026-10-14T15:28:30.4009104Z 165b60d1bb48: Pulling fs layer
+2026-10-14T15:28:30.4009350Z 2a328af1ca3a: Pulling fs layer
+2026-10-14T15:28:30.4009592Z 32b58fa44788: Pulling fs layer
+2026-10-14T15:28:30.4009833Z 590ab93c22d2: Pulling fs layer
+2026-10-14T15:28:30.4010071Z 26ea96c4c14c: Pulling fs layer
+2026-10-14T15:28:30.4010319Z bd7e451dfea1: Pulling fs layer
+2026-10-14T15:28:30.4010632Z c209e9dadc51: Pulling fs layer
+2026-10-14T15:28:30.4010894Z a4925b5c711a: Pulling fs layer
+2026-10-14T15:28:30.4011125Z cd9459784e3c: Pulling fs layer
+2026-10-14T15:28:30.4011474Z c209e9dadc51: Waiting
+2026-10-14T15:28:30.4011859Z 26ea96c4c14c: Waiting
+2026-10-14T15:28:30.4012262Z a4925b5c711a: Waiting
+2026-10-14T15:28:30.4012627Z bd7e451dfea1: Waiting
+2026-10-14T15:28:30.4012924Z cd9459784e3c: Waiting
+2026-10-14T15:28:30.4013225Z 32b58fa44788: Waiting
+2026-10-14T15:28:30.6226308Z 2a328af1ca3a: Verifying Checksum
+2026-10-14T15:28:30.6227169Z 2a328af1ca3a: Download complete
+2026-10-14T15:28:30.7656962Z efc2b5ad9eec: Verifying Checksum
+2026-10-14T15:28:30.7677135Z efc2b5ad9eec: Download complete
+2026-10-14T15:28:30.7873035Z 165b60d1bb48: Verifying Checksum
+2026-10-14T15:28:30.7873489Z 165b60d1bb48: Download complete
+2026-10-14T15:28:30.9853319Z 590ab93c22d2: Verifying Checksum
+2026-10-14T15:28:30.9853744Z 590ab93c22d2: Download complete
+2026-10-14T15:28:31.0161406Z 32b58fa44788: Verifying Checksum
+2026-10-14T15:28:31.0162677Z 32b58fa44788: Download complete
+2026-10-14T15:28:31.1865968Z bd7e451dfea1: Verifying Checksum
+2026-10-14T15:28:31.1869058Z bd7e451dfea1: Download complete
+2026-10-14T15:28:31.4479758Z c209e9dadc51: Download complete
+2026-10-14T15:28:31.4718873Z a4925b5c711a: Verifying Checksum
+2026-10-14T15:28:31.4719353Z a4925b5c711a: Download complete
+2026-10-14T15:28:31.5538789Z 26ea96c4c14c: Verifying Checksum
+2026-10-14T15:28:31.5539197Z 26ea96c4c14c: Download complete
+2026-10-14T15:28:31.6539049Z cd9459784e3c: Verifying Checksum
+2026-10-14T15:28:31.6539478Z cd9459784e3c: Download complete
+2026-10-14T15:28:31.7644384Z efc2b5ad9eec: Pull complete
+2026-10-14T15:28:34.4918251Z 165b60d1bb48: Pull complete
+2026-10-14T15:28:34.5022058Z 2a328af1ca3a: Pull complete
+2026-10-14T15:28:36.2191859Z 32b58fa44788: Pull complete
+2026-10-14T15:28:36.2271488Z 590ab93c22d2: Pull complete
+2026-10-14T15:28:41.4358742Z 26ea96c4c14c: Pull complete
+2026-10-14T15:28:41.4559212Z bd7e451dfea1: Pull complete
+2026-10-14T15:28:43.6340577Z c209e9dadc51: Pull complete
+2026-10-14T15:28:43.6706814Z a4925b5c711a: Pull complete
+2026-10-14T15:28:43.6789926Z cd9459784e3c: Pull complete
+2026-10-14T15:28:43.6815557Z Digest: sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+2026-10-14T15:28:43.6829542Z Status: Downloaded newer image for ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-10-14T15:28:43.6839022Z ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-10-14T15:28:43.6871531Z ##[endgroup]
+2026-10-14T15:28:43.7116225Z ##[group]Run actions/checkout@v7.0.1
+2026-10-14T15:28:43.7116811Z with:
+2026-10-14T15:28:43.7116990Z   ref: master
+2026-10-14T15:28:43.7117166Z   submodules: recursive
+2026-10-14T15:28:43.7117406Z   repository: AdguardTeam/AdguardFilters
+2026-10-14T15:28:43.7119600Z   token: ***
+2026-10-14T15:28:43.7119778Z   ssh-strict: true
+2026-10-14T15:28:43.7119957Z   ssh-user: git
+2026-10-14T15:28:43.7120137Z   persist-credentials: true
+2026-10-14T15:28:43.7120341Z   clean: true
+2026-10-14T15:28:43.7120540Z   sparse-checkout-cone-mode: true
+2026-10-14T15:28:43.7120745Z   fetch-depth: 1
+2026-10-14T15:28:43.7120911Z   fetch-tags: false
+2026-10-14T15:28:43.7121082Z   show-progress: true
+2026-10-14T15:28:43.7121254Z   lfs: false
+2026-10-14T15:28:43.7121420Z   set-safe-directory: true
+2026-10-14T15:28:43.7121619Z   allow-unsafe-pr-checkout: false
+2026-10-14T15:28:43.7121974Z ##[endgroup]
+2026-10-14T15:28:43.7894222Z Syncing repository: AdguardTeam/AdguardFilters
+2026-10-14T15:28:43.7895649Z ##[group]Getting Git version info
+2026-10-14T15:28:43.7896012Z Working directory is '/home/runner/work/AdguardFilters/AdguardFilters'
+2026-10-14T15:28:43.7896500Z [command]/usr/bin/git version
+2026-10-14T15:28:43.7951350Z git version 2.55.0
+2026-10-14T15:28:43.7965477Z ##[endgroup]
+2026-10-14T15:28:43.7973808Z Temporarily overriding HOME='/home/runner/work/_temp/55442e0c-87a3-4b52-817c-32e10b684f94' before making global git config changes
+2026-10-14T15:28:43.7974827Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:28:43.7978935Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AdguardFilters/AdguardFilters
+2026-10-14T15:28:43.8016975Z Deleting the contents of '/home/runner/work/AdguardFilters/AdguardFilters'
+2026-10-14T15:28:43.8019861Z ##[group]Determining repository object format
+2026-10-14T15:28:44.1824483Z ##[endgroup]
+2026-10-14T15:28:44.1825350Z ##[group]Initializing the repository
+2026-10-14T15:28:44.1839413Z [command]/usr/bin/git init /home/runner/work/AdguardFilters/AdguardFilters
+2026-10-14T15:28:44.2593919Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T15:28:44.2595292Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T15:28:44.2595891Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T15:28:44.2596337Z hint: call:
+2026-10-14T15:28:44.2596711Z hint:
+2026-10-14T15:28:44.2597045Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T15:28:44.2597707Z hint:
+2026-10-14T15:28:44.2598062Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T15:28:44.2598692Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T15:28:44.2599219Z hint:
+2026-10-14T15:28:44.2668468Z hint: 	git branch -m <name>
+2026-10-14T15:28:44.2669001Z hint:
+2026-10-14T15:28:44.2669394Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T15:28:44.2670198Z Initialized empty Git repository in /home/runner/work/AdguardFilters/AdguardFilters/.git/
+2026-10-14T15:28:44.2671746Z [command]/usr/bin/git remote add origin https://github.com/AdguardTeam/AdguardFilters
+2026-10-14T15:28:44.2672486Z ##[endgroup]
+2026-10-14T15:28:44.2672800Z ##[group]Disabling automatic garbage collection
+2026-10-14T15:28:44.2673065Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T15:28:44.2692596Z ##[endgroup]
+2026-10-14T15:28:44.2693028Z ##[group]Setting up auth
+2026-10-14T15:28:44.2693406Z Removing SSH command configuration
+2026-10-14T15:28:44.2698486Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:28:44.2727456Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:28:44.3014509Z Removing HTTP extra header
+2026-10-14T15:28:44.3018811Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:28:44.3052273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:28:44.3233413Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:28:44.3238046Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:28:44.3264665Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:28:44.3445727Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T15:28:44.3475754Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git.path /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:44.3503509Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:44.3534555Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:44.3562277Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:44.3880596Z ##[endgroup]
+2026-10-14T15:28:44.3881064Z ##[group]Fetching the repository
+2026-10-14T15:28:44.3886964Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master*:refs/remotes/origin/master* +refs/tags/master*:refs/tags/master*
+2026-10-14T15:28:46.8055840Z From https://github.com/AdguardTeam/AdguardFilters
+2026-10-14T15:28:46.8056358Z  * [new branch]      master     -> origin/master
+2026-10-14T15:28:46.8056937Z  * [new branch]      masterfix/154759/20230705 -> origin/masterfix/154759/20230705
+2026-10-14T15:28:46.8065570Z ##[endgroup]
+2026-10-14T15:28:46.8066395Z ##[group]Determining the checkout info
+2026-10-14T15:28:46.8066942Z [command]/usr/bin/git branch --list --remote origin/master
+2026-10-14T15:28:46.8090205Z   origin/master
+2026-10-14T15:28:46.8093290Z ##[endgroup]
+2026-10-14T15:28:46.8096859Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T15:28:46.8140175Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T15:28:46.8170177Z ##[group]Checking out the ref
+2026-10-14T15:28:46.8170703Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-14T15:28:46.8882963Z Reset branch 'master'
+2026-10-14T15:28:46.8886698Z branch 'master' set up to track 'origin/master'.
+2026-10-14T15:28:46.8894760Z ##[endgroup]
+2026-10-14T15:28:46.8895145Z ##[group]Setting up auth for fetching submodules
+2026-10-14T15:28:46.8900781Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T15:28:46.8939940Z [command]/usr/bin/git config --global include.path /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:46.8970262Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-14T15:28:46.9000846Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-14T15:28:46.9030428Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-8361145@github.com:
+2026-10-14T15:28:46.9056002Z ##[endgroup]
+2026-10-14T15:28:46.9056451Z ##[group]Fetching submodules
+2026-10-14T15:28:46.9065946Z [command]/usr/bin/git submodule sync --recursive
+2026-10-14T15:28:46.9264601Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2026-10-14T15:28:46.9456791Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2026-10-14T15:28:46.9640767Z ##[endgroup]
+2026-10-14T15:28:46.9641110Z ##[group]Persisting credentials for submodules
+2026-10-14T15:28:46.9645654Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2026-10-14T15:28:46.9832526Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:28:47.0020390Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2026-10-14T15:28:47.0215881Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-8361145@github.com:'
+2026-10-14T15:28:47.0438806Z ##[endgroup]
+2026-10-14T15:28:47.0472612Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T15:28:47.0495124Z 923b48a10df3cde8362c57981d84fbf7827eaf97
+2026-10-14T15:28:47.0670908Z ##[group]Run actions/jekyll-build-pages@v1
+2026-10-14T15:28:47.0671144Z with:
+2026-10-14T15:28:47.0671304Z   source: .
+2026-10-14T15:28:47.0671470Z   destination: ./_site
+2026-10-14T15:28:47.0671660Z   future: false
+2026-10-14T15:28:47.0671869Z   build_revision: 923b48a10df3cde8362c57981d84fbf7827eaf97
+2026-10-14T15:28:47.0672115Z   verbose: true
+2026-10-14T15:28:47.0674126Z   token: ***
+2026-10-14T15:28:47.0674304Z ##[endgroup]
+2026-10-14T15:28:47.0752812Z ##[command]/usr/bin/docker run --name ghcrioactionsjekyllbuildpagesv1013_5fe56b --label d65520 --workdir /github/workspace --rm -e "INPUT_SOURCE" -e "INPUT_DESTINATION" -e "INPUT_FUTURE" -e "INPUT_BUILD_REVISION" -e "INPUT_VERBOSE" -e "INPUT_TOKEN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_CACHE_MODE" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/AdguardFilters/AdguardFilters":"/github/workspace" ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-10-14T15:28:47.7962714Z [33mConfiguration file: none[0m
+2026-10-14T15:28:47.8851588Z To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+2026-10-14T15:28:49.7312825Z   Logging at level: debug
+2026-10-14T15:28:49.7313143Z       GitHub Pages: github-pages v232
+2026-10-14T15:28:49.7313392Z       GitHub Pages: jekyll v3.10.0
+2026-10-14T15:28:49.7313666Z              Theme: jekyll-theme-primer
+2026-10-14T15:28:49.7314085Z       Theme source: /usr/local/bundle/gems/jekyll-theme-primer-0.6.0
+2026-10-14T15:28:49.7314446Z          Requiring: jekyll-github-metadata
+2026-10-14T15:28:49.7314676Z          Requiring: jekyll-seo-tag
+2026-10-14T15:28:49.7315053Z          Requiring: jekyll-coffeescript
+2026-10-14T15:28:49.7315423Z          Requiring: jekyll-commonmark-ghpages
+2026-10-14T15:28:49.7315759Z          Requiring: jekyll-gist
+2026-10-14T15:28:49.7315986Z          Requiring: jekyll-github-metadata
+2026-10-14T15:28:49.7316207Z          Requiring: jekyll-paginate
+2026-10-14T15:28:49.7316422Z          Requiring: jekyll-relative-links
+2026-10-14T15:28:49.7316884Z          Requiring: jekyll-optional-front-matter
+2026-10-14T15:28:49.7317251Z          Requiring: jekyll-readme-index
+2026-10-14T15:28:49.7317596Z          Requiring: jekyll-default-layout
+2026-10-14T15:28:49.7317881Z          Requiring: jekyll-titles-from-headings
+2026-10-14T15:28:49.7318123Z    GitHub Metadata: Initializing...
+2026-10-14T15:28:49.7318328Z             Source: /github/workspace/.
+2026-10-14T15:28:49.7318545Z        Destination: /github/workspace/./_site
+2026-10-14T15:28:49.7318811Z  Incremental build: disabled. Enable with --incremental
+2026-10-14T15:28:49.7319445Z       Generating... 
+2026-10-14T15:28:49.7324989Z         Generating: JekyllOptionalFrontMatter::Generator finished in 0.00030429 seconds.
+2026-10-14T15:28:49.7325614Z         Generating: JekyllReadmeIndex::Generator finished in 0.001436463 seconds.
+2026-10-14T15:28:49.7326137Z         Generating: Jekyll::Paginate::Pagination finished in 3.825e-06 seconds.
+2026-10-14T15:28:49.7326848Z         Generating: JekyllRelativeLinks::Generator finished in 0.000272372 seconds.
+2026-10-14T15:28:49.7327331Z         Generating: JekyllDefaultLayout::Generator finished in 6.63e-05 seconds.
+2026-10-14T15:28:49.7327840Z          Requiring: kramdown-parser-gfm
+2026-10-14T15:28:49.7328364Z         Generating: JekyllTitlesFromHeadings::Generator finished in 0.00591633 seconds.
+2026-10-14T15:28:49.7328877Z          Rendering: assets/css/style.scss
+2026-10-14T15:28:49.7329229Z   Pre-Render Hooks: assets/css/style.scss
+2026-10-14T15:28:49.7329566Z   Rendering Markup: assets/css/style.scss
+2026-10-14T15:28:49.7329909Z          Rendering: KNOWN_ISSUES.md
+2026-10-14T15:28:49.7330230Z   Pre-Render Hooks: KNOWN_ISSUES.md
+2026-10-14T15:28:49.7330617Z   Rendering Markup: KNOWN_ISSUES.md
+2026-10-14T15:28:49.7330946Z   Rendering Layout: KNOWN_ISSUES.md
+2026-10-14T15:28:49.7331517Z      Layout source: theme
+2026-10-14T15:28:49.7331853Z    GitHub Metadata: Generating for AdguardTeam/AdguardFilters
+2026-10-14T15:28:49.7332472Z    GitHub Metadata: Calling @client.repository("AdguardTeam/AdguardFilters", {:accept=>"application/vnd.github.drax-preview+json"})
+2026-10-14T15:28:49.7333026Z    GitHub Metadata: Calling @client.pages("AdguardTeam/AdguardFilters", {})
+2026-10-14T15:28:49.7333328Z          Rendering: README.md
+2026-10-14T15:28:49.7333529Z   Pre-Render Hooks: README.md
+2026-10-14T15:28:49.7333720Z   Rendering Markup: README.md
+2026-10-14T15:28:49.7333905Z   Rendering Layout: README.md
+2026-10-14T15:28:49.7334096Z      Layout source: theme
+2026-10-14T15:28:49.7334425Z            Writing: /github/workspace/_site/assets/css/style.css
+2026-10-14T15:28:49.7334857Z            Writing: /github/workspace/_site/KNOWN_ISSUES.html
+2026-10-14T15:28:49.7335182Z            Writing: /github/workspace/_site/index.html
+2026-10-14T15:28:49.7335481Z                     done in 1.623 seconds.
+2026-10-14T15:28:49.7335846Z  Auto-regeneration: disabled. Use --watch to enable.
+2026-10-14T15:28:49.9472175Z ##[group]Run actions/upload-pages-artifact@v3
+2026-10-14T15:28:49.9472436Z with:
+2026-10-14T15:28:49.9472601Z   path: ./_site
+2026-10-14T15:28:49.9472777Z   name: github-pages
+2026-10-14T15:28:49.9472954Z   retention-days: 1
+2026-10-14T15:28:49.9473123Z ##[endgroup]
+2026-10-14T15:28:49.9523216Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+2026-10-14T15:28:49.9562458Z ##[group]Run echo ::group::Archive artifact
+2026-10-14T15:28:49.9562769Z [36;1mecho ::group::Archive artifact[0m
+2026-10-14T15:28:49.9562996Z [36;1mtar \[0m
+2026-10-14T15:28:49.9563202Z [36;1m  --dereference --hard-dereference \[0m
+2026-10-14T15:28:49.9563464Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-10-14T15:28:49.9563718Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-10-14T15:28:49.9563955Z [36;1m  --exclude=.git \[0m
+2026-10-14T15:28:49.9564159Z [36;1m  --exclude=.github \[0m
+2026-10-14T15:28:49.9564374Z [36;1m  .[0m
+2026-10-14T15:28:49.9564577Z [36;1mecho ::endgroup::[0m
+2026-10-14T15:28:49.9589725Z shell: /usr/bin/sh -e {0}
+2026-10-14T15:28:49.9589938Z env:
+2026-10-14T15:28:49.9590102Z   INPUT_PATH: ./_site
+2026-10-14T15:28:49.9590288Z ##[endgroup]
+2026-10-14T15:28:49.9637792Z ##[group]Archive artifact
+2026-10-14T15:28:49.9648982Z ./
+2026-10-14T15:28:49.9649246Z ./AnnoyancesFilter/
+2026-10-14T15:28:49.9649443Z ./AnnoyancesFilter/Other/
+2026-10-14T15:28:49.9649655Z ./AnnoyancesFilter/Other/sections/
+2026-10-14T15:28:49.9649903Z ./AnnoyancesFilter/Other/sections/annoyances.txt
+2026-10-14T15:28:49.9651456Z ./AnnoyancesFilter/Other/sections/tweaks.txt
+2026-10-14T15:28:49.9652997Z ./AnnoyancesFilter/Other/sections/self-promo.txt
+2026-10-14T15:28:49.9656186Z ./AnnoyancesFilter/MobileApp/
+2026-10-14T15:28:49.9656664Z ./AnnoyancesFilter/MobileApp/sections/
+2026-10-14T15:28:49.9657019Z ./AnnoyancesFilter/MobileApp/sections/mobile-app_general.txt
+2026-10-14T15:28:49.9657361Z ./AnnoyancesFilter/MobileApp/sections/mobile-app_allowlist.txt
+2026-10-14T15:28:49.9657693Z ./AnnoyancesFilter/MobileApp/sections/mobile-app_specific.txt
+2026-10-14T15:28:49.9659536Z ./AnnoyancesFilter/Popups/
+2026-10-14T15:28:49.9659826Z ./AnnoyancesFilter/Popups/sections/
+2026-10-14T15:28:49.9660117Z ./AnnoyancesFilter/Popups/sections/subscriptions_allowlist.txt
+2026-10-14T15:28:49.9660449Z ./AnnoyancesFilter/Popups/sections/subscriptions_specific.txt
+2026-10-14T15:28:49.9664779Z ./AnnoyancesFilter/Popups/sections/antiadblock.txt
+2026-10-14T15:28:49.9666967Z ./AnnoyancesFilter/Popups/sections/push-notifications_general.txt
+2026-10-14T15:28:49.9667627Z ./AnnoyancesFilter/Popups/sections/push-notifications_specific.txt
+2026-10-14T15:28:49.9668148Z ./AnnoyancesFilter/Popups/sections/popups_specific.txt
+2026-10-14T15:28:49.9671100Z ./AnnoyancesFilter/Popups/sections/push-notifications_allowlist.txt
+2026-10-14T15:28:49.9671615Z ./AnnoyancesFilter/Popups/sections/popups_general.txt
+2026-10-14T15:28:49.9672307Z ./AnnoyancesFilter/Popups/sections/subscriptions_general.txt
+2026-10-14T15:28:49.9672793Z ./AnnoyancesFilter/Popups/sections/popups_allowlist.txt
+2026-10-14T15:28:49.9673063Z ./AnnoyancesFilter/Widgets/
+2026-10-14T15:28:49.9673321Z ./AnnoyancesFilter/Widgets/sections/
+2026-10-14T15:28:49.9673680Z ./AnnoyancesFilter/Widgets/sections/widgets.txt
+2026-10-14T15:28:49.9674038Z ./AnnoyancesFilter/Cookies/
+2026-10-14T15:28:49.9674309Z ./AnnoyancesFilter/Cookies/sections/
+2026-10-14T15:28:49.9674557Z ./AnnoyancesFilter/Cookies/sections/cookies_specific.txt
+2026-10-14T15:28:49.9682938Z ./AnnoyancesFilter/Cookies/sections/cookies_allowlist.txt
+2026-10-14T15:28:49.9685307Z ./AnnoyancesFilter/Cookies/sections/cookies_general.txt
+2026-10-14T15:28:49.9685847Z ./SocialFilter/
+2026-10-14T15:28:49.9686103Z ./SocialFilter/sections/
+2026-10-14T15:28:49.9686413Z ./SocialFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9686889Z ./SocialFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9687225Z ./SocialFilter/sections/general_url.txt
+2026-10-14T15:28:49.9687592Z ./SocialFilter/sections/popups.txt
+2026-10-14T15:28:49.9688128Z ./SocialFilter/sections/specific.txt
+2026-10-14T15:28:49.9693664Z ./SocialFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9694037Z ./SocialFilter/sections/social_trackers.txt
+2026-10-14T15:28:49.9694359Z ./config.yml
+2026-10-14T15:28:49.9694600Z ./package-lock.json
+2026-10-14T15:28:49.9695347Z ./ItalianFilter/
+2026-10-14T15:28:49.9695597Z ./ItalianFilter/sections/
+2026-10-14T15:28:49.9695903Z ./ItalianFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9696265Z ./ItalianFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9696690Z ./ItalianFilter/sections/adservers.txt
+2026-10-14T15:28:49.9697020Z ./ItalianFilter/sections/general_url.txt
+2026-10-14T15:28:49.9697394Z ./ItalianFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9697789Z ./ItalianFilter/sections/specific.txt
+2026-10-14T15:28:49.9698119Z ./ItalianFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9698443Z ./DutchFilter/
+2026-10-14T15:28:49.9698678Z ./DutchFilter/sections/
+2026-10-14T15:28:49.9698973Z ./DutchFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9699320Z ./DutchFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9699634Z ./DutchFilter/sections/adservers.txt
+2026-10-14T15:28:49.9699947Z ./DutchFilter/sections/general_url.txt
+2026-10-14T15:28:49.9700303Z ./DutchFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9700669Z ./DutchFilter/sections/specific.txt
+2026-10-14T15:28:49.9700988Z ./DutchFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9701328Z ./DutchFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9701678Z ./DutchFilter/sections/replace.txt
+2026-10-14T15:28:49.9701979Z ./CyrillicFilters/
+2026-10-14T15:28:49.9702229Z ./CyrillicFilters/Kazakh/
+2026-10-14T15:28:49.9702438Z ./CyrillicFilters/Kazakh/sections/
+2026-10-14T15:28:49.9702668Z ./CyrillicFilters/Kazakh/sections/filter.txt
+2026-10-14T15:28:49.9702907Z ./CyrillicFilters/RussianFilter/
+2026-10-14T15:28:49.9703120Z ./CyrillicFilters/RussianFilter/sections/
+2026-10-14T15:28:49.9703399Z ./CyrillicFilters/RussianFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9703719Z ./CyrillicFilters/RussianFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9704040Z ./CyrillicFilters/RussianFilter/sections/specific.txt
+2026-10-14T15:28:49.9705663Z ./CyrillicFilters/RussianFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9706387Z ./CyrillicFilters/RussianFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9707365Z ./CyrillicFilters/RussianFilter/sections/replace.txt
+2026-10-14T15:28:49.9707761Z ./CyrillicFilters/UkrainianFilter/
+2026-10-14T15:28:49.9708108Z ./CyrillicFilters/UkrainianFilter/sections/
+2026-10-14T15:28:49.9708528Z ./CyrillicFilters/UkrainianFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9709046Z ./CyrillicFilters/UkrainianFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9709562Z ./CyrillicFilters/UkrainianFilter/sections/specific.txt
+2026-10-14T15:28:49.9710020Z ./CyrillicFilters/UkrainianFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9710703Z ./CyrillicFilters/UkrainianFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9711201Z ./CyrillicFilters/UkrainianFilter/sections/replace.txt
+2026-10-14T15:28:49.9711598Z ./CyrillicFilters/Bulgarian/
+2026-10-14T15:28:49.9711902Z ./CyrillicFilters/Bulgarian/sections/
+2026-10-14T15:28:49.9712265Z ./CyrillicFilters/Bulgarian/sections/filter.txt
+2026-10-14T15:28:49.9712638Z ./CyrillicFilters/common-sections/
+2026-10-14T15:28:49.9713008Z ./CyrillicFilters/common-sections/general_elemhide.txt
+2026-10-14T15:28:49.9713430Z ./CyrillicFilters/common-sections/allowlist.txt
+2026-10-14T15:28:49.9713809Z ./CyrillicFilters/common-sections/adservers.txt
+2026-10-14T15:28:49.9714198Z ./CyrillicFilters/common-sections/general_url.txt
+2026-10-14T15:28:49.9714641Z ./CyrillicFilters/common-sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9715078Z ./CyrillicFilters/common-sections/specific.txt
+2026-10-14T15:28:49.9715465Z ./CyrillicFilters/common-sections/antiadblock.txt
+2026-10-14T15:28:49.9715789Z ./CyrillicFilters/common-sections/general_extensions.txt
+2026-10-14T15:28:49.9716167Z ./CyrillicFilters/Belarusian/
+2026-10-14T15:28:49.9716383Z ./CyrillicFilters/Belarusian/sections/
+2026-10-14T15:28:49.9716828Z ./CyrillicFilters/Belarusian/sections/filter.txt
+2026-10-14T15:28:49.9717069Z ./TurkishFilter/
+2026-10-14T15:28:49.9717238Z ./TurkishFilter/sections/
+2026-10-14T15:28:49.9717444Z ./TurkishFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9717677Z ./TurkishFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9717893Z ./TurkishFilter/sections/adservers.txt
+2026-10-14T15:28:49.9718106Z ./TurkishFilter/sections/general_url.txt
+2026-10-14T15:28:49.9718353Z ./TurkishFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9718592Z ./TurkishFilter/sections/specific.txt
+2026-10-14T15:28:49.9718987Z ./TurkishFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9719393Z ./TurkishFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9719865Z ./CONTRIBUTING.md
+2026-10-14T15:28:49.9720146Z ./JapaneseFilter/
+2026-10-14T15:28:49.9720400Z ./JapaneseFilter/sections/
+2026-10-14T15:28:49.9720725Z ./JapaneseFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9721107Z ./JapaneseFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9721446Z ./JapaneseFilter/sections/adservers.txt
+2026-10-14T15:28:49.9721783Z ./JapaneseFilter/sections/general_url.txt
+2026-10-14T15:28:49.9722158Z ./JapaneseFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9722544Z ./JapaneseFilter/sections/specific.txt
+2026-10-14T15:28:49.9726306Z ./JapaneseFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9726854Z ./JapaneseFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9727307Z ./ExperimentalFilter/
+2026-10-14T15:28:49.9727591Z ./ExperimentalFilter/sections/
+2026-10-14T15:28:49.9727917Z ./ExperimentalFilter/sections/Dangerous/
+2026-10-14T15:28:49.9728292Z ./ExperimentalFilter/sections/Dangerous/filter.txt
+2026-10-14T15:28:49.9728679Z ./ExperimentalFilter/sections/Other/
+2026-10-14T15:28:49.9729040Z ./ExperimentalFilter/sections/Other/filter.txt
+2026-10-14T15:28:49.9729414Z ./ExperimentalFilter/sections/English/
+2026-10-14T15:28:49.9729792Z ./ExperimentalFilter/sections/English/allowlist.txt
+2026-10-14T15:28:49.9730264Z ./ExperimentalFilter/sections/English/advertising_networks.txt
+2026-10-14T15:28:49.9730736Z ./ExperimentalFilter/sections/English/common_css.txt
+2026-10-14T15:28:49.9731149Z ./ExperimentalFilter/sections/English/common_js.txt
+2026-10-14T15:28:49.9731593Z ./ExperimentalFilter/sections/English/specific_web_sites.txt
+2026-10-14T15:28:49.9732048Z ./ExperimentalFilter/sections/English/common_html.txt
+2026-10-14T15:28:49.9732506Z ./ExperimentalFilter/sections/English/common_urls_unsorted.txt
+2026-10-14T15:28:49.9732983Z ./ExperimentalFilter/sections/English/direct_adverts.txt
+2026-10-14T15:28:49.9733396Z ./ExperimentalFilter/sections/Russian/
+2026-10-14T15:28:49.9733763Z ./ExperimentalFilter/sections/Russian/allowlist.txt
+2026-10-14T15:28:49.9734208Z ./ExperimentalFilter/sections/Russian/advertising_networks.txt
+2026-10-14T15:28:49.9734835Z ./ExperimentalFilter/sections/Russian/common_css.txt
+2026-10-14T15:28:49.9735172Z ./ExperimentalFilter/sections/Russian/common_js.txt
+2026-10-14T15:28:49.9735595Z ./ExperimentalFilter/sections/Russian/specific_web_sites.txt
+2026-10-14T15:28:49.9736064Z ./ExperimentalFilter/sections/Russian/common_html.txt
+2026-10-14T15:28:49.9736534Z ./ExperimentalFilter/sections/Russian/common_urls_unsorted.txt
+2026-10-14T15:28:49.9737114Z ./ExperimentalFilter/sections/Russian/direct_adverts.txt
+2026-10-14T15:28:49.9737530Z ./ExperimentalFilter/sections/Social/
+2026-10-14T15:28:49.9737893Z ./ExperimentalFilter/sections/Social/filter.txt
+2026-10-14T15:28:49.9738265Z ./ExperimentalFilter/sections/Spyware/
+2026-10-14T15:28:49.9738560Z ./ExperimentalFilter/sections/Spyware/filter.txt
+2026-10-14T15:28:49.9738809Z ./ExperimentalFilter/sections/Mobile/
+2026-10-14T15:28:49.9739051Z ./ExperimentalFilter/sections/Mobile/filter.txt
+2026-10-14T15:28:49.9739279Z ./ChineseFilter/
+2026-10-14T15:28:49.9739461Z ./ChineseFilter/sections/
+2026-10-14T15:28:49.9739897Z ./ChineseFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9740258Z ./ChineseFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9740646Z ./ChineseFilter/sections/adservers.txt
+2026-10-14T15:28:49.9740981Z ./ChineseFilter/sections/general_url.txt
+2026-10-14T15:28:49.9741351Z ./ChineseFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9741728Z ./ChineseFilter/sections/specific.txt
+2026-10-14T15:28:49.9742059Z ./ChineseFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9742416Z ./ChineseFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9742773Z ./ChineseFilter/sections/replace.txt
+2026-10-14T15:28:49.9742977Z ./GermanFilter/
+2026-10-14T15:28:49.9743141Z ./GermanFilter/sections/
+2026-10-14T15:28:49.9743457Z ./GermanFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9743814Z ./GermanFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9744142Z ./GermanFilter/sections/adservers.txt
+2026-10-14T15:28:49.9744482Z ./GermanFilter/sections/general_url.txt
+2026-10-14T15:28:49.9744821Z ./GermanFilter/sections/specific.txt
+2026-10-14T15:28:49.9745159Z ./GermanFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9745515Z ./GermanFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9745881Z ./GermanFilter/sections/replace.txt
+2026-10-14T15:28:49.9746192Z ./TrackParamFilter/
+2026-10-14T15:28:49.9746485Z ./TrackParamFilter/sections/
+2026-10-14T15:28:49.9746903Z ./TrackParamFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9747258Z ./TrackParamFilter/sections/general_url.txt
+2026-10-14T15:28:49.9747495Z ./TrackParamFilter/sections/specific.txt
+2026-10-14T15:28:49.9747716Z ./pull_request_template.md
+2026-10-14T15:28:49.9747904Z ./LICENSE
+2026-10-14T15:28:49.9748050Z ./assets/
+2026-10-14T15:28:49.9748261Z ./assets/css/
+2026-10-14T15:28:49.9748506Z ./assets/css/style.css
+2026-10-14T15:28:49.9748760Z ./SpanishFilter/
+2026-10-14T15:28:49.9749013Z ./SpanishFilter/sections/
+2026-10-14T15:28:49.9749354Z ./SpanishFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9749723Z ./SpanishFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9750062Z ./SpanishFilter/sections/adservers.txt
+2026-10-14T15:28:49.9750403Z ./SpanishFilter/sections/general_url.txt
+2026-10-14T15:28:49.9750766Z ./SpanishFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9751143Z ./SpanishFilter/sections/specific.txt
+2026-10-14T15:28:49.9751478Z ./SpanishFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9751778Z ./SpanishFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9752022Z ./SpanishFilter/sections/replace.txt
+2026-10-14T15:28:49.9752227Z ./KNOWN_ISSUES.html
+2026-10-14T15:28:49.9752392Z ./index.html
+2026-10-14T15:28:49.9752548Z ./SpywareFilter/
+2026-10-14T15:28:49.9752720Z ./SpywareFilter/sections/
+2026-10-14T15:28:49.9752923Z ./SpywareFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9753258Z ./SpywareFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9753595Z ./SpywareFilter/sections/general_url.txt
+2026-10-14T15:28:49.9754080Z ./SpywareFilter/sections/mobile_allowlist.txt
+2026-10-14T15:28:49.9754460Z ./SpywareFilter/sections/cookies_specific.txt
+2026-10-14T15:28:49.9771857Z ./SpywareFilter/sections/specific.txt
+2026-10-14T15:28:49.9772297Z ./SpywareFilter/sections/tracking_servers.txt
+2026-10-14T15:28:49.9772773Z ./SpywareFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9773162Z ./SpywareFilter/sections/mobile.txt
+2026-10-14T15:28:49.9773559Z ./SpywareFilter/sections/tracking_servers_firstparty.txt
+2026-10-14T15:28:49.9773993Z ./SpywareFilter/sections/cookies_allowlist.txt
+2026-10-14T15:28:49.9774376Z ./SpywareFilter/sections/cookies_general.txt
+2026-10-14T15:28:49.9774715Z ./FrenchFilter/
+2026-10-14T15:28:49.9774976Z ./FrenchFilter/sections/
+2026-10-14T15:28:49.9775277Z ./FrenchFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9775632Z ./FrenchFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9775948Z ./FrenchFilter/sections/adservers.txt
+2026-10-14T15:28:49.9776164Z ./FrenchFilter/sections/general_url.txt
+2026-10-14T15:28:49.9776416Z ./FrenchFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9776958Z ./FrenchFilter/sections/specific.txt
+2026-10-14T15:28:49.9777181Z ./FrenchFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9777415Z ./FrenchFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9777656Z ./FrenchFilter/sections/replace.txt
+2026-10-14T15:28:49.9777855Z ./watchers.yml
+2026-10-14T15:28:49.9778009Z ./ddl_ignore.txt
+2026-10-14T15:28:49.9778167Z ./BaseFilter/
+2026-10-14T15:28:49.9778324Z ./BaseFilter/sections/
+2026-10-14T15:28:49.9778519Z ./BaseFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9778745Z ./BaseFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9778953Z ./BaseFilter/sections/adservers.txt
+2026-10-14T15:28:49.9779159Z ./BaseFilter/sections/general_url.txt
+2026-10-14T15:28:49.9779385Z ./BaseFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9779617Z ./BaseFilter/sections/banner_sizes.txt
+2026-10-14T15:28:49.9779834Z ./BaseFilter/sections/specific.txt
+2026-10-14T15:28:49.9780208Z ./BaseFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9787775Z ./BaseFilter/sections/foreign.txt
+2026-10-14T15:28:49.9793589Z ./BaseFilter/sections/allowlist_stealth.txt
+2026-10-14T15:28:49.9795194Z ./BaseFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9799729Z ./BaseFilter/sections/cryptominers.txt
+2026-10-14T15:28:49.9800068Z ./BaseFilter/sections/replace.txt
+2026-10-14T15:28:49.9800401Z ./BaseFilter/sections/content_blocker.txt
+2026-10-14T15:28:49.9801557Z ./README.md
+2026-10-14T15:28:49.9801793Z ./package.json
+2026-10-14T15:28:49.9802027Z ./PolishFilter/
+2026-10-14T15:28:49.9802275Z ./PolishFilter/sections/
+2026-10-14T15:28:49.9802579Z ./PolishFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9802940Z ./PolishFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9803270Z ./PolishFilter/sections/adservers.txt
+2026-10-14T15:28:49.9803594Z ./PolishFilter/sections/general_url.txt
+2026-10-14T15:28:49.9803895Z ./PolishFilter/sections/adservers_firstparty.txt
+2026-10-14T15:28:49.9804149Z ./PolishFilter/sections/specific.txt
+2026-10-14T15:28:49.9805929Z ./PolishFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9806242Z ./KNOWN_ISSUES.md
+2026-10-14T15:28:49.9806484Z ./MailTrackingFilter/
+2026-10-14T15:28:49.9806851Z ./MailTrackingFilter/sections/
+2026-10-14T15:28:49.9807166Z ./MailTrackingFilter/sections/allowlist.txt
+2026-10-14T15:28:49.9807534Z ./MailTrackingFilter/sections/general_url.txt
+2026-10-14T15:28:49.9807900Z ./MailTrackingFilter/sections/specific.txt
+2026-10-14T15:28:49.9808229Z ./UsefulAdsFilter/
+2026-10-14T15:28:49.9808422Z ./UsefulAdsFilter/sections/
+2026-10-14T15:28:49.9808633Z ./UsefulAdsFilter/sections/usefulads.txt
+2026-10-14T15:28:49.9808939Z ./MobileFilter/
+2026-10-14T15:28:49.9809190Z ./MobileFilter/sections/
+2026-10-14T15:28:49.9809495Z ./MobileFilter/sections/general_elemhide.txt
+2026-10-14T15:28:49.9809846Z ./MobileFilter/sections/adservers.txt
+2026-10-14T15:28:49.9810174Z ./MobileFilter/sections/general_url.txt
+2026-10-14T15:28:49.9810504Z ./MobileFilter/sections/antiadblock.txt
+2026-10-14T15:28:49.9810878Z ./MobileFilter/sections/specific_web.txt
+2026-10-14T15:28:49.9813057Z ./MobileFilter/sections/allowlist_web.txt
+2026-10-14T15:28:49.9813437Z ./MobileFilter/sections/general_extensions.txt
+2026-10-14T15:28:49.9813810Z ./MobileFilter/sections/specific_app.txt
+2026-10-14T15:28:49.9814526Z ./MobileFilter/sections/allowlist_app.txt
+2026-10-14T15:28:49.9814870Z ./MobileFilter/sections/replace.txt
+2026-10-14T15:28:49.9817622Z ##[endgroup]
+2026-10-14T15:28:49.9830661Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=30]
+2026-10-14T15:28:49.9833803Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+2026-10-14T15:28:49.9838317Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-14T15:28:49.9840591Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+2026-10-14T15:28:49.9843381Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-14T15:28:49.9844980Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+2026-10-14T15:28:49.9892130Z ##[group]Run actions/upload-artifact@v4
+2026-10-14T15:28:49.9892378Z with:
+2026-10-14T15:28:49.9892547Z   name: github-pages
+2026-10-14T15:28:49.9892766Z   path: /home/runner/work/_temp/artifact.tar
+2026-10-14T15:28:49.9892994Z   retention-days: 1
+2026-10-14T15:28:49.9893167Z   if-no-files-found: error
+2026-10-14T15:28:49.9893355Z   compression-level: 6
+2026-10-14T15:28:49.9893532Z   overwrite: false
+2026-10-14T15:28:49.9893713Z   include-hidden-files: false
+2026-10-14T15:28:49.9893907Z ##[endgroup]
+2026-10-14T15:28:50.1134501Z (node:2448) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T15:28:50.1135183Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T15:28:50.1209595Z With the provided path, there will be 1 file uploaded
+2026-10-14T15:28:50.1227169Z Artifact name is valid!
+2026-10-14T15:28:50.1227643Z Root directory input is valid!
+2026-10-14T15:28:50.4774238Z Beginning upload of artifact content to blob storage
+2026-10-14T15:28:50.8548036Z (node:2448) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T15:28:51.6271549Z Uploaded bytes 4647193
+2026-10-14T15:28:51.6887513Z Finished uploading artifact content to blob storage!
+2026-10-14T15:28:51.6888257Z SHA256 digest of uploaded artifact zip is 4a2d5075e75aff1a49a2559a8a1523654b8f217a3d451766a4841b5ee6a82309
+2026-10-14T15:28:51.6889802Z Finalizing artifact upload
+2026-10-14T15:28:51.9469966Z Artifact github-pages.zip successfully finalized. Artifact ID 11907600546
+2026-10-14T15:28:51.9470790Z Artifact github-pages has been successfully uploaded! Final size is 4647193 bytes. Artifact ID is 11907600546
+2026-10-14T15:28:51.9476270Z Artifact download URL: https://github.com/AdguardTeam/AdguardFilters/actions/runs/38589609401/artifacts/11907600546
+2026-10-14T15:28:51.9574928Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1972]
+2026-10-14T15:28:51.9668442Z Post job cleanup.
+2026-10-14T15:28:52.0340927Z [command]/usr/bin/git version
+2026-10-14T15:28:52.0371527Z git version 2.55.0
+2026-10-14T15:28:52.0404366Z Temporarily overriding HOME='/home/runner/work/_temp/f8321d55-7532-4b8e-8c53-a2d30699f73a' before making global git config changes
+2026-10-14T15:28:52.0405698Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:28:52.0408985Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AdguardFilters/AdguardFilters
+2026-10-14T15:28:52.0434317Z Removing SSH command configuration
+2026-10-14T15:28:52.0439008Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:28:52.0467800Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:28:52.0654553Z Removing HTTP extra header
+2026-10-14T15:28:52.0659053Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:28:52.0685709Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:28:52.0867935Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:28:52.0872995Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:28:52.0894720Z includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git.path
+2026-10-14T15:28:52.0895492Z includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git/worktrees/*.path
+2026-10-14T15:28:52.0895879Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:28:52.0896168Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:28:52.0901806Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git.path
+2026-10-14T15:28:52.0920307Z /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:52.0928111Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-570a7647\-ea85\-4816\-a023\-a546a871a694\.config
+2026-10-14T15:28:52.0955505Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git/worktrees/*.path
+2026-10-14T15:28:52.0974924Z /home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:52.0982110Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AdguardFilters/AdguardFilters/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-570a7647\-ea85\-4816\-a023\-a546a871a694\.config
+2026-10-14T15:28:52.1011410Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:28:52.1029152Z /github/runner_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:52.1034625Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-570a7647\-ea85\-4816\-a023\-a546a871a694\.config
+2026-10-14T15:28:52.1060858Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:28:52.1078768Z /github/runner_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config
+2026-10-14T15:28:52.1084849Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-570a7647\-ea85\-4816\-a023\-a546a871a694\.config
+2026-10-14T15:28:52.1113217Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:28:52.1293166Z Removing credentials config '/home/runner/work/_temp/git-credentials-570a7647-ea85-4816-a023-a546a871a694.config'
+2026-10-14T15:28:52.1418436Z Cleaning up orphan processes
+2026-10-14T15:28:52.1706406Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

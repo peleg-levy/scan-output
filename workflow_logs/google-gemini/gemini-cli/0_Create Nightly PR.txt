@@ -1,0 +1,449 @@
+﻿2026-10-13T20:45:41.5076174Z Current runner version: '2.337.0'
+2026-10-13T20:45:41.5107792Z ##[group]Runner Image Provisioner
+2026-10-13T20:45:41.5108794Z Hosted Compute Agent
+2026-10-13T20:45:41.5109527Z Version: 20261002.596
+2026-10-13T20:45:41.5110167Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T20:45:41.5110983Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T20:45:41.5111687Z Worker ID: {ff640b42-76cf-40fc-957e-e1bc8ae21376}
+2026-10-13T20:45:41.5112468Z Region: southcentralus
+2026-10-13T20:45:41.5113126Z Cloud: Azure
+2026-10-13T20:45:41.5113704Z ##[endgroup]
+2026-10-13T20:45:41.5115690Z ##[group]Operating System
+2026-10-13T20:45:41.5116360Z Ubuntu
+2026-10-13T20:45:41.5116995Z 24.04.5
+2026-10-13T20:45:41.5117789Z LTS
+2026-10-13T20:45:41.5118322Z ##[endgroup]
+2026-10-13T20:45:41.5118994Z ##[group]Runner Image
+2026-10-13T20:45:41.5119620Z Image: ubuntu-24.04
+2026-10-13T20:45:41.5120271Z Version: 20261004.327.1
+2026-10-13T20:45:41.5121608Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T20:45:41.5123253Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T20:45:41.5124281Z ##[endgroup]
+2026-10-13T20:45:41.5125774Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T20:45:41.5128205Z Contents: write
+2026-10-13T20:45:41.5128955Z Issues: write
+2026-10-13T20:45:41.5129541Z Metadata: read
+2026-10-13T20:45:41.5130145Z PullRequests: write
+2026-10-13T20:45:41.5130835Z ##[endgroup]
+2026-10-13T20:45:41.5132882Z Secret source: Actions
+2026-10-13T20:45:41.5133988Z Cache mode: write
+2026-10-13T20:45:41.5135382Z Prepare workflow directory
+2026-10-13T20:45:41.5472784Z Prepare all required actions
+2026-10-13T20:45:41.5520216Z Getting action download info
+2026-10-13T20:45:41.8153067Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-13T20:45:41.9172705Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-13T20:45:42.1052045Z Complete job name: Create Nightly PR
+2026-10-13T20:45:42.1859582Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-13T20:45:42.1860670Z with:
+2026-10-13T20:45:42.1861123Z   persist-credentials: false
+2026-10-13T20:45:42.1861634Z   ref: main
+2026-10-13T20:45:42.1862078Z   repository: google-gemini/gemini-cli
+2026-10-13T20:45:42.1865785Z   token: ***
+2026-10-13T20:45:42.1866224Z   ssh-strict: true
+2026-10-13T20:45:42.1866667Z   ssh-user: git
+2026-10-13T20:45:42.1867344Z   clean: true
+2026-10-13T20:45:42.1867808Z   sparse-checkout-cone-mode: true
+2026-10-13T20:45:42.1868358Z   fetch-depth: 1
+2026-10-13T20:45:42.1868809Z   fetch-tags: false
+2026-10-13T20:45:42.1869267Z   show-progress: true
+2026-10-13T20:45:42.1869719Z   lfs: false
+2026-10-13T20:45:42.1870141Z   submodules: false
+2026-10-13T20:45:42.1870598Z   set-safe-directory: true
+2026-10-13T20:45:42.1871350Z ##[endgroup]
+2026-10-13T20:45:42.2850858Z Syncing repository: google-gemini/gemini-cli
+2026-10-13T20:45:42.2852674Z ##[group]Getting Git version info
+2026-10-13T20:45:42.2853486Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-13T20:45:42.2854581Z [command]/usr/bin/git version
+2026-10-13T20:45:42.2945605Z git version 2.55.0
+2026-10-13T20:45:42.2966219Z ##[endgroup]
+2026-10-13T20:45:42.2980823Z Temporarily overriding HOME='/home/runner/work/_temp/45e7e24e-b6db-4bfd-b3a1-fb67f40986a5' before making global git config changes
+2026-10-13T20:45:42.2983295Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T20:45:42.2985839Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-13T20:45:42.3036732Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-13T20:45:42.3041202Z ##[group]Initializing the repository
+2026-10-13T20:45:42.3045911Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-13T20:45:42.3162763Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T20:45:42.3164181Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T20:45:42.3165435Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T20:45:42.3166823Z hint: call:
+2026-10-13T20:45:42.3167968Z hint:
+2026-10-13T20:45:42.3169244Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T20:45:42.3170893Z hint:
+2026-10-13T20:45:42.3172334Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T20:45:42.3174392Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T20:45:42.3175980Z hint:
+2026-10-13T20:45:42.3176869Z hint: 	git branch -m <name>
+2026-10-13T20:45:42.3178231Z hint:
+2026-10-13T20:45:42.3179726Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T20:45:42.3181939Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-13T20:45:42.3185244Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-13T20:45:42.3263265Z ##[endgroup]
+2026-10-13T20:45:42.3264165Z ##[group]Disabling automatic garbage collection
+2026-10-13T20:45:42.3266995Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T20:45:42.3295635Z ##[endgroup]
+2026-10-13T20:45:42.3296387Z ##[group]Setting up auth
+2026-10-13T20:45:42.3302174Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T20:45:42.3332692Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T20:45:42.3833531Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T20:45:42.3864291Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T20:45:42.4083659Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T20:45:42.4120738Z ##[endgroup]
+2026-10-13T20:45:42.4121997Z ##[group]Fetching the repository
+2026-10-13T20:45:42.4130194Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main*:refs/remotes/origin/main* +refs/tags/main*:refs/tags/main*
+2026-10-13T20:45:44.5869858Z From https://github.com/google-gemini/gemini-cli
+2026-10-13T20:45:44.5872167Z  * [new branch]      main       -> origin/main
+2026-10-13T20:45:44.5876215Z ##[endgroup]
+2026-10-13T20:45:44.5878283Z ##[group]Determining the checkout info
+2026-10-13T20:45:44.5881640Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-13T20:45:44.5907737Z   origin/main
+2026-10-13T20:45:44.5917687Z ##[endgroup]
+2026-10-13T20:45:44.5920550Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T20:45:44.5971642Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T20:45:44.6003989Z ##[group]Checking out the ref
+2026-10-13T20:45:44.6006608Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T20:45:45.0176195Z Switched to a new branch 'main'
+2026-10-13T20:45:45.0185334Z branch 'main' set up to track 'origin/main'.
+2026-10-13T20:45:45.0199095Z ##[endgroup]
+2026-10-13T20:45:45.0251150Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T20:45:45.0273975Z 29315e53d0c2e9b78f301f3c24db235b0f3fa597
+2026-10-13T20:45:45.0282718Z ##[group]Removing auth
+2026-10-13T20:45:45.0286580Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T20:45:45.0315637Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T20:45:45.0539075Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T20:45:45.0565346Z http.https://github.com/.extraheader
+2026-10-13T20:45:45.0578189Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T20:45:45.0604948Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T20:45:45.0824591Z ##[endgroup]
+2026-10-13T20:45:45.1076419Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-10-13T20:45:45.1076927Z with:
+2026-10-13T20:45:45.1077659Z   node-version-file: .nvmrc
+2026-10-13T20:45:45.1077969Z   cache: npm
+2026-10-13T20:45:45.1078216Z   always-auth: false
+2026-10-13T20:45:45.1078512Z   check-latest: false
+2026-10-13T20:45:45.1080935Z   token: ***
+2026-10-13T20:45:45.1081211Z ##[endgroup]
+2026-10-13T20:45:45.2519905Z Resolved .nvmrc as 20
+2026-10-13T20:45:45.2581906Z Attempting to download 20...
+2026-10-13T20:45:45.2694821Z (node:2340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T20:45:45.2696037Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T20:45:46.2019508Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-13T20:45:46.7805786Z Extracting ...
+2026-10-13T20:45:46.7924602Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a222efac-079c-4cb4-9e78-aad0ce686911 -f /home/runner/work/_temp/4ff5f53c-1691-4665-9d9a-09b1f7d0d27d
+2026-10-13T20:45:47.8182877Z Adding to the cache ...
+2026-10-13T20:45:49.6302147Z ##[group]Environment details
+2026-10-13T20:45:49.8543675Z node: v20.20.2
+2026-10-13T20:45:49.8544223Z npm: 10.8.2
+2026-10-13T20:45:49.8544750Z yarn: 1.22.22
+2026-10-13T20:45:49.8545448Z ##[endgroup]
+2026-10-13T20:45:49.8566785Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-10-13T20:45:49.9584967Z /home/runner/.npm
+2026-10-13T20:45:50.1259902Z Cache hit for: node-cache-Linux-x64-npm-8ddf2efa09f3e77b6dc3268f5e9b6a3b54af1616f8e209b21c5f053c2a146157
+2026-10-13T20:45:50.1401490Z (node:2340) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T20:45:51.2726136Z Received 109051904 of 188411948 (57.9%), 103.6 MBs/sec
+2026-10-13T20:45:52.2725646Z Received 184549376 of 188411948 (97.9%), 87.8 MBs/sec
+2026-10-13T20:45:52.4168335Z Received 188411948 of 188411948 (100.0%), 83.7 MBs/sec
+2026-10-13T20:45:52.4169512Z Cache Size: ~180 MB (188411948 B)
+2026-10-13T20:45:52.4291309Z [command]/usr/bin/tar -xf /home/runner/work/_temp/91603192-0a13-41dd-848d-3a77dd990243/cache.tzst -P -C /home/runner/work/gemini-cli/gemini-cli --use-compress-program unzstd
+2026-10-13T20:45:53.4755446Z Cache restored successfully
+2026-10-13T20:45:53.6183455Z Cache restored from key: node-cache-Linux-x64-npm-8ddf2efa09f3e77b6dc3268f5e9b6a3b54af1616f8e209b21c5f053c2a146157
+2026-10-13T20:45:53.6650534Z ##[group]Run npm ci
+2026-10-13T20:45:53.6650873Z [36;1mnpm ci[0m
+2026-10-13T20:45:53.9701167Z shell: /usr/bin/bash -e {0}
+2026-10-13T20:45:53.9701510Z ##[endgroup]
+2026-10-13T20:46:03.8271622Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2026-10-13T20:46:04.8816747Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-10-13T20:47:28.2904831Z 
+2026-10-13T20:47:28.2907729Z > @google/gemini-cli@0.65.0-nightly.20261006.gfb972b2f8 prepare
+2026-10-13T20:47:28.2908783Z > husky && npm run bundle
+2026-10-13T20:47:28.2909220Z 
+2026-10-13T20:47:28.4579190Z 
+2026-10-13T20:47:28.4581794Z > @google/gemini-cli@0.65.0-nightly.20261006.gfb972b2f8 bundle
+2026-10-13T20:47:28.4583891Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-13T20:47:28.4584774Z 
+2026-10-13T20:47:28.5684223Z 
+2026-10-13T20:47:28.5685154Z > @google/gemini-cli@0.65.0-nightly.20261006.gfb972b2f8 generate
+2026-10-13T20:47:28.5686086Z > node scripts/generate-git-commit-info.js
+2026-10-13T20:47:28.5686490Z 
+2026-10-13T20:47:28.7962377Z 
+2026-10-13T20:47:28.7963410Z > @google/gemini-cli-devtools@0.65.0-nightly.20261006.gfb972b2f8 build
+2026-10-13T20:47:28.7964487Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-13T20:47:28.7964953Z 
+2026-10-13T20:47:28.9340185Z 
+2026-10-13T20:47:28.9341314Z > @google/gemini-cli-devtools@0.65.0-nightly.20261006.gfb972b2f8 build:client
+2026-10-13T20:47:28.9342236Z > node esbuild.client.js
+2026-10-13T20:47:28.9342544Z 
+2026-10-13T20:47:30.6413124Z 
+2026-10-13T20:47:30.6414076Z > @google/gemini-cli-core@0.65.0-nightly.20261006.gfb972b2f8 bundle:browser-mcp
+2026-10-13T20:47:30.6414685Z > node scripts/bundle-browser-mcp.mjs
+2026-10-13T20:47:30.6414910Z 
+2026-10-13T20:47:31.4364184Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-13T20:47:31.4786230Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-13T20:47:34.1088251Z Copied 9 policy files to bundle/policies/
+2026-10-13T20:47:34.1101836Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-13T20:47:34.1313602Z Copied docs to bundle/docs/
+2026-10-13T20:47:34.1327907Z Copied built-in skills to bundle/builtin/
+2026-10-13T20:47:34.1703449Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-13T20:47:34.1754787Z Copied extension examples to bundle/examples/
+2026-10-13T20:47:34.1755426Z Assets copied to bundle/
+2026-10-13T20:47:34.2089265Z 
+2026-10-13T20:47:34.2090055Z added 1410 packages, and audited 1418 packages in 2m
+2026-10-13T20:47:34.2090402Z 
+2026-10-13T20:47:34.2090584Z 389 packages are looking for funding
+2026-10-13T20:47:34.2091108Z   run `npm fund` for details
+2026-10-13T20:47:34.5307774Z 
+2026-10-13T20:47:34.5311054Z 100 vulnerabilities (4 low, 44 moderate, 45 high, 7 critical)
+2026-10-13T20:47:34.5311599Z 
+2026-10-13T20:47:34.5312023Z To address issues that do not require attention, run:
+2026-10-13T20:47:34.5312658Z   npm audit fix
+2026-10-13T20:47:34.5312903Z 
+2026-10-13T20:47:34.5313315Z To address all issues (including breaking changes), run:
+2026-10-13T20:47:34.5314054Z   npm audit fix --force
+2026-10-13T20:47:34.5314335Z 
+2026-10-13T20:47:34.5314570Z Run `npm audit` for details.
+2026-10-13T20:47:34.6175258Z ##[group]Run git config user.name "gemini-cli-robot"
+2026-10-13T20:47:34.6175690Z [36;1mgit config user.name "gemini-cli-robot"[0m
+2026-10-13T20:47:34.6176092Z [36;1mgit config user.email "gemini-cli-robot@google.com"[0m
+2026-10-13T20:47:34.6240389Z shell: /usr/bin/bash -e {0}
+2026-10-13T20:47:34.6240663Z ##[endgroup]
+2026-10-13T20:47:34.6395138Z ##[group]Run BRANCH_NAME="chore/nightly-version-bump-${NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION}"
+2026-10-13T20:47:34.6395949Z [36;1mBRANCH_NAME="chore/nightly-version-bump-${NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION}"[0m
+2026-10-13T20:47:34.6396467Z [36;1mgit switch -c "${BRANCH_NAME}"[0m
+2026-10-13T20:47:34.6396817Z [36;1mecho "BRANCH_NAME=${BRANCH_NAME}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-13T20:47:34.6453776Z shell: /usr/bin/bash -e {0}
+2026-10-13T20:47:34.6454033Z env:
+2026-10-13T20:47:34.6454408Z   NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION: 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:34.6454860Z ##[endgroup]
+2026-10-13T20:47:34.6556791Z Switched to a new branch 'chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae'
+2026-10-13T20:47:34.6661859Z ##[group]Run npm run release:version "${NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION}"
+2026-10-13T20:47:34.6662673Z [36;1mnpm run release:version "${NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION}"[0m
+2026-10-13T20:47:34.6722449Z shell: /usr/bin/bash -e {0}
+2026-10-13T20:47:34.6722704Z env:
+2026-10-13T20:47:34.6723073Z   NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION: 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:34.6723527Z ##[endgroup]
+2026-10-13T20:47:34.7849153Z 
+2026-10-13T20:47:34.7850152Z > @google/gemini-cli@0.65.0-nightly.20261006.gfb972b2f8 release:version
+2026-10-13T20:47:34.7851018Z > node scripts/version.js 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:34.7851389Z 
+2026-10-13T20:47:34.8173552Z > npm version 0.66.0-nightly.20261013.g204db94ae --no-git-tag-version --allow-same-version
+2026-10-13T20:47:34.9603019Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:36.3288915Z npm error code ELSPROBLEMS
+2026-10-13T20:47:36.3289684Z npm error invalid: tar@7.5.11 /home/runner/work/gemini-cli/gemini-cli/packages/a2a-server/node_modules/tar
+2026-10-13T20:47:36.3290590Z npm error invalid: vitest@3.1.1 /home/runner/work/gemini-cli/gemini-cli/packages/a2a-server/node_modules/vitest
+2026-10-13T20:47:36.3291768Z npm error invalid: vitest@3.1.1 /home/runner/work/gemini-cli/gemini-cli/packages/sdk/node_modules/vitest
+2026-10-13T20:47:36.3293022Z npm error invalid: clipboardy@5.2.1 /home/runner/work/gemini-cli/gemini-cli/packages/cli/node_modules/clipboardy
+2026-10-13T20:47:36.3293828Z npm error invalid: tar@7.5.11 /home/runner/work/gemini-cli/gemini-cli/packages/cli/node_modules/tar
+2026-10-13T20:47:36.3294758Z npm error invalid: typescript@5.9.3 /home/runner/work/gemini-cli/gemini-cli/packages/vscode-ide-companion/node_modules/typescript
+2026-10-13T20:47:36.3295700Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-13T20_47_35_024Z-debug-0.log
+2026-10-13T20:47:36.3296508Z Warning: `npm ls` exited with a non-zero status code. Attempting to proceed with the output.
+2026-10-13T20:47:36.3299673Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli-a2a-server --no-git-tag-version --allow-same-version
+2026-10-13T20:47:36.6258179Z @google/gemini-cli-a2a-server
+2026-10-13T20:47:36.6283779Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:39.2625122Z 
+2026-10-13T20:47:39.2625739Z changed 2 packages in 3s
+2026-10-13T20:47:39.2626082Z 
+2026-10-13T20:47:39.2626355Z 389 packages are looking for funding
+2026-10-13T20:47:39.2626867Z   run `npm fund` for details
+2026-10-13T20:47:39.2788071Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli-core --no-git-tag-version --allow-same-version
+2026-10-13T20:47:39.5778066Z @google/gemini-cli-core
+2026-10-13T20:47:39.5802921Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:41.9509121Z 
+2026-10-13T20:47:41.9509767Z changed 1 package in 3s
+2026-10-13T20:47:41.9510095Z 
+2026-10-13T20:47:41.9510389Z 389 packages are looking for funding
+2026-10-13T20:47:41.9510882Z   run `npm fund` for details
+2026-10-13T20:47:41.9672505Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli-devtools --no-git-tag-version --allow-same-version
+2026-10-13T20:47:42.2606607Z @google/gemini-cli-devtools
+2026-10-13T20:47:42.2632003Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:44.6531017Z 
+2026-10-13T20:47:44.6531599Z changed 1 package in 3s
+2026-10-13T20:47:44.6531911Z 
+2026-10-13T20:47:44.6532188Z 389 packages are looking for funding
+2026-10-13T20:47:44.6532693Z   run `npm fund` for details
+2026-10-13T20:47:44.6693868Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli-sdk --no-git-tag-version --allow-same-version
+2026-10-13T20:47:44.9662229Z @google/gemini-cli-sdk
+2026-10-13T20:47:44.9688067Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:47.3266112Z 
+2026-10-13T20:47:47.3266733Z changed 1 package in 3s
+2026-10-13T20:47:47.3267328Z 
+2026-10-13T20:47:47.3268156Z 389 packages are looking for funding
+2026-10-13T20:47:47.3268753Z   run `npm fund` for details
+2026-10-13T20:47:47.3422841Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli-test-utils --no-git-tag-version --allow-same-version
+2026-10-13T20:47:47.6398587Z @google/gemini-cli-test-utils
+2026-10-13T20:47:47.6423529Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:50.0498832Z 
+2026-10-13T20:47:50.0499415Z changed 1 package in 3s
+2026-10-13T20:47:50.0499745Z 
+2026-10-13T20:47:50.0499969Z 389 packages are looking for funding
+2026-10-13T20:47:50.0500395Z   run `npm fund` for details
+2026-10-13T20:47:50.0652732Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace @google/gemini-cli --no-git-tag-version --allow-same-version
+2026-10-13T20:47:50.3670093Z @google/gemini-cli
+2026-10-13T20:47:50.3696684Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:52.7574817Z 
+2026-10-13T20:47:52.7575822Z changed 1 package in 3s
+2026-10-13T20:47:52.7576170Z 
+2026-10-13T20:47:52.7576415Z 389 packages are looking for funding
+2026-10-13T20:47:52.7598616Z   run `npm fund` for details
+2026-10-13T20:47:52.7749157Z > npm version 0.66.0-nightly.20261013.g204db94ae --workspace gemini-cli-vscode-ide-companion --no-git-tag-version --allow-same-version
+2026-10-13T20:47:53.0659441Z gemini-cli-vscode-ide-companion
+2026-10-13T20:47:53.0684472Z v0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:55.4297914Z 
+2026-10-13T20:47:55.4298536Z changed 1 package in 3s
+2026-10-13T20:47:55.4307699Z 
+2026-10-13T20:47:55.4311296Z 389 packages are looking for funding
+2026-10-13T20:47:55.4457794Z   run `npm fund` for details
+2026-10-13T20:47:55.4459164Z Updated sandboxImageUri in root to use version 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:55.4465145Z Updated sandboxImageUri in cli package to use version 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:47:55.4468198Z > npm install --workspace packages/cli --workspace packages/core --package-lock-only
+2026-10-13T20:47:58.4261853Z 
+2026-10-13T20:47:58.4262805Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae prepare
+2026-10-13T20:47:58.4263588Z > husky && npm run bundle
+2026-10-13T20:47:58.4263906Z 
+2026-10-13T20:47:58.5748278Z 
+2026-10-13T20:47:58.5749133Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-13T20:47:58.5750726Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-13T20:47:58.5751705Z 
+2026-10-13T20:47:58.6845244Z 
+2026-10-13T20:47:58.6846105Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-13T20:47:58.6847017Z > node scripts/generate-git-commit-info.js
+2026-10-13T20:47:58.6847688Z 
+2026-10-13T20:47:58.9069292Z 
+2026-10-13T20:47:58.9070172Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-13T20:47:58.9070869Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-13T20:47:58.9071161Z 
+2026-10-13T20:47:59.0482704Z 
+2026-10-13T20:47:59.0483672Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-13T20:47:59.0484611Z > node esbuild.client.js
+2026-10-13T20:47:59.0484921Z 
+2026-10-13T20:48:00.7784474Z 
+2026-10-13T20:48:00.7785604Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-13T20:48:00.7786772Z > node scripts/bundle-browser-mcp.mjs
+2026-10-13T20:48:00.7787433Z 
+2026-10-13T20:48:01.5596910Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-13T20:48:01.6023093Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-13T20:48:04.1605427Z Copied 9 policy files to bundle/policies/
+2026-10-13T20:48:04.1624140Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-13T20:48:04.1963413Z Copied docs to bundle/docs/
+2026-10-13T20:48:04.1982388Z Copied built-in skills to bundle/builtin/
+2026-10-13T20:48:04.2539571Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-13T20:48:04.2607738Z Copied extension examples to bundle/examples/
+2026-10-13T20:48:04.2608694Z Assets copied to bundle/
+2026-10-13T20:48:04.2817487Z 
+2026-10-13T20:48:04.2817789Z up to date, audited 1528 packages in 9s
+2026-10-13T20:48:04.2818100Z 
+2026-10-13T20:48:04.2818448Z 389 packages are looking for funding
+2026-10-13T20:48:04.2818792Z   run `npm fund` for details
+2026-10-13T20:48:04.3797488Z 
+2026-10-13T20:48:04.3798102Z 70 vulnerabilities (2 low, 37 moderate, 25 high, 6 critical)
+2026-10-13T20:48:04.3798460Z 
+2026-10-13T20:48:04.3798724Z To address issues that do not require attention, run:
+2026-10-13T20:48:04.3799117Z   npm audit fix
+2026-10-13T20:48:04.3799271Z 
+2026-10-13T20:48:04.3799538Z To address all issues (including breaking changes), run:
+2026-10-13T20:48:04.3799950Z   npm audit fix --force
+2026-10-13T20:48:04.3800124Z 
+2026-10-13T20:48:04.3800262Z Run `npm audit` for details.
+2026-10-13T20:48:04.4011293Z Successfully bumped versions to v0.66.0-nightly.20261013.g204db94ae.
+2026-10-13T20:48:04.4149250Z ##[group]Run git add package.json packages/*/package.json
+2026-10-13T20:48:04.4149732Z [36;1mgit add package.json packages/*/package.json[0m
+2026-10-13T20:48:04.4150081Z [36;1mif [ -f package-lock.json ]; then[0m
+2026-10-13T20:48:04.4150383Z [36;1m  git add package-lock.json[0m
+2026-10-13T20:48:04.4150640Z [36;1mfi[0m
+2026-10-13T20:48:04.4151071Z [36;1mgit commit -m "chore(release): bump version to ${NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION}"[0m
+2026-10-13T20:48:04.4151633Z [36;1mif [[ "${DRY_RUN}" == "false" ]]; then[0m
+2026-10-13T20:48:04.4151986Z [36;1m  echo "Pushing release branch to remote..."[0m
+2026-10-13T20:48:04.4152644Z [36;1m  git push "https://x-access-token:${GIT_PUSH_TOKEN}@github.com/google-gemini/gemini-cli.git" "HEAD:${BRANCH_NAME}" --follow-tags[0m
+2026-10-13T20:48:04.4153236Z [36;1melse[0m
+2026-10-13T20:48:04.4153477Z [36;1m  echo "Dry run enabled. Skipping push."[0m
+2026-10-13T20:48:04.4153762Z [36;1mfi[0m
+2026-10-13T20:48:04.4214896Z shell: /usr/bin/bash -e {0}
+2026-10-13T20:48:04.4215157Z env:
+2026-10-13T20:48:04.4215498Z   BRANCH_NAME: chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:04.4215913Z   DRY_RUN: false
+2026-10-13T20:48:04.4216286Z   NEEDS_CALCULATE_VERSIONS_OUTPUTS_NEXT_NIGHTLY_VERSION: 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:04.4217501Z   GIT_PUSH_TOKEN: ***
+2026-10-13T20:48:04.4217770Z ##[endgroup]
+2026-10-13T20:48:04.5864246Z 
+2026-10-13T20:48:04.5864872Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae pre-commit
+2026-10-13T20:48:04.5865590Z > node scripts/pre-commit.js
+2026-10-13T20:48:04.5865894Z 
+2026-10-13T20:48:04.7676124Z [33m[STARTED][39m Backing up original state...
+2026-10-13T20:48:04.8107624Z [32m[COMPLETED][39m Backed up original state in git stash (77991c3)
+2026-10-13T20:48:04.8109894Z [33m[STARTED][39m Running tasks for staged files...
+2026-10-13T20:48:04.8112683Z [33m[STARTED][39m package.json — 9 files
+2026-10-13T20:48:04.8116379Z [33m[STARTED][39m *.{js,jsx,ts,tsx} — 0 files
+2026-10-13T20:48:04.8117338Z [33m[STARTED][39m eslint.config.js — 0 files
+2026-10-13T20:48:04.8118028Z [33m[STARTED][39m *.{json,md} — 9 files
+2026-10-13T20:48:04.8118566Z [33m[SKIPPED][39m *.{js,jsx,ts,tsx} — no files
+2026-10-13T20:48:04.8119321Z [33m[SKIPPED][39m eslint.config.js — no files
+2026-10-13T20:48:04.8121558Z [33m[STARTED][39m prettier --write
+2026-10-13T20:48:05.2238293Z [32m[COMPLETED][39m prettier --write
+2026-10-13T20:48:05.2239192Z [32m[COMPLETED][39m *.{json,md} — 9 files
+2026-10-13T20:48:05.2240586Z [32m[COMPLETED][39m package.json — 9 files
+2026-10-13T20:48:05.2241375Z [32m[COMPLETED][39m Running tasks for staged files...
+2026-10-13T20:48:05.2242179Z [33m[STARTED][39m Applying modifications from tasks...
+2026-10-13T20:48:05.2328054Z [32m[COMPLETED][39m Applying modifications from tasks...
+2026-10-13T20:48:05.2329494Z [33m[STARTED][39m Cleaning up temporary files...
+2026-10-13T20:48:05.2408405Z [32m[COMPLETED][39m Cleaning up temporary files...
+2026-10-13T20:48:05.2747882Z [chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae 266cd21] chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:05.2749522Z  9 files changed, 19 insertions(+), 19 deletions(-)
+2026-10-13T20:48:05.2753488Z Pushing release branch to remote...
+2026-10-13T20:48:07.3984364Z remote: 
+2026-10-13T20:48:07.3985677Z remote: Create a pull request for 'chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae' on GitHub by visiting:        
+2026-10-13T20:48:07.3988542Z remote:      https://github.com/google-gemini/gemini-cli/pull/new/chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae        
+2026-10-13T20:48:07.3989448Z remote: 
+2026-10-13T20:48:07.3990613Z remote: GitHub found 286 vulnerabilities on google-gemini/gemini-cli's default branch (28 critical, 135 high, 101 moderate, 22 low). To find out more, visit:        
+2026-10-13T20:48:07.3992412Z remote:      https://github.com/google-gemini/gemini-cli/security/dependabot        
+2026-10-13T20:48:07.3993047Z remote: 
+2026-10-13T20:48:07.4037364Z To https://github.com/google-gemini/gemini-cli.git
+2026-10-13T20:48:07.4038529Z  * [new branch]      HEAD -> chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:07.4205050Z Prepare all required actions
+2026-10-13T20:48:07.4261290Z ##[group]Run ./.github/actions/create-pull-request
+2026-10-13T20:48:07.4261610Z with:
+2026-10-13T20:48:07.4261962Z   branch-name: chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:07.4262499Z   pr-title: chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:07.4263000Z   pr-body: Automated version bump to prepare for the next nightly release.
+2026-10-13T20:48:07.4263731Z   github-token: ***
+2026-10-13T20:48:07.4263980Z   dry-run: false
+2026-10-13T20:48:07.4264189Z   base-branch: main
+2026-10-13T20:48:07.4264402Z   working-directory: .
+2026-10-13T20:48:07.4264624Z ##[endgroup]
+2026-10-13T20:48:07.4319081Z ##[start-action display=Creates a Pull Request;id=__self.__run]
+2026-10-13T20:48:07.4347938Z ##[group]Run set -e
+2026-10-13T20:48:07.4348190Z [36;1mset -e[0m
+2026-10-13T20:48:07.4348563Z [36;1mif ! git ls-remote --exit-code --heads origin "${INPUTS_BRANCH_NAME}"; then[0m
+2026-10-13T20:48:07.4349171Z [36;1m  echo "::error::Branch '${INPUTS_BRANCH_NAME}' does not exist on the remote repository."[0m
+2026-10-13T20:48:07.4349621Z [36;1m  exit 1[0m
+2026-10-13T20:48:07.4349823Z [36;1mfi[0m
+2026-10-13T20:48:07.4350033Z [36;1mPR_URL=$(gh pr create \[0m
+2026-10-13T20:48:07.4350314Z [36;1m  --title "${INPUTS_PR_TITLE}" \[0m
+2026-10-13T20:48:07.4350623Z [36;1m  --body "${INPUTS_PR_BODY}" \[0m
+2026-10-13T20:48:07.4350921Z [36;1m  --base "${INPUTS_BASE_BRANCH}" \[0m
+2026-10-13T20:48:07.4351213Z [36;1m  --head "${INPUTS_BRANCH_NAME}" \[0m
+2026-10-13T20:48:07.4351487Z [36;1m  --fill)[0m
+2026-10-13T20:48:07.4351711Z [36;1mgh pr merge "$PR_URL" --auto[0m
+2026-10-13T20:48:07.4415051Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-13T20:48:07.4415405Z env:
+2026-10-13T20:48:07.4415925Z   GH_TOKEN: ***
+2026-10-13T20:48:07.4416295Z   INPUTS_BRANCH_NAME: chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:07.4416883Z   INPUTS_PR_TITLE: chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:07.4417604Z   INPUTS_PR_BODY: Automated version bump to prepare for the next nightly release.
+2026-10-13T20:48:07.4418016Z   INPUTS_BASE_BRANCH: main
+2026-10-13T20:48:07.4418256Z ##[endgroup]
+2026-10-13T20:48:07.7600831Z 266cd21fad7d33b8f9738ba31daa434b3f92927a	refs/heads/chore/nightly-version-bump-0.66.0-nightly.20261013.g204db94ae
+2026-10-13T20:48:12.7734418Z ##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=5341]
+2026-10-13T20:48:12.7827013Z Post job cleanup.
+2026-10-13T20:48:12.9063939Z (node:3483) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T20:48:12.9065274Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T20:48:12.9068028Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-8ddf2efa09f3e77b6dc3268f5e9b6a3b54af1616f8e209b21c5f053c2a146157, not saving cache.
+2026-10-13T20:48:12.9210905Z Post job cleanup.
+2026-10-13T20:48:13.0070477Z [command]/usr/bin/git version
+2026-10-13T20:48:13.0107345Z git version 2.55.0
+2026-10-13T20:48:13.0144575Z Temporarily overriding HOME='/home/runner/work/_temp/c2e1264a-3ad7-4111-ac8d-8a409e1f3c3b' before making global git config changes
+2026-10-13T20:48:13.0145589Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T20:48:13.0150789Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-13T20:48:13.0185879Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T20:48:13.0219245Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T20:48:13.0447645Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T20:48:13.0481787Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T20:48:13.0847603Z Cleaning up orphan processes
+2026-10-13T20:48:13.1169000Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

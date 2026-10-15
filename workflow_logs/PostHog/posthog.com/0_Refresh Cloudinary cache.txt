@@ -1,0 +1,2077 @@
+﻿2026-10-14T06:29:15.3231102Z Current runner version: '2.337.0'
+2026-10-14T06:29:15.3311240Z Runner name: 'depot-h65s5s6r1x'
+2026-10-14T06:29:15.3312056Z Runner group name: 'default'
+2026-10-14T06:29:15.3312649Z Machine name: 'depot-machine'
+2026-10-14T06:29:15.3314292Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T06:29:15.3315677Z Contents: read
+2026-10-14T06:29:15.3316229Z Metadata: read
+2026-10-14T06:29:15.3316644Z ##[endgroup]
+2026-10-14T06:29:15.3317126Z Secret source: Actions
+2026-10-14T06:29:15.3317571Z Prepare workflow directory
+2026-10-14T06:29:15.3526692Z Prepare all required actions
+2026-10-14T06:29:15.3549312Z Getting action download info
+2026-10-14T06:29:15.4790213Z Download action repository 'actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-10-14T06:29:15.5493776Z Download action repository 'pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c' (SHA:c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c)
+2026-10-14T06:29:15.6692604Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-14T06:29:15.7184583Z Download action repository 'actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-10-14T06:29:15.8365163Z Complete job name: Refresh Cloudinary cache
+2026-10-14T06:29:15.8758180Z ##[group]Run actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+2026-10-14T06:29:15.8759666Z with:
+2026-10-14T06:29:15.8760099Z   repository: PostHog/posthog.com
+2026-10-14T06:29:15.8762293Z   token: ***
+2026-10-14T06:29:15.8762638Z   ssh-strict: true
+2026-10-14T06:29:15.8762978Z   ssh-user: git
+2026-10-14T06:29:15.8763325Z   persist-credentials: true
+2026-10-14T06:29:15.8763688Z   clean: true
+2026-10-14T06:29:15.8764047Z   sparse-checkout-cone-mode: true
+2026-10-14T06:29:15.8764431Z   fetch-depth: 1
+2026-10-14T06:29:15.8764772Z   fetch-tags: false
+2026-10-14T06:29:15.8765117Z   show-progress: true
+2026-10-14T06:29:15.8765474Z   lfs: false
+2026-10-14T06:29:15.8765819Z   submodules: false
+2026-10-14T06:29:15.8766166Z   set-safe-directory: true
+2026-10-14T06:29:15.8766609Z env:
+2026-10-14T06:29:15.8766974Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:29:15.8767388Z ##[endgroup]
+2026-10-14T06:29:15.9832587Z Syncing repository: PostHog/posthog.com
+2026-10-14T06:29:15.9834932Z ##[group]Getting Git version info
+2026-10-14T06:29:15.9835615Z Working directory is '/home/runner/work/posthog.com/posthog.com'
+2026-10-14T06:29:15.9836334Z [command]/usr/bin/git version
+2026-10-14T06:29:15.9836775Z git version 2.55.0
+2026-10-14T06:29:15.9837742Z ##[endgroup]
+2026-10-14T06:29:15.9840461Z Temporarily overriding HOME='/home/runner/work/_temp/a2e7cee6-c732-4e61-8104-a550878089ea' before making global git config changes
+2026-10-14T06:29:15.9841395Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:29:15.9842880Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:29:15.9861648Z Deleting the contents of '/home/runner/work/posthog.com/posthog.com'
+2026-10-14T06:29:15.9864020Z ##[group]Initializing the repository
+2026-10-14T06:29:15.9866195Z [command]/usr/bin/git init /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:29:15.9887473Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T06:29:15.9889542Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T06:29:15.9890390Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T06:29:15.9890994Z hint: call:
+2026-10-14T06:29:15.9891336Z hint:
+2026-10-14T06:29:15.9891790Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T06:29:15.9892240Z hint:
+2026-10-14T06:29:15.9892662Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T06:29:15.9893263Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T06:29:15.9893769Z hint:
+2026-10-14T06:29:15.9894244Z hint: 	git branch -m <name>
+2026-10-14T06:29:15.9894616Z hint:
+2026-10-14T06:29:15.9895059Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T06:29:15.9895758Z Initialized empty Git repository in /home/runner/work/posthog.com/posthog.com/.git/
+2026-10-14T06:29:15.9897019Z [command]/usr/bin/git remote add origin https://github.com/PostHog/posthog.com
+2026-10-14T06:29:15.9905938Z ##[endgroup]
+2026-10-14T06:29:15.9906526Z ##[group]Disabling automatic garbage collection
+2026-10-14T06:29:15.9908179Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T06:29:15.9922182Z ##[endgroup]
+2026-10-14T06:29:15.9922855Z ##[group]Setting up auth
+2026-10-14T06:29:15.9925950Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:29:15.9941147Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:29:16.0069168Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:29:16.0085727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:29:16.0196806Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:29:16.0213331Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:29:16.0322737Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T06:29:16.0341003Z ##[endgroup]
+2026-10-14T06:29:16.0345588Z ##[group]Fetching the repository
+2026-10-14T06:29:16.0346398Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b414e24295421545a5b684782dd91ca90c6ce989:refs/remotes/origin/master
+2026-10-14T06:29:20.6336971Z From https://github.com/PostHog/posthog.com
+2026-10-14T06:29:20.6340629Z  * [new ref]         b414e24295421545a5b684782dd91ca90c6ce989 -> origin/master
+2026-10-14T06:29:20.6343334Z ##[endgroup]
+2026-10-14T06:29:20.6344569Z ##[group]Determining the checkout info
+2026-10-14T06:29:20.6345801Z ##[endgroup]
+2026-10-14T06:29:20.6346595Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T06:29:20.6372980Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T06:29:20.6388680Z ##[group]Checking out the ref
+2026-10-14T06:29:20.6391128Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-14T06:29:21.2963941Z Reset branch 'master'
+2026-10-14T06:29:21.2966093Z branch 'master' set up to track 'origin/master'.
+2026-10-14T06:29:21.2990795Z ##[endgroup]
+2026-10-14T06:29:21.3017050Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T06:29:21.3037281Z b414e24295421545a5b684782dd91ca90c6ce989
+2026-10-14T06:29:21.3214537Z ##[group]Run pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c
+2026-10-14T06:29:21.3215152Z with:
+2026-10-14T06:29:21.3215496Z   dest: ~/setup-pnpm
+2026-10-14T06:29:21.3215779Z   run_install: null
+2026-10-14T06:29:21.3216051Z   package_json_file: package.json
+2026-10-14T06:29:21.3216362Z   standalone: false
+2026-10-14T06:29:21.3216608Z env:
+2026-10-14T06:29:21.3216881Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:29:21.3217215Z ##[endgroup]
+2026-10-14T06:29:21.3581269Z ##[group]Running self-installer...
+2026-10-14T06:29:21.5668697Z (node:3051) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T06:29:21.5671102Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T06:29:21.6624834Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:29:21.6670134Z Packages: +1
+2026-10-14T06:29:21.6671100Z +
+2026-10-14T06:29:21.8519618Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-14T06:29:21.8651202Z 
+2026-10-14T06:29:21.8652243Z dependencies:
+2026-10-14T06:29:21.8652530Z + pnpm 10.23.0 (12.11.2 is available)
+2026-10-14T06:29:21.8652704Z 
+2026-10-14T06:29:21.8663583Z Done in 414ms
+2026-10-14T06:29:21.8756350Z ##[endgroup]
+2026-10-14T06:29:21.8757129Z Installation Completed!
+2026-10-14T06:29:21.8860952Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-10-14T06:29:21.8861771Z with:
+2026-10-14T06:29:21.8862039Z   node-version: 22
+2026-10-14T06:29:21.8862223Z   cache: pnpm
+2026-10-14T06:29:21.8862393Z   always-auth: false
+2026-10-14T06:29:21.8862586Z   check-latest: false
+2026-10-14T06:29:21.8864089Z   token: ***
+2026-10-14T06:29:21.8864266Z env:
+2026-10-14T06:29:21.8864504Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:29:21.8864893Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:29:21.8865144Z ##[endgroup]
+2026-10-14T06:29:21.9595611Z Found in cache @ /opt/hostedtoolcache/node/22.23.2/x64
+2026-10-14T06:29:21.9598313Z (node:3069) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T06:29:21.9598785Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T06:29:21.9599393Z ##[group]Environment details
+2026-10-14T06:29:22.1129289Z node: v22.23.2
+2026-10-14T06:29:22.1130600Z npm: 10.9.8
+2026-10-14T06:29:22.1130864Z yarn: 1.22.22
+2026-10-14T06:29:22.1131374Z ##[endgroup]
+2026-10-14T06:29:22.1149209Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-10-14T06:29:22.3146237Z /home/runner/setup-pnpm/node_modules/.bin/store/v10
+2026-10-14T06:29:22.3529096Z Cache hit for: node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc
+2026-10-14T06:29:24.8966764Z Cache Size: ~777 MB (814500007 B)
+2026-10-14T06:29:24.9009223Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3e5c8092-e228-4671-9eea-fecedcb8c58a/cache.tzst -P -C /home/runner/work/posthog.com/posthog.com --use-compress-program unzstd
+2026-10-14T06:29:27.6621331Z Cache restored successfully
+2026-10-14T06:29:27.7112427Z Cache restored from key: node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc
+2026-10-14T06:29:27.7232348Z ##[group]Run pnpm install --frozen-lockfile
+2026-10-14T06:29:27.7233096Z [36;1mpnpm install --frozen-lockfile[0m
+2026-10-14T06:29:27.7248566Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:29:27.7248895Z env:
+2026-10-14T06:29:27.7249077Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:29:27.7249308Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:29:27.7249520Z ##[endgroup]
+2026-10-14T06:29:27.8912318Z Scope: all 8 workspace projects
+2026-10-14T06:29:27.9650804Z Lockfile is up to date, resolution step is skipped
+2026-10-14T06:29:28.0292430Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:29:28.1591579Z Packages: +3894
+2026-10-14T06:29:28.1592427Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-14T06:29:29.0292519Z Progress: resolved 3894, reused 3868, downloaded 2, added 1263
+2026-10-14T06:29:29.4474977Z Progress: resolved 3894, reused 3868, downloaded 2, added 3894, done
+2026-10-14T06:29:30.2909741Z 
+2026-10-14T06:29:30.2911154Z dependencies:
+2026-10-14T06:29:30.2911472Z + @amcharts/amcharts5 5.13.6
+2026-10-14T06:29:30.2911970Z + @amcharts/amcharts5-geodata 5.1.5
+2026-10-14T06:29:30.2912348Z + @dnd-kit/core 6.3.1
+2026-10-14T06:29:30.2912615Z + @dnd-kit/sortable 10.0.0
+2026-10-14T06:29:30.2912854Z + @dnd-kit/utilities 3.2.2
+2026-10-14T06:29:30.2913050Z + @dotlottie/react-player 1.6.19
+2026-10-14T06:29:30.2913272Z + @fontsource-variable/ibm-plex-sans 5.2.8
+2026-10-14T06:29:30.2914488Z + @fontsource/source-code-pro 4.5.14
+2026-10-14T06:29:30.2914725Z + @gatsbyjs/reach-router 1.3.9
+2026-10-14T06:29:30.2915102Z + @headlessui/react 1.7.19
+2026-10-14T06:29:30.2915308Z + @headlessui/tailwindcss 0.1.3
+2026-10-14T06:29:30.2915504Z + @heroicons/react 1.0.6
+2026-10-14T06:29:30.2915715Z + @hubspot/api-client 7.2.0
+2026-10-14T06:29:30.2915899Z + @inkeep/cxkit-react 0.5.98
+2026-10-14T06:29:30.2916091Z + @inkeep/uikit 0.3.20
+2026-10-14T06:29:30.2916263Z + @inkeep/uikit-js 0.3.20
+2026-10-14T06:29:30.2916441Z + @lexical/utils 0.35.0
+2026-10-14T06:29:30.2916632Z + @mdx-js/react 1.6.22
+2026-10-14T06:29:30.2916838Z + @mdxeditor/editor 3.45.1
+2026-10-14T06:29:30.2917014Z + @popperjs/core 2.11.8
+2026-10-14T06:29:30.2917183Z + @posthog/brand 0.13.0
+2026-10-14T06:29:30.2917365Z + @posthog/hedgehog-mode 0.0.63
+2026-10-14T06:29:30.2917555Z + @posthog/icons 0.36.6
+2026-10-14T06:29:30.2917737Z + @posthog/twig-components 0.1.3
+2026-10-14T06:29:30.2917976Z + @radix-ui/react-accordion 1.2.12
+2026-10-14T06:29:30.2918182Z + @radix-ui/react-collapsible 1.1.12
+2026-10-14T06:29:30.2918415Z + @radix-ui/react-icons 1.3.2
+2026-10-14T06:29:30.2918624Z + @radix-ui/react-menubar 1.1.16
+2026-10-14T06:29:30.2918819Z + @radix-ui/react-portal 1.1.9
+2026-10-14T06:29:30.2919016Z + @radix-ui/react-radio-group 1.3.8
+2026-10-14T06:29:30.2919222Z + @radix-ui/react-scroll-area 1.2.10
+2026-10-14T06:29:30.2919410Z + @radix-ui/react-tabs 1.1.13
+2026-10-14T06:29:30.2919610Z + @radix-ui/react-toolbar 1.1.11
+2026-10-14T06:29:30.2919814Z + @tailwindcss/container-queries 0.1.1
+2026-10-14T06:29:30.2920021Z + @tanstack/react-virtual 3.13.12
+2026-10-14T06:29:30.2920203Z + @typecaast/react 0.5.5
+2026-10-14T06:29:30.2920379Z + @typecaast/skin-kit 0.4.1
+2026-10-14T06:29:30.2920566Z + @typecaast/skins 0.3.3
+2026-10-14T06:29:30.2920742Z + @types/lodash.groupby 4.6.9
+2026-10-14T06:29:30.2920920Z + @types/react-slick 0.23.13
+2026-10-14T06:29:30.2921110Z + @types/styled-components 5.1.34
+2026-10-14T06:29:30.2921319Z + @typescript-eslint/eslint-plugin 4.33.0
+2026-10-14T06:29:30.2921543Z + @wistia/wistia-player-react 0.1.17
+2026-10-14T06:29:30.2921722Z + ahooks 3.9.5
+2026-10-14T06:29:30.2921888Z + algoliasearch 4.25.2
+2026-10-14T06:29:30.2922046Z + axios 1.12.2
+2026-10-14T06:29:30.2922200Z + canvas-confetti 1.9.4
+2026-10-14T06:29:30.2922364Z + chart.js 4.5.0
+2026-10-14T06:29:30.2922528Z + chrome-aws-lambda 10.1.0
+2026-10-14T06:29:30.2922703Z + cloudinary-react 1.8.1
+2026-10-14T06:29:30.2922861Z + clsx 2.1.1
+2026-10-14T06:29:30.2923002Z + cntl 1.0.0
+2026-10-14T06:29:30.2923255Z + core-js 3.45.1
+2026-10-14T06:29:30.2923404Z + dayjs 1.11.18
+2026-10-14T06:29:30.2923563Z + deepmerge 4.3.1
+2026-10-14T06:29:30.2923712Z + dotenv 10.0.0
+2026-10-14T06:29:30.2923857Z + formik 2.4.6
+2026-10-14T06:29:30.2924026Z + framer-motion 10.18.0
+2026-10-14T06:29:30.2924193Z + fs-extra 10.1.0
+2026-10-14T06:29:30.2924343Z + fuse.js 6.6.2
+2026-10-14T06:29:30.2924489Z + gatsby 4.25.9
+2026-10-14T06:29:30.2924644Z + gatsby-cli 4.25.0
+2026-10-14T06:29:30.2924811Z + gatsby-link 4.25.0
+2026-10-14T06:29:30.2924993Z + gatsby-plugin-algolia 0.26.0
+2026-10-14T06:29:30.2925215Z + gatsby-plugin-breakpoints 1.3.11
+2026-10-14T06:29:30.2925478Z + gatsby-plugin-feed 4.25.0
+2026-10-14T06:29:30.2925660Z + gatsby-plugin-image 2.25.0
+2026-10-14T06:29:30.2925862Z + gatsby-plugin-mailchimp 5.2.2
+2026-10-14T06:29:30.2926060Z + gatsby-plugin-manifest 4.25.0
+2026-10-14T06:29:30.2926246Z + gatsby-plugin-mdx 3.20.0
+2026-10-14T06:29:30.2926442Z + gatsby-plugin-no-sourcemaps 4.25.0
+2026-10-14T06:29:30.2926661Z + gatsby-plugin-postcss 5.25.0
+2026-10-14T06:29:30.2926870Z + gatsby-plugin-react-helmet 5.25.0
+2026-10-14T06:29:30.2927079Z + gatsby-plugin-react-svg 3.3.0
+2026-10-14T06:29:30.2927275Z + gatsby-plugin-sitemap 5.25.0
+2026-10-14T06:29:30.2927476Z + gatsby-plugin-smoothscroll 1.2.0
+2026-10-14T06:29:30.2927682Z + gatsby-react-router-scroll 5.25.0
+2026-10-14T06:29:30.2927902Z + gatsby-remark-autolink-headers 5.25.0
+2026-10-14T06:29:30.2928094Z + gatsby-script 1.10.0
+2026-10-14T06:29:30.2928272Z + gatsby-source-ashby 1.0.5
+2026-10-14T06:29:30.2928540Z + gatsby-source-filesystem 4.25.0
+2026-10-14T06:29:30.2928733Z + gatsby-source-git 1.1.0
+2026-10-14T06:29:30.2928956Z + gatsby-transformer-json 4.25.0
+2026-10-14T06:29:30.2929131Z + gemoji 8.1.0
+2026-10-14T06:29:30.2929287Z + git-url-parse 11.6.0
+2026-10-14T06:29:30.2929454Z + github-slugger 1.5.0
+2026-10-14T06:29:30.2929611Z + glob 10.4.5
+2026-10-14T06:29:30.2929774Z + html-to-image 1.11.13
+2026-10-14T06:29:30.2929945Z + instantsearch.js 4.80.0
+2026-10-14T06:29:30.2930174Z + is-relative 1.0.0
+2026-10-14T06:29:30.2930329Z + jsdom 20.0.3
+2026-10-14T06:29:30.2930472Z + jspdf 3.0.2
+2026-10-14T06:29:30.2930622Z + kea 3.1.6
+2026-10-14T06:29:30.2930773Z + kea-loaders 3.1.1
+2026-10-14T06:29:30.2930937Z + kea-localstorage 3.1.0
+2026-10-14T06:29:30.2931107Z + kea-router 3.4.1
+2026-10-14T06:29:30.2931263Z + kea-typegen 3.5.0
+2026-10-14T06:29:30.2931423Z + keen-slider 6.8.6
+2026-10-14T06:29:30.2931573Z + lexical 0.35.0
+2026-10-14T06:29:30.2931722Z + lodash 4.17.21
+2026-10-14T06:29:30.2931875Z + lodash.get 4.4.2
+2026-10-14T06:29:30.2932031Z + lodash.groupby 4.6.0
+2026-10-14T06:29:30.2932202Z + lodash.uniqby 4.7.0
+2026-10-14T06:29:30.2932375Z + lottie-react 2.4.1
+2026-10-14T06:29:30.2932538Z + lucide-react 0.525.0
+2026-10-14T06:29:30.2932701Z + mapbox-gl 3.16.0
+2026-10-14T06:29:30.2932850Z + mark.js 8.11.1
+2026-10-14T06:29:30.2933033Z + markdown-link-extractor 4.0.2
+2026-10-14T06:29:30.2933216Z + markdown-to-jsx 7.7.13
+2026-10-14T06:29:30.2933376Z + md5 2.3.0
+2026-10-14T06:29:30.2933524Z + mermaid 11.11.0
+2026-10-14T06:29:30.2933675Z + mitt 1.2.0
+2026-10-14T06:29:30.2933818Z + mobx 6.13.7
+2026-10-14T06:29:30.2933975Z + multiparty 4.2.3
+2026-10-14T06:29:30.2934130Z + node-fetch 2.7.0
+2026-10-14T06:29:30.2934290Z + node-html-parser 5.4.2
+2026-10-14T06:29:30.2934461Z + openapi-sampler 1.6.1
+2026-10-14T06:29:30.2934622Z + p-limit 3.1.0
+2026-10-14T06:29:30.2934788Z + parse-link-header 2.0.0
+2026-10-14T06:29:30.2934967Z + patch-package 8.0.0
+2026-10-14T06:29:30.2935129Z + pluralize 8.0.0
+2026-10-14T06:29:30.2935296Z + posthog-node 4.18.0
+2026-10-14T06:29:30.2935468Z + prism-react-renderer 1.3.5
+2026-10-14T06:29:30.2935670Z + prismjs 1.30.0
+2026-10-14T06:29:30.2935824Z + prop-types 15.8.1
+2026-10-14T06:29:30.2935989Z + puppeteer-core 13.7.0
+2026-10-14T06:29:30.2936146Z + qs 6.14.0
+2026-10-14T06:29:30.2936301Z + query-string 6.14.1
+2026-10-14T06:29:30.2936463Z + radix-ui 1.4.3
+2026-10-14T06:29:30.2936740Z + rc-slider 9.7.5
+2026-10-14T06:29:30.2936903Z + react 18.3.1
+2026-10-14T06:29:30.2937125Z + react-animate-height 2.1.2
+2026-10-14T06:29:30.2937308Z + react-burger-menu 3.1.0
+2026-10-14T06:29:30.2937493Z + react-calendly 4.4.0
+2026-10-14T06:29:30.2937658Z + react-chartjs-2 5.3.0
+2026-10-14T06:29:30.2937833Z + react-compare-slider 2.2.0
+2026-10-14T06:29:30.2938008Z + react-confetti 6.4.0
+2026-10-14T06:29:30.2938177Z + react-country-flag 3.1.0
+2026-10-14T06:29:30.2938366Z + react-dom 18.3.1
+2026-10-14T06:29:30.2938524Z + react-dropzone 14.3.8
+2026-10-14T06:29:30.2938691Z + react-github-btn 1.4.0
+2026-10-14T06:29:30.2938857Z + react-helmet 5.2.1
+2026-10-14T06:29:30.2939024Z + react-input-autosize 3.0.0
+2026-10-14T06:29:30.2939241Z + react-instantsearch-hooks-web 6.47.3
+2026-10-14T06:29:30.2939457Z + react-intersection-observer 8.34.0
+2026-10-14T06:29:30.2939648Z + react-lottie 1.2.10
+2026-10-14T06:29:30.2939808Z + react-markdown 8.0.7
+2026-10-14T06:29:30.2939976Z + react-masonry-css 1.0.16
+2026-10-14T06:29:30.2940171Z + react-medium-image-zoom 4.4.3
+2026-10-14T06:29:30.2940358Z + react-number-format 5.4.4
+2026-10-14T06:29:30.2940535Z + react-popper 2.3.0
+2026-10-14T06:29:30.2940704Z + react-redux 8.1.3
+2026-10-14T06:29:30.2940863Z + react-scroll 1.9.3
+2026-10-14T06:29:30.2941040Z + react-scrollspy 3.4.3
+2026-10-14T06:29:30.2941214Z + react-simple-maps 3.0.0
+2026-10-14T06:29:30.2956413Z + react-slick 0.28.1
+2026-10-14T06:29:30.2956677Z + react-string-replace 1.1.1
+2026-10-14T06:29:30.2956888Z + react-textarea-autosize 8.5.9
+2026-10-14T06:29:30.2957127Z + react-transition-group 4.4.5
+2026-10-14T06:29:30.2957316Z + react-tsparticles 2.12.2
+2026-10-14T06:29:30.2957494Z + react-webcam 7.2.0
+2026-10-14T06:29:30.2957677Z + react-zoom-pan-pinch 3.7.0
+2026-10-14T06:29:30.2957922Z + reactflow 11.11.4
+2026-10-14T06:29:30.2958086Z + redoc 2.5.0
+2026-10-14T06:29:30.2958236Z + redux 4.2.1
+2026-10-14T06:29:30.2958396Z + rehype-raw 7.0.0
+2026-10-14T06:29:30.2958556Z + rehype-sanitize 5.0.1
+2026-10-14T06:29:30.2958720Z + remark-gfm 3.0.1
+2026-10-14T06:29:30.2958888Z + remove-markdown 0.5.5
+2026-10-14T06:29:30.2959054Z + request 2.88.2
+2026-10-14T06:29:30.2959218Z + rough-notation 0.5.1
+2026-10-14T06:29:30.2959377Z + sass 1.92.1
+2026-10-14T06:29:30.2959531Z + scrapingbee 1.7.5
+2026-10-14T06:29:30.2959706Z + shallow-compare 1.2.2
+2026-10-14T06:29:30.2959866Z + slugify 1.6.6
+2026-10-14T06:29:30.2960033Z + styled-components 5.3.11
+2026-10-14T06:29:30.2960212Z + svg-react-loader 0.4.6
+2026-10-14T06:29:30.2960384Z + svg-sprite 1.5.4
+2026-10-14T06:29:30.2960546Z + swiper 11.2.10
+2026-10-14T06:29:30.2960697Z + swr 2.3.6
+2026-10-14T06:29:30.2960856Z + tailwind-merge 2.6.0
+2026-10-14T06:29:30.2961034Z + tailwindcss-animated 1.1.2
+2026-10-14T06:29:30.2961213Z + textarea-caret 3.1.0
+2026-10-14T06:29:30.2961422Z + tsparticles-preset-stars 2.12.0
+2026-10-14T06:29:30.2961605Z + turndown 7.2.2
+2026-10-14T06:29:30.2961761Z + typescript 5.9.3
+2026-10-14T06:29:30.2961934Z + unist-util-visit 1.4.1
+2026-10-14T06:29:30.2962100Z + yup 0.32.11
+2026-10-14T06:29:30.2962259Z + zustand 4.5.7
+2026-10-14T06:29:30.2962368Z 
+2026-10-14T06:29:30.2962456Z devDependencies:
+2026-10-14T06:29:30.2962618Z + @babel/core 7.28.4
+2026-10-14T06:29:30.2962822Z + @pmmmwh/react-refresh-webpack-plugin 0.5.17
+2026-10-14T06:29:30.2963062Z + @storybook/addon-actions 6.5.16
+2026-10-14T06:29:30.2963270Z + @storybook/addon-essentials 6.5.16
+2026-10-14T06:29:30.2963479Z + @storybook/addon-links 6.5.16
+2026-10-14T06:29:30.2963680Z + @storybook/addon-postcss 2.0.0
+2026-10-14T06:29:30.2963886Z + @storybook/builder-webpack5 6.5.16
+2026-10-14T06:29:30.2964102Z + @storybook/manager-webpack5 6.5.16
+2026-10-14T06:29:30.2964309Z + @storybook/preset-scss 1.0.3
+2026-10-14T06:29:30.2964498Z + @storybook/react 6.5.16
+2026-10-14T06:29:30.2964692Z + @tailwindcss/aspect-ratio 0.4.2
+2026-10-14T06:29:30.2964882Z + @tailwindcss/forms 0.5.10
+2026-10-14T06:29:30.2965082Z + @tailwindcss/line-clamp 0.4.4
+2026-10-14T06:29:30.2965279Z + @tailwindcss/typography 0.5.16
+2026-10-14T06:29:30.2965476Z + @types/canvas-confetti 1.9.0
+2026-10-14T06:29:30.2965662Z + @types/chart.js 2.9.41
+2026-10-14T06:29:30.2965892Z + @types/gatsby-plugin-breakpoints 1.3.5
+2026-10-14T06:29:30.2966106Z + @types/mark.js 8.11.12
+2026-10-14T06:29:30.2966282Z + @types/mdx-js__react 1.5.8
+2026-10-14T06:29:30.2966464Z + @types/react 16.14.66
+2026-10-14T06:29:30.2966651Z + @types/react-burger-menu 2.8.7
+2026-10-14T06:29:30.2966839Z + @types/react-dom 18.3.7
+2026-10-14T06:29:30.2967025Z + @types/react-helmet 6.1.11
+2026-10-14T06:29:30.2967225Z + @types/react-input-autosize 2.2.4
+2026-10-14T06:29:30.2967421Z + @types/react-scroll 1.8.10
+2026-10-14T06:29:30.2967615Z + @types/react-simple-maps 3.0.6
+2026-10-14T06:29:30.2967805Z + @types/textarea-caret 3.0.4
+2026-10-14T06:29:30.2968020Z + @typescript-eslint/parser 4.33.0
+2026-10-14T06:29:30.2968208Z + autoprefixer 10.4.21
+2026-10-14T06:29:30.2968376Z + babel-loader 8.4.1
+2026-10-14T06:29:30.2968537Z + css-loader 6.11.0
+2026-10-14T06:29:30.2968698Z + eslint 7.32.0
+2026-10-14T06:29:30.2968872Z + eslint-plugin-react 7.37.5
+2026-10-14T06:29:30.2969057Z + hastscript 7.2.0
+2026-10-14T06:29:30.2969210Z + husky 9.1.7
+2026-10-14T06:29:30.2969355Z + jest 27.5.1
+2026-10-14T06:29:30.2969507Z + lint-staged 10.5.4
+2026-10-14T06:29:30.2969697Z + markdownlint-cli2 0.19.0
+2026-10-14T06:29:30.2969868Z + node-gyp 12.2.0
+2026-10-14T06:29:30.2970080Z + postcss 8.5.6
+2026-10-14T06:29:30.2970259Z + postinstall-postinstall 2.1.0
+2026-10-14T06:29:30.2970434Z + prettier 2.8.8
+2026-10-14T06:29:30.2970598Z + puppeteer 13.7.0
+2026-10-14T06:29:30.2970770Z + react-dev-utils 11.0.4
+2026-10-14T06:29:30.2970937Z + sass-loader 12.6.0
+2026-10-14T06:29:30.2971093Z + sharp 0.34.5
+2026-10-14T06:29:30.2971270Z + storybook-addon-gatsby 0.0.2
+2026-10-14T06:29:30.2971483Z + storybook-dark-mode 1.1.2
+2026-10-14T06:29:30.2971659Z + style-loader 3.3.4
+2026-10-14T06:29:30.2971820Z + tailwindcss 3.4.17
+2026-10-14T06:29:30.2971978Z + webpack 5.101.3
+2026-10-14T06:29:30.2972131Z + wrangler 4.67.0
+2026-10-14T06:29:30.2972242Z 
+2026-10-14T06:29:30.2972691Z ╭ Warning ─────────────────────────────────────────────────────────────────────╮
+2026-10-14T06:29:30.2973042Z │                                                                              │
+2026-10-14T06:29:30.2973384Z │   Ignored build scripts: workerd.                                            │
+2026-10-14T06:29:30.2973755Z │   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+2026-10-14T06:29:30.2974138Z │   to run scripts.                                                            │
+2026-10-14T06:29:30.2974437Z │                                                                              │
+2026-10-14T06:29:30.2974758Z ╰──────────────────────────────────────────────────────────────────────────────╯
+2026-10-14T06:29:30.2974934Z 
+2026-10-14T06:29:30.3176043Z . postinstall$ patch-package
+2026-10-14T06:29:30.3979484Z . postinstall: patch-package 8.0.0
+2026-10-14T06:29:30.3980853Z . postinstall: Applying patches...
+2026-10-14T06:29:30.4004760Z . postinstall: @typecaast/react@0.5.5 ✔
+2026-10-14T06:29:30.4013391Z . postinstall: kea@3.1.6 ✔
+2026-10-14T06:29:30.4049992Z . postinstall: Done
+2026-10-14T06:29:30.4052947Z . prepare$ husky
+2026-10-14T06:29:30.4404669Z . prepare: Done
+2026-10-14T06:29:30.4647883Z Done in 2.7s using pnpm v10.23.0
+2026-10-14T06:29:30.4829472Z ##[group]Run pnpm build
+2026-10-14T06:29:30.4830217Z [36;1mpnpm build[0m
+2026-10-14T06:29:30.4841479Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:29:30.4841714Z env:
+2026-10-14T06:29:30.4841886Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:29:30.4842110Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:29:30.4842334Z   GATSBY_MINIMAL: true
+2026-10-14T06:29:30.4842630Z   CLOUDINARY_API_KEY: ***
+2026-10-14T06:29:30.4842850Z   CLOUDINARY_API_SECRET: ***
+2026-10-14T06:29:30.4843020Z ##[endgroup]
+2026-10-14T06:29:30.6364261Z 
+2026-10-14T06:29:30.6367069Z > posthog.com@1.0.0 prebuild /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:29:30.6367518Z > pnpm generate-brand-assets
+2026-10-14T06:29:30.6367659Z 
+2026-10-14T06:29:30.7957994Z 
+2026-10-14T06:29:30.7959575Z > posthog.com@1.0.0 generate-brand-assets /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:29:30.7959983Z > node scripts/generate-brand-assets.mjs
+2026-10-14T06:29:30.7960202Z 
+2026-10-14T06:29:31.1513171Z Generated 5 public logo variants in static/brand
+2026-10-14T06:29:31.1607543Z 
+2026-10-14T06:29:31.1608067Z > posthog.com@1.0.0 build /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:29:31.1608336Z > gatsby build
+2026-10-14T06:29:31.1608485Z 
+2026-10-14T06:29:31.4616355Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:30:33.4413223Z success compile gatsby files - 61.579s
+2026-10-14T06:30:33.4433553Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:30:33.5436760Z success load gatsby config - 0.102s
+2026-10-14T06:30:33.9050332Z success load plugins - 0.361s
+2026-10-14T06:30:33.9070911Z warning gatsby-plugin-react-helmet: Gatsby now has built-in support for modifying the document head. Learn more at https://gatsby.dev/gatsby-head
+2026-10-14T06:30:33.9075795Z warning [git-metadata] no GitHub token, page dates and contributors will be omitted
+2026-10-14T06:30:33.9079975Z Fetching cloudinary data
+2026-10-14T06:31:22.1840586Z success onPreInit - 48.278s
+2026-10-14T06:31:22.2113917Z success initialize cache - 0.027s
+2026-10-14T06:31:22.2586127Z success copy gatsby files - 0.047s
+2026-10-14T06:31:22.5896462Z success Compiling Gatsby Functions - 0.323s
+2026-10-14T06:31:23.7644082Z 🎬 Enriching video data with metadata from APIs...
+2026-10-14T06:31:23.7645448Z warning YOUTUBE_API_KEY not set, skipping YouTube title fetch
+2026-10-14T06:31:23.7874372Z ✅ Enriched 4 videos, saved to public/videos-metadata.json
+2026-10-14T06:31:24.0923242Z success onPreBootstrap - 1.833s
+2026-10-14T06:31:24.1657881Z success createSchemaCustomization - 0.009s
+2026-10-14T06:31:24.2695075Z error gatsby-source-ashby: Missing options.apiKey
+2026-10-14T06:31:24.7117174Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7258069Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7259786Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7297876Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7328965Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7378332Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:24.7738143Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:31:25.0043163Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0150149Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0151817Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0297703Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0337304Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0338112Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:25.0775305Z warning No Algolia keys present in environment, skipping sending information to algolia
+2026-10-14T06:31:36.5381862Z warning No Mapbox access token provided
+2026-10-14T06:32:47.2628200Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-hotjar/posthog-vs-hotjar
+2026-10-14T06:32:47.2676373Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-pendo/posthog-vs-pendo
+2026-10-14T06:32:47.2773629Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-fullstory/posthog-vs-fullstory
+2026-10-14T06:32:47.2775316Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-hotjar/posthog-vs-hotjar
+2026-10-14T06:32:47.2778826Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-heap/posthog-vs-heap
+2026-10-14T06:32:47.2784569Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-logrocket/posthog-vs-logrocket
+2026-10-14T06:32:47.2793897Z warning Cloudinary data not found for posthog.com/contents/images/compare/posthog-vs-pendo/posthog-vs-pendo
+2026-10-14T06:32:47.3749639Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-14
+2026-10-14T06:32:47.3755737Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-14
+2026-10-14T06:32:47.3763180Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.3769367Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-17
+2026-10-14T06:32:47.3790863Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.3804363Z warning Cloudinary data not found for posthog.com/contents/images/cookieless-tracking
+2026-10-14T06:32:47.3942593Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.4092586Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-16
+2026-10-14T06:32:47.4104776Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.4133399Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.4158885Z warning Cloudinary data not found for posthog.com/contents/images/tutorials/banners/tutorial-12
+2026-10-14T06:32:47.4288069Z warning Cloudinary data not found for posthog.com/contents/docs/billing/images/docs-groups
+2026-10-14T06:32:47.5892318Z warning Cloudinary data not found for posthog.com/contents/docs/product-analytics/images/docs-properties
+2026-10-14T06:32:47.6418862Z warning Cloudinary data not found for posthog.com/contents/library/images/blog/posthog-blog-image
+2026-10-14T06:32:58.3592670Z warning YOUTUBE_API_KEY_CHANGELOG not set. Skipping changelog playlist ingestion.
+2026-10-14T06:33:06.1007900Z warning The gatsby-source-ashby plugin has generated no Gatsby nodes. Do you need it? This could also suggest the plugin is misconfigured.
+2026-10-14T06:33:06.1009669Z warning The gatsby-mapbox-locations plugin has generated no Gatsby nodes. Do you need it? This could also suggest the plugin is misconfigured.
+2026-10-14T06:33:06.1513968Z success Checking for changed pages - 0.000s
+2026-10-14T06:33:06.1514927Z success source and transform nodes - 101.994s
+2026-10-14T06:33:08.4163627Z info Writing GraphQL type definitions to /home/runner/work/posthog.com/posthog.com/.cache/schema.gql
+2026-10-14T06:33:08.8922112Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:33:08.9572809Z warning There are conflicting field types in your data.
+2026-10-14T06:33:08.9574021Z 
+2026-10-14T06:33:08.9574333Z If you have explicitly defined a type for those fields, you can safely ignore this warning message.
+2026-10-14T06:33:08.9574884Z Otherwise, Gatsby will omit those fields from the GraphQL schema.
+2026-10-14T06:33:08.9575089Z 
+2026-10-14T06:33:08.9575492Z If you know all field types in advance, the best strategy is to explicitly define them with the `createTypes` action, and skip inference with the `@dontInfer` directive.
+2026-10-14T06:33:08.9575988Z See https://www.gatsbyjs.com/docs/actions/#createTypes
+2026-10-14T06:33:08.9579060Z PostHogWorkflowTemplate.trigger.filters.bytecode:
+2026-10-14T06:33:08.9579358Z  - type: [string,number]
+2026-10-14T06:33:08.9579844Z    value: [ [32m'_H'[39m, [33m1[39m ]
+2026-10-14T06:33:08.9580268Z PostHogWorkflowTemplate.trigger.filters.properties.value:
+2026-10-14T06:33:08.9580519Z  - type: boolean
+2026-10-14T06:33:08.9580709Z    value: [33mtrue[39m
+2026-10-14T06:33:08.9580895Z  - type: string
+2026-10-14T06:33:08.9581082Z    value: [32m'is_set'[39m
+2026-10-14T06:33:08.9581343Z PostHogWorkflowTemplate.trigger_masking.bytecode:
+2026-10-14T06:33:08.9581569Z  - type: [string,number]
+2026-10-14T06:33:08.9581784Z    value: [ [32m'_H'[39m, [33m1[39m ]
+2026-10-14T06:33:08.9582109Z PostHogWorkflowTemplate.actions.config.filters.bytecode:
+2026-10-14T06:33:08.9582349Z  - type: [string,number]
+2026-10-14T06:33:08.9582556Z    value: [ [32m'_H'[39m, [33m1[39m ]
+2026-10-14T06:33:08.9582863Z PostHogWorkflowTemplate.actions.config.filters.properties.value:
+2026-10-14T06:33:08.9583124Z  - type: boolean
+2026-10-14T06:33:08.9583314Z    value: [33mtrue[39m
+2026-10-14T06:33:08.9583482Z  - type: string
+2026-10-14T06:33:08.9583670Z    value: [32m'is_set'[39m
+2026-10-14T06:33:08.9590847Z PostHogWorkflowTemplate.actions.config.inputs.blocks.value.text:
+2026-10-14T06:33:08.9591118Z  - type: object
+2026-10-14T06:33:08.9591659Z    value: { text: [32m'⚠️ *Negative survey response received*\n\n*{person.name}* submitted negative feedback in a survey.'[39m, type: [32m'mrkdwn'[39m }
+2026-10-14T06:33:08.9592070Z  - type: string
+2026-10-14T06:33:08.9592304Z    value: [32m'{variables.task_final_message}'[39m
+2026-10-14T06:33:08.9592645Z Mdx.fields.templateConfigs.inputs_schema.default:
+2026-10-14T06:33:08.9592872Z  - type: boolean
+2026-10-14T06:33:08.9593062Z    value: [33mfalse[39m
+2026-10-14T06:33:08.9593239Z  - type: object
+2026-10-14T06:33:08.9598716Z    value: { ct: [32m"{not empty(person.properties.$geoip_city_name) ? sha256Hex(replaceAll(lower(person.properties.$geoip_city_name), ' ', '')) : null}"[39m, em: [32m'{sha256Hex(lower(person.properties.email))}'[39m, fn: [32m'{sha256Hex(lower(person.properties.first_name))}'[39m, ln: [32m'{sha256Hex(lower(person.properties.last_name))}'[39m, ph: [32m"{not empty(person.properties.phone) ? sha256Hex(replaceAll(person.properties.phone, '+', '')) : null}"[39m, st: [32m'{sha256Hex(lower(person.properties.$geoip_subdivision_1_code))}'[39m, zp: [32m"{not empty (person.properties.$geoip_postal_code) ? sha256Hex(replaceAll(lower(person.properties.$geoip_postal_code), ' ', '')) : null}"[39m, country: [32m'{sha256Hex(lower(person.properties.$geoip_country_code))}'[39m, external_id: [32m'{sha256Hex(person.id)}'[39m, sc_click_id: [32m'{person.properties.sccid ?? person.properties.$initial_sccid}'[39m, client_ip_address: [32m'{event.properties.$ip}'[39m, client_user_agent: [32m'{event.properties.$raw_user_agent}'[39m, ip: [32m'{sha256Hex(event.properties.$ip)}'[39m, email: [32m'{person.properties.email}'[39m, user_agent: [32m'{person.properties.$raw_user_agent}'[39m, screen_dimensions: [32m"{{'width': person.properties.$screen_width, 'height': person.properties.$screen_height}}"[39m, city: [32m"{not empty(person.properties.$geoip_city_name) ? replaceAll(lower(person.properties.$geoip_city_name), ' ', '') : null}"[39m, phone: [32m"{not empty(person.properties.phone) ? sha256Hex(person.properties.phone) : ''}"[39m, state: [32m'{lower(person.properties.$geoip_subdivision_1_code)}'[39m, ttclid: [32m'{person.properties.ttclid ?? person.properties.$initial_ttclid}'[39m, zip_code: [32m"{not empty (person.properties.$geoip_postal_code) ? sha256Hex(replaceAll(lower(person.properties.$geoip_postal_code), ' ', '')) : null}"[39m, last_name: [32m"{not empty(person.properties.last_name) ? sha256Hex(lower(person.properties.last_name)) : ''}"[39m, first_name: [32m"{not empty(person.properties.first_name) ? sha256Hex(lower(person.properties.first_name)) : ''}"[39m, fbc: [32m"{person.properties.fbc ?? person.properties.$fbc ?? (not empty(event.properties.fbclid) ? f'fb.1.{toUnixTimestampMilli(event.timestamp)}.{event.properties.fbclid}' : '')}"[39m, fbp: [32m"{person.properties.fbp ?? person.properties.$fbp ?? ''}"[39m }
+2026-10-14T06:33:08.9603075Z  - type: string
+2026-10-14T06:33:08.9603261Z    value: [32m''[39m
+2026-10-14T06:33:08.9603471Z success building schema - 2.808s
+2026-10-14T06:35:20.5572914Z warning Your GraphQL query in createPages took 131.595 seconds which is an unexpectedly long time. See https://gatsby.dev/create-pages-performance for tips on how to improve this.
+2026-10-14T06:35:21.2968408Z success createPages - 132.336s
+2026-10-14T06:35:21.6839216Z success createPagesStatefully - 0.387s
+2026-10-14T06:35:21.6840801Z info Total nodes: 26207, SitePage nodes: 3866 (use --verbose for breakdown)
+2026-10-14T06:35:21.6856963Z success Checking for changed pages - 0.001s
+2026-10-14T06:35:21.6897286Z success onPreExtractQueries - 0.000s
+2026-10-14T06:35:22.9978362Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:23.0057846Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:23.0059730Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:23.0667194Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:23.0669332Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:23.3908692Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:26.8911553Z warning `createResolvers` passed resolvers for type `SqueakTeamTeamImage` that doesn't exist in the schema. Use `createTypes` to add the type before adding resolvers.
+2026-10-14T06:35:26.8912909Z success extract queries from components - 5.201s
+2026-10-14T06:35:26.8946470Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/App.js" will not be run.
+2026-10-14T06:35:26.8947334Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/ApiEndpoint.tsx" will not be run.
+2026-10-14T06:35:26.8948149Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Blog.tsx" will not be run.
+2026-10-14T06:35:26.8948745Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/BlogCategory.tsx" will not be run.
+2026-10-14T06:35:26.8949330Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/BlogTag.tsx" will not be run.
+2026-10-14T06:35:26.8949920Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/DataPipeline.tsx" will not be run.
+2026-10-14T06:35:26.8950544Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/DataWarehouseSource.tsx" will not be run.
+2026-10-14T06:35:26.8951136Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Event.tsx" will not be run.
+2026-10-14T06:35:26.8951700Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Job.tsx" will not be run.
+2026-10-14T06:35:26.8952283Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/merch/index.tsx" will not be run.
+2026-10-14T06:35:26.8952874Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/merch/Product.tsx" will not be run.
+2026-10-14T06:35:26.8953459Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Pagination.tsx" will not be run.
+2026-10-14T06:35:26.8954031Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Pipeline.js" will not be run.
+2026-10-14T06:35:26.8954602Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Plain.js" will not be run.
+2026-10-14T06:35:26.8955164Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/Team.tsx" will not be run.
+2026-10-14T06:35:26.8955743Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/tutorials/index.tsx" will not be run.
+2026-10-14T06:35:26.8956345Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/tutorials/Tutorial.tsx" will not be run.
+2026-10-14T06:35:26.8956980Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/tutorials/TutorialsCategory.tsx" will not be run.
+2026-10-14T06:35:26.8957709Z warning The GraphQL query in the non-page component "/home/runner/work/posthog.com/posthog.com/src/templates/WorkflowTemplate.tsx" will not be run.
+2026-10-14T06:35:26.8958362Z Exported queries are only executed for page components. It's possible you're trying to create pages in your gatsby-node.js and that's failing for some reason.
+2026-10-14T06:35:26.8958690Z 
+2026-10-14T06:35:26.8959248Z If the failing component is a regular component and not intended to be a page component, you generally want to use "useStaticQuery" (https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/) instead of exporting a page query.
+2026-10-14T06:35:26.8959732Z 
+2026-10-14T06:35:26.8960361Z If you're more experienced with GraphQL, you can also export GraphQL fragments from components and compose the fragments in the Page component query and pass data down into the child component (https://www.gatsbyjs.com/docs/reference/graphql-data-layer/using-graphql-fragments/)
+2026-10-14T06:35:26.8979327Z success write out redirect data - 0.002s
+2026-10-14T06:35:26.9308523Z success Build manifest and related icons - 0.032s
+2026-10-14T06:35:26.9309093Z success onPostBootstrap - 0.033s
+2026-10-14T06:35:26.9310538Z info bootstrap finished - 355.765s
+2026-10-14T06:35:27.0167537Z success write out requires - 0.084s
+2026-10-14T06:35:27.0194982Z warning Browserslist: browsers data (caniuse-lite) is 13 months old. Please run:
+2026-10-14T06:35:27.0195354Z   npx update-browserslist-db@latest
+2026-10-14T06:35:27.0195694Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-10-14T06:35:27.2832164Z warning `isModuleDeclaration` has been deprecated, please migrate to `isImportOrExportDeclaration`
+2026-10-14T06:35:27.2833681Z     at isModuleDeclaration (/home/runner/work/posthog.com/posthog.com/node_modules/.pnpm/@babel+types@7.28.4/node_modules/@babel/types/lib/validators/generated/index.js:2793:35)
+2026-10-14T06:35:27.2834434Z     at PluginPass.Program (/home/runner/work/posthog.com/posthog.com/node_modules/.pnpm/babel-plugin-lodash@3.3.4/node_modules/babel-plugin-lodash/lib/index.js:102:44)
+2026-10-14T06:36:00.8029442Z warning ⠀
+2026-10-14T06:36:00.8032848Z warning [1m[33mwarn[39m[22m - The `min-*` and `max-*` variants are not supported with a `screens` configuration containing objects.
+2026-10-14T06:37:16.9672954Z [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:37:18.0027854Z Browserslist: browsers data (caniuse-lite) is 13 months old. Please run:
+2026-10-14T06:37:18.0029110Z   npx update-browserslist-db@latest
+2026-10-14T06:37:18.0029452Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-10-14T06:37:19.1901240Z warning ./src/templates/Handbook.tsx
+2026-10-14T06:37:19.1902816Z Attempted import error: 'components/NewsletterForm' does not contain a default export (imported as 'NewsletterForm').
+2026-10-14T06:37:19.1903337Z warning ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/b8d367a98c773e5145db7440fbfc7299.js
+2026-10-14T06:37:19.1903805Z Attempted import error: 'IconSettings' is not exported from '@posthog/icons' (imported as 'IconSettings').
+2026-10-14T06:37:19.1904238Z warning ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/6d7b3c8a4e01616f026b426503bd4a07.js
+2026-10-14T06:37:19.1904981Z Attempted import error: 'ProductComparisonTable' is not exported from 'components/ProductComparisonTable' (imported as 'ProductComparisonTable').
+2026-10-14T06:37:19.1905394Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1905749Z Attempted import error: 'Images' is not exported from './components/Careers/Images' (imported as 'Images').
+2026-10-14T06:37:19.1906071Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1906450Z Attempted import error: 'ContentViewer' is not exported from './components/ContentViewer' (imported as 'ContentViewer').
+2026-10-14T06:37:19.1907042Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1907372Z Attempted import error: 'lib' is not exported from './components/Edition/lib' (imported as 'lib').
+2026-10-14T06:37:19.1907685Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1908045Z Attempted import error: 'HubSpotForm' is not exported from './components/HubSpotForm' (imported as 'HubSpotForm').
+2026-10-14T06:37:19.1908382Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1908791Z Attempted import error: 'KeyboardShortcut' is not exported from './components/KeyboardShortcut' (imported as 'KeyboardShortcut').
+2026-10-14T06:37:19.1909159Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1909480Z Attempted import error: 'Label' is not exported from './components/Label' (imported as 'Label').
+2026-10-14T06:37:19.1909782Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1910135Z Attempted import error: 'List' is not exported from './components/List' (imported as 'List').
+2026-10-14T06:37:19.1910437Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1910812Z Attempted import error: 'Competitor' is not exported from './components/Products/Competitor' (imported as 'Competitor').
+2026-10-14T06:37:19.1911159Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1911524Z Attempted import error: 'DocsLinks' is not exported from './components/Products/DocsLinks' (imported as 'DocsLinks').
+2026-10-14T06:37:19.1911973Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1912365Z Attempted import error: 'MobileSlides' is not exported from './components/Products/MobileSlides' (imported as 'MobileSlides').
+2026-10-14T06:37:19.1912727Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1913090Z Attempted import error: 'QuickLinks' is not exported from './components/QuickLinks' (imported as 'QuickLinks').
+2026-10-14T06:37:19.1913584Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1913957Z Attempted import error: 'Signatures' is not exported from './components/Signatures' (imported as 'Signatures').
+2026-10-14T06:37:19.1914459Z warning ./src/mdxGlobalComponents.js
+2026-10-14T06:37:19.1914818Z Attempted import error: 'SlackPage' is not exported from './components/SlackPage' (imported as 'SlackPage').
+2026-10-14T06:37:19.1915254Z warning undefined
+2026-10-14T06:37:19.1915700Z Css Minimizer Plugin: postcss-calc: /home/runner/work/posthog.com/posthog.com/styles.c55adeb63e311ad3be8e.css:34998:5: Parse error on line 1: 
+2026-10-14T06:37:19.1916291Z 50cqw + var(--base-offset) * var(--floor-width) - 22.5cqw
+2026-10-14T06:37:19.1916569Z ----------------------------------------------------^
+2026-10-14T06:37:19.1917019Z Expecting end of input, "RPAREN", "ADD", "SUB", "MUL", "DIV", got unexpected "UNKNOWN_DIMENSION"
+2026-10-14T06:37:19.1941747Z success Building production JavaScript and CSS bundles - 112.177s
+2026-10-14T06:37:45.2979397Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (307489kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:37:46.3052968Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (307489kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:37:46.8761886Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (307489kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:38:01.2136505Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (124kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:38:02.0592820Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (124kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:38:02.6145334Z <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (124kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+2026-10-14T06:38:02.9000582Z success Building Rendering Engines - 43.705s
+2026-10-14T06:40:03.7698123Z success Building HTML renderer - 120.867s
+2026-10-14T06:40:04.2706511Z success Execute page configs - 0.503s
+2026-10-14T06:40:06.8252396Z success Validating Rendering Engines - 2.554s
+2026-10-14T06:40:06.8259428Z success Caching Webpack compilations - 0.001s
+2026-10-14T06:40:11.8265865Z success run queries in workers - 4.996s - 3975/3975 795.64/s
+2026-10-14T06:40:11.8516140Z success Merge worker state - 0.024s
+2026-10-14T06:40:14.6578701Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.6738180Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.7661416Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.8058037Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.9178517Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.9294954Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:14.9538472Z warning [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+2026-10-14T06:40:18.0591416Z success Rewriting compilation hashes - 0.009s
+2026-10-14T06:40:18.5764778Z success Writing page-data.json files to public directory - 0.516s - 3866/3866 7487.02/s
+2026-10-14T06:40:20.1542491Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:20.4155389Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:20.7658589Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:21.4306285Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.4337723Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.4339091Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.4339615Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.4674834Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.4737668Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.4738991Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.4746552Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.4974601Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.4975929Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.4976223Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.4976554Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.5426535Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.5459124Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.5480245Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.5481440Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.5748216Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.5769473Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.5847091Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.5857603Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.6020640Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.6057685Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.6086492Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.6087534Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.6405067Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.6406480Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.6427035Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.6428160Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.6428782Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.6429517Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.6441424Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.6442161Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.6698128Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.6738089Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.6749289Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.6780547Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.6938185Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.6969239Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.6970196Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.6970597Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.7622798Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.7676331Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.7697566Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.7698657Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.7858455Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.7897751Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.7977967Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.7979424Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.8622056Z warning Component DataWarehouseScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:21.8858543Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.8860004Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.8860303Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.8860640Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.9162804Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.9164842Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.9165396Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.9165834Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.9322242Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.9333974Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.9334939Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.9335463Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.9591610Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.9597619Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.9599948Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.9601059Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:21.9823405Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:21.9825000Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:21.9825455Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:21.9825878Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.0321774Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.0356030Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.0418060Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.0498076Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.0620289Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.0657864Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.0674345Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.0719610Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.0995444Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.1055488Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.1118474Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.1178050Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.1387101Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.1388554Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.1413866Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.1414929Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.1578116Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.1579426Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.1579723Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.1580068Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.1857939Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.1859655Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.1898110Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.1937868Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.2265824Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.2277129Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.2309214Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.2337902Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.2538030Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.2577685Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.2617302Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.2708712Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.2798653Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.2800214Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.2800651Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.2801167Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.2995648Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.3019023Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.3085813Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.3120669Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.3299017Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.3337598Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.3380207Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.3396181Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.4098309Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.4099758Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.4136227Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.4142423Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.5002187Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:22.5003686Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:22.5003979Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:22.5004320Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:22.6711708Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.7104671Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.7621445Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.7941541Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.8857997Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.9298597Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:22.9698093Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.0087184Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.0778017Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.1483241Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.1748052Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.2056910Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.2378188Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.2978283Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:23.9880687Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.1061139Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.3112563Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.3574727Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.3982006Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.4029517Z warning Component InboundIpAddresses was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.4311379Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.4683034Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.5068460Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.5435935Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.5978444Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.6272661Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.6646678Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.6969778Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.7304540Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.7656329Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.8174503Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.8557906Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.8843176Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.9239210Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.9529344Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:24.9966916Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.0271233Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.0611156Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.0971563Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.1452174Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.1777745Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.2596896Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:25.3059410Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:26.4553339Z warning Component HideOnCDPIndex was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:34.5657825Z warning Component DotNetInstall was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:35.6674525Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.6692039Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.6692961Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.6693414Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.6918043Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.6919692Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.6920119Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.6920620Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.6924124Z warning Component DotNetInstall was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:35.7198049Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.7221701Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.7249349Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.7267183Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.7428517Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.7449933Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.7450672Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.7451015Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.7687628Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.7697411Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.7709147Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.7710450Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.7952405Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.7953922Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.7963698Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.7965103Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.8178826Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.8191601Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.8253190Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.8277934Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.8378447Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.8379908Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.8380353Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.8380717Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.8697855Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.8722914Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.8733188Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.8736394Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.8895488Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.8912232Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.8913627Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.8914050Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.9116043Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.9140286Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.9141228Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.9141668Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.9387762Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.9487412Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.9489195Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.9489662Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:35.9829197Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:35.9830645Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:35.9852810Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:35.9853714Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.0059494Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.0097546Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.0137617Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.0175457Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.0459230Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.0475039Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.0503669Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.0505106Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.0854765Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.0870445Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.0937540Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.0938787Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.1515300Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.1534590Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.1534981Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.1535298Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.2097962Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.2099323Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.2199413Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.2200499Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.2498919Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.2537960Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.2577348Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.2578572Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.2788294Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.2849285Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.2896454Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.2897506Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.3159563Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.3178402Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.3179217Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.3179905Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.3425323Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.3426570Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.3426842Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.3427208Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.3705681Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.3706969Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.3720843Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.3721992Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.4089672Z warning Component UsageWarning was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:36.4142978Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.4144249Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.4144593Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.4144937Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.4415758Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.4417628Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.4418070Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.4418500Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.4596869Z warning Component UsageWarning was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:36.4691379Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.4713001Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.4714447Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.4714912Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.5021332Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.5022846Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.5023378Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.5023801Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.5055463Z warning Component UsageWarning was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:36.5056502Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.5093575Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.5094623Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.5097717Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.5272175Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.5273760Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.5274200Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.5274574Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.5347180Z warning Component DotNetInstall was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:36.5484990Z warning Component UsageWarning was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:36.5858025Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.5903936Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.5944116Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.5945482Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.6187918Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.6199665Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.6222453Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.6257264Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.6578153Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.6580174Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.6617567Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.6618646Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.6857895Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.6897772Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.6899049Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.6928066Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.7151229Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:36.7153195Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:36.7153638Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:36.7167849Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:36.8061332Z warning Component DotNetInstall was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:38.8672813Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:38.8713534Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:38.8994675Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:38.9257915Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:40.0376443Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:40.1283549Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:40.1677207Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:40.4338818Z warning Component FloatedImage was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:40.6186118Z warning Component AcademyCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:40.6388034Z warning Component DuckDBWaitlistSurvey was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:40:40.7671287Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.1881772Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.2426549Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.3742719Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.6498445Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.7177920Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:41.8150473Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.0577636Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.4064353Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.5705792Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.5927245Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.6554758Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:42.8963538Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:43.1720741Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:43.3586505Z warning [gatsby-plugin-image] Missing image prop
+2026-10-14T06:40:44.0268035Z [Plans debug] {
+2026-10-14T06:40:44.0269250Z   productRowCount: 17,
+2026-10-14T06:40:44.0269843Z   visibleProductRowCount: 3,
+2026-10-14T06:40:44.0270098Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.0270362Z   categorySample: [
+2026-10-14T06:40:44.0270649Z     { key: 'feature_flags_data_retention', category: null },
+2026-10-14T06:40:44.0270975Z     { key: 'group_experiments', category: null },
+2026-10-14T06:40:44.0271307Z     { key: 'multiple_environments', category: null }
+2026-10-14T06:40:44.0271569Z   ],
+2026-10-14T06:40:44.0271785Z   ungroupedCount: 3,
+2026-10-14T06:40:44.0272027Z   categories: [],
+2026-10-14T06:40:44.0272244Z   groupedCounts: {}
+2026-10-14T06:40:44.0272474Z }
+2026-10-14T06:40:44.1219033Z [Plans debug] {
+2026-10-14T06:40:44.1220095Z   productRowCount: 17,
+2026-10-14T06:40:44.1220318Z   visibleProductRowCount: 3,
+2026-10-14T06:40:44.1220514Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.1220744Z   categorySample: [
+2026-10-14T06:40:44.1220960Z     { key: 'feature_flags_data_retention', category: null },
+2026-10-14T06:40:44.1221216Z     { key: 'group_experiments', category: null },
+2026-10-14T06:40:44.1221471Z     { key: 'multiple_environments', category: null }
+2026-10-14T06:40:44.1221668Z   ],
+2026-10-14T06:40:44.1221827Z   ungroupedCount: 3,
+2026-10-14T06:40:44.1221990Z   categories: [],
+2026-10-14T06:40:44.1222143Z   groupedCounts: {}
+2026-10-14T06:40:44.1222297Z }
+2026-10-14T06:40:44.2795351Z [Plans debug] {
+2026-10-14T06:40:44.2797042Z   productRowCount: 5,
+2026-10-14T06:40:44.2797488Z   visibleProductRowCount: 2,
+2026-10-14T06:40:44.2797794Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.2798083Z   categorySample: [
+2026-10-14T06:40:44.2798382Z     { key: 'error_tracking_destinations', category: null },
+2026-10-14T06:40:44.2798739Z     { key: 'error_tracking_triage', category: null }
+2026-10-14T06:40:44.2799016Z   ],
+2026-10-14T06:40:44.2799244Z   ungroupedCount: 2,
+2026-10-14T06:40:44.2799479Z   categories: [],
+2026-10-14T06:40:44.2799708Z   groupedCounts: {}
+2026-10-14T06:40:44.2799951Z }
+2026-10-14T06:40:44.3022074Z warning [usePlatformList] Found 2 MDX file(s) in "docs/product-analytics/installation" not listed in sidenav:
+2026-10-14T06:40:44.3057625Z   - /docs/product-analytics/installation/react-router
+2026-10-14T06:40:44.3085939Z   - /docs/product-analytics/installation/remix
+2026-10-14T06:40:44.3105053Z Add these to src/navs/index.js or delete the MDX files if they're no longer needed.
+2026-10-14T06:40:44.7581855Z [Plans debug] {
+2026-10-14T06:40:44.7617643Z   productRowCount: 1,
+2026-10-14T06:40:44.7623412Z   visibleProductRowCount: 0,
+2026-10-14T06:40:44.7624374Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.7624705Z   categorySample: [],
+2026-10-14T06:40:44.7625625Z   ungroupedCount: 0,
+2026-10-14T06:40:44.7626060Z   categories: [],
+2026-10-14T06:40:44.7626289Z   groupedCounts: {}
+2026-10-14T06:40:44.7626520Z }
+2026-10-14T06:40:44.7909570Z [Plans debug] {
+2026-10-14T06:40:44.7911244Z   productRowCount: 11,
+2026-10-14T06:40:44.7911658Z   visibleProductRowCount: 7,
+2026-10-14T06:40:44.7911937Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.7912203Z   categorySample: [
+2026-10-14T06:40:44.7912490Z     { key: 'paths', category: null },
+2026-10-14T06:40:44.7912841Z     { key: 'product_analytics_data_retention', category: null },
+2026-10-14T06:40:44.7913155Z     { key: 'alerts', category: null },
+2026-10-14T06:40:44.7913481Z     { key: 'subscriptions', category: null },
+2026-10-14T06:40:44.7913771Z     { key: 'paths_advanced', category: null }
+2026-10-14T06:40:44.7914043Z   ],
+2026-10-14T06:40:44.7914277Z   ungroupedCount: 7,
+2026-10-14T06:40:44.7914525Z   categories: [],
+2026-10-14T06:40:44.7914756Z   groupedCounts: {}
+2026-10-14T06:40:44.7914989Z }
+2026-10-14T06:40:44.9649218Z [Plans debug] {
+2026-10-14T06:40:44.9650876Z   productRowCount: 11,
+2026-10-14T06:40:44.9651279Z   visibleProductRowCount: 7,
+2026-10-14T06:40:44.9651569Z   showDifferencesOnly: true,
+2026-10-14T06:40:44.9746297Z   categorySample: [
+2026-10-14T06:40:44.9747575Z     { key: 'paths', category: null },
+2026-10-14T06:40:44.9747956Z     { key: 'product_analytics_data_retention', category: null },
+2026-10-14T06:40:44.9748347Z     { key: 'alerts', category: null },
+2026-10-14T06:40:44.9748564Z     { key: 'subscriptions', category: null },
+2026-10-14T06:40:44.9748813Z     { key: 'paths_advanced', category: null }
+2026-10-14T06:40:44.9749007Z   ],
+2026-10-14T06:40:44.9749175Z   ungroupedCount: 7,
+2026-10-14T06:40:44.9749342Z   categories: [],
+2026-10-14T06:40:44.9749500Z   groupedCounts: {}
+2026-10-14T06:40:44.9749660Z }
+2026-10-14T06:40:45.2637970Z [Plans debug] {
+2026-10-14T06:40:45.2639279Z   productRowCount: 1,
+2026-10-14T06:40:45.2639575Z   visibleProductRowCount: 0,
+2026-10-14T06:40:45.2639839Z   showDifferencesOnly: true,
+2026-10-14T06:40:45.2640076Z   categorySample: [],
+2026-10-14T06:40:45.2640308Z   ungroupedCount: 0,
+2026-10-14T06:40:45.2640488Z   categories: [],
+2026-10-14T06:40:45.2640710Z   groupedCounts: {}
+2026-10-14T06:40:45.2640888Z }
+2026-10-14T06:40:45.3183861Z [Plans debug] {
+2026-10-14T06:40:45.3184898Z   productRowCount: 1,
+2026-10-14T06:40:45.3185124Z   visibleProductRowCount: 0,
+2026-10-14T06:40:45.3185415Z   showDifferencesOnly: true,
+2026-10-14T06:40:45.3185596Z   categorySample: [],
+2026-10-14T06:40:45.3185765Z   ungroupedCount: 0,
+2026-10-14T06:40:45.3185925Z   categories: [],
+2026-10-14T06:40:45.3186084Z   groupedCounts: {}
+2026-10-14T06:40:45.3186252Z }
+2026-10-14T06:40:45.5245287Z [Plans debug] {
+2026-10-14T06:40:45.5246441Z   productRowCount: 13,
+2026-10-14T06:40:45.5246675Z   visibleProductRowCount: 2,
+2026-10-14T06:40:45.5246882Z   showDifferencesOnly: true,
+2026-10-14T06:40:45.5247260Z   categorySample: [
+2026-10-14T06:40:45.5247477Z     { key: 'surveys_data_retention', category: null },
+2026-10-14T06:40:45.5247728Z     { key: 'surveys_styling', category: null }
+2026-10-14T06:40:45.5247924Z   ],
+2026-10-14T06:40:45.5248075Z   ungroupedCount: 2,
+2026-10-14T06:40:45.5248255Z   categories: [],
+2026-10-14T06:40:45.5248423Z   groupedCounts: {}
+2026-10-14T06:40:45.5248585Z }
+2026-10-14T06:40:45.9362739Z [Plans debug] {
+2026-10-14T06:40:45.9363831Z   productRowCount: 20,
+2026-10-14T06:40:45.9364159Z   visibleProductRowCount: 2,
+2026-10-14T06:40:45.9364361Z   showDifferencesOnly: true,
+2026-10-14T06:40:45.9364540Z   categorySample: [
+2026-10-14T06:40:45.9364763Z     { key: 'session_replay_data_retention', category: null },
+2026-10-14T06:40:45.9365027Z     { key: 'recordings_file_export', category: null }
+2026-10-14T06:40:45.9365275Z   ],
+2026-10-14T06:40:45.9365429Z   ungroupedCount: 2,
+2026-10-14T06:40:45.9365586Z   categories: [],
+2026-10-14T06:40:45.9365742Z   groupedCounts: {}
+2026-10-14T06:40:45.9366035Z }
+2026-10-14T06:40:46.3700039Z [Plans debug] {
+2026-10-14T06:40:46.3701166Z   productRowCount: 16,
+2026-10-14T06:40:46.3701398Z   visibleProductRowCount: 0,
+2026-10-14T06:40:46.3701597Z   showDifferencesOnly: true,
+2026-10-14T06:40:46.3701783Z   categorySample: [],
+2026-10-14T06:40:46.3702028Z   ungroupedCount: 0,
+2026-10-14T06:40:46.3702189Z   categories: [],
+2026-10-14T06:40:46.3702346Z   groupedCounts: {}
+2026-10-14T06:40:46.3702506Z }
+2026-10-14T06:40:46.4403064Z Image selection: {
+2026-10-14T06:40:46.4404119Z   isDark: false,
+2026-10-14T06:40:46.4404315Z   hasSrcDark: false,
+2026-10-14T06:40:46.4404669Z   selectedSrc: 'https://res.cloudinary.com/dmukukwp6/image/upload/product_analytics_5bf99d9574.png',
+2026-10-14T06:40:46.4405104Z   originalSrc: 'https://res.cloudinary.com/dmukukwp6/image/upload/product_analytics_5bf99d9574.png',
+2026-10-14T06:40:46.4405396Z   darkSrc: undefined
+2026-10-14T06:40:46.4405570Z }
+2026-10-14T06:40:46.5070847Z success Building static HTML for pages - 27.863s - 3866/3866 138.75/s
+2026-10-14T06:41:12.2238007Z warning gatsby-plugin-mdx
+2026-10-14T06:41:12.2239630Z [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+2026-10-14T06:41:12.6866781Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6868392Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6926648Z warning Component WizardCommand was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6943282Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6944572Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6945235Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6946131Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6946778Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6947664Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6948334Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6948820Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.6949494Z warning Component LoopGame was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7153845Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7154573Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7155008Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7155497Z warning Component WistiaEmbed was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7155922Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7182669Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7183508Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7185048Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7185480Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7186122Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7196781Z warning Component ImageSlider was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7219358Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7220043Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7220467Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7221001Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7221428Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7221851Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7281474Z warning Component WizardCommand was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7314697Z warning Component DuckDBWaitlistSurvey was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7499925Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7501331Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7515605Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7517395Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7518598Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7519042Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7519477Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7519998Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7520487Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7520950Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7542283Z warning Component ImageSlider was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7575816Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7577765Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7588599Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7600140Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7613092Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7613534Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7613941Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7614352Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7614752Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7615159Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7615569Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7616063Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7616470Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7616958Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7617374Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7617788Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7618174Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7618574Z warning Component CalloutBox was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7618972Z warning Component Link was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7619397Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7635392Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7637838Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7638656Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7831162Z warning Component WaitlistForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7838973Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7849156Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7858260Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7881802Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7904637Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7905125Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7924506Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7952530Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7956760Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7959586Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7983477Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7984752Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7989395Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.7991164Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8007610Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8008155Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8009881Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8011491Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8040044Z warning Component WizardCommand was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8150067Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8344631Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8345459Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8372296Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8376352Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8378153Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8398847Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8399318Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8399809Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8400329Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8400963Z warning Component OverflowXSection was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8401976Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8402452Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8402932Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8403945Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8428032Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8430068Z warning Component ProductVideo was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8435112Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8471999Z warning Component ImageSlider was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8603924Z warning Component WizardCommand was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8604913Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8638940Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8645115Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8649107Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8669156Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8670140Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8672065Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8674026Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8698337Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8699862Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8710931Z warning Component WistiaEmbed was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8726911Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8727385Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8766036Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8766515Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8766990Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8767995Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8768551Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8769025Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8769525Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8770057Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8770663Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8776470Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8777023Z warning Component ProductComparisonTable was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8778997Z warning Component WizardCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8782525Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8792051Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8792486Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8792928Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8793357Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8793806Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8794232Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8794664Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8809073Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8809766Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8955805Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8967624Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8974198Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.8976002Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9008973Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9009398Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9010481Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9011153Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9034605Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9035039Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9035448Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9036298Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9060471Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9091967Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9092439Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9092916Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9093357Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9093871Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9094315Z warning Component ProductVideo was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9094750Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9095190Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9095633Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9096072Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9096525Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9097046Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9097499Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9108314Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9117151Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9117609Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9118051Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9118491Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9118931Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9119385Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9119810Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9120224Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9120653Z warning Component ProductScreenshot was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9132086Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9132567Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9133273Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9134010Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9134453Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9134917Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9135342Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9135762Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9136165Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9136574Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9137056Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9137496Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9137961Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9138361Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9138759Z warning Component BuiltBy was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9139187Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9152277Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9152700Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9153104Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9153651Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9154256Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9154669Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9155078Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9155493Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9156047Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9156806Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9288474Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9308190Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9310310Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9322345Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9332666Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9345850Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9360061Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9360853Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9374252Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9388242Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9388683Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9389089Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9389514Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9390361Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9399227Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9408221Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9421321Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9431944Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9440868Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9452635Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9462133Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9489540Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9504797Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9629127Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9641194Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9641630Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9653422Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9653840Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9654252Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9654658Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9655079Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9655480Z warning Component Caption was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9655902Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9666007Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9677021Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9690794Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9701351Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9720571Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9730207Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9738719Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9756527Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9777523Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9786821Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9802041Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9885857Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9894766Z warning Component GDPRForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:12.9895378Z warning Component GDPRForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0040299Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0048403Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0060211Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0067865Z warning Component GDPRForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0068313Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0076524Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0077382Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0090614Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0091904Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0103153Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0117298Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0132449Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0142684Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0157908Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0171869Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0179106Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0194439Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0207874Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0217622Z warning Component OverflowXSection was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0218749Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0345670Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0362555Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0377326Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0377757Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0378308Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0378737Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0379139Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0387483Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0398754Z warning Component GDPRForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0416567Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0428653Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0437929Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0447660Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0468410Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0474937Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0485386Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0495060Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0506898Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0522856Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0653767Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0662758Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0670239Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0680833Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0688161Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0696901Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0705834Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0714101Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0724901Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0733243Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0743649Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0752757Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0759820Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0760244Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0760740Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0772156Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0781294Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0795817Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0796239Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0796698Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0797144Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0797565Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0818075Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0930589Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0949393Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0959619Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0969984Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0985117Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0985978Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0995833Z warning Component BorderWrapper was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0996252Z warning Component Quote was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.0996897Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1004791Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1012783Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1028087Z warning Component SmallTeam was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1030778Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1050733Z warning Component AcademyCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1059401Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1072953Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1078994Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1085801Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1095847Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1103605Z warning Component TeamMember was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1121006Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1230873Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1233117Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1246085Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1253619Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1267100Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1278781Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1311007Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1319793Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1329222Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1343975Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1346881Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1361064Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1363976Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1371932Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1380262Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1388609Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1430005Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1542015Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1564642Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1570425Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1599907Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1607050Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1653175Z warning Component CallToAction was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1664990Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1697913Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1705204Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1736609Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1767295Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1894054Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1918915Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1953649Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1961581Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1969938Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1986432Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.1997371Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2005105Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2017621Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2036985Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2043549Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2050414Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2156697Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2169698Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2183536Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2194345Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2211172Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2222774Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2233792Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2244358Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2253428Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2262448Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2271749Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2280335Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2292042Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2303682Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2311977Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2320136Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2330216Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2338563Z warning Component ArrayCTA was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2346088Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2456533Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2464429Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2471929Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.2472380Z warning Component NewsletterForm was not imported, exported, or provided by MDXProvider as global scope
+2026-10-14T06:41:13.3488590Z success onPostBuild - 26.840s
+2026-10-14T06:41:13.3822411Z 
+2026-10-14T06:41:13.3823651Z Pages
+2026-10-14T06:41:13.3823834Z 
+2026-10-14T06:41:13.3824237Z ┌ src/templates/Template.tsx
+2026-10-14T06:41:13.3824574Z │ ├   /pocket-guides/context-warehouse
+2026-10-14T06:41:13.3824819Z │ └   ...42 more pages available
+2026-10-14T06:41:13.3825045Z ├ src/templates/Hogpedia.tsx
+2026-10-14T06:41:13.3825359Z │ ├   /hogpedia/a-b-testing
+2026-10-14T06:41:13.3825582Z │ └   ...18 more pages available
+2026-10-14T06:41:13.3825825Z ├ src/templates/HogpediaCategory.tsx
+2026-10-14T06:41:13.3826051Z │ ├   /hogpedia/category/concepts
+2026-10-14T06:41:13.3826268Z │ └   ...4 more pages available
+2026-10-14T06:41:13.3837067Z ├ src/templates/Handbook.tsx
+2026-10-14T06:41:13.3837414Z │ ├   /docs/activity
+2026-10-14T06:41:13.3837659Z │ └   ...2406 more pages available
+2026-10-14T06:41:13.3837886Z ├ src/templates/BlogPost.tsx
+2026-10-14T06:41:13.3838108Z │ ├   /blog/100-times-more-events
+2026-10-14T06:41:13.3838322Z │ └   ...810 more pages available
+2026-10-14T06:41:13.3838542Z ├ src/templates/sdk/SdkReference.tsx
+2026-10-14T06:41:13.3838773Z │ ├   /docs/references/posthog-js
+2026-10-14T06:41:13.3838984Z │ └   ...4 more pages available
+2026-10-14T06:41:13.3839194Z ├ src/templates/sdk/SdkType.tsx
+2026-10-14T06:41:13.3839479Z │ ├   /docs/references/posthog-js/types/ActionStepStringMatching
+2026-10-14T06:41:13.3839759Z │ └   ...380 more pages available
+2026-10-14T06:41:13.3839960Z ├ src/pages/101.tsx
+2026-10-14T06:41:13.3840125Z │ └   /101
+2026-10-14T06:41:13.3840289Z ├ src/pages/404.js
+2026-10-14T06:41:13.3840447Z │ ├   /404
+2026-10-14T06:41:13.3840596Z │ └   /404.html
+2026-10-14T06:41:13.3840778Z ├ src/pages/about.tsx
+2026-10-14T06:41:13.3840945Z │ └   /about
+2026-10-14T06:41:13.3841111Z ├ src/pages/apps.js
+2026-10-14T06:41:13.3841273Z │ └   /apps
+2026-10-14T06:41:13.3841436Z ├ src/pages/baa.tsx
+2026-10-14T06:41:13.3841697Z │ └   /baa
+2026-10-14T06:41:13.3841861Z ├ src/pages/blog.tsx
+2026-10-14T06:41:13.3842025Z │ └   /blog
+2026-10-14T06:41:13.3842196Z ├ src/pages/bookmarks.tsx
+2026-10-14T06:41:13.3842371Z │ └   /bookmarks
+2026-10-14T06:41:13.3842562Z ├ src/pages/careers.tsx
+2026-10-14T06:41:13.3842730Z │ └   /careers
+2026-10-14T06:41:13.3842907Z ├ src/pages/chapters.tsx
+2026-10-14T06:41:13.3843080Z │ └   /chapters
+2026-10-14T06:41:13.3843278Z ├ src/pages/community-incubator.tsx
+2026-10-14T06:41:13.3843509Z │ └   /community-incubator
+2026-10-14T06:41:13.3843701Z ├ src/pages/community.tsx
+2026-10-14T06:41:13.3843875Z │ └   /community
+2026-10-14T06:41:13.3844050Z ├ src/pages/compare.tsx
+2026-10-14T06:41:13.3844220Z │ └   /compare
+2026-10-14T06:41:13.3844420Z ├ src/pages/cool-tech-jobs.tsx
+2026-10-14T06:41:13.3844614Z │ └   /cool-tech-jobs
+2026-10-14T06:41:13.3844796Z ├ src/pages/deskhog.tsx
+2026-10-14T06:41:13.3844959Z │ └   /deskhog
+2026-10-14T06:41:13.3845129Z ├ src/pages/desktop.tsx
+2026-10-14T06:41:13.3845310Z │ └   /desktop
+2026-10-14T06:41:13.3845511Z ├ src/pages/display-options.tsx
+2026-10-14T06:41:13.3845710Z │ └   /display-options
+2026-10-14T06:41:13.3845887Z ├ src/pages/dpa.tsx
+2026-10-14T06:41:13.3846049Z │ └   /dpa
+2026-10-14T06:41:13.3846233Z ├ src/pages/enterprise.tsx
+2026-10-14T06:41:13.3846415Z │ └   /enterprise
+2026-10-14T06:41:13.3846583Z ├ src/pages/eu.js
+2026-10-14T06:41:13.3846741Z │ └   /eu
+2026-10-14T06:41:13.3846932Z ├ src/pages/event-comparison.tsx
+2026-10-14T06:41:13.3847150Z │ └   /event-comparison
+2026-10-14T06:41:13.3847452Z ├ src/pages/events-feedback-form.tsx
+2026-10-14T06:41:13.3847666Z │ └   /events-feedback-form
+2026-10-14T06:41:13.3847857Z ├ src/pages/events.tsx
+2026-10-14T06:41:13.3848023Z │ └   /events
+2026-10-14T06:41:13.3848228Z ├ src/pages/flurry-migration.tsx
+2026-10-14T06:41:13.3848428Z │ └   /flurry-migration
+2026-10-14T06:41:13.3848619Z ├ src/pages/founder-stack.tsx
+2026-10-14T06:41:13.3848811Z │ └   /founder-stack
+2026-10-14T06:41:13.3848993Z ├ src/pages/founders.tsx
+2026-10-14T06:41:13.3849183Z │ └   /founders
+2026-10-14T06:41:13.3849358Z ├ src/pages/handbook.tsx
+2026-10-14T06:41:13.3849577Z │ └   /handbook
+2026-10-14T06:41:13.3849747Z ├ src/pages/hogbb.tsx
+2026-10-14T06:41:13.3849912Z │ └   /hogbb
+2026-10-14T06:41:13.3850131Z ├ src/pages/hogbook.tsx
+2026-10-14T06:41:13.3850297Z │ └   /hogbook
+2026-10-14T06:41:13.3850469Z ├ src/pages/hogreads.tsx
+2026-10-14T06:41:13.3850638Z │ └   /hogreads
+2026-10-14T06:41:13.3850810Z ├ src/pages/hogspace.tsx
+2026-10-14T06:41:13.3851030Z │ └   /hogspace
+2026-10-14T06:41:13.3851199Z ├ src/pages/index.tsx
+2026-10-14T06:41:13.3851362Z │ └   /
+2026-10-14T06:41:13.3851526Z ├ src/pages/media.tsx
+2026-10-14T06:41:13.3851689Z │ └   /media
+2026-10-14T06:41:13.3851867Z ├ src/pages/merch.tsx
+2026-10-14T06:41:13.3852031Z │ └   /merch
+2026-10-14T06:41:13.3852196Z ├ src/pages/moat.tsx
+2026-10-14T06:41:13.3852356Z │ └   /moat
+2026-10-14T06:41:13.3852540Z ├ src/pages/newsletter-fbc.tsx
+2026-10-14T06:41:13.3852733Z │ └   /newsletter-fbc
+2026-10-14T06:41:13.3853017Z ├ src/pages/newsletter.tsx
+2026-10-14T06:41:13.3853200Z │ └   /newsletter
+2026-10-14T06:41:13.3853373Z ├ src/pages/old-home.tsx
+2026-10-14T06:41:13.3853542Z │ └   /old-home
+2026-10-14T06:41:13.3853712Z ├ src/pages/people.js
+2026-10-14T06:41:13.3853888Z │ └   /people
+2026-10-14T06:41:13.3854063Z ├ src/pages/photobooth.tsx
+2026-10-14T06:41:13.3854243Z │ └   /photobooth
+2026-10-14T06:41:13.3854416Z ├ src/pages/posthug.tsx
+2026-10-14T06:41:13.3854579Z │ └   /posthug
+2026-10-14T06:41:13.3854771Z ├ src/pages/privacy.tsx
+2026-10-14T06:41:13.3854939Z │ └   /privacy
+2026-10-14T06:41:13.3855133Z ├ src/pages/product-engineers.tsx
+2026-10-14T06:41:13.3855335Z │ └   /product-engineers
+2026-10-14T06:41:13.3855525Z ├ src/pages/product-os.tsx
+2026-10-14T06:41:13.3855729Z │ └   /product-os
+2026-10-14T06:41:13.3855903Z ├ src/pages/research.tsx
+2026-10-14T06:41:13.3856074Z │ └   /research
+2026-10-14T06:41:13.3856266Z ├ src/pages/reset-password.tsx
+2026-10-14T06:41:13.3856459Z │ └   /reset-password
+2026-10-14T06:41:13.3856945Z ├ src/pages/sales.tsx
+2026-10-14T06:41:13.3857130Z │ └   /sales
+2026-10-14T06:41:13.3857301Z ├ src/pages/services.tsx
+2026-10-14T06:41:13.3857465Z │ └   /services
+2026-10-14T06:41:13.3857669Z ├ src/pages/side-project-insurance.tsx
+2026-10-14T06:41:13.3857892Z │ └   /side-project-insurance
+2026-10-14T06:41:13.3858092Z ├ src/pages/side-projects.tsx
+2026-10-14T06:41:13.3858279Z │ └   /side-projects
+2026-10-14T06:41:13.3858462Z ├ src/pages/slack-invite.tsx
+2026-10-14T06:41:13.3858644Z │ └   /slack-invite
+2026-10-14T06:41:13.3858840Z ├ src/pages/small-teams.tsx
+2026-10-14T06:41:13.3859022Z │ └   /small-teams
+2026-10-14T06:41:13.3859191Z ├ src/pages/start.tsx
+2026-10-14T06:41:13.3859352Z │ └   /start
+2026-10-14T06:41:13.3859526Z ├ src/pages/subprocessors.tsx
+2026-10-14T06:41:13.3859725Z │ └   /subprocessors
+2026-10-14T06:41:13.3859917Z ├ src/pages/talk-to-a-human.tsx
+2026-10-14T06:41:13.3860108Z │ └   /talk-to-a-human
+2026-10-14T06:41:13.3860302Z ├ src/pages/team-directory.tsx
+2026-10-14T06:41:13.3860498Z │ └   /team-directory
+2026-10-14T06:41:13.3860704Z ├ src/pages/team-updates.tsx
+2026-10-14T06:41:13.3860886Z │ └   /team-updates
+2026-10-14T06:41:13.3861063Z ├ src/pages/templates.tsx
+2026-10-14T06:41:13.3861235Z │ └   /templates
+2026-10-14T06:41:13.3861401Z ├ src/pages/terms.tsx
+2026-10-14T06:41:13.3861578Z │ └   /terms
+2026-10-14T06:41:13.3861736Z ├ src/pages/why.tsx
+2026-10-14T06:41:13.3861891Z │ └   /why
+2026-10-14T06:41:13.3862049Z ├ src/pages/wip.tsx
+2026-10-14T06:41:13.3862205Z │ └   /wip
+2026-10-14T06:41:13.3862386Z ├ src/pages/workflow.tsx
+2026-10-14T06:41:13.3862550Z │ └   /workflow
+2026-10-14T06:41:13.3862828Z ├ src/pages/Copy of whitepaper (2) - final LATEST.docx.pdf/index.js
+2026-10-14T06:41:13.3863138Z │ └   /Copy of whitepaper (2) - final LATEST.docx.pdf
+2026-10-14T06:41:13.3863368Z ├ src/pages/academy/index.tsx
+2026-10-14T06:41:13.3863552Z │ └   /academy
+2026-10-14T06:41:13.3863747Z ├ src/pages/ai-observability/index.tsx
+2026-10-14T06:41:13.3863951Z │ └   /ai-observability
+2026-10-14T06:41:13.3864168Z ├ src/pages/ai-observability/pricing.tsx
+2026-10-14T06:41:13.3864391Z │ └   /ai-observability/pricing
+2026-10-14T06:41:13.3864596Z ├ src/pages/ai/index.tsx
+2026-10-14T06:41:13.3864760Z │ └   /ai
+2026-10-14T06:41:13.3864922Z ├ src/pages/bi/index.tsx
+2026-10-14T06:41:13.3865084Z │ └   /bi
+2026-10-14T06:41:13.3865265Z ├ src/pages/careers-og/index.tsx
+2026-10-14T06:41:13.3865465Z │ └   /careers-og
+2026-10-14T06:41:13.3865659Z ├ src/pages/achievements/manage.tsx
+2026-10-14T06:41:13.3865859Z │ └   /achievements/manage
+2026-10-14T06:41:13.3866097Z ├ src/pages/cdp/index.tsx
+2026-10-14T06:41:13.3866265Z │ └   /cdp
+2026-10-14T06:41:13.3866452Z ├ src/pages/changelog/index.tsx
+2026-10-14T06:41:13.3866630Z │ └   /changelog
+2026-10-14T06:41:13.3866826Z ├ src/pages/changelog-video/index.tsx
+2026-10-14T06:41:13.3867025Z │ └   /changelog-video
+2026-10-14T06:41:13.3867206Z ├ src/pages/code/open.tsx
+2026-10-14T06:41:13.3867381Z │ └   /code/open
+2026-10-14T06:41:13.3867578Z ├ src/pages/coloring-book.pdf/index.js
+2026-10-14T06:41:13.3867789Z │ └   /coloring-book.pdf
+2026-10-14T06:41:13.3867997Z ├ src/pages/community/achievements.tsx
+2026-10-14T06:41:13.3868205Z │ └   /community/achievements
+2026-10-14T06:41:13.3868423Z ├ src/pages/community/directory.tsx
+2026-10-14T06:41:13.3868622Z │ └   /community/directory
+2026-10-14T06:41:13.3868821Z ├ src/pages/community/latest.tsx
+2026-10-14T06:41:13.3869016Z │ └   /community/latest
+2026-10-14T06:41:13.3869221Z ├ src/pages/community/notifications.tsx
+2026-10-14T06:41:13.3869456Z │ └   /community/notifications
+2026-10-14T06:41:13.3869671Z ├ src/pages/community/reputation.tsx
+2026-10-14T06:41:13.3869875Z │ └   /community/reputation
+2026-10-14T06:41:13.3870080Z ├ src/pages/components/index.tsx
+2026-10-14T06:41:13.3870266Z │ └   /components
+2026-10-14T06:41:13.3870524Z ├ src/pages/context-warehouse/business-intelligence.tsx
+2026-10-14T06:41:13.3870797Z │ └   /context-warehouse/business-intelligence
+2026-10-14T06:41:13.3871061Z ├ src/pages/context-warehouse/data-modeling.tsx
+2026-10-14T06:41:13.3871344Z │ └   /context-warehouse/data-modeling
+2026-10-14T06:41:13.3871571Z ├ src/pages/context-warehouse/index.tsx
+2026-10-14T06:41:13.3871786Z │ └   /context-warehouse
+2026-10-14T06:41:13.3872028Z ├ src/pages/context-warehouse/integrations-library.tsx
+2026-10-14T06:41:13.3872292Z │ └   /context-warehouse/integrations-library
+2026-10-14T06:41:13.3872541Z ├ src/pages/context-warehouse/posthog-ai.tsx
+2026-10-14T06:41:13.3872774Z │ └   /context-warehouse/posthog-ai
+2026-10-14T06:41:13.3873043Z ├ src/pages/context-warehouse/reverse-etl-export.tsx
+2026-10-14T06:41:13.3873300Z │ └   /context-warehouse/reverse-etl-export
+2026-10-14T06:41:13.3873539Z ├ src/pages/context-warehouse/sources.tsx
+2026-10-14T06:41:13.3873762Z │ └   /context-warehouse/sources
+2026-10-14T06:41:13.3873991Z ├ src/pages/context-warehouse/sql-editor.tsx
+2026-10-14T06:41:13.3874234Z │ └   /context-warehouse/sql-editor
+2026-10-14T06:41:13.3874463Z ├ src/pages/context-warehouse/use-cases.tsx
+2026-10-14T06:41:13.3874691Z │ └   /context-warehouse/use-cases
+2026-10-14T06:41:13.3874948Z ├ src/pages/context-warehouse/warehouse-native.tsx
+2026-10-14T06:41:13.3875200Z │ └   /context-warehouse/warehouse-native
+2026-10-14T06:41:13.3875451Z ├ src/pages/context-warehouse/warehouse.tsx
+2026-10-14T06:41:13.3875676Z │ └   /context-warehouse/warehouse
+2026-10-14T06:41:13.3875905Z ├ src/pages/correlation-analysis/index.tsx
+2026-10-14T06:41:13.3876119Z │ └   /correlation-analysis
+2026-10-14T06:41:13.3876323Z ├ src/pages/customers/index.tsx
+2026-10-14T06:41:13.3876521Z │ └   /customers
+2026-10-14T06:41:13.3876709Z ├ src/pages/dashboards/index.tsx
+2026-10-14T06:41:13.3876895Z │ └   /dashboards
+2026-10-14T06:41:13.3877069Z ├ src/pages/demo/index.tsx
+2026-10-14T06:41:13.3877237Z │ └   /demo
+2026-10-14T06:41:13.3877424Z ├ src/pages/discounts/index.tsx
+2026-10-14T06:41:13.3877601Z │ └   /discounts
+2026-10-14T06:41:13.3877770Z ├ src/pages/docs/about.tsx
+2026-10-14T06:41:13.3877947Z │ └   /docs/about
+2026-10-14T06:41:13.3878147Z ├ src/pages/docs/customer-analytics.tsx
+2026-10-14T06:41:13.3878381Z │ └   /docs/customer-analytics
+2026-10-14T06:41:13.3878589Z ├ src/pages/docs/frameworks.tsx
+2026-10-14T06:41:13.3878778Z │ └   /docs/frameworks
+2026-10-14T06:41:13.3878959Z ├ src/pages/docs/index.tsx
+2026-10-14T06:41:13.3879128Z │ └   /docs
+2026-10-14T06:41:13.3879327Z ├ src/pages/docs/revenue-analytics.tsx
+2026-10-14T06:41:13.3879536Z │ └   /docs/revenue-analytics
+2026-10-14T06:41:13.3879732Z ├ src/pages/docs/services.tsx
+2026-10-14T06:41:13.3879917Z │ └   /docs/services
+2026-10-14T06:41:13.3880162Z ├ src/pages/early-access-features/index.tsx
+2026-10-14T06:41:13.3880391Z │ └   /early-access-features
+2026-10-14T06:41:13.3880595Z ├ src/pages/endpoints/index.tsx
+2026-10-14T06:41:13.3880775Z │ └   /endpoints
+2026-10-14T06:41:13.3880968Z ├ src/pages/endpoints/pricing.tsx
+2026-10-14T06:41:13.3881168Z │ └   /endpoints/pricing
+2026-10-14T06:41:13.3881387Z ├ src/pages/error-tracking/index.tsx
+2026-10-14T06:41:13.3881583Z │ └   /error-tracking
+2026-10-14T06:41:13.3881796Z ├ src/pages/error-tracking/pricing.tsx
+2026-10-14T06:41:13.3882004Z │ └   /error-tracking/pricing
+2026-10-14T06:41:13.3882215Z ├ src/pages/events/[strapiID].tsx
+2026-10-14T06:41:13.3882421Z │ └   /events/[strapiID]
+2026-10-14T06:41:13.3882624Z ├ src/pages/experiments/index.tsx
+2026-10-14T06:41:13.3882814Z │ └   /experiments
+2026-10-14T06:41:13.3883008Z ├ src/pages/experiments/pricing.tsx
+2026-10-14T06:41:13.3883209Z │ └   /experiments/pricing
+2026-10-14T06:41:13.3883427Z ├ src/pages/feature-flags/index.tsx
+2026-10-14T06:41:13.3883628Z │ └   /feature-flags
+2026-10-14T06:41:13.3883830Z ├ src/pages/feature-flags/pricing.tsx
+2026-10-14T06:41:13.3884035Z │ └   /feature-flags/pricing
+2026-10-14T06:41:13.3884246Z ├ src/pages/feature-matrix/index.tsx
+2026-10-14T06:41:13.3884452Z │ └   /feature-matrix
+2026-10-14T06:41:13.3884646Z ├ src/pages/feet-pics/index.tsx
+2026-10-14T06:41:13.3884826Z │ └   /feet-pics
+2026-10-14T06:41:13.3884998Z ├ src/pages/fm/index.tsx
+2026-10-14T06:41:13.3885165Z │ └   /fm
+2026-10-14T06:41:13.3885394Z ├ src/pages/for/[...path].tsx
+2026-10-14T06:41:13.3885580Z │ └   /for/[...path]
+2026-10-14T06:41:13.3885762Z ├ src/pages/forum/alerts.tsx
+2026-10-14T06:41:13.3885944Z │ └   /forum/alerts
+2026-10-14T06:41:13.3886123Z ├ src/pages/forum/drafts.tsx
+2026-10-14T06:41:13.3886318Z │ └   /forum/drafts
+2026-10-14T06:41:13.3886507Z ├ src/pages/forum/following.tsx
+2026-10-14T06:41:13.3886704Z │ └   /forum/following
+2026-10-14T06:41:13.3886889Z ├ src/pages/forum/index.tsx
+2026-10-14T06:41:13.3887063Z │ └   /forum
+2026-10-14T06:41:13.3887251Z ├ src/pages/forum/new.tsx
+2026-10-14T06:41:13.3887420Z │ └   /forum/new
+2026-10-14T06:41:13.3887600Z ├ src/pages/funnels/index.tsx
+2026-10-14T06:41:13.3887774Z │ └   /funnels
+2026-10-14T06:41:13.3887972Z ├ src/pages/group-analytics/index.tsx
+2026-10-14T06:41:13.3888184Z │ └   /group-analytics
+2026-10-14T06:41:13.3888391Z ├ src/pages/group-analytics/pricing.tsx
+2026-10-14T06:41:13.3888612Z │ └   /group-analytics/pricing
+2026-10-14T06:41:13.3888818Z ├ src/pages/heatmaps/index.tsx
+2026-10-14T06:41:13.3889006Z │ └   /heatmaps
+2026-10-14T06:41:13.3889189Z ├ src/pages/hog/index.tsx
+2026-10-14T06:41:13.3889355Z │ └   /hog
+2026-10-14T06:41:13.3889537Z ├ src/pages/hogpedia/about.tsx
+2026-10-14T06:41:13.3889725Z │ └   /hogpedia/about
+2026-10-14T06:41:13.3889927Z ├ src/pages/hogpedia/all-pages.tsx
+2026-10-14T06:41:13.3890131Z │ └   /hogpedia/all-pages
+2026-10-14T06:41:13.3890347Z ├ src/pages/hogpedia/donate.tsx
+2026-10-14T06:41:13.3890536Z │ └   /hogpedia/donate
+2026-10-14T06:41:13.3890728Z ├ src/pages/hogpedia/index.tsx
+2026-10-14T06:41:13.3890944Z │ └   /hogpedia
+2026-10-14T06:41:13.3891130Z ├ src/pages/hogpedia/random.tsx
+2026-10-14T06:41:13.3891327Z │ └   /hogpedia/random
+2026-10-14T06:41:13.3891535Z ├ src/pages/hogpedia/recent-changes.tsx
+2026-10-14T06:41:13.3891756Z │ └   /hogpedia/recent-changes
+2026-10-14T06:41:13.3891963Z ├ src/pages/hogpedia/search.tsx
+2026-10-14T06:41:13.3892154Z │ └   /hogpedia/search
+2026-10-14T06:41:13.3892355Z ├ src/pages/hogwatch/index.tsx
+2026-10-14T06:41:13.3892531Z │ └   /hogwatch
+2026-10-14T06:41:13.3892735Z ├ src/pages/image-annotator/index.tsx
+2026-10-14T06:41:13.3893005Z │ └   /image-annotator
+2026-10-14T06:41:13.3893189Z ├ src/pages/lenny/index.tsx
+2026-10-14T06:41:13.3893370Z │ └   /lenny
+2026-10-14T06:41:13.3893552Z ├ src/pages/lifecycle/index.tsx
+2026-10-14T06:41:13.3893729Z │ └   /lifecycle
+2026-10-14T06:41:13.3893902Z ├ src/pages/logs/index.tsx
+2026-10-14T06:41:13.3894070Z │ └   /logs
+2026-10-14T06:41:13.3894253Z ├ src/pages/logs/pricing.tsx
+2026-10-14T06:41:13.3894443Z │ └   /logs/pricing
+2026-10-14T06:41:13.3894619Z ├ src/pages/mcp/index.tsx
+2026-10-14T06:41:13.3894785Z │ └   /mcp
+2026-10-14T06:41:13.3894964Z ├ src/pages/mcp/leaderboard.tsx
+2026-10-14T06:41:13.3895164Z │ └   /mcp/leaderboard
+2026-10-14T06:41:13.3895347Z ├ src/pages/merch/orders.tsx
+2026-10-14T06:41:13.3895531Z │ └   /merch/orders
+2026-10-14T06:41:13.3895708Z ├ src/pages/paint/index.tsx
+2026-10-14T06:41:13.3895882Z │ └   /paint
+2026-10-14T06:41:13.3896084Z ├ src/pages/partnerships/index.tsx
+2026-10-14T06:41:13.3896283Z │ └   /partnerships
+2026-10-14T06:41:13.3896461Z ├ src/pages/people/map.tsx
+2026-10-14T06:41:13.3896718Z │ └   /people/map
+2026-10-14T06:41:13.3896913Z ├ src/pages/places/index.tsx
+2026-10-14T06:41:13.3897111Z │ └   /places
+2026-10-14T06:41:13.3897312Z ├ src/pages/platform-packages/index.tsx
+2026-10-14T06:41:13.3897518Z │ └   /platform-packages
+2026-10-14T06:41:13.3897725Z ├ src/pages/pocket-guides/index.tsx
+2026-10-14T06:41:13.3897918Z │ └   /pocket-guides
+2026-10-14T06:41:13.3898116Z ├ src/pages/posts/new.tsx
+2026-10-14T06:41:13.3898287Z │ └   /posts/new
+2026-10-14T06:41:13.3898464Z ├ src/pages/pricing/index.tsx
+2026-10-14T06:41:13.3898641Z │ └   /pricing
+2026-10-14T06:41:13.3898837Z ├ src/pages/product-analytics/index.tsx
+2026-10-14T06:41:13.3899053Z │ └   /product-analytics
+2026-10-14T06:41:13.3899269Z ├ src/pages/product-analytics/pricing.tsx
+2026-10-14T06:41:13.3899497Z │ └   /product-analytics/pricing
+2026-10-14T06:41:13.3899750Z ├ src/pages/product-analytics-explorer/customers.tsx
+2026-10-14T06:41:13.3900058Z │ └   /product-analytics-explorer/customers
+2026-10-14T06:41:13.3900329Z ├ src/pages/product-analytics-explorer/features.tsx
+2026-10-14T06:41:13.3900587Z │ └   /product-analytics-explorer/features
+2026-10-14T06:41:13.3900842Z ├ src/pages/product-analytics-explorer/index.tsx
+2026-10-14T06:41:13.3901083Z │ └   /product-analytics-explorer
+2026-10-14T06:41:13.3901295Z ├ src/pages/products/index.tsx
+2026-10-14T06:41:13.3901479Z │ └   /products
+2026-10-14T06:41:13.3901672Z ├ src/pages/questions/[...].tsx
+2026-10-14T06:41:13.3901860Z │ └   /questions/[...]
+2026-10-14T06:41:13.3902052Z ├ src/pages/questions/index.tsx
+2026-10-14T06:41:13.3902231Z │ └   /questions
+2026-10-14T06:41:13.3902446Z ├ src/pages/quick calls script.txt/index.tsx
+2026-10-14T06:41:13.3902665Z │ └   /quick calls script.txt
+2026-10-14T06:41:13.3902877Z ├ src/pages/r/ai-observability.tsx
+2026-10-14T06:41:13.3903078Z │ └   /r/ai-observability
+2026-10-14T06:41:13.3903281Z ├ src/pages/r/error-tracking.tsx
+2026-10-14T06:41:13.3903497Z │ └   /r/error-tracking
+2026-10-14T06:41:13.3903694Z ├ src/pages/r/observability.tsx
+2026-10-14T06:41:13.3903882Z │ └   /r/observability
+2026-10-14T06:41:13.3904067Z ├ src/pages/r/posthog-mcp.tsx
+2026-10-14T06:41:13.3904255Z │ └   /r/posthog-mcp
+2026-10-14T06:41:13.3904464Z ├ src/pages/r/product-analytics.tsx
+2026-10-14T06:41:13.3904668Z │ └   /r/product-analytics
+2026-10-14T06:41:13.3904873Z ├ src/pages/r/session-replay.tsx
+2026-10-14T06:41:13.3905068Z │ └   /r/session-replay
+2026-10-14T06:41:13.3905316Z ├ src/pages/replay-vision/index.tsx
+2026-10-14T06:41:13.3905521Z │ └   /replay-vision
+2026-10-14T06:41:13.3905724Z ├ src/pages/replay-vision/pricing.tsx
+2026-10-14T06:41:13.3905933Z │ └   /replay-vision/pricing
+2026-10-14T06:41:13.3906136Z ├ src/pages/retention/index.tsx
+2026-10-14T06:41:13.3906314Z │ └   /retention
+2026-10-14T06:41:13.3906502Z ├ src/pages/roadmap/index.js
+2026-10-14T06:41:13.3906676Z │ └   /roadmap
+2026-10-14T06:41:13.3906862Z ├ src/pages/roadmap/sidecar.tsx
+2026-10-14T06:41:13.3907057Z │ └   /roadmap/sidecar
+2026-10-14T06:41:13.3907257Z ├ src/pages/self-driving/index.tsx
+2026-10-14T06:41:13.3907457Z │ └   /self-driving
+2026-10-14T06:41:13.3907654Z ├ src/pages/session-replay/index.tsx
+2026-10-14T06:41:13.3907852Z │ └   /session-replay
+2026-10-14T06:41:13.3908058Z ├ src/pages/session-replay/pricing.tsx
+2026-10-14T06:41:13.3908269Z │ └   /session-replay/pricing
+2026-10-14T06:41:13.3908476Z ├ src/pages/slack/index.tsx
+2026-10-14T06:41:13.3908648Z │ └   /slack
+2026-10-14T06:41:13.3908842Z ├ src/pages/sparks-joy/index.tsx
+2026-10-14T06:41:13.3909028Z │ └   /sparks-joy
+2026-10-14T06:41:13.3909217Z ├ src/pages/spicy.mov/index.tsx
+2026-10-14T06:41:13.3909414Z │ └   /spicy.mov
+2026-10-14T06:41:13.3909587Z ├ src/pages/sql/index.tsx
+2026-10-14T06:41:13.3909755Z │ └   /sql
+2026-10-14T06:41:13.3909941Z ├ src/pages/startups/[...slug].tsx
+2026-10-14T06:41:13.3910139Z │ └   /startups/[...slug]
+2026-10-14T06:41:13.3910347Z ├ src/pages/startups/index.tsx
+2026-10-14T06:41:13.3910523Z │ └   /startups
+2026-10-14T06:41:13.3910745Z ├ src/pages/stickiness/index.tsx
+2026-10-14T06:41:13.3910932Z │ └   /stickiness
+2026-10-14T06:41:13.3911117Z ├ src/pages/students/index.tsx
+2026-10-14T06:41:13.3911304Z │ └   /students
+2026-10-14T06:41:13.3911481Z ├ src/pages/support/index.tsx
+2026-10-14T06:41:13.3911657Z │ └   /support
+2026-10-14T06:41:13.3911831Z ├ src/pages/surveys/index.tsx
+2026-10-14T06:41:13.3912006Z │ └   /surveys
+2026-10-14T06:41:13.3912200Z ├ src/pages/surveys/pricing.tsx
+2026-10-14T06:41:13.3912396Z │ └   /surveys/pricing
+2026-10-14T06:41:13.3912580Z ├ src/pages/teams/[slug].tsx
+2026-10-14T06:41:13.3912761Z │ └   /teams/[slug]
+2026-10-14T06:41:13.3912936Z ├ src/pages/teams/index.tsx
+2026-10-14T06:41:13.3913116Z │ └   /teams
+2026-10-14T06:41:13.3913302Z ├ src/pages/teams/team-ben.tsx
+2026-10-14T06:41:13.3913491Z │ └   /teams/team-ben
+2026-10-14T06:41:13.3913708Z ├ src/pages/the-context-gap-report/index.tsx
+2026-10-14T06:41:13.3913931Z │ └   /the-context-gap-report
+2026-10-14T06:41:13.3914137Z ├ src/pages/tooling/index.tsx
+2026-10-14T06:41:13.3914320Z │ └   /tooling
+2026-10-14T06:41:13.3914492Z ├ src/pages/tracing/index.tsx
+2026-10-14T06:41:13.3914666Z │ └   /tracing
+2026-10-14T06:41:13.3914850Z ├ src/pages/tracing/pricing.tsx
+2026-10-14T06:41:13.3915050Z │ └   /tracing/pricing
+2026-10-14T06:41:13.3915234Z ├ src/pages/tracks/index.tsx
+2026-10-14T06:41:13.3915409Z │ └   /tracks
+2026-10-14T06:41:13.3915582Z ├ src/pages/trash/index.tsx
+2026-10-14T06:41:13.3915753Z │ └   /trash
+2026-10-14T06:41:13.3915958Z ├ src/pages/user-paths/index.tsx
+2026-10-14T06:41:13.3916148Z │ └   /user-paths
+2026-10-14T06:41:13.3916337Z ├ src/pages/vibe-check/index.tsx
+2026-10-14T06:41:13.3916524Z │ └   /vibe-check
+2026-10-14T06:41:13.3916702Z ├ src/pages/videos/index.tsx
+2026-10-14T06:41:13.3916891Z │ └   /videos
+2026-10-14T06:41:13.3917064Z ├ src/pages/videos/play.tsx
+2026-10-14T06:41:13.3917248Z │ └   /videos/play
+2026-10-14T06:41:13.3917443Z ├ src/pages/web-analytics/index.tsx
+2026-10-14T06:41:13.3917639Z │ └   /web-analytics
+2026-10-14T06:41:13.3917860Z ├ src/pages/web-analytics/pricing.tsx
+2026-10-14T06:41:13.3918066Z │ └   /web-analytics/pricing
+2026-10-14T06:41:13.3918259Z ├ src/pages/wizard/index.tsx
+2026-10-14T06:41:13.3918431Z │ └   /wizard
+2026-10-14T06:41:13.3918616Z ├ src/pages/workflows/index.tsx
+2026-10-14T06:41:13.3918805Z │ └   /workflows
+2026-10-14T06:41:13.3918997Z ├ src/pages/workflows/pricing.tsx
+2026-10-14T06:41:13.3919196Z │ └   /workflows/pricing
+2026-10-14T06:41:13.3919406Z ├ src/pages/community/profile/edit.tsx
+2026-10-14T06:41:13.3919647Z │ └   /community/profile/edit
+2026-10-14T06:41:13.3919872Z ├ src/pages/community/profiles/[id].tsx
+2026-10-14T06:41:13.3920090Z │ └   /community/profiles/[id]
+2026-10-14T06:41:13.3920305Z ├ src/pages/community/profiles/me.tsx
+2026-10-14T06:41:13.3920511Z │ └   /community/profiles/me
+2026-10-14T06:41:13.3920729Z ├ src/pages/connect/posthog/redirect.tsx
+2026-10-14T06:41:13.3920958Z │ └   /connect/posthog/redirect
+2026-10-14T06:41:13.3921184Z ├ src/pages/docs/ai-observability/learn.tsx
+2026-10-14T06:41:13.3921422Z │ └   /docs/ai-observability/learn
+2026-10-14T06:41:13.3921661Z ├ src/pages/docs/distributed-tracing/index.tsx
+2026-10-14T06:41:13.3921897Z │ └   /docs/distributed-tracing
+2026-10-14T06:41:13.3922136Z ├ src/pages/docs/product-analytics/learn.tsx
+2026-10-14T06:41:13.3922367Z │ └   /docs/product-analytics/learn
+2026-10-14T06:41:13.3922618Z ├ src/pages/docs/references/version-unavailable.tsx
+2026-10-14T06:41:13.3922873Z │ └   /docs/references/version-unavailable
+2026-10-14T06:41:13.3923117Z ├ src/pages/docs/session-replay/learn.tsx
+2026-10-14T06:41:13.3923351Z │ └   /docs/session-replay/learn
+2026-10-14T06:41:13.3923559Z ├ src/pages/fm/mixtapes/new.tsx
+2026-10-14T06:41:13.3923749Z │ └   /fm/mixtapes/new
+2026-10-14T06:41:13.3923950Z ├ src/pages/forum/p/[permalink].tsx
+2026-10-14T06:41:13.3924154Z │ └   /forum/p/[permalink]
+2026-10-14T06:41:13.3924366Z ├ src/pages/forum/t/[topic].tsx
+2026-10-14T06:41:13.3924555Z │ └   /forum/t/[topic]
+2026-10-14T06:41:13.3924752Z ├ src/pages/posts/[slug]/edit.tsx
+2026-10-14T06:41:13.3924978Z │ └   /posts/[slug]/edit
+2026-10-14T06:41:13.3925182Z ├ src/pages/posts/[slug]/index.tsx
+2026-10-14T06:41:13.3925383Z │ └   /posts/[slug]
+2026-10-14T06:41:13.3925587Z ├ src/pages/sparks-joy/brickhog/index.tsx
+2026-10-14T06:41:13.3925795Z │ └   /sparks-joy/brickhog
+2026-10-14T06:41:13.3926036Z ├ src/pages/sparks-joy/dictator-or-tech-bro/index.tsx
+2026-10-14T06:41:13.3926288Z │ └   /sparks-joy/dictator-or-tech-bro
+2026-10-14T06:41:13.3926542Z ├ src/pages/sparks-joy/hedgehog-mode/index.tsx
+2026-10-14T06:41:13.3926781Z │ └   /sparks-joy/hedgehog-mode
+2026-10-14T06:41:13.3926997Z ├ src/pages/sparks-joy/hoglr/index.tsx
+2026-10-14T06:41:13.3927196Z │ └   /sparks-joy/hoglr
+2026-10-14T06:41:13.3927405Z ├ src/pages/sparks-joy/hogpatch/index.tsx
+2026-10-14T06:41:13.3927620Z │ └   /sparks-joy/hogpatch
+2026-10-14T06:41:13.3927834Z ├ src/pages/sparks-joy/hogwars/index.tsx
+2026-10-14T06:41:13.3928039Z │ └   /sparks-joy/hogwars
+2026-10-14T06:41:13.3928252Z ├ src/pages/sparks-joy/onlyhogs/index.tsx
+2026-10-14T06:41:13.3928467Z │ └   /sparks-joy/onlyhogs
+2026-10-14T06:41:13.3928674Z ├ src/pages/teams/new/index.tsx
+2026-10-14T06:41:13.3928854Z │ └   /teams/new
+2026-10-14T06:41:13.3929087Z ├ src/pages/docs/ai-observability/learn/[...chapter].tsx
+2026-10-14T06:41:13.3929355Z │ └   /docs/ai-observability/learn/[...chapter]
+2026-10-14T06:41:13.3929635Z ├ src/pages/docs/product-analytics/learn/[...chapter].tsx
+2026-10-14T06:41:13.3929916Z │ └   /docs/product-analytics/learn/[...chapter]
+2026-10-14T06:41:13.3930193Z ├ src/pages/docs/session-replay/learn/[...chapter].tsx
+2026-10-14T06:41:13.3930453Z │ └   /docs/session-replay/learn/[...chapter]
+2026-10-14T06:41:13.3930687Z ├ src/pages/fm/mixtapes/edit/[id].tsx
+2026-10-14T06:41:13.3930895Z │ └   /fm/mixtapes/edit/[id]
+2026-10-14T06:41:13.3931117Z ├ src/pages/forum/t/[topic]/tags.tsx
+2026-10-14T06:41:13.3931321Z │ └   /forum/t/[topic]/tags
+2026-10-14T06:41:13.3931511Z ├ src/api/contact-event.ts
+2026-10-14T06:41:13.3931704Z │ └ λ /api/contact-event
+2026-10-14T06:41:13.3931892Z ├ src/api/customer.ts
+2026-10-14T06:41:13.3932075Z │ └ λ /api/customer
+2026-10-14T06:41:13.3932252Z ├ src/api/homepage-hits.js
+2026-10-14T06:41:13.3932439Z │ └ λ /api/homepage-hits
+2026-10-14T06:41:13.3932624Z ├ src/api/hubspot-form.ts
+2026-10-14T06:41:13.3932808Z │ └ λ /api/hubspot-form
+2026-10-14T06:41:13.3933033Z └ src/api/signup-count.js
+2026-10-14T06:41:13.3933218Z   └ λ /api/signup-count
+2026-10-14T06:41:13.3933335Z 
+2026-10-14T06:41:13.3933525Z   ╭────────────────────────────────────────────────────────────────────╮
+2026-10-14T06:41:13.3933841Z   │                                                                    │
+2026-10-14T06:41:13.3934132Z   │     (SSG) Generated at build time                                  │
+2026-10-14T06:41:13.3934439Z   │   D (DSG) Deferred static generation - page generated at runtime   │
+2026-10-14T06:41:13.3934759Z   │   ∞ (SSR) Server-side renders at runtime (uses getServerData)      │
+2026-10-14T06:41:13.3935073Z   │   λ (Function) Gatsby function                                     │
+2026-10-14T06:41:13.3935346Z   │                                                                    │
+2026-10-14T06:41:13.3935635Z   ╰────────────────────────────────────────────────────────────────────╯
+2026-10-14T06:41:13.3935868Z info Done building in 702.216036628 sec
+2026-10-14T06:43:13.7038430Z ##[group]Run actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+2026-10-14T06:43:13.7039065Z with:
+2026-10-14T06:43:13.7039285Z   path: .cloudinary-resources.json
+2026-10-14T06:43:13.7039509Z   key: cloudinary-38522475148
+2026-10-14T06:43:13.7039690Z   enableCrossOsArchive: false
+2026-10-14T06:43:13.7039862Z env:
+2026-10-14T06:43:13.7040026Z   NODE_OPTIONS: --max_old_space_size=12288
+2026-10-14T06:43:13.7040260Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:43:13.7040465Z ##[endgroup]
+2026-10-14T06:43:13.7730618Z (node:8076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T06:43:13.7731977Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T06:43:13.7817385Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/posthog.com/posthog.com --files-from manifest.txt --use-compress-program zstdmt
+2026-10-14T06:43:13.8879645Z (node:8076) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T06:43:13.8957025Z Sent 1923625 of 1923625 (100.0%), 152.9 MBs/sec
+2026-10-14T06:43:14.2081957Z Cache saved with key: cloudinary-38522475148
+2026-10-14T06:43:14.2163395Z Post job cleanup.
+2026-10-14T06:43:14.2860715Z (node:8106) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T06:43:14.2862025Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T06:43:14.2862642Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc, not saving cache.
+2026-10-14T06:43:14.2916240Z Post job cleanup.
+2026-10-14T06:43:14.3348343Z Pruning is unnecessary.
+2026-10-14T06:43:14.3418842Z Post job cleanup.
+2026-10-14T06:43:14.4012640Z [command]/usr/bin/git version
+2026-10-14T06:43:14.4045555Z git version 2.55.0
+2026-10-14T06:43:14.4068249Z Temporarily overriding HOME='/home/runner/work/_temp/f742cd52-0213-4863-b2df-f747004deb08' before making global git config changes
+2026-10-14T06:43:14.4068989Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:43:14.4071901Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-10-14T06:43:14.4096454Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:43:14.4153019Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:43:14.4311474Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:43:14.4328441Z http.https://github.com/.extraheader
+2026-10-14T06:43:14.4333718Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T06:43:14.4360339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:43:14.4490403Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:43:14.4513041Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:43:14.4725819Z Cleaning up orphan processes
+2026-10-14T06:43:14.5077728Z Terminate orphan process: pid (7223) (node)
+2026-10-14T06:43:14.5168780Z Terminate orphan process: pid (7224) (node)
+2026-10-14T06:43:14.5257129Z Terminate orphan process: pid (7225) (node)
+2026-10-14T06:43:14.5354953Z Terminate orphan process: pid (7226) (node)
+2026-10-14T06:43:14.5443454Z Terminate orphan process: pid (7227) (node)
+2026-10-14T06:43:14.5531316Z Terminate orphan process: pid (7228) (node)
+2026-10-14T06:43:14.5619282Z Terminate orphan process: pid (7229) (node)
+2026-10-14T06:43:14.5660759Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830, actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

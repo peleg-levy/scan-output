@@ -1,0 +1,1388 @@
+﻿2026-10-14T06:10:22.0114557Z Current runner version: '2.337.0'
+2026-10-14T06:10:22.0135898Z ##[group]Runner Image Provisioner
+2026-10-14T06:10:22.0136641Z Hosted Compute Agent
+2026-10-14T06:10:22.0137256Z Version: 20261002.596
+2026-10-14T06:10:22.0137888Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T06:10:22.0138482Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T06:10:22.0139073Z Worker ID: {c9239179-37b6-4037-a932-db783f55ca7c}
+2026-10-14T06:10:22.0139669Z Region: westus
+2026-10-14T06:10:22.0140099Z Cloud: Azure
+2026-10-14T06:10:22.0140588Z ##[endgroup]
+2026-10-14T06:10:22.0141663Z ##[group]Operating System
+2026-10-14T06:10:22.0142206Z Ubuntu
+2026-10-14T06:10:22.0142674Z 24.04.5
+2026-10-14T06:10:22.0143091Z LTS
+2026-10-14T06:10:22.0143583Z ##[endgroup]
+2026-10-14T06:10:22.0144034Z ##[group]Runner Image
+2026-10-14T06:10:22.0144553Z Image: ubuntu-24.04
+2026-10-14T06:10:22.0145051Z Version: 20261004.327.1
+2026-10-14T06:10:22.0146091Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T06:10:22.0147745Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T06:10:22.0148568Z ##[endgroup]
+2026-10-14T06:10:22.0149693Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T06:10:22.0151392Z Actions: read
+2026-10-14T06:10:22.0151887Z Contents: read
+2026-10-14T06:10:22.0152341Z Metadata: read
+2026-10-14T06:10:22.0152856Z Packages: read
+2026-10-14T06:10:22.0153320Z SecurityEvents: write
+2026-10-14T06:10:22.0153859Z ##[endgroup]
+2026-10-14T06:10:22.0155583Z Secret source: Actions
+2026-10-14T06:10:22.0156303Z Cache mode: write
+2026-10-14T06:10:22.0157338Z Prepare workflow directory
+2026-10-14T06:10:22.0585254Z Prepare all required actions
+2026-10-14T06:10:22.0626140Z Getting action download info
+2026-10-14T06:10:22.3890846Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T06:10:22.4985458Z Download action repository 'github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938' (SHA:cdf488f595d80d6e07e03d4674febd5ab45fa938)
+2026-10-14T06:10:23.0349466Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-10-14T06:10:23.3229318Z Complete job name: Analyze (csharp)
+2026-10-14T06:10:23.3863174Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-14T06:10:23.3864371Z with:
+2026-10-14T06:10:23.3864983Z   ref: refs/pull/3178/merge
+2026-10-14T06:10:23.3865580Z   repository: microsoft/TypeAgent
+2026-10-14T06:10:23.3872044Z   token: ***
+2026-10-14T06:10:23.3872593Z   ssh-strict: true
+2026-10-14T06:10:23.3873091Z   ssh-user: git
+2026-10-14T06:10:23.3873615Z   persist-credentials: true
+2026-10-14T06:10:23.3874270Z   clean: true
+2026-10-14T06:10:23.3874767Z   sparse-checkout-cone-mode: true
+2026-10-14T06:10:23.3875442Z   fetch-depth: 1
+2026-10-14T06:10:23.3875935Z   fetch-tags: false
+2026-10-14T06:10:23.3876513Z   show-progress: true
+2026-10-14T06:10:23.3877185Z   lfs: false
+2026-10-14T06:10:23.3877665Z   submodules: false
+2026-10-14T06:10:23.3878232Z   set-safe-directory: true
+2026-10-14T06:10:23.3878833Z   allow-unsafe-pr-checkout: false
+2026-10-14T06:10:23.3879666Z env:
+2026-10-14T06:10:23.3880231Z   IS_FORK_PR: false
+2026-10-14T06:10:23.3880834Z ##[endgroup]
+2026-10-14T06:10:23.4683023Z Syncing repository: microsoft/TypeAgent
+2026-10-14T06:10:23.4684972Z ##[group]Getting Git version info
+2026-10-14T06:10:23.4685825Z Working directory is '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:23.4687503Z [command]/usr/bin/git version
+2026-10-14T06:10:23.4745135Z git version 2.55.0
+2026-10-14T06:10:23.4793076Z ##[endgroup]
+2026-10-14T06:10:23.4802498Z Temporarily overriding HOME='/home/runner/work/_temp/7e263020-37cf-4963-9fd9-b361cba04b96' before making global git config changes
+2026-10-14T06:10:23.4804646Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:10:23.4807529Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:23.4844633Z Deleting the contents of '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:23.4847601Z ##[group]Determining repository object format
+2026-10-14T06:10:23.7969827Z ##[endgroup]
+2026-10-14T06:10:23.7971928Z ##[group]Initializing the repository
+2026-10-14T06:10:23.7978034Z [command]/usr/bin/git init /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:23.8067733Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T06:10:23.8070111Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T06:10:23.8072437Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T06:10:23.8074367Z hint: call:
+2026-10-14T06:10:23.8075374Z hint:
+2026-10-14T06:10:23.8076925Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T06:10:23.8078499Z hint:
+2026-10-14T06:10:23.8080022Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T06:10:23.8082280Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T06:10:23.8084090Z hint:
+2026-10-14T06:10:23.8085212Z hint: 	git branch -m <name>
+2026-10-14T06:10:23.8086057Z hint:
+2026-10-14T06:10:23.8087673Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T06:10:23.8091071Z Initialized empty Git repository in /home/runner/work/TypeAgent/TypeAgent/.git/
+2026-10-14T06:10:23.8097400Z [command]/usr/bin/git remote add origin https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:23.8130577Z ##[endgroup]
+2026-10-14T06:10:23.8133105Z ##[group]Disabling automatic garbage collection
+2026-10-14T06:10:23.8135130Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T06:10:23.8265662Z ##[endgroup]
+2026-10-14T06:10:23.8268354Z ##[group]Setting up auth
+2026-10-14T06:10:23.8269953Z Removing SSH command configuration
+2026-10-14T06:10:23.8272046Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:10:23.8278003Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:10:23.8510150Z Removing HTTP extra header
+2026-10-14T06:10:23.8514815Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:10:23.8544873Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:10:23.8725801Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:10:23.8729592Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:10:23.8757783Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:10:23.8949578Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T06:10:23.8984014Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path /home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:10:23.9012107Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:10:23.9041328Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:10:23.9069247Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:10:23.9095024Z ##[endgroup]
+2026-10-14T06:10:23.9100156Z ##[group]Fetching the repository
+2026-10-14T06:10:23.9102361Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/pull/3178/merge:refs/remotes/pull/3178/merge
+2026-10-14T06:10:30.3707224Z From https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:30.3707855Z  * [new ref]         refs/pull/3178/merge -> pull/3178/merge
+2026-10-14T06:10:30.3710908Z ##[endgroup]
+2026-10-14T06:10:30.3711932Z ##[group]Determining the checkout info
+2026-10-14T06:10:30.3712707Z ##[endgroup]
+2026-10-14T06:10:30.3717089Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T06:10:30.4416325Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T06:10:30.6229704Z ##[group]Checking out the ref
+2026-10-14T06:10:30.6232166Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/3178/merge
+2026-10-14T06:10:31.4755148Z Note: switching to 'refs/remotes/pull/3178/merge'.
+2026-10-14T06:10:31.4755529Z 
+2026-10-14T06:10:31.4755777Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T06:10:31.4756333Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T06:10:31.4757133Z state without impacting any branches by switching back to a branch.
+2026-10-14T06:10:31.4757510Z 
+2026-10-14T06:10:31.4757806Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T06:10:31.4758334Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T06:10:31.4758683Z 
+2026-10-14T06:10:31.4758823Z   git switch -c <new-branch-name>
+2026-10-14T06:10:31.4759024Z 
+2026-10-14T06:10:31.4759162Z Or undo this operation with:
+2026-10-14T06:10:31.4759347Z 
+2026-10-14T06:10:31.4759454Z   git switch -
+2026-10-14T06:10:31.4759628Z 
+2026-10-14T06:10:31.4760189Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T06:10:31.4760652Z 
+2026-10-14T06:10:31.4761270Z HEAD is now at fe02448 Merge 48ff4ab3fba4df7bc776aa4eb73376b2a099c220 into e2c819c2b0ab10ec5524c4f644abab22e41e097d
+2026-10-14T06:10:31.4776244Z ##[endgroup]
+2026-10-14T06:10:31.4818987Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T06:10:31.4842598Z fe0244810392a7b6d6347f0e1f5c5049481c1b75
+2026-10-14T06:10:31.5103398Z ##[group]Run github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938
+2026-10-14T06:10:31.5103742Z with:
+2026-10-14T06:10:31.5103930Z   languages: csharp
+2026-10-14T06:10:31.5104113Z   build-mode: none
+2026-10-14T06:10:31.5104299Z   analysis-kinds: code-scanning
+2026-10-14T06:10:31.5106296Z   token: ***
+2026-10-14T06:10:31.5106528Z   matrix: {
+  "language": "csharp",
+  "build-mode": "none"
+}
+2026-10-14T06:10:31.5106999Z   debug: false
+2026-10-14T06:10:31.5107188Z   check-run-id: 115709192960
+2026-10-14T06:10:31.5107384Z env:
+2026-10-14T06:10:31.5107541Z   IS_FORK_PR: false
+2026-10-14T06:10:31.5107715Z ##[endgroup]
+2026-10-14T06:10:31.7002953Z Job run UUID is 44ed456a-913a-43b5-a123-cb75495707c1.
+2026-10-14T06:10:33.2006414Z ##[group]Setup CodeQL tools
+2026-10-14T06:10:33.2031458Z [command]/usr/bin/tar --version
+2026-10-14T06:10:33.2056409Z tar (GNU tar) 1.35
+2026-10-14T06:10:33.2056965Z Copyright (C) 2023 Free Software Foundation, Inc.
+2026-10-14T06:10:33.2057661Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2026-10-14T06:10:33.2058260Z This is free software: you are free to change and redistribute it.
+2026-10-14T06:10:33.2058735Z There is NO WARRANTY, to the extent permitted by law.
+2026-10-14T06:10:33.2059016Z 
+2026-10-14T06:10:33.2059146Z Written by John Gilmore and Jay Fenlason.
+2026-10-14T06:10:33.2060516Z Found gnu tar version 1.35.
+2026-10-14T06:10:33.4024279Z No overlay-base databases found in Actions cache.
+2026-10-14T06:10:33.5053390Z Did not find CodeQL tools version 2.27.2 in the toolcache.
+2026-10-14T06:10:33.5054023Z Using CodeQL CLI version 2.27.2 sourced from https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.27.2/codeql-bundle-linux64.tar.zst .
+2026-10-14T06:10:33.5058229Z Downloading CodeQL tools from https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.27.2/codeql-bundle-linux64.tar.zst . This may take a while.
+2026-10-14T06:10:33.5059035Z Streaming the extraction of the CodeQL bundle.
+2026-10-14T06:10:33.6923276Z [command]tar -x --zstd --ignore-zeros --warning=no-unknown-keyword --overwrite -f - -C /opt/hostedtoolcache/CodeQL/2.27.2/x64
+2026-10-14T06:10:36.9691530Z Finished downloading and extracting CodeQL bundle to /opt/hostedtoolcache/CodeQL/2.27.2/x64 (3.5s).
+2026-10-14T06:10:36.9692310Z Created toolcache marker file /opt/hostedtoolcache/CodeQL/2.27.2/x64.complete
+2026-10-14T06:10:37.5342665Z {
+2026-10-14T06:10:37.5342973Z   "productName": "CodeQL",
+2026-10-14T06:10:37.5343273Z   "vendor": "GitHub",
+2026-10-14T06:10:37.5343524Z   "version": "2.27.2",
+2026-10-14T06:10:37.5343799Z   "sha": "d7b185e374bfe18c0484dac07a521a810eb9c4fb",
+2026-10-14T06:10:37.5344169Z   "branches": [
+2026-10-14T06:10:37.5344411Z     "codeql-cli-2.27.2"
+2026-10-14T06:10:37.5344641Z   ],
+2026-10-14T06:10:37.5344917Z   "copyright": "Copyright (C) 2019-2026 GitHub, Inc.",
+2026-10-14T06:10:37.5345418Z   "unpackedLocation": "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql",
+2026-10-14T06:10:37.5345801Z   "configFileLocation": "/home/runner/.config/codeql/config",
+2026-10-14T06:10:37.5346077Z   "configFileFound": false,
+2026-10-14T06:10:37.5346269Z   "overlayVersion": 4,
+2026-10-14T06:10:37.5346445Z   "features": {
+2026-10-14T06:10:37.5346634Z     "analysisSummaryV2Default": true,
+2026-10-14T06:10:37.5347048Z     "buildModeOption": true,
+2026-10-14T06:10:37.5347275Z     "bundleSupportsIncludeDiagnostics": true,
+2026-10-14T06:10:37.5347520Z     "bundleSupportsIncludeLogs": true,
+2026-10-14T06:10:37.5347739Z     "bundleSupportsOverlay": true,
+2026-10-14T06:10:37.5348023Z     "databaseInterpretResultsSupportsSarifRunProperty": true,
+2026-10-14T06:10:37.5348316Z     "featuresInVersionResult": true,
+2026-10-14T06:10:37.5348557Z     "indirectTracingSupportsStaticBinaries": false,
+2026-10-14T06:10:37.5348839Z     "informsAboutUnsupportedPathFilters": true,
+2026-10-14T06:10:37.5349091Z     "supportsPython312": true,
+2026-10-14T06:10:37.5349286Z     "mrvaPackCreate": true,
+2026-10-14T06:10:37.5349714Z     "threatModelOption": true,
+2026-10-14T06:10:37.5349923Z     "traceCommandUseBuildMode": true,
+2026-10-14T06:10:37.5350133Z     "v2ramSizing": true,
+2026-10-14T06:10:37.5350333Z     "mrvaPackCreateMultipleQueries": true,
+2026-10-14T06:10:37.5350561Z     "setsCodeqlRunnerEnvVar": true,
+2026-10-14T06:10:37.5350788Z     "sarifMergeRunsFromEqualCategory": true,
+2026-10-14T06:10:37.5351012Z     "forceOverwrite": true,
+2026-10-14T06:10:37.5351213Z     "generateSummarySymbolMap": true,
+2026-10-14T06:10:37.5351444Z     "pythonDefaultIsToNotExtractStdlib": true,
+2026-10-14T06:10:37.5351678Z     "queryServerRunQueries": true,
+2026-10-14T06:10:37.5351895Z     "queryServerTrimCacheWithMode": true,
+2026-10-14T06:10:37.5352164Z     "builtinExtractorsSpecifyDefaultQueries": true,
+2026-10-14T06:10:37.5352413Z     "bqrsDiffResultSets": true,
+2026-10-14T06:10:37.5352623Z     "bundleSupportsIncludeOption": true,
+2026-10-14T06:10:37.5352867Z     "suppressesMissingFileBaselineWarning": true
+2026-10-14T06:10:37.5353104Z   }
+2026-10-14T06:10:37.5353252Z }
+2026-10-14T06:10:37.5354063Z ##[endgroup]
+2026-10-14T06:10:37.5354351Z ##[group]Validating workflow
+2026-10-14T06:10:37.9933551Z Detected no issues with the code scanning workflow.
+2026-10-14T06:10:37.9934202Z ##[endgroup]
+2026-10-14T06:10:37.9938340Z ##[group]Load language configuration
+2026-10-14T06:10:37.9943677Z [command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases --filter-to-languages-with-queries
+2026-10-14T06:10:38.7117720Z {
+2026-10-14T06:10:38.7118172Z   "aliases" : {
+2026-10-14T06:10:38.7118550Z     "c" : "cpp",
+2026-10-14T06:10:38.7119387Z     "c++" : "cpp",
+2026-10-14T06:10:38.7119684Z     "c-c++" : "cpp",
+2026-10-14T06:10:38.7119960Z     "c-cpp" : "cpp",
+2026-10-14T06:10:38.7120147Z     "c#" : "csharp",
+2026-10-14T06:10:38.7120372Z     "java-kotlin" : "java",
+2026-10-14T06:10:38.7120576Z     "kotlin" : "java",
+2026-10-14T06:10:38.7120820Z     "javascript-typescript" : "javascript",
+2026-10-14T06:10:38.7121176Z     "typescript" : "javascript"
+2026-10-14T06:10:38.7121530Z   },
+2026-10-14T06:10:38.7121761Z   "extractors" : {
+2026-10-14T06:10:38.7122016Z     "rust" : [
+2026-10-14T06:10:38.7122239Z       {
+2026-10-14T06:10:38.7122640Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/rust",
+2026-10-14T06:10:38.7123098Z         "extractor_options" : {
+2026-10-14T06:10:38.7123394Z           "trap" : {
+2026-10-14T06:10:38.7123676Z             "title" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7124080Z             "description" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7124449Z             "type" : "object",
+2026-10-14T06:10:38.7124741Z             "properties" : {
+2026-10-14T06:10:38.7125028Z               "compression" : {
+2026-10-14T06:10:38.7125483Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2026-10-14T06:10:38.7126976Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (to write gzip-compressed TRAP) 'zstd' (the default, to write Zstandard-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+2026-10-14T06:10:38.7128277Z                 "type" : "string",
+2026-10-14T06:10:38.7128612Z                 "pattern" : "^(none|gzip|zstd)$"
+2026-10-14T06:10:38.7128944Z               }
+2026-10-14T06:10:38.7129181Z             }
+2026-10-14T06:10:38.7129416Z           },
+2026-10-14T06:10:38.7129661Z           "cargo_target_dir" : {
+2026-10-14T06:10:38.7130036Z             "title" : "Directory to use for cargo output files.",
+2026-10-14T06:10:38.7132276Z             "description" : "This value is an optional path to use as `CARGO_TARGET_DIR` for the internal cargo commands the extractor uses. Pointing it to a persistent directory may reduce execution time of consecutive extractor runs. By default, a new scratch directory is used for each extraction, while qltests use the test's `target` directory so artifacts can be reused across runs.\n",
+2026-10-14T06:10:38.7134105Z             "type" : "string"
+2026-10-14T06:10:38.7134391Z           },
+2026-10-14T06:10:38.7134645Z           "cargo_target" : {
+2026-10-14T06:10:38.7134964Z             "title" : "Target architecture",
+2026-10-14T06:10:38.7135730Z             "description" : "Target architecture to use for analysis, analogous to `cargo --target`. By default the host architecture is used.\n",
+2026-10-14T06:10:38.7136477Z             "type" : "string"
+2026-10-14T06:10:38.7136989Z           },
+2026-10-14T06:10:38.7137236Z           "cargo_features" : {
+2026-10-14T06:10:38.7137566Z             "title" : "Cargo features to turn on",
+2026-10-14T06:10:38.7138954Z             "description" : "Comma-separated list of features to turn on. By default all features are enabled. If any features are specified, then only those features are enabled. The `default` feature must be explicitly specified if only default features are desired. Can be repeated.\n",
+2026-10-14T06:10:38.7140315Z             "type" : "array"
+2026-10-14T06:10:38.7140604Z           },
+2026-10-14T06:10:38.7140862Z           "cargo_cfg_overrides" : {
+2026-10-14T06:10:38.7141205Z             "title" : "Cargo cfg overrides",
+2026-10-14T06:10:38.7141895Z             "description" : "Comma-separated list of cfg settings to enable, or disable if prefixed with `-`. Can be repeated.\n",
+2026-10-14T06:10:38.7142576Z             "type" : "array"
+2026-10-14T06:10:38.7142855Z           },
+2026-10-14T06:10:38.7143098Z           "logging" : {
+2026-10-14T06:10:38.7143425Z             "title" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7143859Z             "description" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7144426Z             "type" : "object",
+2026-10-14T06:10:38.7144722Z             "properties" : {
+2026-10-14T06:10:38.7145013Z               "verbosity" : {
+2026-10-14T06:10:38.7145386Z                 "title" : "Extractor logging verbosity level.",
+2026-10-14T06:10:38.7146788Z                 "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2026-10-14T06:10:38.7148021Z                 "type" : "string",
+2026-10-14T06:10:38.7148665Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2026-10-14T06:10:38.7149309Z               },
+2026-10-14T06:10:38.7149571Z               "flamegraph" : {
+2026-10-14T06:10:38.7149987Z                 "title" : "[Experimental] File path for write flame graph log",
+2026-10-14T06:10:38.7151168Z                 "description" : "Collect flame graph data using the `tracing-flame` crate. To render a flame graph or chart, run the `inferno-flamegraph` command. See also: https://crates.io/crates/tracing-flame\n",
+2026-10-14T06:10:38.7152204Z                 "type" : "string"
+2026-10-14T06:10:38.7152525Z               }
+2026-10-14T06:10:38.7152851Z             }
+2026-10-14T06:10:38.7153081Z           },
+2026-10-14T06:10:38.7153349Z           "extract_dependencies_as_source" : {
+2026-10-14T06:10:38.7153763Z             "title" : "Extract dependencies as source code",
+2026-10-14T06:10:38.7154440Z             "description" : "Extract the full source code of dependencies instead of only extracting signatures.\n",
+2026-10-14T06:10:38.7155065Z             "type" : "string",
+2026-10-14T06:10:38.7155374Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7155687Z           }
+2026-10-14T06:10:38.7155913Z         }
+2026-10-14T06:10:38.7156130Z       }
+2026-10-14T06:10:38.7156349Z     ],
+2026-10-14T06:10:38.7156582Z     "csharp" : [
+2026-10-14T06:10:38.7156942Z       {
+2026-10-14T06:10:38.7157338Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp",
+2026-10-14T06:10:38.7157923Z         "extractor_options" : {
+2026-10-14T06:10:38.7158237Z           "trap" : {
+2026-10-14T06:10:38.7158696Z             "title" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7159137Z             "description" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7159524Z             "type" : "object",
+2026-10-14T06:10:38.7159827Z             "properties" : {
+2026-10-14T06:10:38.7160127Z               "compression" : {
+2026-10-14T06:10:38.7160605Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2026-10-14T06:10:38.7161862Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+2026-10-14T06:10:38.7162963Z                 "type" : "string",
+2026-10-14T06:10:38.7163299Z                 "pattern" : "^(none|gzip|brotli)$"
+2026-10-14T06:10:38.7163646Z               }
+2026-10-14T06:10:38.7163884Z             }
+2026-10-14T06:10:38.7164116Z           },
+2026-10-14T06:10:38.7164357Z           "buildless" : {
+2026-10-14T06:10:38.7164798Z             "title" : "DEPRECATED - Whether to use buildless (standalone) extraction.",
+2026-10-14T06:10:38.7167965Z             "description" : "DEPRECATED: Use `--build-mode none` instead.\nA value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2026-10-14T06:10:38.7169731Z             "type" : "string",
+2026-10-14T06:10:38.7170051Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7170573Z           },
+2026-10-14T06:10:38.7170784Z           "logging" : {
+2026-10-14T06:10:38.7170991Z             "title" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7171273Z             "description" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7171525Z             "type" : "object",
+2026-10-14T06:10:38.7171720Z             "properties" : {
+2026-10-14T06:10:38.7171910Z               "verbosity" : {
+2026-10-14T06:10:38.7172135Z                 "title" : "Extractor logging verbosity level.",
+2026-10-14T06:10:38.7172876Z                 "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2026-10-14T06:10:38.7173592Z                 "type" : "string",
+2026-10-14T06:10:38.7173984Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2026-10-14T06:10:38.7174361Z               }
+2026-10-14T06:10:38.7174517Z             }
+2026-10-14T06:10:38.7174668Z           },
+2026-10-14T06:10:38.7174821Z           "binlog" : {
+2026-10-14T06:10:38.7175032Z             "title" : "Binlog",
+2026-10-14T06:10:38.7175563Z             "description" : "[EXPERIMENTAL] The value is a path to the MsBuild binary log file that should be extracted. This option only works when `--build-mode none` is also specified.\n",
+2026-10-14T06:10:38.7176090Z             "type" : "array"
+2026-10-14T06:10:38.7176265Z           },
+2026-10-14T06:10:38.7176426Z           "buildless_dependency_dir" : {
+2026-10-14T06:10:38.7176934Z             "title" : "The path where buildless (standalone) extraction should keep dependencies.",
+2026-10-14T06:10:38.7177449Z             "description" : "If set, the buildless (standalone) extractor will store dependencies in this directory.\n",
+2026-10-14T06:10:38.7177836Z             "type" : "string"
+2026-10-14T06:10:38.7178024Z           }
+2026-10-14T06:10:38.7178183Z         }
+2026-10-14T06:10:38.7178326Z       }
+2026-10-14T06:10:38.7178468Z     ],
+2026-10-14T06:10:38.7178614Z     "python" : [
+2026-10-14T06:10:38.7178769Z       {
+2026-10-14T06:10:38.7179132Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/python",
+2026-10-14T06:10:38.7179436Z         "extractor_options" : {
+2026-10-14T06:10:38.7179636Z           "logging" : {
+2026-10-14T06:10:38.7179835Z             "title" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7180101Z             "description" : "Options pertaining to logging.",
+2026-10-14T06:10:38.7180345Z             "type" : "object",
+2026-10-14T06:10:38.7180539Z             "properties" : {
+2026-10-14T06:10:38.7180722Z               "verbosity" : {
+2026-10-14T06:10:38.7180945Z                 "title" : "Python extractor logging verbosity level.",
+2026-10-14T06:10:38.7181788Z                 "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2026-10-14T06:10:38.7182545Z                 "type" : "string",
+2026-10-14T06:10:38.7182927Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2026-10-14T06:10:38.7183299Z               }
+2026-10-14T06:10:38.7183451Z             }
+2026-10-14T06:10:38.7183603Z           },
+2026-10-14T06:10:38.7183762Z           "python_executable_name" : {
+2026-10-14T06:10:38.7184072Z             "title" : "Controls the name of the Python executable used by the Python extractor.",
+2026-10-14T06:10:38.7185176Z             "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+2026-10-14T06:10:38.7186267Z             "type" : "string",
+2026-10-14T06:10:38.7186480Z             "pattern" : "^(py|python|python3)$"
+2026-10-14T06:10:38.7186869Z           }
+2026-10-14T06:10:38.7187024Z         }
+2026-10-14T06:10:38.7187173Z       }
+2026-10-14T06:10:38.7187314Z     ],
+2026-10-14T06:10:38.7187457Z     "cpp" : [
+2026-10-14T06:10:38.7187606Z       {
+2026-10-14T06:10:38.7187829Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/cpp",
+2026-10-14T06:10:38.7188118Z         "extractor_options" : {
+2026-10-14T06:10:38.7188306Z           "trap" : {
+2026-10-14T06:10:38.7188483Z             "title" : "TRAP options",
+2026-10-14T06:10:38.7188761Z             "description" : "Options about how the extractor handles TRAP files",
+2026-10-14T06:10:38.7189044Z             "type" : "object",
+2026-10-14T06:10:38.7189232Z             "visibility" : 3,
+2026-10-14T06:10:38.7189421Z             "properties" : {
+2026-10-14T06:10:38.7189602Z               "cache" : {
+2026-10-14T06:10:38.7189793Z                 "title" : "TRAP cache options",
+2026-10-14T06:10:38.7190095Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2026-10-14T06:10:38.7190391Z                 "type" : "object",
+2026-10-14T06:10:38.7190585Z                 "properties" : {
+2026-10-14T06:10:38.7190773Z                   "dir" : {
+2026-10-14T06:10:38.7190973Z                     "title" : "TRAP cache directory",
+2026-10-14T06:10:38.7191250Z                     "description" : "The directory of the TRAP cache to use",
+2026-10-14T06:10:38.7191515Z                     "type" : "string"
+2026-10-14T06:10:38.7191706Z                   },
+2026-10-14T06:10:38.7191867Z                   "bound" : {
+2026-10-14T06:10:38.7192061Z                     "title" : "TRAP cache bound",
+2026-10-14T06:10:38.7192351Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2026-10-14T06:10:38.7192630Z                     "type" : "string",
+2026-10-14T06:10:38.7192834Z                     "pattern" : "[0-9]+"
+2026-10-14T06:10:38.7193031Z                   },
+2026-10-14T06:10:38.7193189Z                   "write" : {
+2026-10-14T06:10:38.7193524Z                     "title" : "TRAP cache writeable",
+2026-10-14T06:10:38.7193840Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2026-10-14T06:10:38.7194144Z                     "type" : "string",
+2026-10-14T06:10:38.7194353Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2026-10-14T06:10:38.7194565Z                   }
+2026-10-14T06:10:38.7194721Z                 }
+2026-10-14T06:10:38.7194873Z               }
+2026-10-14T06:10:38.7195025Z             }
+2026-10-14T06:10:38.7195172Z           },
+2026-10-14T06:10:38.7195324Z           "scale_timeouts" : {
+2026-10-14T06:10:38.7195579Z             "title" : "Value to scale compiler introspection timeouts with",
+2026-10-14T06:10:38.7196798Z             "description" : "The extractor attempts to determine what compiler the source code being extracted is compiled with. To this end the extractor makes additional calls to the compiler, some of which are expected to return within a certain fixed time (either 10s or 15s). On some systems that are under high load this time might be too short, and can be scaled up using this option.\n",
+2026-10-14T06:10:38.7197835Z             "type" : "string",
+2026-10-14T06:10:38.7198021Z             "pattern" : "[0-9]+"
+2026-10-14T06:10:38.7198222Z           },
+2026-10-14T06:10:38.7198382Z           "log_verbosity" : {
+2026-10-14T06:10:38.7198595Z             "title" : "Verbosity of the extractor logging",
+2026-10-14T06:10:38.7199078Z             "description" : "Set the verbosity of the extractor logging to 'quiet' (0), 'normal' (1), 'chatty' (2), or 'noisy' (3). The default is 'normal'.\n",
+2026-10-14T06:10:38.7199619Z             "type" : "string",
+2026-10-14T06:10:38.7199810Z             "pattern" : "[0-3]"
+2026-10-14T06:10:38.7199985Z           },
+2026-10-14T06:10:38.7200142Z           "frontend_options" : {
+2026-10-14T06:10:38.7200355Z             "title" : "C/C++ extractor frontend options",
+2026-10-14T06:10:38.7200735Z             "description" : "Set additional options that should be passed to the C/C++ extractor frontend.\n",
+2026-10-14T06:10:38.7201125Z             "type" : "array",
+2026-10-14T06:10:38.7201313Z             "visibility" : 3
+2026-10-14T06:10:38.7201486Z           }
+2026-10-14T06:10:38.7201631Z         }
+2026-10-14T06:10:38.7201772Z       }
+2026-10-14T06:10:38.7201918Z     ],
+2026-10-14T06:10:38.7202060Z     "java" : [
+2026-10-14T06:10:38.7202208Z       {
+2026-10-14T06:10:38.7202438Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/java",
+2026-10-14T06:10:38.7202722Z         "extractor_options" : {
+2026-10-14T06:10:38.7202913Z           "exclude" : {
+2026-10-14T06:10:38.7203124Z             "title" : "A glob excluding files from analysis.",
+2026-10-14T06:10:38.7203682Z             "description" : "A glob indicating what files to exclude from the analysis. This accepts glob patterns that are supported by Java's 'getPathMatcher' implementation.\n",
+2026-10-14T06:10:38.7204189Z             "type" : "string"
+2026-10-14T06:10:38.7204362Z           },
+2026-10-14T06:10:38.7204523Z           "add_prefer_source" : {
+2026-10-14T06:10:38.7204805Z             "title" : "Whether to always prefer source files over class files.",
+2026-10-14T06:10:38.7225370Z             "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+2026-10-14T06:10:38.7226262Z             "type" : "string",
+2026-10-14T06:10:38.7226478Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7226862Z           },
+2026-10-14T06:10:38.7227036Z           "buildless" : {
+2026-10-14T06:10:38.7227317Z             "title" : "Whether to use buildless (standalone) extraction (experimental).",
+2026-10-14T06:10:38.7228856Z             "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2026-10-14T06:10:38.7230030Z             "type" : "string",
+2026-10-14T06:10:38.7230242Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7230451Z           },
+2026-10-14T06:10:38.7230624Z           "buildless_dependency_dir" : {
+2026-10-14T06:10:38.7230958Z             "title" : "The path where buildless (standalone) extraction should keep dependencies.",
+2026-10-14T06:10:38.7231493Z             "description" : "If set, the buildless (standalone) extractor will store dependencies in this directory.\n",
+2026-10-14T06:10:38.7231882Z             "type" : "string"
+2026-10-14T06:10:38.7232113Z           },
+2026-10-14T06:10:38.7232287Z           "minimize_dependency_jars" : {
+2026-10-14T06:10:38.7232626Z             "title" : "Whether to rewrite and minimize downloaded JAR dependencies (experimental).",
+2026-10-14T06:10:38.7233275Z             "description" : "If 'true', JAR dependencies downloaded during extraction will be rewritten to remove unneeded data, such as method bodies. The default is 'false'.\n",
+2026-10-14T06:10:38.7233788Z             "type" : "string",
+2026-10-14T06:10:38.7233987Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7234213Z           }
+2026-10-14T06:10:38.7234359Z         }
+2026-10-14T06:10:38.7234521Z       }
+2026-10-14T06:10:38.7234666Z     ],
+2026-10-14T06:10:38.7234940Z     "go" : [
+2026-10-14T06:10:38.7235092Z       {
+2026-10-14T06:10:38.7235338Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/go",
+2026-10-14T06:10:38.7235640Z         "extractor_options" : {
+2026-10-14T06:10:38.7235839Z           "extract_tests" : {
+2026-10-14T06:10:38.7236110Z             "title" : "Whether to include Go test files in the CodeQL database.",
+2026-10-14T06:10:38.7236611Z             "description" : "A value indicating whether Go test files should be included in the CodeQL database. The default is 'false'.\n",
+2026-10-14T06:10:38.7237206Z             "type" : "string",
+2026-10-14T06:10:38.7237412Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7237620Z           },
+2026-10-14T06:10:38.7237784Z           "extract_vendor_dirs" : {
+2026-10-14T06:10:38.7238086Z             "title" : "Whether to include Go vendor directories in the CodeQL database.",
+2026-10-14T06:10:38.7238648Z             "description" : "A value indicating whether Go vendor directories should be included in the CodeQL database. The default is 'false'.\n",
+2026-10-14T06:10:38.7239100Z             "type" : "string",
+2026-10-14T06:10:38.7239291Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7239487Z           }
+2026-10-14T06:10:38.7239630Z         }
+2026-10-14T06:10:38.7239767Z       }
+2026-10-14T06:10:38.7239910Z     ],
+2026-10-14T06:10:38.7240055Z     "actions" : [
+2026-10-14T06:10:38.7240208Z       {
+2026-10-14T06:10:38.7240447Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/actions",
+2026-10-14T06:10:38.7240749Z         "extractor_options" : {
+2026-10-14T06:10:38.7240946Z           "trap" : {
+2026-10-14T06:10:38.7241122Z             "title" : "TRAP options",
+2026-10-14T06:10:38.7241401Z             "description" : "Options about how the extractor handles TRAP files",
+2026-10-14T06:10:38.7241680Z             "type" : "object",
+2026-10-14T06:10:38.7241863Z             "visibility" : 3,
+2026-10-14T06:10:38.7242046Z             "properties" : {
+2026-10-14T06:10:38.7242230Z               "cache" : {
+2026-10-14T06:10:38.7242419Z                 "title" : "TRAP cache options",
+2026-10-14T06:10:38.7242723Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2026-10-14T06:10:38.7243019Z                 "type" : "object",
+2026-10-14T06:10:38.7243325Z                 "properties" : {
+2026-10-14T06:10:38.7243521Z                   "dir" : {
+2026-10-14T06:10:38.7243727Z                     "title" : "TRAP cache directory",
+2026-10-14T06:10:38.7244008Z                     "description" : "The directory of the TRAP cache to use",
+2026-10-14T06:10:38.7244273Z                     "type" : "string"
+2026-10-14T06:10:38.7244471Z                   },
+2026-10-14T06:10:38.7244636Z                   "bound" : {
+2026-10-14T06:10:38.7244831Z                     "title" : "TRAP cache bound",
+2026-10-14T06:10:38.7245119Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2026-10-14T06:10:38.7245411Z                     "type" : "string",
+2026-10-14T06:10:38.7245623Z                     "pattern" : "[0-9]+"
+2026-10-14T06:10:38.7245820Z                   },
+2026-10-14T06:10:38.7245982Z                   "write" : {
+2026-10-14T06:10:38.7246175Z                     "title" : "TRAP cache writeable",
+2026-10-14T06:10:38.7246494Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2026-10-14T06:10:38.7246979Z                     "type" : "string",
+2026-10-14T06:10:38.7247213Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2026-10-14T06:10:38.7247431Z                   }
+2026-10-14T06:10:38.7247592Z                 }
+2026-10-14T06:10:38.7247743Z               }
+2026-10-14T06:10:38.7247900Z             }
+2026-10-14T06:10:38.7248049Z           }
+2026-10-14T06:10:38.7248192Z         }
+2026-10-14T06:10:38.7248332Z       }
+2026-10-14T06:10:38.7248470Z     ],
+2026-10-14T06:10:38.7248620Z     "javascript" : [
+2026-10-14T06:10:38.7248778Z       {
+2026-10-14T06:10:38.7249191Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/javascript",
+2026-10-14T06:10:38.7249492Z         "extractor_options" : {
+2026-10-14T06:10:38.7249679Z           "trap" : {
+2026-10-14T06:10:38.7249854Z             "title" : "TRAP options",
+2026-10-14T06:10:38.7250138Z             "description" : "Options about how the extractor handles TRAP files",
+2026-10-14T06:10:38.7250419Z             "type" : "object",
+2026-10-14T06:10:38.7250605Z             "visibility" : 3,
+2026-10-14T06:10:38.7250788Z             "properties" : {
+2026-10-14T06:10:38.7250964Z               "cache" : {
+2026-10-14T06:10:38.7251151Z                 "title" : "TRAP cache options",
+2026-10-14T06:10:38.7251455Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2026-10-14T06:10:38.7251751Z                 "type" : "object",
+2026-10-14T06:10:38.7251949Z                 "properties" : {
+2026-10-14T06:10:38.7252138Z                   "dir" : {
+2026-10-14T06:10:38.7252341Z                     "title" : "TRAP cache directory",
+2026-10-14T06:10:38.7252622Z                     "description" : "The directory of the TRAP cache to use",
+2026-10-14T06:10:38.7252884Z                     "type" : "string"
+2026-10-14T06:10:38.7253073Z                   },
+2026-10-14T06:10:38.7253232Z                   "bound" : {
+2026-10-14T06:10:38.7253421Z                     "title" : "TRAP cache bound",
+2026-10-14T06:10:38.7253704Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2026-10-14T06:10:38.7253986Z                     "type" : "string",
+2026-10-14T06:10:38.7254186Z                     "pattern" : "[0-9]+"
+2026-10-14T06:10:38.7254377Z                   },
+2026-10-14T06:10:38.7254544Z                   "write" : {
+2026-10-14T06:10:38.7254733Z                     "title" : "TRAP cache writeable",
+2026-10-14T06:10:38.7255044Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2026-10-14T06:10:38.7255346Z                     "type" : "string",
+2026-10-14T06:10:38.7255558Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2026-10-14T06:10:38.7255768Z                   }
+2026-10-14T06:10:38.7255920Z                 }
+2026-10-14T06:10:38.7256068Z               }
+2026-10-14T06:10:38.7256217Z             }
+2026-10-14T06:10:38.7256367Z           },
+2026-10-14T06:10:38.7256625Z           "skip_types" : {
+2026-10-14T06:10:38.7257033Z             "title" : "Skip type extraction for TypeScript",
+2026-10-14T06:10:38.7257391Z             "description" : "Whether to skip the extraction of types in a TypeScript application",
+2026-10-14T06:10:38.7257715Z             "type" : "string",
+2026-10-14T06:10:38.7257907Z             "pattern" : "^(false|true)$"
+2026-10-14T06:10:38.7258102Z           }
+2026-10-14T06:10:38.7258246Z         }
+2026-10-14T06:10:38.7258392Z       }
+2026-10-14T06:10:38.7258529Z     ],
+2026-10-14T06:10:38.7258673Z     "ruby" : [
+2026-10-14T06:10:38.7258823Z       {
+2026-10-14T06:10:38.7259055Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/ruby",
+2026-10-14T06:10:38.7259352Z         "extractor_options" : {
+2026-10-14T06:10:38.7259536Z           "trap" : {
+2026-10-14T06:10:38.7259722Z             "title" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7259978Z             "description" : "Options pertaining to TRAP.",
+2026-10-14T06:10:38.7260214Z             "type" : "object",
+2026-10-14T06:10:38.7260398Z             "properties" : {
+2026-10-14T06:10:38.7260581Z               "compression" : {
+2026-10-14T06:10:38.7260867Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2026-10-14T06:10:38.7261671Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) 'zstd' (to write Zstandard-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+2026-10-14T06:10:38.7262376Z                 "type" : "string",
+2026-10-14T06:10:38.7262682Z                 "pattern" : "^(none|gzip|zstd)$"
+2026-10-14T06:10:38.7262891Z               }
+2026-10-14T06:10:38.7263043Z             }
+2026-10-14T06:10:38.7263196Z           }
+2026-10-14T06:10:38.7263340Z         }
+2026-10-14T06:10:38.7263485Z       }
+2026-10-14T06:10:38.7263624Z     ],
+2026-10-14T06:10:38.7263765Z     "swift" : [
+2026-10-14T06:10:38.7263917Z       {
+2026-10-14T06:10:38.7264137Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/swift"
+2026-10-14T06:10:38.7264417Z       }
+2026-10-14T06:10:38.7264555Z     ]
+2026-10-14T06:10:38.7264696Z   }
+2026-10-14T06:10:38.7264841Z }
+2026-10-14T06:10:38.8305635Z Languages from configuration: csharp
+2026-10-14T06:10:38.8364031Z Using Git version 2.55.0
+2026-10-14T06:10:39.0822843Z Setting overlay database mode to overlay with caching because we are analyzing a pull request.
+2026-10-14T06:10:39.0881582Z Using overlay database mode: overlay with caching.
+2026-10-14T06:10:39.0883280Z Computing PR diff ranges...
+2026-10-14T06:10:39.4386267Z Persisted 203 diff range(s) across 13 file(s).
+2026-10-14T06:10:39.4386986Z ##[endgroup]
+2026-10-14T06:10:39.4387305Z ##[group]Checking cache for overlay-base database
+2026-10-14T06:10:39.4387801Z Looking in Actions cache for overlay-base database with restore key codeql-overlay-base-database-1-5a44cbbf608b9fd7-csharp-2.27.2-
+2026-10-14T06:10:39.6696314Z No overlay-base database found in Actions cache
+2026-10-14T06:10:39.6697073Z No overlay-base database found in cache, reverting overlay database mode to none.
+2026-10-14T06:10:39.6697763Z ##[endgroup]
+2026-10-14T06:10:39.6709455Z While resolving threads, found a cgroup CPUs file with 4 CPUs in /sys/fs/cgroup/cpuset.cpus.effective.
+2026-10-14T06:10:39.6720020Z Writing augmented user configuration file to /home/runner/work/_temp/user-config.yaml
+2026-10-14T06:10:39.6720779Z ##[group]Augmented user configuration file contents
+2026-10-14T06:10:39.6740756Z query-filters:
+2026-10-14T06:10:39.6741023Z   - exclude:
+2026-10-14T06:10:39.6741331Z       tags: exclude-from-incremental
+2026-10-14T06:10:39.6741578Z 
+2026-10-14T06:10:39.6741856Z ##[endgroup]
+2026-10-14T06:10:39.6745756Z [command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database init --force-overwrite --db-cluster /home/runner/work/_temp/codeql_databases --source-root=/home/runner/work/TypeAgent/TypeAgent --no-calculate-baseline --extractor-include-aliases --language=csharp --codescanning-config=/home/runner/work/_temp/user-config.yaml --build-mode=none
+2026-10-14T06:10:40.6850116Z Package install location: /home/runner/.codeql/packages
+2026-10-14T06:10:40.6857166Z Nothing downloaded.
+2026-10-14T06:10:41.4094226Z Resolving extractor csharp.
+2026-10-14T06:10:41.4133900Z Successfully loaded extractor C# (csharp) from /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp.
+2026-10-14T06:10:41.4321515Z Created skeleton CodeQL database at /home/runner/work/_temp/codeql_databases/csharp. This in-progress database is ready to be populated by an extractor.
+2026-10-14T06:10:41.7875048Z ##[group]Run github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938
+2026-10-14T06:10:41.7875394Z with:
+2026-10-14T06:10:41.7875570Z   category: /language:csharp
+2026-10-14T06:10:41.7875762Z   upload: always
+2026-10-14T06:10:41.7875932Z   output: sarif-results
+2026-10-14T06:10:41.7876113Z   skip-queries: false
+2026-10-14T06:10:41.7876330Z   checkout_path: /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:41.7876579Z   upload-database: true
+2026-10-14T06:10:41.7876951Z   wait-for-processing: true
+2026-10-14T06:10:41.7878884Z   token: ***
+2026-10-14T06:10:41.7879103Z   matrix: {
+  "language": "csharp",
+  "build-mode": "none"
+}
+2026-10-14T06:10:41.7879359Z   expect-error: false
+2026-10-14T06:10:41.7879566Z env:
+2026-10-14T06:10:41.7879724Z   IS_FORK_PR: false
+2026-10-14T06:10:41.7879953Z   CODEQL_ACTION_JOB_RUN_UUID: 44ed456a-913a-43b5-a123-cb75495707c1
+2026-10-14T06:10:41.7880244Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2026-10-14T06:10:41.7880524Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2026-10-14T06:10:41.7880899Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2026-10-14T06:10:41.7881131Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2026-10-14T06:10:41.7881349Z   CODEQL_ACTION_VERSION: 4.37.9
+2026-10-14T06:10:41.7881551Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2026-10-14T06:10:41.7881803Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql.yml:analyze
+2026-10-14T06:10:41.7882102Z   CODEQL_WORKFLOW_STARTED_AT: 2026-10-14T06:10:31.699Z
+2026-10-14T06:10:41.7882341Z   CODEQL_RAM: 14575
+2026-10-14T06:10:41.7882505Z   CODEQL_THREADS: 4
+2026-10-14T06:10:41.7882667Z ##[endgroup]
+2026-10-14T06:10:41.9801545Z Existing job run UUID is 44ed456a-913a-43b5-a123-cb75495707c1.
+2026-10-14T06:10:42.3312888Z While resolving threads, found a cgroup CPUs file with 4 CPUs in /sys/fs/cgroup/cpuset.cpus.effective.
+2026-10-14T06:10:42.3342342Z ##[group]Generating diff range extension pack
+2026-10-14T06:10:42.3412989Z Successfully created diff range extension pack at /home/runner/work/_temp/pr-diff-range.
+2026-10-14T06:10:42.3427168Z ##[endgroup]
+2026-10-14T06:10:42.3470299Z ##[group]Extracting csharp
+2026-10-14T06:10:42.3476465Z [command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database trace-command --use-build-mode --working-dir /home/runner/work/TypeAgent/TypeAgent /home/runner/work/_temp/codeql_databases/csharp
+2026-10-14T06:10:43.0181206Z Running command in /home/runner/work/TypeAgent/TypeAgent: [/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp/tools/autobuild.sh]
+2026-10-14T06:10:43.0627938Z [2026-10-14 06:10:43] [build-stdout] CodeQL C# autobuilder
+2026-10-14T06:10:43.0871076Z [2026-10-14 06:10:43] [build-stdout] Working directory: /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:43.1614550Z [2026-10-14 06:10:43] [build-stdout] [001] Extracting C# with build-mode set to 'none'
+2026-10-14T06:10:43.1652020Z [2026-10-14 06:10:43] [build-stdout] [001] Finding files in /home/runner/work/TypeAgent/TypeAgent...
+2026-10-14T06:10:43.2025842Z [2026-10-14 06:10:43] [build-stdout] [001] Found 6178 files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:43.2065431Z [2026-10-14 06:10:43] [build-stdout] [001] Found 6167 small non-binary files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:43.2080192Z [2026-10-14 06:10:43] [build-stdout] [001] Found 495 source files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:43.2091395Z [2026-10-14 06:10:43] [build-stdout] [001] Found 0 global.json files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:43.4417259Z [2026-10-14 06:10:43] [build-stdout] [001] Using .NET CLI executable: 'dotnet'
+2026-10-14T06:10:43.4425016Z [2026-10-14 06:10:43] [build-stdout] [001] Running 'dotnet --info'
+2026-10-14T06:10:47.0070362Z [2026-10-14 06:10:47] [build-stdout] [001] .NET SDK:
+2026-10-14T06:10:47.0070879Z [2026-10-14 06:10:47] [build-stdout] [001]  Version:           10.0.401
+2026-10-14T06:10:47.0071271Z [2026-10-14 06:10:47] [build-stdout] [001]  Commit:            e34a38d2ae
+2026-10-14T06:10:48.1334175Z [2026-10-14 06:10:48] [build-stdout] [001]  Workload version:  10.0.400-manifests.63b36e85
+2026-10-14T06:10:48.3787431Z [2026-10-14 06:10:48] [build-stdout] [001]  MSBuild version:   18.9.11+e34a38d2a
+2026-10-14T06:10:48.3790001Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.3790452Z [2026-10-14 06:10:48] [build-stdout] [001] Runtime Environment:
+2026-10-14T06:10:48.3790980Z [2026-10-14 06:10:48] [build-stdout] [001]  OS Name:     ubuntu
+2026-10-14T06:10:48.3795239Z [2026-10-14 06:10:48] [build-stdout] [001]  OS Version:  24.04
+2026-10-14T06:10:48.3797037Z [2026-10-14 06:10:48] [build-stdout] [001]  OS Platform: Linux
+2026-10-14T06:10:48.3922897Z [2026-10-14 06:10:48] [build-stdout] [001]  RID:         linux-x64
+2026-10-14T06:10:48.3923646Z [2026-10-14 06:10:48] [build-stdout] [001]  Base Path:   /usr/share/dotnet/sdk/10.0.401/
+2026-10-14T06:10:48.3924058Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.3924334Z [2026-10-14 06:10:48] [build-stdout] [001] .NET workloads installed:
+2026-10-14T06:10:48.4066119Z [2026-10-14 06:10:48] [build-stdout] [001] There are no installed workloads to display.
+2026-10-14T06:10:48.4067447Z [2026-10-14 06:10:48] [build-stdout] [001] Configured to use workload sets when installing new manifests.
+2026-10-14T06:10:48.4068309Z [2026-10-14 06:10:48] [build-stdout] [001] No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+2026-10-14T06:10:48.5201840Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5232491Z [2026-10-14 06:10:48] [build-stdout] [001] Host:
+2026-10-14T06:10:48.5233358Z [2026-10-14 06:10:48] [build-stdout] [001]   Version:      10.0.12
+2026-10-14T06:10:48.5234138Z [2026-10-14 06:10:48] [build-stdout] [001]   Architecture: x64
+2026-10-14T06:10:48.5234663Z [2026-10-14 06:10:48] [build-stdout] [001]   Commit:       95017c711e
+2026-10-14T06:10:48.5235118Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5235535Z [2026-10-14 06:10:48] [build-stdout] [001] .NET SDKs installed:
+2026-10-14T06:10:48.5236084Z [2026-10-14 06:10:48] [build-stdout] [001]   8.0.131 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5236616Z [2026-10-14 06:10:48] [build-stdout] [001]   8.0.206 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5237330Z [2026-10-14 06:10:48] [build-stdout] [001]   8.0.319 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5237839Z [2026-10-14 06:10:48] [build-stdout] [001]   8.0.425 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5238301Z [2026-10-14 06:10:48] [build-stdout] [001]   9.0.121 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5238624Z [2026-10-14 06:10:48] [build-stdout] [001]   9.0.205 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5238940Z [2026-10-14 06:10:48] [build-stdout] [001]   9.0.318 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5239264Z [2026-10-14 06:10:48] [build-stdout] [001]   10.0.112 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5239579Z [2026-10-14 06:10:48] [build-stdout] [001]   10.0.204 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5239908Z [2026-10-14 06:10:48] [build-stdout] [001]   10.0.303 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5240228Z [2026-10-14 06:10:48] [build-stdout] [001]   10.0.401 [/usr/share/dotnet/sdk]
+2026-10-14T06:10:48.5240498Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5240764Z [2026-10-14 06:10:48] [build-stdout] [001] .NET runtimes installed:
+2026-10-14T06:10:48.5241219Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 8.0.6 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5241803Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 8.0.22 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5242352Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 8.0.31 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5242896Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 9.0.6 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5243685Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 9.0.20 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5244273Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 10.0.8 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5244824Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 10.0.11 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5245379Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.AspNetCore.App 10.0.12 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2026-10-14T06:10:48.5245925Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 8.0.6 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5246462Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 8.0.22 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5247166Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 8.0.31 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5247735Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 9.0.6 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5248537Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 9.0.20 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5249154Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 10.0.8 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5249753Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 10.0.11 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5250332Z [2026-10-14 06:10:48] [build-stdout] [001]   Microsoft.NETCore.App 10.0.12 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2026-10-14T06:10:48.5250779Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5251109Z [2026-10-14 06:10:48] [build-stdout] [001] Other architectures found:
+2026-10-14T06:10:48.5251459Z [2026-10-14 06:10:48] [build-stdout] [001]   None
+2026-10-14T06:10:48.5251743Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5252054Z [2026-10-14 06:10:48] [build-stdout] [001] Environment variables:
+2026-10-14T06:10:48.5252448Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_CLI_TELEMETRY_OPTOUT              [1]
+2026-10-14T06:10:48.5252898Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_CLI_UI_LANGUAGE                   [en]
+2026-10-14T06:10:48.5253336Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_GENERATE_ASPNET_CERTIFICATE       [false]
+2026-10-14T06:10:48.5253715Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_MULTILEVEL_LOOKUP                 [0]
+2026-10-14T06:10:48.5254071Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_NOLOGO                            [1]
+2026-10-14T06:10:48.5254443Z [2026-10-14 06:10:48] [build-stdout] [001]   DOTNET_SKIP_FIRST_TIME_EXPERIENCE        [true]
+2026-10-14T06:10:48.5254757Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5255030Z [2026-10-14 06:10:48] [build-stdout] [001] global.json file:
+2026-10-14T06:10:48.5255303Z [2026-10-14 06:10:48] [build-stdout] [001]   Not found
+2026-10-14T06:10:48.5255546Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5255772Z [2026-10-14 06:10:48] [build-stdout] [001] Learn more:
+2026-10-14T06:10:48.5256076Z [2026-10-14 06:10:48] [build-stdout] [001]   https://aka.ms/dotnet/info
+2026-10-14T06:10:48.5256390Z [2026-10-14 06:10:48] [build-stdout] [001] 
+2026-10-14T06:10:48.5256629Z [2026-10-14 06:10:48] [build-stdout] [001] Download .NET:
+2026-10-14T06:10:48.5257150Z [2026-10-14 06:10:48] [build-stdout] [001]   https://aka.ms/dotnet/download
+2026-10-14T06:10:48.5333490Z [2026-10-14 06:10:48] [build-stdout] [001] Found 0 DLL files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:48.5343816Z [2026-10-14 06:10:48] [build-stdout] [001] Checking NuGet feed responsiveness: True
+2026-10-14T06:10:48.5363752Z [2026-10-14 06:10:48] [build-stdout] [001] Found 0 nuget.config files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:48.5365675Z [2026-10-14 06:10:48] [build-stdout] [001] Discovering explicit NuGet feeds from nuget.config files and private registries.
+2026-10-14T06:10:48.5384046Z [2026-10-14 06:10:48] [build-stdout] [001] Discovering all NuGet feeds.
+2026-10-14T06:10:48.5395364Z [2026-10-14 06:10:48] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent'...
+2026-10-14T06:10:48.5404480Z [2026-10-14 06:10:48] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:49.8749354Z [2026-10-14 06:10:49] [build-stdout] [001] Found 1 NuGet feeds (with inherited ones) in nuget.config files: https://api.nuget.org/v3/index.json
+2026-10-14T06:10:49.8774132Z [2026-10-14 06:10:49] [build-stdout] [001] Discovering reachable explicit NuGet feeds.
+2026-10-14T06:10:49.8777852Z [2026-10-14 06:10:49] [build-stdout] [001] Checking NuGet feed reachability on feeds: 
+2026-10-14T06:10:49.8781308Z [2026-10-14 06:10:49] [build-stdout] [001] Warning: No NuGet feeds are reachable.
+2026-10-14T06:10:49.8824662Z [2026-10-14 06:10:49] [build-stdout] [001] Found 0 packages.config files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:50.9089145Z [2026-10-14 06:10:50] [build-stdout] [001] Found 7 solution files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:10:50.9090517Z [2026-10-14 06:10:50] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/visualStudioTypeAgent/VisualStudioTypeAgent.sln...
+2026-10-14T06:10:50.9100349Z [2026-10-14 06:10:50] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/visualStudioTypeAgent'...
+2026-10-14T06:10:50.9101523Z [2026-10-14 06:10:50] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/visualStudioTypeAgent
+2026-10-14T06:10:51.1193221Z [2026-10-14 06:10:51] [build-stdout] [001] Discovering reachable inherited NuGet feeds.
+2026-10-14T06:10:51.1217707Z [2026-10-14 06:10:51] [build-stdout] [001] Checking NuGet feed reachability on feeds: https://api.nuget.org/v3/index.json
+2026-10-14T06:10:51.1238232Z [2026-10-14 06:10:51] [build-stdout] [001] Checking if NuGet feed 'https://api.nuget.org/v3/index.json' is reachable...
+2026-10-14T06:10:51.1277538Z [2026-10-14 06:10:51] [build-stdout] [001] Attempt 1/4 to reach NuGet feed 'https://api.nuget.org/v3/index.json'.
+2026-10-14T06:10:51.2383778Z [2026-10-14 06:10:51] [build-stdout] [001] Querying NuGet feed 'https://api.nuget.org/v3/index.json' succeeded.
+2026-10-14T06:10:51.2397694Z [2026-10-14 06:10:51] [build-stdout] [001] Reachable NuGet feeds: https://api.nuget.org/v3/index.json
+2026-10-14T06:10:51.2419511Z [2026-10-14 06:10:51] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/visualStudioTypeAgent/VisualStudioTypeAgent.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:00.7677441Z [2026-10-14 06:11:00] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/uiAutomationHelper/UiAutomationHelper.sln...
+2026-10-14T06:11:00.7678579Z [2026-10-14 06:11:00] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/uiAutomationHelper'...
+2026-10-14T06:11:00.7679300Z [2026-10-14 06:11:00] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/uiAutomationHelper
+2026-10-14T06:11:00.9111973Z [2026-10-14 06:11:00] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/uiAutomationHelper/UiAutomationHelper.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:04.1398198Z [2026-10-14 06:11:04] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/penLauncher/penLauncher.sln...
+2026-10-14T06:11:04.1399315Z [2026-10-14 06:11:04] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/penLauncher'...
+2026-10-14T06:11:04.1400433Z [2026-10-14 06:11:04] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/penLauncher
+2026-10-14T06:11:04.2823446Z [2026-10-14 06:11:04] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/penLauncher/penLauncher.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:05.8551661Z [2026-10-14 06:11:05] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/email/email.sln...
+2026-10-14T06:11:05.8552711Z [2026-10-14 06:11:05] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/email'...
+2026-10-14T06:11:05.8553764Z [2026-10-14 06:11:05] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/email
+2026-10-14T06:11:05.9982501Z [2026-10-14 06:11:05] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/email/email.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:07.1824727Z [2026-10-14 06:11:07] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/autoShell/autoShell.sln...
+2026-10-14T06:11:07.1825878Z [2026-10-14 06:11:07] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/autoShell'...
+2026-10-14T06:11:07.1828052Z [2026-10-14 06:11:07] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/autoShell
+2026-10-14T06:11:07.3268447Z [2026-10-14 06:11:07] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/autoShell/autoShell.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:10.4601891Z [2026-10-14 06:11:10] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/agentLauncher/agentLauncher.sln...
+2026-10-14T06:11:10.4605862Z [2026-10-14 06:11:10] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/agentLauncher'...
+2026-10-14T06:11:10.4607548Z [2026-10-14 06:11:10] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/agentLauncher
+2026-10-14T06:11:10.6076857Z [2026-10-14 06:11:10] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/agentLauncher/agentLauncher.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:17.3482197Z [2026-10-14 06:11:17] [build-stdout] [001] Restoring solution /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/TypeAgent.sln...
+2026-10-14T06:11:17.3483899Z [2026-10-14 06:11:17] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent'...
+2026-10-14T06:11:17.3485044Z [2026-10-14 06:11:17] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent
+2026-10-14T06:11:17.4925221Z [2026-10-14 06:11:17] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/TypeAgent.sln --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:21.7736453Z [2026-10-14 06:11:21] [build-stdout] [001] Found 27 project files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:11:21.7786467Z [2026-10-14 06:11:21] [build-stdout] [004] Restoring project /home/runner/work/TypeAgent/TypeAgent/dotnet/osNotificationListener/OsNotificationListener.csproj...
+2026-10-14T06:11:21.7797878Z [2026-10-14 06:11:21] [build-stdout] [004] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/osNotificationListener'...
+2026-10-14T06:11:21.7807866Z [2026-10-14 06:11:21] [build-stdout] [009] Restoring project /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/src/knowproTest/knowproTest.csproj...
+2026-10-14T06:11:21.7809381Z [2026-10-14 06:11:21] [build-stdout] [001] Restoring project /home/runner/work/TypeAgent/TypeAgent/dotnet/powerShellSandboxBroker/PowerShellSandboxBroker.csproj...
+2026-10-14T06:11:21.7810833Z [2026-10-14 06:11:21] [build-stdout] [009] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/src/knowproTest'...
+2026-10-14T06:11:21.7812099Z [2026-10-14 06:11:21] [build-stdout] [001] Getting NuGet feeds in folder '/home/runner/work/TypeAgent/TypeAgent/dotnet/powerShellSandboxBroker'...
+2026-10-14T06:11:21.7813396Z [2026-10-14 06:11:21] [build-stdout] [004] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/osNotificationListener
+2026-10-14T06:11:21.7814746Z [2026-10-14 06:11:21] [build-stdout] [009] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/src/knowproTest
+2026-10-14T06:11:21.7816099Z [2026-10-14 06:11:21] [build-stdout] [001] Running 'dotnet nuget list source --format Short' in /home/runner/work/TypeAgent/TypeAgent/dotnet/powerShellSandboxBroker
+2026-10-14T06:11:21.9427306Z [2026-10-14 06:11:21] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/powerShellSandboxBroker/PowerShellSandboxBroker.csproj --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:21.9856280Z [2026-10-14 06:11:21] [build-stdout] [009] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/src/knowproTest/knowproTest.csproj --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:22.0020358Z [2026-10-14 06:11:22] [build-stdout] [004] Running 'dotnet restore --no-dependencies /home/runner/work/TypeAgent/TypeAgent/dotnet/osNotificationListener/OsNotificationListener.csproj --packages /home/runner/work/_temp/codeql_databases/csharp/working/packages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal /p:TargetFrameworkRootPath=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:NetCoreTargetingPackRoot=/home/runner/work/_temp/codeql_databases/csharp/working/emptyFakeDotnetRoot /p:AllowMissingPrunePackageData=true /p:EnableWindowsTargeting=true -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:25.3505391Z [2026-10-14 06:11:25] [build-stdout] [001] Restored 270 packages
+2026-10-14T06:11:25.3506136Z [2026-10-14 06:11:25] [build-stdout] [001] Found 204 packages in project.assets.json files
+2026-10-14T06:11:25.3585430Z [2026-10-14 06:11:25] [build-stdout] [001] Discovering reachable fallback NuGet feeds.
+2026-10-14T06:11:25.3592153Z [2026-10-14 06:11:25] [build-stdout] [001] No fallback NuGet feeds specified. Adding default feeds: https://api.nuget.org/v3/index.json
+2026-10-14T06:11:25.3592957Z [2026-10-14 06:11:25] [build-stdout] [001] Adding feeds from nuget.config to fallback restore: True
+2026-10-14T06:11:25.3593737Z [2026-10-14 06:11:25] [build-stdout] [001] Checking fallback NuGet feed reachability on feeds: https://api.nuget.org/v3/index.json
+2026-10-14T06:11:25.3594837Z [2026-10-14 06:11:25] [build-stdout] [001] Checking if NuGet feed 'https://api.nuget.org/v3/index.json' is reachable...
+2026-10-14T06:11:25.3595526Z [2026-10-14 06:11:25] [build-stdout] [001] Attempt 1/4 to reach NuGet feed 'https://api.nuget.org/v3/index.json'.
+2026-10-14T06:11:25.3776009Z [2026-10-14 06:11:25] [build-stdout] [001] Querying NuGet feed 'https://api.nuget.org/v3/index.json' succeeded.
+2026-10-14T06:11:25.3791262Z [2026-10-14 06:11:25] [build-stdout] [001] Reachable fallback NuGet feeds: https://api.nuget.org/v3/index.json
+2026-10-14T06:11:25.3797950Z [2026-10-14 06:11:25] [build-stdout] [001] Found 9 packages that are not yet restored
+2026-10-14T06:11:25.3804531Z [2026-10-14 06:11:25] [build-stdout] [001] Restoring package microsoft.visualstudio.sdk...
+2026-10-14T06:11:25.3805833Z [2026-10-14 06:11:25] [build-stdout] [009] Restoring package coverlet.collector...
+2026-10-14T06:11:25.3807070Z [2026-10-14 06:11:25] [build-stdout] [008] Restoring package microsoft.vssdk.buildtools...
+2026-10-14T06:11:25.3808042Z [2026-10-14 06:11:25] [build-stdout] [004] Restoring package microsoft.net.test.sdk...
+2026-10-14T06:11:25.3836523Z [2026-10-14 06:11:25] [build-stdout] [008] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/0BC0F4776F501EDFE0B5DD30EF0F8A4D/missingpackages_workingdir'
+2026-10-14T06:11:25.3872738Z [2026-10-14 06:11:25] [build-stdout] [004] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/5707D9CCD3909344C2384588AB311A3D/missingpackages_workingdir'
+2026-10-14T06:11:25.3887116Z [2026-10-14 06:11:25] [build-stdout] [001] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/D7D78B331D757F82FA0AD63D9CCC6984/missingpackages_workingdir'
+2026-10-14T06:11:25.3888755Z [2026-10-14 06:11:25] [build-stdout] [009] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/97B6F2CA4656254F7A852783585D5FF8/missingpackages_workingdir'
+2026-10-14T06:11:28.5273854Z [2026-10-14 06:11:28] [build-stdout] [009] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/97B6F2CA4656254F7A852783585D5FF8/missingpackages_workingdir package coverlet.collector --no-restore'
+2026-10-14T06:11:28.5321562Z [2026-10-14 06:11:28] [build-stdout] [001] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/D7D78B331D757F82FA0AD63D9CCC6984/missingpackages_workingdir package microsoft.visualstudio.sdk --no-restore'
+2026-10-14T06:11:28.5356513Z [2026-10-14 06:11:28] [build-stdout] [008] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/0BC0F4776F501EDFE0B5DD30EF0F8A4D/missingpackages_workingdir package microsoft.vssdk.buildtools --no-restore'
+2026-10-14T06:11:28.5400283Z [2026-10-14 06:11:28] [build-stdout] [004] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/5707D9CCD3909344C2384588AB311A3D/missingpackages_workingdir package microsoft.net.test.sdk --no-restore'
+2026-10-14T06:11:29.3147004Z [2026-10-14 06:11:29] [build-stdout] [004] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/5707D9CCD3909344C2384588AB311A3D/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:29.3196415Z [2026-10-14 06:11:29] [build-stdout] [008] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/0BC0F4776F501EDFE0B5DD30EF0F8A4D/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:29.3200135Z [2026-10-14 06:11:29] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/D7D78B331D757F82FA0AD63D9CCC6984/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:29.3477718Z [2026-10-14 06:11:29] [build-stdout] [009] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/97B6F2CA4656254F7A852783585D5FF8/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:31.9338094Z [2026-10-14 06:11:31] [build-stdout] [004] Restoring package xunit...
+2026-10-14T06:11:31.9339347Z [2026-10-14 06:11:31] [build-stdout] [004] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/CB3D70C1C3CCEDE61E9080295E05A90C/missingpackages_workingdir'
+2026-10-14T06:11:32.1808042Z [2026-10-14 06:11:32] [build-stdout] [009] Restoring package xunit.runner.visualstudio...
+2026-10-14T06:11:32.1838004Z [2026-10-14 06:11:32] [build-stdout] [009] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/38137712C671CCEA0DDC198C705E19A0/missingpackages_workingdir'
+2026-10-14T06:11:32.8160584Z [2026-10-14 06:11:32] [build-stdout] [008] Restoring package microsoft.windows.sdk.buildtools...
+2026-10-14T06:11:32.8178081Z [2026-10-14 06:11:32] [build-stdout] [008] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/1938DADF002C0EF09B167777B6D352C8/missingpackages_workingdir'
+2026-10-14T06:11:32.8879560Z [2026-10-14 06:11:32] [build-stdout] [004] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/CB3D70C1C3CCEDE61E9080295E05A90C/missingpackages_workingdir package xunit --no-restore'
+2026-10-14T06:11:33.0348660Z [2026-10-14 06:11:33] [build-stdout] [009] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/38137712C671CCEA0DDC198C705E19A0/missingpackages_workingdir package xunit.runner.visualstudio --no-restore'
+2026-10-14T06:11:34.0948713Z [2026-10-14 06:11:34] [build-stdout] [008] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/1938DADF002C0EF09B167777B6D352C8/missingpackages_workingdir package microsoft.windows.sdk.buildtools --no-restore'
+2026-10-14T06:11:34.5789341Z [2026-10-14 06:11:34] [build-stdout] [004] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/CB3D70C1C3CCEDE61E9080295E05A90C/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:34.6227568Z [2026-10-14 06:11:34] [build-stdout] [009] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/38137712C671CCEA0DDC198C705E19A0/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:34.7929511Z [2026-10-14 06:11:34] [build-stdout] [001] Restoring package microsoft.visualstudio.threading.analyzers...
+2026-10-14T06:11:34.7933130Z [2026-10-14 06:11:34] [build-stdout] [001] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/E1BF8C0FD5E391A267BF9C79E32F43A6/missingpackages_workingdir'
+2026-10-14T06:11:35.0439420Z [2026-10-14 06:11:35] [build-stdout] [008] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/1938DADF002C0EF09B167777B6D352C8/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:35.3328183Z [2026-10-14 06:11:35] [build-stdout] [001] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/E1BF8C0FD5E391A267BF9C79E32F43A6/missingpackages_workingdir package microsoft.visualstudio.threading.analyzers --no-restore'
+2026-10-14T06:11:36.1866373Z [2026-10-14 06:11:36] [build-stdout] [001] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/E1BF8C0FD5E391A267BF9C79E32F43A6/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:36.4068715Z [2026-10-14 06:11:36] [build-stdout] [004] Restoring package microsoft.data.sqlite...
+2026-10-14T06:11:36.4072708Z [2026-10-14 06:11:36] [build-stdout] [004] Running 'dotnet new console --no-restore --output /home/runner/work/_temp/codeql_databases/csharp/working/3FF426B864C7EC66EF03378F59A7C61B/missingpackages_workingdir'
+2026-10-14T06:11:37.0240526Z [2026-10-14 06:11:37] [build-stdout] [004] Running 'dotnet add /home/runner/work/_temp/codeql_databases/csharp/working/3FF426B864C7EC66EF03378F59A7C61B/missingpackages_workingdir package microsoft.data.sqlite --no-restore'
+2026-10-14T06:11:37.6963504Z [2026-10-14 06:11:37] [build-stdout] [004] Running 'dotnet restore --no-dependencies /home/runner/work/_temp/codeql_databases/csharp/working/3FF426B864C7EC66EF03378F59A7C61B/missingpackages_workingdir --packages /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages /p:DisableImplicitNuGetFallbackFolder=true --verbosity normal --force -s https://api.nuget.org/v3/index.json'
+2026-10-14T06:11:40.3797773Z [2026-10-14 06:11:40] [build-stdout] [001] Adding .NET Framework DLLs
+2026-10-14T06:11:40.4307151Z [2026-10-14 06:11:40] [build-stdout] [001] Indexing 3483 assemblies...
+2026-10-14T06:11:40.5375504Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.vssdk.buildtools/18.9.820/tools/VSSDK/PkgdefMgmt.dll
+2026-10-14T06:11:40.5377409Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.vssdk.buildtools/18.9.820/tools/VSSDK/offreg.dll
+2026-10-14T06:11:40.5482504Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/x64/MicrosoftInstrumentationEngine_x64.dll
+2026-10-14T06:11:40.5484918Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/arm64/MicrosoftInstrumentationEngine_arm64.dll
+2026-10-14T06:11:40.5493365Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/x86/MicrosoftInstrumentationEngine_x86.dll
+2026-10-14T06:11:40.5494912Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/msdia140.dll
+2026-10-14T06:11:40.5496397Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/CodeCoverageMessages.dll
+2026-10-14T06:11:40.5498420Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/covrun32.dll
+2026-10-14T06:11:40.5499636Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.testplatform.testhost/18.11.0/lib/net8.0/x64/msdia140.dll
+2026-10-14T06:11:40.5500649Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.testplatform.testhost/18.11.0/lib/net8.0/arm64/msdia140.dll
+2026-10-14T06:11:40.5510855Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.testplatform.testhost/18.11.0/lib/net8.0/x86/msdia140.dll
+2026-10-14T06:11:40.5556801Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/sqlitepclraw.lib.e_sqlite3/2.1.13/runtimes/win-x64/native/e_sqlite3.dll
+2026-10-14T06:11:40.5558518Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/sqlitepclraw.lib.e_sqlite3/2.1.13/runtimes/win-arm64/native/e_sqlite3.dll
+2026-10-14T06:11:40.5559707Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/sqlitepclraw.lib.e_sqlite3/2.1.13/runtimes/win-x86/native/e_sqlite3.dll
+2026-10-14T06:11:40.5621466Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/msisip.dll
+2026-10-14T06:11:40.5623232Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/appxsip.dll
+2026-10-14T06:11:40.5625100Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/SshClient.dll
+2026-10-14T06:11:40.5626939Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/wintrust.dll
+2026-10-14T06:11:40.5628803Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/midlrtmd.dll
+2026-10-14T06:11:40.5630912Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/SirepClient.dll
+2026-10-14T06:11:40.5632732Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/mssign32.dll
+2026-10-14T06:11:40.5635880Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/appxpackaging.dll
+2026-10-14T06:11:40.5638314Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/ipoverusb.discoverpartners.dll
+2026-10-14T06:11:40.5654012Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/mrmsupport.dll
+2026-10-14T06:11:40.5655985Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/opcservices.dll
+2026-10-14T06:11:40.5658210Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/ServicingCommon.dll
+2026-10-14T06:11:40.5660101Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x64/rcdll.dll
+2026-10-14T06:11:40.5661314Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/msisip.dll
+2026-10-14T06:11:40.5662371Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/appxsip.dll
+2026-10-14T06:11:40.5663585Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/SshClient.dll
+2026-10-14T06:11:40.5664739Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/wintrust.dll
+2026-10-14T06:11:40.5665836Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/midlrtmd.dll
+2026-10-14T06:11:40.5667228Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/SirepClient.dll
+2026-10-14T06:11:40.5668319Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/mssign32.dll
+2026-10-14T06:11:40.5669517Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/appxpackaging.dll
+2026-10-14T06:11:40.5670633Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/ipoverusb.discoverpartners.dll
+2026-10-14T06:11:40.5671734Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/mrmsupport.dll
+2026-10-14T06:11:40.5672809Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/opcservices.dll
+2026-10-14T06:11:40.5673901Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/ServicingCommon.dll
+2026-10-14T06:11:40.5674988Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/arm64/rcdll.dll
+2026-10-14T06:11:40.5676025Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/msisip.dll
+2026-10-14T06:11:40.5677256Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/appxsip.dll
+2026-10-14T06:11:40.5678305Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/SshClient.dll
+2026-10-14T06:11:40.5679349Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/wintrust.dll
+2026-10-14T06:11:40.5680379Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/midlrtmd.dll
+2026-10-14T06:11:40.5681534Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/SirepClient.dll
+2026-10-14T06:11:40.5682648Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/mssign32.dll
+2026-10-14T06:11:40.5683713Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/appxpackaging.dll
+2026-10-14T06:11:40.5684820Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/ipoverusb.discoverpartners.dll
+2026-10-14T06:11:40.5685921Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/mrmsupport.dll
+2026-10-14T06:11:40.5687189Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/opcservices.dll
+2026-10-14T06:11:40.5688257Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/ServicingCommon.dll
+2026-10-14T06:11:40.5689304Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.windows.sdk.buildtools/10.0.28000.2705/bin/10.0.28000.0/x86/rcdll.dll
+2026-10-14T06:11:40.5853289Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.vssdk.buildtools/18.9.820/tools/VSSDK/bin/VSCTCompress.dll
+2026-10-14T06:11:40.5904315Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/arm64/msdia140.dll
+2026-10-14T06:11:40.5908825Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/arm64/covrunarm64.dll
+2026-10-14T06:11:40.5911813Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/amd64/msdia140.dll
+2026-10-14T06:11:40.5914092Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.codecoverage/18.11.0/build/netstandard2.0/CodeCoverage/amd64/covrun64.dll
+2026-10-14T06:11:40.5953679Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.vssdk.buildtools/18.9.820/tools/vssdk/bin/lib/PkgdefMgmt.dll
+2026-10-14T06:11:40.6008111Z [2026-10-14 06:11:40] [build-stdout] [001] Couldn't read assembly info from /home/runner/work/_temp/codeql_databases/csharp/working/missingpackages/microsoft.vssdk.buildtools/18.9.820/tools/VSSDK/bin/x86/VSCTCompress.dll
+2026-10-14T06:11:40.6100712Z [2026-10-14 06:11:40] [build-stdout] [001] Read 3069 assembly infos
+2026-10-14T06:11:40.6398438Z [2026-10-14 06:11:40] [build-stdout] [004] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/penLauncher/penLauncher.sln...
+2026-10-14T06:11:40.6399846Z [2026-10-14 06:11:40] [build-stdout] [013] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/email/email.sln...
+2026-10-14T06:11:40.6401315Z [2026-10-14 06:11:40] [build-stdout] [001] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/visualStudioTypeAgent/VisualStudioTypeAgent.sln...
+2026-10-14T06:11:40.6402470Z [2026-10-14 06:11:40] [build-stdout] [008] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/uiAutomationHelper/UiAutomationHelper.sln...
+2026-10-14T06:11:40.6614559Z [2026-10-14 06:11:40] [build-stdout] [013] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/agentLauncher/agentLauncher.sln...
+2026-10-14T06:11:40.6615650Z [2026-10-14 06:11:40] [build-stdout] [004] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/autoShell/autoShell.sln...
+2026-10-14T06:11:40.6625170Z [2026-10-14 06:11:40] [build-stdout] [001] Analyzing /home/runner/work/TypeAgent/TypeAgent/dotnet/typeagent/TypeAgent.sln...
+2026-10-14T06:11:40.6819024Z [2026-10-14 06:11:40] [build-stdout] [001] Reference list contains 2829 assemblies
+2026-10-14T06:11:40.6824852Z [2026-10-14 06:11:40] [build-stdout] [001] After conflict resolution, reference list contains 504 assemblies
+2026-10-14T06:11:40.6904909Z [2026-10-14 06:11:40] [build-stdout] [001] Found 0 resource files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:11:40.6912028Z [2026-10-14 06:11:40] [build-stdout] [001] Generating source file for implicit usings. Namespaces: System, System.Collections.Generic, System.Drawing, System.IO, System.Linq, System.Net.Http, System.Threading, System.Threading.Tasks, System.Windows.Forms, Xunit
+2026-10-14T06:11:40.6992358Z [2026-10-14 06:11:40] [build-stdout] [001] Found 0 razor view files in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:11:40.6993424Z [2026-10-14 06:11:40] [build-stdout] [001] 
+2026-10-14T06:11:40.7018655Z [2026-10-14 06:11:40] [build-stdout] [001] Build analysis summary:
+2026-10-14T06:11:40.7020237Z [2026-10-14 06:11:40] [build-stdout] [001]    495 source files found on the filesystem
+2026-10-14T06:11:40.7021418Z [2026-10-14 06:11:40] [build-stdout] [001]      1 source files have been generated
+2026-10-14T06:11:40.7021912Z [2026-10-14 06:11:40] [build-stdout] [001]      7 solution files found on the filesystem
+2026-10-14T06:11:40.7022299Z [2026-10-14 06:11:40] [build-stdout] [001]     27 project files found on the filesystem
+2026-10-14T06:11:40.7022649Z [2026-10-14 06:11:40] [build-stdout] [001]    504 resolved references
+2026-10-14T06:11:40.7022958Z [2026-10-14 06:11:40] [build-stdout] [001]      0 unresolved references
+2026-10-14T06:11:40.7023280Z [2026-10-14 06:11:40] [build-stdout] [001]   1385 resolved assembly conflicts
+2026-10-14T06:11:40.7023622Z [2026-10-14 06:11:40] [build-stdout] [001]      4 restored .NET framework variants
+2026-10-14T06:11:40.7023999Z [2026-10-14 06:11:40] [build-stdout] [001] Build analysis completed in 00:00:57.5360887
+2026-10-14T06:11:40.7024333Z [2026-10-14 06:11:40] [build-stdout] [001] 
+2026-10-14T06:11:40.7024597Z [2026-10-14 06:11:40] [build-stdout] [001] Extracting...
+2026-10-14T06:11:40.7077148Z [2026-10-14 06:11:40] [build-stdout] [001] Overlay: Overlay mode not enabled.
+2026-10-14T06:12:05.0243360Z [2026-10-14 06:12:05] [build-stdout] [001] Missing namespace autoShell.Handlers.Generated
+2026-10-14T06:12:05.0244417Z [2026-10-14 06:12:05] [build-stdout] [001] Missing namespace Microsoft.Office.Interop.Outlook
+2026-10-14T06:12:05.0245254Z [2026-10-14 06:12:05] [build-stdout] [001] Missing namespace Windows.UI.Notifications
+2026-10-14T06:12:05.0246047Z [2026-10-14 06:12:05] [build-stdout] [001] Missing namespace Windows.UI.Notifications.Management
+2026-10-14T06:12:05.0247071Z [2026-10-14 06:12:05] [build-stdout] [001] Failed to resolve 73 types in 4 namespaces
+2026-10-14T06:12:05.0247837Z [2026-10-14 06:12:05] [build-stdout] [001] Extraction completed in 00:00:24.3224694
+2026-10-14T06:12:05.0248503Z [2026-10-14 06:12:05] [build-stdout] [001] Total time: 00:01:21.8644431
+2026-10-14T06:12:08.3453083Z ##[endgroup]
+2026-10-14T06:12:08.3457807Z ##[group]Finalizing csharp
+2026-10-14T06:12:08.3459279Z [command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database finalize --finalize-dataset --threads=4 --ram=14575 /home/runner/work/_temp/codeql_databases/csharp
+2026-10-14T06:12:08.9552972Z Running pre-finalize script /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp/tools/pre-finalize.sh in /home/runner/work/TypeAgent/TypeAgent.
+2026-10-14T06:12:09.0100130Z Running command in /home/runner/work/TypeAgent/TypeAgent: [/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp/tools/pre-finalize.sh]
+2026-10-14T06:12:10.4330973Z Pre-finalize script /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/csharp/tools/pre-finalize.sh completed in 1477 ms.
+2026-10-14T06:12:10.4360949Z Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/csharp...
+2026-10-14T06:12:11.0863979Z Importing TRAP files
+2026-10-14T06:12:15.0515967Z Merging relations
+2026-10-14T06:12:15.9292427Z Finished writing database (relations: 20.53 MiB; string pool: 14.03 MiB).
+2026-10-14T06:12:15.9569445Z TRAP import complete (5.5s).
+2026-10-14T06:12:16.3412521Z Finished zipping source archive (625.24 KiB).
+2026-10-14T06:12:16.3496584Z ##[endgroup]
+2026-10-14T06:12:16.3500243Z ##[group]Running queries for csharp
+2026-10-14T06:12:16.3502006Z [command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database run-queries --ram=14575 --threads=4 --expect-discarded-cache --additional-packs=/home/runner/work/_temp/pr-diff-range --extension-packs=codeql-action/pr-diff-range /home/runner/work/_temp/codeql_databases/csharp --min-disk-free=1024 -v
+2026-10-14T06:12:16.9157036Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/database-run-queries-20261014.061216.913.log.
+2026-10-14T06:12:17.3898150Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/execute-queries-20261014.061217.387.log.
+2026-10-14T06:12:17.6532719Z Recording pack reference codeql/csharp-queries at /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1.
+2026-10-14T06:12:17.8218042Z Resolving data extensions.
+2026-10-14T06:12:19.0091288Z Finished resolving data extensions.
+2026-10-14T06:12:19.0694721Z Loading data extensions.
+2026-10-14T06:12:19.5924148Z Finished loading data extensions.
+2026-10-14T06:12:20.0848215Z [1/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CookieWithOverlyBroadDomain.qlx.
+2026-10-14T06:12:20.7218215Z [2/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-384/AbandonSession.qlx.
+2026-10-14T06:12:20.7333423Z [3/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/HeaderCheckingDisabled.qlx.
+2026-10-14T06:12:20.7407917Z [4/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-011/ASPNetDebug.qlx.
+2026-10-14T06:12:20.7708509Z [5/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-022/TaintedPath.qlx.
+2026-10-14T06:12:20.7738031Z [6/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-022/ZipSlip.qlx.
+2026-10-14T06:12:20.7797668Z [7/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-079/XSS.qlx.
+2026-10-14T06:12:20.8028073Z [8/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.qlx.
+2026-10-14T06:12:20.8458120Z [9/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-114/AssemblyPathInjection.qlx.
+2026-10-14T06:12:20.8916020Z [10/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-209/ExceptionInformationExposure.qlx.
+2026-10-14T06:12:20.9428685Z [11/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-548/ASPNetDirectoryListing.qlx.
+2026-10-14T06:12:20.9529456Z [12/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-643/XPathInjection.qlx.
+2026-10-14T06:12:20.9678089Z [13/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-359/ExposureOfPrivateInformation.qlx.
+2026-10-14T06:12:20.9751955Z [14/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/Encryption using ECB.qlx.
+2026-10-14T06:12:20.9867913Z [15/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-094/CodeInjection.qlx.
+2026-10-14T06:12:21.0590154Z [16/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-730/ReDoS.qlx.
+2026-10-14T06:12:21.0678138Z [17/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CookieWithOverlyBroadPath.qlx.
+2026-10-14T06:12:21.0848269Z [18/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-730/RegexInjection.qlx.
+2026-10-14T06:12:21.0907973Z [19/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InsufficientKeySize.qlx.
+2026-10-14T06:12:21.1078173Z [20/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.qlx.
+2026-10-14T06:12:21.1886472Z [21/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-601/UrlRedirect.qlx.
+2026-10-14T06:12:21.1998584Z [22/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.qlx.
+2026-10-14T06:12:21.2093544Z [23/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/PersistentCookie.qlx.
+2026-10-14T06:12:21.2137825Z [24/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-611/UntrustedDataInsecureXml.qlx.
+2026-10-14T06:12:21.2558244Z [25/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-312/CleartextStorage.qlx.
+2026-10-14T06:12:21.2708102Z [26/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InsecureRandomness.qlx.
+2026-10-14T06:12:21.2784925Z [27/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-502/DeserializedDelegate.qlx.
+2026-10-14T06:12:21.3858177Z [28/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-134/UncontrolledFormatString.qlx.
+2026-10-14T06:12:21.3908043Z [29/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-016/ASPNetPagesValidateRequest.qlx.
+2026-10-14T06:12:21.4354202Z [30/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-1004/CookieWithoutHttpOnly.qlx.
+2026-10-14T06:12:21.4698260Z [31/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-089/SqlInjection.qlx.
+2026-10-14T06:12:21.4918353Z [32/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-078/CommandInjection.qlx.
+2026-10-14T06:12:21.5083406Z [33/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-117/LogForging.qlx.
+2026-10-14T06:12:21.5228560Z [34/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-451/MissingXFrameOptions.qlx.
+2026-10-14T06:12:21.5342570Z [35/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-091/XMLInjection.qlx.
+2026-10-14T06:12:21.6628269Z [36/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-099/ResourceInjection.qlx.
+2026-10-14T06:12:21.6838133Z [37/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-201/ExposureInTransmittedData.qlx.
+2026-10-14T06:12:21.6930009Z [38/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/WeakEncryption.qlx.
+2026-10-14T06:12:21.6987792Z [39/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InadequateRSAPadding.qlx.
+2026-10-14T06:12:21.7168099Z [40/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-614/RequireSSL.qlx.
+2026-10-14T06:12:21.7229554Z [41/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-807/ConditionalBypass.qlx.
+2026-10-14T06:12:21.7244426Z [42/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-090/LDAPInjection.qlx.
+2026-10-14T06:12:21.7271909Z [43/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractorError.qlx.
+2026-10-14T06:12:21.7288290Z [44/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/DiagnosticExtractionErrors.qlx.
+2026-10-14T06:12:21.7373957Z [45/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/CompilerMessage.qlx.
+2026-10-14T06:12:21.7375337Z [46/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/CompilerError.qlx.
+2026-10-14T06:12:21.7407591Z [47/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractedFiles.qlx.
+2026-10-14T06:12:21.7409848Z [48/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractorMessage.qlx.
+2026-10-14T06:12:21.7447583Z [49/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Metrics/Summaries/LinesOfCode.qlx.
+2026-10-14T06:12:21.7467626Z [50/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/DatabaseQualityDiagnostics.qlx.
+2026-10-14T06:12:21.8130545Z [51/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-614/CookieWithoutSecure.qlx.
+2026-10-14T06:12:21.8271311Z [52/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalSources.qlx.
+2026-10-14T06:12:21.8352269Z [53/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.qlx.
+2026-10-14T06:12:21.8367551Z [54/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/ExtractorInformation.qlx.
+2026-10-14T06:12:21.8438900Z [55/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/ExternalLibraryUsage.qlx.
+2026-10-14T06:12:21.9058121Z [56/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalTaint.qlx.
+2026-10-14T06:12:22.2088107Z [57/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalSinks.qlx.
+2026-10-14T06:12:22.3378077Z [58/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/UnsupportedExternalAPIs.qlx.
+2026-10-14T06:12:22.3418177Z [59/59] Loaded /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalApis.qlx.
+2026-10-14T06:12:22.6548052Z Starting evaluation of codeql/csharp-queries/Diagnostics/CompilerError.ql.
+2026-10-14T06:12:22.6567670Z Starting evaluation of codeql/csharp-queries/Diagnostics/CompilerMessage.ql.
+2026-10-14T06:12:22.6568521Z Starting evaluation of codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.ql.
+2026-10-14T06:12:22.6590287Z Starting evaluation of codeql/csharp-queries/Diagnostics/ExtractedFiles.ql.
+2026-10-14T06:12:22.6612281Z Starting evaluation of codeql/csharp-queries/Diagnostics/ExtractorError.ql.
+2026-10-14T06:12:22.6612923Z Starting evaluation of codeql/csharp-queries/Diagnostics/ExtractorMessage.ql.
+2026-10-14T06:12:22.7227540Z Starting evaluation of codeql/csharp-queries/Metrics/Summaries/LinesOfCode.ql.
+2026-10-14T06:12:23.0808057Z [1/59 eval 418ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/CompilerError.bqrs.
+2026-10-14T06:12:23.0902991Z [2/59 eval 434ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/CompilerMessage.bqrs.
+2026-10-14T06:12:23.0927614Z [3/59 eval 429ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/ExtractorMessage.bqrs.
+2026-10-14T06:12:23.1377927Z [4/59 eval 474ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/ExtractorError.bqrs.
+2026-10-14T06:12:23.1627696Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.ql.
+2026-10-14T06:12:23.1827783Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-016/ASPNetPagesValidateRequest.ql.
+2026-10-14T06:12:23.1947580Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-022/TaintedPath.ql.
+2026-10-14T06:12:23.1977492Z [5/59 eval 23ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.bqrs.
+2026-10-14T06:12:23.3652025Z [6/59 eval 710ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.bqrs.
+2026-10-14T06:12:23.3677740Z [7/59 eval 647ms] Evaluation done; writing results to codeql/csharp-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2026-10-14T06:12:23.3917910Z [8/59 eval 734ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/ExtractedFiles.bqrs.
+2026-10-14T06:12:23.5289099Z [9/59 eval 341ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-016/ASPNetPagesValidateRequest.bqrs.
+2026-10-14T06:12:27.8405417Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-022/ZipSlip.ql.
+2026-10-14T06:12:27.8406529Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-078/CommandInjection.ql.
+2026-10-14T06:12:28.0587802Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-079/XSS.ql.
+2026-10-14T06:12:28.0817811Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-089/SqlInjection.ql.
+2026-10-14T06:12:28.1087863Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.ql.
+2026-10-14T06:12:28.2087833Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-091/XMLInjection.ql.
+2026-10-14T06:12:28.2166873Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-094/CodeInjection.ql.
+2026-10-14T06:12:28.2270571Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.ql.
+2026-10-14T06:12:28.2950453Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-1004/CookieWithoutHttpOnly.ql.
+2026-10-14T06:12:28.2961408Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.ql.
+2026-10-14T06:12:28.2963442Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-117/LogForging.ql.
+2026-10-14T06:12:28.3168095Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql.
+2026-10-14T06:12:28.3208139Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.ql.
+2026-10-14T06:12:28.3307774Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.ql.
+2026-10-14T06:12:28.3337622Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.ql.
+2026-10-14T06:12:28.3338870Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql.
+2026-10-14T06:12:28.3397723Z [10/59 eval 10ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.bqrs.
+2026-10-14T06:12:28.3518143Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.ql.
+2026-10-14T06:12:28.3562325Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql.
+2026-10-14T06:12:28.3637709Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.ql.
+2026-10-14T06:12:32.1931338Z [11/59 eval 3.8s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.bqrs.
+2026-10-14T06:12:32.3824273Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-384/AbandonSession.ql.
+2026-10-14T06:12:32.3878817Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.ql.
+2026-10-14T06:12:32.3907642Z [12/59 eval 9ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-384/AbandonSession.bqrs.
+2026-10-14T06:12:32.3937368Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.ql.
+2026-10-14T06:12:32.3997494Z [13/59 eval 2ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.bqrs.
+2026-10-14T06:12:32.4245922Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql.
+2026-10-14T06:12:32.5533984Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.ql.
+2026-10-14T06:12:32.5578593Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.ql.
+2026-10-14T06:12:32.5620815Z [14/59 eval 4ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.bqrs.
+2026-10-14T06:12:33.2066324Z [15/59 eval 818ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.bqrs.
+2026-10-14T06:12:34.7704987Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.ql.
+2026-10-14T06:12:34.8049713Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-614/CookieWithoutSecure.ql.
+2026-10-14T06:12:34.8652093Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-614/RequireSSL.ql.
+2026-10-14T06:12:34.8697922Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-643/XPathInjection.ql.
+2026-10-14T06:12:34.8707521Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-730/ReDoS.ql.
+2026-10-14T06:12:34.8737565Z [16/59 eval 2ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-614/RequireSSL.bqrs.
+2026-10-14T06:12:34.8915509Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-730/RegexInjection.ql.
+2026-10-14T06:12:34.9001444Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.ql.
+2026-10-14T06:12:34.9079055Z Starting evaluation of codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.ql.
+2026-10-14T06:12:34.9142369Z Starting evaluation of codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.ql.
+2026-10-14T06:12:34.9178829Z Starting evaluation of codeql/csharp-queries/Security Features/Encryption using ECB.ql.
+2026-10-14T06:12:34.9227583Z [17/59 eval 9ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/Encryption using ECB.bqrs.
+2026-10-14T06:12:34.9777259Z Starting evaluation of codeql/csharp-queries/Security Features/HeaderCheckingDisabled.ql.
+2026-10-14T06:12:34.9778505Z [18/59 eval 69ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.bqrs.
+2026-10-14T06:12:34.9779904Z [19/59 eval 65ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.bqrs.
+2026-10-14T06:12:34.9807304Z Starting evaluation of codeql/csharp-queries/Security Features/InadequateRSAPadding.ql.
+2026-10-14T06:12:34.9818433Z Starting evaluation of codeql/csharp-queries/Security Features/InsecureRandomness.ql.
+2026-10-14T06:12:34.9819611Z Starting evaluation of codeql/csharp-queries/Security Features/InsufficientKeySize.ql.
+2026-10-14T06:12:34.9868961Z [20/59 eval 14ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/HeaderCheckingDisabled.bqrs.
+2026-10-14T06:12:35.0288336Z [21/59 eval 46ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/InadequateRSAPadding.bqrs.
+2026-10-14T06:12:35.1040139Z Starting evaluation of codeql/csharp-queries/Security Features/PersistentCookie.ql.
+2026-10-14T06:12:35.1551424Z [22/59 eval 51ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/PersistentCookie.bqrs.
+2026-10-14T06:12:35.1675362Z Starting evaluation of codeql/csharp-queries/Security Features/WeakEncryption.ql.
+2026-10-14T06:12:35.1979915Z [23/59 eval 28ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/WeakEncryption.bqrs.
+2026-10-14T06:12:35.1983300Z Starting evaluation of codeql/csharp-queries/Telemetry/DatabaseQualityDiagnostics.ql.
+2026-10-14T06:12:35.2298388Z [24/59 eval 248ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/InsufficientKeySize.bqrs.
+2026-10-14T06:12:35.2707248Z Starting evaluation of codeql/csharp-queries/Telemetry/ExternalLibraryUsage.ql.
+2026-10-14T06:12:35.2977854Z Starting evaluation of codeql/csharp-queries/Telemetry/ExtractorInformation.ql.
+2026-10-14T06:12:35.6278246Z [25/59 eval 324ms] Evaluation done; writing results to codeql/csharp-queries/Telemetry/ExtractorInformation.bqrs.
+2026-10-14T06:12:35.6367493Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalApis.ql.
+2026-10-14T06:12:35.6397542Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalSinks.ql.
+2026-10-14T06:12:35.6398754Z [26/59 eval 442ms] Evaluation done; writing results to codeql/csharp-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2026-10-14T06:12:35.9100001Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalSources.ql.
+2026-10-14T06:12:36.2150729Z [27/59 eval 942ms] Evaluation done; writing results to codeql/csharp-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2026-10-14T06:12:39.5654579Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalTaint.ql.
+2026-10-14T06:12:39.5852998Z Starting evaluation of codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.ql.
+2026-10-14T06:12:42.2576000Z [28/59 eval 2.7s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalTaint.bqrs.
+2026-10-14T06:12:42.7802719Z [29/59 eval 14.9s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-022/ZipSlip.bqrs.
+2026-10-14T06:12:42.8750126Z [30/59 eval 19.7s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-022/TaintedPath.bqrs.
+2026-10-14T06:12:42.9790489Z [31/59 eval 15.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-078/CommandInjection.bqrs.
+2026-10-14T06:12:43.0783155Z [32/59 eval 15s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-089/SqlInjection.bqrs.
+2026-10-14T06:12:43.1978019Z [33/59 eval 15s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-091/XMLInjection.bqrs.
+2026-10-14T06:12:43.2369113Z [34/59 eval 15.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.bqrs.
+2026-10-14T06:12:43.3848809Z [35/59 eval 15.2s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-094/CodeInjection.bqrs.
+2026-10-14T06:12:43.4176068Z [36/59 eval 8.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-730/ReDoS.bqrs.
+2026-10-14T06:12:43.6167970Z [37/59 eval 15.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-079/XSS.bqrs.
+2026-10-14T06:12:43.6365052Z [38/59 eval 15.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.bqrs.
+2026-10-14T06:12:43.7338259Z [39/59 eval 15.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-117/LogForging.bqrs.
+2026-10-14T06:12:43.7402917Z [40/59 eval 15.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-1004/CookieWithoutHttpOnly.bqrs.
+2026-10-14T06:12:43.7452436Z [41/59 eval 15.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.bqrs.
+2026-10-14T06:12:43.8088119Z [42/59 eval 15.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.bqrs.
+2026-10-14T06:12:43.9148092Z [43/59 eval 15.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.bqrs.
+2026-10-14T06:12:44.4137649Z [44/59 eval 16.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.bqrs.
+2026-10-14T06:12:44.4588095Z [45/59 eval 16.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.bqrs.
+2026-10-14T06:12:44.7114681Z [46/59 eval 16.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.bqrs.
+2026-10-14T06:12:44.9841166Z [47/59 eval 12.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.bqrs.
+2026-10-14T06:12:45.1233616Z [48/59 eval 10.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.bqrs.
+2026-10-14T06:12:45.1498759Z [49/59 eval 10.3s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-643/XPathInjection.bqrs.
+2026-10-14T06:12:45.1540581Z [50/59 eval 10.3s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-730/RegexInjection.bqrs.
+2026-10-14T06:12:45.2168088Z [51/59 eval 10.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-614/CookieWithoutSecure.bqrs.
+2026-10-14T06:12:45.8900337Z [52/59 eval 17.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.bqrs.
+2026-10-14T06:12:45.9520653Z [53/59 eval 13.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.bqrs.
+2026-10-14T06:12:45.9941208Z [54/59 eval 11.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.bqrs.
+2026-10-14T06:12:46.4938163Z [55/59 eval 10.9s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalApis.bqrs.
+2026-10-14T06:12:46.5488429Z [56/59 eval 7s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2026-10-14T06:12:47.0108431Z [57/59 eval 11.1s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalSources.bqrs.
+2026-10-14T06:12:47.2712718Z [58/59 eval 12.3s] Evaluation done; writing results to codeql/csharp-queries/Security Features/InsecureRandomness.bqrs.
+2026-10-14T06:12:47.7027870Z [59/59 eval 12.1s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalSinks.bqrs.
+2026-10-14T06:12:47.7028610Z Shutting down query evaluator.
+2026-10-14T06:12:47.8748567Z Interpreting code scanning results for csharp
+2026-10-14T06:12:48.4299851Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/database-interpret-results-20261014.061248.427.log.
+2026-10-14T06:12:48.5411611Z Recording pack reference codeql/csharp-queries at /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1.
+2026-10-14T06:12:48.5753724Z Resolving extensions
+2026-10-14T06:12:49.5238513Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CookieWithOverlyBroadDomain.ql...
+2026-10-14T06:12:49.5380988Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.bqrs.
+2026-10-14T06:12:49.5503669Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-079/XSS.ql...
+2026-10-14T06:12:49.5598576Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-079/XSS.bqrs.
+2026-10-14T06:12:49.5604620Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-022/TaintedPath.ql...
+2026-10-14T06:12:49.5682894Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/TaintedPath.bqrs.
+2026-10-14T06:12:49.5688100Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-022/ZipSlip.ql...
+2026-10-14T06:12:49.5762880Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/ZipSlip.bqrs.
+2026-10-14T06:12:49.5787604Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-384/AbandonSession.ql...
+2026-10-14T06:12:49.5847632Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-384/AbandonSession.bqrs.
+2026-10-14T06:12:49.5865980Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/HeaderCheckingDisabled.ql...
+2026-10-14T06:12:49.5918237Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/HeaderCheckingDisabled.bqrs.
+2026-10-14T06:12:49.5947721Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-011/ASPNetDebug.ql...
+2026-10-14T06:12:49.5967471Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.bqrs.
+2026-10-14T06:12:49.5996026Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-114/AssemblyPathInjection.ql...
+2026-10-14T06:12:49.6047730Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.bqrs.
+2026-10-14T06:12:49.6067749Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql...
+2026-10-14T06:12:49.6099264Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.bqrs.
+2026-10-14T06:12:49.6128337Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-209/ExceptionInformationExposure.ql...
+2026-10-14T06:12:49.6157640Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.bqrs.
+2026-10-14T06:12:49.6162970Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-359/ExposureOfPrivateInformation.ql...
+2026-10-14T06:12:49.6218625Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.bqrs.
+2026-10-14T06:12:49.6257721Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-643/XPathInjection.ql...
+2026-10-14T06:12:49.6287755Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-643/XPathInjection.bqrs.
+2026-10-14T06:12:49.6317648Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-094/CodeInjection.ql...
+2026-10-14T06:12:49.6340816Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-094/CodeInjection.bqrs.
+2026-10-14T06:12:49.6345976Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-548/ASPNetDirectoryListing.ql...
+2026-10-14T06:12:49.6396937Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.bqrs.
+2026-10-14T06:12:49.6427621Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-730/ReDoS.ql...
+2026-10-14T06:12:49.6451745Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/ReDoS.bqrs.
+2026-10-14T06:12:49.6468187Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-730/RegexInjection.ql...
+2026-10-14T06:12:49.6502684Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/RegexInjection.bqrs.
+2026-10-14T06:12:49.6522408Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/Encryption using ECB.ql...
+2026-10-14T06:12:49.6555072Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/Encryption using ECB.bqrs.
+2026-10-14T06:12:49.6579857Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-601/UrlRedirect.ql...
+2026-10-14T06:12:49.6617736Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.bqrs.
+2026-10-14T06:12:49.6619151Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-611/UntrustedDataInsecureXml.ql...
+2026-10-14T06:12:49.6675170Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.bqrs.
+2026-10-14T06:12:49.6679861Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CookieWithOverlyBroadPath.ql...
+2026-10-14T06:12:49.6718035Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.bqrs.
+2026-10-14T06:12:49.6719559Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InsufficientKeySize.ql...
+2026-10-14T06:12:49.6767808Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsufficientKeySize.bqrs.
+2026-10-14T06:12:49.6773104Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql...
+2026-10-14T06:12:49.6816174Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.bqrs.
+2026-10-14T06:12:49.6825024Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InsecureRandomness.ql...
+2026-10-14T06:12:49.6862064Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsecureRandomness.bqrs.
+2026-10-14T06:12:49.6879790Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-312/CleartextStorage.ql...
+2026-10-14T06:12:49.6917700Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.bqrs.
+2026-10-14T06:12:49.6927344Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql...
+2026-10-14T06:12:49.6955847Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.bqrs.
+2026-10-14T06:12:49.6962705Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/PersistentCookie.ql...
+2026-10-14T06:12:49.7000456Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/PersistentCookie.bqrs.
+2026-10-14T06:12:49.7015191Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-1004/CookieWithoutHttpOnly.ql...
+2026-10-14T06:12:49.7055303Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-1004/CookieWithoutHttpOnly.bqrs.
+2026-10-14T06:12:49.7059903Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql...
+2026-10-14T06:12:49.7117859Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.bqrs.
+2026-10-14T06:12:49.7130922Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-502/DeserializedDelegate.ql...
+2026-10-14T06:12:49.7147210Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.bqrs.
+2026-10-14T06:12:49.7151088Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-089/SqlInjection.ql...
+2026-10-14T06:12:49.7197817Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-089/SqlInjection.bqrs.
+2026-10-14T06:12:49.7207907Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-134/UncontrolledFormatString.ql...
+2026-10-14T06:12:49.7268409Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.bqrs.
+2026-10-14T06:12:49.7270783Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-016/ASPNetPagesValidateRequest.ql...
+2026-10-14T06:12:49.7317577Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-016/ASPNetPagesValidateRequest.bqrs.
+2026-10-14T06:12:49.7327761Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-078/CommandInjection.ql...
+2026-10-14T06:12:49.7345125Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-078/CommandInjection.bqrs.
+2026-10-14T06:12:49.7354181Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-117/LogForging.ql...
+2026-10-14T06:12:49.7418346Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-117/LogForging.bqrs.
+2026-10-14T06:12:49.7421748Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-091/XMLInjection.ql...
+2026-10-14T06:12:49.7429261Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-091/XMLInjection.bqrs.
+2026-10-14T06:12:49.7432655Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-451/MissingXFrameOptions.ql...
+2026-10-14T06:12:49.7473579Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.bqrs.
+2026-10-14T06:12:49.7484212Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-099/ResourceInjection.ql...
+2026-10-14T06:12:49.7523421Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.bqrs.
+2026-10-14T06:12:49.7537424Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-807/ConditionalBypass.ql...
+2026-10-14T06:12:49.7574749Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.bqrs.
+2026-10-14T06:12:49.7584392Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-201/ExposureInTransmittedData.ql...
+2026-10-14T06:12:49.7624867Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.bqrs.
+2026-10-14T06:12:49.7629265Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-090/LDAPInjection.ql...
+2026-10-14T06:12:49.7675630Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.bqrs.
+2026-10-14T06:12:49.7679257Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/WeakEncryption.ql...
+2026-10-14T06:12:49.7719222Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/WeakEncryption.bqrs.
+2026-10-14T06:12:49.7724603Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/InadequateRSAPadding.ql...
+2026-10-14T06:12:49.7763009Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InadequateRSAPadding.bqrs.
+2026-10-14T06:12:49.7769240Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-614/RequireSSL.ql...
+2026-10-14T06:12:49.7823455Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-614/RequireSSL.bqrs.
+2026-10-14T06:12:49.7828294Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Security Features/CWE-614/CookieWithoutSecure.ql...
+2026-10-14T06:12:49.7867649Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-614/CookieWithoutSecure.bqrs.
+2026-10-14T06:12:49.7871324Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/DiagnosticExtractionErrors.ql...
+2026-10-14T06:12:49.7909328Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.bqrs.
+2026-10-14T06:12:49.7927957Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractorError.ql...
+2026-10-14T06:12:49.7948632Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorError.bqrs.
+2026-10-14T06:12:49.7971658Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractedFiles.ql...
+2026-10-14T06:12:49.7996996Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractedFiles.bqrs.
+2026-10-14T06:12:49.7998458Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/CompilerMessage.ql...
+2026-10-14T06:12:49.8033246Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerMessage.bqrs.
+2026-10-14T06:12:49.8048504Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/CompilerError.ql...
+2026-10-14T06:12:49.8079181Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerError.bqrs.
+2026-10-14T06:12:49.8117643Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Diagnostics/ExtractorMessage.ql...
+2026-10-14T06:12:49.8179056Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorMessage.bqrs.
+2026-10-14T06:12:49.8180529Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/DatabaseQualityDiagnostics.ql...
+2026-10-14T06:12:49.8185516Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2026-10-14T06:12:49.8193995Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Metrics/Summaries/LinesOfCode.ql...
+2026-10-14T06:12:49.8223988Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2026-10-14T06:12:49.8247811Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/UnsupportedExternalAPIs.ql...
+2026-10-14T06:12:49.8271691Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2026-10-14T06:12:49.8277909Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalApis.ql...
+2026-10-14T06:12:49.8300933Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalApis.bqrs.
+2026-10-14T06:12:49.8314226Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalSources.ql...
+2026-10-14T06:12:49.8344761Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSources.bqrs.
+2026-10-14T06:12:49.8347864Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/ExtractorInformation.ql...
+2026-10-14T06:12:49.8387989Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/ExtractorInformation.bqrs.
+2026-10-14T06:12:49.8407326Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/ExternalLibraryUsage.ql...
+2026-10-14T06:12:49.8437640Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2026-10-14T06:12:49.8439319Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalTaint.ql...
+2026-10-14T06:12:49.8498592Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalTaint.bqrs.
+2026-10-14T06:12:49.8507643Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/csharp-queries/1.10.1/Telemetry/SupportedExternalSinks.ql...
+2026-10-14T06:12:49.8532377Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSinks.bqrs.
+2026-10-14T06:12:49.9294932Z Interpreted problem query "Cookie security: overly broad domain" (cs/web/broad-cookie-domain) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.bqrs.
+2026-10-14T06:12:49.9325201Z Interpreted pathproblem query "Cross-site scripting" (cs/web/xss) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-079/XSS.bqrs.
+2026-10-14T06:12:49.9354665Z Interpreted pathproblem query "Uncontrolled data used in path expression" (cs/path-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/TaintedPath.bqrs.
+2026-10-14T06:12:49.9368404Z Interpreted pathproblem query "Arbitrary file access during archive extraction ("Zip Slip")" (cs/zipslip) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/ZipSlip.bqrs.
+2026-10-14T06:12:49.9379510Z Interpreted problem query "Failure to abandon session" (cs/session-reuse) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-384/AbandonSession.bqrs.
+2026-10-14T06:12:49.9413136Z Interpreted problem query "Header checking disabled" (cs/web/disabled-header-checking) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/HeaderCheckingDisabled.bqrs.
+2026-10-14T06:12:49.9423893Z Interpreted problem query "Creating an ASP.NET debug binary may reveal sensitive information" (cs/web/debug-binary) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.bqrs.
+2026-10-14T06:12:49.9426132Z Interpreted pathproblem query "Assembly path injection" (cs/assembly-path-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.bqrs.
+2026-10-14T06:12:49.9435800Z Interpreted problem query "Unvalidated local pointer arithmetic" (cs/unvalidated-local-pointer-arithmetic) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.bqrs.
+2026-10-14T06:12:49.9438474Z Interpreted pathproblem query "Information exposure through an exception" (cs/information-exposure-through-exception) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.bqrs.
+2026-10-14T06:12:49.9441537Z Interpreted pathproblem query "Exposure of private information" (cs/exposure-of-sensitive-information) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.bqrs.
+2026-10-14T06:12:49.9468144Z Interpreted pathproblem query "XPath injection" (cs/xml/xpath-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-643/XPathInjection.bqrs.
+2026-10-14T06:12:49.9470210Z Interpreted pathproblem query "Improper control of generation of code" (cs/code-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-094/CodeInjection.bqrs.
+2026-10-14T06:12:49.9472641Z Interpreted problem query "ASP.NET config file enables directory browsing" (cs/web/directory-browse-enabled) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.bqrs.
+2026-10-14T06:12:49.9474877Z Interpreted pathproblem query "Denial of Service from comparison of user input against expensive regex" (cs/redos) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/ReDoS.bqrs.
+2026-10-14T06:12:49.9477142Z Interpreted pathproblem query "Regular expression injection" (cs/regex-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/RegexInjection.bqrs.
+2026-10-14T06:12:49.9480755Z Interpreted problem query "Encryption using ECB" (cs/ecb-encryption) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/Encryption using ECB.bqrs.
+2026-10-14T06:12:49.9483075Z Interpreted pathproblem query "URL redirection from remote source" (cs/web/unvalidated-url-redirection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.bqrs.
+2026-10-14T06:12:49.9485581Z Interpreted pathproblem query "Untrusted XML is read insecurely" (cs/xml/insecure-dtd-handling) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.bqrs.
+2026-10-14T06:12:49.9487961Z Interpreted problem query "Cookie security: overly broad path" (cs/web/broad-cookie-path) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.bqrs.
+2026-10-14T06:12:49.9490129Z Interpreted problem query "Weak encryption: Insufficient key size" (cs/insufficient-key-size) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsufficientKeySize.bqrs.
+2026-10-14T06:12:49.9492989Z Interpreted problem query "Missing cross-site request forgery token validation" (cs/web/missing-token-validation) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.bqrs.
+2026-10-14T06:12:49.9495656Z Interpreted pathproblem query "Insecure randomness" (cs/insecure-randomness) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsecureRandomness.bqrs.
+2026-10-14T06:12:49.9498054Z Interpreted pathproblem query "Clear text storage of sensitive information" (cs/cleartext-storage-of-sensitive-information) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.bqrs.
+2026-10-14T06:12:49.9500271Z Interpreted problem query "Missing global error handler" (cs/web/missing-global-error-handler) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.bqrs.
+2026-10-14T06:12:49.9503854Z Interpreted problem query "Cookie security: persistent cookie" (cs/web/persistent-cookie) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/PersistentCookie.bqrs.
+2026-10-14T06:12:49.9509827Z Interpreted problem query "Cookie 'HttpOnly' attribute is not set to true" (cs/web/cookie-httponly-not-set) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-1004/CookieWithoutHttpOnly.bqrs.
+2026-10-14T06:12:49.9512368Z Interpreted pathproblem query "Deserialization of untrusted data" (cs/unsafe-deserialization-untrusted-input) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.bqrs.
+2026-10-14T06:12:49.9514648Z Interpreted problem query "Deserialized delegate" (cs/deserialized-delegate) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.bqrs.
+2026-10-14T06:12:49.9517045Z Interpreted pathproblem query "SQL query built from user-controlled sources" (cs/sql-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-089/SqlInjection.bqrs.
+2026-10-14T06:12:49.9521444Z Interpreted pathproblem query "Uncontrolled format string" (cs/uncontrolled-format-string) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.bqrs.
+2026-10-14T06:12:49.9523746Z Interpreted problem query "Page request validation is disabled" (cs/web/request-validation-disabled) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-016/ASPNetPagesValidateRequest.bqrs.
+2026-10-14T06:12:49.9525937Z Interpreted pathproblem query "Uncontrolled command line" (cs/command-line-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-078/CommandInjection.bqrs.
+2026-10-14T06:12:49.9539063Z Interpreted pathproblem query "Log entries created from user input" (cs/log-forging) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-117/LogForging.bqrs.
+2026-10-14T06:12:49.9541212Z Interpreted pathproblem query "XML injection" (cs/xml-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-091/XMLInjection.bqrs.
+2026-10-14T06:12:49.9543254Z Interpreted problem query "Missing clickjacking protection" (cs/web/missing-x-frame-options) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.bqrs.
+2026-10-14T06:12:49.9545418Z Interpreted pathproblem query "Resource injection" (cs/resource-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.bqrs.
+2026-10-14T06:12:49.9547860Z Interpreted pathproblem query "User-controlled bypass of sensitive method" (cs/user-controlled-bypass) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.bqrs.
+2026-10-14T06:12:49.9550323Z Interpreted pathproblem query "Information exposure through transmitted data" (cs/sensitive-data-transmission) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.bqrs.
+2026-10-14T06:12:49.9552654Z Interpreted pathproblem query "LDAP query built from user-controlled sources" (cs/ldap-injection) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.bqrs.
+2026-10-14T06:12:49.9554526Z Interpreted problem query "Weak encryption" (cs/weak-encryption) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/WeakEncryption.bqrs.
+2026-10-14T06:12:49.9556400Z Interpreted problem query "Weak encryption: inadequate RSA padding" (cs/inadequate-rsa-padding) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InadequateRSAPadding.bqrs.
+2026-10-14T06:12:49.9559610Z Interpreted problem query "'requireSSL' attribute is not set to true" (cs/web/requiressl-not-set) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-614/RequireSSL.bqrs.
+2026-10-14T06:12:49.9561753Z Interpreted problem query "Cookie 'Secure' attribute is not set to true" (cs/web/cookie-secure-not-set) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-614/CookieWithoutSecure.bqrs.
+2026-10-14T06:12:49.9563830Z Interpreted diagnostic query "Extraction errors" (cs/diagnostics/extraction-errors) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.bqrs.
+2026-10-14T06:12:49.9565936Z Interpreted diagnostic query "Extraction error" (cs/extraction-error) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorError.bqrs.
+2026-10-14T06:12:49.9577823Z Interpreted diagnostic query "Extracted files" (cs/diagnostics/successfully-extracted-files) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractedFiles.bqrs.
+2026-10-14T06:12:49.9579671Z Interpreted diagnostic query "Compilation message" (cs/compilation-message) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerMessage.bqrs.
+2026-10-14T06:12:49.9581394Z Interpreted diagnostic query "Compilation error" (cs/compilation-error) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerError.bqrs.
+2026-10-14T06:12:49.9583070Z Interpreted diagnostic query "Extraction message" (cs/extraction-message) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorMessage.bqrs.
+2026-10-14T06:12:49.9584871Z Interpreted diagnostic query "Low C# analysis quality" (csharp/diagnostic/database-quality) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2026-10-14T06:12:49.9587084Z Interpreted metric query "Total lines of C# code in the database" (cs/summary/lines-of-code) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2026-10-14T06:12:49.9589041Z Interpreted metric query "Usage of unsupported APIs coming from external libraries" (cs/telemetry/unsupported-external-api) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2026-10-14T06:12:49.9590660Z Interpreted metric query "Usage of supported APIs coming from external libraries" (cs/telemetry/supported-external-api) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalApis.bqrs.
+2026-10-14T06:12:49.9592010Z Interpreted metric query "Supported sources in external libraries" (cs/telemetry/supported-external-api-sources) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSources.bqrs.
+2026-10-14T06:12:49.9593679Z Interpreted metric query "C# extraction information" (cs/telemetry/extraction-information) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/ExtractorInformation.bqrs.
+2026-10-14T06:12:49.9594847Z Interpreted metric query "External libraries" (cs/telemetry/external-libs) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2026-10-14T06:12:49.9595932Z Interpreted metric query "Supported flow steps in external libraries" (cs/telemetry/supported-external-api-taint) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalTaint.bqrs.
+2026-10-14T06:12:49.9597529Z Interpreted metric query "Supported sinks in external libraries" (cs/telemetry/supported-external-api-sinks) at path /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSinks.bqrs.
+2026-10-14T06:12:49.9598412Z Reading source archive /home/runner/work/_temp/codeql_databases/csharp/src.zip
+2026-10-14T06:12:50.1313671Z Interpreting diagnostic messages...
+2026-10-14T06:12:50.1533429Z Found 2 raw diagnostic messages.
+2026-10-14T06:12:50.1604297Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2026-10-14T06:12:50.1620427Z Interpreted diagnostic messages (29ms).
+2026-10-14T06:12:50.3740397Z Exporting results to SARIF...
+2026-10-14T06:12:50.6794616Z Exported results to SARIF (306ms).
+2026-10-14T06:12:50.6989375Z ##[endgroup]
+2026-10-14T06:12:50.6989731Z Analysis produced the following diagnostic information:
+2026-10-14T06:12:50.6990640Z ##[group]C# analysis with build-mode 'none' completed (1 result)
+2026-10-14T06:12:50.6991098Z   * C# analysis with build-mode 'none' completed.
+2026-10-14T06:12:50.6991605Z ##[endgroup]
+2026-10-14T06:12:50.6992082Z ##[group]C# was extracted with build-mode set to 'none' (1 result)
+2026-10-14T06:12:50.6993171Z   * C# was extracted with build-mode set to 'none'. This means that all C# source in the working directory will be scanned, with build tools, such as NuGet and dotnet CLIs, only contributing information about external dependencies.
+2026-10-14T06:12:50.6994371Z ##[endgroup]
+2026-10-14T06:12:50.6994520Z 
+2026-10-14T06:12:50.6995004Z To speed up pull request analysis, file coverage information is only enabled when analyzing the default branch and protected branches.
+2026-10-14T06:12:50.6998825Z Post-processing sarif files: ["/home/runner/work/TypeAgent/TypeAgent/sarif-results/csharp.sarif"]
+2026-10-14T06:12:50.7286922Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-14T06:12:50.7289141Z ##[group]Uploading code scanning results
+2026-10-14T06:12:50.8094573Z Uploading results
+2026-10-14T06:12:51.6854439Z Successfully uploaded results
+2026-10-14T06:12:51.6866156Z ##[endgroup]
+2026-10-14T06:12:51.6939230Z ##[group]Waiting for processing to finish
+2026-10-14T06:12:56.9591881Z Analysis upload status is complete.
+2026-10-14T06:12:56.9592400Z ##[endgroup]
+2026-10-14T06:12:57.3644043Z Post job cleanup.
+2026-10-14T06:12:57.5753998Z Post job cleanup.
+2026-10-14T06:12:57.7789932Z CodeQL job status was success.
+2026-10-14T06:12:57.7834278Z Sending status report for init-post step.
+2026-10-14T06:12:58.2675538Z Status report sent for init-post step.
+2026-10-14T06:12:58.3040493Z Post job cleanup.
+2026-10-14T06:12:58.3716017Z [command]/usr/bin/git version
+2026-10-14T06:12:58.3753178Z git version 2.55.0
+2026-10-14T06:12:58.3778959Z Temporarily overriding HOME='/home/runner/work/_temp/7f0c9d75-73c7-4454-b623-c3cf1f8bac6c' before making global git config changes
+2026-10-14T06:12:58.3779721Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:12:58.3782876Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:12:58.3808169Z Removing SSH command configuration
+2026-10-14T06:12:58.3813166Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:12:58.3840899Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:12:58.4040209Z Removing HTTP extra header
+2026-10-14T06:12:58.4044435Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:12:58.4073550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:12:58.4264385Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:12:58.4269721Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:12:58.4290302Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:12:58.4290948Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:12:58.4291330Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:12:58.4291606Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:12:58.4299018Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:12:58.4317636Z /home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:12:58.4325576Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-4e3bf3df\-d7fd\-415e\-b1c2\-c3c28ee22ae0\.config
+2026-10-14T06:12:58.4356043Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:12:58.4376484Z /home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:12:58.4383494Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-4e3bf3df\-d7fd\-415e\-b1c2\-c3c28ee22ae0\.config
+2026-10-14T06:12:58.4412065Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:12:58.4429872Z /github/runner_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:12:58.4435652Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-4e3bf3df\-d7fd\-415e\-b1c2\-c3c28ee22ae0\.config
+2026-10-14T06:12:58.4462428Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:12:58.4479751Z /github/runner_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config
+2026-10-14T06:12:58.4485741Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-4e3bf3df\-d7fd\-415e\-b1c2\-c3c28ee22ae0\.config
+2026-10-14T06:12:58.4512413Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:12:58.4699422Z Removing credentials config '/home/runner/work/_temp/git-credentials-4e3bf3df-d7fd-415e-b1c2-c3c28ee22ae0.config'
+2026-10-14T06:12:58.4824198Z Cleaning up orphan processes

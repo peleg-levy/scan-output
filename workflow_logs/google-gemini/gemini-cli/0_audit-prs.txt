@@ -1,0 +1,1003 @@
+﻿2026-10-14T16:54:17.6028856Z Current runner version: '2.337.0'
+2026-10-14T16:54:17.6049617Z ##[group]Runner Image Provisioner
+2026-10-14T16:54:17.6050891Z Hosted Compute Agent
+2026-10-14T16:54:17.6051706Z Version: 20261002.596
+2026-10-14T16:54:17.6052578Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T16:54:17.6053438Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T16:54:17.6054296Z Worker ID: {cba90436-010a-42f5-8459-6e3a7bd94dc0}
+2026-10-14T16:54:17.6055221Z Region: westus3
+2026-10-14T16:54:17.6055901Z Cloud: Azure
+2026-10-14T16:54:17.6056616Z ##[endgroup]
+2026-10-14T16:54:17.6058184Z ##[group]Operating System
+2026-10-14T16:54:17.6058929Z Ubuntu
+2026-10-14T16:54:17.6059664Z 24.04.5
+2026-10-14T16:54:17.6060564Z LTS
+2026-10-14T16:54:17.6061224Z ##[endgroup]
+2026-10-14T16:54:17.6061957Z ##[group]Runner Image
+2026-10-14T16:54:17.6062783Z Image: ubuntu-24.04
+2026-10-14T16:54:17.6063493Z Version: 20261004.327.1
+2026-10-14T16:54:17.6064880Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T16:54:17.6066431Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T16:54:17.6067542Z ##[endgroup]
+2026-10-14T16:54:17.6069034Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T16:54:17.6070947Z Contents: read
+2026-10-14T16:54:17.6071815Z Issues: write
+2026-10-14T16:54:17.6072543Z Metadata: read
+2026-10-14T16:54:17.6073221Z PullRequests: write
+2026-10-14T16:54:17.6074039Z ##[endgroup]
+2026-10-14T16:54:17.6075981Z Secret source: Actions
+2026-10-14T16:54:17.6077161Z Cache mode: write
+2026-10-14T16:54:17.6077927Z Prepare workflow directory
+2026-10-14T16:54:17.6345636Z Prepare all required actions
+2026-10-14T16:54:17.6385757Z Getting action download info
+2026-10-14T16:54:17.9200026Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-14T16:54:18.0212281Z Download action repository 'actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b' (SHA:a8d616148505b5069dccd32f177bb87d7f39123b)
+2026-10-14T16:54:18.7220054Z Complete job name: audit-prs
+2026-10-14T16:54:18.7841360Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-14T16:54:18.7842482Z with:
+2026-10-14T16:54:18.7843066Z   persist-credentials: false
+2026-10-14T16:54:18.7843722Z   repository: google-gemini/gemini-cli
+2026-10-14T16:54:18.7850158Z   token: ***
+2026-10-14T16:54:18.7851025Z   ssh-strict: true
+2026-10-14T16:54:18.7851953Z   ssh-user: git
+2026-10-14T16:54:18.7852914Z   clean: true
+2026-10-14T16:54:18.7853832Z   sparse-checkout-cone-mode: true
+2026-10-14T16:54:18.7854901Z   fetch-depth: 1
+2026-10-14T16:54:18.7855924Z   fetch-tags: false
+2026-10-14T16:54:18.7856798Z   show-progress: true
+2026-10-14T16:54:18.7857740Z   lfs: false
+2026-10-14T16:54:18.7858612Z   submodules: false
+2026-10-14T16:54:18.7859614Z   set-safe-directory: true
+2026-10-14T16:54:18.7861060Z ##[endgroup]
+2026-10-14T16:54:18.8734856Z Syncing repository: google-gemini/gemini-cli
+2026-10-14T16:54:18.8737768Z ##[group]Getting Git version info
+2026-10-14T16:54:18.8738724Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:54:18.8740145Z [command]/usr/bin/git version
+2026-10-14T16:54:18.8740803Z git version 2.55.0
+2026-10-14T16:54:18.8743064Z ##[endgroup]
+2026-10-14T16:54:18.8747955Z Temporarily overriding HOME='/home/runner/work/_temp/a44dc1a6-7285-407c-8783-14609b64cfa4' before making global git config changes
+2026-10-14T16:54:18.8749385Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:54:18.8750823Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:54:18.8815359Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:54:18.8818839Z ##[group]Initializing the repository
+2026-10-14T16:54:18.8822977Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:54:18.8890438Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T16:54:18.8892513Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T16:54:18.8893942Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T16:54:18.8894787Z hint: call:
+2026-10-14T16:54:18.8895502Z hint:
+2026-10-14T16:54:18.8896169Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T16:54:18.8896909Z hint:
+2026-10-14T16:54:18.8897635Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T16:54:18.8898661Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T16:54:18.8900031Z hint:
+2026-10-14T16:54:18.8900628Z hint: 	git branch -m <name>
+2026-10-14T16:54:18.8901247Z hint:
+2026-10-14T16:54:18.8902002Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T16:54:18.8903537Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-14T16:54:18.8906204Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-14T16:54:18.8938756Z ##[endgroup]
+2026-10-14T16:54:18.8940537Z ##[group]Disabling automatic garbage collection
+2026-10-14T16:54:18.8941963Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T16:54:18.8967082Z ##[endgroup]
+2026-10-14T16:54:18.8968674Z ##[group]Setting up auth
+2026-10-14T16:54:18.8972418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:54:18.8995904Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:54:18.9264421Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:54:18.9288832Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:54:18.9470408Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T16:54:18.9501794Z ##[endgroup]
+2026-10-14T16:54:18.9503276Z ##[group]Fetching the repository
+2026-10-14T16:54:18.9508436Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a6321abb69aa877288417f6eb85a7acc0165ea1f:refs/remotes/origin/main
+2026-10-14T16:54:21.3951763Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T16:54:21.3952636Z  * [new ref]         a6321abb69aa877288417f6eb85a7acc0165ea1f -> origin/main
+2026-10-14T16:54:21.3955292Z ##[endgroup]
+2026-10-14T16:54:21.3956014Z ##[group]Determining the checkout info
+2026-10-14T16:54:21.3957302Z ##[endgroup]
+2026-10-14T16:54:21.3962161Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T16:54:21.4000276Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T16:54:21.4022595Z ##[group]Checking out the ref
+2026-10-14T16:54:21.4025540Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-14T16:54:21.7413248Z Switched to a new branch 'main'
+2026-10-14T16:54:21.7415510Z branch 'main' set up to track 'origin/main'.
+2026-10-14T16:54:21.7427579Z ##[endgroup]
+2026-10-14T16:54:21.7468350Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T16:54:21.7487871Z a6321abb69aa877288417f6eb85a7acc0165ea1f
+2026-10-14T16:54:21.7496185Z ##[group]Removing auth
+2026-10-14T16:54:21.7499319Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:54:21.7524745Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:54:21.7708353Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:54:21.7728685Z http.https://github.com/.extraheader
+2026-10-14T16:54:21.7734546Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T16:54:21.7758876Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:54:21.7933729Z ##[endgroup]
+2026-10-14T16:54:21.8196622Z ##[group]Run actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b
+2026-10-14T16:54:21.8197094Z with:
+2026-10-14T16:54:21.8197539Z   app-id: ***
+2026-10-14T16:54:21.8203412Z   private-key: ***
+2026-10-14T16:54:21.8203694Z   permission-issues: write
+2026-10-14T16:54:21.8204011Z   permission-pull-requests: write
+2026-10-14T16:54:21.8204339Z   skip-token-revoke: false
+2026-10-14T16:54:21.8204669Z   github-api-url: https://api.github.com
+2026-10-14T16:54:21.8205014Z ##[endgroup]
+2026-10-14T16:54:21.8997920Z Inputs 'owner' and 'repositories' are not set. Creating token for this repository (google-gemini/gemini-cli).
+2026-10-14T16:54:22.7686948Z ##[group]Run ./.github/scripts/pr-triage.sh
+2026-10-14T16:54:22.7706097Z [36;1m./.github/scripts/pr-triage.sh[0m
+2026-10-14T16:54:22.7706606Z [36;1m# If prs_needing_comment is empty, set it to [] explicitly for downstream steps[0m
+2026-10-14T16:54:22.7707187Z [36;1mif [[ -z "$(grep 'prs_needing_comment' "${GITHUB_OUTPUT}" | cut -d'=' -f2-)" ]]; then[0m
+2026-10-14T16:54:22.7707662Z [36;1m  echo "prs_needing_comment=[]" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:54:22.7708005Z [36;1mfi[0m
+2026-10-14T16:54:22.7903189Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:54:22.7903571Z env:
+2026-10-14T16:54:22.7905778Z   GITHUB_TOKEN: ***
+2026-10-14T16:54:22.7906081Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:54:22.7906417Z ##[endgroup]
+2026-10-14T16:54:22.8016625Z 📥 Getting all open pull requests...
+2026-10-14T16:54:26.0019557Z 📊 Found 250 open PRs to process
+2026-10-14T16:54:26.0247265Z 🔄 Processing PR #29753
+2026-10-14T16:54:26.0247724Z    🔗 Found linked issue #123
+2026-10-14T16:54:26.0250493Z    📥 Fetching labels from issue #123
+2026-10-14T16:54:26.5936215Z    ✅ Labels already synchronized
+2026-10-14T16:54:26.5936816Z 🔄 Processing PR #29750
+2026-10-14T16:54:26.5937285Z    🔗 Found linked issue #28684
+2026-10-14T16:54:26.5940757Z    📥 Fetching labels from issue #28684
+2026-10-14T16:54:27.4046391Z    ✅ Labels already synchronized
+2026-10-14T16:54:27.4047079Z 🔄 Processing PR #29749
+2026-10-14T16:54:27.4047590Z    🔗 Found linked issue #29721
+2026-10-14T16:54:27.4051408Z    📥 Fetching labels from issue #29721
+2026-10-14T16:54:27.9376050Z    ✅ Labels already synchronized
+2026-10-14T16:54:27.9376681Z 🔄 Processing PR #29748
+2026-10-14T16:54:27.9377166Z    🔗 Found linked issue #8512
+2026-10-14T16:54:27.9380710Z    📥 Fetching labels from issue #8512
+2026-10-14T16:54:28.3567224Z    ✅ Labels already synchronized
+2026-10-14T16:54:28.3568043Z 🔄 Processing PR #29746
+2026-10-14T16:54:28.3568437Z    🔗 Found linked issue #29738
+2026-10-14T16:54:28.3571429Z    📥 Fetching labels from issue #29738
+2026-10-14T16:54:28.7593614Z    ✅ Labels already synchronized
+2026-10-14T16:54:28.7594282Z 🔄 Processing PR #29744
+2026-10-14T16:54:28.7594751Z    🔗 Found linked issue #29674
+2026-10-14T16:54:28.7598062Z    📥 Fetching labels from issue #29674
+2026-10-14T16:54:29.2096724Z    ✅ Labels already synchronized
+2026-10-14T16:54:29.2097324Z 🔄 Processing PR #29743
+2026-10-14T16:54:29.2097835Z    ⚠️  No linked issue found for PR #29743
+2026-10-14T16:54:29.2098460Z 🔄 Processing PR #29742
+2026-10-14T16:54:29.2098916Z    🔗 Found linked issue #24768
+2026-10-14T16:54:29.2103189Z    📥 Fetching labels from issue #24768
+2026-10-14T16:54:29.6333833Z    ✅ Labels already synchronized
+2026-10-14T16:54:29.6334687Z 🔄 Processing PR #29741
+2026-10-14T16:54:29.6335187Z    🔗 Found linked issue #18505
+2026-10-14T16:54:29.6338576Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:30.0658695Z    ✅ Labels already synchronized
+2026-10-14T16:54:30.0659345Z 🔄 Processing PR #29737
+2026-10-14T16:54:30.0659997Z    🔗 Found linked issue #29689
+2026-10-14T16:54:30.0663171Z    📥 Fetching labels from issue #29689
+2026-10-14T16:54:30.4441142Z    ✅ Labels already synchronized
+2026-10-14T16:54:30.4441898Z 🔄 Processing PR #29736
+2026-10-14T16:54:30.4442277Z    🔗 Found linked issue #28258
+2026-10-14T16:54:30.4446211Z    📥 Fetching labels from issue #28258
+2026-10-14T16:54:30.8598964Z    ✅ Labels already synchronized
+2026-10-14T16:54:30.8599560Z 🔄 Processing PR #29735
+2026-10-14T16:54:30.8600182Z    🔗 Found linked issue #28645
+2026-10-14T16:54:30.8603302Z    📥 Fetching labels from issue #28645
+2026-10-14T16:54:31.2610393Z    ✅ Labels already synchronized
+2026-10-14T16:54:31.2610994Z 🔄 Processing PR #29730
+2026-10-14T16:54:31.2611349Z    ⚠️  No linked issue found for PR #29730
+2026-10-14T16:54:31.2611942Z 🔄 Processing PR #29727
+2026-10-14T16:54:31.2612262Z    🔗 Found linked issue #29713
+2026-10-14T16:54:31.2616145Z    📥 Fetching labels from issue #29713
+2026-10-14T16:54:31.7495092Z    ✅ Labels already synchronized
+2026-10-14T16:54:31.7495585Z 🔄 Processing PR #29726
+2026-10-14T16:54:31.7495946Z    🔗 Found linked issue #29686
+2026-10-14T16:54:31.7498344Z    📥 Fetching labels from issue #29686
+2026-10-14T16:54:32.2129181Z    ✅ Labels already synchronized
+2026-10-14T16:54:32.2129876Z 🔄 Processing PR #29725
+2026-10-14T16:54:32.2130279Z    🔗 Found linked issue #22004
+2026-10-14T16:54:32.2133759Z    📥 Fetching labels from issue #22004
+2026-10-14T16:54:32.6598621Z    ✅ Labels already synchronized
+2026-10-14T16:54:32.6599220Z 🔄 Processing PR #29724
+2026-10-14T16:54:32.6599582Z    🔗 Found linked issue #123
+2026-10-14T16:54:32.6602575Z    📥 Fetching labels from issue #123
+2026-10-14T16:54:33.1110429Z    ✅ Labels already synchronized
+2026-10-14T16:54:33.1111026Z 🔄 Processing PR #29719
+2026-10-14T16:54:33.1111493Z    🔗 Found linked issue #29687
+2026-10-14T16:54:33.1114455Z    📥 Fetching labels from issue #29687
+2026-10-14T16:54:33.5875920Z    ✅ Labels already synchronized
+2026-10-14T16:54:33.5876597Z 🔄 Processing PR #29718
+2026-10-14T16:54:33.5877071Z    🔗 Found linked issue #29338
+2026-10-14T16:54:33.5880770Z    📥 Fetching labels from issue #29338
+2026-10-14T16:54:34.0234037Z    ✅ Labels already synchronized
+2026-10-14T16:54:34.0234643Z 🔄 Processing PR #29714
+2026-10-14T16:54:34.0235141Z    ⚠️  No linked issue found for PR #29714
+2026-10-14T16:54:34.0235660Z 🔄 Processing PR #29709
+2026-10-14T16:54:34.0236116Z    🔗 Found linked issue #27790
+2026-10-14T16:54:34.0239324Z    📥 Fetching labels from issue #27790
+2026-10-14T16:54:34.4603876Z    ✅ Labels already synchronized
+2026-10-14T16:54:34.4604849Z 🔄 Processing PR #29708
+2026-10-14T16:54:34.4605370Z    🔗 Found linked issue #29707
+2026-10-14T16:54:34.4608468Z    📥 Fetching labels from issue #29707
+2026-10-14T16:54:34.9089881Z    ✅ Labels already synchronized
+2026-10-14T16:54:34.9090484Z 🔄 Processing PR #29705
+2026-10-14T16:54:34.9090850Z    🔗 Found linked issue #29600
+2026-10-14T16:54:34.9094394Z    📥 Fetching labels from issue #29600
+2026-10-14T16:54:35.3445514Z    ✅ Labels already synchronized
+2026-10-14T16:54:35.3446335Z 🔄 Processing PR #29703
+2026-10-14T16:54:35.3446835Z    🔗 Found linked issue #29702
+2026-10-14T16:54:35.3450671Z    📥 Fetching labels from issue #29702
+2026-10-14T16:54:35.8237901Z    ✅ Labels already synchronized
+2026-10-14T16:54:35.8238508Z 🔄 Processing PR #29701
+2026-10-14T16:54:35.8239003Z    ⚠️  No linked issue found for PR #29701
+2026-10-14T16:54:35.8239537Z 🔄 Processing PR #29700
+2026-10-14T16:54:35.8240439Z    🔗 Found linked issue #3501
+2026-10-14T16:54:35.8244354Z    📥 Fetching labels from issue #3501
+2026-10-14T16:54:36.3040979Z    ✅ Labels already synchronized
+2026-10-14T16:54:36.3041572Z 🔄 Processing PR #29697
+2026-10-14T16:54:36.3042050Z    🔗 Found linked issue #18505
+2026-10-14T16:54:36.3045537Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:36.7884425Z    ✅ Labels already synchronized
+2026-10-14T16:54:36.7885473Z 🔄 Processing PR #29695
+2026-10-14T16:54:36.7885960Z    🔗 Found linked issue #10673
+2026-10-14T16:54:36.7889029Z    📥 Fetching labels from issue #10673
+2026-10-14T16:54:37.2327243Z    ✅ Labels already synchronized
+2026-10-14T16:54:37.2327822Z 🔄 Processing PR #29691
+2026-10-14T16:54:37.2328292Z    🔗 Found linked issue #29690
+2026-10-14T16:54:37.2331626Z    📥 Fetching labels from issue #29690
+2026-10-14T16:54:37.6660441Z    ✅ Labels already synchronized
+2026-10-14T16:54:37.6661076Z 🔄 Processing PR #29688
+2026-10-14T16:54:37.6661573Z    🔗 Found linked issue #29685
+2026-10-14T16:54:37.6664970Z    📥 Fetching labels from issue #29685
+2026-10-14T16:54:38.0859347Z    ✅ Labels already synchronized
+2026-10-14T16:54:38.0860019Z 🔄 Processing PR #29679
+2026-10-14T16:54:38.0860345Z    🔗 Found linked issue #123
+2026-10-14T16:54:38.0863900Z    📥 Fetching labels from issue #123
+2026-10-14T16:54:38.5276925Z    ✅ Labels already synchronized
+2026-10-14T16:54:38.5277513Z 🔄 Processing PR #29675
+2026-10-14T16:54:38.5278074Z    ⚠️  No linked issue found for PR #29675
+2026-10-14T16:54:38.5278992Z 🔄 Processing PR #29671
+2026-10-14T16:54:38.5279453Z    🔗 Found linked issue #29461
+2026-10-14T16:54:38.5282369Z    📥 Fetching labels from issue #29461
+2026-10-14T16:54:38.9600258Z    ✅ Labels already synchronized
+2026-10-14T16:54:38.9600870Z 🔄 Processing PR #29670
+2026-10-14T16:54:38.9601338Z    🔗 Found linked issue #29027
+2026-10-14T16:54:38.9604408Z    📥 Fetching labels from issue #29027
+2026-10-14T16:54:39.3896925Z    ✅ Labels already synchronized
+2026-10-14T16:54:39.3897552Z 🔄 Processing PR #29668
+2026-10-14T16:54:39.3898033Z    🔗 Found linked issue #29589
+2026-10-14T16:54:39.3901042Z    📥 Fetching labels from issue #29589
+2026-10-14T16:54:39.7914973Z    ✅ Labels already synchronized
+2026-10-14T16:54:39.7915580Z 🔄 Processing PR #29666
+2026-10-14T16:54:39.7916074Z    ⚠️  No linked issue found for PR #29666
+2026-10-14T16:54:39.7916592Z 🔄 Processing PR #29664
+2026-10-14T16:54:39.7917040Z    🔗 Found linked issue #1968
+2026-10-14T16:54:39.7920760Z    📥 Fetching labels from issue #1968
+2026-10-14T16:54:40.2195958Z    ✅ Labels already synchronized
+2026-10-14T16:54:40.2196571Z 🔄 Processing PR #29652
+2026-10-14T16:54:40.2197054Z    🔗 Found linked issue #29037
+2026-10-14T16:54:40.2200844Z    📥 Fetching labels from issue #29037
+2026-10-14T16:54:40.6402809Z    ✅ Labels already synchronized
+2026-10-14T16:54:40.6403439Z 🔄 Processing PR #29651
+2026-10-14T16:54:40.6403768Z    🔗 Found linked issue #29600
+2026-10-14T16:54:40.6407528Z    📥 Fetching labels from issue #29600
+2026-10-14T16:54:41.0753881Z    ✅ Labels already synchronized
+2026-10-14T16:54:41.0754491Z 🔄 Processing PR #29648
+2026-10-14T16:54:41.0754952Z    🔗 Found linked issue #29310
+2026-10-14T16:54:41.0758469Z    📥 Fetching labels from issue #29310
+2026-10-14T16:54:41.5230145Z    ✅ Labels already synchronized
+2026-10-14T16:54:41.5230799Z 🔄 Processing PR #29647
+2026-10-14T16:54:41.5231289Z    🔗 Found linked issue #29646
+2026-10-14T16:54:41.5234473Z    📥 Fetching labels from issue #29646
+2026-10-14T16:54:41.9263266Z    ✅ Labels already synchronized
+2026-10-14T16:54:41.9263852Z 🔄 Processing PR #29645
+2026-10-14T16:54:41.9264348Z    ⚠️  No linked issue found for PR #29645
+2026-10-14T16:54:41.9264876Z 🔄 Processing PR #29638
+2026-10-14T16:54:41.9265328Z    🔗 Found linked issue #29555
+2026-10-14T16:54:41.9268367Z    📥 Fetching labels from issue #29555
+2026-10-14T16:54:42.3517964Z    ✅ Labels already synchronized
+2026-10-14T16:54:42.3518555Z 🔄 Processing PR #29635
+2026-10-14T16:54:42.3518933Z    🔗 Found linked issue #29634
+2026-10-14T16:54:42.3521984Z    📥 Fetching labels from issue #29634
+2026-10-14T16:54:42.8145466Z    ✅ Labels already synchronized
+2026-10-14T16:54:42.8146069Z 🔄 Processing PR #29633
+2026-10-14T16:54:42.8146527Z    ⚠️  No linked issue found for PR #29633
+2026-10-14T16:54:42.8146984Z 🔄 Processing PR #29630
+2026-10-14T16:54:42.8147410Z    ⚠️  No linked issue found for PR #29630
+2026-10-14T16:54:42.8148263Z 🔄 Processing PR #29629
+2026-10-14T16:54:42.8149225Z    🔗 Found linked issue #29628
+2026-10-14T16:54:42.8153148Z    📥 Fetching labels from issue #29628
+2026-10-14T16:54:43.2416413Z    ✅ Labels already synchronized
+2026-10-14T16:54:43.2416979Z 🔄 Processing PR #29626
+2026-10-14T16:54:43.2417431Z    🔗 Found linked issue #29406
+2026-10-14T16:54:43.2421022Z    📥 Fetching labels from issue #29406
+2026-10-14T16:54:43.6773085Z    ✅ Labels already synchronized
+2026-10-14T16:54:43.6773697Z 🔄 Processing PR #29622
+2026-10-14T16:54:43.6774138Z    🔗 Found linked issue #29175
+2026-10-14T16:54:43.6777143Z    📥 Fetching labels from issue #29175
+2026-10-14T16:54:44.1188059Z    ✅ Labels already synchronized
+2026-10-14T16:54:44.1188854Z 🔄 Processing PR #29621
+2026-10-14T16:54:44.1189496Z    🔗 Found linked issue #29574
+2026-10-14T16:54:44.1192916Z    📥 Fetching labels from issue #29574
+2026-10-14T16:54:44.5720161Z    ✅ Labels already synchronized
+2026-10-14T16:54:44.5720807Z 🔄 Processing PR #29619
+2026-10-14T16:54:44.5721333Z    ⚠️  No linked issue found for PR #29619
+2026-10-14T16:54:44.5721937Z 🔄 Processing PR #29615
+2026-10-14T16:54:44.5722851Z    ⚠️  No linked issue found for PR #29615
+2026-10-14T16:54:44.5723532Z 🔄 Processing PR #29611
+2026-10-14T16:54:44.5724031Z    🔗 Found linked issue #29574
+2026-10-14T16:54:44.5728004Z    📥 Fetching labels from issue #29574
+2026-10-14T16:54:45.0203129Z    ✅ Labels already synchronized
+2026-10-14T16:54:45.0203732Z 🔄 Processing PR #29608
+2026-10-14T16:54:45.0204086Z    🔗 Found linked issue #29594
+2026-10-14T16:54:45.0207897Z    📥 Fetching labels from issue #29594
+2026-10-14T16:54:45.4370603Z    ✅ Labels already synchronized
+2026-10-14T16:54:45.4371306Z 🔄 Processing PR #29607
+2026-10-14T16:54:45.4371773Z    🔗 Found linked issue #29598
+2026-10-14T16:54:45.4375131Z    📥 Fetching labels from issue #29598
+2026-10-14T16:54:45.8693141Z    ✅ Labels already synchronized
+2026-10-14T16:54:45.8693734Z 🔄 Processing PR #29606
+2026-10-14T16:54:45.8694204Z    🔗 Found linked issue #29602
+2026-10-14T16:54:45.8697182Z    📥 Fetching labels from issue #29602
+2026-10-14T16:54:46.3746335Z    ✅ Labels already synchronized
+2026-10-14T16:54:46.3746913Z 🔄 Processing PR #29599
+2026-10-14T16:54:46.3747400Z    ⚠️  No linked issue found for PR #29599
+2026-10-14T16:54:46.3747916Z 🔄 Processing PR #29596
+2026-10-14T16:54:46.3748357Z    🔗 Found linked issue #29595
+2026-10-14T16:54:46.3751826Z    📥 Fetching labels from issue #29595
+2026-10-14T16:54:46.8015549Z    ✅ Labels already synchronized
+2026-10-14T16:54:46.8016195Z 🔄 Processing PR #29590
+2026-10-14T16:54:46.8016668Z    🔗 Found linked issue #29589
+2026-10-14T16:54:46.8019448Z    📥 Fetching labels from issue #29589
+2026-10-14T16:54:47.3732810Z    ✅ Labels already synchronized
+2026-10-14T16:54:47.3733412Z 🔄 Processing PR #29587
+2026-10-14T16:54:47.3733907Z    ⚠️  No linked issue found for PR #29587
+2026-10-14T16:54:47.3734430Z 🔄 Processing PR #29578
+2026-10-14T16:54:47.3734879Z    🔗 Found linked issue #29577
+2026-10-14T16:54:47.3737920Z    📥 Fetching labels from issue #29577
+2026-10-14T16:54:47.8361490Z    ✅ Labels already synchronized
+2026-10-14T16:54:47.8362147Z 🔄 Processing PR #29575
+2026-10-14T16:54:47.8362646Z    ⚠️  No linked issue found for PR #29575
+2026-10-14T16:54:47.8363182Z 🔄 Processing PR #29566
+2026-10-14T16:54:47.8363652Z    🔗 Found linked issue #18505
+2026-10-14T16:54:47.8366464Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:48.2726830Z    ✅ Labels already synchronized
+2026-10-14T16:54:48.2727396Z 🔄 Processing PR #29546
+2026-10-14T16:54:48.2727877Z    🔗 Found linked issue #21165
+2026-10-14T16:54:48.2731277Z    📥 Fetching labels from issue #21165
+2026-10-14T16:54:48.6959892Z    ✅ Labels already synchronized
+2026-10-14T16:54:48.6960517Z 🔄 Processing PR #29544
+2026-10-14T16:54:48.6961029Z    ⚠️  No linked issue found for PR #29544
+2026-10-14T16:54:48.6961639Z 🔄 Processing PR #29531
+2026-10-14T16:54:48.6962138Z    ⚠️  No linked issue found for PR #29531
+2026-10-14T16:54:48.6963039Z 🔄 Processing PR #29509
+2026-10-14T16:54:48.6963978Z    ⚠️  No linked issue found for PR #29509
+2026-10-14T16:54:48.6964527Z 🔄 Processing PR #29496
+2026-10-14T16:54:48.6965016Z    ⚠️  No linked issue found for PR #29496
+2026-10-14T16:54:48.6965764Z 🔄 Processing PR #29473
+2026-10-14T16:54:48.6966232Z    ⚠️  No linked issue found for PR #29473
+2026-10-14T16:54:48.6967442Z 🔄 Processing PR #29457
+2026-10-14T16:54:48.6967798Z    🔗 Found linked issue #29045
+2026-10-14T16:54:48.6971505Z    📥 Fetching labels from issue #29045
+2026-10-14T16:54:49.1267134Z    ✅ Labels already synchronized
+2026-10-14T16:54:49.1267775Z 🔄 Processing PR #29454
+2026-10-14T16:54:49.1268129Z    ⚠️  No linked issue found for PR #29454
+2026-10-14T16:54:49.1268907Z 🔄 Processing PR #29441
+2026-10-14T16:54:49.1269260Z    ⚠️  No linked issue found for PR #29441
+2026-10-14T16:54:49.1270356Z 🔄 Processing PR #29433
+2026-10-14T16:54:49.1270685Z    ⚠️  No linked issue found for PR #29433
+2026-10-14T16:54:49.1271690Z 🔄 Processing PR #29419
+2026-10-14T16:54:49.1272026Z    ⚠️  No linked issue found for PR #29419
+2026-10-14T16:54:49.1273032Z 🔄 Processing PR #29403
+2026-10-14T16:54:49.1273704Z    ⚠️  No linked issue found for PR #29403
+2026-10-14T16:54:49.1274672Z 🔄 Processing PR #29396
+2026-10-14T16:54:49.1274973Z    🔗 Found linked issue #22745
+2026-10-14T16:54:49.1278875Z    📥 Fetching labels from issue #22745
+2026-10-14T16:54:49.5793238Z    ✅ Labels already synchronized
+2026-10-14T16:54:49.5793937Z 🔄 Processing PR #29393
+2026-10-14T16:54:49.5794408Z    🔗 Found linked issue #18836
+2026-10-14T16:54:49.5797402Z    📥 Fetching labels from issue #18836
+2026-10-14T16:54:50.0065394Z    ✅ Labels already synchronized
+2026-10-14T16:54:50.0066090Z 🔄 Processing PR #29382
+2026-10-14T16:54:50.0066674Z    🔗 Found linked issue #21432
+2026-10-14T16:54:50.0070575Z    📥 Fetching labels from issue #21432
+2026-10-14T16:54:50.4733002Z    ✅ Labels already synchronized
+2026-10-14T16:54:50.4733636Z 🔄 Processing PR #29367
+2026-10-14T16:54:50.4733980Z    🔗 Found linked issue #22323
+2026-10-14T16:54:50.4737765Z    📥 Fetching labels from issue #22323
+2026-10-14T16:54:50.9286449Z    ✅ Labels already synchronized
+2026-10-14T16:54:50.9287092Z 🔄 Processing PR #29364
+2026-10-14T16:54:50.9287609Z    ⚠️  No linked issue found for PR #29364
+2026-10-14T16:54:50.9291033Z 🔄 Processing PR #29351
+2026-10-14T16:54:50.9291580Z    ⚠️  No linked issue found for PR #29351
+2026-10-14T16:54:50.9292142Z 🔄 Processing PR #29337
+2026-10-14T16:54:50.9292667Z    ⚠️  No linked issue found for PR #29337
+2026-10-14T16:54:50.9293317Z 🔄 Processing PR #29321
+2026-10-14T16:54:50.9293887Z    ⚠️  No linked issue found for PR #29321
+2026-10-14T16:54:50.9294472Z 🔄 Processing PR #29300
+2026-10-14T16:54:50.9295003Z    ⚠️  No linked issue found for PR #29300
+2026-10-14T16:54:50.9295583Z 🔄 Processing PR #29291
+2026-10-14T16:54:50.9296105Z    ⚠️  No linked issue found for PR #29291
+2026-10-14T16:54:50.9296755Z 🔄 Processing PR #29285
+2026-10-14T16:54:50.9297233Z    ⚠️  No linked issue found for PR #29285
+2026-10-14T16:54:50.9297810Z 🔄 Processing PR #29268
+2026-10-14T16:54:50.9298375Z    ⚠️  No linked issue found for PR #29268
+2026-10-14T16:54:50.9298946Z 🔄 Processing PR #29258
+2026-10-14T16:54:50.9299472Z    ⚠️  No linked issue found for PR #29258
+2026-10-14T16:54:50.9300389Z 🔄 Processing PR #29243
+2026-10-14T16:54:50.9300929Z    ⚠️  No linked issue found for PR #29243
+2026-10-14T16:54:50.9301903Z 🔄 Processing PR #29239
+2026-10-14T16:54:50.9302427Z    🔗 Found linked issue #19985
+2026-10-14T16:54:50.9306013Z    📥 Fetching labels from issue #19985
+2026-10-14T16:54:51.3462099Z    ✅ Labels already synchronized
+2026-10-14T16:54:51.3462718Z 🔄 Processing PR #29233
+2026-10-14T16:54:51.3472042Z    ⚠️  No linked issue found for PR #29233
+2026-10-14T16:54:51.3472468Z    📥 Fetching labels from issue #571
+2026-10-14T16:54:51.3472822Z 🔄 Processing PR #29223
+2026-10-14T16:54:51.3473142Z    ⚠️  No linked issue found for PR #29223
+2026-10-14T16:54:51.3473490Z 🔄 Processing PR #29218
+2026-10-14T16:54:51.3473798Z    ⚠️  No linked issue found for PR #29218
+2026-10-14T16:54:51.3474481Z 🔄 Processing PR #29196
+2026-10-14T16:54:51.3474808Z    ⚠️  No linked issue found for PR #29196
+2026-10-14T16:54:51.3475132Z 🔄 Processing PR #29168
+2026-10-14T16:54:51.3475422Z    🔗 Found linked issue #571
+2026-10-14T16:54:51.7486085Z    ✅ Labels already synchronized
+2026-10-14T16:54:51.7486714Z 🔄 Processing PR #29165
+2026-10-14T16:54:51.7487223Z    ⚠️  No linked issue found for PR #29165
+2026-10-14T16:54:51.7487965Z 🔄 Processing PR #29149
+2026-10-14T16:54:51.7488450Z    ⚠️  No linked issue found for PR #29149
+2026-10-14T16:54:51.7489442Z 🔄 Processing PR #29139
+2026-10-14T16:54:51.7490092Z    ⚠️  No linked issue found for PR #29139
+2026-10-14T16:54:51.7491115Z 🔄 Processing PR #29129
+2026-10-14T16:54:51.7491618Z    ⚠️  No linked issue found for PR #29129
+2026-10-14T16:54:51.7492520Z 🔄 Processing PR #29121
+2026-10-14T16:54:51.7493012Z    ⚠️  No linked issue found for PR #29121
+2026-10-14T16:54:51.7494009Z 🔄 Processing PR #29113
+2026-10-14T16:54:51.7494480Z    ⚠️  No linked issue found for PR #29113
+2026-10-14T16:54:51.7495389Z 🔄 Processing PR #29102
+2026-10-14T16:54:51.7496159Z    ⚠️  No linked issue found for PR #29102
+2026-10-14T16:54:51.7496809Z 🔄 Processing PR #29090
+2026-10-14T16:54:51.7497289Z    ⚠️  No linked issue found for PR #29090
+2026-10-14T16:54:51.7498524Z 🔄 Processing PR #29084
+2026-10-14T16:54:51.7498970Z    🔗 Found linked issue #18505
+2026-10-14T16:54:51.7502925Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:52.2071562Z    ✅ Labels already synchronized
+2026-10-14T16:54:52.2072185Z 🔄 Processing PR #29062
+2026-10-14T16:54:52.2072694Z    ⚠️  No linked issue found for PR #29062
+2026-10-14T16:54:52.2073615Z 🔄 Processing PR #29060
+2026-10-14T16:54:52.2074071Z    🔗 Found linked issue #18505
+2026-10-14T16:54:52.2078022Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:52.6450620Z    ✅ Labels already synchronized
+2026-10-14T16:54:52.6451188Z 🔄 Processing PR #29019
+2026-10-14T16:54:52.6451667Z    🔗 Found linked issue #28696
+2026-10-14T16:54:52.6454965Z    📥 Fetching labels from issue #28696
+2026-10-14T16:54:53.0560412Z    ✅ Labels already synchronized
+2026-10-14T16:54:53.0561075Z 🔄 Processing PR #28994
+2026-10-14T16:54:53.0561589Z    ⚠️  No linked issue found for PR #28994
+2026-10-14T16:54:53.0562133Z 🔄 Processing PR #28987
+2026-10-14T16:54:53.0562582Z    🔗 Found linked issue #782
+2026-10-14T16:54:53.0566429Z    📥 Fetching labels from issue #782
+2026-10-14T16:54:53.4825475Z    ✅ Labels already synchronized
+2026-10-14T16:54:53.4826380Z 🔄 Processing PR #28986
+2026-10-14T16:54:53.4826722Z    🔗 Found linked issue #15387
+2026-10-14T16:54:53.4830807Z    📥 Fetching labels from issue #15387
+2026-10-14T16:54:53.9284881Z    ✅ Labels already synchronized
+2026-10-14T16:54:53.9285571Z 🔄 Processing PR #28985
+2026-10-14T16:54:53.9286036Z    🔗 Found linked issue #9116
+2026-10-14T16:54:53.9289245Z    📥 Fetching labels from issue #9116
+2026-10-14T16:54:54.3584303Z    ✅ Labels already synchronized
+2026-10-14T16:54:54.3584866Z 🔄 Processing PR #28969
+2026-10-14T16:54:54.3585249Z    ⚠️  No linked issue found for PR #28969
+2026-10-14T16:54:54.3586119Z 🔄 Processing PR #28963
+2026-10-14T16:54:54.3586456Z    🔗 Found linked issue #18508
+2026-10-14T16:54:54.3590821Z    📥 Fetching labels from issue #18508
+2026-10-14T16:54:54.7894108Z    ✅ Labels already synchronized
+2026-10-14T16:54:54.7894728Z 🔄 Processing PR #28957
+2026-10-14T16:54:54.7895235Z    ⚠️  No linked issue found for PR #28957
+2026-10-14T16:54:54.7895754Z 🔄 Processing PR #28941
+2026-10-14T16:54:54.7896232Z    ⚠️  No linked issue found for PR #28941
+2026-10-14T16:54:54.7896727Z 🔄 Processing PR #28925
+2026-10-14T16:54:54.7897188Z    ⚠️  No linked issue found for PR #28925
+2026-10-14T16:54:54.7898182Z 🔄 Processing PR #28920
+2026-10-14T16:54:54.7898634Z    🔗 Found linked issue #18505
+2026-10-14T16:54:54.7902265Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:55.2281039Z    ✅ Labels already synchronized
+2026-10-14T16:54:55.2281624Z 🔄 Processing PR #28919
+2026-10-14T16:54:55.2282134Z    ⚠️  No linked issue found for PR #28919
+2026-10-14T16:54:55.2283091Z 🔄 Processing PR #28899
+2026-10-14T16:54:55.2283587Z    ⚠️  No linked issue found for PR #28899
+2026-10-14T16:54:55.2284122Z 🔄 Processing PR #28891
+2026-10-14T16:54:55.2284564Z    🔗 Found linked issue #28696
+2026-10-14T16:54:55.2288173Z    📥 Fetching labels from issue #28696
+2026-10-14T16:54:55.6240834Z    ✅ Labels already synchronized
+2026-10-14T16:54:55.6241428Z 🔄 Processing PR #28872
+2026-10-14T16:54:55.6241880Z    ⚠️  No linked issue found for PR #28872
+2026-10-14T16:54:55.6242886Z 🔄 Processing PR #28858
+2026-10-14T16:54:55.6243436Z    ⚠️  No linked issue found for PR #28858
+2026-10-14T16:54:55.6243975Z 🔄 Processing PR #28831
+2026-10-14T16:54:55.6244449Z    ⚠️  No linked issue found for PR #28831
+2026-10-14T16:54:55.6245029Z 🔄 Processing PR #28821
+2026-10-14T16:54:55.6245496Z    ⚠️  No linked issue found for PR #28821
+2026-10-14T16:54:55.6246085Z 🔄 Processing PR #28806
+2026-10-14T16:54:55.6246537Z    ⚠️  No linked issue found for PR #28806
+2026-10-14T16:54:55.6247444Z 🔄 Processing PR #28795
+2026-10-14T16:54:55.6248324Z    ⚠️  No linked issue found for PR #28795
+2026-10-14T16:54:55.6248813Z 🔄 Processing PR #28781
+2026-10-14T16:54:55.6249319Z    ⚠️  No linked issue found for PR #28781
+2026-10-14T16:54:55.6250471Z 🔄 Processing PR #28776
+2026-10-14T16:54:55.6250992Z    🔗 Found linked issue #18505
+2026-10-14T16:54:55.6254873Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:56.2776394Z    ✅ Labels already synchronized
+2026-10-14T16:54:56.2777043Z 🔄 Processing PR #28774
+2026-10-14T16:54:56.2777511Z    🔗 Found linked issue #18505
+2026-10-14T16:54:56.2781251Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:56.7008283Z    ✅ Labels already synchronized
+2026-10-14T16:54:56.7008913Z 🔄 Processing PR #28766
+2026-10-14T16:54:56.7009428Z    ⚠️  No linked issue found for PR #28766
+2026-10-14T16:54:56.7010448Z 🔄 Processing PR #28758
+2026-10-14T16:54:56.7010961Z    ⚠️  No linked issue found for PR #28758
+2026-10-14T16:54:56.7012032Z 🔄 Processing PR #28739
+2026-10-14T16:54:56.7012570Z    ⚠️  No linked issue found for PR #28739
+2026-10-14T16:54:56.7013668Z 🔄 Processing PR #28738
+2026-10-14T16:54:56.7014138Z    🔗 Found linked issue #22092
+2026-10-14T16:54:56.7018022Z    📥 Fetching labels from issue #22092
+2026-10-14T16:54:57.1455840Z    ✅ Labels already synchronized
+2026-10-14T16:54:57.1456446Z 🔄 Processing PR #28732
+2026-10-14T16:54:57.1456958Z    ⚠️  No linked issue found for PR #28732
+2026-10-14T16:54:57.1457607Z 🔄 Processing PR #28724
+2026-10-14T16:54:57.1458057Z    🔗 Found linked issue #18505
+2026-10-14T16:54:57.1462069Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:57.5690481Z    ✅ Labels already synchronized
+2026-10-14T16:54:57.5691030Z 🔄 Processing PR #28722
+2026-10-14T16:54:57.5691505Z    🔗 Found linked issue #18505
+2026-10-14T16:54:57.5695055Z    📥 Fetching labels from issue #18505
+2026-10-14T16:54:58.0022005Z    ✅ Labels already synchronized
+2026-10-14T16:54:58.0022565Z 🔄 Processing PR #28720
+2026-10-14T16:54:58.0023066Z    ⚠️  No linked issue found for PR #28720
+2026-10-14T16:54:58.0023834Z 🔄 Processing PR #28705
+2026-10-14T16:54:58.0024336Z    ⚠️  No linked issue found for PR #28705
+2026-10-14T16:54:58.0025255Z 🔄 Processing PR #28677
+2026-10-14T16:54:58.0025688Z    🔗 Found linked issue #21477
+2026-10-14T16:54:58.0029324Z    📥 Fetching labels from issue #21477
+2026-10-14T16:54:58.4290581Z    ✅ Labels already synchronized
+2026-10-14T16:54:58.4291182Z 🔄 Processing PR #28676
+2026-10-14T16:54:58.4291681Z    🔗 Found linked issue #25590
+2026-10-14T16:54:58.4295193Z    📥 Fetching labels from issue #25590
+2026-10-14T16:54:58.8671194Z    ✅ Labels already synchronized
+2026-10-14T16:54:58.8671823Z 🔄 Processing PR #28669
+2026-10-14T16:54:58.8672388Z    📝 PR #28669 is a draft and has no linked issue
+2026-10-14T16:54:58.8672960Z 🔄 Processing PR #28664
+2026-10-14T16:54:58.8673466Z    📝 PR #28664 is a draft and has no linked issue
+2026-10-14T16:54:58.8674022Z 🔄 Processing PR #28638
+2026-10-14T16:54:58.8674515Z    ⚠️  No linked issue found for PR #28638
+2026-10-14T16:54:58.8675525Z 🔄 Processing PR #28623
+2026-10-14T16:54:58.8676036Z    ⚠️  No linked issue found for PR #28623
+2026-10-14T16:54:58.8677150Z 🔄 Processing PR #28612
+2026-10-14T16:54:58.8677641Z    ⚠️  No linked issue found for PR #28612
+2026-10-14T16:54:58.8678776Z 🔄 Processing PR #28491
+2026-10-14T16:54:58.8679222Z    🔗 Found linked issue #25693
+2026-10-14T16:54:58.8683306Z    📥 Fetching labels from issue #25693
+2026-10-14T16:54:59.2666524Z    ✅ Labels already synchronized
+2026-10-14T16:54:59.2667137Z 🔄 Processing PR #28490
+2026-10-14T16:54:59.2667602Z    🔗 Found linked issue #28052
+2026-10-14T16:54:59.2671388Z    📥 Fetching labels from issue #28052
+2026-10-14T16:54:59.6962527Z    ✅ Labels already synchronized
+2026-10-14T16:54:59.6963484Z 🔄 Processing PR #28487
+2026-10-14T16:54:59.6963989Z    🔗 Found linked issue #19826
+2026-10-14T16:54:59.6967846Z    📥 Fetching labels from issue #19826
+2026-10-14T16:55:00.1201256Z    ✅ Labels already synchronized
+2026-10-14T16:55:00.1201888Z 🔄 Processing PR #28486
+2026-10-14T16:55:00.1202366Z    🔗 Found linked issue #24333
+2026-10-14T16:55:00.1206039Z    📥 Fetching labels from issue #24333
+2026-10-14T16:55:00.5537982Z    ✅ Labels already synchronized
+2026-10-14T16:55:00.5538710Z 🔄 Processing PR #28450
+2026-10-14T16:55:00.5539060Z    🔗 Found linked issue #340
+2026-10-14T16:55:00.5543140Z    📥 Fetching labels from issue #340
+2026-10-14T16:55:00.9880139Z    ✅ Labels already synchronized
+2026-10-14T16:55:00.9880705Z 🔄 Processing PR #28422
+2026-10-14T16:55:00.9881206Z    ⚠️  No linked issue found for PR #28422
+2026-10-14T16:55:00.9882343Z 🔄 Processing PR #28420
+2026-10-14T16:55:00.9882796Z    🔗 Found linked issue #18505
+2026-10-14T16:55:00.9886448Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:01.4078025Z    ✅ Labels already synchronized
+2026-10-14T16:55:01.4078707Z 🔄 Processing PR #28419
+2026-10-14T16:55:01.4079044Z    🔗 Found linked issue #18505
+2026-10-14T16:55:01.4083223Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:01.8510322Z    ✅ Labels already synchronized
+2026-10-14T16:55:01.8510988Z 🔄 Processing PR #28405
+2026-10-14T16:55:01.8511483Z    🔗 Found linked issue #5009
+2026-10-14T16:55:01.8515299Z    📥 Fetching labels from issue #5009
+2026-10-14T16:55:02.2750843Z    ✅ Labels already synchronized
+2026-10-14T16:55:02.2751395Z 🔄 Processing PR #28310
+2026-10-14T16:55:02.2751961Z    🔗 Found linked issue #28052
+2026-10-14T16:55:02.2756097Z    📥 Fetching labels from issue #28052
+2026-10-14T16:55:02.7060361Z    ✅ Labels already synchronized
+2026-10-14T16:55:02.7060935Z 🔄 Processing PR #28183
+2026-10-14T16:55:02.7061442Z    🔗 Found linked issue #22193
+2026-10-14T16:55:02.7065484Z    📥 Fetching labels from issue #22193
+2026-10-14T16:55:03.2672510Z    ✅ Labels already synchronized
+2026-10-14T16:55:03.2673253Z 🔄 Processing PR #28152
+2026-10-14T16:55:03.2673597Z    🔗 Found linked issue #18505
+2026-10-14T16:55:03.2677675Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:03.7183481Z    ✅ Labels already synchronized
+2026-10-14T16:55:03.7184743Z 🔄 Processing PR #28054
+2026-10-14T16:55:03.7185278Z    🔗 Found linked issue #28052
+2026-10-14T16:55:03.7189699Z    📥 Fetching labels from issue #28052
+2026-10-14T16:55:04.1367179Z    ✅ Labels already synchronized
+2026-10-14T16:55:04.1367796Z 🔄 Processing PR #28042
+2026-10-14T16:55:04.1368153Z    🔗 Found linked issue #25693
+2026-10-14T16:55:04.1372378Z    📥 Fetching labels from issue #25693
+2026-10-14T16:55:04.5778541Z    ✅ Labels already synchronized
+2026-10-14T16:55:04.5779323Z 🔄 Processing PR #28024
+2026-10-14T16:55:04.5779663Z    🔗 Found linked issue #6690
+2026-10-14T16:55:04.5784059Z    📥 Fetching labels from issue #6690
+2026-10-14T16:55:05.0185066Z    ✅ Labels already synchronized
+2026-10-14T16:55:05.0185682Z 🔄 Processing PR #28002
+2026-10-14T16:55:05.0186145Z    🔗 Found linked issue #18505
+2026-10-14T16:55:05.0190380Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:05.4626678Z    ✅ Labels already synchronized
+2026-10-14T16:55:05.4627356Z 🔄 Processing PR #27862
+2026-10-14T16:55:05.4627845Z    🔗 Found linked issue #22589
+2026-10-14T16:55:05.4632790Z    📥 Fetching labels from issue #22589
+2026-10-14T16:55:05.8891770Z    ✅ Labels already synchronized
+2026-10-14T16:55:05.8892374Z 🔄 Processing PR #27860
+2026-10-14T16:55:05.8892714Z    🔗 Found linked issue #24333
+2026-10-14T16:55:05.8896740Z    📥 Fetching labels from issue #24333
+2026-10-14T16:55:06.3306119Z    ✅ Labels already synchronized
+2026-10-14T16:55:06.3306784Z 🔄 Processing PR #27842
+2026-10-14T16:55:06.3307251Z    🔗 Found linked issue #25166
+2026-10-14T16:55:06.3311804Z    📥 Fetching labels from issue #25166
+2026-10-14T16:55:06.7704108Z    ✅ Labels already synchronized
+2026-10-14T16:55:06.7704856Z 🔄 Processing PR #27777
+2026-10-14T16:55:06.7705241Z    🔗 Found linked issue #18505
+2026-10-14T16:55:06.7709005Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:07.2408312Z    ✅ Labels already synchronized
+2026-10-14T16:55:07.2409214Z 🔄 Processing PR #27776
+2026-10-14T16:55:07.2409609Z    🔗 Found linked issue #18505
+2026-10-14T16:55:07.2413609Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:07.6693704Z    ✅ Labels already synchronized
+2026-10-14T16:55:07.6694311Z 🔄 Processing PR #27775
+2026-10-14T16:55:07.6694767Z    🔗 Found linked issue #18505
+2026-10-14T16:55:07.6699082Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:08.1118139Z    ✅ Labels already synchronized
+2026-10-14T16:55:08.1118752Z 🔄 Processing PR #27774
+2026-10-14T16:55:08.1119226Z    🔗 Found linked issue #18505
+2026-10-14T16:55:08.1123120Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:08.5182169Z    ✅ Labels already synchronized
+2026-10-14T16:55:08.5183058Z 🔄 Processing PR #27703
+2026-10-14T16:55:08.5183415Z    🔗 Found linked issue #18505
+2026-10-14T16:55:08.5187382Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:08.9201439Z    ✅ Labels already synchronized
+2026-10-14T16:55:08.9202215Z 🔄 Processing PR #27702
+2026-10-14T16:55:08.9202566Z    🔗 Found linked issue #18505
+2026-10-14T16:55:08.9206425Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:09.4226797Z    ✅ Labels already synchronized
+2026-10-14T16:55:09.4227399Z 🔄 Processing PR #27686
+2026-10-14T16:55:09.4227871Z    🔗 Found linked issue #19440
+2026-10-14T16:55:09.4231526Z    📥 Fetching labels from issue #19440
+2026-10-14T16:55:09.9395492Z    ✅ Labels already synchronized
+2026-10-14T16:55:09.9396103Z 🔄 Processing PR #27685
+2026-10-14T16:55:09.9396568Z    🔗 Found linked issue #19440
+2026-10-14T16:55:09.9400254Z    📥 Fetching labels from issue #19440
+2026-10-14T16:55:10.3510809Z    ✅ Labels already synchronized
+2026-10-14T16:55:10.3511573Z 🔄 Processing PR #27684
+2026-10-14T16:55:10.3512240Z    🔗 Found linked issue #19440
+2026-10-14T16:55:10.3516085Z    📥 Fetching labels from issue #19440
+2026-10-14T16:55:10.7762284Z    ✅ Labels already synchronized
+2026-10-14T16:55:10.7763199Z 🔄 Processing PR #27669
+2026-10-14T16:55:10.7763554Z    🔗 Found linked issue #18505
+2026-10-14T16:55:10.7767185Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:11.2057519Z    ✅ Labels already synchronized
+2026-10-14T16:55:11.2058195Z 🔄 Processing PR #27656
+2026-10-14T16:55:11.2058533Z    🔗 Found linked issue #18505
+2026-10-14T16:55:11.2062616Z    📥 Fetching labels from issue #18505
+2026-10-14T16:55:11.7003251Z    ✅ Labels already synchronized
+2026-10-14T16:55:11.7004120Z 🔄 Processing PR #27650
+2026-10-14T16:55:11.7004616Z    🔗 Found linked issue #21570
+2026-10-14T16:55:11.7008429Z    📥 Fetching labels from issue #21570
+2026-10-14T16:55:12.1277950Z    ✅ Labels already synchronized
+2026-10-14T16:55:12.1278760Z 🔄 Processing PR #27588
+2026-10-14T16:55:12.1279119Z    🔗 Found linked issue #22274
+2026-10-14T16:55:12.1283204Z    📥 Fetching labels from issue #22274
+2026-10-14T16:55:12.5591803Z    ✅ Labels already synchronized
+2026-10-14T16:55:12.5592567Z 🔄 Processing PR #27584
+2026-10-14T16:55:12.5592932Z    🔗 Found linked issue #19826
+2026-10-14T16:55:12.5596884Z    📥 Fetching labels from issue #19826
+2026-10-14T16:55:13.0280982Z    ✅ Labels already synchronized
+2026-10-14T16:55:13.0281833Z 🔄 Processing PR #27583
+2026-10-14T16:55:13.0282801Z    🔗 Found linked issue #19239
+2026-10-14T16:55:13.0286190Z    📥 Fetching labels from issue #19239
+2026-10-14T16:55:13.4942408Z    ✅ Labels already synchronized
+2026-10-14T16:55:13.4943033Z 🔄 Processing PR #27464
+2026-10-14T16:55:13.4943490Z    🔗 Found linked issue #17690
+2026-10-14T16:55:13.4947786Z    📥 Fetching labels from issue #17690
+2026-10-14T16:55:13.9081952Z    ✅ Labels already synchronized
+2026-10-14T16:55:13.9082682Z 🔄 Processing PR #27463
+2026-10-14T16:55:13.9083029Z    🔗 Found linked issue #21691
+2026-10-14T16:55:13.9086870Z    📥 Fetching labels from issue #21691
+2026-10-14T16:55:14.3402648Z    ✅ Labels already synchronized
+2026-10-14T16:55:14.3403268Z 🔄 Processing PR #27423
+2026-10-14T16:55:14.3403751Z    🔗 Found linked issue #3375
+2026-10-14T16:55:14.3407726Z    📥 Fetching labels from issue #3375
+2026-10-14T16:55:14.7498555Z    ✅ Labels already synchronized
+2026-10-14T16:55:14.7499204Z 🔄 Processing PR #27415
+2026-10-14T16:55:14.7499688Z    🔗 Found linked issue #18087
+2026-10-14T16:55:14.7504104Z    📥 Fetching labels from issue #18087
+2026-10-14T16:55:15.1621050Z    ✅ Labels already synchronized
+2026-10-14T16:55:15.1621664Z 🔄 Processing PR #27406
+2026-10-14T16:55:15.1622146Z    🔗 Found linked issue #21805
+2026-10-14T16:55:15.1626309Z    📥 Fetching labels from issue #21805
+2026-10-14T16:55:15.8461725Z    ✅ Labels already synchronized
+2026-10-14T16:55:15.8462627Z 🔄 Processing PR #27400
+2026-10-14T16:55:15.8463135Z    🔗 Found linked issue #27393
+2026-10-14T16:55:15.8466563Z    📥 Fetching labels from issue #27393
+2026-10-14T16:55:16.2941065Z    ✅ Labels already synchronized
+2026-10-14T16:55:16.2941687Z 🔄 Processing PR #27399
+2026-10-14T16:55:16.2942166Z    🔗 Found linked issue #24333
+2026-10-14T16:55:16.2946109Z    📥 Fetching labels from issue #24333
+2026-10-14T16:55:16.7110428Z    ✅ Labels already synchronized
+2026-10-14T16:55:16.7111126Z 🔄 Processing PR #27200
+2026-10-14T16:55:16.7111507Z    🔗 Found linked issue #18884
+2026-10-14T16:55:16.7115408Z    📥 Fetching labels from issue #18884
+2026-10-14T16:55:17.1807334Z    ✅ Labels already synchronized
+2026-10-14T16:55:17.1807947Z 🔄 Processing PR #26844
+2026-10-14T16:55:17.1808414Z    🔗 Found linked issue #25689
+2026-10-14T16:55:17.1812311Z    📥 Fetching labels from issue #25689
+2026-10-14T16:55:17.6536159Z    ✅ Labels already synchronized
+2026-10-14T16:55:17.6536903Z 🔄 Processing PR #26765
+2026-10-14T16:55:17.6537259Z    🔗 Found linked issue #25693
+2026-10-14T16:55:17.6541296Z    📥 Fetching labels from issue #25693
+2026-10-14T16:55:18.0616046Z    ✅ Labels already synchronized
+2026-10-14T16:55:18.0616664Z 🔄 Processing PR #26686
+2026-10-14T16:55:18.0617125Z    🔗 Found linked issue #18385
+2026-10-14T16:55:18.0621305Z    📥 Fetching labels from issue #18385
+2026-10-14T16:55:18.4859338Z    ✅ Labels already synchronized
+2026-10-14T16:55:18.4860111Z 🔄 Processing PR #26084
+2026-10-14T16:55:18.4860446Z    🔗 Found linked issue #24246
+2026-10-14T16:55:18.4864804Z    📥 Fetching labels from issue #24246
+2026-10-14T16:55:18.9056244Z    ✅ Labels already synchronized
+2026-10-14T16:55:18.9056857Z 🔄 Processing PR #25977
+2026-10-14T16:55:18.9057335Z    🔗 Found linked issue #22932
+2026-10-14T16:55:18.9060958Z    📥 Fetching labels from issue #22932
+2026-10-14T16:55:19.3521203Z    ✅ Labels already synchronized
+2026-10-14T16:55:19.3568411Z 🔄 Processing PR #25788
+2026-10-14T16:55:19.3568885Z    🔗 Found linked issue #19835
+2026-10-14T16:55:19.3569338Z    📥 Fetching labels from issue #19835
+2026-10-14T16:55:19.7852835Z    ✅ Labels already synchronized
+2026-10-14T16:55:19.7853442Z 🔄 Processing PR #25786
+2026-10-14T16:55:19.7853911Z    🔗 Found linked issue #16341
+2026-10-14T16:55:19.7857685Z    📥 Fetching labels from issue #16341
+2026-10-14T16:55:20.2330060Z    ✅ Labels already synchronized
+2026-10-14T16:55:20.2331101Z 🔄 Processing PR #25729
+2026-10-14T16:55:20.2331574Z    🔗 Found linked issue #25689
+2026-10-14T16:55:20.2335545Z    📥 Fetching labels from issue #25689
+2026-10-14T16:55:20.6576611Z    ✅ Labels already synchronized
+2026-10-14T16:55:20.6577565Z 🔄 Processing PR #25728
+2026-10-14T16:55:20.6577899Z    🔗 Found linked issue #25693
+2026-10-14T16:55:20.6581412Z    📥 Fetching labels from issue #25693
+2026-10-14T16:55:21.1721825Z    ✅ Labels already synchronized
+2026-10-14T16:55:21.1722462Z 🔄 Processing PR #25462
+2026-10-14T16:55:21.1722823Z    🔗 Found linked issue #20106
+2026-10-14T16:55:21.1726822Z    📥 Fetching labels from issue #20106
+2026-10-14T16:55:21.6078691Z    ✅ Labels already synchronized
+2026-10-14T16:55:21.6079458Z 🔄 Processing PR #25410
+2026-10-14T16:55:21.6079958Z    🔗 Found linked issue #24966
+2026-10-14T16:55:21.6083570Z    📥 Fetching labels from issue #24966
+2026-10-14T16:55:22.0348486Z    ✅ Labels already synchronized
+2026-10-14T16:55:22.0349251Z 🔄 Processing PR #25378
+2026-10-14T16:55:22.0349606Z    🔗 Found linked issue #22784
+2026-10-14T16:55:22.0353603Z    📥 Fetching labels from issue #22784
+2026-10-14T16:55:22.4947062Z    ✅ Labels already synchronized
+2026-10-14T16:55:22.4947725Z 🔄 Processing PR #25375
+2026-10-14T16:55:22.4948211Z    🔗 Found linked issue #24896
+2026-10-14T16:55:22.4952395Z    📥 Fetching labels from issue #24896
+2026-10-14T16:55:22.9056981Z    ✅ Labels already synchronized
+2026-10-14T16:55:22.9057576Z 🔄 Processing PR #25364
+2026-10-14T16:55:22.9057920Z    🔗 Found linked issue #24902
+2026-10-14T16:55:22.9062091Z    📥 Fetching labels from issue #24902
+2026-10-14T16:55:23.3287523Z    ✅ Labels already synchronized
+2026-10-14T16:55:23.3288132Z 🔄 Processing PR #25230
+2026-10-14T16:55:23.3288596Z    🔗 Found linked issue #22125
+2026-10-14T16:55:23.3292876Z    📥 Fetching labels from issue #22125
+2026-10-14T16:55:23.7676649Z    ✅ Labels already synchronized
+2026-10-14T16:55:23.7677471Z 🔄 Processing PR #25033
+2026-10-14T16:55:23.7677922Z    🔗 Found linked issue #15269
+2026-10-14T16:55:23.7682126Z    📥 Fetching labels from issue #15269
+2026-10-14T16:55:24.1882461Z    ✅ Labels already synchronized
+2026-10-14T16:55:24.1883111Z 🔄 Processing PR #25008
+2026-10-14T16:55:24.1883595Z    🔗 Found linked issue #19969
+2026-10-14T16:55:24.1887261Z    📥 Fetching labels from issue #19969
+2026-10-14T16:55:24.6387108Z    ✅ Labels already synchronized
+2026-10-14T16:55:24.6387829Z 🔄 Processing PR #24905
+2026-10-14T16:55:24.6388183Z    🔗 Found linked issue #19713
+2026-10-14T16:55:24.6392258Z    📥 Fetching labels from issue #19713
+2026-10-14T16:55:25.1561152Z    ✅ Labels already synchronized
+2026-10-14T16:55:25.1561733Z 🔄 Processing PR #24851
+2026-10-14T16:55:25.1562212Z    🔗 Found linked issue #24850
+2026-10-14T16:55:25.1566188Z    📥 Fetching labels from issue #24850
+2026-10-14T16:55:25.6881735Z    ✅ Labels already synchronized
+2026-10-14T16:55:25.6882363Z 🔄 Processing PR #24758
+2026-10-14T16:55:25.6882832Z    🔗 Found linked issue #24797
+2026-10-14T16:55:25.6887075Z    📥 Fetching labels from issue #24797
+2026-10-14T16:55:26.1736174Z    ✅ Labels already synchronized
+2026-10-14T16:55:26.1737304Z 🔄 Processing PR #24661
+2026-10-14T16:55:26.1737833Z    🔗 Found linked issue #24658
+2026-10-14T16:55:26.1741015Z    📥 Fetching labels from issue #24658
+2026-10-14T16:55:26.6416681Z    ✅ Labels already synchronized
+2026-10-14T16:55:26.6417512Z 🔄 Processing PR #24345
+2026-10-14T16:55:26.6417868Z    🔗 Found linked issue #23365
+2026-10-14T16:55:26.6421804Z    📥 Fetching labels from issue #23365
+2026-10-14T16:55:27.0773954Z    ✅ Labels already synchronized
+2026-10-14T16:55:27.0774811Z 🔄 Processing PR #24303
+2026-10-14T16:55:27.0775152Z    🔗 Found linked issue #23365
+2026-10-14T16:55:27.0779173Z    📥 Fetching labels from issue #23365
+2026-10-14T16:55:27.5705333Z    ✅ Labels already synchronized
+2026-10-14T16:55:27.5706108Z 🔄 Processing PR #24155
+2026-10-14T16:55:27.5706466Z    🔗 Found linked issue #19638
+2026-10-14T16:55:27.5710497Z    📥 Fetching labels from issue #19638
+2026-10-14T16:55:28.0778524Z    ✅ Labels already synchronized
+2026-10-14T16:55:28.0779313Z 🔄 Processing PR #24128
+2026-10-14T16:55:28.0779692Z    🔗 Found linked issue #16629
+2026-10-14T16:55:28.0784206Z    📥 Fetching labels from issue #16629
+2026-10-14T16:55:28.4778176Z    ✅ Labels already synchronized
+2026-10-14T16:55:28.4778787Z 🔄 Processing PR #23946
+2026-10-14T16:55:28.4779247Z    🔗 Found linked issue #23907
+2026-10-14T16:55:28.4783508Z    📥 Fetching labels from issue #23907
+2026-10-14T16:55:28.9538390Z    ✅ Labels already synchronized
+2026-10-14T16:55:28.9538989Z 🔄 Processing PR #23918
+2026-10-14T16:55:28.9539342Z    🔗 Found linked issue #23919
+2026-10-14T16:55:28.9543388Z    📥 Fetching labels from issue #23919
+2026-10-14T16:55:29.4045894Z    ✅ Labels already synchronized
+2026-10-14T16:55:29.4046691Z 🔄 Processing PR #23917
+2026-10-14T16:55:29.4047043Z    🔗 Found linked issue #23741
+2026-10-14T16:55:29.4050893Z    📥 Fetching labels from issue #23741
+2026-10-14T16:55:29.9400618Z    ✅ Labels already synchronized
+2026-10-14T16:55:29.9401442Z 🔄 Processing PR #23809
+2026-10-14T16:55:29.9401888Z    🔗 Found linked issue #16271
+2026-10-14T16:55:29.9405733Z    📥 Fetching labels from issue #16271
+2026-10-14T16:55:30.5063137Z    ✅ Labels already synchronized
+2026-10-14T16:55:30.5063737Z 🔄 Processing PR #23699
+2026-10-14T16:55:30.5064214Z    🔗 Found linked issue #16716
+2026-10-14T16:55:30.5068179Z    📥 Fetching labels from issue #16716
+2026-10-14T16:55:31.0043355Z    ✅ Labels already synchronized
+2026-10-14T16:55:31.0044037Z 🔄 Processing PR #23543
+2026-10-14T16:55:31.0044369Z    🔗 Found linked issue #23365
+2026-10-14T16:55:31.0048044Z    📥 Fetching labels from issue #23365
+2026-10-14T16:55:31.3892288Z    ✅ Labels already synchronized
+2026-10-14T16:55:31.3892964Z 🔄 Processing PR #23482
+2026-10-14T16:55:31.3893427Z    🔗 Found linked issue #16629
+2026-10-14T16:55:31.3897266Z    📥 Fetching labels from issue #16629
+2026-10-14T16:55:31.9004714Z    ✅ Labels already synchronized
+2026-10-14T16:55:31.9005562Z 🔄 Processing PR #23446
+2026-10-14T16:55:31.9005908Z    🔗 Found linked issue #23365
+2026-10-14T16:55:31.9009986Z    📥 Fetching labels from issue #23365
+2026-10-14T16:55:32.4056842Z    ✅ Labels already synchronized
+2026-10-14T16:55:32.4057510Z 🔄 Processing PR #23414
+2026-10-14T16:55:32.4057987Z    🔗 Found linked issue #13924
+2026-10-14T16:55:32.4061839Z    📥 Fetching labels from issue #13924
+2026-10-14T16:55:32.8350377Z    ✅ Labels already synchronized
+2026-10-14T16:55:32.8351179Z 🔄 Processing PR #23190
+2026-10-14T16:55:32.8351679Z    🔗 Found linked issue #23188
+2026-10-14T16:55:32.8355390Z    📥 Fetching labels from issue #23188
+2026-10-14T16:55:33.3187760Z    ✅ Labels already synchronized
+2026-10-14T16:55:33.3188378Z 🔄 Processing PR #23105
+2026-10-14T16:55:33.3188850Z    🔗 Found linked issue #22932
+2026-10-14T16:55:33.3193026Z    📥 Fetching labels from issue #22932
+2026-10-14T16:55:34.2445548Z    ✅ Labels already synchronized
+2026-10-14T16:55:34.2446341Z 🔄 Processing PR #23041
+2026-10-14T16:55:34.2446806Z    🔗 Found linked issue #11303
+2026-10-14T16:55:34.2450767Z    📥 Fetching labels from issue #11303
+2026-10-14T16:55:34.6818893Z    ✅ Labels already synchronized
+2026-10-14T16:55:34.6819507Z 🔄 Processing PR #22846
+2026-10-14T16:55:34.6820157Z    🔗 Found linked issue #22816
+2026-10-14T16:55:34.6823721Z    📥 Fetching labels from issue #22816
+2026-10-14T16:55:35.0788439Z    ✅ Labels already synchronized
+2026-10-14T16:55:35.0789054Z 🔄 Processing PR #22590
+2026-10-14T16:55:35.0789530Z    🔗 Found linked issue #22589
+2026-10-14T16:55:35.0793289Z    📥 Fetching labels from issue #22589
+2026-10-14T16:55:35.5046801Z    ✅ Labels already synchronized
+2026-10-14T16:55:35.5047423Z 🔄 Processing PR #22462
+2026-10-14T16:55:35.5047941Z    ⚠️  No linked issue found for PR #22462
+2026-10-14T16:55:35.5049066Z 🔄 Processing PR #22268
+2026-10-14T16:55:35.5049542Z    🔗 Found linked issue #22203
+2026-10-14T16:55:35.5053908Z    📥 Fetching labels from issue #22203
+2026-10-14T16:55:35.9290810Z    ✅ Labels already synchronized
+2026-10-14T16:55:35.9291393Z 🔄 Processing PR #22132
+2026-10-14T16:55:35.9291992Z    🔗 Found linked issue #22131
+2026-10-14T16:55:35.9295798Z    📥 Fetching labels from issue #22131
+2026-10-14T16:55:36.3396679Z    ✅ Labels already synchronized
+2026-10-14T16:55:36.3397268Z 🔄 Processing PR #22087
+2026-10-14T16:55:36.3397622Z    ⚠️  No linked issue found for PR #22087
+2026-10-14T16:55:36.3398696Z 🔄 Processing PR #21880
+2026-10-14T16:55:36.3399223Z    🔗 Found linked issue #21718
+2026-10-14T16:55:36.3403214Z    📥 Fetching labels from issue #21718
+2026-10-14T16:55:36.7456192Z    ✅ Labels already synchronized
+2026-10-14T16:55:36.7457502Z 🔄 Processing PR #21877
+2026-10-14T16:55:36.7457834Z    🔗 Found linked issue #20737
+2026-10-14T16:55:36.7461882Z    📥 Fetching labels from issue #20737
+2026-10-14T16:55:37.1709301Z    ✅ Labels already synchronized
+2026-10-14T16:55:37.1710679Z 🔄 Processing PR #21689
+2026-10-14T16:55:37.1711193Z    🔗 Found linked issue #21688
+2026-10-14T16:55:37.1714290Z    📥 Fetching labels from issue #21688
+2026-10-14T16:55:37.5584456Z    ✅ Labels already synchronized
+2026-10-14T16:55:37.5585356Z 🔄 Processing PR #21632
+2026-10-14T16:55:37.5585726Z    🔗 Found linked issue #14921
+2026-10-14T16:55:37.5589589Z    📥 Fetching labels from issue #14921
+2026-10-14T16:55:38.0154725Z    ✅ Labels already synchronized
+2026-10-14T16:55:38.0155663Z 🔄 Processing PR #21595
+2026-10-14T16:55:38.0156180Z    🔗 Found linked issue #21484
+2026-10-14T16:55:38.0159558Z    📥 Fetching labels from issue #21484
+2026-10-14T16:55:38.4605649Z    ✅ Labels already synchronized
+2026-10-14T16:55:38.4606259Z 🔄 Processing PR #21593
+2026-10-14T16:55:38.4606718Z    🔗 Found linked issue #21484
+2026-10-14T16:55:38.4610813Z    📥 Fetching labels from issue #21484
+2026-10-14T16:55:38.8339179Z    ✅ Labels already synchronized
+2026-10-14T16:55:38.8339990Z 🔄 Processing PR #21307
+2026-10-14T16:55:38.8340360Z    🔗 Found linked issue #15338
+2026-10-14T16:55:38.8344264Z    📥 Fetching labels from issue #15338
+2026-10-14T16:55:39.2421365Z    ✅ Labels already synchronized
+2026-10-14T16:55:39.2422107Z 🔄 Processing PR #20798
+2026-10-14T16:55:39.2422479Z    🔗 Found linked issue #20785
+2026-10-14T16:55:39.2426537Z    📥 Fetching labels from issue #20785
+2026-10-14T16:55:39.6157312Z    ✅ Labels already synchronized
+2026-10-14T16:55:39.6158112Z 🔄 Processing PR #20762
+2026-10-14T16:55:39.6158465Z    🔗 Found linked issue #16012
+2026-10-14T16:55:39.6162318Z    📥 Fetching labels from issue #16012
+2026-10-14T16:55:40.0026041Z    ✅ Labels already synchronized
+2026-10-14T16:55:40.0026639Z 🔄 Processing PR #20700
+2026-10-14T16:55:40.0026962Z    🔗 Found linked issue #15338
+2026-10-14T16:55:40.0030969Z    📥 Fetching labels from issue #15338
+2026-10-14T16:55:40.4426577Z    ✅ Labels already synchronized
+2026-10-14T16:55:40.4427181Z 🔄 Processing PR #20536
+2026-10-14T16:55:40.4427637Z    🔗 Found linked issue #15391
+2026-10-14T16:55:40.4431743Z    📥 Fetching labels from issue #15391
+2026-10-14T16:55:40.8732670Z    ✅ Labels already synchronized
+2026-10-14T16:55:40.8733268Z 🔄 Processing PR #20406
+2026-10-14T16:55:40.8733726Z    🔗 Found linked issue #20406
+2026-10-14T16:55:40.8737176Z    📥 Fetching labels from issue #20406
+2026-10-14T16:55:41.2563245Z    ✅ Labels already synchronized
+2026-10-14T16:55:41.2564281Z 🔄 Processing PR #20392
+2026-10-14T16:55:41.2564755Z    🔗 Found linked issue #20370
+2026-10-14T16:55:41.2568879Z    📥 Fetching labels from issue #20370
+2026-10-14T16:55:41.6597668Z    ✅ Labels already synchronized
+2026-10-14T16:55:41.6598280Z 🔄 Processing PR #20273
+2026-10-14T16:55:41.6598637Z    🔗 Found linked issue #20258
+2026-10-14T16:55:41.6602762Z    📥 Fetching labels from issue #20258
+2026-10-14T16:55:42.0606696Z    ✅ Labels already synchronized
+2026-10-14T16:55:42.0607489Z 🔄 Processing PR #20171
+2026-10-14T16:55:42.0607836Z    🔗 Found linked issue #20166
+2026-10-14T16:55:42.0612323Z    📥 Fetching labels from issue #20166
+2026-10-14T16:55:42.4640889Z    ✅ Labels already synchronized
+2026-10-14T16:55:42.4641499Z 🔄 Processing PR #20170
+2026-10-14T16:55:42.4641979Z    🔗 Found linked issue #20166
+2026-10-14T16:55:42.4645981Z    📥 Fetching labels from issue #20166
+2026-10-14T16:55:42.8572154Z    ✅ Labels already synchronized
+2026-10-14T16:55:42.8573139Z 🔄 Processing PR #19860
+2026-10-14T16:55:42.8573466Z    🔗 Found linked issue #19735
+2026-10-14T16:55:42.8576991Z    📥 Fetching labels from issue #19735
+2026-10-14T16:55:43.2261165Z    ✅ Labels already synchronized
+2026-10-14T16:55:43.2261786Z 🔄 Processing PR #19754
+2026-10-14T16:55:43.2262261Z    🔗 Found linked issue #19733
+2026-10-14T16:55:43.2266148Z    📥 Fetching labels from issue #19733
+2026-10-14T16:55:43.5924839Z    ✅ Labels already synchronized
+2026-10-14T16:55:43.5925564Z 🔄 Processing PR #19638
+2026-10-14T16:55:43.5925904Z    🔗 Found linked issue #17448
+2026-10-14T16:55:43.5930087Z    📥 Fetching labels from issue #17448
+2026-10-14T16:55:43.9759410Z    ✅ Labels already synchronized
+2026-10-14T16:55:43.9760392Z 🔄 Processing PR #19013
+2026-10-14T16:55:43.9760735Z    🔗 Found linked issue #18884
+2026-10-14T16:55:43.9764609Z    📥 Fetching labels from issue #18884
+2026-10-14T16:55:44.4024358Z    ✅ Labels already synchronized
+2026-10-14T16:55:44.4037047Z ✅ PR triage completed
+2026-10-14T16:55:44.4230459Z Post job cleanup.
+2026-10-14T16:55:44.8174425Z Token revoked
+2026-10-14T16:55:44.8555217Z Post job cleanup.
+2026-10-14T16:55:44.9216621Z [command]/usr/bin/git version
+2026-10-14T16:55:44.9245983Z git version 2.55.0
+2026-10-14T16:55:44.9274810Z Temporarily overriding HOME='/home/runner/work/_temp/d8bf066f-26f3-405e-b63d-7588b73bedeb' before making global git config changes
+2026-10-14T16:55:44.9275987Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:55:44.9279249Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:55:44.9307642Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:55:44.9333358Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:55:44.9518593Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:55:44.9543471Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:55:44.9836946Z Evaluate and set job outputs
+2026-10-14T16:55:44.9842740Z Set output 'prs_needing_comment'
+2026-10-14T16:55:44.9844336Z Cleaning up orphan processes
+2026-10-14T16:55:45.0076647Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

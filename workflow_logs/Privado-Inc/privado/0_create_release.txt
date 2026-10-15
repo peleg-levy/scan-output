@@ -1,0 +1,61 @@
+﻿2026-10-14T11:19:12.4304868Z Current runner version: '2.337.0'
+2026-10-14T11:19:12.4336846Z ##[group]Runner Image Provisioner
+2026-10-14T11:19:12.4337798Z Hosted Compute Agent
+2026-10-14T11:19:12.4338505Z Version: 20261002.596
+2026-10-14T11:19:12.4339219Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T11:19:12.4340005Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T11:19:12.4340822Z Worker ID: {437780cc-aa6d-40c8-9ab8-ea615974977e}
+2026-10-14T11:19:12.4341548Z Region: eastus2
+2026-10-14T11:19:12.4342203Z Cloud: Azure
+2026-10-14T11:19:12.4342793Z ##[endgroup]
+2026-10-14T11:19:12.4344442Z ##[group]Operating System
+2026-10-14T11:19:12.4345247Z Ubuntu
+2026-10-14T11:19:12.4345803Z 22.04.5
+2026-10-14T11:19:12.4346749Z LTS
+2026-10-14T11:19:12.4347402Z ##[endgroup]
+2026-10-14T11:19:12.4347983Z ##[group]Runner Image
+2026-10-14T11:19:12.4348762Z Image: ubuntu-22.04
+2026-10-14T11:19:12.4349359Z Version: 20261004.315.1
+2026-10-14T11:19:12.4350798Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261004.315/images/ubuntu/Ubuntu2204-Readme.md
+2026-10-14T11:19:12.4352462Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261004.315
+2026-10-14T11:19:12.4353967Z ##[endgroup]
+2026-10-14T11:19:12.4355163Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T11:19:12.4357877Z Contents: write
+2026-10-14T11:19:12.4358533Z Metadata: read
+2026-10-14T11:19:12.4359116Z ##[endgroup]
+2026-10-14T11:19:12.4361418Z Secret source: Actions
+2026-10-14T11:19:12.4362448Z Cache mode: write
+2026-10-14T11:19:12.4363554Z Prepare workflow directory
+2026-10-14T11:19:12.4915210Z Prepare all required actions
+2026-10-14T11:19:12.4988715Z Complete job name: create_release
+2026-10-14T11:19:12.5747255Z ##[group]Run latest_tag=$(gh api repos/$OWNER/$REPO/tags --jq '.[0].name')
+2026-10-14T11:19:12.5748663Z [36;1mlatest_tag=$(gh api repos/$OWNER/$REPO/tags --jq '.[0].name')[0m
+2026-10-14T11:19:12.5749594Z [36;1m[0m
+2026-10-14T11:19:12.5750492Z [36;1mnew_tag=$(echo $latest_tag | awk -F. '{print $1"."$2"."$3+1}')[0m
+2026-10-14T11:19:12.5751485Z [36;1m[0m
+2026-10-14T11:19:12.5752362Z [36;1mlatest_commit_sha=$(gh api repos/$OWNER/$REPO/git/refs/heads/$BRANCH --jq '.object.sha')[0m
+2026-10-14T11:19:12.5753418Z [36;1m[0m
+2026-10-14T11:19:12.5754055Z [36;1mgh api repos/$OWNER/$REPO/git/refs \[0m
+2026-10-14T11:19:12.5754818Z [36;1m-f ref="refs/tags/$new_tag" \[0m
+2026-10-14T11:19:12.5755591Z [36;1m-f sha=$latest_commit_sha[0m
+2026-10-14T11:19:12.5756472Z [36;1m[0m
+2026-10-14T11:19:12.5757145Z [36;1mecho "new_tag=$new_tag" >> $GITHUB_OUTPUT                [0m
+2026-10-14T11:19:12.6636813Z shell: /usr/bin/bash -e {0}
+2026-10-14T11:19:12.6638087Z env:
+2026-10-14T11:19:12.6638835Z   OWNER: Privado-Inc
+2026-10-14T11:19:12.6639546Z   BRANCH: main
+2026-10-14T11:19:12.6640142Z   REPO: privado
+2026-10-14T11:19:12.6645229Z   GH_TOKEN: ***
+2026-10-14T11:19:12.6646210Z ##[endgroup]
+2026-10-14T11:19:14.3733812Z {"ref":"refs/tags/v1.3.92","node_id":"REF_kwDOGX1sMbFyZWZzL3RhZ3MvdjEuMy45Mg","url":"https://api.github.com/repos/Privado-Inc/privado/git/refs/tags/v1.3.92","object":{"sha":"2de3b2f5ccf2a0d512e72f852e1256bdb032aa55","type":"commit","url":"https://api.github.com/repos/Privado-Inc/privado/git/commits/2de3b2f5ccf2a0d512e72f852e1256bdb032aa55"}}
+2026-10-14T11:19:14.3891852Z ##[group]Run gh release create v1.3.92 --generate-notes --target main --title "v1.3.92 🌈" --repo "Privado-Inc/privado"
+2026-10-14T11:19:14.3892860Z [36;1mgh release create v1.3.92 --generate-notes --target main --title "v1.3.92 🌈" --repo "Privado-Inc/privado"[0m
+2026-10-14T11:19:14.3967155Z shell: /usr/bin/bash -e {0}
+2026-10-14T11:19:14.3967521Z env:
+2026-10-14T11:19:14.3967800Z   OWNER: Privado-Inc
+2026-10-14T11:19:14.3968082Z   BRANCH: main
+2026-10-14T11:19:14.3968356Z   REPO: privado
+2026-10-14T11:19:14.3972165Z   GH_TOKEN: ***
+2026-10-14T11:19:14.3972460Z ##[endgroup]
+2026-10-14T11:19:15.9152832Z https://github.com/Privado-Inc/privado/releases/tag/v1.3.92
+2026-10-14T11:19:15.9272215Z Cleaning up orphan processes

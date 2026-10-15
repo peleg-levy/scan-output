@@ -1,0 +1,1790 @@
+﻿2026-10-14T16:12:23.0773007Z Current runner version: '2.337.0'
+2026-10-14T16:12:23.0807442Z ##[group]Runner Image Provisioner
+2026-10-14T16:12:23.0807973Z Hosted Compute Agent
+2026-10-14T16:12:23.0808382Z Version: 20261002.596
+2026-10-14T16:12:23.0808769Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T16:12:23.0809190Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T16:12:23.0809628Z Worker ID: {b1f57e3f-b93e-4604-9bda-cfa9d5b16ba3}
+2026-10-14T16:12:23.0810103Z Region: centralus
+2026-10-14T16:12:23.0810456Z Cloud: Azure
+2026-10-14T16:12:23.0810795Z ##[endgroup]
+2026-10-14T16:12:23.0811570Z ##[group]Operating System
+2026-10-14T16:12:23.0812005Z Ubuntu
+2026-10-14T16:12:23.0812321Z 24.04.5
+2026-10-14T16:12:23.0812686Z LTS
+2026-10-14T16:12:23.0813010Z ##[endgroup]
+2026-10-14T16:12:23.0813347Z ##[group]Runner Image
+2026-10-14T16:12:23.0813780Z Image: ubuntu-24.04
+2026-10-14T16:12:23.0814129Z Version: 20261004.327.1
+2026-10-14T16:12:23.0814913Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T16:12:23.0815793Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T16:12:23.0816397Z ##[endgroup]
+2026-10-14T16:12:23.0817344Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T16:12:23.0818570Z Contents: read
+2026-10-14T16:12:23.0818911Z Issues: read
+2026-10-14T16:12:23.0819306Z Metadata: read
+2026-10-14T16:12:23.0819654Z Packages: read
+2026-10-14T16:12:23.0819984Z Statuses: read
+2026-10-14T16:12:23.0820372Z ##[endgroup]
+2026-10-14T16:12:23.0821627Z Secret source: Actions
+2026-10-14T16:12:23.0822268Z Cache mode: read
+2026-10-14T16:12:23.0822790Z Prepare workflow directory
+2026-10-14T16:12:23.1066156Z Prepare all required actions
+2026-10-14T16:12:23.1096553Z Getting action download info
+2026-10-14T16:12:23.3421314Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-14T16:12:23.4155745Z Download action repository 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea' (SHA:60a0d83039c74a4aee543508d2ffcb1c3799cdea)
+2026-10-14T16:12:23.7694286Z Download action repository 'docker/login-action@184bdaa0721073962dff0199f1fb9940f07167d1' (SHA:184bdaa0721073962dff0199f1fb9940f07167d1)
+2026-10-14T16:12:24.6432646Z Download action repository 'google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489' (SHA:f77273f4c914e4bf38440cf36a0369cb64a37489)
+2026-10-14T16:12:24.9896482Z Getting action download info
+2026-10-14T16:12:25.1071076Z Download action repository 'google-github-actions/auth@v3' (SHA:7c6bc770dae815cd3e89ee6cdf493a5fab2cc093)
+2026-10-14T16:12:25.4073964Z Download action repository 'pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061' (SHA:41ff72655975bd51cab0327fa583b6e92b6d3061)
+2026-10-14T16:12:25.9452805Z Download action repository 'actions/upload-artifact@v6' (SHA:b7c566a772e6b6bfb58ed0dc250532a479d7789f)
+2026-10-14T16:12:26.0960088Z Complete job name: find-duplicates
+2026-10-14T16:12:26.1503729Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-14T16:12:26.1504107Z with:
+2026-10-14T16:12:26.1504241Z   persist-credentials: false
+2026-10-14T16:12:26.1504400Z   repository: google-gemini/gemini-cli
+2026-10-14T16:12:26.1505910Z   token: ***
+2026-10-14T16:12:26.1506033Z   ssh-strict: true
+2026-10-14T16:12:26.1506164Z   ssh-user: git
+2026-10-14T16:12:26.1506283Z   clean: true
+2026-10-14T16:12:26.1506422Z   sparse-checkout-cone-mode: true
+2026-10-14T16:12:26.1506600Z   fetch-depth: 1
+2026-10-14T16:12:26.1506907Z   fetch-tags: false
+2026-10-14T16:12:26.1507037Z   show-progress: true
+2026-10-14T16:12:26.1507163Z   lfs: false
+2026-10-14T16:12:26.1507300Z   submodules: false
+2026-10-14T16:12:26.1507435Z   set-safe-directory: true
+2026-10-14T16:12:26.1507670Z ##[endgroup]
+2026-10-14T16:12:26.2207858Z Syncing repository: google-gemini/gemini-cli
+2026-10-14T16:12:26.2208964Z ##[group]Getting Git version info
+2026-10-14T16:12:26.2209281Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:12:26.2210062Z [command]/usr/bin/git version
+2026-10-14T16:12:26.2264007Z git version 2.55.0
+2026-10-14T16:12:26.2278428Z ##[endgroup]
+2026-10-14T16:12:26.2290081Z Temporarily overriding HOME='/home/runner/work/_temp/b4e73c1b-88ff-43ea-ae28-1c017f7e6d0e' before making global git config changes
+2026-10-14T16:12:26.2290840Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:12:26.2294575Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:12:26.2340631Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:12:26.2344277Z ##[group]Initializing the repository
+2026-10-14T16:12:26.2348317Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:12:26.2457608Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T16:12:26.2458477Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T16:12:26.2459014Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T16:12:26.2459378Z hint: call:
+2026-10-14T16:12:26.2459755Z hint:
+2026-10-14T16:12:26.2460028Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T16:12:26.2460297Z hint:
+2026-10-14T16:12:26.2460489Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T16:12:26.2460792Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T16:12:26.2461009Z hint:
+2026-10-14T16:12:26.2461142Z hint: 	git branch -m <name>
+2026-10-14T16:12:26.2461294Z hint:
+2026-10-14T16:12:26.2461491Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T16:12:26.2461810Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-14T16:12:26.2468799Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-14T16:12:26.2518611Z ##[endgroup]
+2026-10-14T16:12:26.2519047Z ##[group]Disabling automatic garbage collection
+2026-10-14T16:12:26.2522775Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T16:12:26.2555382Z ##[endgroup]
+2026-10-14T16:12:26.2556038Z ##[group]Setting up auth
+2026-10-14T16:12:26.2560822Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:12:26.2591396Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:12:26.2918460Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:12:26.2945859Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:12:26.3127428Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T16:12:26.3160119Z ##[endgroup]
+2026-10-14T16:12:26.3160498Z ##[group]Fetching the repository
+2026-10-14T16:12:26.3165969Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +42c51822084ac25cd5d97ac0023822c5235f88c8:refs/remotes/origin/main
+2026-10-14T16:12:27.5857668Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T16:12:27.5858216Z  * [new ref]         42c51822084ac25cd5d97ac0023822c5235f88c8 -> origin/main
+2026-10-14T16:12:27.5861131Z ##[endgroup]
+2026-10-14T16:12:27.5861557Z ##[group]Determining the checkout info
+2026-10-14T16:12:27.5863269Z ##[endgroup]
+2026-10-14T16:12:27.5869384Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T16:12:27.5909824Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T16:12:27.5931698Z ##[group]Checking out the ref
+2026-10-14T16:12:27.5934853Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-14T16:12:27.9101996Z Switched to a new branch 'main'
+2026-10-14T16:12:27.9103132Z branch 'main' set up to track 'origin/main'.
+2026-10-14T16:12:27.9115001Z ##[endgroup]
+2026-10-14T16:12:27.9153074Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T16:12:27.9174244Z 42c51822084ac25cd5d97ac0023822c5235f88c8
+2026-10-14T16:12:27.9183732Z ##[group]Removing auth
+2026-10-14T16:12:27.9187446Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:12:27.9214439Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:12:27.9413318Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:12:27.9427827Z http.https://github.com/.extraheader
+2026-10-14T16:12:27.9434331Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T16:12:27.9462473Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:12:27.9641133Z ##[endgroup]
+2026-10-14T16:12:27.9822297Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T16:12:27.9822548Z with:
+2026-10-14T16:12:27.9824059Z   github-token: ***
+2026-10-14T16:12:27.9824692Z   script: const issueNumber = Number(process.env.ISSUE_NUMBER);
+const { data: issue } = await github.rest.issues.get({
+  owner: context.repo.owner,
+  repo: context.repo.repo,
+  issue_number: issueNumber,
+});
+core.setOutput('title', issue.title);
+core.setOutput('body', issue.body || '');
+core.setOutput('issue_number', issueNumber);
+
+2026-10-14T16:12:27.9825346Z   debug: false
+2026-10-14T16:12:27.9825479Z   user-agent: actions/github-script
+2026-10-14T16:12:27.9825639Z   result-encoding: json
+2026-10-14T16:12:27.9825808Z   retries: 0
+2026-10-14T16:12:27.9825976Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T16:12:27.9826150Z env:
+2026-10-14T16:12:27.9826269Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:27.9826398Z ##[endgroup]
+2026-10-14T16:12:28.3983961Z ##[group]Run docker/login-action@184bdaa0721073962dff0199f1fb9940f07167d1
+2026-10-14T16:12:28.3984189Z with:
+2026-10-14T16:12:28.3984307Z   registry: ghcr.io
+2026-10-14T16:12:28.3984429Z   username: sn3h
+2026-10-14T16:12:28.3985962Z   password: ***
+2026-10-14T16:12:28.3986078Z   ecr: auto
+2026-10-14T16:12:28.3986186Z   logout: true
+2026-10-14T16:12:28.3986306Z ##[endgroup]
+2026-10-14T16:12:28.6124950Z Logging into ghcr.io...
+2026-10-14T16:12:28.6138338Z (node:2147) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T16:12:28.6138823Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:12:29.1622932Z Login Succeeded!
+2026-10-14T16:12:29.1921100Z ##[group]Run google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T16:12:29.1921363Z with:
+2026-10-14T16:12:29.1921485Z   upload_artifacts: true
+2026-10-14T16:12:29.1921803Z   gcp_workload_identity_provider: projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a
+2026-10-14T16:12:29.1922143Z   gcp_project_id: quacktastic-waffle
+2026-10-14T16:12:29.1922297Z   gcp_location: global
+2026-10-14T16:12:29.1922509Z   gcp_service_account: gemini-cli-29fc077a@quacktastic-waffle.iam.gserviceaccount.com
+2026-10-14T16:12:29.1922883Z   gemini_api_key: ***
+2026-10-14T16:12:29.1924608Z   settings: {
+  "mcpServers": {
+    "issue_deduplication": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network", "host",
+        "-e", "GITHUB_TOKEN",
+        "-e", "GEMINI_API_KEY",
+        "-e", "DATABASE_TYPE",
+        "-e", "FIRESTORE_DATABASE_ID",
+        "-e", "GCP_PROJECT",
+        "-e", "GOOGLE_APPLICATION_CREDENTIALS=/app/gcp-credentials.json",
+        "-v", "${GOOGLE_APPLICATION_CREDENTIALS}:/app/gcp-credentials.json",
+        "ghcr.io/google-gemini/gemini-cli-issue-triage@sha256:e3de1523f6c83aabb3c54b76d08940a2bf42febcb789dd2da6f95169641f94d3"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GEMINI_API_KEY": "***",
+        "DATABASE_TYPE":"firestore",
+        "GCP_PROJECT": "${FIRESTORE_PROJECT}",
+        "FIRESTORE_DATABASE_ID": "(default)",
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}"
+      },
+      "timeout": 600000
+    }
+  },
+  "maxSessionTurns": 25,
+  "tools": {
+    "core": []
+  },
+  "telemetry": {
+    "enabled": true,
+    "target": "gcp"
+  }
+}
+2026-10-14T16:12:29.1932862Z   prompt: ## Role
+You are an issue de-duplication assistant. Your goal is to find
+duplicate issues for a given issue.
+
+Original Issue #29754:
+<issue_title>
+Absolutely terrible UX!
+</issue_title>
+<issue_body>
+### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+</issue_body>
+
+## Steps
+1.  **Find Potential Duplicates:**
+    - The repository is google-gemini/gemini-cli and the issue number is 29754.
+    - Use the `duplicates` tool with the `repo` and `issue_number` to find potential duplicates for the current issue. Do not use the `threshold` parameter.
+    - If no duplicates are found, you are done.
+    - Print the JSON output from the `duplicates` tool to the logs.
+2.  **Refine Duplicates List (if necessary):**
+    - Carefully analyze the potential duplicates returned by the `duplicates` tool against the original issue details provided above.
+    - Based on your analysis, determine which issues you are highly confident are actual duplicates.
+    - If there are no actual duplicates, you are done.
+3.  **Output final duplicates list as CSV:**
+    - Output only the comma-separated list of duplicate issue numbers (e.g. 123, 456). If there are no duplicates, output an empty response.
+
+## Guidelines
+- Only use the `duplicates` tool.
+- Do not attempt to run shell commands or modify any issues.
+- Do not add comments or labels.
+2026-10-14T16:12:29.1939322Z   gcp_token_format: access_token
+2026-10-14T16:12:29.1939741Z   gcp_access_token_scopes: https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/userinfo.profile
+2026-10-14T16:12:29.1940154Z   gemini_cli_version: latest
+2026-10-14T16:12:29.1940294Z   use_pnpm: false
+2026-10-14T16:12:29.1940450Z   workflow_name: 🏷️ Gemini Automated Issue Deduplication
+2026-10-14T16:12:29.1940638Z   github_issue_number: 29754
+2026-10-14T16:12:29.1940773Z env:
+2026-10-14T16:12:29.1942208Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.1942347Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.1946537Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.1950927Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.1951069Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.1951233Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.1951397Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.1951545Z ##[endgroup]
+2026-10-14T16:12:29.1994043Z ##[start-action display=Validate Inputs;id=gemini_issue_deduplication.validate_inputs]
+2026-10-14T16:12:29.2018902Z ##[group]Run set -exuo pipefail
+2026-10-14T16:12:29.2019330Z [36;1mset -exuo pipefail[0m
+2026-10-14T16:12:29.2019481Z [36;1m[0m
+2026-10-14T16:12:29.2019670Z [36;1m# Emit a clear warning in three places without failing the step[0m
+2026-10-14T16:12:29.2019876Z [36;1mwarn() {[0m
+2026-10-14T16:12:29.2019999Z [36;1m  local msg="$1"[0m
+2026-10-14T16:12:29.2020138Z [36;1m  echo "WARNING: ${msg}" >&2[0m
+2026-10-14T16:12:29.2020321Z [36;1m  echo "::warning title=Input validation::${msg}"[0m
+2026-10-14T16:12:29.2020527Z [36;1m  if [[ -n "${GITHUB_STEP_SUMMARY:-}" ]]; then[0m
+2026-10-14T16:12:29.2020694Z [36;1m    {[0m
+2026-10-14T16:12:29.2020829Z [36;1m      echo "### Input validation warnings"[0m
+2026-10-14T16:12:29.2020989Z [36;1m      echo[0m
+2026-10-14T16:12:29.2021114Z [36;1m      echo "- ${msg}"[0m
+2026-10-14T16:12:29.2021262Z [36;1m    } >> "${GITHUB_STEP_SUMMARY}"[0m
+2026-10-14T16:12:29.2021411Z [36;1m  fi[0m
+2026-10-14T16:12:29.2021521Z [36;1m}[0m
+2026-10-14T16:12:29.2021627Z [36;1m[0m
+2026-10-14T16:12:29.2021773Z [36;1m# Validate the count of authentication methods[0m
+2026-10-14T16:12:29.2021949Z [36;1mauth_methods=0[0m
+2026-10-14T16:12:29.2022170Z [36;1mif [[ "${INPUT_GEMINI_API_KEY_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T16:12:29.2022493Z [36;1mif [[ "${INPUT_GOOGLE_API_KEY_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T16:12:29.2022835Z [36;1mif [[ "${INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT:-false}" == "true" ]]; then ((++auth_methods)); fi[0m
+2026-10-14T16:12:29.2023088Z [36;1m[0m
+2026-10-14T16:12:29.2023211Z [36;1mif [[ ${auth_methods} -eq 0 ]]; then[0m
+2026-10-14T16:12:29.2023551Z [36;1m  warn "No authentication method provided. Please provide one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'."[0m
+2026-10-14T16:12:29.2023867Z [36;1mfi[0m
+2026-10-14T16:12:29.2023975Z [36;1m[0m
+2026-10-14T16:12:29.2024098Z [36;1mif [[ ${auth_methods} -gt 1 ]]; then[0m
+2026-10-14T16:12:29.2024445Z [36;1m  warn "Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'."[0m
+2026-10-14T16:12:29.2024776Z [36;1mfi[0m
+2026-10-14T16:12:29.2024884Z [36;1m[0m
+2026-10-14T16:12:29.2025023Z [36;1m# Validate Workload Identity Federation inputs[0m
+2026-10-14T16:12:29.2025274Z [36;1mif [[ "${INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T16:12:29.2025553Z [36;1m  if [[ "${INPUT_GCP_PROJECT_ID_PRESENT:-false}" != "true" ]]; then[0m
+2026-10-14T16:12:29.2025914Z [36;1m    warn "When using Workload Identity Federation ('gcp_workload_identity_provider'), you must also provide 'gcp_project_id'."[0m
+2026-10-14T16:12:29.2026207Z [36;1m  fi[0m
+2026-10-14T16:12:29.2026389Z [36;1m  # Service account is required when using token_format (default behavior)[0m
+2026-10-14T16:12:29.2026652Z [36;1m  # Only optional when explicitly set to empty for direct WIF[0m
+2026-10-14T16:12:29.2027163Z [36;1m  if [[ "${INPUT_GCP_TOKEN_FORMAT}" != "" && "${INPUT_GCP_SERVICE_ACCOUNT_PRESENT:-false}" != "true" ]]; then[0m
+2026-10-14T16:12:29.2027835Z [36;1m    warn "When using Workload Identity Federation with token generation ('gcp_token_format'), you must also provide 'gcp_service_account'. To use direct WIF without a service account, explicitly set 'gcp_token_format' to an empty string."[0m
+2026-10-14T16:12:29.2028339Z [36;1m  fi[0m
+2026-10-14T16:12:29.2028539Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" == "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" ]]; then[0m
+2026-10-14T16:12:29.2028932Z [36;1m    warn "When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'."[0m
+2026-10-14T16:12:29.2029232Z [36;1m  fi[0m
+2026-10-14T16:12:29.2029339Z [36;1mfi[0m
+2026-10-14T16:12:29.2029446Z [36;1m[0m
+2026-10-14T16:12:29.2029561Z [36;1m# Validate Vertex AI API Key[0m
+2026-10-14T16:12:29.2029765Z [36;1mif [[ "${INPUT_GOOGLE_API_KEY_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T16:12:29.2030074Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" != "true" ]]; then[0m
+2026-10-14T16:12:29.2030324Z [36;1m    warn "When using 'google_api_key', you must set 'use_vertex_ai' to 'true'."[0m
+2026-10-14T16:12:29.2030537Z [36;1m  fi[0m
+2026-10-14T16:12:29.2030695Z [36;1m  if [[ "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" == "true" ]]; then[0m
+2026-10-14T16:12:29.2030964Z [36;1m    warn "When using 'google_api_key', 'use_gemini_code_assist' cannot be 'true'."[0m
+2026-10-14T16:12:29.2031182Z [36;1m  fi[0m
+2026-10-14T16:12:29.2031296Z [36;1mfi[0m
+2026-10-14T16:12:29.2031401Z [36;1m[0m
+2026-10-14T16:12:29.2031515Z [36;1m# Validate Gemini API Key[0m
+2026-10-14T16:12:29.2031705Z [36;1mif [[ "${INPUT_GEMINI_API_KEY_PRESENT:-false}" == "true" ]]; then[0m
+2026-10-14T16:12:29.2032007Z [36;1m  if [[ "${INPUT_USE_VERTEX_AI:-false}" == "true" || "${INPUT_USE_GEMINI_CODE_ASSIST:-false}" == "true" ]]; then[0m
+2026-10-14T16:12:29.2032379Z [36;1m    warn "When using 'gemini_api_key', both 'use_vertex_ai' and 'use_gemini_code_assist' must be 'false'."[0m
+2026-10-14T16:12:29.2032636Z [36;1m  fi[0m
+2026-10-14T16:12:29.2032744Z [36;1mfi[0m
+2026-10-14T16:12:29.2255464Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:29.2255669Z env:
+2026-10-14T16:12:29.2257419Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.2257556Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.2261829Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.2266004Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.2266147Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.2266432Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.2266596Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.2266821Z   INPUT_GEMINI_API_KEY_PRESENT: true
+2026-10-14T16:12:29.2266975Z   INPUT_GOOGLE_API_KEY_PRESENT: false
+2026-10-14T16:12:29.2267147Z   INPUT_GCP_WORKLOAD_IDENTITY_PROVIDER_PRESENT: true
+2026-10-14T16:12:29.2267323Z   INPUT_GCP_PROJECT_ID_PRESENT: true
+2026-10-14T16:12:29.2267480Z   INPUT_GCP_SERVICE_ACCOUNT_PRESENT: true
+2026-10-14T16:12:29.2267640Z   INPUT_GCP_TOKEN_FORMAT: access_token
+2026-10-14T16:12:29.2267790Z   INPUT_USE_VERTEX_AI: 
+2026-10-14T16:12:29.2267923Z   INPUT_USE_GEMINI_CODE_ASSIST: 
+2026-10-14T16:12:29.2268063Z ##[endgroup]
+2026-10-14T16:12:29.2354715Z + auth_methods=0
+2026-10-14T16:12:29.2355041Z + [[ true == \t\r\u\e ]]
+2026-10-14T16:12:29.2355260Z + (( ++auth_methods ))
+2026-10-14T16:12:29.2355463Z + [[ false == \t\r\u\e ]]
+2026-10-14T16:12:29.2355669Z + [[ true == \t\r\u\e ]]
+2026-10-14T16:12:29.2355864Z + (( ++auth_methods ))
+2026-10-14T16:12:29.2356078Z + [[ 2 -eq 0 ]]
+2026-10-14T16:12:29.2356270Z + [[ 2 -gt 1 ]]
+2026-10-14T16:12:29.2356930Z + warn 'Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T16:12:29.2357870Z + local 'msg=Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T16:12:29.2358738Z + echo 'WARNING: Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T16:12:29.2359580Z WARNING: Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'.
+2026-10-14T16:12:29.2364950Z + echo '::warning title=Input validation::Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T16:12:29.2365783Z + [[ -n /home/runner/work/_temp/_runner_file_commands/step_summary_91088d8f-44e0-4bef-9e40-0673e8a7a41b ]]
+2026-10-14T16:12:29.2366205Z + echo '### Input validation warnings'
+2026-10-14T16:12:29.2366430Z + echo
+2026-10-14T16:12:29.2367099Z + echo '- Multiple authentication methods provided. Please use only one of '\''gemini_api_key'\'', '\''google_api_key'\'', or '\''gcp_workload_identity_provider'\''.'
+2026-10-14T16:12:29.2378364Z ##[warning]Multiple authentication methods provided. Please use only one of 'gemini_api_key', 'google_api_key', or 'gcp_workload_identity_provider'.
+2026-10-14T16:12:29.2378802Z + [[ true == \t\r\u\e ]]
+2026-10-14T16:12:29.2378942Z + [[ true != \t\r\u\e ]]
+2026-10-14T16:12:29.2379076Z + [[ access_token != '' ]]
+2026-10-14T16:12:29.2379209Z + [[ true != \t\r\u\e ]]
+2026-10-14T16:12:29.2379338Z + [[ false == \f\a\l\s\e ]]
+2026-10-14T16:12:29.2379849Z + warn 'When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T16:12:29.2380348Z + local 'msg=When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T16:12:29.2380853Z + echo 'WARNING: When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T16:12:29.2381332Z WARNING: When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'.
+2026-10-14T16:12:29.2381861Z + echo '::warning title=Input validation::When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T16:12:29.2382353Z + [[ -n /home/runner/work/_temp/_runner_file_commands/step_summary_91088d8f-44e0-4bef-9e40-0673e8a7a41b ]]
+2026-10-14T16:12:29.2382623Z + echo '### Input validation warnings'
+2026-10-14T16:12:29.2382909Z + echo
+2026-10-14T16:12:29.2383192Z + echo '- When using Workload Identity Federation, you must set exactly one of '\''use_vertex_ai'\'' or '\''use_gemini_code_assist'\'' to '\''true'\''.'
+2026-10-14T16:12:29.2383510Z + [[ false == \t\r\u\e ]]
+2026-10-14T16:12:29.2383644Z + [[ true == \t\r\u\e ]]
+2026-10-14T16:12:29.2383771Z + [[ false == \t\r\u\e ]]
+2026-10-14T16:12:29.2383897Z + [[ false == \t\r\u\e ]]
+2026-10-14T16:12:29.2384944Z ##[warning]When using Workload Identity Federation, you must set exactly one of 'use_vertex_ai' or 'use_gemini_code_assist' to 'true'.
+2026-10-14T16:12:29.2398226Z ##[end-action id=gemini_issue_deduplication.validate_inputs;outcome=success;conclusion=success;duration_ms=40]
+2026-10-14T16:12:29.2401110Z ##[start-action display=Sanitize workflow name;id=gemini_issue_deduplication.sanitize_workflow_name]
+2026-10-14T16:12:29.2434491Z ##[group]Run SANITIZED=$(echo "${WORKFLOW_NAME}" | sed 's/[^ a-zA-Z0-9-]//g' | xargs | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
+2026-10-14T16:12:29.2434914Z [36;1mSANITIZED=$(echo "${WORKFLOW_NAME}" | sed 's/[^ a-zA-Z0-9-]//g' | xargs | tr ' ' '_' | tr '[:upper:]' '[:lower:]')[0m
+2026-10-14T16:12:29.2435224Z [36;1mecho "gh_workflow_name=$SANITIZED" >> $GITHUB_OUTPUT[0m
+2026-10-14T16:12:29.2483138Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:29.2483321Z env:
+2026-10-14T16:12:29.2484777Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.2484914Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.2489335Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.2493633Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.2493854Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.2494022Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.2494183Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.2494365Z   WORKFLOW_NAME: 🏷️ Gemini Automated Issue Deduplication
+2026-10-14T16:12:29.2494546Z ##[endgroup]
+2026-10-14T16:12:29.2593444Z ##[end-action id=gemini_issue_deduplication.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=19]
+2026-10-14T16:12:29.2595831Z ##[start-action display=Configure Gemini CLI;id=gemini_issue_deduplication.__run]
+2026-10-14T16:12:29.2618448Z ##[group]Run mkdir -p .gemini/
+2026-10-14T16:12:29.2618618Z [36;1mmkdir -p .gemini/[0m
+2026-10-14T16:12:29.2618783Z [36;1mecho "${SETTINGS}" > ".gemini/settings.json"[0m
+2026-10-14T16:12:29.2663798Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:29.2663984Z env:
+2026-10-14T16:12:29.2665424Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.2665576Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.2670262Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.2674498Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.2674640Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.2674805Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.2674967Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.2676653Z   SETTINGS: {
+  "mcpServers": {
+    "issue_deduplication": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network", "host",
+        "-e", "GITHUB_TOKEN",
+        "-e", "GEMINI_API_KEY",
+        "-e", "DATABASE_TYPE",
+        "-e", "FIRESTORE_DATABASE_ID",
+        "-e", "GCP_PROJECT",
+        "-e", "GOOGLE_APPLICATION_CREDENTIALS=/app/gcp-credentials.json",
+        "-v", "${GOOGLE_APPLICATION_CREDENTIALS}:/app/gcp-credentials.json",
+        "ghcr.io/google-gemini/gemini-cli-issue-triage@sha256:e3de1523f6c83aabb3c54b76d08940a2bf42febcb789dd2da6f95169641f94d3"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GEMINI_API_KEY": "***",
+        "DATABASE_TYPE":"firestore",
+        "GCP_PROJECT": "${FIRESTORE_PROJECT}",
+        "FIRESTORE_DATABASE_ID": "(default)",
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}"
+      },
+      "timeout": 600000
+    }
+  },
+  "maxSessionTurns": 25,
+  "tools": {
+    "core": []
+  },
+  "telemetry": {
+    "enabled": true,
+    "target": "gcp"
+  }
+}
+2026-10-14T16:12:29.2678549Z ##[endgroup]
+2026-10-14T16:12:29.2754891Z ##[end-action id=gemini_issue_deduplication.__run;outcome=success;conclusion=success;duration_ms=15]
+2026-10-14T16:12:29.2757326Z ##[start-action display=Install Custom Commands;id=gemini_issue_deduplication.__run_2]
+2026-10-14T16:12:29.2769526Z ##[group]Run set -euo pipefail
+2026-10-14T16:12:29.2769693Z [36;1mset -euo pipefail[0m
+2026-10-14T16:12:29.2769842Z [36;1mmkdir -p .gemini/commands[0m
+2026-10-14T16:12:29.2770050Z [36;1mcp -r "${GITHUB_ACTION_PATH}/.github/commands/"* .gemini/commands/[0m
+2026-10-14T16:12:29.2813902Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:29.2814082Z env:
+2026-10-14T16:12:29.2815482Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.2815619Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.2820168Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.2824517Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.2824659Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.2824821Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.2824984Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.2825296Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/google-github-actions/run-gemini-cli/f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T16:12:29.2825604Z ##[endgroup]
+2026-10-14T16:12:29.2912729Z ##[end-action id=gemini_issue_deduplication.__run_2;outcome=success;conclusion=success;duration_ms=15]
+2026-10-14T16:12:29.2914339Z ##[start-action display=Authenticate to Google Cloud;id=gemini_issue_deduplication.auth]
+2026-10-14T16:12:29.2964114Z ##[group]Run google-github-actions/auth@v3
+2026-10-14T16:12:29.2964277Z with:
+2026-10-14T16:12:29.2964401Z   project_id: quacktastic-waffle
+2026-10-14T16:12:29.2964719Z   workload_identity_provider: projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a
+2026-10-14T16:12:29.2965119Z   service_account: gemini-cli-29fc077a@quacktastic-waffle.iam.gserviceaccount.com
+2026-10-14T16:12:29.2965352Z   token_format: access_token
+2026-10-14T16:12:29.2965747Z   access_token_scopes: https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/userinfo.profile
+2026-10-14T16:12:29.2966144Z   create_credentials_file: true
+2026-10-14T16:12:29.2966293Z   export_environment_variables: true
+2026-10-14T16:12:29.2966446Z   universe: googleapis.com
+2026-10-14T16:12:29.2966585Z   cleanup_credentials: true
+2026-10-14T16:12:29.2966855Z   access_token_lifetime: 3600s
+2026-10-14T16:12:29.2967063Z   id_token_include_email: false
+2026-10-14T16:12:29.2967199Z env:
+2026-10-14T16:12:29.2968689Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.2968820Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.2973061Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.2977516Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.2977653Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.2977816Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.2977974Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.2978118Z ##[endgroup]
+2026-10-14T16:12:29.5471093Z Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json"
+2026-10-14T16:12:29.8344469Z ##[end-action id=gemini_issue_deduplication.auth;outcome=success;conclusion=success;duration_ms=542]
+2026-10-14T16:12:29.8346528Z ##[start-action display=Install pnpm;id=gemini_issue_deduplication.__pnpm_action-setup]
+2026-10-14T16:12:29.8352735Z ##[end-action id=gemini_issue_deduplication.__pnpm_action-setup;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-14T16:12:29.8354834Z ##[start-action display=Install Gemini CLI;id=gemini_issue_deduplication.install]
+2026-10-14T16:12:29.8368998Z ##[group]Run set -euo pipefail
+2026-10-14T16:12:29.8369206Z [36;1mset -euo pipefail[0m
+2026-10-14T16:12:29.8369347Z [36;1m[0m
+2026-10-14T16:12:29.8369493Z [36;1mVERSION_INPUT="${GEMINI_CLI_VERSION:-latest}"[0m
+2026-10-14T16:12:29.8369671Z [36;1m[0m
+2026-10-14T16:12:29.8370032Z [36;1mif [[ "${VERSION_INPUT}" == "latest" || "${VERSION_INPUT}" == "preview" || "${VERSION_INPUT}" == "nightly" || "${VERSION_INPUT}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9\.-]+)?(\+[a-zA-Z0-9\.-]+)?$ ]]; then[0m
+2026-10-14T16:12:29.8370502Z [36;1m  echo "Installing Gemini CLI from npm: @google/gemini-cli@${VERSION_INPUT}"[0m
+2026-10-14T16:12:29.8370761Z [36;1m  if [[ "${USE_PNPM}" == "true" ]]; then[0m
+2026-10-14T16:12:29.8371005Z [36;1m    pnpm add --silent --global @google/gemini-cli@"${VERSION_INPUT}"[0m
+2026-10-14T16:12:29.8371218Z [36;1m  else[0m
+2026-10-14T16:12:29.8371466Z [36;1m    npm install --silent --no-audit --prefer-offline --global @google/gemini-cli@"${VERSION_INPUT}"[0m
+2026-10-14T16:12:29.8371734Z [36;1m  fi[0m
+2026-10-14T16:12:29.8371850Z [36;1melse[0m
+2026-10-14T16:12:29.8372078Z [36;1m  echo "Installing Gemini CLI from GitHub: github:google-gemini/gemini-cli#${VERSION_INPUT}"[0m
+2026-10-14T16:12:29.8372397Z [36;1m  git clone https://github.com/google-gemini/gemini-cli.git[0m
+2026-10-14T16:12:29.8372606Z [36;1m  cd gemini-cli[0m
+2026-10-14T16:12:29.8372758Z [36;1m  git checkout "${VERSION_INPUT}"[0m
+2026-10-14T16:12:29.8372920Z [36;1m  npm install[0m
+2026-10-14T16:12:29.8373058Z [36;1m  npm run bundle[0m
+2026-10-14T16:12:29.8373248Z [36;1m  npm install --silent --no-audit --prefer-offline --global .[0m
+2026-10-14T16:12:29.8373583Z [36;1mfi[0m
+2026-10-14T16:12:29.8373716Z [36;1mecho "Verifying installation:"[0m
+2026-10-14T16:12:29.8373897Z [36;1mif command -v gemini >/dev/null 2>&1; then[0m
+2026-10-14T16:12:29.8374176Z [36;1m  gemini --version || echo "Gemini CLI installed successfully (version command not available)"[0m
+2026-10-14T16:12:29.8374434Z [36;1melse[0m
+2026-10-14T16:12:29.8374580Z [36;1m  echo "Error: Gemini CLI not found in PATH"[0m
+2026-10-14T16:12:29.8374754Z [36;1m  exit 1[0m
+2026-10-14T16:12:29.8374872Z [36;1mfi[0m
+2026-10-14T16:12:29.8375000Z [36;1mif [[ -n "${EXTENSIONS}" ]]; then[0m
+2026-10-14T16:12:29.8375182Z [36;1m  echo "Installing Gemini CLI extensions:"[0m
+2026-10-14T16:12:29.8375416Z [36;1m  echo "${EXTENSIONS}" | jq -r '.[]' | while IFS= read -r extension; do[0m
+2026-10-14T16:12:29.8375655Z [36;1m    extension=$(echo "${extension}" | xargs)[0m
+2026-10-14T16:12:29.8375844Z [36;1m    if [[ -n "${extension}" ]]; then[0m
+2026-10-14T16:12:29.8376058Z [36;1m      echo "Installing ${extension}..."[0m
+2026-10-14T16:12:29.8376362Z [36;1m      echo "Y" | gemini extensions install "${extension}"[0m
+2026-10-14T16:12:29.8376550Z [36;1m    fi[0m
+2026-10-14T16:12:29.8376667Z [36;1m  done[0m
+2026-10-14T16:12:29.8376939Z [36;1mfi[0m
+2026-10-14T16:12:29.8428837Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:29.8429035Z env:
+2026-10-14T16:12:29.8429302Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:29.8429723Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:29.8430096Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:29.8430371Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8430551Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8430721Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8430890Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8431059Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8433236Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:29.8433378Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:29.8437930Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:29.8442271Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.8442420Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:29.8442592Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:29.8442767Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:29.8442926Z   GEMINI_CLI_VERSION: latest
+2026-10-14T16:12:29.8443152Z   EXTENSIONS: 
+2026-10-14T16:12:29.8443277Z   USE_PNPM: false
+2026-10-14T16:12:29.8443401Z   SURFACE: GitHub
+2026-10-14T16:12:29.8443558Z   GH_WORKFLOW_NAME: gemini_automated_issue_deduplication
+2026-10-14T16:12:29.8443747Z   GH_PR_NUMBER: 
+2026-10-14T16:12:29.8443876Z   GH_ISSUE_NUMBER: 29754
+2026-10-14T16:12:29.8444014Z ##[endgroup]
+2026-10-14T16:12:29.8505628Z Installing Gemini CLI from npm: @google/gemini-cli@latest
+2026-10-14T16:12:35.8976318Z Verifying installation:
+2026-10-14T16:12:36.8042495Z 0.64.0
+2026-10-14T16:12:36.8269252Z ##[end-action id=gemini_issue_deduplication.install;outcome=success;conclusion=success;duration_ms=6991]
+2026-10-14T16:12:36.8282831Z ##[start-action display=Run Gemini CLI;id=gemini_issue_deduplication.gemini_run]
+2026-10-14T16:12:36.8297449Z ##[group]Run set -euo pipefail
+2026-10-14T16:12:36.8297804Z [36;1mset -euo pipefail[0m
+2026-10-14T16:12:36.8298009Z [36;1m[0m
+2026-10-14T16:12:36.8298301Z [36;1m# Create a temporary directory for storing the output, and ensure it's[0m
+2026-10-14T16:12:36.8298653Z [36;1m# cleaned up later[0m
+2026-10-14T16:12:36.8298955Z [36;1mTEMP_STDOUT="$(mktemp -p "${RUNNER_TEMP}" gemini-out.XXXXXXXXXX)"[0m
+2026-10-14T16:12:36.8299359Z [36;1mTEMP_STDERR="$(mktemp -p "${RUNNER_TEMP}" gemini-err.XXXXXXXXXX)"[0m
+2026-10-14T16:12:36.8299574Z [36;1mfunction cleanup {[0m
+2026-10-14T16:12:36.8299740Z [36;1m  rm -f "${TEMP_STDOUT}" "${TEMP_STDERR}"[0m
+2026-10-14T16:12:36.8299903Z [36;1m}[0m
+2026-10-14T16:12:36.8300020Z [36;1mtrap cleanup EXIT[0m
+2026-10-14T16:12:36.8300151Z [36;1m[0m
+2026-10-14T16:12:36.8300278Z [36;1m# Keep track of whether we've failed[0m
+2026-10-14T16:12:36.8300439Z [36;1mFAILED=false[0m
+2026-10-14T16:12:36.8300565Z [36;1m[0m
+2026-10-14T16:12:36.8300732Z [36;1m# Run Gemini CLI with the provided prompt, using JSON output format[0m
+2026-10-14T16:12:36.8300998Z [36;1m# We capture stdout (JSON) to TEMP_STDOUT and stderr to TEMP_STDERR[0m
+2026-10-14T16:12:36.8301221Z [36;1mif [[ "${GEMINI_DEBUG}" = true ]]; then[0m
+2026-10-14T16:12:36.8301612Z [36;1m  echo "::warning::Gemini CLI debug logging is enabled. This will stream responses, which could reveal sensitive information if processed with untrusted inputs."[0m
+2026-10-14T16:12:36.8302002Z [36;1m  echo "::: Start Gemini CLI STDOUT :::"[0m
+2026-10-14T16:12:36.8302328Z [36;1m  if ! gemini --debug --yolo --prompt "${PROMPT}" --output-format json 2> >(tee "${TEMP_STDERR}" >&2) | tee "${TEMP_STDOUT}"; then[0m
+2026-10-14T16:12:36.8302636Z [36;1m    FAILED=true[0m
+2026-10-14T16:12:36.8302767Z [36;1m  fi[0m
+2026-10-14T16:12:36.8303073Z [36;1m  # Wait for async stderr logging to complete. This is because process substitution in Bash is async so let tee finish writing to ${TEMP_STDERR}[0m
+2026-10-14T16:12:36.8303410Z [36;1m  sleep 1[0m
+2026-10-14T16:12:36.8303552Z [36;1m  echo "::: End Gemini CLI STDOUT :::"[0m
+2026-10-14T16:12:36.8303711Z [36;1melse[0m
+2026-10-14T16:12:36.8304087Z [36;1m  if ! gemini --yolo --prompt "${PROMPT}" --output-format json 2> "${TEMP_STDERR}" 1> "${TEMP_STDOUT}"; then[0m
+2026-10-14T16:12:36.8304365Z [36;1m    FAILED=true[0m
+2026-10-14T16:12:36.8304498Z [36;1m  fi[0m
+2026-10-14T16:12:36.8304608Z [36;1mfi[0m
+2026-10-14T16:12:36.8304718Z [36;1m[0m
+2026-10-14T16:12:36.8304868Z [36;1m# Create the artifacts directory and copy full logs[0m
+2026-10-14T16:12:36.8305064Z [36;1mmkdir -p gemini-artifacts[0m
+2026-10-14T16:12:36.8305244Z [36;1mcp "${TEMP_STDOUT}" gemini-artifacts/stdout.log[0m
+2026-10-14T16:12:36.8305455Z [36;1mcp "${TEMP_STDERR}" gemini-artifacts/stderr.log[0m
+2026-10-14T16:12:36.8305643Z [36;1mif [[ -f .gemini/telemetry.log ]]; then[0m
+2026-10-14T16:12:36.8305852Z [36;1m  cp .gemini/telemetry.log gemini-artifacts/telemetry.log[0m
+2026-10-14T16:12:36.8306048Z [36;1melse[0m
+2026-10-14T16:12:36.8306249Z [36;1m  # Create an empty file so the artifact upload doesn't fail if telemetry is missing[0m
+2026-10-14T16:12:36.8306506Z [36;1m  touch gemini-artifacts/telemetry.log[0m
+2026-10-14T16:12:36.8306671Z [36;1mfi[0m
+2026-10-14T16:12:36.8307003Z [36;1m[0m
+2026-10-14T16:12:36.8307151Z [36;1m# Parse JSON output to extract response and errors[0m
+2026-10-14T16:12:36.8307433Z [36;1m# If output is not valid JSON, RESPONSE will be empty and we'll rely on stderr for errors[0m
+2026-10-14T16:12:36.8307676Z [36;1mRESPONSE=""[0m
+2026-10-14T16:12:36.8307808Z [36;1mERROR_JSON=""[0m
+2026-10-14T16:12:36.8307966Z [36;1mif jq -e . "${TEMP_STDOUT}" >/dev/null 2>&1; then[0m
+2026-10-14T16:12:36.8308184Z [36;1m   RESPONSE=$(jq -r '.response // ""' "${TEMP_STDOUT}")[0m
+2026-10-14T16:12:36.8308369Z [36;1mfi[0m
+2026-10-14T16:12:36.8308509Z [36;1mif jq -e . "${TEMP_STDERR}" >/dev/null 2>&1; then[0m
+2026-10-14T16:12:36.8308722Z [36;1m   ERROR_JSON=$(jq -c '.error // empty' "${TEMP_STDERR}")[0m
+2026-10-14T16:12:36.8308905Z [36;1mfi[0m
+2026-10-14T16:12:36.8309013Z [36;1m[0m
+2026-10-14T16:12:36.8309194Z [36;1mif { [[ -s "${TEMP_STDERR}" ]] && ! jq -e . "${TEMP_STDERR}" >/dev/null 2>&1; }; then[0m
+2026-10-14T16:12:36.8309465Z [36;1m  echo "::warning::Gemini CLI stderr was not valid JSON"[0m
+2026-10-14T16:12:36.8309645Z [36;1mfi[0m
+2026-10-14T16:12:36.8309755Z [36;1m[0m
+2026-10-14T16:12:36.8309926Z [36;1mif { [[ -s "${TEMP_STDOUT}" ]] && ! jq -e . "${TEMP_STDOUT}" >/dev/null 2>&1; }; then[0m
+2026-10-14T16:12:36.8310175Z [36;1m  echo "::warning::Gemini CLI stdout was not valid JSON"[0m
+2026-10-14T16:12:36.8310357Z [36;1mfi[0m
+2026-10-14T16:12:36.8310466Z [36;1m[0m
+2026-10-14T16:12:36.8310572Z [36;1m[0m
+2026-10-14T16:12:36.8310744Z [36;1m# Set the captured response as a step output, supporting multiline[0m
+2026-10-14T16:12:36.8310986Z [36;1mecho "gemini_response<<EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8311180Z [36;1mif [[ -n "${RESPONSE}" ]]; then[0m
+2026-10-14T16:12:36.8311354Z [36;1m  echo "${RESPONSE}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8311517Z [36;1melse[0m
+2026-10-14T16:12:36.8311657Z [36;1m  cat "${TEMP_STDOUT}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8311820Z [36;1mfi[0m
+2026-10-14T16:12:36.8311947Z [36;1mecho "EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8312101Z [36;1m[0m
+2026-10-14T16:12:36.8312259Z [36;1m# Set the captured errors as a step output, supporting multiline[0m
+2026-10-14T16:12:36.8312489Z [36;1mecho "gemini_errors<<EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8312677Z [36;1mif [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T16:12:36.8312854Z [36;1m  echo "${ERROR_JSON}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8313018Z [36;1melse[0m
+2026-10-14T16:12:36.8313154Z [36;1m  cat "${TEMP_STDERR}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8313313Z [36;1mfi[0m
+2026-10-14T16:12:36.8313435Z [36;1mecho "EOF" >> "${GITHUB_OUTPUT}"[0m
+2026-10-14T16:12:36.8313580Z [36;1m[0m
+2026-10-14T16:12:36.8313697Z [36;1m# Generate Job Summary[0m
+2026-10-14T16:12:36.8313866Z [36;1mif [[ -n "${GITHUB_STEP_SUMMARY:-}" ]]; then[0m
+2026-10-14T16:12:36.8314027Z [36;1m  {[0m
+2026-10-14T16:12:36.8314268Z [36;1m    echo "### Gemini CLI Execution"[0m
+2026-10-14T16:12:36.8314431Z [36;1m    echo[0m
+2026-10-14T16:12:36.8314555Z [36;1m    echo "#### Prompt"[0m
+2026-10-14T16:12:36.8314694Z [36;1m    echo[0m
+2026-10-14T16:12:36.8314817Z [36;1m    echo "\`\`\`"[0m
+2026-10-14T16:12:36.8314956Z [36;1m    echo "${PROMPT}"[0m
+2026-10-14T16:12:36.8315097Z [36;1m    echo "\`\`\`"[0m
+2026-10-14T16:12:36.8315231Z [36;1m    echo[0m
+2026-10-14T16:12:36.8315360Z [36;1m    if [[ -n "${RESPONSE}" ]]; then[0m
+2026-10-14T16:12:36.8315522Z [36;1m       echo "#### Response"[0m
+2026-10-14T16:12:36.8315669Z [36;1m       echo[0m
+2026-10-14T16:12:36.8315797Z [36;1m       echo "${RESPONSE}"[0m
+2026-10-14T16:12:36.8315941Z [36;1m       echo[0m
+2026-10-14T16:12:36.8316059Z [36;1m    fi[0m
+2026-10-14T16:12:36.8316189Z [36;1m    if [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T16:12:36.8316352Z [36;1m       echo "#### Error"[0m
+2026-10-14T16:12:36.8316490Z [36;1m       echo[0m
+2026-10-14T16:12:36.8316617Z [36;1m       echo "\`\`\`json"[0m
+2026-10-14T16:12:36.8317024Z [36;1m       echo "${ERROR_JSON}"[0m
+2026-10-14T16:12:36.8317170Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T16:12:36.8317307Z [36;1m       echo[0m
+2026-10-14T16:12:36.8317446Z [36;1m    elif [[ "${FAILED}" == "true" ]]; then[0m
+2026-10-14T16:12:36.8317617Z [36;1m       echo "#### Error Output"[0m
+2026-10-14T16:12:36.8317767Z [36;1m       echo[0m
+2026-10-14T16:12:36.8317891Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T16:12:36.8318030Z [36;1m       cat "${TEMP_STDERR}"[0m
+2026-10-14T16:12:36.8318178Z [36;1m       echo "\`\`\`"[0m
+2026-10-14T16:12:36.8318307Z [36;1m       echo[0m
+2026-10-14T16:12:36.8318429Z [36;1m    fi[0m
+2026-10-14T16:12:36.8318554Z [36;1m  } >> "${GITHUB_STEP_SUMMARY}"[0m
+2026-10-14T16:12:36.8318699Z [36;1mfi[0m
+2026-10-14T16:12:36.8318810Z [36;1m[0m
+2026-10-14T16:12:36.8318929Z [36;1mif [[ "${FAILED}" = true ]]; then[0m
+2026-10-14T16:12:36.8319146Z [36;1m  # If we have a structured error from JSON, use it for the error message[0m
+2026-10-14T16:12:36.8319383Z [36;1m  if [[ -n "${ERROR_JSON}" ]]; then[0m
+2026-10-14T16:12:36.8319578Z [36;1m     ERROR_MSG=$(jq -r '.message // .' <<< "${ERROR_JSON}")[0m
+2026-10-14T16:12:36.8319815Z [36;1m     echo "::error title=Gemini CLI execution failed::${ERROR_MSG}"[0m
+2026-10-14T16:12:36.8320017Z [36;1m  fi[0m
+2026-10-14T16:12:36.8320149Z [36;1m  echo "::: Start Gemini CLI STDERR :::"[0m
+2026-10-14T16:12:36.8320318Z [36;1m  cat "${TEMP_STDERR}"[0m
+2026-10-14T16:12:36.8320475Z [36;1m  echo "::: End Gemini CLI STDERR :::"[0m
+2026-10-14T16:12:36.8320632Z [36;1m  exit 1[0m
+2026-10-14T16:12:36.8320749Z [36;1mfi[0m
+2026-10-14T16:12:36.8372517Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:12:36.8372711Z env:
+2026-10-14T16:12:36.8372972Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:36.8373386Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:36.8373755Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:12:36.8374024Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8374203Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8374371Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8374530Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8374690Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8376338Z   GITHUB_TOKEN: ***
+2026-10-14T16:12:36.8376537Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:12:36.8381422Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:12:36.8385786Z   ISSUE_NUMBER: 29754
+2026-10-14T16:12:36.8385931Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:12:36.8386103Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:12:36.8386269Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:12:36.8386419Z   GEMINI_DEBUG: false
+2026-10-14T16:12:36.8386597Z   GEMINI_API_KEY: ***
+2026-10-14T16:12:36.8386877Z   SURFACE: GitHub
+2026-10-14T16:12:36.8387016Z   GOOGLE_CLOUD_LOCATION: global
+2026-10-14T16:12:36.8387165Z   GOOGLE_GENAI_USE_VERTEXAI: 
+2026-10-14T16:12:36.8387303Z   GOOGLE_API_KEY: 
+2026-10-14T16:12:36.8387428Z   GOOGLE_GENAI_USE_GCA: 
+2026-10-14T16:12:36.8389911Z   GOOGLE_CLOUD_ACCESS_TOKEN: ***
+2026-10-14T16:12:36.8396319Z   PROMPT: ## Role
+You are an issue de-duplication assistant. Your goal is to find
+duplicate issues for a given issue.
+
+Original Issue #29754:
+<issue_title>
+Absolutely terrible UX!
+</issue_title>
+<issue_body>
+### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+</issue_body>
+
+## Steps
+1.  **Find Potential Duplicates:**
+    - The repository is google-gemini/gemini-cli and the issue number is 29754.
+    - Use the `duplicates` tool with the `repo` and `issue_number` to find potential duplicates for the current issue. Do not use the `threshold` parameter.
+    - If no duplicates are found, you are done.
+    - Print the JSON output from the `duplicates` tool to the logs.
+2.  **Refine Duplicates List (if necessary):**
+    - Carefully analyze the potential duplicates returned by the `duplicates` tool against the original issue details provided above.
+    - Based on your analysis, determine which issues you are highly confident are actual duplicates.
+    - If there are no actual duplicates, you are done.
+3.  **Output final duplicates list as CSV:**
+    - Output only the comma-separated list of duplicate issue numbers (e.g. 123, 456). If there are no duplicates, output an empty response.
+
+## Guidelines
+- Only use the `duplicates` tool.
+- Do not attempt to run shell commands or modify any issues.
+- Do not add comments or labels.
+2026-10-14T16:12:36.8402803Z   GEMINI_MODEL: 
+2026-10-14T16:12:36.8402963Z   GH_WORKFLOW_NAME: gemini_automated_issue_deduplication
+2026-10-14T16:12:36.8403145Z   GH_PR_NUMBER: 
+2026-10-14T16:12:36.8403268Z   GH_ISSUE_NUMBER: 29754
+2026-10-14T16:12:36.8403405Z ##[endgroup]
+2026-10-14T16:14:22.0805461Z ##[warning]Gemini CLI stderr was not valid JSON
+2026-10-14T16:14:22.0881613Z ##[end-action id=gemini_issue_deduplication.gemini_run;outcome=success;conclusion=success;duration_ms=105259]
+2026-10-14T16:14:22.0884197Z ##[start-action display=Upload Gemini CLI outputs;id=gemini_issue_deduplication.__actions_upload-artifact]
+2026-10-14T16:14:22.0954900Z ##[group]Run actions/upload-artifact@v6
+2026-10-14T16:14:22.0955060Z with:
+2026-10-14T16:14:22.0955172Z   name: gemini-output
+2026-10-14T16:14:22.0955303Z   path: gemini-artifacts/
+2026-10-14T16:14:22.0955440Z   if-no-files-found: warn
+2026-10-14T16:14:22.0955571Z   compression-level: 6
+2026-10-14T16:14:22.0955694Z   overwrite: false
+2026-10-14T16:14:22.0955818Z   include-hidden-files: false
+2026-10-14T16:14:22.0955952Z env:
+2026-10-14T16:14:22.0956199Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:22.0956601Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:22.0957170Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:22.0957431Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0957760Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0957925Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0958086Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0958247Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0959739Z   GITHUB_TOKEN: ***
+2026-10-14T16:14:22.0959872Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:14:22.0964094Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:14:22.0968598Z   ISSUE_NUMBER: 29754
+2026-10-14T16:14:22.0968741Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:14:22.0968904Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:14:22.0969072Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:14:22.0969223Z ##[endgroup]
+2026-10-14T16:14:22.2069016Z With the provided path, there will be 3 files uploaded
+2026-10-14T16:14:22.2071094Z Artifact name is valid!
+2026-10-14T16:14:22.2071568Z Root directory input is valid!
+2026-10-14T16:14:22.5043032Z Beginning upload of artifact content to blob storage
+2026-10-14T16:14:22.6896419Z Uploaded bytes 1742
+2026-10-14T16:14:22.7389285Z Finished uploading artifact content to blob storage!
+2026-10-14T16:14:22.7389731Z SHA256 digest of uploaded artifact zip is 6718e8663fea4ea2b1f748d1f23a79eb1b397e4b4a564ded8945078e010f5b40
+2026-10-14T16:14:22.7391468Z Finalizing artifact upload
+2026-10-14T16:14:23.0620905Z Artifact gemini-output.zip successfully finalized. Artifact ID 11909223719
+2026-10-14T16:14:23.0621455Z Artifact gemini-output has been successfully uploaded! Final size is 1742 bytes. Artifact ID is 11909223719
+2026-10-14T16:14:23.0625359Z Artifact download URL: https://github.com/google-gemini/gemini-cli/actions/runs/38596064175/artifacts/11909223719
+2026-10-14T16:14:23.0712078Z ##[end-action id=gemini_issue_deduplication.__actions_upload-artifact;outcome=success;conclusion=success;duration_ms=982]
+2026-10-14T16:14:23.0715884Z ##[start-action display=Upload Telemetry to Google Cloud;id=gemini_issue_deduplication.__run_3]
+2026-10-14T16:14:23.0731684Z ##[group]Run set -euo pipefail
+2026-10-14T16:14:23.0731894Z [36;1mset -euo pipefail[0m
+2026-10-14T16:14:23.0732030Z [36;1m[0m
+2026-10-14T16:14:23.0732196Z [36;1m# If the telemetry log doesn't exist or is empty, do nothing.[0m
+2026-10-14T16:14:23.0732422Z [36;1mif [[ ! -s ".gemini/telemetry.log" ]]; then[0m
+2026-10-14T16:14:23.0732629Z [36;1m  echo "No telemetry log found, skipping upload."[0m
+2026-10-14T16:14:23.0732811Z [36;1m  exit 0[0m
+2026-10-14T16:14:23.0732927Z [36;1mfi[0m
+2026-10-14T16:14:23.0733037Z [36;1m[0m
+2026-10-14T16:14:23.0733183Z [36;1m# Generate the real config file from the template[0m
+2026-10-14T16:14:23.0733433Z [36;1msed -e "s#OTLP_GOOGLE_CLOUD_PROJECT#${OTLP_GOOGLE_CLOUD_PROJECT}#g" \[0m
+2026-10-14T16:14:23.0733833Z [36;1m    -e "s#GITHUB_REPOSITORY_PLACEHOLDER#${GITHUB_REPOSITORY}#g" \[0m
+2026-10-14T16:14:23.0734077Z [36;1m    -e "s#GITHUB_RUN_ID_PLACEHOLDER#${GITHUB_RUN_ID}#g" \[0m
+2026-10-14T16:14:23.0734307Z [36;1m    -e "s#GITHUB_PR_NUMBER_PLACEHOLDER#${GITHUB_PR_NUMBER}#g" \[0m
+2026-10-14T16:14:23.0734564Z [36;1m    -e "s#GITHUB_ISSUE_NUMBER_PLACEHOLDER#${GITHUB_ISSUE_NUMBER}#g" \[0m
+2026-10-14T16:14:23.0734814Z [36;1m    -e "s#GITHUB_WORKFLOW_PLACEHOLDER#${GH_WORKFLOW_NAME}#g" \[0m
+2026-10-14T16:14:23.0735124Z [36;1m  "${GITHUB_ACTION_PATH}/scripts/collector-gcp.yaml.template" > ".gemini/collector-gcp.yaml"[0m
+2026-10-14T16:14:23.0735384Z [36;1m[0m
+2026-10-14T16:14:23.0735542Z [36;1m# Ensure credentials file has the right permissions[0m
+2026-10-14T16:14:23.0735754Z [36;1mchmod 444 "$GOOGLE_APPLICATION_CREDENTIALS"[0m
+2026-10-14T16:14:23.0735926Z [36;1m[0m
+2026-10-14T16:14:23.0736082Z [36;1m# Run the collector in the background with a known name[0m
+2026-10-14T16:14:23.0736348Z [36;1mdocker run --rm --name gemini-telemetry-collector --network host \[0m
+2026-10-14T16:14:23.0736598Z [36;1m  -v "${GITHUB_WORKSPACE}:/github/workspace" \[0m
+2026-10-14T16:14:23.0737259Z [36;1m  -e "GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS/$GITHUB_WORKSPACE//github/workspace}" \[0m
+2026-10-14T16:14:23.0737639Z [36;1m  -w "/github/workspace" \[0m
+2026-10-14T16:14:23.0737833Z [36;1m  otel/opentelemetry-collector-contrib:0.108.0 \[0m
+2026-10-14T16:14:23.0738067Z [36;1m  --config /github/workspace/.gemini/collector-gcp.yaml &[0m
+2026-10-14T16:14:23.0738263Z [36;1m[0m
+2026-10-14T16:14:23.0738393Z [36;1m# Wait for the collector to start up[0m
+2026-10-14T16:14:23.0738591Z [36;1mecho "Waiting for collector to initialize..."[0m
+2026-10-14T16:14:23.0738768Z [36;1msleep 10[0m
+2026-10-14T16:14:23.0738896Z [36;1m[0m
+2026-10-14T16:14:23.0739050Z [36;1m# Monitor the queue until it's empty or we time out[0m
+2026-10-14T16:14:23.0739258Z [36;1mecho "Monitoring exporter queue..."[0m
+2026-10-14T16:14:23.0739425Z [36;1mATTEMPTS=0[0m
+2026-10-14T16:14:23.0739578Z [36;1mMAX_ATTEMPTS=12 # 12 * 5s = 60s timeout[0m
+2026-10-14T16:14:23.0739747Z [36;1mwhile true; do[0m
+2026-10-14T16:14:23.0739927Z [36;1m    # Use -f to fail silently if the server isn't ready yet[0m
+2026-10-14T16:14:23.0740187Z [36;1m    # Filter out the prometheus help/type comments before grabbing the value[0m
+2026-10-14T16:14:23.0740606Z [36;1m    QUEUE_SIZE=$(curl -sf http://localhost:8888/metrics | grep otelcol_exporter_queue_size | grep -v '^#' | awk '{print $2}' || echo "-1")[0m
+2026-10-14T16:14:23.0740931Z [36;1m[0m
+2026-10-14T16:14:23.0741081Z [36;1m    if [ "$QUEUE_SIZE" == "0" ]; then[0m
+2026-10-14T16:14:23.0741288Z [36;1m        echo "Exporter queue is empty, all data processed."[0m
+2026-10-14T16:14:23.0741484Z [36;1m        break[0m
+2026-10-14T16:14:23.0741614Z [36;1m    fi[0m
+2026-10-14T16:14:23.0741852Z [36;1m[0m
+2026-10-14T16:14:23.0741999Z [36;1m    if [ "$ATTEMPTS" -ge "$MAX_ATTEMPTS" ]; then[0m
+2026-10-14T16:14:23.0742282Z [36;1m        echo "::warning::Timed out waiting for exporter queue to empty. Proceeding with shutdown."[0m
+2026-10-14T16:14:23.0742540Z [36;1m        break[0m
+2026-10-14T16:14:23.0742669Z [36;1m    fi[0m
+2026-10-14T16:14:23.0742787Z [36;1m[0m
+2026-10-14T16:14:23.0742929Z [36;1m    echo "Queue size: $QUEUE_SIZE, waiting..."[0m
+2026-10-14T16:14:23.0743104Z [36;1m    sleep 5[0m
+2026-10-14T16:14:23.0743247Z [36;1m    ATTEMPTS=$((ATTEMPTS + 1))[0m
+2026-10-14T16:14:23.0743398Z [36;1mdone[0m
+2026-10-14T16:14:23.0743516Z [36;1m[0m
+2026-10-14T16:14:23.0743647Z [36;1m# Gracefully shut down the collector[0m
+2026-10-14T16:14:23.0743825Z [36;1mecho "Stopping collector..."[0m
+2026-10-14T16:14:23.0744004Z [36;1mdocker stop gemini-telemetry-collector[0m
+2026-10-14T16:14:23.0744190Z [36;1mecho "Collector stopped."[0m
+2026-10-14T16:14:23.0795796Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T16:14:23.0796083Z env:
+2026-10-14T16:14:23.0796343Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0796896Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0797267Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0797534Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0797715Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0797881Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0798047Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0798213Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0799706Z   GITHUB_TOKEN: ***
+2026-10-14T16:14:23.0799850Z   ISSUE_TITLE: Absolutely terrible UX!
+2026-10-14T16:14:23.0804161Z   ISSUE_BODY: ### What happened?
+
+your engineers are buch of total morons and their product owners double that ammount? how can this CLI and the app experience be SO FUCKING BAD? How can I setup any model name with /model command. Why do you advertize eon web that new model is available through subscription or credits when IT IS TOTALLY UNTRUE FOR FUCKS SAKE?
+
+[ACTION REQUIRED] 📎 PLEASE ATTACH THE EXPORTED CHAT HISTORY JSON FILE TO THIS ISSUE IF YOU FEEL COMFORTABLE SHARING IT.
+
+### What did you expect to happen?
+
+Though Google is known for bad UX and dev UI, I thought that in this highly competitive area of AI things would at least work normally and products would work
+
+### Client information
+
+
+* **CLI Version:** 0.64.0
+* **Git Commit:** 4a0749ace
+* **Session ID:** 6939c27b-0f6e-4cab-85d8-2b54794982cd
+* **Operating System:** linux v22.22.3
+* **Sandbox Environment:** no sandbox
+* **Model Version:** auto
+* **Auth Type:** gemini-api-key
+* **Memory Usage:** 279.2 MB
+* **Terminal Name:** Unknown
+* **Terminal Background:** #0c0c0c
+* **Kitty Keyboard Protocol:** Unsupported
+
+
+### Login information
+
+_No response_
+
+### Anything else we need to know?
+
+<img width="341" height="188" alt="Image" src="https://github.com/user-attachments/assets/17355ddf-3f34-4305-b765-674921aac5cb" /> leads to 
+
+<img width="1045" height="696" alt="Image" src="https://github.com/user-attachments/assets/bad1634e-f2ab-4f61-a389-a800a8ba495a" /> and this leads to buying API credits and that LEADS TO FUCKING NOWHERE.. 
+
+Seriously HOW WORSE CAN YOU BE?
+
+I've spent more than 30 minuts just finding country seleciton tool in account settup cause while other data have inputs, this is with micro letters in LEFT DOWN CORNER OF YOUR dialog window.. 
+
+If words could only express how much I regret trying this for even ficking 12 dollars..
+
+You, chatGPT and many others will die so hard compared to Claude no matter how good benchmarks you  have, cause you will piss off so many people with this tragic UX, that you will hardly ever recover
+
+How can your CLI even accept anything else for a /model than any actual model? :D :D :D What the deepest fucks of fucks? This is beyond insane level of retardness, beyon any boundry of complete incompetence :)))))) 
+
+<img width="1500" height="667" alt="Image" src="https://github.com/user-attachments/assets/d1cfb038-838c-4f54-8d64-fcb857d276a5" />
+
+I am going to spend my few thousands bucks on Claude credits, cause this is just complete dissaster and waste of time
+2026-10-14T16:14:23.0808546Z   ISSUE_NUMBER: 29754
+2026-10-14T16:14:23.0808698Z   REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:14:23.0808868Z   FIRESTORE_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0809037Z   GEMINI_CLI_TRUST_WORKSPACE: true
+2026-10-14T16:14:23.0809211Z   OTLP_GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0809552Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/google-github-actions/run-gemini-cli/f77273f4c914e4bf38440cf36a0369cb64a37489
+2026-10-14T16:14:23.0809883Z   GITHUB_REPOSITORY: google-gemini/gemini-cli
+2026-10-14T16:14:23.0810058Z   GITHUB_RUN_ID: 38596064175
+2026-10-14T16:14:23.0810205Z   GITHUB_PR_NUMBER: 
+2026-10-14T16:14:23.0810431Z   GITHUB_ISSUE_NUMBER: 29754
+2026-10-14T16:14:23.0810605Z   GH_WORKFLOW_NAME: gemini_automated_issue_deduplication
+2026-10-14T16:14:23.0810794Z ##[endgroup]
+2026-10-14T16:14:23.0870843Z No telemetry log found, skipping upload.
+2026-10-14T16:14:23.0875547Z ##[end-action id=gemini_issue_deduplication.__run_3;outcome=success;conclusion=success;duration_ms=15]
+2026-10-14T16:14:23.0930735Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-14T16:14:23.0930963Z with:
+2026-10-14T16:14:23.0932436Z   script: const output = (process.env.GEMINI_OUTPUT || '').trim();
+core.info(`Raw output from Gemini: ${output}`);
+
+let csv = '';
+// Try to find a line matching comma-separated numbers (e.g., "123, 456" or "#123, #456")
+const lines = output.split('\n').map(l => l.trim()).filter(Boolean);
+const csvLine = lines.find(l => /^#?\d+(\s*,\s*#?\d+)*$/.test(l));
+if (csvLine) {
+  csv = csvLine.replace(/#/g, '').split(',').map(s => s.trim()).filter(Boolean).join(',');
+} else {
+  // Fallback: only match explicit issue numbers (e.g., #123)
+  const matches = output.match(/#(\d+)\b/g);
+  if (matches) {
+    const original = String(process.env.ORIGINAL_ISSUE_NUMBER);
+    const duplicates = Array.from(new Set(matches.map(m => m.replace('#', ''))))
+      .filter(num => num !== original && num !== '0');
+    csv = duplicates.join(',');
+  }
+}
+
+core.info(`Parsed duplicate issues CSV: ${csv}`);
+core.setOutput('duplicate_issues_csv', csv);
+
+2026-10-14T16:14:23.0935129Z   github-token: ***
+2026-10-14T16:14:23.0935261Z   debug: false
+2026-10-14T16:14:23.0935392Z   user-agent: actions/github-script
+2026-10-14T16:14:23.0935551Z   result-encoding: json
+2026-10-14T16:14:23.0935687Z   retries: 0
+2026-10-14T16:14:23.0935829Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-14T16:14:23.0936004Z env:
+2026-10-14T16:14:23.0936257Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0936670Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0937189Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json
+2026-10-14T16:14:23.0937454Z   CLOUDSDK_CORE_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0937634Z   CLOUDSDK_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0937803Z   GCLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0937967Z   GCP_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0938130Z   GOOGLE_CLOUD_PROJECT: quacktastic-waffle
+2026-10-14T16:14:23.0949499Z   GEMINI_OUTPUT: {
+  "session_id": "72916663-5333-4c6b-9d95-78c2d99feda4",
+  "response": "",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 8480,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 5293,
+          "prompt": 5293,
+          "candidates": 45,
+          "total": 6500,
+          "cached": 0,
+          "thoughts": 1162,
+          "tool": 0
+        },
+        "roles": {
+          "utility_router": {
+            "totalRequests": 1,
+            "totalErrors": 0,
+            "totalLatencyMs": 8480,
+            "tokens": {
+              "input": 5293,
+              "prompt": 5293,
+              "candidates": 45,
+              "total": 6500,
+              "cached": 0,
+              "thoughts": 1162,
+              "tool": 0
+            }
+          }
+        }
+      },
+      "gemini-3.8-flash": {
+        "api": {
+          "totalRequests": 7,
+          "totalErrors": 4,
+          "totalLatencyMs": 44544,
+          "errorsByType": {
+            "ApiError": 3,
+            "MALFORMED_FUNCTION_CALL": 1
+          }
+        },
+        "tokens": {
+          "input": 34989,
+          "prompt": 44036,
+          "candidates": 104,
+          "total": 46296,
+          "cached": 9047,
+          "thoughts": 2156,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 7,
+            "totalErrors": 3,
+            "totalLatencyMs": 44544,
+            "tokens": {
+              "input": 34989,
+              "prompt": 44036,
+              "candidates": 104,
+              "total": 46296,
+              "cached": 9047,
+              "thoughts": 2156,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  },
+  "error": {
+    "type": "INVALID_STREAM",
+    "message": "Model stream ended with malformed function call."
+  }
+}EOF
+gemini_errors<<EOF
+Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+YOLO mode is enabled. All tool calls will be automatically approved.
+The 'metricReader' option is deprecated. Please use 'metricReaders' instead.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Ripgrep is not available. Falling back to GrepTool.
+Attempt 1 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+    at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+    at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+    at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+    at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+    at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+  status: 503
+}
+Attempt 2 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+    at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+    at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+    at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+    at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+    at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+  status: 503
+}
+Attempt 3 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+    at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+    at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+    at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+    at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+    at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+  status: 503
+}
+2026-10-14T16:14:23.0960707Z   ORIGINAL_ISSUE_NUMBER: 29754
+2026-10-14T16:14:23.0960859Z ##[endgroup]
+2026-10-14T16:14:23.1453136Z Raw output from Gemini: {
+2026-10-14T16:14:23.1453481Z   "session_id": "72916663-5333-4c6b-9d95-78c2d99feda4",
+2026-10-14T16:14:23.1453769Z   "response": "",
+2026-10-14T16:14:23.1453963Z   "stats": {
+2026-10-14T16:14:23.1454152Z     "models": {
+2026-10-14T16:14:23.1454355Z       "gemini-3.5-flash-lite": {
+2026-10-14T16:14:23.1454579Z         "api": {
+2026-10-14T16:14:23.1454772Z           "totalRequests": 1,
+2026-10-14T16:14:23.1455003Z           "totalErrors": 0,
+2026-10-14T16:14:23.1455228Z           "totalLatencyMs": 8480,
+2026-10-14T16:14:23.1455470Z           "errorsByType": {}
+2026-10-14T16:14:23.1455710Z         },
+2026-10-14T16:14:23.1455887Z         "tokens": {
+2026-10-14T16:14:23.1456077Z           "input": 5293,
+2026-10-14T16:14:23.1456291Z           "prompt": 5293,
+2026-10-14T16:14:23.1456502Z           "candidates": 45,
+2026-10-14T16:14:23.1456847Z           "total": 6500,
+2026-10-14T16:14:23.1457049Z           "cached": 0,
+2026-10-14T16:14:23.1457252Z           "thoughts": 1162,
+2026-10-14T16:14:23.1457459Z           "tool": 0
+2026-10-14T16:14:23.1457646Z         },
+2026-10-14T16:14:23.1457817Z         "roles": {
+2026-10-14T16:14:23.1458014Z           "utility_router": {
+2026-10-14T16:14:23.1458242Z             "totalRequests": 1,
+2026-10-14T16:14:23.1458468Z             "totalErrors": 0,
+2026-10-14T16:14:23.1458693Z             "totalLatencyMs": 8480,
+2026-10-14T16:14:23.1458924Z             "tokens": {
+2026-10-14T16:14:23.1459127Z               "input": 5293,
+2026-10-14T16:14:23.1459347Z               "prompt": 5293,
+2026-10-14T16:14:23.1459562Z               "candidates": 45,
+2026-10-14T16:14:23.1459780Z               "total": 6500,
+2026-10-14T16:14:23.1459993Z               "cached": 0,
+2026-10-14T16:14:23.1460201Z               "thoughts": 1162,
+2026-10-14T16:14:23.1460417Z               "tool": 0
+2026-10-14T16:14:23.1460642Z             }
+2026-10-14T16:14:23.1460819Z           }
+2026-10-14T16:14:23.1460989Z         }
+2026-10-14T16:14:23.1461155Z       },
+2026-10-14T16:14:23.1461336Z       "gemini-3.8-flash": {
+2026-10-14T16:14:23.1461541Z         "api": {
+2026-10-14T16:14:23.1461731Z           "totalRequests": 7,
+2026-10-14T16:14:23.1461952Z           "totalErrors": 4,
+2026-10-14T16:14:23.1462384Z           "totalLatencyMs": 44544,
+2026-10-14T16:14:23.1462624Z           "errorsByType": {
+2026-10-14T16:14:23.1462841Z             "ApiError": 3,
+2026-10-14T16:14:23.1463072Z             "MALFORMED_FUNCTION_CALL": 1
+2026-10-14T16:14:23.1463314Z           }
+2026-10-14T16:14:23.1463489Z         },
+2026-10-14T16:14:23.1463663Z         "tokens": {
+2026-10-14T16:14:23.1464072Z           "input": 34989,
+2026-10-14T16:14:23.1464288Z           "prompt": 44036,
+2026-10-14T16:14:23.1464509Z           "candidates": 104,
+2026-10-14T16:14:23.1464728Z           "total": 46296,
+2026-10-14T16:14:23.1464940Z           "cached": 9047,
+2026-10-14T16:14:23.1465150Z           "thoughts": 2156,
+2026-10-14T16:14:23.1465366Z           "tool": 0
+2026-10-14T16:14:23.1465553Z         },
+2026-10-14T16:14:23.1465731Z         "roles": {
+2026-10-14T16:14:23.1465920Z           "main": {
+2026-10-14T16:14:23.1466117Z             "totalRequests": 7,
+2026-10-14T16:14:23.1466339Z             "totalErrors": 3,
+2026-10-14T16:14:23.1466567Z             "totalLatencyMs": 44544,
+2026-10-14T16:14:23.1466887Z             "tokens": {
+2026-10-14T16:14:23.1467022Z               "input": 34989,
+2026-10-14T16:14:23.1467163Z               "prompt": 44036,
+2026-10-14T16:14:23.1467304Z               "candidates": 104,
+2026-10-14T16:14:23.1467448Z               "total": 46296,
+2026-10-14T16:14:23.1467582Z               "cached": 9047,
+2026-10-14T16:14:23.1467725Z               "thoughts": 2156,
+2026-10-14T16:14:23.1467863Z               "tool": 0
+2026-10-14T16:14:23.1467988Z             }
+2026-10-14T16:14:23.1468099Z           }
+2026-10-14T16:14:23.1468209Z         }
+2026-10-14T16:14:23.1468315Z       }
+2026-10-14T16:14:23.1468421Z     },
+2026-10-14T16:14:23.1468529Z     "tools": {
+2026-10-14T16:14:23.1468650Z       "totalCalls": 0,
+2026-10-14T16:14:23.1468782Z       "totalSuccess": 0,
+2026-10-14T16:14:23.1468917Z       "totalFail": 0,
+2026-10-14T16:14:23.1469047Z       "totalDurationMs": 0,
+2026-10-14T16:14:23.1469187Z       "totalDecisions": {
+2026-10-14T16:14:23.1469322Z         "accept": 0,
+2026-10-14T16:14:23.1469445Z         "reject": 0,
+2026-10-14T16:14:23.1469566Z         "modify": 0,
+2026-10-14T16:14:23.1469690Z         "auto_accept": 0
+2026-10-14T16:14:23.1469817Z       },
+2026-10-14T16:14:23.1469925Z       "byName": {}
+2026-10-14T16:14:23.1470042Z     },
+2026-10-14T16:14:23.1470146Z     "files": {
+2026-10-14T16:14:23.1470270Z       "totalLinesAdded": 0,
+2026-10-14T16:14:23.1470442Z       "totalLinesRemoved": 0
+2026-10-14T16:14:23.1470582Z     }
+2026-10-14T16:14:23.1470702Z   },
+2026-10-14T16:14:23.1470808Z   "error": {
+2026-10-14T16:14:23.1470928Z     "type": "INVALID_STREAM",
+2026-10-14T16:14:23.1471118Z     "message": "Model stream ended with malformed function call."
+2026-10-14T16:14:23.1471336Z   }
+2026-10-14T16:14:23.1471444Z }EOF
+2026-10-14T16:14:23.1471569Z gemini_errors<<EOF
+2026-10-14T16:14:23.1471901Z Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+2026-10-14T16:14:23.1472315Z YOLO mode is enabled. All tool calls will be automatically approved.
+2026-10-14T16:14:23.1472621Z The 'metricReader' option is deprecated. Please use 'metricReaders' instead.
+2026-10-14T16:14:23.1472925Z YOLO mode is enabled. All tool calls will be automatically approved.
+2026-10-14T16:14:23.1473170Z Ripgrep is not available. Falling back to GrepTool.
+2026-10-14T16:14:23.1473924Z Attempt 1 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+2026-10-14T16:14:23.1474762Z     at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+2026-10-14T16:14:23.1475150Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-10-14T16:14:23.1475591Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+2026-10-14T16:14:23.1476069Z     at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+2026-10-14T16:14:23.1476633Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+2026-10-14T16:14:23.1477161Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+2026-10-14T16:14:23.1477573Z     at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+2026-10-14T16:14:23.1478076Z     at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+2026-10-14T16:14:23.1478687Z     at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+2026-10-14T16:14:23.1479160Z     at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+2026-10-14T16:14:23.1479460Z   status: 503
+2026-10-14T16:14:23.1479583Z }
+2026-10-14T16:14:23.1480239Z Attempt 2 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+2026-10-14T16:14:23.1481072Z     at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+2026-10-14T16:14:23.1481467Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-10-14T16:14:23.1481814Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+2026-10-14T16:14:23.1482257Z     at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+2026-10-14T16:14:23.1482711Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+2026-10-14T16:14:23.1483089Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+2026-10-14T16:14:23.1483505Z     at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+2026-10-14T16:14:23.1484008Z     at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+2026-10-14T16:14:23.1484557Z     at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+2026-10-14T16:14:23.1485048Z     at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+2026-10-14T16:14:23.1485337Z   status: 503
+2026-10-14T16:14:23.1507286Z }
+2026-10-14T16:14:23.1508345Z Attempt 3 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+2026-10-14T16:14:23.1509502Z     at throwErrorIfNotOK (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267903:24)
+2026-10-14T16:14:23.1509888Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-10-14T16:14:23.1510233Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:267666:7
+2026-10-14T16:14:23.1510652Z     at async Models.generateContentStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:268762:16)
+2026-10-14T16:14:23.1511209Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:312364:19
+2026-10-14T16:14:23.1511562Z     at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:288670:23
+2026-10-14T16:14:23.1511949Z     at async retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:308754:23)
+2026-10-14T16:14:23.1512523Z     at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333648:28)
+2026-10-14T16:14:23.1513020Z     at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:333343:29)
+2026-10-14T16:14:23.1513504Z     at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-NR7L3FXV.js:334387:24) {
+2026-10-14T16:14:23.1513784Z   status: 503
+2026-10-14T16:14:23.1513910Z }
+2026-10-14T16:14:23.1514037Z Parsed duplicate issues CSV: 
+2026-10-14T16:14:23.1698382Z Post job cleanup.
+2026-10-14T16:14:23.1700823Z ##[start-action display=Authenticate to Google Cloud;id=__792d4b8b-1240-49d1-8af4-cff37cf871cd.auth]
+2026-10-14T16:14:23.1729759Z Post job cleanup.
+2026-10-14T16:14:23.2285826Z Removed exported credentials at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-4c4e2312d5ce6eb6.json".
+2026-10-14T16:14:23.2335486Z ##[end-action id=__792d4b8b-1240-49d1-8af4-cff37cf871cd.auth;outcome=success;conclusion=success;duration_ms=63]
+2026-10-14T16:14:23.2366173Z Post job cleanup.
+2026-10-14T16:14:23.4505561Z (node:2549) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T16:14:23.4505986Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:14:23.4519652Z [command]/usr/bin/docker logout ghcr.io
+2026-10-14T16:14:23.4630161Z Removing login credentials for ghcr.io
+2026-10-14T16:14:23.4651489Z ##[group]Post cache
+2026-10-14T16:14:23.4655756Z State not set
+2026-10-14T16:14:23.4656219Z ##[endgroup]
+2026-10-14T16:14:23.4796986Z Post job cleanup.
+2026-10-14T16:14:23.5338502Z [command]/usr/bin/git version
+2026-10-14T16:14:23.5365847Z git version 2.55.0
+2026-10-14T16:14:23.5391625Z Temporarily overriding HOME='/home/runner/work/_temp/eca6d98d-4e55-4875-a4fb-2234ad704eef' before making global git config changes
+2026-10-14T16:14:23.5392186Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:14:23.5394696Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:14:23.5422546Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:14:23.5446106Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:14:23.5617325Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:14:23.5639714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:14:23.5911341Z Evaluate and set job outputs
+2026-10-14T16:14:23.5915469Z Cleaning up orphan processes
+2026-10-14T16:14:23.6112893Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea, docker/login-action@184bdaa0721073962dff0199f1fb9940f07167d1. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

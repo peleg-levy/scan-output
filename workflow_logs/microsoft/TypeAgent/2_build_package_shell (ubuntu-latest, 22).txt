@@ -1,0 +1,820 @@
+﻿2026-10-14T06:10:21.4705940Z Current runner version: '2.337.0'
+2026-10-14T06:10:21.4724852Z ##[group]Runner Image Provisioner
+2026-10-14T06:10:21.4725500Z Hosted Compute Agent
+2026-10-14T06:10:21.4725858Z Version: 20261002.596
+2026-10-14T06:10:21.4726279Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T06:10:21.4726727Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T06:10:21.4727178Z Worker ID: {71d02f15-40fa-4013-a75c-24896cb32317}
+2026-10-14T06:10:21.4727638Z Region: centralus
+2026-10-14T06:10:21.4728013Z Cloud: Azure
+2026-10-14T06:10:21.4728376Z ##[endgroup]
+2026-10-14T06:10:21.4729441Z ##[group]Operating System
+2026-10-14T06:10:21.4729851Z Ubuntu
+2026-10-14T06:10:21.4730229Z 24.04.5
+2026-10-14T06:10:21.4730546Z LTS
+2026-10-14T06:10:21.4730998Z ##[endgroup]
+2026-10-14T06:10:21.4731387Z ##[group]Runner Image
+2026-10-14T06:10:21.4731794Z Image: ubuntu-24.04
+2026-10-14T06:10:21.4732169Z Version: 20261004.327.1
+2026-10-14T06:10:21.4732990Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T06:10:21.4733920Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T06:10:21.4734522Z ##[endgroup]
+2026-10-14T06:10:21.4735314Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T06:10:21.4736583Z Contents: read
+2026-10-14T06:10:21.4736983Z Metadata: read
+2026-10-14T06:10:21.4737366Z PullRequests: read
+2026-10-14T06:10:21.4737710Z ##[endgroup]
+2026-10-14T06:10:21.4739209Z Secret source: Actions
+2026-10-14T06:10:21.4739764Z Cache mode: write
+2026-10-14T06:10:21.4740290Z Prepare workflow directory
+2026-10-14T06:10:21.5106728Z Prepare all required actions
+2026-10-14T06:10:21.5142166Z Getting action download info
+2026-10-14T06:10:21.7569797Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T06:10:21.8254113Z Download action repository 'dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d' (SHA:ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d)
+2026-10-14T06:10:22.1551902Z Download action repository 'pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86' (SHA:0977fd99725f1db4007ccb2928dbb4e90d06cc86)
+2026-10-14T06:10:22.4415491Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-14T06:10:22.5970535Z Complete job name: build_package_shell (ubuntu-latest, 22)
+2026-10-14T06:10:22.6381966Z ##[group]Run git config --global core.autocrlf false
+2026-10-14T06:10:22.6382477Z [36;1mgit config --global core.autocrlf false[0m
+2026-10-14T06:10:22.6585088Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:10:22.6585594Z env:
+2026-10-14T06:10:22.6585961Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:22.6586548Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:22.6587057Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:22.6587388Z ##[endgroup]
+2026-10-14T06:10:22.6926255Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-14T06:10:22.6926745Z with:
+2026-10-14T06:10:22.6927018Z   repository: microsoft/TypeAgent
+2026-10-14T06:10:22.6929439Z   token: ***
+2026-10-14T06:10:22.6929722Z   ssh-strict: true
+2026-10-14T06:10:22.6930003Z   ssh-user: git
+2026-10-14T06:10:22.6930276Z   persist-credentials: true
+2026-10-14T06:10:22.6930762Z   clean: true
+2026-10-14T06:10:22.6931046Z   sparse-checkout-cone-mode: true
+2026-10-14T06:10:22.6931368Z   fetch-depth: 1
+2026-10-14T06:10:22.6931636Z   fetch-tags: false
+2026-10-14T06:10:22.6931907Z   show-progress: true
+2026-10-14T06:10:22.6932184Z   lfs: false
+2026-10-14T06:10:22.6932441Z   submodules: false
+2026-10-14T06:10:22.6932716Z   set-safe-directory: true
+2026-10-14T06:10:22.6933040Z   allow-unsafe-pr-checkout: false
+2026-10-14T06:10:22.6933361Z env:
+2026-10-14T06:10:22.6933727Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:22.6934379Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:22.6935126Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:22.6935488Z ##[endgroup]
+2026-10-14T06:10:22.7677890Z Syncing repository: microsoft/TypeAgent
+2026-10-14T06:10:22.7679402Z ##[group]Getting Git version info
+2026-10-14T06:10:22.7679843Z Working directory is '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:22.7680546Z [command]/usr/bin/git version
+2026-10-14T06:10:22.7681025Z git version 2.55.0
+2026-10-14T06:10:22.7682084Z ##[endgroup]
+2026-10-14T06:10:22.7685505Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/85cbac69-d4a1-4966-b1fe-51ff9d8f5920/.gitconfig'
+2026-10-14T06:10:22.7686598Z Temporarily overriding HOME='/home/runner/work/_temp/85cbac69-d4a1-4966-b1fe-51ff9d8f5920' before making global git config changes
+2026-10-14T06:10:22.7687851Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:10:22.7689044Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:22.7718113Z Deleting the contents of '/home/runner/work/TypeAgent/TypeAgent'
+2026-10-14T06:10:22.7720469Z ##[group]Determining repository object format
+2026-10-14T06:10:22.7721727Z ##[endgroup]
+2026-10-14T06:10:22.7722285Z ##[group]Initializing the repository
+2026-10-14T06:10:22.7724669Z [command]/usr/bin/git init /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:10:22.7805522Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T06:10:22.7806905Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T06:10:22.7807786Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T06:10:22.7808728Z hint: call:
+2026-10-14T06:10:22.7809524Z hint:
+2026-10-14T06:10:22.7810136Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T06:10:22.7810928Z hint:
+2026-10-14T06:10:22.7811393Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T06:10:22.7811996Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T06:10:22.7812479Z hint:
+2026-10-14T06:10:22.7812753Z hint: 	git branch -m <name>
+2026-10-14T06:10:22.7813050Z hint:
+2026-10-14T06:10:22.7813460Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T06:10:22.7814156Z Initialized empty Git repository in /home/runner/work/TypeAgent/TypeAgent/.git/
+2026-10-14T06:10:22.7816594Z [command]/usr/bin/git remote add origin https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:22.7857563Z ##[endgroup]
+2026-10-14T06:10:22.7858101Z ##[group]Disabling automatic garbage collection
+2026-10-14T06:10:22.7860072Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T06:10:22.7888091Z ##[endgroup]
+2026-10-14T06:10:22.7888669Z ##[group]Setting up auth
+2026-10-14T06:10:22.7889019Z Removing SSH command configuration
+2026-10-14T06:10:22.7893414Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:10:22.7919871Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:10:22.8190227Z Removing HTTP extra header
+2026-10-14T06:10:22.8195066Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:10:22.8223916Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:10:22.8438964Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:10:22.8443621Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:10:22.8471967Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:10:22.8657717Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T06:10:22.8691602Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path /home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:10:22.8719936Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:10:22.8750877Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:10:22.8778839Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:10:22.8802845Z ##[endgroup]
+2026-10-14T06:10:22.8803353Z ##[group]Fetching the repository
+2026-10-14T06:10:22.8808223Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fe0244810392a7b6d6347f0e1f5c5049481c1b75:refs/remotes/pull/3178/merge
+2026-10-14T06:10:26.7762761Z From https://github.com/microsoft/TypeAgent
+2026-10-14T06:10:26.7763205Z  * [new ref]         fe0244810392a7b6d6347f0e1f5c5049481c1b75 -> pull/3178/merge
+2026-10-14T06:10:26.7766650Z ##[endgroup]
+2026-10-14T06:10:26.7766933Z ##[group]Determining the checkout info
+2026-10-14T06:10:26.7767419Z ##[endgroup]
+2026-10-14T06:10:26.7771719Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T06:10:26.7812036Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T06:10:26.7836311Z ##[group]Checking out the ref
+2026-10-14T06:10:26.7838936Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/3178/merge
+2026-10-14T06:10:27.5176528Z Note: switching to 'refs/remotes/pull/3178/merge'.
+2026-10-14T06:10:27.5177046Z 
+2026-10-14T06:10:27.5177264Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T06:10:27.5177684Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T06:10:27.5178086Z state without impacting any branches by switching back to a branch.
+2026-10-14T06:10:27.5178327Z 
+2026-10-14T06:10:27.5178526Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T06:10:27.5178899Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T06:10:27.5179114Z 
+2026-10-14T06:10:27.5179226Z   git switch -c <new-branch-name>
+2026-10-14T06:10:27.5179376Z 
+2026-10-14T06:10:27.5179484Z Or undo this operation with:
+2026-10-14T06:10:27.5179615Z 
+2026-10-14T06:10:27.5179696Z   git switch -
+2026-10-14T06:10:27.5179831Z 
+2026-10-14T06:10:27.5180479Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T06:10:27.5180997Z 
+2026-10-14T06:10:27.5181302Z HEAD is now at fe02448 Merge 48ff4ab3fba4df7bc776aa4eb73376b2a099c220 into e2c819c2b0ab10ec5524c4f644abab22e41e097d
+2026-10-14T06:10:27.5208409Z ##[endgroup]
+2026-10-14T06:10:27.5247420Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T06:10:27.5267359Z fe0244810392a7b6d6347f0e1f5c5049481c1b75
+2026-10-14T06:10:27.5576888Z ##[group]Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d
+2026-10-14T06:10:27.5577123Z with:
+2026-10-14T06:10:27.5577398Z   filters: ts:
+  - "ts/**"
+  - "dotnet/powerShellSandboxBroker/**"
+  - ".github/workflows/build-package-shell.yml"
+
+2026-10-14T06:10:27.5578905Z   token: ***
+2026-10-14T06:10:27.5579030Z   list-files: none
+2026-10-14T06:10:27.5579160Z   initial-fetch-depth: 100
+2026-10-14T06:10:27.5579307Z   predicate-quantifier: some
+2026-10-14T06:10:27.5579482Z env:
+2026-10-14T06:10:27.5579655Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:27.5580068Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:27.5580320Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:27.5580475Z ##[endgroup]
+2026-10-14T06:10:27.6121887Z ##[group]Fetching list of changed files for PR#3178 from GitHub API
+2026-10-14T06:10:27.6134099Z Invoking listFiles(pull_number: 3178, per_page: 100)
+2026-10-14T06:10:28.1368356Z Received 13 items
+2026-10-14T06:10:28.1368627Z [modified] docs/package.json
+2026-10-14T06:10:28.1368879Z [modified] docs/pnpm-lock.yaml
+2026-10-14T06:10:28.1369184Z [modified] ts/packages/agentServer/bundledRuntime/package.json
+2026-10-14T06:10:28.1369406Z [modified] ts/packages/agents/montage/package.json
+2026-10-14T06:10:28.1369611Z [modified] ts/packages/knowledgeProcessor/package.json
+2026-10-14T06:10:28.1369871Z [modified] ts/packages/knowledgeProcessor/src/images/image.ts
+2026-10-14T06:10:28.1370094Z [modified] ts/packages/memory/conversation/package.json
+2026-10-14T06:10:28.1370321Z [added] ts/packages/memory/conversation/test/emailImport.spec.ts
+2026-10-14T06:10:28.1370549Z [modified] ts/packages/shell/package.json
+2026-10-14T06:10:28.1370866Z [modified] ts/packages/vscode-shell/README.md
+2026-10-14T06:10:28.1371071Z [removed] ts/packages/vscode-shell/package-lock.json
+2026-10-14T06:10:28.1371251Z [modified] ts/pnpm-lock.yaml
+2026-10-14T06:10:28.1371412Z [modified] ts/pnpm-workspace.yaml
+2026-10-14T06:10:28.1371861Z ##[endgroup]
+2026-10-14T06:10:28.1371998Z Detected 13 changed files
+2026-10-14T06:10:28.1375369Z Results:
+2026-10-14T06:10:28.1375861Z ##[group]Filter ts = true
+2026-10-14T06:10:28.1376096Z Matching files:
+2026-10-14T06:10:28.1376374Z ts/packages/agentServer/bundledRuntime/package.json [modified]
+2026-10-14T06:10:28.1376721Z ts/packages/agents/montage/package.json [modified]
+2026-10-14T06:10:28.1377039Z ts/packages/knowledgeProcessor/package.json [modified]
+2026-10-14T06:10:28.1377392Z ts/packages/knowledgeProcessor/src/images/image.ts [modified]
+2026-10-14T06:10:28.1377734Z ts/packages/memory/conversation/package.json [modified]
+2026-10-14T06:10:28.1378121Z ts/packages/memory/conversation/test/emailImport.spec.ts [added]
+2026-10-14T06:10:28.1378459Z ts/packages/shell/package.json [modified]
+2026-10-14T06:10:28.1378717Z ts/packages/vscode-shell/README.md [modified]
+2026-10-14T06:10:28.1379009Z ts/packages/vscode-shell/package-lock.json [deleted]
+2026-10-14T06:10:28.1379293Z ts/pnpm-lock.yaml [modified]
+2026-10-14T06:10:28.1379535Z ts/pnpm-workspace.yaml [modified]
+2026-10-14T06:10:28.1382172Z ##[endgroup]
+2026-10-14T06:10:28.1382524Z Changes output set to ["ts"]
+2026-10-14T06:10:28.1527732Z ##[group]Run pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86
+2026-10-14T06:10:28.1527951Z with:
+2026-10-14T06:10:28.1528080Z   package_json_file: ts/package.json
+2026-10-14T06:10:28.1528233Z   dest: ~/setup-pnpm
+2026-10-14T06:10:28.1528358Z   run_install: null
+2026-10-14T06:10:28.1528472Z   cache: false
+2026-10-14T06:10:28.1528598Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-14T06:10:28.1528757Z   standalone: false
+2026-10-14T06:10:28.1528882Z env:
+2026-10-14T06:10:28.1529049Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:28.1529338Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:28.1529587Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:28.1529739Z ##[endgroup]
+2026-10-14T06:10:28.2487666Z ##[group]Running self-installer...
+2026-10-14T06:10:29.4487421Z 
+2026-10-14T06:10:29.4487968Z added 1 package, and audited 2 packages in 1s
+2026-10-14T06:10:29.4488306Z 
+2026-10-14T06:10:29.4488419Z 1 package is looking for funding
+2026-10-14T06:10:29.4488667Z   run `npm fund` for details
+2026-10-14T06:10:29.4501395Z 
+2026-10-14T06:10:29.4502174Z found 0 vulnerabilities
+2026-10-14T06:10:29.8475111Z Checking for updates...
+2026-10-14T06:10:30.1819624Z Switching pnpm from v11.19.0 to v11.9.0...
+2026-10-14T06:10:30.7413708Z .../v11/845-1a13908a645-867241b957f49e6a | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:30.7425345Z .../v11/845-1a13908a645-867241b957f49e6a |   +1 +
+2026-10-14T06:10:30.9116584Z .../v11/845-1a13908a645-867241b957f49e6a | Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-14T06:10:31.5316449Z [WARN] Detected a pnpm v10 installation layout at PNPM_HOME. The pnpm shims at PNPM_HOME have been refreshed so the new version is active, but pnpm v11 expects bins in PNPM_HOME/bin. Run "pnpm setup" to migrate your PATH to the v11 layout.
+2026-10-14T06:10:31.5342575Z Successfully updated pnpm to v11.9.0
+2026-10-14T06:10:31.5611114Z ##[endgroup]
+2026-10-14T06:10:31.5611377Z Installation Completed!
+2026-10-14T06:10:31.5745952Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-10-14T06:10:31.5746179Z with:
+2026-10-14T06:10:31.5746299Z   node-version: 22
+2026-10-14T06:10:31.5746418Z   cache: pnpm
+2026-10-14T06:10:31.5746551Z   cache-dependency-path: ts/pnpm-lock.yaml
+2026-10-14T06:10:31.5746714Z   check-latest: false
+2026-10-14T06:10:31.5748038Z   token: ***
+2026-10-14T06:10:31.5748161Z   package-manager-cache: true
+2026-10-14T06:10:31.5748306Z env:
+2026-10-14T06:10:31.5748481Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:31.5748777Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:31.5749032Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:31.5749221Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:31.5749394Z ##[endgroup]
+2026-10-14T06:10:31.6677565Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-14T06:10:31.6680423Z ##[group]Environment details
+2026-10-14T06:10:31.9513839Z node: v22.23.3
+2026-10-14T06:10:31.9514107Z npm: 10.9.9
+2026-10-14T06:10:31.9514257Z yarn: 1.22.22
+2026-10-14T06:10:31.9515195Z ##[endgroup]
+2026-10-14T06:10:31.9528573Z [command]/home/runner/setup-pnpm/node_modules/.bin/bin/pnpm store path --silent
+2026-10-14T06:10:32.2535916Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:10:32.4076976Z pnpm cache is not found
+2026-10-14T06:10:32.4181821Z ##[group]Run pnpm install --frozen-lockfile --strict-peer-dependencies
+2026-10-14T06:10:32.4182265Z [36;1mpnpm install --frozen-lockfile --strict-peer-dependencies[0m
+2026-10-14T06:10:32.4241907Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:10:32.4242066Z env:
+2026-10-14T06:10:32.4242247Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:10:32.4242544Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:10:32.4242799Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:10:32.4242983Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:10:32.4243156Z ##[endgroup]
+2026-10-14T06:10:32.8368394Z Scope: all 150 workspace projects
+2026-10-14T06:10:33.0205848Z ? Verifying lockfile against supply-chain policies (2965 entries)...
+2026-10-14T06:10:33.1072201Z Lockfile is up to date, resolution step is skipped
+2026-10-14T06:10:33.2135873Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:10:33.3782437Z Packages: +2795
+2026-10-14T06:10:33.3783197Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-14T06:10:34.2332414Z Progress: resolved 2795, reused 0, downloaded 132, added 4
+2026-10-14T06:10:35.2474330Z Progress: resolved 2795, reused 0, downloaded 315, added 18
+2026-10-14T06:10:36.4242208Z Progress: resolved 2795, reused 0, downloaded 578, added 40
+2026-10-14T06:10:37.4240916Z Progress: resolved 2795, reused 0, downloaded 913, added 72
+2026-10-14T06:10:38.4276262Z Progress: resolved 2795, reused 0, downloaded 1060, added 84
+2026-10-14T06:10:39.4332041Z Progress: resolved 2795, reused 0, downloaded 1296, added 104
+2026-10-14T06:10:40.4443378Z Progress: resolved 2795, reused 0, downloaded 1414, added 113
+2026-10-14T06:10:41.4630061Z Progress: resolved 2795, reused 0, downloaded 1537, added 123
+2026-10-14T06:10:42.4636254Z Progress: resolved 2795, reused 0, downloaded 1611, added 130
+2026-10-14T06:10:43.4639569Z Progress: resolved 2795, reused 0, downloaded 1679, added 135
+2026-10-14T06:10:44.4707508Z Progress: resolved 2795, reused 0, downloaded 1841, added 147
+2026-10-14T06:10:45.4802036Z Progress: resolved 2795, reused 0, downloaded 2030, added 163
+2026-10-14T06:10:46.4982943Z Progress: resolved 2795, reused 0, downloaded 2176, added 175
+2026-10-14T06:10:47.0924111Z ✓ Lockfile passes supply-chain policies (2965 entries in 14s)
+2026-10-14T06:10:47.4974192Z Progress: resolved 2795, reused 0, downloaded 2315, added 186
+2026-10-14T06:10:48.4977692Z Progress: resolved 2795, reused 0, downloaded 2489, added 198
+2026-10-14T06:10:49.4979013Z Progress: resolved 2795, reused 0, downloaded 2699, added 228
+2026-10-14T06:10:50.4982761Z Progress: resolved 2795, reused 0, downloaded 2700, added 1092
+2026-10-14T06:10:51.4997374Z Progress: resolved 2795, reused 0, downloaded 2700, added 1395
+2026-10-14T06:10:52.4997882Z Progress: resolved 2795, reused 0, downloaded 2700, added 2085
+2026-10-14T06:10:53.5003632Z Progress: resolved 2795, reused 0, downloaded 2700, added 2525
+2026-10-14T06:10:54.4999170Z Progress: resolved 2795, reused 0, downloaded 2700, added 2610
+2026-10-14T06:10:55.5007177Z Progress: resolved 2795, reused 0, downloaded 2700, added 2769
+2026-10-14T06:10:55.8115888Z Progress: resolved 2795, reused 0, downloaded 2700, added 2795, done
+2026-10-14T06:10:56.8559415Z .../node_modules/exifreader postinstall$ node bin/build.js --only-with-config
+2026-10-14T06:10:56.8769562Z .../node_modules/better-sqlite3 install$ prebuild-install || node-gyp rebuild --release
+2026-10-14T06:10:56.8962823Z .../.pnpm/koffi@3.2.1/node_modules/koffi install$ node ./cnoke.cjs -P . -D src/koffi --prebuild --release
+2026-10-14T06:10:56.9147995Z .../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:56.9172636Z .../node_modules/exifreader postinstall: Done
+2026-10-14T06:10:56.9173225Z .../esbuild@0.28.1/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:56.9862526Z .../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:57.0107829Z .../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:57.0177945Z .../.pnpm/koffi@3.2.1/node_modules/koffi install: Done
+2026-10-14T06:10:57.0322001Z .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+2026-10-14T06:10:57.0635881Z .../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:57.0671768Z .../esbuild@0.28.1/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:57.0834555Z .../@azure/msal-node-runtime install$ node ./copyBinaries.js
+2026-10-14T06:10:57.1234528Z .../keytar@7.9.0/node_modules/keytar install$ prebuild-install || npm run build
+2026-10-14T06:10:57.1457607Z .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+2026-10-14T06:10:57.1478237Z .../node_modules/onnxruntime-node postinstall$ node ./script/install
+2026-10-14T06:10:57.1685529Z .../@azure/msal-node-runtime install: Done
+2026-10-14T06:10:57.1866523Z .../koffi@2.11.0/node_modules/koffi install$ node src/cnoke/cnoke.js -p . -d src/koffi --prebuild
+2026-10-14T06:10:57.2081390Z .../node_modules/@vscode/vsce-sign postinstall$ node ./src/postinstall.js
+2026-10-14T06:10:57.2790747Z .../node_modules/onnxruntime-node postinstall: `nvcc` not found. Assuming CUDA 12.
+2026-10-14T06:10:57.2792193Z .../node_modules/onnxruntime-node postinstall: Downloading "https://github.com/microsoft/onnxruntime/releases/download/v1.21.0/onnxruntime-linux-x64-gpu-1.21.0.tgz"...
+2026-10-14T06:10:57.3111287Z .../koffi@2.11.0/node_modules/koffi install: Done
+2026-10-14T06:10:57.3114223Z .../node_modules/better-sqlite3 install: Done
+2026-10-14T06:10:57.3421495Z .../node_modules/electron postinstall$ node install.js
+2026-10-14T06:10:57.4415572Z .../node_modules/electron-winstaller install$ node ./script/select-7z-arch.js
+2026-10-14T06:10:57.4625163Z .../node_modules/@vscode/vsce-sign postinstall: Done
+2026-10-14T06:10:57.4861148Z .../keytar@7.9.0/node_modules/keytar install: Done
+2026-10-14T06:10:57.4912586Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_cuda.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:57.4924415Z .../node_modules/electron-winstaller install: Selecting 7-Zip for arch x64
+2026-10-14T06:10:57.6343075Z .../node_modules/electron-winstaller install: Done
+2026-10-14T06:10:59.2900540Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_cuda.so".
+2026-10-14T06:10:59.2906400Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime.so.1.21.0" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:59.3676674Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime.so.1.21.0".
+2026-10-14T06:10:59.3678440Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_shared.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:59.3681786Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_shared.so".
+2026-10-14T06:10:59.3683740Z .../node_modules/onnxruntime-node postinstall: Extracting "libonnxruntime_providers_tensorrt.so" to "/home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/onnxruntime-node@1.21.0/node_modules/onnxruntime-node/bin/napi-v3/linux/x64"...
+2026-10-14T06:10:59.3710251Z .../node_modules/onnxruntime-node postinstall: Finished extracting "libonnxruntime_providers_tensorrt.so".
+2026-10-14T06:10:59.7086269Z .../node_modules/onnxruntime-node postinstall: Done
+2026-10-14T06:10:59.7600695Z .../node_modules/electron postinstall: Done
+2026-10-14T06:11:03.0556827Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:03.0562040Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:03.0566931Z .../@azure/msal-node-extensions install$ exit 0
+2026-10-14T06:11:03.1048319Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:03.1048741Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:03.1081497Z .../@azure/msal-node-extensions install: Done
+2026-10-14T06:11:03.2503351Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/lsp/dist/index.js'
+2026-10-14T06:11:03.3362564Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/memory/mcp-server/dist/server.js'
+2026-10-14T06:11:03.4232272Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/studio-service/dist/main.js'
+2026-10-14T06:11:03.5507342Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:11:03.5508758Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:11:03.7623956Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/status.js'
+2026-10-14T06:11:03.7626339Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/dist/stop.js'
+2026-10-14T06:11:04.2998762Z 
+2026-10-14T06:11:04.2999159Z devDependencies:
+2026-10-14T06:11:04.2999411Z + @fluidframework/build-tools 0.57.0
+2026-10-14T06:11:04.2999600Z + @types/node 22.15.18
+2026-10-14T06:11:04.2999732Z + esbuild 0.28.1
+2026-10-14T06:11:04.2999852Z + eslint 10.6.0
+2026-10-14T06:11:04.2999997Z + eslint-plugin-sonarjs 4.1.0
+2026-10-14T06:11:04.3000144Z + jscpd 4.2.5
+2026-10-14T06:11:04.3000256Z + knip 6.24.0
+2026-10-14T06:11:04.3000366Z + madge 8.0.0
+2026-10-14T06:11:04.3000494Z + markdown-link-check 3.14.2
+2026-10-14T06:11:04.3000837Z + prettier 3.5.3
+2026-10-14T06:11:04.3000978Z + shx 0.4.0
+2026-10-14T06:11:04.3001086Z + tsx 4.21.0
+2026-10-14T06:11:04.3001215Z + typescript-eslint 8.62.1
+2026-10-14T06:11:04.3001308Z 
+2026-10-14T06:11:04.3805451Z . postinstall$ pnpm run postinstall:better-sqlite3-node-copy && pnpm run postinstall:better-sqlite3-node-restore && pnpm run postinstall:merge-driver
+2026-10-14T06:11:04.6795003Z . postinstall: $ node ./tools/scripts/copy-better-sqlite3-node.js
+2026-10-14T06:11:04.7222125Z . postinstall: 📦 Processing better-sqlite3@12.8.0:
+2026-10-14T06:11:04.7222625Z . postinstall:     /home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3
+2026-10-14T06:11:04.7350780Z . postinstall: ✅ Copied compatible binary from build/Release/
+2026-10-14T06:11:04.7358106Z . postinstall:  →  /home/runner/work/TypeAgent/TypeAgent/ts/node_modules/.pnpm/better-sqlite3@12.8.0/node_modules/better-sqlite3/prebuild-node/better_sqlite3.node
+2026-10-14T06:11:04.7583219Z . postinstall: 🔌 Provisioning Electron 41.10.3 (ABI 145) binaries
+2026-10-14T06:11:04.7586593Z . postinstall: ⬇️  Downloading Electron (ABI 145) prebuilt: better-sqlite3-v12.8.0-electron-v145-linux-x64.tar.gz
+2026-10-14T06:11:05.0717587Z . postinstall: ✅ Electron binary saved to prebuild-electron/ (ABI 145)
+2026-10-14T06:11:05.3574146Z . postinstall: $ node ./tools/scripts/restore-better-sqlite3-node.js
+2026-10-14T06:11:05.4076339Z . postinstall: ✅ better-sqlite3@12.8.0: build/Release already Node-compatible
+2026-10-14T06:11:05.7100186Z . postinstall: $ node tools/scripts/setup-merge-driver.mjs
+2026-10-14T06:11:05.7968909Z . postinstall: Done
+2026-10-14T06:11:06.0119032Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/.bin/workflow-lsp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/vscode/node_modules/workflow-lsp/dist/index.js'
+2026-10-14T06:11:06.5133396Z packages/agents/browserExtension prepare$ node ./scripts/prepare.mjs .
+2026-10-14T06:11:06.6069048Z packages/agents/browserExtension prepare: Done
+2026-10-14T06:11:06.8017920Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/.bin/typeagent-studio-service. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/studio/node_modules/@typeagent/studio-service/dist/main.js'
+2026-10-14T06:11:06.8379180Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/.bin/typeagent-memory-mcp. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/agentServer/server/node_modules/@typeagent/memory-mcp-server/dist/server.js'
+2026-10-14T06:11:06.9232932Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:11:06.9234509Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/copilot-plugin-eval/node_modules/agent-server/dist/status.js'
+2026-10-14T06:11:06.9305155Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-status. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/status.js'
+2026-10-14T06:11:06.9307172Z [WARN] Failed to create bin at /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/.bin/agent-server-stop. ENOENT: no such file or directory, open '/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/node_modules/agent-server/dist/stop.js'
+2026-10-14T06:11:06.9335811Z packages/shell postinstall$ run-script-os
+2026-10-14T06:11:07.0644867Z packages/shell postinstall: > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:11:07.0645550Z packages/shell postinstall: > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:11:07.3691963Z packages/shell postinstall:   • electron-builder  version=26.15.3
+2026-10-14T06:11:07.3722460Z packages/shell postinstall:   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:11:07.6803922Z packages/shell postinstall:   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:11:07.6808476Z packages/shell postinstall:   • executing @electron/rebuild  electronVersion=41.10.3 arch=x64 buildFromSource=false workspaceRoot=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:11:07.6810271Z packages/shell postinstall:   • installing native dependencies  arch=x64
+2026-10-14T06:11:08.0566053Z packages/shell postinstall:   • preparing       moduleName=better-sqlite3 arch=x64
+2026-10-14T06:12:00.3492992Z packages/shell postinstall:   • finished        moduleName=better-sqlite3 arch=x64
+2026-10-14T06:12:00.3495348Z packages/shell postinstall:   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:12:00.4337236Z packages/shell postinstall:   • finished        moduleName=keytar arch=x64
+2026-10-14T06:12:00.4341436Z packages/shell postinstall:   • completed installing native dependencies
+2026-10-14T06:12:00.4547790Z packages/shell postinstall: Done
+2026-10-14T06:12:00.4862283Z Done in 1m 28s using pnpm v11.9.0
+2026-10-14T06:12:00.6454917Z ##[group]Run pnpm run build:shell
+2026-10-14T06:12:00.6455123Z [36;1mpnpm run build:shell[0m
+2026-10-14T06:12:00.6509434Z shell: /usr/bin/bash -e {0}
+2026-10-14T06:12:00.6509592Z env:
+2026-10-14T06:12:00.6509806Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:12:00.6510101Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:12:00.6510352Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:12:00.6510543Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:12:00.6510843Z   DEBUG_DEMB: true
+2026-10-14T06:12:00.6510968Z ##[endgroup]
+2026-10-14T06:12:01.0258037Z $ fluid-build agent-shell -t build --dep
+2026-10-14T06:12:01.4364692Z Build Root: /home/runner/work/TypeAgent/TypeAgent/ts ([93minferred packages and tasks[39m)
+2026-10-14T06:12:01.4572420Z 
+2026-10-14T06:12:01.4573653Z [K[?25l⠋ Creating build graph...
+2026-10-14T06:12:01.4691639Z 
+2026-10-14T06:12:01.4692371Z [K[1A
+2026-10-14T06:12:01.4692778Z [K[?25l✔ Build graph created.
+2026-10-14T06:12:01.4803141Z [?25h
+2026-10-14T06:12:01.4803659Z [K[?25l⠋ Checking incremental build task status...
+2026-10-14T06:12:01.5094468Z 
+2026-10-14T06:12:01.5095713Z [K[1A
+2026-10-14T06:12:01.5096085Z [K[?25l✔ Tasks loaded.
+2026-10-14T06:12:01.5096690Z [?25hStart tasks '[96mbuild[39m' in 87 matched packages (212 total tasks in 87 packages)
+2026-10-14T06:12:03.6173137Z [  1/212] [92m✓[39m [91m@typeagent/completion-ui[39m: tsc -b - 2.099s
+2026-10-14T06:12:03.7519503Z [  2/212] [92m✓[39m [37m@typeagent/common-utils[39m: tsc -b - 2.236s
+2026-10-14T06:12:03.8462576Z [  3/212] [92m✓[39m [91m@typeagent/completion-ui[39m: copyfiles -u 1 "src/styles.css" dist - 0.226s
+2026-10-14T06:12:04.8296690Z [  4/212] [92m✓[39m [37m@typeagent/action-schema[39m: tsc -b - 3.316s
+2026-10-14T06:12:06.7602558Z [  5/212] [92m✓[39m [92m@typeagent/config[39m: tsc -b - 5.242s
+2026-10-14T06:12:06.8291087Z [  6/212] [92m✓[39m [90m@typeagent/action-schema-compiler[39m: tsc -b - 1.998s
+2026-10-14T06:12:07.1262937Z [  7/212] [92m✓[39m [94m@typeagent/agent-sdk[39m: tsc -b - 3.373s
+2026-10-14T06:12:08.3682451Z [  8/212] [92m✓[39m [93m@typeagent/copilot-macros[39m: tsc -b - 4.523s
+2026-10-14T06:12:09.1582752Z [  9/212] [92m✓[39m [34m@typeagent/dispatcher-types[39m: tsc -b - 2.031s
+2026-10-14T06:12:11.3182667Z [ 10/212] [92m✓[39m [31mworkflow-model[39m: tsc -b - 4.485s
+2026-10-14T06:12:12.9252625Z [ 11/212] [92m✓[39m [97m@typeagent/telemetry[39m: tsc -b - 6.162s
+2026-10-14T06:12:13.0602919Z [ 12/212] [92m✓[39m [91m@typeagent/agent-flows[39m: tsc -b - 4.689s
+2026-10-14T06:12:14.7850083Z [ 13/212] [92m✓[39m [33m@typeagent/chat-ui[39m: tsc -b - 5.623s (non-incremental)
+2026-10-14T06:12:17.0942098Z [ 14/212] [92m✓[39m [93m@typeagent/agent-rpc[39m: tsc -b - 4.030s
+2026-10-14T06:12:17.5706954Z [ 15/212] [92m✓[39m [31m@typeagent/taskflow-typeagent[39m: tsc -b - 2.780s
+2026-10-14T06:12:18.4702595Z [ 16/212] [92m✓[39m [94mworkflow-dsl[39m: tsc -b - 7.141s
+2026-10-14T06:12:19.4947346Z [ 17/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/discovery/discoverySchema.ts -o ./dist/discoverySchema.pas.json -t DiscoveryActions - 1.032s
+2026-10-14T06:12:19.6534906Z [ 18/212] [92m✓[39m [92m@typeagent/websocket-utils[39m: tsc -b - 2.555s
+2026-10-14T06:12:19.6793008Z [ 19/212] [92m✓[39m [94m@typeagent/aiclient[39m: tsc -b - 6.750s
+2026-10-14T06:12:20.1561777Z [ 20/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/grammarGen/grammarGenSchema.ts -o ./dist/grammarGenSchema.pas.json -t GrammarGenActions - 0.664s
+2026-10-14T06:12:20.8278046Z [ 21/212] [92m✓[39m [33m@typeagent/dispatcher-rpc[39m: tsc -b - 3.256s
+2026-10-14T06:12:21.8988878Z [ 22/212] [92m✓[39m [91m@typeagent/websocket-channel-server[39m: tsc -b src test - 2.246s
+2026-10-14T06:12:24.5562684Z [ 23/212] [92m✓[39m [31mtest-lib[39m: tsc -b - 2.649s
+2026-10-14T06:12:25.2403210Z [ 24/212] [92m✓[39m [33m@typeagent/agent-runtime[39m: tsc -b - 5.080s
+2026-10-14T06:12:25.4122604Z [ 25/212] [92m✓[39m [90m@typeagent/typechat-utils[39m: tsc -b - 4.583s
+2026-10-14T06:12:30.1592431Z [ 26/212] [92m✓[39m [96m@typeagent/azure-ai-foundry[39m: tsc -b - 4.913s
+2026-10-14T06:12:30.7262659Z [ 27/212] [92m✓[39m [96m@typeagent/azure-ai-foundry[39m: copyfiles -f ../../examples/websiteAliases/cache/phrases.json dist - 0.564s
+2026-10-14T06:12:33.0882996Z [ 28/212] [92m✓[39m [94m@typeagent/knowledge-processor[39m: tsc -b - 7.674s
+2026-10-14T06:12:33.2793419Z [ 29/212] [92m✓[39m [94m@typeagent/knowledge-processor[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.191s
+2026-10-14T06:12:33.3172903Z [ 30/212] [92m✓[39m [95mworkflow-engine[39m: tsc -b - 8.767s
+2026-10-14T06:12:33.9482405Z [ 31/212] [92m✓[39m [35m@typeagent/action-grammar[39m: tsc -b - 14.267s
+2026-10-14T06:12:34.4554701Z [ 32/212] [92m✓[39m [95m@typeagent/selfhelp[39m: tsc -b - 3.722s
+2026-10-14T06:12:36.0168580Z [ 33/212] [92m✓[39m [36m@typeagent/action-grammar-compiler[39m: tsc -b - 2.064s
+2026-10-14T06:12:36.7402590Z [ 34/212] [92m✓[39m [32m@typeagent/textpro[39m: tsc -b - 3.423s
+2026-10-14T06:12:37.6537817Z [ 35/212] [92m✓[39m [95m@typeagent/skill-catalog[39m: tsc -b - 3.205s
+2026-10-14T06:12:37.7647910Z [ 36/212] [92m✓[39m [95m@typeagent/selfhelp[39m: node scripts/copyCatalog.mjs - 0.111s (non-incremental)
+2026-10-14T06:12:39.7241318Z [ 37/212] [92m✓[39m [92m@typeagent/knowpro[39m: tsc -b - 6.443s
+2026-10-14T06:12:39.8145578Z [ 38/212] [92m✓[39m [37mgrammar-tools-core[39m: tsc -b - 3.071s
+2026-10-14T06:12:39.8552564Z [ 39/212] [92m✓[39m [92m@typeagent/knowpro[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.131s
+2026-10-14T06:12:42.6693166Z [ 40/212] [92m✓[39m [31m@typeagent/agent-cache[39m: tsc -b - 6.653s
+2026-10-14T06:12:42.9468740Z [ 41/212] [92m✓[39m [90m@typeagent/chat-agent[39m: tsc -b - 3.133s
+2026-10-14T06:12:44.1362629Z [ 42/212] [92m✓[39m [36m@typeagent/memory-storage[39m: tsc -b - 4.281s
+2026-10-14T06:12:44.3202736Z [ 43/212] [92m✓[39m [36m@typeagent/memory-storage[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.183s
+2026-10-14T06:12:46.8072569Z [ 44/212] [92m✓[39m [37m@typeagent/website-memory[39m: tsc -b - 4.137s
+2026-10-14T06:12:48.6792837Z [ 45/212] [92m✓[39m [34m@typeagent/core[39m: tsc -b - 5.719s
+2026-10-14T06:12:49.4302486Z [ 46/212] [92m✓[39m [32m@typeagent/conversation-memory[39m: tsc -b - 5.110s
+2026-10-14T06:12:49.5996316Z [ 47/212] [92m✓[39m [32m@typeagent/conversation-memory[39m: copyfiles -u 1 "src/**/*Schema*.ts" "src/**/*.json" "src/**/*.txt" dist - 0.169s
+2026-10-14T06:12:50.5082555Z [ 48/212] [92m✓[39m [33m@typeagent/image-memory[39m: tsc -b - 3.694s
+2026-10-14T06:12:50.6535328Z [ 49/212] [92m✓[39m [33m@typeagent/image-memory[39m: copyfiles -u 1 "src/**/*Schema*.ts" dist - 0.153s
+2026-10-14T06:12:50.7165022Z [ 50/212] [92m✓[39m [93mworkflow-compiler[39m: tsc -b - 2.041s
+2026-10-14T06:12:50.9292697Z [34m@typeagent/core[39m: warning during command 'node scripts/inlinePrivateDeps.mjs'
+2026-10-14T06:12:50.9293659Z [ 51/212] [92m✓[39m [34m@typeagent/core[39m: node scripts/inlinePrivateDeps.mjs - 0.212s (non-incremental)
+2026-10-14T06:12:50.9338737Z [34m@typeagent/core[39m: [bundle:private] inlined -> dist/collisions/scanner.js
+2026-10-14T06:12:50.9352147Z [34m@typeagent/core[39m: [bundle:private] inlined -> dist/replay/resolutionTraceCapture.js
+2026-10-14T06:12:50.9402149Z [34m@typeagent/core[39m: [bundle:private] done (2 file(s)).
+2026-10-14T06:12:51.6304908Z [ 52/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/onboardingSchema.ts -o ./dist/onboardingSchema.pas.json -t OnboardingActions - 0.702s
+2026-10-14T06:12:52.3997919Z [ 53/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/packaging/packagingSchema.ts -o ./dist/packagingSchema.pas.json -t PackagingActions - 0.769s
+2026-10-14T06:12:52.5676210Z [ 54/212] [92m✓[39m [33m@typeagent/graph-utils[39m: tsc -p src - 14.802s
+2026-10-14T06:12:53.0284424Z [ 55/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/phraseGen/phraseGenSchema.ts -o ./dist/phraseGenSchema.pas.json -t PhraseGenActions - 0.628s
+2026-10-14T06:12:53.2432828Z [ 56/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/scaffolder/scaffolderSchema.ts -o ./dist/scaffolderSchema.pas.json -t ScaffolderActions - 0.673s
+2026-10-14T06:12:53.6972209Z [ 57/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/schemaGen/schemaGenSchema.ts -o ./dist/schemaGenSchema.pas.json -t SchemaGenActions - 0.668s
+2026-10-14T06:12:54.0205692Z [ 58/212] [92m✓[39m [36monboarding-agent[39m: asc -i ./src/testing/testingSchema.ts -o ./dist/testingSchema.pas.json -t TestingActions - 0.778s
+2026-10-14T06:12:54.9833046Z [ 59/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/discovery/discoverySchema.agr -o ./dist/discoverySchema.ag.json - 0.960s
+2026-10-14T06:12:55.8822770Z [ 60/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/grammarGen/grammarGenSchema.agr -o ./dist/grammarGenSchema.ag.json - 0.894s
+2026-10-14T06:12:56.2359463Z [ 61/212] [92m✓[39m [35m@typeagent/montage-agent[39m: tsc -b tsconfig.json - 5.573s
+2026-10-14T06:12:56.6602841Z [ 62/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/onboardingSchema.agr -o ./dist/onboardingSchema.ag.json - 0.781s
+2026-10-14T06:12:56.9142502Z [ 63/212] [92m✓[39m [96m@typeagent/kp[39m: tsc -b - 3.213s
+2026-10-14T06:12:57.6492744Z [ 64/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/packaging/packagingSchema.agr -o ./dist/packagingSchema.ag.json - 0.990s
+2026-10-14T06:12:57.7840254Z [ 65/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/phraseGen/phraseGenSchema.agr -o ./dist/phraseGenSchema.ag.json - 0.867s
+2026-10-14T06:12:58.4723938Z [ 66/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/scaffolder/scaffolderSchema.agr -o ./dist/scaffolderSchema.ag.json - 0.825s
+2026-10-14T06:12:58.6943496Z [ 67/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/schemaGen/schemaGenSchema.agr -o ./dist/schemaGenSchema.ag.json - 0.911s
+2026-10-14T06:12:58.8474555Z [ 68/212] [92m✓[39m [90m@typeagent/chat-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.158s
+2026-10-14T06:12:59.5141560Z [ 69/212] [92m✓[39m [36monboarding-agent[39m: agc -i ./src/testing/testingSchema.agr -o ./dist/testingSchema.ag.json - 1.042s
+2026-10-14T06:13:00.3040113Z [ 70/212] [92m✓[39m [35m@typeagent/montage-agent[39m: webpack - 4.071s
+2026-10-14T06:13:00.3149336Z [33mworkflow-examples[39m: warning during command 'wfc "dsl/*.wf" -o built'
+2026-10-14T06:13:00.3154877Z [33mworkflow-examples[39m: [wfc] wrote /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/branch-reorganize.json
+2026-10-14T06:13:00.3157085Z [33mworkflow-examples[39m: [wfc] wrote /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/d1-standup-prep.json
+2026-10-14T06:13:00.3158348Z [33mworkflow-examples[39m: [wfc] wrote /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/d8-summarize-url.json
+2026-10-14T06:13:00.3159629Z [33mworkflow-examples[39m: [wfc] wrote /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/pipeline.json
+2026-10-14T06:13:00.3162131Z [33mworkflow-examples[39m: [wfc] wrote /home/runner/work/TypeAgent/TypeAgent/ts/examples/workflow/workflows/built/writing.json
+2026-10-14T06:13:00.3258806Z [ 71/212] [92m✓[39m [33mworkflow-examples[39m: wfc "dsl/*.wf" -o built - 1.478s
+2026-10-14T06:13:01.0302716Z [ 72/212] [92m✓[39m [37m@typeagent/calendar[39m: asc -i ./src/calendarActionsSchemaV3.ts -o ./dist/calendarSchema.pas.json -t CalendarActionV3 -e CalendarEntities - 0.702s
+2026-10-14T06:13:01.2428943Z [ 73/212] [92m✓[39m [34m@typeagent/browser[39m: asc -i ./src/agent/browserActionSchema.mts -o ./dist/agent/browserSchema.pas.json -t BrowserActions -e BrowserEntities - 0.939s
+2026-10-14T06:13:01.7400545Z [ 74/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/codeActionsSchema.ts -o ./dist/codeSchema.pas.json -t CodeActions -a CodeActivity - 0.708s
+2026-10-14T06:13:01.8423384Z [ 75/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/debugActionsSchema.ts -o ./dist/debugSchema.pas.json -t CodeDebugActions - 0.599s
+2026-10-14T06:13:02.6552787Z [ 76/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/displayActionsSchema.ts -o ./dist/displaySchema.pas.json -t CodeDisplayActions - 0.916s
+2026-10-14T06:13:02.6894067Z [ 77/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/generalActionsSchema.ts -o ./dist/generalSchema.pas.json -t CodeGeneralActions - 0.848s
+2026-10-14T06:13:03.4502840Z [ 78/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/workbenchCommandActionsSchema.ts -o ./dist/workbenchSchema.pas.json -t CodeWorkbenchActions - 0.759s
+2026-10-14T06:13:03.4919195Z [ 79/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/editorCodeActionsSchema.ts -o ./dist/editorSchema.pas.json -t EditorCodeActions - 0.835s
+2026-10-14T06:13:04.0913116Z [ 80/212] [92m✓[39m [35m@typeagent/memory-service[39m: tsc -b - 14.489s
+2026-10-14T06:13:04.1542872Z [ 81/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/actionsSchema.ts -o ./dist/desktopSchema.pas.json -t DesktopActions - 0.664s
+2026-10-14T06:13:04.1644434Z [ 82/212] [92m✓[39m [91m@typeagent/code-agent[39m: asc -i ./src/vscode/extensionsActionsSchema.ts -o ./dist/extensionSchema.pas.json -t CodeWorkbenchExtensionActions - 0.718s
+2026-10-14T06:13:08.1452645Z [ 83/212] [92m✓[39m [90m@typeagent/procedure-artifacts[39m: tsc -b - 4.049s
+2026-10-14T06:13:09.5435180Z [ 84/212] [92m✓[39m [35m@typeagent/browser-control-rpc[39m: tsc -b - 5.383s
+2026-10-14T06:13:09.6273043Z [ 85/212] [92m✓[39m [35m@typeagent/browser-control-rpc[39m: node ../../../tools/scripts/converters/pdfToMarkdown/build-artifacts.mjs - 0.084s (non-incremental)
+2026-10-14T06:13:11.5744991Z [ 86/212] [92m✓[39m [31m@typeagent/agent-server-protocol[39m: tsc -b - 3.430s
+2026-10-14T06:13:16.8342540Z [ 87/212] [92m✓[39m [97m@typeagent/agent-server-client[39m: tsc -b src test - 5.260s
+2026-10-14T06:13:18.6972764Z [ 88/212] [92m✓[39m [36m@typeagent/browser-extension[39m: tsc -p src/electron/tsconfig.json - 1.863s
+2026-10-14T06:13:18.9102645Z [ 89/212] [92m✓[39m [31m@typeagent/memory-client[39m: tsc -b - 14.741s
+2026-10-14T06:13:24.0382885Z [ 90/212] [92m✓[39m [36m@typeagent/browser-extension[39m: tsc -p src/extension/tsconfig.json - 5.340s
+2026-10-14T06:13:27.9043289Z [ 91/212] [92m✓[39m [96m@typeagent/studio-service[39m: tsc -b src test - 3.867s
+2026-10-14T06:13:28.2262609Z [ 92/212] [92m✓[39m [33m@typeagent/markdown-agent[39m: vite build - 28.710s
+2026-10-14T06:13:28.5330123Z [ 93/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/displayActionsSchema.ts -o ./dist/displaySchema.pas.json -t DesktopDisplayActions - 0.627s
+2026-10-14T06:13:28.8386716Z [ 94/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/personalizationActionsSchema.ts -o ./dist/personalizationSchema.pas.json -t DesktopPersonalizationActions - 0.615s
+2026-10-14T06:13:29.0462182Z [ 95/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/taskbarActionsSchema.ts -o ./dist/taskbarSchema.pas.json -t DesktopTaskbarActions - 0.513s
+2026-10-14T06:13:29.4377172Z [ 96/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/inputActionsSchema.ts -o ./dist/inputSchema.pas.json -t DesktopInputActions - 0.596s
+2026-10-14T06:13:29.4911109Z [ 97/212] [92m✓[39m [31magent-dispatcher[39m: tsc -b - 19.866s
+2026-10-14T06:13:29.6427527Z [ 98/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/privacyActionsSchema.ts -o ./dist/privacySchema.pas.json -t DesktopPrivacyActions - 0.598s
+2026-10-14T06:13:30.0571165Z [ 99/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/powerActionsSchema.ts -o ./dist/powerSchema.pas.json -t DesktopPowerActions - 0.620s
+2026-10-14T06:13:30.3233604Z [100/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: asc -i ./src/windows/systemActionsSchema.ts -o ./dist/systemSchema.pas.json -t DesktopSystemActions - 0.679s
+2026-10-14T06:13:30.7882919Z [101/212] [92m✓[39m [93m@typeagent/discord-agent[39m: asc -i ./src/discordSchema.ts -o ./dist/discordSchema.pas.json -t DiscordActions - 0.729s
+2026-10-14T06:13:30.9755092Z [102/212] [92m✓[39m [94m@typeagent/email[39m: asc -i ./src/emailActionsSchema.ts -o ./dist/emailSchema.pas.json -t EmailAction - 0.651s
+2026-10-14T06:13:31.4650060Z [103/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: asc -i ./src/github-cliSchema.ts -o ./dist/github-cliSchema.pas.json -t GithubCliActions - 0.680s
+2026-10-14T06:13:31.6042712Z [104/212] [92m✓[39m [97m@typeagent/image-agent[39m: asc -i ./src/imageActionSchema.ts -o ./dist/imageSchema.pas.json -t ImageAction - 0.627s
+2026-10-14T06:13:32.2002731Z [105/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: asc -i ./src/ipconfigSchema.ts -o ./dist/ipconfigSchema.pas.json -t IpconfigActions - 0.730s
+2026-10-14T06:13:32.2782345Z [106/212] [92m✓[39m [32m@typeagent/list-agent[39m: asc -i ./src/listSchema.ts -o ./dist/listSchema.pas.json -t ListAction -a ListActivity - 0.677s
+2026-10-14T06:13:32.8322769Z [107/212] [92m✓[39m [91m@typeagent/music[39m: asc -i ./src/agent/playerSchema.ts -o ./dist/agent/playerSchema.pas.json -t PlayerActions -e PlayerEntities - 0.629s
+2026-10-14T06:13:32.9133051Z [108/212] [92m✓[39m [92m@typeagent/music-local[39m: asc -i ./src/agent/localPlayerSchema.ts -o ./dist/agent/localPlayerSchema.pas.json -t LocalPlayerActions -e LocalPlayerEntities - 0.627s
+2026-10-14T06:13:33.4532941Z [109/212] [92m✓[39m [32mdispatcher-node-providers[39m: tsc -b - 3.962s
+2026-10-14T06:13:33.5135906Z [110/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: asc -i ./src/osNotificationsSchema.ts -o ./dist/osNotificationsSchema.pas.json -t OsNotificationsActions - 0.684s
+2026-10-14T06:13:33.5222692Z [111/212] [92m✓[39m [90m@typeagent/photo-agent[39m: asc -i ./src/photoSchema.ts -o ./dist/photoSchema.pas.json -t PhotoAction - 0.613s
+2026-10-14T06:13:34.1856273Z [112/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/schema/scriptActions.mts -o ./dist/powershellSchema.pas.json -t PowerShellActions - 0.672s
+2026-10-14T06:13:34.2055748Z [113/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/files/filesActionsSchema.mts -o ./dist/filesSchema.pas.json -t PowerShellFilesActions - 0.682s
+2026-10-14T06:13:34.8268969Z [114/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/processes/processesActionsSchema.mts -o ./dist/processesSchema.pas.json -t PowerShellProcessesActions - 0.641s
+2026-10-14T06:13:34.8363487Z [115/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/system/systemActionsSchema.mts -o ./dist/systemSchema.pas.json -t PowerShellSystemActions - 0.633s
+2026-10-14T06:13:35.5565675Z [116/212] [92m✓[39m [36m@typeagent/browser-extension[39m: build-extension - 16.650s
+2026-10-14T06:13:35.5683423Z [117/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/network/networkActionsSchema.mts -o ./dist/networkSchema.pas.json -t PowerShellNetworkActions - 0.732s
+2026-10-14T06:13:35.5822993Z [118/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/services/servicesActionsSchema.mts -o ./dist/servicesSchema.pas.json -t PowerShellServicesActions - 0.753s
+2026-10-14T06:13:36.1072847Z [119/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/shared/tsconfig.json - 0.548s
+2026-10-14T06:13:36.1913109Z [120/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/data/dataActionsSchema.mts -o ./dist/dataSchema.pas.json -t PowerShellDataActions - 0.623s
+2026-10-14T06:13:36.2088923Z [121/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: asc -i ./src/namespaces/archives/archivesActionsSchema.mts -o ./dist/archivesSchema.pas.json -t PowerShellArchivesActions - 0.628s
+2026-10-14T06:13:36.9553724Z [122/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: asc -i ./src/screencaptureSchema.ts -o ./dist/screencaptureSchema.pas.json -t ScreencaptureAction -a ScreencaptureActivity - 0.764s
+2026-10-14T06:13:37.0706843Z [123/212] [92m✓[39m [97m@typeagent/studio-agent[39m: asc -i ./src/studioSchema.ts -o ./dist/studioSchema.pas.json -t StudioActions - 0.862s
+2026-10-14T06:13:37.7398581Z [124/212] [92m✓[39m [33m@typeagent/timer-agent[39m: asc -i ./src/timerSchema.ts -o ./dist/timerSchema.pas.json -t TimerAction - 0.784s
+2026-10-14T06:13:37.8326617Z [125/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: asc -i ./src/utilitySchema.mts -o ./dist/utilitySchema.pas.json -t UtilityAction - 0.762s
+2026-10-14T06:13:38.4627842Z [126/212] [92m✓[39m [36monboarding-agent[39m: tsc -b - 5.009s
+2026-10-14T06:13:38.5114523Z [127/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: asc -i ./src/visualStudioSchema.ts -o ./dist/visualStudioSchema.pas.json -t VisualStudioActions - 0.675s
+2026-10-14T06:13:38.5740013Z [128/212] [92m✓[39m [37m@typeagent/video-agent[39m: asc -i ./src/videoActionSchema.ts -o ./dist/videoSchema.pas.json -t VideoAction - 0.830s
+2026-10-14T06:13:39.0788244Z [129/212] [92m✓[39m [92m@typeagent/weather-agent[39m: asc -i ./src/weatherSchema.ts -o ./dist/weatherSchema.pas.json -t WeatherAction - 0.610s
+2026-10-14T06:13:39.1282916Z [130/212] [92m✓[39m [93mwindowsclock-agent[39m: asc -i ./src/windowsClockSchema.ts -o ./dist/windowsClockSchema.pas.json -t WindowsClockAction - 0.617s
+2026-10-14T06:13:39.1682838Z [131/212] [92m✓[39m [91mworkflow-agent[39m: asc -i ./src/workflowSchema.ts -o ./dist/workflowSchema.pas.json -t WorkflowAction - 0.595s
+2026-10-14T06:13:39.3143143Z [132/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/client/pdf/tsconfig.json - 3.209s
+2026-10-14T06:13:40.6219637Z [133/212] [92m✓[39m [90m@typeagent/photo-agent[39m: tsc -b - 1.541s
+2026-10-14T06:13:41.3742667Z [134/212] [92m✓[39m [34m@typeagent/browser[39m: agc -i ./src/agent/browserSchema.agr -o ./dist/agent/browserSchema.ag.json - 0.759s
+2026-10-14T06:13:41.8052672Z [135/212] [92m✓[39m [97m@typeagent/image-agent[39m: tsc -b - 2.637s
+2026-10-14T06:13:41.8505438Z [136/212] [92m✓[39m [37m@typeagent/video-agent[39m: tsc -b - 2.536s
+2026-10-14T06:13:42.2107168Z [137/212] [92m✓[39m [37m@typeagent/calendar[39m: agc -i ./src/calendarSchema.agr -o ./dist/calendarSchema.ag.json - 0.836s
+2026-10-14T06:13:42.7952566Z [138/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/codeSchema.agr -o ./dist/codeSchema.ag.json - 0.942s
+2026-10-14T06:13:43.1162642Z [139/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/debugActionsSchema.agr -o ./dist/debugSchema.ag.json - 0.900s
+2026-10-14T06:13:43.7511096Z [140/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/displayActionsSchema.agr -o ./dist/displaySchema.ag.json - 0.955s
+2026-10-14T06:13:44.1542776Z [141/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/generalActionsSchema.agr -o ./dist/generalSchema.ag.json - 1.039s
+2026-10-14T06:13:44.4675381Z [142/212] [92m✓[39m [91m@typeagent/code-agent[39m: tsc -b src test - 2.661s
+2026-10-14T06:13:44.6522904Z [143/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/workbenchCommandActionsSchema.agr -o ./dist/workbenchSchema.ag.json - 0.900s
+2026-10-14T06:13:45.0702838Z [144/212] [92m✓[39m [91m@typeagent/code-agent[39m: agc -i ./src/vscode/extensionsActionsSchema.agr -o ./dist/extensionSchema.ag.json - 0.915s
+2026-10-14T06:13:45.4532611Z [92m@typeagent/desktop-automation[39m: warning during command 'agc -i ./src/desktopSchema.agr -o ./dist/desktopSchema.ag.json'
+2026-10-14T06:13:45.4561889Z [92m@typeagent/desktop-automation[39m: Action grammar written: ./dist/desktopSchema.ag.json
+2026-10-14T06:13:45.4591999Z [145/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/desktopSchema.agr -o ./dist/desktopSchema.ag.json - 0.990s
+2026-10-14T06:13:45.4612328Z [92m@typeagent/desktop-automation[39m: Grammar source map written: ./dist/desktopSchema.ag.map.json
+2026-10-14T06:13:45.4619687Z [92m@typeagent/desktop-automation[39m: 
+2026-10-14T06:13:45.4627473Z [92m@typeagent/desktop-automation[39m: src/desktopSchema.agr(95,1): warning: Rule '<ListThemes>' is defined but never used.
+2026-10-14T06:13:45.4922802Z [146/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/displaySchema.agr -o ./dist/displaySchema.ag.json - 0.842s
+2026-10-14T06:13:46.0513547Z [147/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/personalizationSchema.agr -o ./dist/personalizationSchema.ag.json - 0.982s
+2026-10-14T06:13:46.1263189Z [148/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/taskbarSchema.agr -o ./dist/taskbarSchema.ag.json - 0.669s
+2026-10-14T06:13:46.1792603Z [149/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/inputSchema.agr -o ./dist/inputSchema.ag.json - 0.687s
+2026-10-14T06:13:46.3192559Z [150/212] [92m✓[39m [33m@typeagent/markdown-agent[39m: tsc -b - 7.189s
+2026-10-14T06:13:46.8033732Z [151/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/powerSchema.agr -o ./dist/powerSchema.ag.json - 0.676s
+2026-10-14T06:13:46.8996790Z [152/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/privacySchema.agr -o ./dist/privacySchema.ag.json - 0.849s
+2026-10-14T06:13:46.9075340Z [153/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: agc -i ./src/windows/systemSchema.agr -o ./dist/systemSchema.ag.json - 0.727s
+2026-10-14T06:13:47.7232902Z [154/212] [92m✓[39m [93m@typeagent/discord-agent[39m: agc -i ./src/discordSchema.agr -o ./dist/discordSchema.ag.json - 0.915s
+2026-10-14T06:13:47.8189504Z [155/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: agc -i ./src/github-cliSchema.agr -o ./dist/github-cliSchema.ag.json - 0.912s
+2026-10-14T06:13:48.7779947Z [156/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: agc -i ./src/ipconfigSchema.agr -o ./dist/ipconfigSchema.ag.json - 0.953s
+2026-10-14T06:13:48.8717969Z [157/212] [92m✓[39m [93m@typeagent/discord-agent[39m: tsc -b - 2.556s
+2026-10-14T06:13:49.8372822Z [158/212] [92m✓[39m [31m@typeagent/ipconfig-agent[39m: tsc -b - 2.116s
+2026-10-14T06:13:49.9612611Z [159/212] [92m✓[39m [32m@typeagent/list-agent[39m: agc -i ./src/listSchema.agr -o ./dist/listSchema.ag.json - 1.089s
+2026-10-14T06:13:51.0032569Z [160/212] [92m✓[39m [95m@typeagent/github-cli-agent[39m: tsc -b src test - 4.099s
+2026-10-14T06:13:51.1487549Z [161/212] [92m✓[39m [91m@typeagent/music[39m: agc -i ./src/agent/playerSchema.agr -o ./dist/agent/playerSchema.ag.json - 1.185s
+2026-10-14T06:13:51.2252747Z [162/212] [92m✓[39m [32m@typeagent/list-agent[39m: tsc -b - 2.449s
+2026-10-14T06:13:52.0682705Z [163/212] [92m✓[39m [92m@typeagent/music-local[39m: agc -i ./src/agent/localPlayerSchema.agr -o ./dist/agent/localPlayerSchema.ag.json - 0.916s
+2026-10-14T06:13:52.9693095Z [164/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: agc -i ./src/osNotificationsSchema.agr -o ./dist/osNotificationsSchema.ag.json - 0.902s
+2026-10-14T06:13:53.6592469Z Warning: no config file found; assuming /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/playerLocal/tsconfig.json
+2026-10-14T06:13:53.6593765Z [165/212] [92m✓[39m [92m@typeagent/music-local[39m: tsc -b src test - 2.654s (non-incremental)
+2026-10-14T06:13:53.6924117Z [166/212] [92m✓[39m [37m@typeagent/os-notifications-agent[39m: tsc -b src test - 2.467s
+2026-10-14T06:13:54.6084178Z [167/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/powershellSchema.agr -o ./dist/powershellSchema.ag.json - 0.949s
+2026-10-14T06:13:54.6298761Z [168/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/files/filesSchema.agr -o ./dist/filesSchema.ag.json - 0.939s
+2026-10-14T06:13:55.1881889Z Warning: no config file found; assuming /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/player/tsconfig.json
+2026-10-14T06:13:55.1883638Z [169/212] [92m✓[39m [91m@typeagent/music[39m: tsc -b src test - 5.350s (non-incremental)
+2026-10-14T06:13:55.4503819Z [170/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/processes/processesSchema.agr -o ./dist/processesSchema.ag.json - 0.840s
+2026-10-14T06:13:55.5692917Z [171/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/system/systemSchema.agr -o ./dist/systemSchema.ag.json - 0.932s
+2026-10-14T06:13:56.0203027Z [172/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/services/servicesSchema.agr -o ./dist/servicesSchema.ag.json - 0.826s
+2026-10-14T06:13:56.3547420Z [173/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/network/networkSchema.agr -o ./dist/networkSchema.ag.json - 0.907s
+2026-10-14T06:13:56.4014622Z [174/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/data/dataSchema.agr -o ./dist/dataSchema.ag.json - 0.839s
+2026-10-14T06:13:56.4194210Z [175/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: node scripts/buildBroker.mjs - 0.063s (non-incremental)
+2026-10-14T06:13:57.0773128Z [176/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: agc -i ./src/namespaces/archives/archivesSchema.agr -o ./dist/archivesSchema.ag.json - 1.059s
+2026-10-14T06:13:57.3881013Z [177/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: agc -i ./src/screencaptureSchema.agr -o ./dist/screencaptureSchema.ag.json - 0.969s
+2026-10-14T06:13:57.4450176Z [178/212] [92m✓[39m [93m@typeagent/powershell-typeagent[39m: tsc -b - 4.477s
+2026-10-14T06:13:58.2452756Z [179/212] [92m✓[39m [33m@typeagent/timer-agent[39m: agc -i ./src/timerSchema.agr -o ./dist/timerSchema.ag.json - 0.850s
+2026-10-14T06:13:58.3823095Z [180/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: agc -i ./src/utilitySchema.agr -o ./dist/utilitySchema.ag.json - 0.937s
+2026-10-14T06:13:58.8389022Z [181/212] [92m✓[39m [33m@typeagent/timer-agent[39m: tsc -b - 1.763s
+2026-10-14T06:13:59.2759465Z [182/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: agc -i ./src/visualStudioSchema.agr -o ./dist/visualStudioSchema.ag.json - 0.895s
+2026-10-14T06:13:59.8384232Z [183/212] [92m✓[39m [94m@typeagent/screencapture-agent[39m: tsc -b src test - 3.436s
+2026-10-14T06:14:00.0772364Z [184/212] [92m✓[39m [90m@typeagent/visualstudio-agent[39m: tsc -b - 1.836s
+2026-10-14T06:14:00.3373241Z [185/212] [92m✓[39m [92m@typeagent/weather-agent[39m: agc -i ./src/weatherSchema.agr -o ./dist/weatherSchema.ag.json - 1.058s
+2026-10-14T06:14:01.0337481Z [186/212] [92m✓[39m [92m@typeagent/weather-agent[39m: tsc -b - 2.193s
+2026-10-14T06:14:03.5832472Z Warning: no config file found; assuming /home/runner/work/TypeAgent/TypeAgent/ts/packages/agents/desktop/tsconfig.json
+2026-10-14T06:14:03.5833758Z [187/212] [92m✓[39m [92m@typeagent/desktop-automation[39m: tsc -b src test - 3.738s (non-incremental)
+2026-10-14T06:14:03.6582290Z [188/212] [92m✓[39m [91mworkflow-agent[39m: tsc -b - 2.621s
+2026-10-14T06:14:04.0093985Z [189/212] [92m✓[39m [94m@typeagent/email[39m: tsc -b - 3.674s
+2026-10-14T06:14:04.7852535Z [190/212] [92m✓[39m [37m@typeagent/calendar[39m: tsc -b src test - 4.709s
+2026-10-14T06:14:06.7584268Z [191/212] [92m✓[39m [97m@typeagent/studio-agent[39m: tsc -b src test - 2.744s
+2026-10-14T06:14:07.1092546Z [192/212] [92m✓[39m [35m@typeagent/utility-typeagent[39m: tsc -b src test - 3.451s
+2026-10-14T06:14:08.1252794Z [193/212] [92m✓[39m [96mgreeting-agent[39m: tsc -b - 3.334s
+2026-10-14T06:14:08.2912483Z [194/212] [92m✓[39m [34m@typeagent/memory-agent[39m: tsc -b - 4.709s
+2026-10-14T06:14:08.4862393Z [195/212] [92m✓[39m [96msettings-agent[39m: tsc -b - 1.727s
+2026-10-14T06:14:10.3833450Z [196/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/puppeteer/tsconfig.json - 2.263s
+2026-10-14T06:14:10.6550275Z [197/212] [92m✓[39m [36monboarding-agent[39m: copyfiles -u 1 "src/**/discoveryLlmSchema.ts" "src/**/exploreLlmSchema.ts" "src/**/synthesisLlmSchema.ts" "src/**/reconLlmSchema.ts" "src/**/iterativeReconLlmSchema.ts" dist - 0.270s
+2026-10-14T06:14:14.2737008Z [198/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/server/tsconfig.json - 5.983s
+2026-10-14T06:14:16.2162416Z [199/212] [92m✓[39m [93mwindowsclock-agent[39m: tsc -b - 1.938s
+2026-10-14T06:14:17.7197095Z [200/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/agent/tsconfig.json - 10.610s
+2026-10-14T06:14:17.9069648Z [201/212] [92m✓[39m [96mgreeting-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.187s
+2026-10-14T06:14:18.0611589Z [202/212] [92m✓[39m [96msettings-agent[39m: copyfiles -u 1 "src/**/config.json" dist - 0.155s
+2026-10-14T06:14:18.5253951Z [203/212] [92m✓[39m [34m@typeagent/browser[39m: tsc -p src/views/client/library/tsconfig.json - 7.872s
+2026-10-14T06:14:27.3541150Z [204/212] [92m✓[39m [34m@typeagent/memory-mcp-server[39m: tsc -b - 11.139s
+2026-10-14T06:14:34.8043641Z [205/212] [92m✓[39m [34m@typeagent/browser[39m: vite build - 26.320s
+2026-10-14T06:14:39.0040923Z [206/212] [92m✓[39m [97mdefault-agent-provider[39m: tsc -b - 4.199s
+2026-10-14T06:14:42.1337815Z [207/212] [92m✓[39m [32magent-server[39m: tsc -b - 3.129s
+2026-10-14T06:14:42.9982992Z [208/212] [92m✓[39m [94magent-shell[39m: electron-vite build src/preload --config electron.vite.preload-cjs.config.mts --logLevel error - 0.851s
+2026-10-14T06:14:47.0217982Z [209/212] [92m✓[39m [94magent-shell[39m: tsc -p tsconfig.web.json - 4.883s
+2026-10-14T06:14:47.3379223Z Warning: no config file found; assuming /home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/tsconfig.json
+2026-10-14T06:14:47.3380353Z [210/212] [92m✓[39m [94magent-shell[39m: tsc -b src test - 4.344s (non-incremental)
+2026-10-14T06:14:47.7936641Z [211/212] [92m✓[39m [94magent-shell[39m: tsc -p tsconfig.node.json - 5.660s
+2026-10-14T06:14:58.9998700Z [212/212] [92m✓[39m [94magent-shell[39m: electron-vite build - 16.847s
+2026-10-14T06:14:59.0002063Z Build [92msucceeded[39m
+2026-10-14T06:14:59.0002590Z Total time: 177.607s (2m 57.607s)
+2026-10-14T06:14:59.0323201Z ##[group]Run for attempt in 1 2 3; do
+2026-10-14T06:14:59.0323541Z [36;1mfor attempt in 1 2 3; do[0m
+2026-10-14T06:14:59.0323803Z [36;1m  if pnpm run shell:package; then[0m
+2026-10-14T06:14:59.0324036Z [36;1m    exit 0[0m
+2026-10-14T06:14:59.0324212Z [36;1m  fi[0m
+2026-10-14T06:14:59.0324370Z [36;1m[0m
+2026-10-14T06:14:59.0324542Z [36;1m  if [ "$attempt" -lt 3 ]; then[0m
+2026-10-14T06:14:59.0324919Z [36;1m    echo "Shell packaging failed; retrying in 30 seconds (attempt $((attempt + 1)) of 3)."[0m
+2026-10-14T06:14:59.0325325Z [36;1m    sleep 30[0m
+2026-10-14T06:14:59.0325505Z [36;1m  fi[0m
+2026-10-14T06:14:59.0325661Z [36;1mdone[0m
+2026-10-14T06:14:59.0325822Z [36;1m[0m
+2026-10-14T06:14:59.0325980Z [36;1mexit 1[0m
+2026-10-14T06:14:59.0395161Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T06:14:59.0395468Z env:
+2026-10-14T06:14:59.0395662Z   ELECTRON_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron
+2026-10-14T06:14:59.0396040Z   ELECTRON_BUILDER_CACHE: /home/runner/work/TypeAgent/TypeAgent/.cache/electron-builder
+2026-10-14T06:14:59.0396292Z   NODE_OPTIONS: --max_old_space_size=8192
+2026-10-14T06:14:59.0396483Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T06:14:59.0396655Z ##[endgroup]
+2026-10-14T06:14:59.4072457Z $ pnpm -C packages/shell run package
+2026-10-14T06:14:59.6996003Z $ run-script-os
+2026-10-14T06:14:59.8052334Z 
+2026-10-14T06:14:59.8052921Z > agent-shell@0.0.1 package:linux
+2026-10-14T06:14:59.8053411Z > ELECTRON_BUILDER_ARCH=x64 pnpm run package:default --linux --x64
+2026-10-14T06:14:59.8053679Z 
+2026-10-14T06:15:00.0921493Z $ pnpm run deploy:app && electron-builder --projectDir deploy --config ../electron-builder.config.js -p never  --linux --x64
+2026-10-14T06:15:00.3902127Z $ rimraf ./deploy && pnpm --filter=agent-shell deploy --prod ./deploy --ignore-scripts && pnpm -C deploy run postinstall && node ../../tools/scripts/prune-shell-deploy.mjs ./deploy
+2026-10-14T06:15:01.0206969Z [WARN] Shared workspace lockfile detected but configuration forces legacy deploy implementation.
+2026-10-14T06:15:01.1225215Z Packages are copied from the content-addressable store to the virtual store.
+2026-10-14T06:15:01.1225893Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-10-14T06:15:01.1235325Z   Virtual store is at:             deploy/node_modules/.pnpm
+2026-10-14T06:15:01.1236074Z ✓ Lockfile passes supply-chain policies (verified 4m ago)
+2026-10-14T06:15:01.8587518Z ../..                                    | Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T06:15:02.6778075Z ../agentServer/bundledRuntime            | [WARN] deprecated @modelcontextprotocol/server-filesystem@2026.1.14
+2026-10-14T06:15:02.8609747Z ../..                                    | Progress: resolved 91, reused 0, downloaded 60, added 0
+2026-10-14T06:15:03.8744237Z ../..                                    | Progress: resolved 136, reused 0, downloaded 96, added 0
+2026-10-14T06:15:04.8742767Z ../..                                    | Progress: resolved 157, reused 0, downloaded 115, added 0
+2026-10-14T06:15:05.8842733Z ../..                                    | Progress: resolved 176, reused 0, downloaded 129, added 0
+2026-10-14T06:15:07.1275057Z ../..                                    | Progress: resolved 204, reused 0, downloaded 155, added 0
+2026-10-14T06:15:08.1459895Z ../..                                    | Progress: resolved 251, reused 0, downloaded 183, added 0
+2026-10-14T06:15:09.1672172Z ../..                                    | Progress: resolved 293, reused 0, downloaded 209, added 0
+2026-10-14T06:15:10.1672935Z ../..                                    | Progress: resolved 379, reused 0, downloaded 260, added 0
+2026-10-14T06:15:11.1693002Z ../..                                    | Progress: resolved 391, reused 0, downloaded 278, added 0
+2026-10-14T06:15:12.3839632Z ../..                                    | Progress: resolved 392, reused 0, downloaded 279, added 0
+2026-10-14T06:15:13.3844938Z ../..                                    | Progress: resolved 547, reused 0, downloaded 385, added 0
+2026-10-14T06:15:14.3872319Z ../..                                    | Progress: resolved 677, reused 0, downloaded 495, added 0
+2026-10-14T06:15:15.4175927Z ../..                                    | Progress: resolved 845, reused 0, downloaded 659, added 0
+2026-10-14T06:15:16.4762719Z ../..                                    | Progress: resolved 971, reused 0, downloaded 770, added 0
+2026-10-14T06:15:17.4992739Z ../..                                    | Progress: resolved 1021, reused 0, downloaded 803, added 0
+2026-10-14T06:15:18.8272147Z ../..                                    | Progress: resolved 1050, reused 0, downloaded 829, added 0
+2026-10-14T06:15:19.8212158Z ../..                                    | Progress: resolved 1074, reused 0, downloaded 846, added 0
+2026-10-14T06:15:20.8203490Z ../..                                    | Progress: resolved 1140, reused 0, downloaded 902, added 0
+2026-10-14T06:15:21.8209003Z ../..                                    | Progress: resolved 1240, reused 0, downloaded 1023, added 0
+2026-10-14T06:15:22.8202613Z ../..                                    | Progress: resolved 1301, reused 0, downloaded 1133, added 0
+2026-10-14T06:15:23.8260988Z ../..                                    | Progress: resolved 1381, reused 0, downloaded 1179, added 0
+2026-10-14T06:15:25.0161965Z ../..                                    | Progress: resolved 1472, reused 0, downloaded 1264, added 0
+2026-10-14T06:15:26.0183253Z ../..                                    | Progress: resolved 1586, reused 0, downloaded 1396, added 0
+2026-10-14T06:15:27.0323016Z ../..                                    | Progress: resolved 1836, reused 0, downloaded 1623, added 0
+2026-10-14T06:15:28.0464599Z ../..                                    | Progress: resolved 2010, reused 0, downloaded 1778, added 0
+2026-10-14T06:15:29.0875358Z ../..                                    | Progress: resolved 2141, reused 0, downloaded 1899, added 0
+2026-10-14T06:15:30.0934184Z ../..                                    | Progress: resolved 2190, reused 0, downloaded 1994, added 0
+2026-10-14T06:15:31.1902001Z ../..                                    | Progress: resolved 2206, reused 0, downloaded 1999, added 0
+2026-10-14T06:15:32.1934681Z ../..                                    | Progress: resolved 2472, reused 0, downloaded 2237, added 0
+2026-10-14T06:15:33.3332656Z ../..                                    | Progress: resolved 2690, reused 0, downloaded 2461, added 0
+2026-10-14T06:15:34.3370979Z ../..                                    | Progress: resolved 2940, reused 0, downloaded 2718, added 0
+2026-10-14T06:15:35.4005825Z ../..                                    | Progress: resolved 3045, reused 0, downloaded 2820, added 0
+2026-10-14T06:15:36.4144053Z ../..                                    | Progress: resolved 3047, reused 0, downloaded 2838, added 0
+2026-10-14T06:15:38.6750491Z ../..                                    | Progress: resolved 3048, reused 0, downloaded 2838, added 0
+2026-10-14T06:15:39.8251635Z [WARN] 3 deprecated subdependencies found: @types/minimatch@6.0.0, uuid@8.3.2, uuid@9.0.1
+2026-10-14T06:15:39.8253704Z ../..                                    | Progress: resolved 3048, reused 0, downloaded 2838, added 0, done
+2026-10-14T06:15:39.8382645Z [WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+2026-10-14T06:15:39.9315092Z ../..                                    | +613 ++++++++++++++++++++++++++++++++
+2026-10-14T06:15:43.5884045Z $ run-script-os
+2026-10-14T06:15:43.7266306Z 
+2026-10-14T06:15:43.7266928Z > agent-shell@0.0.1 postinstall:default
+2026-10-14T06:15:43.7267465Z > [ -n "$ELECTRON_BUILDER_ARCH" ] && electron-builder install-app-deps --arch $ELECTRON_BUILDER_ARCH || electron-builder install-app-deps
+2026-10-14T06:15:43.7267751Z 
+2026-10-14T06:15:44.0511843Z   • electron-builder  version=26.15.3
+2026-10-14T06:15:44.0550396Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:15:44.3696872Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:15:44.3701544Z   • executing @electron/rebuild  electronVersion=41.10.3 arch=x64 buildFromSource=false workspaceRoot=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=./ appDir=./
+2026-10-14T06:15:44.3702421Z   • installing native dependencies  arch=x64
+2026-10-14T06:15:44.7633769Z   • preparing       moduleName=better-sqlite3 arch=x64
+2026-10-14T06:15:44.7639768Z   • finished        moduleName=better-sqlite3 arch=x64
+2026-10-14T06:15:44.7640408Z   • preparing       moduleName=better-sqlite3 arch=x64
+2026-10-14T06:16:34.6012691Z   • finished        moduleName=better-sqlite3 arch=x64
+2026-10-14T06:16:34.6012985Z   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:16:34.6868736Z   • finished        moduleName=keytar arch=x64
+2026-10-14T06:16:34.6869287Z   • preparing       moduleName=keytar arch=x64
+2026-10-14T06:16:34.6870029Z   • finished        moduleName=keytar arch=x64
+2026-10-14T06:16:34.6870379Z   • completed installing native dependencies
+2026-10-14T06:16:34.7424724Z prune-shell-deploy: pruning deploy/node_modules (dropping @github/copilot-sdk + @anthropic-ai/claude-agent-sdk platform natives and the local-embedding runtime; connect-only shell delegates all model work to the agent-server)
+2026-10-14T06:16:34.7449393Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-linux-arm64@0.3.162
+2026-10-14T06:16:34.7454345Z   removed dir   node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-linux-x64@0.3.162
+2026-10-14T06:16:34.7458022Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64
+2026-10-14T06:16:34.7458882Z   removed link  node_modules/.pnpm/@anthropic-ai+claude-agent-sdk@0.3.162_@anthropic-ai+sdk@0.93.0_zod@4.4.3__@modelcontex_d75deff142b9cb9d949f22b4f1bf6855/node_modules/@anthropic-ai/claude-agent-sdk-linux-x64
+2026-10-14T06:16:34.7991327Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-linux-arm64@1.0.13
+2026-10-14T06:16:34.8012655Z   removed dir   node_modules/.pnpm/@github+copilot-sdk-linux-x64@1.0.13
+2026-10-14T06:16:34.8015201Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-linux-arm64
+2026-10-14T06:16:34.8015888Z   removed link  node_modules/.pnpm/@github+copilot-sdk@1.0.13/node_modules/@github/copilot-sdk-linux-x64
+2026-10-14T06:16:34.8148919Z   removed dir   node_modules/.pnpm/@huggingface+transformers@3.8.1_@types+node@22.20.1
+2026-10-14T06:16:34.8280846Z   removed link  node_modules/.pnpm/@typeagent+aiclient@file+packages+aiclient_@types+node@22.20.1_socks@2.8.7_typescript@5.4.5_zod@4.4.3/node_modules/@huggingface/transformers
+2026-10-14T06:16:34.8767151Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64
+2026-10-14T06:16:34.8767522Z   removed link  node_modules/.pnpm/node_modules/@anthropic-ai/claude-agent-sdk-linux-x64
+2026-10-14T06:16:34.8770099Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-linux-arm64
+2026-10-14T06:16:34.8770455Z   removed link  node_modules/.pnpm/node_modules/@github/copilot-sdk-linux-x64
+2026-10-14T06:16:34.8770975Z   removed link  node_modules/.pnpm/node_modules/@huggingface/transformers
+2026-10-14T06:16:34.8774150Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-node
+2026-10-14T06:16:34.8774452Z   removed link  node_modules/.pnpm/node_modules/onnxruntime-web
+2026-10-14T06:16:34.8976139Z   removed dir   node_modules/.pnpm/onnxruntime-node@1.21.0
+2026-10-14T06:16:34.9064817Z   removed dir   node_modules/.pnpm/onnxruntime-web@1.22.0-dev.20250409-89f8206ba4
+2026-10-14T06:16:34.9233528Z prune-shell-deploy: done (~1019 MB of real files removed).
+2026-10-14T06:16:35.2185262Z   • electron-builder  version=26.15.3 os=6.17.0-1022-azure
+2026-10-14T06:16:35.2242142Z   • loaded configuration  file=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/electron-builder.config.js
+2026-10-14T06:16:35.2264001Z   • Specified application directory equals to project dir — superfluous or wrong configuration  appDirectory=.
+2026-10-14T06:16:35.6077831Z   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=pnpm detected=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell
+2026-10-14T06:16:35.9097818Z   • detected workspace root for project using packageManager field  pm=pnpm config=pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b resolved=/home/runner/work/TypeAgent/TypeAgent/ts projectDir=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:16:35.9133472Z   • skipped dependencies rebuild  reason=npmRebuild is set to false
+2026-10-14T06:16:35.9134464Z   • packaging       platform=linux arch=x64 electron=41.10.3 appOutDir=dist/linux-unpacked
+2026-10-14T06:16:36.0857082Z   • downloaded      label=electron progress=100%
+2026-10-14T06:16:37.4053710Z   • downloaded electron zip extracted successfully  output=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/dist/linux-unpacked
+2026-10-14T06:16:37.4150180Z   • searching for node modules  pm=pnpm searchDir=/home/runner/work/TypeAgent/TypeAgent/ts/packages/shell/deploy
+2026-10-14T06:16:39.2087731Z   • duplicate dependency references  dependencies=["@azure/identity@4.10.0","@azure/msal-node-extensions@1.5.13","debug@4.4.1","dompurify@3.4.13","js-yaml@4.3.2","markdown-it@14.2.0","microsoft-cognitiveservices-speech-sdk@1.43.1","typechat@0.1.1","keytar@7.9.0","linkify-it@5.0.2","fs-extra@10.1.0","@typespec/ts-http-runtime@0.2.2","@azure/core-auth@1.11.0","@azure/core-tracing@1.4.0","@azure/core-util@1.14.0","@azure/logger@1.4.0","prebuild-install@7.1.3","debug@4.4.3","http-proxy-agent@7.0.2","https-proxy-agent@7.0.6","@azure/abort-controller@2.2.0","once@1.4.0","readable-stream@3.6.2"]
+2026-10-14T06:16:39.2090996Z   • unresolved duplicate dependency references  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:16:39.2095376Z   • cannot find path for dependency  dependencies=["@typeagent/agent-rpc@link:../agentRpc","@typeagent/agent-runtime@link:../typeagent","@typeagent/agent-sdk@link:../agentSdk","@typeagent/agent-server-client@link:../agentServer/client","@typeagent/agent-server-protocol@link:../agentServer/protocol","@typeagent/aiclient@link:../aiclient","@typeagent/browser-control-rpc@link:../agents/browserControlRpc","@typeagent/chat-ui@link:../chat-ui","@typeagent/common-utils@link:../utils/commonUtils","@typeagent/config@link:../config","@typeagent/dispatcher-rpc@link:../dispatcher/rpc","@typeagent/dispatcher-types@link:../dispatcher/types","@typeagent/telemetry@link:../telemetry","@typeagent/typechat-utils@link:../utils/typechatUtils","@typeagent/websocket-channel-server@link:../utils/webSocketChannelServer","@typeagent/websocket-utils@link:../utils/webSocketUtils","agent-dispatcher@link:../dispatcher/dispatcher"]
+2026-10-14T06:16:42.8774890Z   • building        target=deb arch=x64 file=dist/typeagentshell-0.0.1-linux-amd64.deb
+2026-10-14T06:16:42.8792263Z   • default Electron icon is used  reason=application icon is not set
+2026-10-14T06:16:42.8796251Z   • electron uses desktopName as app_id / WM_CLASS for window association. Without it desktop environments may not link running windows to this .desktop entry. Set desktopName in package.json and linux.syncDesktopName: true to fix.  reason=desktopName is not set in package.json docs=https://www.electron.build/linux#window-association-desktopname--syncdesktopname
+2026-10-14T06:16:42.9962381Z   • downloaded      label=fpm-1.17.0-ruby-3.4.3-linux-amd64.7z progress=100%
+2026-10-14T06:16:43.3053694Z   • downloaded      label=7zip-linux-x64.tar.gz progress=100%
+2026-10-14T06:17:33.3564149Z Post job cleanup.
+2026-10-14T06:17:33.4415517Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/TypeAgent/TypeAgent --files-from manifest.txt --use-compress-program zstdmt
+2026-10-14T06:17:47.3244199Z Failed to save: Unable to reserve cache with key node-cache-Linux-x64-pnpm-376d081277e1a2dc37952a7b00233cb53ee72de66fc441195b0b64c08a9dcb91, another job may be creating this cache.
+2026-10-14T06:17:47.4880014Z Post job cleanup.
+2026-10-14T06:17:47.5776110Z Pruning is unnecessary.
+2026-10-14T06:17:47.5882640Z Post job cleanup.
+2026-10-14T06:17:47.6433365Z [command]/usr/bin/git version
+2026-10-14T06:17:47.6492277Z git version 2.55.0
+2026-10-14T06:17:47.6508572Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/5af6fceb-3afe-4b99-a6b8-8a42dcc54f94/.gitconfig'
+2026-10-14T06:17:47.6514535Z Temporarily overriding HOME='/home/runner/work/_temp/5af6fceb-3afe-4b99-a6b8-8a42dcc54f94' before making global git config changes
+2026-10-14T06:17:47.6515266Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T06:17:47.6518074Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TypeAgent/TypeAgent
+2026-10-14T06:17:47.6545499Z Removing SSH command configuration
+2026-10-14T06:17:47.6549125Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T06:17:47.6575046Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T06:17:47.6769017Z Removing HTTP extra header
+2026-10-14T06:17:47.6772501Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T06:17:47.6797258Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T06:17:47.6973869Z Removing includeIf entries pointing to credentials config files
+2026-10-14T06:17:47.6978738Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T06:17:47.7002927Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:17:47.7003640Z includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:17:47.7004777Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:17:47.7005994Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:17:47.7017288Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path
+2026-10-14T06:17:47.7038855Z /home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:17:47.7046963Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-d8a139a3\-a7bd\-41a3\-8e38\-ac2adacbafac\.config
+2026-10-14T06:17:47.7073907Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path
+2026-10-14T06:17:47.7097450Z /home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:17:47.7103976Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TypeAgent/TypeAgent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-d8a139a3\-a7bd\-41a3\-8e38\-ac2adacbafac\.config
+2026-10-14T06:17:47.7129205Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T06:17:47.7146153Z /github/runner_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:17:47.7152301Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-d8a139a3\-a7bd\-41a3\-8e38\-ac2adacbafac\.config
+2026-10-14T06:17:47.7176565Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T06:17:47.7194049Z /github/runner_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config
+2026-10-14T06:17:47.7197695Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-d8a139a3\-a7bd\-41a3\-8e38\-ac2adacbafac\.config
+2026-10-14T06:17:47.7224096Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T06:17:47.7403099Z Removing credentials config '/home/runner/work/_temp/git-credentials-d8a139a3-a7bd-41a3-8e38-ac2adacbafac.config'
+2026-10-14T06:17:47.7519426Z Cleaning up orphan processes

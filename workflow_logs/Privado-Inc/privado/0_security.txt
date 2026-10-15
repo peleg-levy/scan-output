@@ -1,0 +1,355 @@
+﻿2026-10-06T13:38:24.0556394Z Current runner version: '2.337.0'
+2026-10-06T13:38:24.0582279Z ##[group]Runner Image Provisioner
+2026-10-06T13:38:24.0583345Z Hosted Compute Agent
+2026-10-06T13:38:24.0583947Z Version: 20260901.588
+2026-10-06T13:38:24.0584631Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-06T13:38:24.0585416Z Build Date: 2026-09-01T19:56:44Z
+2026-10-06T13:38:24.0586101Z Worker ID: {7b7ac6a0-a734-4143-8024-4928e48f6ed2}
+2026-10-06T13:38:24.0586891Z Azure Region: westus2
+2026-10-06T13:38:24.0587505Z ##[endgroup]
+2026-10-06T13:38:24.0590343Z ##[group]Operating System
+2026-10-06T13:38:24.0591108Z Ubuntu
+2026-10-06T13:38:24.0591643Z 24.04.5
+2026-10-06T13:38:24.0592216Z LTS
+2026-10-06T13:38:24.0592732Z ##[endgroup]
+2026-10-06T13:38:24.0593313Z ##[group]Runner Image
+2026-10-06T13:38:24.0594037Z Image: ubuntu-24.04
+2026-10-06T13:38:24.0594720Z Version: 20260927.320.1
+2026-10-06T13:38:24.0596050Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-06T13:38:24.0597693Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-06T13:38:24.0598926Z ##[endgroup]
+2026-10-06T13:38:24.0602056Z ##[group]GITHUB_TOKEN Permissions
+2026-10-06T13:38:24.0604697Z Actions: write
+2026-10-06T13:38:24.0605340Z ArtifactMetadata: write
+2026-10-06T13:38:24.0606058Z Attestations: write
+2026-10-06T13:38:24.0606628Z Checks: write
+2026-10-06T13:38:24.0607224Z CodeQuality: write
+2026-10-06T13:38:24.0607844Z Contents: write
+2026-10-06T13:38:24.0608427Z CopilotRequests: write
+2026-10-06T13:38:24.0609470Z Deployments: write
+2026-10-06T13:38:24.0610043Z Discussions: write
+2026-10-06T13:38:24.0610635Z Drives: write
+2026-10-06T13:38:24.0611193Z Issues: write
+2026-10-06T13:38:24.0611791Z Metadata: read
+2026-10-06T13:38:24.0612506Z Models: read
+2026-10-06T13:38:24.0613053Z Packages: write
+2026-10-06T13:38:24.0613647Z Pages: write
+2026-10-06T13:38:24.0614243Z PullRequests: write
+2026-10-06T13:38:24.0614887Z RepositoryProjects: write
+2026-10-06T13:38:24.0615601Z SecurityEvents: write
+2026-10-06T13:38:24.0616183Z Statuses: write
+2026-10-06T13:38:24.0616777Z VulnerabilityAlerts: read
+2026-10-06T13:38:24.0617395Z ##[endgroup]
+2026-10-06T13:38:24.0619918Z Secret source: Actions
+2026-10-06T13:38:24.0620969Z Cache mode: read
+2026-10-06T13:38:24.0621889Z Prepare workflow directory
+2026-10-06T13:38:24.0964445Z Prepare all required actions
+2026-10-06T13:38:24.1013341Z Getting action download info
+2026-10-06T13:38:24.5204370Z Download action repository 'actions/checkout@master' (SHA:f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a)
+2026-10-06T13:38:24.6464097Z Download action repository 'snyk/actions@master' (SHA:b075801f26076be9bb50521154cafab73f44da0c)
+2026-10-06T13:38:24.9970650Z Complete job name: security
+2026-10-06T13:38:25.0470613Z ##[group]Pull down action image 'snyk/snyk:docker'
+2026-10-06T13:38:25.0585954Z ##[command]/usr/bin/docker pull snyk/snyk:docker
+2026-10-06T13:38:26.2673015Z docker: Pulling from snyk/snyk
+2026-10-06T13:38:26.5084843Z e2de96513ba9: Already exists
+2026-10-06T13:38:26.5116935Z 5fc72bda2346: Pulling fs layer
+2026-10-06T13:38:26.5117677Z 4f4fb700ef54: Pulling fs layer
+2026-10-06T13:38:26.5118277Z 39072b6860d9: Pulling fs layer
+2026-10-06T13:38:26.5119218Z fb9d9afb546d: Pulling fs layer
+2026-10-06T13:38:26.5119754Z e2080e818347: Pulling fs layer
+2026-10-06T13:38:26.5120288Z 6b2f2c0a1a49: Pulling fs layer
+2026-10-06T13:38:26.5120975Z 7f4113b1eed1: Pulling fs layer
+2026-10-06T13:38:26.5121593Z 726104e38297: Pulling fs layer
+2026-10-06T13:38:26.5122109Z 575ee58fd309: Pulling fs layer
+2026-10-06T13:38:26.5122477Z febdc1ea78be: Pulling fs layer
+2026-10-06T13:38:26.5123026Z b10c79548425: Pulling fs layer
+2026-10-06T13:38:26.5123439Z d1ec225414d0: Pulling fs layer
+2026-10-06T13:38:26.5123883Z e121e30e82ed: Pulling fs layer
+2026-10-06T13:38:26.5124216Z 9b57868bebc2: Pulling fs layer
+2026-10-06T13:38:26.5124606Z 7ecd9c7cad66: Pulling fs layer
+2026-10-06T13:38:26.5124943Z 8bc2b6b19ed9: Pulling fs layer
+2026-10-06T13:38:26.5125322Z 9fe2c33ce0d2: Pulling fs layer
+2026-10-06T13:38:26.5126008Z 3cf46d890cc3: Pulling fs layer
+2026-10-06T13:38:26.5126343Z ca3e7f7ac059: Pulling fs layer
+2026-10-06T13:38:26.5126682Z ec6a0fb1bd4d: Pulling fs layer
+2026-10-06T13:38:26.5127019Z fb9d9afb546d: Waiting
+2026-10-06T13:38:26.5127326Z e2080e818347: Waiting
+2026-10-06T13:38:26.5127657Z 6b2f2c0a1a49: Waiting
+2026-10-06T13:38:26.5127950Z 7f4113b1eed1: Waiting
+2026-10-06T13:38:26.5128254Z 726104e38297: Waiting
+2026-10-06T13:38:26.5128850Z 575ee58fd309: Waiting
+2026-10-06T13:38:26.5129171Z febdc1ea78be: Waiting
+2026-10-06T13:38:26.5129475Z b10c79548425: Waiting
+2026-10-06T13:38:26.5129804Z d1ec225414d0: Waiting
+2026-10-06T13:38:26.5130092Z e121e30e82ed: Waiting
+2026-10-06T13:38:26.5130394Z 9fe2c33ce0d2: Waiting
+2026-10-06T13:38:26.5130700Z 9b57868bebc2: Waiting
+2026-10-06T13:38:26.5130999Z 3cf46d890cc3: Waiting
+2026-10-06T13:38:26.5131284Z 7ecd9c7cad66: Waiting
+2026-10-06T13:38:26.5131573Z ca3e7f7ac059: Waiting
+2026-10-06T13:38:26.5131859Z 8bc2b6b19ed9: Waiting
+2026-10-06T13:38:26.5132157Z ec6a0fb1bd4d: Waiting
+2026-10-06T13:38:26.7760259Z 39072b6860d9: Verifying Checksum
+2026-10-06T13:38:26.7764329Z 39072b6860d9: Download complete
+2026-10-06T13:38:26.7765490Z 4f4fb700ef54: Verifying Checksum
+2026-10-06T13:38:26.7766696Z 4f4fb700ef54: Download complete
+2026-10-06T13:38:26.8802331Z 5fc72bda2346: Verifying Checksum
+2026-10-06T13:38:27.1400373Z 5fc72bda2346: Download complete
+2026-10-06T13:38:27.1400978Z fb9d9afb546d: Verifying Checksum
+2026-10-06T13:38:27.1401652Z fb9d9afb546d: Download complete
+2026-10-06T13:38:27.1478067Z e2080e818347: Verifying Checksum
+2026-10-06T13:38:27.1479678Z e2080e818347: Download complete
+2026-10-06T13:38:27.1871097Z 5fc72bda2346: Pull complete
+2026-10-06T13:38:27.1986794Z 4f4fb700ef54: Pull complete
+2026-10-06T13:38:27.2123363Z 39072b6860d9: Pull complete
+2026-10-06T13:38:27.2397597Z 6b2f2c0a1a49: Verifying Checksum
+2026-10-06T13:38:27.3747062Z 6b2f2c0a1a49: Download complete
+2026-10-06T13:38:27.3747620Z 726104e38297: Verifying Checksum
+2026-10-06T13:38:27.3749004Z 726104e38297: Download complete
+2026-10-06T13:38:27.3838171Z 7f4113b1eed1: Verifying Checksum
+2026-10-06T13:38:27.3839150Z 7f4113b1eed1: Download complete
+2026-10-06T13:38:27.4345911Z fb9d9afb546d: Pull complete
+2026-10-06T13:38:27.4590576Z 575ee58fd309: Download complete
+2026-10-06T13:38:27.6304250Z b10c79548425: Verifying Checksum
+2026-10-06T13:38:27.6305014Z b10c79548425: Download complete
+2026-10-06T13:38:27.6987398Z febdc1ea78be: Verifying Checksum
+2026-10-06T13:38:27.6988032Z febdc1ea78be: Download complete
+2026-10-06T13:38:27.7001040Z d1ec225414d0: Verifying Checksum
+2026-10-06T13:38:27.7002251Z d1ec225414d0: Download complete
+2026-10-06T13:38:27.7637654Z e2080e818347: Pull complete
+2026-10-06T13:38:27.9302212Z 9b57868bebc2: Verifying Checksum
+2026-10-06T13:38:27.9302935Z 9b57868bebc2: Download complete
+2026-10-06T13:38:27.9348611Z 6b2f2c0a1a49: Pull complete
+2026-10-06T13:38:27.9383444Z 7ecd9c7cad66: Verifying Checksum
+2026-10-06T13:38:27.9385279Z 7ecd9c7cad66: Download complete
+2026-10-06T13:38:27.9474488Z 7f4113b1eed1: Pull complete
+2026-10-06T13:38:27.9603436Z 726104e38297: Pull complete
+2026-10-06T13:38:27.9707993Z 575ee58fd309: Pull complete
+2026-10-06T13:38:28.1740096Z 8bc2b6b19ed9: Verifying Checksum
+2026-10-06T13:38:28.1740893Z 8bc2b6b19ed9: Download complete
+2026-10-06T13:38:28.1751265Z febdc1ea78be: Pull complete
+2026-10-06T13:38:28.1767604Z e121e30e82ed: Verifying Checksum
+2026-10-06T13:38:28.1768389Z e121e30e82ed: Download complete
+2026-10-06T13:38:28.1776665Z 9fe2c33ce0d2: Verifying Checksum
+2026-10-06T13:38:28.1777192Z 9fe2c33ce0d2: Download complete
+2026-10-06T13:38:28.1975333Z b10c79548425: Pull complete
+2026-10-06T13:38:28.2103045Z d1ec225414d0: Pull complete
+2026-10-06T13:38:28.4695395Z ca3e7f7ac059: Verifying Checksum
+2026-10-06T13:38:28.4696954Z ca3e7f7ac059: Download complete
+2026-10-06T13:38:28.4932689Z 3cf46d890cc3: Verifying Checksum
+2026-10-06T13:38:28.4933517Z 3cf46d890cc3: Download complete
+2026-10-06T13:38:28.7435688Z ec6a0fb1bd4d: Verifying Checksum
+2026-10-06T13:38:28.7436557Z ec6a0fb1bd4d: Download complete
+2026-10-06T13:38:29.5187168Z e121e30e82ed: Pull complete
+2026-10-06T13:38:29.5288445Z 9b57868bebc2: Pull complete
+2026-10-06T13:38:29.5399473Z 7ecd9c7cad66: Pull complete
+2026-10-06T13:38:29.5471212Z 8bc2b6b19ed9: Pull complete
+2026-10-06T13:38:29.5560493Z 9fe2c33ce0d2: Pull complete
+2026-10-06T13:38:29.5918290Z 3cf46d890cc3: Pull complete
+2026-10-06T13:38:29.6192100Z ca3e7f7ac059: Pull complete
+2026-10-06T13:38:30.7244450Z ec6a0fb1bd4d: Pull complete
+2026-10-06T13:38:30.7282626Z Digest: sha256:18dc6d11d1c07b48327a5c29df82c8e4e5563d0607797e160398e1df0186d77b
+2026-10-06T13:38:30.7297445Z Status: Downloaded newer image for snyk/snyk:docker
+2026-10-06T13:38:30.7307372Z docker.io/snyk/snyk:docker
+2026-10-06T13:38:30.7329987Z ##[endgroup]
+2026-10-06T13:38:30.7654750Z ##[group]Run actions/checkout@master
+2026-10-06T13:38:30.7655332Z with:
+2026-10-06T13:38:30.7655540Z   ref: rules/mule
+2026-10-06T13:38:30.7655768Z   repository: Privado-Inc/privado
+2026-10-06T13:38:30.7658274Z   token: ***
+2026-10-06T13:38:30.7658485Z   ssh-strict: true
+2026-10-06T13:38:30.7658910Z   ssh-user: git
+2026-10-06T13:38:30.7659122Z   persist-credentials: true
+2026-10-06T13:38:30.7659350Z   clean: true
+2026-10-06T13:38:30.7659560Z   sparse-checkout-cone-mode: true
+2026-10-06T13:38:30.7659815Z   fetch-depth: 1
+2026-10-06T13:38:30.7660010Z   fetch-tags: false
+2026-10-06T13:38:30.7660212Z   show-progress: true
+2026-10-06T13:38:30.7660417Z   lfs: false
+2026-10-06T13:38:30.7660601Z   submodules: false
+2026-10-06T13:38:30.7660806Z   set-safe-directory: true
+2026-10-06T13:38:30.7661057Z   allow-unsafe-pr-checkout: false
+2026-10-06T13:38:30.7661552Z ##[endgroup]
+2026-10-06T13:38:30.8610285Z Syncing repository: Privado-Inc/privado
+2026-10-06T13:38:30.8611793Z ##[group]Getting Git version info
+2026-10-06T13:38:30.8612190Z Working directory is '/home/runner/work/privado/privado'
+2026-10-06T13:38:30.8612751Z [command]/usr/bin/git version
+2026-10-06T13:38:30.8704255Z git version 2.55.0
+2026-10-06T13:38:30.8726194Z ##[endgroup]
+2026-10-06T13:38:30.8804875Z Temporarily overriding HOME='/home/runner/work/_temp/001b4642-d1d0-47c8-96c1-9f551c43751d' before making global git config changes
+2026-10-06T13:38:30.8806004Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T13:38:30.8807051Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/privado/privado
+2026-10-06T13:38:30.8809300Z Deleting the contents of '/home/runner/work/privado/privado'
+2026-10-06T13:38:30.8810224Z ##[group]Determining repository object format
+2026-10-06T13:38:31.1831706Z ##[endgroup]
+2026-10-06T13:38:31.1832739Z ##[group]Initializing the repository
+2026-10-06T13:38:31.1846568Z [command]/usr/bin/git init /home/runner/work/privado/privado
+2026-10-06T13:38:31.1999321Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-06T13:38:31.2000705Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-06T13:38:31.2006469Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-06T13:38:31.2007388Z hint: call:
+2026-10-06T13:38:31.2007839Z hint:
+2026-10-06T13:38:31.2008738Z hint: 	git config --global init.defaultBranch <name>
+2026-10-06T13:38:31.2009544Z hint:
+2026-10-06T13:38:31.2010237Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-06T13:38:31.2011340Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-06T13:38:31.2012221Z hint:
+2026-10-06T13:38:31.2012746Z hint: 	git branch -m <name>
+2026-10-06T13:38:31.2013322Z hint:
+2026-10-06T13:38:31.2014059Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-06T13:38:31.2015246Z Initialized empty Git repository in /home/runner/work/privado/privado/.git/
+2026-10-06T13:38:31.2020018Z [command]/usr/bin/git remote add origin https://github.com/Privado-Inc/privado
+2026-10-06T13:38:31.2092296Z ##[endgroup]
+2026-10-06T13:38:31.2093341Z ##[group]Disabling automatic garbage collection
+2026-10-06T13:38:31.2096822Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-06T13:38:31.2149529Z ##[endgroup]
+2026-10-06T13:38:31.2150449Z ##[group]Setting up auth
+2026-10-06T13:38:31.2151189Z Removing SSH command configuration
+2026-10-06T13:38:31.2159725Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T13:38:31.2212220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T13:38:31.2620980Z Removing HTTP extra header
+2026-10-06T13:38:31.2626419Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T13:38:31.2707213Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T13:38:31.2928855Z Removing includeIf entries pointing to credentials config files
+2026-10-06T13:38:31.2929611Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T13:38:31.2962083Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T13:38:31.3184155Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-06T13:38:31.3223511Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/privado/privado/.git.path /home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:31.3256728Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/privado/privado/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:31.3293804Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:31.3326386Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:31.3356606Z ##[endgroup]
+2026-10-06T13:38:31.3357252Z ##[group]Fetching the repository
+2026-10-06T13:38:31.3364638Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/rules/mule*:refs/remotes/origin/rules/mule* +refs/tags/rules/mule*:refs/tags/rules/mule*
+2026-10-06T13:38:32.4771170Z From https://github.com/Privado-Inc/privado
+2026-10-06T13:38:32.4771939Z  * [new branch]      rules/mule -> origin/rules/mule
+2026-10-06T13:38:32.4777971Z ##[endgroup]
+2026-10-06T13:38:32.4778926Z ##[group]Determining the checkout info
+2026-10-06T13:38:32.4784873Z [command]/usr/bin/git branch --list --remote origin/rules/mule
+2026-10-06T13:38:32.4813783Z   origin/rules/mule
+2026-10-06T13:38:32.4818307Z ##[endgroup]
+2026-10-06T13:38:32.4823416Z [command]/usr/bin/git sparse-checkout disable
+2026-10-06T13:38:32.4875504Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-06T13:38:32.4908203Z ##[group]Checking out the ref
+2026-10-06T13:38:32.4912626Z [command]/usr/bin/git checkout --progress --force -B rules/mule refs/remotes/origin/rules/mule
+2026-10-06T13:38:32.9773828Z Switched to a new branch 'rules/mule'
+2026-10-06T13:38:32.9779908Z branch 'rules/mule' set up to track 'origin/rules/mule'.
+2026-10-06T13:38:32.9792427Z ##[endgroup]
+2026-10-06T13:38:32.9841528Z [command]/usr/bin/git log -1 --format=%H
+2026-10-06T13:38:32.9871570Z 7a6ce6227d80941ab27cd2040a3cc32418a05b9a
+2026-10-06T13:38:33.0074639Z ##[group]Run docker build -t privado-main-oss -f Dockerfile .
+2026-10-06T13:38:33.0075416Z [36;1mdocker build -t privado-main-oss -f Dockerfile .[0m
+2026-10-06T13:38:33.0314153Z shell: /usr/bin/bash -e {0}
+2026-10-06T13:38:33.0314453Z ##[endgroup]
+2026-10-06T13:38:33.5523725Z #0 building with "default" instance using docker driver
+2026-10-06T13:38:33.5524220Z 
+2026-10-06T13:38:33.5524392Z #1 [internal] load build definition from Dockerfile
+2026-10-06T13:38:33.5524791Z #1 transferring dockerfile: 179B done
+2026-10-06T13:38:33.5525104Z #1 DONE 0.0s
+2026-10-06T13:38:33.5525244Z 
+2026-10-06T13:38:33.5525448Z #2 [internal] load metadata for docker.io/library/alpine:latest
+2026-10-06T13:38:33.7668363Z #2 ...
+2026-10-06T13:38:33.7669007Z 
+2026-10-06T13:38:33.7669375Z #3 [auth] library/alpine:pull token for registry-1.docker.io
+2026-10-06T13:38:33.7669941Z #3 DONE 0.0s
+2026-10-06T13:38:33.9160630Z 
+2026-10-06T13:38:33.9161529Z #2 [internal] load metadata for docker.io/library/alpine:latest
+2026-10-06T13:38:34.2575492Z #2 DONE 0.9s
+2026-10-06T13:38:34.3764605Z 
+2026-10-06T13:38:34.3766287Z #4 [internal] load .dockerignore
+2026-10-06T13:38:34.3766891Z #4 transferring context: 114B done
+2026-10-06T13:38:34.3769209Z #4 DONE 0.0s
+2026-10-06T13:38:34.3769430Z 
+2026-10-06T13:38:34.3770427Z #5 [1/5] FROM docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+2026-10-06T13:38:34.3772108Z #5 resolve docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 done
+2026-10-06T13:38:34.3803706Z #5 sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 9.22kB / 9.22kB done
+2026-10-06T13:38:34.3812486Z #5 sha256:d56c381f961d307a21b3ca004cf1e3910f106644aefb1f43e654c8a56c4fd395 1.02kB / 1.02kB done
+2026-10-06T13:38:34.3813777Z #5 sha256:320994c3b997e2ec6433f717f153e108023c5bec8fefa8d76b83451d16d05ea8 611B / 611B done
+2026-10-06T13:38:34.3814648Z #5 DONE 0.0s
+2026-10-06T13:38:34.3814874Z 
+2026-10-06T13:38:34.3815081Z #6 [internal] load build context
+2026-10-06T13:38:34.4821827Z #6 ...
+2026-10-06T13:38:34.4822186Z 
+2026-10-06T13:38:34.4822374Z #7 [2/5] WORKDIR /home
+2026-10-06T13:38:34.4822908Z #7 DONE 0.2s
+2026-10-06T13:38:34.4823160Z 
+2026-10-06T13:38:34.4823352Z #6 [internal] load build context
+2026-10-06T13:38:34.7766073Z #6 ...
+2026-10-06T13:38:34.7766398Z 
+2026-10-06T13:38:34.7776035Z #8 [3/5] RUN mkdir -p /home/rules
+2026-10-06T13:38:34.7777415Z #8 DONE 0.2s
+2026-10-06T13:38:34.7778391Z 
+2026-10-06T13:38:34.7778841Z #6 [internal] load build context
+2026-10-06T13:38:35.3571751Z #6 transferring context: 87.00MB 0.9s done
+2026-10-06T13:38:35.3572160Z #6 DONE 0.9s
+2026-10-06T13:38:35.3572320Z 
+2026-10-06T13:38:35.3572435Z #9 [4/5] COPY . /home/rules
+2026-10-06T13:38:35.8847613Z #9 DONE 0.7s
+2026-10-06T13:38:36.0118456Z 
+2026-10-06T13:38:36.0119518Z #10 [5/5] RUN echo 1.0.0 >> /home/rules/version.txt
+2026-10-06T13:38:36.0120098Z #10 DONE 0.1s
+2026-10-06T13:38:36.1636710Z 
+2026-10-06T13:38:36.1637290Z #11 exporting to image
+2026-10-06T13:38:36.1638030Z #11 exporting layers
+2026-10-06T13:38:37.0112779Z #11 exporting layers 1.0s done
+2026-10-06T13:38:37.0308536Z #11 writing image sha256:4484116acb28cc191bc07783fc5527ac81c7f132e2c8b334d6a3c155adfbbf68 done
+2026-10-06T13:38:37.0309788Z #11 naming to docker.io/library/privado-main-oss done
+2026-10-06T13:38:37.0310327Z #11 DONE 1.0s
+2026-10-06T13:38:37.0453271Z ##[group]Run snyk/actions/docker@master
+2026-10-06T13:38:37.0453575Z with:
+2026-10-06T13:38:37.0453799Z   image: privado-main-oss
+2026-10-06T13:38:37.0454076Z   args: --severity-threshold=high
+2026-10-06T13:38:37.0454329Z   command: test
+2026-10-06T13:38:37.0454518Z   json: false
+2026-10-06T13:38:37.0454701Z   sarif: true
+2026-10-06T13:38:37.0454875Z env:
+2026-10-06T13:38:37.0455189Z   SNYK_TOKEN: ***
+2026-10-06T13:38:37.0455382Z ##[endgroup]
+2026-10-06T13:38:37.0573873Z ##[command]/usr/bin/docker run --name snyksnykdocker_b4fe82 --label 0a6adf --workdir /github/workspace --rm -e "SNYK_TOKEN" -e "INPUT_IMAGE" -e "INPUT_ARGS" -e "INPUT_COMMAND" -e "INPUT_JSON" -e "INPUT_SARIF" -e "SNYK_INTEGRATION_NAME" -e "SNYK_INTEGRATION_VERSION" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_CACHE_MODE" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/privado/privado":"/github/workspace" snyk/snyk:docker  "snyk" "test" "--severity-threshold=high" "--docker" "privado-main-oss"
+2026-10-06T13:38:45.3598180Z 
+2026-10-06T13:38:45.3598705Z Testing privado-main-oss...
+2026-10-06T13:38:45.3600022Z 
+2026-10-06T13:38:45.3600207Z Organization:      vineet.kumar
+2026-10-06T13:38:45.3600677Z Package manager:   apk
+2026-10-06T13:38:45.3601156Z Project name:      docker-image|privado-main-oss
+2026-10-06T13:38:45.3601581Z Docker image:      privado-main-oss
+2026-10-06T13:38:45.3602143Z Platform:          linux/amd64
+2026-10-06T13:38:45.3602476Z Target OS:         Alpine Linux v3.24
+2026-10-06T13:38:45.3602846Z Licenses:          enabled
+2026-10-06T13:38:45.3603131Z 
+2026-10-06T13:38:45.3603700Z ✔ Tested 16 dependencies for known issues, no vulnerable paths found.
+2026-10-06T13:38:45.3604096Z 
+2026-10-06T13:38:45.3604100Z 
+2026-10-06T13:38:48.1116482Z Post job cleanup.
+2026-10-06T13:38:48.1953172Z [command]/usr/bin/git version
+2026-10-06T13:38:48.1998711Z git version 2.55.0
+2026-10-06T13:38:48.2035779Z Temporarily overriding HOME='/home/runner/work/_temp/120d6d9d-8532-44c5-9339-a7a5c2f82c35' before making global git config changes
+2026-10-06T13:38:48.2037177Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T13:38:48.2042260Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/privado/privado
+2026-10-06T13:38:48.2073460Z Removing SSH command configuration
+2026-10-06T13:38:48.2080032Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T13:38:48.2113616Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T13:38:48.2340822Z Removing HTTP extra header
+2026-10-06T13:38:48.2346835Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T13:38:48.2380065Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T13:38:48.2600634Z Removing includeIf entries pointing to credentials config files
+2026-10-06T13:38:48.2605652Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T13:38:48.2634108Z includeif.gitdir:/home/runner/work/privado/privado/.git.path
+2026-10-06T13:38:48.2634882Z includeif.gitdir:/home/runner/work/privado/privado/.git/worktrees/*.path
+2026-10-06T13:38:48.2636055Z includeif.gitdir:/github/workspace/.git.path
+2026-10-06T13:38:48.2636665Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T13:38:48.2643512Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/privado/privado/.git.path
+2026-10-06T13:38:48.2667147Z /home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:48.2676967Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/privado/privado/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-f4d631c1\-6ec7\-49b9\-8cf7\-4ad5d43d44b0\.config
+2026-10-06T13:38:48.2712232Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/privado/privado/.git/worktrees/*.path
+2026-10-06T13:38:48.2734131Z /home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:48.2749843Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/privado/privado/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-f4d631c1\-6ec7\-49b9\-8cf7\-4ad5d43d44b0\.config
+2026-10-06T13:38:48.2783300Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-06T13:38:48.2805434Z /github/runner_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:48.2813184Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-f4d631c1\-6ec7\-49b9\-8cf7\-4ad5d43d44b0\.config
+2026-10-06T13:38:48.2844015Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T13:38:48.2864778Z /github/runner_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config
+2026-10-06T13:38:48.2873256Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-f4d631c1\-6ec7\-49b9\-8cf7\-4ad5d43d44b0\.config
+2026-10-06T13:38:48.2904733Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T13:38:48.3128959Z Removing credentials config '/home/runner/work/_temp/git-credentials-f4d631c1-6ec7-49b9-8cf7-4ad5d43d44b0.config'
+2026-10-06T13:38:48.3282482Z Cleaning up orphan processes

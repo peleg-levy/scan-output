@@ -1,0 +1,268 @@
+﻿2026-08-07T04:33:52.9402822Z Current runner version: '2.336.0'
+2026-08-07T04:33:52.9429912Z ##[group]Runner Image Provisioner
+2026-08-07T04:33:52.9430912Z Hosted Compute Agent
+2026-08-07T04:33:52.9431566Z Version: 20260729.566
+2026-08-07T04:33:52.9432416Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+2026-08-07T04:33:52.9433221Z Build Date: 2026-07-29T19:17:02Z
+2026-08-07T04:33:52.9433936Z Worker ID: {604c6821-88ea-4006-ad58-bcd60794917f}
+2026-08-07T04:33:52.9434813Z Azure Region: westus3
+2026-08-07T04:33:52.9435450Z ##[endgroup]
+2026-08-07T04:33:52.9437482Z ##[group]Operating System
+2026-08-07T04:33:52.9438212Z Ubuntu
+2026-08-07T04:33:52.9438762Z 24.04.4
+2026-08-07T04:33:52.9439376Z LTS
+2026-08-07T04:33:52.9439938Z ##[endgroup]
+2026-08-07T04:33:52.9440530Z ##[group]Runner Image
+2026-08-07T04:33:52.9441246Z Image: ubuntu-24.04
+2026-08-07T04:33:52.9441871Z Version: 20260804.265.1
+2026-08-07T04:33:52.9443335Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260804.265/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-07T04:33:52.9445043Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260804.265
+2026-08-07T04:33:52.9446168Z ##[endgroup]
+2026-08-07T04:33:52.9447750Z ##[group]GITHUB_TOKEN Permissions
+2026-08-07T04:33:52.9450223Z Contents: read
+2026-08-07T04:33:52.9450870Z Metadata: read
+2026-08-07T04:33:52.9451515Z Packages: read
+2026-08-07T04:33:52.9452236Z ##[endgroup]
+2026-08-07T04:33:52.9454694Z Secret source: Actions
+2026-08-07T04:33:52.9456011Z Prepare workflow directory
+2026-08-07T04:33:52.9782405Z Prepare all required actions
+2026-08-07T04:33:52.9823799Z Getting action download info
+2026-08-07T04:33:53.3096821Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-08-07T04:33:53.4822074Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-08-07T04:33:53.6721753Z Complete job name: Test
+2026-08-07T04:33:53.7282741Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-08-07T04:33:53.7283618Z with:
+2026-08-07T04:33:53.7284077Z   repository: PostHog/posthog.com
+2026-08-07T04:33:53.7287632Z   token: ***
+2026-08-07T04:33:53.7288055Z   ssh-strict: true
+2026-08-07T04:33:53.7288471Z   ssh-user: git
+2026-08-07T04:33:53.7288905Z   persist-credentials: true
+2026-08-07T04:33:53.7289378Z   clean: true
+2026-08-07T04:33:53.7289784Z   sparse-checkout-cone-mode: true
+2026-08-07T04:33:53.7290288Z   fetch-depth: 1
+2026-08-07T04:33:53.7290698Z   fetch-tags: false
+2026-08-07T04:33:53.7291115Z   show-progress: true
+2026-08-07T04:33:53.7291563Z   lfs: false
+2026-08-07T04:33:53.7291952Z   submodules: false
+2026-08-07T04:33:53.7292383Z   set-safe-directory: true
+2026-08-07T04:33:53.7292957Z ##[endgroup]
+2026-08-07T04:33:53.8121997Z Syncing repository: PostHog/posthog.com
+2026-08-07T04:33:53.8123435Z ##[group]Getting Git version info
+2026-08-07T04:33:53.8124373Z Working directory is '/home/runner/work/posthog.com/posthog.com'
+2026-08-07T04:33:53.8125342Z [command]/usr/bin/git version
+2026-08-07T04:33:53.8141561Z git version 2.54.0
+2026-08-07T04:33:53.8157826Z ##[endgroup]
+2026-08-07T04:33:53.8167946Z Temporarily overriding HOME='/home/runner/work/_temp/29091f42-33e1-41ed-9497-6f4891531ced' before making global git config changes
+2026-08-07T04:33:53.8169590Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-07T04:33:53.8172247Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-08-07T04:33:53.8198001Z Deleting the contents of '/home/runner/work/posthog.com/posthog.com'
+2026-08-07T04:33:53.8200945Z ##[group]Initializing the repository
+2026-08-07T04:33:53.8204477Z [command]/usr/bin/git init /home/runner/work/posthog.com/posthog.com
+2026-08-07T04:33:53.8273902Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-07T04:33:53.8275577Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-07T04:33:53.8277585Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-07T04:33:53.8278611Z hint: call:
+2026-08-07T04:33:53.8279281Z hint:
+2026-08-07T04:33:53.8280194Z hint: 	git config --global init.defaultBranch <name>
+2026-08-07T04:33:53.8280946Z hint:
+2026-08-07T04:33:53.8281802Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-07T04:33:53.8282991Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-07T04:33:53.8283942Z hint:
+2026-08-07T04:33:53.8284484Z hint: 	git branch -m <name>
+2026-08-07T04:33:53.8285072Z hint:
+2026-08-07T04:33:53.8285922Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-07T04:33:53.8287720Z Initialized empty Git repository in /home/runner/work/posthog.com/posthog.com/.git/
+2026-08-07T04:33:53.8289445Z [command]/usr/bin/git remote add origin https://github.com/PostHog/posthog.com
+2026-08-07T04:33:53.8422832Z ##[endgroup]
+2026-08-07T04:33:53.8423953Z ##[group]Disabling automatic garbage collection
+2026-08-07T04:33:53.8426686Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-07T04:33:53.8448312Z ##[endgroup]
+2026-08-07T04:33:53.8449275Z ##[group]Setting up auth
+2026-08-07T04:33:53.8449994Z Removing SSH command configuration
+2026-08-07T04:33:53.8454577Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-07T04:33:53.8478197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-07T04:33:53.8771697Z Removing HTTP extra header
+2026-08-07T04:33:53.8776898Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-07T04:33:53.8798858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-07T04:33:53.8951139Z Removing includeIf entries pointing to credentials config files
+2026-08-07T04:33:53.8954987Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-07T04:33:53.8978101Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-07T04:33:53.9137589Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-07T04:33:53.9166322Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:33:53.9187780Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:33:53.9208341Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:33:53.9236114Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:33:53.9255171Z ##[endgroup]
+2026-08-07T04:33:53.9256112Z ##[group]Fetching the repository
+2026-08-07T04:33:53.9261646Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4bf376728e8ee0d9242fa3eaa0ae08e993d4beb5:refs/remotes/pull/19324/merge
+2026-08-07T04:34:00.4525310Z From https://github.com/PostHog/posthog.com
+2026-08-07T04:34:00.4528505Z  * [new ref]         4bf376728e8ee0d9242fa3eaa0ae08e993d4beb5 -> pull/19324/merge
+2026-08-07T04:34:00.4546730Z ##[endgroup]
+2026-08-07T04:34:00.4548784Z ##[group]Determining the checkout info
+2026-08-07T04:34:00.4550356Z ##[endgroup]
+2026-08-07T04:34:00.4552347Z [command]/usr/bin/git sparse-checkout disable
+2026-08-07T04:34:00.4582517Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-07T04:34:00.4605769Z ##[group]Checking out the ref
+2026-08-07T04:34:00.4607913Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/19324/merge
+2026-08-07T04:34:01.3688447Z Note: switching to 'refs/remotes/pull/19324/merge'.
+2026-08-07T04:34:01.3689065Z 
+2026-08-07T04:34:01.3689428Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-08-07T04:34:01.3690479Z changes and commit them, and you can discard any commits you make in this
+2026-08-07T04:34:01.3691261Z state without impacting any branches by switching back to a branch.
+2026-08-07T04:34:01.3691712Z 
+2026-08-07T04:34:01.3692082Z If you want to create a new branch to retain commits you create, you may
+2026-08-07T04:34:01.3692974Z do so (now or later) by using -c with the switch command. Example:
+2026-08-07T04:34:01.3693367Z 
+2026-08-07T04:34:01.3693618Z   git switch -c <new-branch-name>
+2026-08-07T04:34:01.3693894Z 
+2026-08-07T04:34:01.3694164Z Or undo this operation with:
+2026-08-07T04:34:01.3694466Z 
+2026-08-07T04:34:01.3694673Z   git switch -
+2026-08-07T04:34:01.3694919Z 
+2026-08-07T04:34:01.3695820Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-08-07T04:34:01.3696656Z 
+2026-08-07T04:34:01.3697188Z HEAD is now at 4bf3767 Merge ea99e939cc8093ca1c959762ec2a75742a14f34d into 33be0b7432d98076c958bbdbdbd61cd278f07da7
+2026-08-07T04:34:01.3718962Z ##[endgroup]
+2026-08-07T04:34:01.3750788Z [command]/usr/bin/git log -1 --format=%H
+2026-08-07T04:34:01.3770489Z 4bf376728e8ee0d9242fa3eaa0ae08e993d4beb5
+2026-08-07T04:34:01.4005546Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-07T04:34:01.4007381Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-08-07T04:34:01.4007811Z with:
+2026-08-07T04:34:01.4008107Z   node-version: 24
+2026-08-07T04:34:01.4008422Z   always-auth: false
+2026-08-07T04:34:01.4008748Z   check-latest: false
+2026-08-07T04:34:01.4010925Z   token: ***
+2026-08-07T04:34:01.4011232Z ##[endgroup]
+2026-08-07T04:34:01.5249321Z Found in cache @ /opt/hostedtoolcache/node/24.19.0/x64
+2026-08-07T04:34:01.5251717Z (node:1981) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-07T04:34:01.5252650Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-07T04:34:01.5254071Z ##[group]Environment details
+2026-08-07T04:34:01.8012739Z node: v24.19.0
+2026-08-07T04:34:01.8013439Z npm: 11.17.0
+2026-08-07T04:34:01.8013988Z yarn: 1.22.22
+2026-08-07T04:34:01.8014978Z ##[endgroup]
+2026-08-07T04:34:01.8126050Z ##[group]Run node --test src/components/Pricing/PricingCalculator/calculatorLogic.test.ts
+2026-08-07T04:34:01.8127102Z [36;1mnode --test src/components/Pricing/PricingCalculator/calculatorLogic.test.ts[0m
+2026-08-07T04:34:01.8562481Z shell: /usr/bin/bash -e {0}
+2026-08-07T04:34:01.8562900Z ##[endgroup]
+2026-08-07T04:34:01.9668118Z (node:2019) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/runner/work/posthog.com/posthog.com/src/components/Pricing/PricingCalculator/calculatorLogic.test.ts is not specified and it doesn't parse as CommonJS.
+2026-08-07T04:34:01.9669398Z Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+2026-08-07T04:34:01.9670123Z To eliminate this warning, add "type": "module" to /home/runner/work/posthog.com/posthog.com/package.json.
+2026-08-07T04:34:01.9670738Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-08-07T04:34:01.9950744Z ▶ calculatePrice
+2026-08-07T04:34:01.9952405Z   ✔ nothing is charged inside the free tier (0.85757ms)
+2026-08-07T04:34:01.9958075Z   ✔ product analytics events price as advertised (0.144357ms)
+2026-08-07T04:34:01.9959298Z   ✔ volume past the last tier keeps pricing at the last tier rate (0.085736ms)
+2026-08-07T04:34:01.9960521Z   ✔ every product prices its free tier at zero and charges beyond it (0.193052ms)
+2026-08-07T04:34:01.9961624Z   ✔ cost never decreases as volume grows (0.311356ms)
+2026-08-07T04:34:01.9962497Z ✔ calculatePrice (2.491925ms)
+2026-08-07T04:34:01.9972526Z ▶ per-product pricing
+2026-08-07T04:34:01.9973254Z   ✔ session_replay at 5,000 costs $0 (0.599062ms)
+2026-08-07T04:34:01.9975401Z   ✔ session_replay at 15,000 costs $50 (0.173208ms)
+2026-08-07T04:34:01.9977232Z   ✔ session_replay at 150,000 costs $373 (0.111089ms)
+2026-08-07T04:34:01.9978087Z   ✔ feature_flags at 1,000,000 costs $0 (0.110208ms)
+2026-08-07T04:34:01.9989511Z   ✔ feature_flags at 2,000,000 costs $100 (0.139971ms)
+2026-08-07T04:34:01.9990638Z   ✔ feature_flags at 10,000,000 costs $460 (0.072069ms)
+2026-08-07T04:34:01.9991622Z   ✔ surveys at 1,500 costs $0 (0.044662ms)
+2026-08-07T04:34:01.9992423Z   ✔ surveys at 2,000 costs $50 (0.030252ms)
+2026-08-07T04:34:01.9993209Z   ✔ surveys at 100,000 costs $1280 (0.030915ms)
+2026-08-07T04:34:01.9994088Z   ✔ data_warehouse at 1,000,000 costs $0 (0.031057ms)
+2026-08-07T04:34:01.9995082Z   ✔ data_warehouse at 10,000,000 costs $135 (0.028824ms)
+2026-08-07T04:34:01.9995923Z   ✔ data_warehouse at 100,000,000 costs $735 (0.028574ms)
+2026-08-07T04:34:01.9996969Z   ✔ error_tracking at 100,000 costs $0 (0.031455ms)
+2026-08-07T04:34:01.9997883Z   ✔ error_tracking at 325,000 costs $83 (0.027969ms)
+2026-08-07T04:34:01.9998823Z   ✔ error_tracking at 10,000,000 costs $1438 (0.028471ms)
+2026-08-07T04:34:01.9999618Z   ✔ llm_analytics at 100,000 costs $0 (0.050228ms)
+2026-08-07T04:34:02.0000401Z   ✔ llm_analytics at 250,000 costs $35 (0.043304ms)
+2026-08-07T04:34:02.0001212Z   ✔ llm_analytics at 5,000,000 costs $380 (0.055229ms)
+2026-08-07T04:34:02.0002084Z   ✔ logs at 10 costs $0 (0.030398ms)
+2026-08-07T04:34:02.0002792Z   ✔ logs at 300 costs $73 (0.0283ms)
+2026-08-07T04:34:02.0003562Z   ✔ logs at 5,000 costs $778 (0.027979ms)
+2026-08-07T04:34:02.0004408Z   ✔ realtime_destinations at 10,000 costs $0 (0.028781ms)
+2026-08-07T04:34:02.0005257Z   ✔ realtime_destinations at 100,000 costs $35 (0.027713ms)
+2026-08-07T04:34:02.0006128Z   ✔ realtime_destinations at 5,000,000 costs $570 (0.029487ms)
+2026-08-07T04:34:02.0007266Z   ✔ workflows_emails at 10,000 costs $0 (0.028639ms)
+2026-08-07T04:34:02.0008042Z   ✔ workflows_emails at 100,000 costs $210 (0.029276ms)
+2026-08-07T04:34:02.0008873Z   ✔ workflows_emails at 1,000,000 costs $1110 (0.028145ms)
+2026-08-07T04:34:02.0009756Z   ✔ posthog_ai at 500 costs $0 (0.02611ms)
+2026-08-07T04:34:02.0010421Z   ✔ posthog_ai at 5,000 costs $45 (0.027338ms)
+2026-08-07T04:34:02.0011445Z   ✔ inbox at 3 costs $0 (0.037339ms)
+2026-08-07T04:34:02.0012070Z   ✔ inbox at 10 costs $105 (0.060157ms)
+2026-08-07T04:34:02.0013023Z ✔ per-product pricing (2.783942ms)
+2026-08-07T04:34:02.0023052Z ▶ product analytics add-ons
+2026-08-07T04:34:02.0038473Z   ✔ person profiles are charged on identified events only, first million free (0.234709ms)
+2026-08-07T04:34:02.0040260Z   ✔ group analytics gets its own free million (0.088495ms)
+2026-08-07T04:34:02.0041219Z   ✔ 2M identified events costs $248, and $319 with group analytics (0.791156ms)
+2026-08-07T04:34:02.0042234Z   ✔ anonymous events are charged at the base rate only (0.091641ms)
+2026-08-07T04:34:02.0047972Z   ✔ a mixed estimate shares one free tier across event types (0.065488ms)
+2026-08-07T04:34:02.0052299Z   ✔ group analytics stays a small share of a large estimate (0.052848ms)
+2026-08-07T04:34:02.0053259Z ✔ product analytics add-ons (1.505545ms)
+2026-08-07T04:34:02.0054034Z ▶ buildProductAddons
+2026-08-07T04:34:02.0055107Z   ✔ registers each add-on once when two products share a billing product (0.173413ms)
+2026-08-07T04:34:02.0056144Z   ✔ covers every add-on across every product exactly once (0.775128ms)
+2026-08-07T04:34:02.0057533Z   ✔ starts every add-on at zero, and applies defaults (0.160983ms)
+2026-08-07T04:34:02.0058497Z   ✔ products without add-ons contribute nothing (0.068177ms)
+2026-08-07T04:34:02.0059260Z ✔ buildProductAddons (1.284238ms)
+2026-08-07T04:34:02.0059863Z ▶ getAddonsCostForProduct
+2026-08-07T04:34:02.0060620Z   ✔ only counts the product's own add-ons (0.108472ms)
+2026-08-07T04:34:02.0061400Z   ✔ is zero for products that have no add-ons (0.054817ms)
+2026-08-07T04:34:02.0062170Z ✔ getAddonsCostForProduct (0.220954ms)
+2026-08-07T04:34:02.0062972Z ▶ getCalculatorTotal
+2026-08-07T04:34:02.0063826Z   ✔ adds enabled add-ons to the usage total once each (0.087313ms)
+2026-08-07T04:34:02.0064865Z   ✔ platform add-ons are flat and only billed when selected (0.083851ms)
+2026-08-07T04:34:02.0065823Z   ✔ multi-product estimates add up (0.068025ms)
+2026-08-07T04:34:02.0066858Z ✔ getCalculatorTotal (0.330455ms)
+2026-08-07T04:34:02.0067513Z ▶ product data
+2026-08-07T04:34:02.0068517Z   ✔ some products share a billing product, so add-ons must be deduped by type (1.879776ms)
+2026-08-07T04:34:02.0069460Z ✔ product data (1.948144ms)
+2026-08-07T04:34:02.0152613Z ℹ tests 52
+2026-08-07T04:34:02.0153278Z ℹ suites 7
+2026-08-07T04:34:02.0153664Z ℹ pass 52
+2026-08-07T04:34:02.0154143Z ℹ fail 0
+2026-08-07T04:34:02.0154504Z ℹ cancelled 0
+2026-08-07T04:34:02.0154872Z ℹ skipped 0
+2026-08-07T04:34:02.0155232Z ℹ todo 0
+2026-08-07T04:34:02.0155616Z ℹ duration_ms 123.847515
+2026-08-07T04:34:02.0230231Z ##[group]Run node scripts/billing-products-fixture.mjs --check
+2026-08-07T04:34:02.0230705Z [36;1mnode scripts/billing-products-fixture.mjs --check[0m
+2026-08-07T04:34:02.0267208Z shell: /usr/bin/bash -e {0}
+2026-08-07T04:34:02.0267608Z ##[endgroup]
+2026-08-07T04:34:02.5859436Z Pricing calculator fixture matches live billing prices.
+2026-08-07T04:34:02.6022130Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-07T04:34:02.6023185Z Post job cleanup.
+2026-08-07T04:34:02.7014982Z (node:2041) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-07T04:34:02.7016205Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-07T04:34:02.7169382Z Post job cleanup.
+2026-08-07T04:34:02.7876399Z [command]/usr/bin/git version
+2026-08-07T04:34:02.7903987Z git version 2.54.0
+2026-08-07T04:34:02.7933189Z Temporarily overriding HOME='/home/runner/work/_temp/76d2de98-0757-45be-92e4-71e7074d5494' before making global git config changes
+2026-08-07T04:34:02.7934442Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-07T04:34:02.7938734Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-08-07T04:34:02.7961337Z Removing SSH command configuration
+2026-08-07T04:34:02.7967146Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-07T04:34:02.7992957Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-07T04:34:02.8158327Z Removing HTTP extra header
+2026-08-07T04:34:02.8162194Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-07T04:34:02.8185849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-07T04:34:02.8348986Z Removing includeIf entries pointing to credentials config files
+2026-08-07T04:34:02.8354391Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-07T04:34:02.8370331Z includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path
+2026-08-07T04:34:02.8370987Z includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path
+2026-08-07T04:34:02.8371576Z includeif.gitdir:/github/workspace/.git.path
+2026-08-07T04:34:02.8372254Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-07T04:34:02.8377524Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path
+2026-08-07T04:34:02.8394558Z /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8402601Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8427345Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path
+2026-08-07T04:34:02.8442629Z /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8450075Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8473309Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-08-07T04:34:02.8488927Z /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8493678Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8515513Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-07T04:34:02.8530476Z /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.8537014Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config
+2026-08-07T04:34:02.9781240Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-07T04:34:02.9959536Z Removing credentials config '/home/runner/work/_temp/git-credentials-e4a407ee-93f4-4d32-a5e2-2566c08f0b0a.config'
+2026-08-07T04:34:03.0085932Z Cleaning up orphan processes
+2026-08-07T04:34:03.0299460Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

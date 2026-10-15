@@ -1,0 +1,90 @@
+﻿2026-10-14T08:33:35.7507900Z Current runner version: '2.337.0'
+2026-10-14T08:33:35.7533432Z ##[group]Runner Image Provisioner
+2026-10-14T08:33:35.7534469Z Hosted Compute Agent
+2026-10-14T08:33:35.7535069Z Version: 20261002.596
+2026-10-14T08:33:35.7535801Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T08:33:35.7536539Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T08:33:35.7537297Z Worker ID: {58b93807-1c52-4fca-89be-2a8da0526e23}
+2026-10-14T08:33:35.7538044Z Region: westus2
+2026-10-14T08:33:35.7538600Z Cloud: Azure
+2026-10-14T08:33:35.7539518Z ##[endgroup]
+2026-10-14T08:33:35.7541221Z ##[group]Operating System
+2026-10-14T08:33:35.7541977Z Ubuntu
+2026-10-14T08:33:35.7542538Z 24.04.5
+2026-10-14T08:33:35.7543060Z LTS
+2026-10-14T08:33:35.7543670Z ##[endgroup]
+2026-10-14T08:33:35.7544275Z ##[group]Runner Image
+2026-10-14T08:33:35.7544912Z Image: ubuntu-24.04
+2026-10-14T08:33:35.7545521Z Version: 20261004.327.1
+2026-10-14T08:33:35.7546900Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T08:33:35.7548490Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T08:33:35.7549788Z ##[endgroup]
+2026-10-14T08:33:35.7550976Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T08:33:35.7553088Z Contents: read
+2026-10-14T08:33:35.7553723Z Metadata: read
+2026-10-14T08:33:35.7554635Z ##[endgroup]
+2026-10-14T08:33:35.7556917Z Secret source: Actions
+2026-10-14T08:33:35.7557870Z Cache mode: write
+2026-10-14T08:33:35.7558973Z Prepare workflow directory
+2026-10-14T08:33:35.7961105Z Prepare all required actions
+2026-10-14T08:33:35.8066168Z Complete job name: Sync docs
+2026-10-14T08:33:35.9042609Z ##[group]Run set -euo pipefail
+2026-10-14T08:33:35.9044054Z [36;1mset -euo pipefail[0m
+2026-10-14T08:33:35.9045169Z [36;1m[0m
+2026-10-14T08:33:35.9046274Z [36;1mif [ -z "${INKEEP_API_KEY:-}" ]; then[0m
+2026-10-14T08:33:35.9047885Z [36;1m  echo "::error::INKEEP_MANAGEMENT_API_KEY secret is not set"[0m
+2026-10-14T08:33:35.9049601Z [36;1m  exit 1[0m
+2026-10-14T08:33:35.9050583Z [36;1mfi[0m
+2026-10-14T08:33:35.9051648Z [36;1m[0m
+2026-10-14T08:33:35.9052626Z [36;1mif [ -z "${SOURCE_ID:-}" ]; then[0m
+2026-10-14T08:33:35.9054019Z [36;1m  echo "::error::INKEEP_DOCS_SOURCE_ID secret is not set"[0m
+2026-10-14T08:33:35.9055394Z [36;1m  exit 1[0m
+2026-10-14T08:33:35.9056402Z [36;1mfi[0m
+2026-10-14T08:33:35.9057329Z [36;1m[0m
+2026-10-14T08:33:35.9058481Z [36;1mecho "Triggering sync for source: $SOURCE_NAME"[0m
+2026-10-14T08:33:35.9059945Z [36;1m[0m
+2026-10-14T08:33:35.9061153Z [36;1mPAYLOAD=$(jq -n --arg sourceId "$SOURCE_ID" '{[0m
+2026-10-14T08:33:35.9063957Z [36;1m  query: "mutation CreateSourceSyncJob($sourceId: ID!) { createSourceSyncJob(input: {sourceId: $sourceId, type: FULL, origin: MANUAL}) { job { id } success } }",[0m
+2026-10-14T08:33:35.9066597Z [36;1m  variables: { sourceId: $sourceId }[0m
+2026-10-14T08:33:35.9067814Z [36;1m}')[0m
+2026-10-14T08:33:35.9068900Z [36;1m[0m
+2026-10-14T08:33:35.9070513Z [36;1mRESPONSE=$(curl -sS -w "\n%{http_code}" -X POST https://api.management.inkeep.com/graphql \[0m
+2026-10-14T08:33:35.9072435Z [36;1m  -H "Content-Type: application/json" \[0m
+2026-10-14T08:33:35.9074072Z [36;1m  -H "Authorization: ***" \[0m
+2026-10-14T08:33:35.9075282Z [36;1m  -d "$PAYLOAD")[0m
+2026-10-14T08:33:35.9076306Z [36;1m[0m
+2026-10-14T08:33:35.9077333Z [36;1mHTTP_CODE=$(tail -n1 <<< "$RESPONSE")[0m
+2026-10-14T08:33:35.9078624Z [36;1mBODY=$(sed '$ d' <<< "$RESPONSE")[0m
+2026-10-14T08:33:35.9080228Z [36;1m[0m
+2026-10-14T08:33:35.9081204Z [36;1mecho "HTTP status: $HTTP_CODE"[0m
+2026-10-14T08:33:35.9082492Z [36;1mecho "Response body: $BODY"[0m
+2026-10-14T08:33:35.9083537Z [36;1m[0m
+2026-10-14T08:33:35.9084616Z [36;1mif [ "$HTTP_CODE" != "200" ]; then[0m
+2026-10-14T08:33:35.9086041Z [36;1m  echo "::error::Inkeep API returned HTTP $HTTP_CODE"[0m
+2026-10-14T08:33:35.9087310Z [36;1m  exit 1[0m
+2026-10-14T08:33:35.9088375Z [36;1mfi[0m
+2026-10-14T08:33:35.9089621Z [36;1m[0m
+2026-10-14T08:33:35.9091102Z [36;1mif echo "$BODY" | jq -e '.errors' > /dev/null; then[0m
+2026-10-14T08:33:35.9092548Z [36;1m  echo "::error::GraphQL returned errors"[0m
+2026-10-14T08:33:35.9093809Z [36;1m  exit 1[0m
+2026-10-14T08:33:35.9094780Z [36;1mfi[0m
+2026-10-14T08:33:35.9095727Z [36;1m[0m
+2026-10-14T08:33:35.9097023Z [36;1mSUCCESS=$(echo "$BODY" | jq -r '.data.createSourceSyncJob.success')[0m
+2026-10-14T08:33:35.9098583Z [36;1mif [ "$SUCCESS" != "true" ]; then[0m
+2026-10-14T08:33:35.9100249Z [36;1m  echo "::error::Sync job creation reported success=false"[0m
+2026-10-14T08:33:35.9102027Z [36;1m  exit 1[0m
+2026-10-14T08:33:35.9103057Z [36;1mfi[0m
+2026-10-14T08:33:35.9103918Z [36;1m[0m
+2026-10-14T08:33:35.9105127Z [36;1mJOB_ID=$(echo "$BODY" | jq -r '.data.createSourceSyncJob.job.id')[0m
+2026-10-14T08:33:35.9106889Z [36;1mecho "Sync job created for $SOURCE_NAME: $JOB_ID"[0m
+2026-10-14T08:33:36.0107560Z shell: /usr/bin/bash -e {0}
+2026-10-14T08:33:36.0109054Z env:
+2026-10-14T08:33:36.0110058Z   INKEEP_API_KEY: ***
+2026-10-14T08:33:36.0110771Z   SOURCE_ID: ***
+2026-10-14T08:33:36.0111352Z   SOURCE_NAME: docs
+2026-10-14T08:33:36.0111911Z ##[endgroup]
+2026-10-14T08:33:36.0361108Z Triggering sync for source: docs
+2026-10-14T08:33:36.6521420Z HTTP status: 200
+2026-10-14T08:33:36.6523064Z Response body: {"data":{"createSourceSyncJob":{"success":true,"job":{"id":"cmv7urwom00h6s601bfzgv9xq"}}}}
+2026-10-14T08:33:36.6610033Z Sync job created for docs: cmv7urwom00h6s601bfzgv9xq
+2026-10-14T08:33:36.6782513Z Cleaning up orphan processes

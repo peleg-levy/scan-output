@@ -1,0 +1,1180 @@
+﻿2026-10-07T23:25:25.1446646Z Current runner version: '2.337.0'
+2026-10-07T23:25:25.1504008Z ##[group]Runner Image Provisioner
+2026-10-07T23:25:25.1505611Z Hosted Compute Agent
+2026-10-07T23:25:25.1506639Z Version: 20261002.596
+2026-10-07T23:25:25.1507931Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-07T23:25:25.1509334Z Build Date: 2026-10-02T22:28:27Z
+2026-10-07T23:25:25.1511069Z Worker ID: {37510aa7-debd-4f86-a6bf-8c5b865be67e}
+2026-10-07T23:25:25.1512449Z Region: eastus2
+2026-10-07T23:25:25.1513478Z Cloud: Azure
+2026-10-07T23:25:25.1514683Z ##[endgroup]
+2026-10-07T23:25:25.1517020Z ##[group]Operating System
+2026-10-07T23:25:25.1518341Z Ubuntu
+2026-10-07T23:25:25.1519275Z 24.04.5
+2026-10-07T23:25:25.1520575Z LTS
+2026-10-07T23:25:25.1521674Z ##[endgroup]
+2026-10-07T23:25:25.1522822Z ##[group]Runner Image
+2026-10-07T23:25:25.1523887Z Image: ubuntu-24.04
+2026-10-07T23:25:25.1525071Z Version: 20261004.327.1
+2026-10-07T23:25:25.1527399Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-07T23:25:25.1530782Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-07T23:25:25.1533157Z ##[endgroup]
+2026-10-07T23:25:25.1535346Z ##[group]GITHUB_TOKEN Permissions
+2026-10-07T23:25:25.1538612Z Deployments: write
+2026-10-07T23:25:25.1539764Z Metadata: read
+2026-10-07T23:25:25.1541138Z ##[endgroup]
+2026-10-07T23:25:25.1544505Z Secret source: AgentSecrets
+2026-10-07T23:25:25.1546266Z Cache mode: write
+2026-10-07T23:25:25.1547826Z Prepare workflow directory
+2026-10-07T23:25:25.2120596Z Prepare all required actions
+2026-10-07T23:25:25.2192746Z Getting action download info
+2026-10-07T23:25:25.4334609Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-07T23:25:25.6768180Z Complete job name: copilot-pull-request-reviewer
+2026-10-07T23:25:25.7572132Z ##[group]Run NONCE=$(jq -r '.inputs.COPILOT_AGENT_INPUTS | fromjson | .COPILOT_JOB_NONCE' "$GITHUB_EVENT_PATH")
+2026-10-07T23:25:25.7573609Z [36;1mNONCE=$(jq -r '.inputs.COPILOT_AGENT_INPUTS | fromjson | .COPILOT_JOB_NONCE' "$GITHUB_EVENT_PATH")[0m
+2026-10-07T23:25:25.7574587Z [36;1mecho "::add-mask::$NONCE"[0m
+2026-10-07T23:25:25.7865916Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T23:25:25.7867104Z env:
+2026-10-07T23:25:25.7867636Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:25.7868206Z ##[endgroup]
+2026-10-07T23:25:25.8322697Z ##[group]Run if ! command -v npm &> /dev/null; then
+2026-10-07T23:25:25.8323557Z [36;1mif ! command -v npm &> /dev/null; then[0m
+2026-10-07T23:25:25.8324834Z [36;1m  echo "Warning: npm is not available on this runner. Skipping Playwright MCP pre-download. The MCP server may be installed later if needed."[0m
+2026-10-07T23:25:25.8326026Z [36;1m  exit 0[0m
+2026-10-07T23:25:25.8326500Z [36;1mfi[0m
+2026-10-07T23:25:25.8327140Z [36;1mecho "Starting background pre-cache of @playwright/mcp..."[0m
+2026-10-07T23:25:25.8328059Z [36;1mnpm cache add @playwright/mcp@0.0.40 > /dev/null 2>&1 & disown[0m
+2026-10-07T23:25:25.8329036Z [36;1mecho "Started pre-caching @playwright/mcp@0.0.40 in the background"[0m
+2026-10-07T23:25:25.8393133Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T23:25:25.8393873Z env:
+2026-10-07T23:25:25.8394335Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:25.8394859Z   PLAYWRIGHT_VERSION: 0.0.40
+2026-10-07T23:25:25.8395390Z ##[endgroup]
+2026-10-07T23:25:25.8564642Z Starting background pre-cache of @playwright/mcp...
+2026-10-07T23:25:25.8572468Z Started pre-caching @playwright/mcp@0.0.40 in the background
+2026-10-07T23:25:25.8657318Z ##[group]Run set -o pipefail
+2026-10-07T23:25:25.8657994Z [36;1mset -o pipefail[0m
+2026-10-07T23:25:25.8658565Z [36;1mecho "Preparing Copilot..." && \[0m
+2026-10-07T23:25:25.8659347Z [36;1mecho "Runtime version: $COPILOT_AGENT_RUNTIME_VERSION" && \[0m
+2026-10-07T23:25:25.8660612Z [36;1mecho "COPILOT_AGENT_START_TIME_SEC=$(date +%s)" >> $GITHUB_ENV[0m
+2026-10-07T23:25:25.8661737Z [36;1mecho "COPILOT_AGENT_TIMEOUT_MIN=20" >> $GITHUB_ENV[0m
+2026-10-07T23:25:25.8662544Z [36;1mmkdir -p "runtime-logs" "cca-mcp-debug-logs" && \[0m
+2026-10-07T23:25:25.8663284Z [36;1mMAX_RETRIES=3 && RETRY_COUNT=0 && \[0m
+2026-10-07T23:25:25.8663977Z [36;1mwhile [ $RETRY_COUNT -lt $MAX_RETRIES ]; do \[0m
+2026-10-07T23:25:25.8664793Z [36;1m  if [ -n "$GITHUB_COPILOT_ACTION_OVERRIDE_DOWNLOAD_URL" ]; then \[0m
+2026-10-07T23:25:25.8666861Z [36;1m    curl -f --max-time 600 -D "runtime-logs/download.log" -H "Authorization: ***" $GITHUB_COPILOT_ACTION_OVERRIDE_DOWNLOAD_URL 2>> "runtime-logs/download.log" | tar -zxv >> "runtime-logs/download.log" 2>&1; \[0m
+2026-10-07T23:25:25.8668331Z [36;1m  else \[0m
+2026-10-07T23:25:25.8669545Z [36;1m    curl -f --max-time 600 -D "runtime-logs/download.log" $GITHUB_COPILOT_ACTION_DOWNLOAD_URL 2>> "runtime-logs/download.log" | tar -zxv >> "runtime-logs/download.log" 2>&1; \[0m
+2026-10-07T23:25:25.8671061Z [36;1m  fi; \[0m
+2026-10-07T23:25:25.8671587Z [36;1m  if [ $? -eq 0 ]; then break; fi; \[0m
+2026-10-07T23:25:25.8672240Z [36;1m  RETRY_COUNT=$((RETRY_COUNT + 1)); \[0m
+2026-10-07T23:25:25.8672860Z [36;1m  sleep 1; \[0m
+2026-10-07T23:25:25.8673347Z [36;1mdone && \[0m
+2026-10-07T23:25:25.8674300Z [36;1mif [ $RETRY_COUNT -eq $MAX_RETRIES ]; then echo "Failed to download runtime after $MAX_RETRIES attempts"; exit 80; fi && \[0m
+2026-10-07T23:25:25.8675467Z [36;1mecho "Finished downloading and extracting runtime" && \[0m
+2026-10-07T23:25:25.8676966Z [36;1mif [ ! -d "***-action-main" ]; then mv ***-action-* ***-action-main >> "runtime-logs/download.log" 2>&1; fi && \[0m
+2026-10-07T23:25:25.8678296Z [36;1m./***-action-main/script/setup.sh "/home/runner/work/_temp/ghcca-node" && \[0m
+2026-10-07T23:25:25.8679383Z [36;1mecho "Copilot prepared successfully." 2>&1 | tee -a "runtime-logs/download.log"[0m
+2026-10-07T23:25:25.8743413Z shell: /usr/bin/bash -e {0}
+2026-10-07T23:25:25.8744000Z env:
+2026-10-07T23:25:25.8744465Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:25.8751704Z   GITHUB_COPILOT_ACTION_DOWNLOAD_URL: ***
+2026-10-07T23:25:25.8752380Z   COPILOT_AGENT_SOURCE_ENVIRONMENT: gc-cus-02
+2026-10-07T23:25:25.8753063Z   GITHUB_COPILOT_ACTION_OVERRIDE_DOWNLOAD_URL: 
+2026-10-07T23:25:25.8753920Z   GITHUB_COPILOT_API_TOKEN: ***
+2026-10-07T23:25:25.8755017Z   COPILOT_AGENT_RUNTIME_VERSION: runtime-copilot-pull-request-reviewer-vendored-9c1fe0dcb7244d720f95eba2d11ac492079e2df9
+2026-10-07T23:25:25.8756113Z ##[endgroup]
+2026-10-07T23:25:25.8847368Z Preparing Copilot...
+2026-10-07T23:25:25.8850400Z Runtime version: runtime-copilot-pull-request-reviewer-vendored-9c1fe0dcb7244d720f95eba2d11ac492079e2df9
+2026-10-07T23:25:39.8373014Z Finished downloading and extracting runtime
+2026-10-07T23:25:39.8459947Z Using node from tool cache.
+2026-10-07T23:25:39.9057480Z v24.21.0
+2026-10-07T23:25:39.9147588Z Copilot prepared successfully.
+2026-10-07T23:25:39.9218163Z ##[group]Run if [ -z "$GITHUB_COPILOT_AUTOFIND_DOWNLOAD_URL" ]; then
+2026-10-07T23:25:39.9218824Z [36;1mif [ -z "$GITHUB_COPILOT_AUTOFIND_DOWNLOAD_URL" ]; then[0m
+2026-10-07T23:25:39.9219372Z [36;1m  echo "Autofind download URL not configured, skipping."[0m
+2026-10-07T23:25:39.9219808Z [36;1m  exit 0[0m
+2026-10-07T23:25:39.9220447Z [36;1mfi[0m
+2026-10-07T23:25:39.9220831Z [36;1mecho "Starting background download of Autofind..."[0m
+2026-10-07T23:25:39.9221245Z [36;1m[0m
+2026-10-07T23:25:39.9222013Z [36;1m# Download and extract in background, then move to ***-action-main[0m
+2026-10-07T23:25:39.9222483Z [36;1m([0m
+2026-10-07T23:25:39.9222781Z [36;1m  START_TIME=$(date +%s.%N)[0m
+2026-10-07T23:25:39.9223308Z [36;1m  echo "Starting Autofind download at $(date)" > runtime-logs/download-autofind.log[0m
+2026-10-07T23:25:39.9224340Z [36;1m  curl -f --max-time 300 "$GITHUB_COPILOT_AUTOFIND_DOWNLOAD_URL" 2>> runtime-logs/download-autofind.log | tar -zxv >> runtime-logs/download-autofind.log 2>&1[0m
+2026-10-07T23:25:39.9225367Z [36;1m  mv autofind ***-action-main/ >> runtime-logs/download-autofind.log 2>&1[0m
+2026-10-07T23:25:39.9226089Z [36;1m  END_TIME=$(date +%s.%N)[0m
+2026-10-07T23:25:39.9226497Z [36;1m  ELAPSED=$(echo "$END_TIME - $START_TIME" | bc)[0m
+2026-10-07T23:25:39.9227095Z [36;1m  echo "Autofind download completed in ${ELAPSED}s" >> runtime-logs/download-autofind.log[0m
+2026-10-07T23:25:39.9227644Z [36;1m) & disown[0m
+2026-10-07T23:25:39.9320788Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T23:25:39.9321254Z env:
+2026-10-07T23:25:39.9321532Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:39.9321893Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:39.9322280Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:39.9322632Z   GITHUB_COPILOT_AUTOFIND_DOWNLOAD_URL: 
+2026-10-07T23:25:39.9323090Z ##[endgroup]
+2026-10-07T23:25:39.9411771Z Autofind download URL not configured, skipping.
+2026-10-07T23:25:39.9474047Z ##[group]Run if [ "$COPILOT_AGENT_FIREWALL_ENABLED" != "true" ]; then
+2026-10-07T23:25:39.9474724Z [36;1mif [ "$COPILOT_AGENT_FIREWALL_ENABLED" != "true" ]; then[0m
+2026-10-07T23:25:39.9475303Z [36;1m  echo "Firewall disabled, skipping mkcert CA pre-generation."[0m
+2026-10-07T23:25:39.9475762Z [36;1m  exit 0[0m
+2026-10-07T23:25:39.9476045Z [36;1mfi[0m
+2026-10-07T23:25:39.9476624Z [36;1mMKCERT_BIN="/home/runner/work/_temp/***-action-main/ebpf/in-path/mkcert"[0m
+2026-10-07T23:25:39.9477225Z [36;1mMKCERT_CA_DST="/home/runner/work/_temp/runtime-logs/mkcert"[0m
+2026-10-07T23:25:39.9477689Z [36;1mif [ ! -f "$MKCERT_BIN" ]; then[0m
+2026-10-07T23:25:39.9478129Z [36;1m  echo "mkcert binary not found, skipping background keygen."[0m
+2026-10-07T23:25:39.9478569Z [36;1m  exit 0[0m
+2026-10-07T23:25:39.9478857Z [36;1mfi[0m
+2026-10-07T23:25:39.9479187Z [36;1mif [ -f "$MKCERT_CA_DST/rootCA.pem" ]; then[0m
+2026-10-07T23:25:39.9479702Z [36;1m  echo "CA already exists, skipping background keygen."[0m
+2026-10-07T23:25:39.9480407Z [36;1m  exit 0[0m
+2026-10-07T23:25:39.9480700Z [36;1mfi[0m
+2026-10-07T23:25:39.9480992Z [36;1mmkdir -p "$MKCERT_CA_DST"[0m
+2026-10-07T23:25:39.9481439Z [36;1mecho "Starting mkcert CA keygen in background..."[0m
+2026-10-07T23:25:39.9481963Z [36;1m# Use setsid to fully detach from the Actions runner so the step[0m
+2026-10-07T23:25:39.9482551Z [36;1m# finishes immediately instead of waiting for the background process.[0m
+2026-10-07T23:25:39.9483122Z [36;1mMKCERT_LOCK="/home/runner/work/_temp/mkcert-install.lock"[0m
+2026-10-07T23:25:39.9483778Z [36;1msetsid bash -c 'flock "$1" bash -c "CAROOT=\"$2\" \"$3\" -install && touch \"$2/.mkcert-bg-done\""' \[0m
+2026-10-07T23:25:39.9484422Z [36;1m  _ "$MKCERT_LOCK" "$MKCERT_CA_DST" "$MKCERT_BIN" > /dev/null 2>&1 &[0m
+2026-10-07T23:25:39.9547559Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T23:25:39.9548014Z env:
+2026-10-07T23:25:39.9548299Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:39.9548650Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:39.9549031Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:39.9549380Z   COPILOT_AGENT_FIREWALL_ENABLED: true
+2026-10-07T23:25:39.9549740Z ##[endgroup]
+2026-10-07T23:25:39.9649806Z Starting mkcert CA keygen in background...
+2026-10-07T23:25:39.9721219Z ##[group]Run echo "Starting MCP servers..." && \
+2026-10-07T23:25:39.9721757Z [36;1mecho "Starting MCP servers..." && \[0m
+2026-10-07T23:25:39.9722158Z [36;1mexport HOME="$(realpath ~)"[0m
+2026-10-07T23:25:39.9722568Z [36;1mexport RUNNER_PATH="/home/runner/work/_temp"[0m
+2026-10-07T23:25:39.9722948Z [36;1m[0m
+2026-10-07T23:25:39.9723358Z [36;1m# Secrets listed here are piped via stdin so they never appear in /proc[0m
+2026-10-07T23:25:39.9723971Z [36;1msecrets=$("$RUNNER_PATH/ghcca-node/node/bin/node" -p "JSON.stringify({[0m
+2026-10-07T23:25:39.9724626Z [36;1m  GITHUB_COPILOT_GITHUB_TOKEN: process.env.GITHUB_COPILOT_GITHUB_TOKEN || '',[0m
+2026-10-07T23:25:39.9725300Z [36;1m  GITHUB_PERSONAL_ACCESS_TOKEN: process.env.GITHUB_PERSONAL_ACCESS_TOKEN || '',[0m
+2026-10-07T23:25:39.9725938Z [36;1m  GITHUB_COPILOT_API_TOKEN: process.env.GITHUB_COPILOT_API_TOKEN || '',[0m
+2026-10-07T23:25:39.9726812Z [36;1m  GITHUB_COPILOT_INTEGRATION_ID: process.env.GITHUB_COPILOT_INTEGRATION_ID || '',[0m
+2026-10-07T23:25:39.9727409Z [36;1m  COPILOT_JOB_NONCE: process.env.COPILOT_JOB_NONCE || '',[0m
+2026-10-07T23:25:39.9727957Z [36;1m  ...(Object.hasOwn(process.env, 'COPILOT_MCP_BLOB_CONTAINER_SAS_URL')[0m
+2026-10-07T23:25:39.9728628Z [36;1m    ? { COPILOT_MCP_BLOB_CONTAINER_SAS_URL: process.env.COPILOT_MCP_BLOB_CONTAINER_SAS_URL ?? '' }[0m
+2026-10-07T23:25:39.9729171Z [36;1m    : {})[0m
+2026-10-07T23:25:39.9729454Z [36;1m})")[0m
+2026-10-07T23:25:39.9730594Z [36;1munset GITHUB_COPILOT_GITHUB_TOKEN GITHUB_PERSONAL_ACCESS_TOKEN GITHUB_COPILOT_API_TOKEN GITHUB_COPILOT_INTEGRATION_ID COPILOT_JOB_NONCE COPILOT_MCP_BLOB_CONTAINER_SAS_URL[0m
+2026-10-07T23:25:39.9731783Z [36;1mprintf '%s' "$secrets" | "$RUNNER_PATH/***-action-main/script/start-mcp-servers.sh"[0m
+2026-10-07T23:25:39.9732298Z [36;1m[0m
+2026-10-07T23:25:39.9732581Z [36;1mecho "Ending MCP step"[0m
+2026-10-07T23:25:39.9798571Z shell: /usr/bin/bash -e {0}
+2026-10-07T23:25:39.9798921Z env:
+2026-10-07T23:25:39.9799226Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:39.9799566Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:39.9799956Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:39.9800671Z   COPILOT_MCP_READ_ONLY_MODE: true
+2026-10-07T23:25:39.9822731Z   COPILOT_API_URL: https://api.individual.githubcopilot.com
+2026-10-07T23:25:39.9823829Z   GITHUB_COPILOT_GITHUB_TOKEN: ***
+2026-10-07T23:25:39.9824343Z   GITHUB_PERSONAL_ACCESS_TOKEN: ***
+2026-10-07T23:25:39.9824823Z   GITHUB_COPILOT_API_TOKEN: ***
+2026-10-07T23:25:39.9825174Z   GITHUB_COPILOT_3P_MCP_ENABLED: true
+2026-10-07T23:25:39.9825608Z   COPILOT_AGENT_MCP_SERVER_TEMP: /home/runner/work/_temp/mcp-server
+2026-10-07T23:25:39.9826158Z   GITHUB_COPILOT_MCP_JSON_FROM_INPUT: eyJtY3BTZXJ2ZXJzIjp7fX0=
+2026-10-07T23:25:39.9826608Z   GITHUB_COPILOT_REMOTE_MCP_ENABLED: true
+2026-10-07T23:25:39.9827058Z   GITHUB_COPILOT_INTERACTION_ID: d8bf2eb8-cfaf-40c1-bff5-69eb16aa7abe
+2026-10-07T23:25:39.9833732Z   COPILOT_FEATURE_FLAGS: copilot_inject_integration_headers,copilot_swe_agent_blackbird_tool_use,copilot_swe_agent_cap_claude_opus_token_limits,copilot_swe_agent_cleanup_partial_clone,copilot_swe_agent_clone_session_logging,copilot_swe_agent_failure_recovery_before_shutdown,copilot_swe_agent_firewall_enabled_by_default,copilot_swe_agent_vision,copilot_swe_agent_parallel_tool_execution,copilot_swe_agent_enable_security_tool,copilot_swe_agent_code_review,copilot_swe_agent_cca_session_attribution,copilot_swe_agent_retry_workflow_run,copilot_swe_agent_validation_agent_dependencies,copilot_swe_agent_validation_tool_settings,copilot_swe_agent_secret_scanning_hook,copilot_swe_agent_new_out_proc_mcp,copilot_swe_agent_mcp_builtin_provenance,copilot_swe_agent_enable_dependabot_checker,copilot_swe_agent_use_non_blocking_callbacks,coding_agent_plan_tags,copilot_swe_agent_trivial_change,copilot_swe_agent_trivial_change_code_review_disable,copilot_swe_agent_trivial_change_skip,copilot_swe_agent_unified_task_tool,copilot_swe_agent_error_annotations,copilot_swe_agent_codex_error_classification,copilot_swe_agent_claude_error_classification,copilot_swe_agent_runtime_timing_telemetry,copilot_swe_agent_parallel_validation,copilot_swe_agent_3p_security_prompt,copilot_swe_agent_new_security_tools,copilot_swe_agent_oidc_token_exchange,copilot_swe_agent_logs_url_trailer,copilot_swe_agent_sandbox_server_token_cleanup,copilot_swe_agent_use_attachment_proxy,copilot_swe_agent_co_author_hook,copilot_feature_agentic_memory_user_scoped,copilot_feature_agentic_memory_user_scoped_cfi,copilot_swe_agent_chronicle,copilot_swe_agent_automation_subagent_allowlist,copilot-feature-agentic-memory
+2026-10-07T23:25:39.9840472Z   COPILOT_EXPERIMENTS: mcp_permission_gate:true
+2026-10-07T23:25:39.9840945Z   COPILOT_EXPERIMENT_ASSIGNMENT_CONTEXT: 
+2026-10-07T23:25:39.9841832Z   COPILOT_AGENT_REQUEST_HEADERS: {"X-Copilot-Client-Exp-Assignment-Context":"fe38h306:1241318;ccr_pr_nudge_adoption:1319471;4cj51803:1433348;cmc_aa_c:1435710;seataa-a98d0257:1447868;"}
+2026-10-07T23:25:39.9843012Z   GITHUB_COPILOT_INTEGRATION_ID: ***
+2026-10-07T23:25:39.9843397Z   COPILOT_USE_SESSIONS: true
+2026-10-07T23:25:39.9843742Z   COPILOT_USE_ASYNC_SESSIONS: true
+2026-10-07T23:25:39.9844145Z   COPILOT_MCP_EMIT_PENDING_SETUP_LOGS: true
+2026-10-07T23:25:39.9844616Z   COPILOT_AGENT_SESSION_ID: d8bf2eb8-cfaf-40c1-bff5-69eb16aa7abe
+2026-10-07T23:25:39.9845064Z   COPILOT_AGENT_RESUME_SESSION_ID: 
+2026-10-07T23:25:39.9845539Z   COPILOT_AGENT_MCP_DEBUG_LOGS_PATH: /home/runner/work/_temp/cca-mcp-debug-logs
+2026-10-07T23:25:39.9846212Z   COPILOT_AGENT_CALLBACK_URL: https://api.individual.githubcopilot.com/agents/swe/agent
+2026-10-07T23:25:39.9846858Z   COPILOT_AGENT_JOB_ID: 60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931
+2026-10-07T23:25:39.9847503Z   COPILOT_JOB_NONCE: ***
+2026-10-07T23:25:39.9847837Z   GITHUB_REPOSITORY_ID: 260550412
+2026-10-07T23:25:39.9848183Z   GITHUB_REPOSITORY_OWNER_ID: 60330232
+2026-10-07T23:25:39.9848544Z   COPILOT_AGENT_INJECTED_SECRET_NAMES: 
+2026-10-07T23:25:39.9848901Z ##[endgroup]
+2026-10-07T23:25:39.9941241Z Starting MCP servers...
+2026-10-07T23:25:40.1382217Z Waiting for MCP servers to be ready...
+2026-10-07T23:25:40.1459234Z MCP servers not ready yet. Retrying in 300ms... (1/200)
+2026-10-07T23:25:40.4594770Z MCP servers not ready yet. Retrying in 300ms... (2/200)
+2026-10-07T23:25:40.7692584Z MCP servers not ready yet. Retrying in 300ms... (3/200)
+2026-10-07T23:25:41.0878212Z MCP servers are ready.
+2026-10-07T23:25:41.0883714Z Ending MCP step
+2026-10-07T23:25:41.0979273Z ##[group]Run echo "Setting up the agent..."
+2026-10-07T23:25:41.0980516Z [36;1mecho "Setting up the agent..."[0m
+2026-10-07T23:25:41.0981209Z [36;1mnpm config get prefix[0m
+2026-10-07T23:25:41.0982377Z [36;1mnode ***-action-main/dist-autofind-ts/ts/autofind.js cca-setup[0m
+2026-10-07T23:25:41.1077420Z shell: /usr/bin/bash -e {0}
+2026-10-07T23:25:41.1077785Z env:
+2026-10-07T23:25:41.1078071Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:41.1078450Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:41.1078836Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:41.1079175Z ##[endgroup]
+2026-10-07T23:25:41.1166085Z Setting up the agent...
+2026-10-07T23:25:41.2464379Z /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-07T23:25:42.3641795Z autofind.js version 0.1.149
+2026-10-07T23:25:42.3654942Z Found bundled copilot CLI, skipping npm installation
+2026-10-07T23:25:42.3657595Z Preparing environment variables for CCA...
+2026-10-07T23:25:42.4069837Z Starting octokit proxy...
+2026-10-07T23:25:43.4431940Z Setup complete.
+2026-10-07T23:25:43.5370707Z ##[group]Run set -euo pipefail
+2026-10-07T23:25:43.5371135Z [36;1mset -euo pipefail[0m
+2026-10-07T23:25:43.5371439Z [36;1mARCH=$(uname -m)[0m
+2026-10-07T23:25:43.5371710Z [36;1mcase "$ARCH" in[0m
+2026-10-07T23:25:43.5372274Z [36;1m  x86_64)  ARTIFACT="git-proxy-linux-x64.tar.gz" ;;[0m
+2026-10-07T23:25:43.5372965Z [36;1m  aarch64) ARTIFACT="git-proxy-linux-arm64.tar.gz" ;;[0m
+2026-10-07T23:25:43.5373435Z [36;1m  *) echo "Unsupported architecture: $ARCH"; exit 1 ;;[0m
+2026-10-07T23:25:43.5373813Z [36;1mesac[0m
+2026-10-07T23:25:43.5374045Z [36;1m[0m
+2026-10-07T23:25:43.5374271Z [36;1m[0m
+2026-10-07T23:25:43.5374513Z [36;1m[0m
+2026-10-07T23:25:43.5374917Z [36;1mecho "A matching pre-installed git-proxy was not found; falling through to download."[0m
+2026-10-07T23:25:43.5375457Z [36;1mecho "Downloading git-proxy ($ARTIFACT)..."[0m
+2026-10-07T23:25:43.5375800Z [36;1mMAX_RETRIES=3[0m
+2026-10-07T23:25:43.5376063Z [36;1mRETRY_COUNT=0[0m
+2026-10-07T23:25:43.5376394Z [36;1mwhile [ $RETRY_COUNT -lt $MAX_RETRIES ]; do[0m
+2026-10-07T23:25:43.5377055Z [36;1m  if curl -fsSL --max-time 60 -H "Authorization: ***" \[0m
+2026-10-07T23:25:43.5377696Z [36;1m    "https://api.individual.githubcopilot.com/agents/swe/runtime-artifacts/$ARTIFACT" | tar -xz; then[0m
+2026-10-07T23:25:43.5378262Z [36;1m    break[0m
+2026-10-07T23:25:43.5378496Z [36;1m  fi[0m
+2026-10-07T23:25:43.5378745Z [36;1m  RETRY_COUNT=$((RETRY_COUNT + 1))[0m
+2026-10-07T23:25:43.5379312Z [36;1m  sleep 1[0m
+2026-10-07T23:25:43.5379545Z [36;1mdone[0m
+2026-10-07T23:25:43.5380867Z [36;1mif [ $RETRY_COUNT -eq $MAX_RETRIES ]; then echo "Failed to download git-proxy after $MAX_RETRIES attempts"; exit 81; fi[0m
+2026-10-07T23:25:43.5381548Z [36;1mchmod +x git-proxy[0m
+2026-10-07T23:25:43.5476453Z shell: /usr/bin/bash -e {0}
+2026-10-07T23:25:43.5477161Z env:
+2026-10-07T23:25:43.5477572Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:43.5478208Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:43.5478822Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:43.5479317Z   NODE_USE_ENV_PROXY: 1
+2026-10-07T23:25:43.5489030Z   AUTOFIND_COPILOT_CLI_PATH: /home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/copilot-cli/node_modules/@github/copilot/npm-loader.js
+2026-10-07T23:25:43.5490815Z   COPILOT_AGENT_JOB_ID: 60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931
+2026-10-07T23:25:43.5491786Z   COPILOT_AGENT_MODEL: sweagent-capi:gpt-5.6-sol[ReasoningEffort=high]
+2026-10-07T23:25:43.5492678Z   COPILOT_API_URL: https://api.individual.githubcopilot.com
+2026-10-07T23:25:43.5493738Z   COPILOT_JOB_NONCE: ***
+2026-10-07T23:25:43.5494258Z   COPILOT_AGENT_ACTOR_ID: 19977
+2026-10-07T23:25:43.5494823Z   COPILOT_ENABLE_SECRET_FILTERING: true
+2026-10-07T23:25:43.5495628Z   AUTOFIND_OCTOKIT_PROXY_URL: http://127.0.0.1:33585
+2026-10-07T23:25:43.5496503Z   AUTOFIND_OCTOKIT_PROXY_SECRET: ***
+2026-10-07T23:25:43.5497310Z   GITHUB_COPILOT_API_TOKEN: ***
+2026-10-07T23:25:43.5497822Z ##[endgroup]
+2026-10-07T23:25:43.5848216Z A matching pre-installed git-proxy was not found; falling through to download.
+2026-10-07T23:25:43.5861356Z Downloading git-proxy (git-proxy-linux-x64.tar.gz)...
+2026-10-07T23:25:43.7926886Z ##[group]Run set -euo pipefail
+2026-10-07T23:25:43.7927333Z [36;1mset -euo pipefail[0m
+2026-10-07T23:25:43.7927645Z [36;1mecho "RUNNER_TEMP=$RUNNER_TEMP"[0m
+2026-10-07T23:25:43.7928174Z [36;1mfind "$RUNNER_TEMP" -maxdepth 1 -type f -name 'git-credentials-*.config' -print -delete[0m
+2026-10-07T23:25:43.7928695Z [36;1m[0m
+2026-10-07T23:25:43.7929194Z [36;1m# Generate a unique token and stop processing workflow commands to prevent the runtime from injecting commands[0m
+2026-10-07T23:25:43.7929829Z [36;1mSTOP_TOKEN=$(cat /proc/sys/kernel/random/uuid)[0m
+2026-10-07T23:25:43.7930518Z [36;1m[0m
+2026-10-07T23:25:43.7930891Z [36;1m# Use a trap to ensure we always resume command processing and check for[0m
+2026-10-07T23:25:43.7931478Z [36;1m# fallback error annotations, even if the runtime exits with a non-zero code[0m
+2026-10-07T23:25:43.7932069Z [36;1m# (which would otherwise cause set -e to abort the shell before we get here).[0m
+2026-10-07T23:25:43.7932607Z [36;1m# The trap preserves the original exit code.[0m
+2026-10-07T23:25:43.7932951Z [36;1mcopilot_cleanup() {[0m
+2026-10-07T23:25:43.7933218Z [36;1m  [0m
+2026-10-07T23:25:43.7933559Z [36;1m  if [ -n "${GIT_PROXY_PID:-}" ] && kill -0 "$GIT_PROXY_PID" 2>/dev/null; then[0m
+2026-10-07T23:25:43.7934057Z [36;1m    echo "Stopping git-proxy (pid=$GIT_PROXY_PID)..."[0m
+2026-10-07T23:25:43.7934462Z [36;1m    kill "$GIT_PROXY_PID" 2>/dev/null || true[0m
+2026-10-07T23:25:43.7934796Z [36;1m    for _ in {1..25}; do[0m
+2026-10-07T23:25:43.7935157Z [36;1m      if ! kill -0 "$GIT_PROXY_PID" 2>/dev/null; then break; fi[0m
+2026-10-07T23:25:43.7935533Z [36;1m      sleep 0.2[0m
+2026-10-07T23:25:43.7935787Z [36;1m    done[0m
+2026-10-07T23:25:43.7936108Z [36;1m    if kill -0 "$GIT_PROXY_PID" 2>/dev/null; then[0m
+2026-10-07T23:25:43.7936586Z [36;1m      echo "git-proxy did not stop gracefully; forcing termination."[0m
+2026-10-07T23:25:43.7937063Z [36;1m      kill -KILL "$GIT_PROXY_PID" 2>/dev/null || true[0m
+2026-10-07T23:25:43.7937415Z [36;1m    fi[0m
+2026-10-07T23:25:43.7937687Z [36;1m    wait "$GIT_PROXY_PID" 2>/dev/null || true[0m
+2026-10-07T23:25:43.7938014Z [36;1m  fi[0m
+2026-10-07T23:25:43.7938235Z [36;1m  [0m
+2026-10-07T23:25:43.7938460Z [36;1m  echo "::$STOP_TOKEN::"[0m
+2026-10-07T23:25:43.7939090Z [36;1m  FALLBACK_FILE="${RUNNER_TEMP}/copilot-fallback-error.txt"[0m
+2026-10-07T23:25:43.7939506Z [36;1m  if [ -f "$FALLBACK_FILE" ]; then[0m
+2026-10-07T23:25:43.7939902Z [36;1m    FALLBACK_MSG=$(head -c 500 "$FALLBACK_FILE" | tr -d '\n\r')[0m
+2026-10-07T23:25:43.7940606Z [36;1m    echo "::error title=Copilot Error::${FALLBACK_MSG}"[0m
+2026-10-07T23:25:43.7940982Z [36;1m    rm -f "$FALLBACK_FILE"[0m
+2026-10-07T23:25:43.7941527Z [36;1m  fi[0m
+2026-10-07T23:25:43.7941877Z [36;1m}[0m
+2026-10-07T23:25:43.7942287Z [36;1mtrap copilot_cleanup EXIT[0m
+2026-10-07T23:25:43.7942661Z [36;1m[0m
+2026-10-07T23:25:43.7943102Z [36;1mecho "::stop-commands::$STOP_TOKEN"[0m
+2026-10-07T23:25:43.7943566Z [36;1m[0m
+2026-10-07T23:25:43.7943844Z [36;1m[0m
+2026-10-07T23:25:43.7944452Z [36;1m# Keep the proxy and runtime in one Actions step so their lifetimes[0m
+2026-10-07T23:25:43.7945076Z [36;1m# are coupled consistently on Linux and Windows.[0m
+2026-10-07T23:25:43.7945607Z [36;1mecho "Starting git-proxy..."[0m
+2026-10-07T23:25:43.7962015Z [36;1mGIT_PROXY_LOG="$RUNNER_TEMP/git-proxy.log"[0m
+2026-10-07T23:25:43.7962783Z [36;1mecho "git-proxy logs: $GIT_PROXY_LOG"[0m
+2026-10-07T23:25:43.7963273Z [36;1mprintf '%s\n' "$GITHUB_TOKEN" | env \[0m
+2026-10-07T23:25:43.7963659Z [36;1m  GITHUB_AGENT_ACTOR="$COPILOT_GIT_PROXY_ACTOR" \[0m
+2026-10-07T23:25:43.7964103Z [36;1m  GITHUB_REPOSITORY="$COPILOT_GIT_PROXY_REPOSITORY" \[0m
+2026-10-07T23:25:43.7964562Z [36;1m  GITHUB_AGENT_BRANCH_NAME="$COPILOT_GIT_PROXY_BRANCH_NAME" \[0m
+2026-10-07T23:25:43.7965027Z [36;1m  GITHUB_SERVER_URL="$GITHUB_SERVER_URL" \[0m
+2026-10-07T23:25:43.7965454Z [36;1m  GITHUB_GIT_PROXY_PORT="$COPILOT_GIT_PROXY_PORT" \[0m
+2026-10-07T23:25:43.7966351Z [36;1m  "$RUNNER_TEMP/git-proxy" > "$GIT_PROXY_LOG" 2>&1 &[0m
+2026-10-07T23:25:43.7966758Z [36;1mGIT_PROXY_PID=$![0m
+2026-10-07T23:25:43.7967062Z [36;1m[0m
+2026-10-07T23:25:43.7967306Z [36;1mPROXY_READY=false[0m
+2026-10-07T23:25:43.7967588Z [36;1mfor _ in {1..50}; do[0m
+2026-10-07T23:25:43.7967932Z [36;1m  if ! kill -0 "$GIT_PROXY_PID" 2>/dev/null; then[0m
+2026-10-07T23:25:43.7968289Z [36;1m    break[0m
+2026-10-07T23:25:43.7968537Z [36;1m  fi[0m
+2026-10-07T23:25:43.7968918Z [36;1m  if (exec 3&lt;>"/dev/tcp/127.0.0.1/${COPILOT_GIT_PROXY_PORT}") 2>/dev/null; then[0m
+2026-10-07T23:25:43.7969372Z [36;1m    PROXY_READY=true[0m
+2026-10-07T23:25:43.7969678Z [36;1m    break[0m
+2026-10-07T23:25:43.7969897Z [36;1m  fi[0m
+2026-10-07T23:25:43.7970331Z [36;1m  sleep 0.2[0m
+2026-10-07T23:25:43.7970571Z [36;1mdone[0m
+2026-10-07T23:25:43.7970812Z [36;1mif [ "$PROXY_READY" != "true" ]; then[0m
+2026-10-07T23:25:43.7971218Z [36;1m  if [ -f "$GIT_PROXY_LOG" ]; then cat "$GIT_PROXY_LOG"; fi[0m
+2026-10-07T23:25:43.7971653Z [36;1m  if ! kill -0 "$GIT_PROXY_PID" 2>/dev/null; then[0m
+2026-10-07T23:25:43.7972159Z [36;1m    echo "git-proxy exited before listening on port $COPILOT_GIT_PROXY_PORT"[0m
+2026-10-07T23:25:43.7972615Z [36;1m  else[0m
+2026-10-07T23:25:43.7972986Z [36;1m    echo "git-proxy did not start listening on port $COPILOT_GIT_PROXY_PORT"[0m
+2026-10-07T23:25:43.7973409Z [36;1m  fi[0m
+2026-10-07T23:25:43.7973628Z [36;1m  exit 1[0m
+2026-10-07T23:25:43.7973845Z [36;1mfi[0m
+2026-10-07T23:25:43.7974121Z [36;1mecho "git-proxy started (pid=$GIT_PROXY_PID)"[0m
+2026-10-07T23:25:43.7974447Z [36;1m[0m
+2026-10-07T23:25:43.7974765Z [36;1m# Keep proxy-only configuration out of the runtime environment.[0m
+2026-10-07T23:25:43.7975440Z [36;1munset COPILOT_GIT_PROXY_ACTOR COPILOT_GIT_PROXY_REPOSITORY COPILOT_GIT_PROXY_BRANCH_NAME COPILOT_GIT_PROXY_PORT[0m
+2026-10-07T23:25:43.7975998Z [36;1m[0m
+2026-10-07T23:25:43.7976194Z [36;1m[0m
+2026-10-07T23:25:43.7976407Z [36;1m[0m
+2026-10-07T23:25:43.7976608Z [36;1m[0m
+2026-10-07T23:25:43.7976947Z [36;1m# Secrets listed here are piped via stdin so they never appear in /proc[0m
+2026-10-07T23:25:43.7977552Z [36;1msecrets=$("/home/runner/work/_temp/ghcca-node/node/bin/node" -p "JSON.stringify({[0m
+2026-10-07T23:25:43.7978170Z [36;1m  [0m
+2026-10-07T23:25:43.7978445Z [36;1m  GITHUB_TOKEN: process.env.GITHUB_TOKEN || '',[0m
+2026-10-07T23:25:43.7978936Z [36;1m  GITHUB_COPILOT_GITHUB_TOKEN: process.env.GITHUB_COPILOT_GITHUB_TOKEN || '',[0m
+2026-10-07T23:25:43.7979373Z [36;1m  [0m
+2026-10-07T23:25:43.7979710Z [36;1m  GITHUB_COPILOT_API_TOKEN: process.env.GITHUB_COPILOT_API_TOKEN || '',[0m
+2026-10-07T23:25:43.7980440Z [36;1m  GITHUB_COPILOT_INFERENCE_TOKEN: process.env.GITHUB_COPILOT_INFERENCE_TOKEN || '',[0m
+2026-10-07T23:25:43.7981062Z [36;1m  GITHUB_COPILOT_INTEGRATION_ID: process.env.GITHUB_COPILOT_INTEGRATION_ID || '',[0m
+2026-10-07T23:25:43.7981703Z [36;1m  COPILOT_INTEGRATION_ID_OVERRIDE: process.env.COPILOT_INTEGRATION_ID_OVERRIDE || '',[0m
+2026-10-07T23:25:43.7982286Z [36;1m  CAPI_HMAC_KEY_OVERRIDE: process.env.CAPI_HMAC_KEY_OVERRIDE || '',[0m
+2026-10-07T23:25:43.7982774Z [36;1m  COPILOT_JOB_NONCE: process.env.COPILOT_JOB_NONCE || ''[0m
+2026-10-07T23:25:43.7983141Z [36;1m})")[0m
+2026-10-07T23:25:43.7983964Z [36;1munset GITHUB_TOKEN GITHUB_COPILOT_GITHUB_TOKEN GITHUB_COPILOT_API_TOKEN GITHUB_COPILOT_INFERENCE_TOKEN GITHUB_COPILOT_INTEGRATION_ID COPILOT_INTEGRATION_ID_OVERRIDE CAPI_HMAC_KEY_OVERRIDE COPILOT_JOB_NONCE[0m
+2026-10-07T23:25:43.7984850Z [36;1m[0m
+2026-10-07T23:25:43.7985094Z [36;1mecho "Processing requests..." && \[0m
+2026-10-07T23:25:43.7985424Z [36;1mprintf '%s' "$secrets" | \[0m
+2026-10-07T23:25:43.7986298Z [36;1m"/home/runner/work/_temp/***-action-main/ebpf/launch.sh" \[0m
+2026-10-07T23:25:43.7987697Z [36;1m  "/home/runner/work/_temp/ghcca-node/node/bin/node --enable-source-maps /home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/autofind.js" \[0m
+2026-10-07T23:25:43.7988663Z [36;1m  "/home/runner/work/_temp/runtime-logs" \[0m
+2026-10-07T23:25:43.7989016Z [36;1m  "false"[0m
+2026-10-07T23:25:43.8052158Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T23:25:43.8052550Z env:
+2026-10-07T23:25:43.8052785Z   SHOULD_CONTINUE: true
+2026-10-07T23:25:43.8053102Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:25:43.8053441Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:25:43.8053728Z   NODE_USE_ENV_PROXY: 1
+2026-10-07T23:25:43.8054548Z   AUTOFIND_COPILOT_CLI_PATH: /home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/copilot-cli/node_modules/@github/copilot/npm-loader.js
+2026-10-07T23:25:43.8055348Z   COPILOT_AGENT_JOB_ID: 60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931
+2026-10-07T23:25:43.8055881Z   COPILOT_AGENT_MODEL: sweagent-capi:gpt-5.6-sol[ReasoningEffort=high]
+2026-10-07T23:25:43.8056382Z   COPILOT_API_URL: https://api.individual.githubcopilot.com
+2026-10-07T23:25:43.8056926Z   COPILOT_JOB_NONCE: ***
+2026-10-07T23:25:43.8057213Z   COPILOT_AGENT_ACTOR_ID: 19977
+2026-10-07T23:25:43.8057512Z   COPILOT_ENABLE_SECRET_FILTERING: true
+2026-10-07T23:25:43.8057879Z   AUTOFIND_OCTOKIT_PROXY_URL: http://127.0.0.1:33585
+2026-10-07T23:25:43.8058345Z   AUTOFIND_OCTOKIT_PROXY_SECRET: ***
+2026-10-07T23:25:43.8058778Z   GITHUB_TOKEN: ***
+2026-10-07T23:25:43.8059075Z   COPILOT_GIT_PROXY_REPOSITORY: PostHog/posthog.com
+2026-10-07T23:25:43.8059443Z   COPILOT_GIT_PROXY_ACTOR: haacked
+2026-10-07T23:25:43.8059765Z   COPILOT_GIT_PROXY_BRANCH_NAME: flags-q4-goals
+2026-10-07T23:25:43.8060287Z   COPILOT_GIT_PROXY_PORT: 26831
+2026-10-07T23:25:43.8060751Z   GITHUB_COPILOT_GITHUB_TOKEN: ***
+2026-10-07T23:25:43.8061156Z   GITHUB_COPILOT_API_TOKEN: ***
+2026-10-07T23:25:43.8061564Z   GITHUB_COPILOT_INFERENCE_TOKEN: ***
+2026-10-07T23:25:43.8061870Z   COPILOT_AGENT_ACTOR_TYPE: 
+2026-10-07T23:25:43.8062157Z   COPILOT_AGENT_INFERENCE_IDENTITY: actor
+2026-10-07T23:25:43.8062553Z   GITHUB_COPILOT_INTEGRATION_ID: ***
+2026-10-07T23:25:43.8062953Z   COPILOT_AGENT_FIREWALL_ENABLED: true
+2026-10-07T23:25:43.8063267Z   COPILOT_AGENT_FIREWALL_STATUS_REASON: 
+2026-10-07T23:25:43.8078346Z   COPILOT_AGENT_FIREWALL_RULESET_ALLOW_LIST: H4sIAAAAAAAA/7ycW4/bNhbH3+dTEO7D7gIRJ07aSTJvwd7ysMUWm/ZpUaBH5LHEMUUyPKQdZbHfvaBke66dsUXKTw3i8ncuJA//vCgXVVVdbNCTsuaaveav+fLCR410fcFYxdbKyGumXJX+7oIxxgx0eM3gW/RYdRhAQoBKueE35a7Z8uo9v3rLl28+8OXVxVH4NoQ7BqLX1+x/TNoOlLlmwuu3XKpGCfSBC9ux/5/Q9PuJTa0gN7FpoEp4zbfEqe/ABBQntx+sTwYk6w3a4CNNiXpa02Q0tLANOMHklIbJ4Aa9ItWYCSanNR1Sq20NeqLZqY2F18SJ9ASTJ7dKQSqJZuoAmtg2mSUUQTV2SpRTWiaTkdBPjXRi22Fii3pKI7lrNLFsSyvW6CthO2cJq9or2eDd6r1YvnvDl+8Tb/GSZyRaTND/LtLPtPj11cHZphWeK/tydM8wPDaKgu95G2s+On5axnZtlH3FQGu7rcD0FcX6UGh9xJNpwnZZuGcCdt7KKIKyhgtto1xp8HhS5M/Apebr95TbJ27dUAnOlwh9LqMTnndKeEt2deQEfG7E5g9YF2utBEfhOWwpCwUxtPwwfo+d76daMbHBwK1v8kaWosDLoMCpQqSR4tYNb1RIBSR7/thgMBQccMNUkrjhg5TOxtVRaUm8uJsjUGjFa21TGj3yrTLSbokbDC+whz+wI7pqX+w3b1IVnGTrhaGVskwIXrRVJCNKjdh7WCqFlYIT+o0SSHyjKIKmEKU6Ut48353ZqZR2a7QFed+zOYbckF2UDWb7LBQvEfp2uy0YqDU4yMhjiaOGW3xM6oOljalaKQEBmceNFZCUA9OKArMb9EPbxcOZeN+bxa+7v957tHgU4GL3fzgI7TVbXLq1so4uhdeXi3lWJZfkHm5yl2IuwQcNpjliMj6ZHHqUHQrWQ4O8sbbRCE5RytDDBMW6ciDW0CBdPq+hS5pN0VapDKkNZvXMQRAN62ba4QhrApowp/T1sOVPGsybX/UNikAzkPWKSgmLEVMNin8GT+/h6S2HDr5ZA1vKJgsrcVgGCiUi8b7oUjQSYIwyTZU0ZSFmQnXClZOU4oRRdGSxiC71yV3ug0IhrFPahkvRQriEEEC0HZow1qrv2D9V+BRr9nHYhxLbWr9epeXGR8MgrTggwr4iMRDCRhOI/fljWqlZkm2HH9FIZ1X69XZj65GiDkTwulp++EuRvfItcgbV+ISZ5XnMvDmPmbfnMfP9ecz8cB4zV+cx8+48Zt6fx8yHM03Pc5WBM9WB5ZkKwfJMlWB5plKwPFMtWJ6pGCzPVA2WZyoHyz+uB4MO+esoU1hAjR0G37Pdgcitrighl3ZqqDqYeVqClzB1a0IZqTZKRtir3Z0X5S3VkZRBorntoAnonVeET1ia5ZSgsdmHBI098njgxcH9teeFYBS7Uqjh8LtElsYAX7wcKXqIkkxWYyIq65sqVZC5Dpw8agRC4i1Qq4T1rsBOMfAZsH3s5sAebloDeg8r67sZL51aoDVqfdzwvm00HKjxO43nOopqMFRNK6LjJ3l6xHk5PSDOkt7tdstvYAPZg+JGrkdQ9s2LUxykdUHFLh9WCjTe2fAONmiye3ikgAPRYjbMo7O8OHFZNNSTLlb3l4C7/z6xRLw6/HTPTCXQBA+a79aM6nDzdH/x2DfPj2vkZs+dfapBFIDdiEFd8VqlZPT5p+JEnKyB0LtCg5WcV6bJfT7ReJA636PDvWkhntOxUaY0rtqfpRYDDz3ReFCaiq1YHIVWjvKdOwDvzYlZFsAbsqYafodstxOLj6xUgvCYhfs79h/slJHor9m/bCBmV+w3cOG3oYdIBesVEpPW/CmwSMg+/fzzT4wQR/fo+vKSokOfdqApT5dfItJwGH+5fPvD1bv3V5exjibEClyotm1fgccqtFh5pFsDFQiBRCgru0FfJfS4sf5laHxaUhav2BNL8XjZyEdvppSlJ7GEInoV+tJc54BriEa0DuQU+fAkdY19KjjoS7s7vgqaKcdJkpEBJzyswk7rp7HxN6wVmAIGJNZcDrApc/D5cVGYu8Z+WL0KY/dPAEpzd7gOHF8BBd1LM+l87g/GReBab7p9nUtj4h8orYe8l6ergeG8vUGR/ziqU95bT4WphyXqKex4JIkm/PtztuM86Tmbv0hvIOpwHza4+VE7ZTCrwyohDYeBo5WJX4ucRT3mje560ebnNBXKMq4+JA1Ofv7l89+LyB+HhuJBUO3kgmSfIOS8nJCGe5Qt7J+L7E7Qu84a9tNYiNiP46zJ6cSRND4lyX0rvS+Pu3cvd/ddg/c/7h+hsc82eoEFHKdHD+3meVXtupv82T1Sip3szYLL3qqtVSfrQr4Z15V87z08RXdd9pcOxkoskKoevEnRFevBckBnT4Pd1YgpOzTM7/yHbhi4S4Mgs8PqaDi1eVICjeUajCzTVbXdYvbHKbUykPaF3HlFHeSGCOSUx93l0ixlVLhpqvnRaXgRUIcBioAGyAPaTLdazvJx5VOUL4/LkRoMu+8P/ZzxOw391qumDfwgv5ynxyIgT3fdNZP7aP0WVe7Dh1toBWvooORHFXfYG/TqmzUnwUteGIvW2w6rlfVVQArKNNX4Od5cHyn0TnHXh9bml4SBlQ1RjrvewdH39C+4lCJrLQWUc162rpROS9IDa3kLnbWBgodj0/HSo3QjgdfKUACfX/wHGhgY/5AdaiG3ijl0W2j7YL1oy1xqCGuCMjFmS7uBdgh2xi2gj3XfYJcv+9MupBjsACq4TaqjkRp9OScHSKKtrG/yL54OOGvKXI0pI/FruXDFcMGfcNXxj74OHbrpXvzXDebR5h4CZm+Nx1SWYVGAoEQpWMt9pBAd93mf8e+8SrC73TtLnxxqL23VKl+ll6EIKyw4KwtMFGn4Q9rvAQAA//8Zk2hSvEoAAA==
+2026-10-07T23:25:43.8093842Z   COPILOT_AGENT_FIREWALL_ENABLE_RULESET_ALLOW_LIST: true
+2026-10-07T23:25:43.8103287Z   COPILOT_AGENT_FIREWALL_ALLOW_LIST: localhost,https://github.com/,githubusercontent.com,https://raw.githubusercontent.com/,https://objects.githubusercontent.com/,https://codeload.github.com/,https://uploads.github.com/user-attachments/assets/,https://api.github.com/internal/user-attachments/assets/,https://api.github.com/advisories,https://api.github.com/copilot_internal/user,https://api.github.com/copilot/mcp_registry,https://api.github.com/user,https://api.github.com/cmc_internal/api/agents/environments,https://api.github.com/repos/PostHog/posthog.com/copilot_internal/,https://api.github.com/repos/PostHog/posthog.com/compare/,https://api.github.com/repos/PostHog/posthog.com/code-scanning/codeql/databases/,https://api.github.com/embeddings/code/search,https://github.githubassets.com/assets,https://*.githubusercontent.com,https://uploads.github.com,172.18.0.1,168.63.129.16,host.docker.internal,https://lfs.github.com/,https://github-cloud.githubusercontent.com/,https://github-cloud.s3.amazonaws.com/,https://api.github.com/repos/github/codeql-action/releases/,https://api.github.com/repos/dependabot/cli/releases/,https://productionresultssa0.blob.core.windows.net/,https://productionresultssa1.blob.core.windows.net/,https://productionresultssa2.blob.core.windows.net/,https://productionresultssa3.blob.core.windows.net/,https://productionresultssa4.blob.core.windows.net/,https://productionresultssa5.blob.core.windows.net/,https://productionresultssa6.blob.core.windows.net/,https://productionresultssa7.blob.core.windows.net/,https://productionresultssa8.blob.core.windows.net/,https://productionresultssa9.blob.core.windows.net/,https://productionresultssa10.blob.core.windows.net/,https://productionresultssa11.blob.core.windows.net/,https://productionresultssa12.blob.core.windows.net/,https://productionresultssa13.blob.core.windows.net/,https://productionresultssa14.blob.core.windows.net/,https://productionresultssa15.blob.core.windows.net/,https://productionresultssa16.blob.core.windows.net/,https://productionresultssa17.blob.core.windows.net/,https://productionresultssa18.blob.core.windows.net/,https://productionresultssa19.blob.core.windows.net/,https://production-copilot-host.webpubsub.azure.com/,https://queryconsoleprod.blob.core.windows.net/github-codeql-query-console-prod/,https://api.githubcopilot.com/,https://api.githubcopilot.com/,api.individual.githubcopilot.com,,https://github.com
+2026-10-07T23:25:43.8113053Z   COPILOT_AGENT_BACKGROUND_MKCERT: true
+2026-10-07T23:25:43.8113401Z   COPILOT_AGENT_SOURCE_ENVIRONMENT: gc-cus-02
+2026-10-07T23:25:43.8113840Z   GITHUB_UPLOADS_URL: https://uploads.github.com/user-attachments/assets
+2026-10-07T23:25:43.8114393Z   GITHUB_DOWNLOADS_URL: https://api.github.com/internal/user-attachments/assets
+2026-10-07T23:25:43.8114957Z   SECRET_SCANNING_URL: https://scanning-api.github.com/api/v1/scan/multipart
+2026-10-07T23:25:43.8115924Z   COPILOT_AGENT_RUNTIME_VERSION: runtime-copilot-pull-request-reviewer-vendored-9c1fe0dcb7244d720f95eba2d11ac492079e2df9
+2026-10-07T23:25:43.8116575Z   COPILOT_AGENT_DEBUG: false
+2026-10-07T23:25:43.8116847Z   COPILOT_MCP_ENABLED: true
+2026-10-07T23:25:43.8117140Z   GITHUB_COPILOT_3P_MCP_POLICY_ENABLED: true
+2026-10-07T23:25:43.8117513Z   COPILOT_MCP_READ_ONLY_MODE: true
+2026-10-07T23:25:43.8117884Z   COPILOT_AGENT_MCP_SERVER_TEMP: /home/runner/work/_temp/mcp-server
+2026-10-07T23:25:43.8118291Z   COPILOT_AGENT_INJECTED_SECRET_NAMES: 
+2026-10-07T23:25:43.8118852Z   CPD_SAVE_TRAJECTORY_OUTPUT: /home/runner/work/_temp/***-action-main/dist/trajectory.md
+2026-10-07T23:25:43.8119352Z   COPILOT_AGENT_ONLINE_EVALUATION_DISABLED: true
+2026-10-07T23:25:43.8125453Z   COPILOT_FEATURE_FLAGS: copilot_inject_integration_headers,copilot_swe_agent_blackbird_tool_use,copilot_swe_agent_cap_claude_opus_token_limits,copilot_swe_agent_cleanup_partial_clone,copilot_swe_agent_clone_session_logging,copilot_swe_agent_failure_recovery_before_shutdown,copilot_swe_agent_firewall_enabled_by_default,copilot_swe_agent_vision,copilot_swe_agent_parallel_tool_execution,copilot_swe_agent_enable_security_tool,copilot_swe_agent_code_review,copilot_swe_agent_cca_session_attribution,copilot_swe_agent_retry_workflow_run,copilot_swe_agent_validation_agent_dependencies,copilot_swe_agent_validation_tool_settings,copilot_swe_agent_secret_scanning_hook,copilot_swe_agent_new_out_proc_mcp,copilot_swe_agent_mcp_builtin_provenance,copilot_swe_agent_enable_dependabot_checker,copilot_swe_agent_use_non_blocking_callbacks,coding_agent_plan_tags,copilot_swe_agent_trivial_change,copilot_swe_agent_trivial_change_code_review_disable,copilot_swe_agent_trivial_change_skip,copilot_swe_agent_unified_task_tool,copilot_swe_agent_error_annotations,copilot_swe_agent_codex_error_classification,copilot_swe_agent_claude_error_classification,copilot_swe_agent_runtime_timing_telemetry,copilot_swe_agent_parallel_validation,copilot_swe_agent_3p_security_prompt,copilot_swe_agent_new_security_tools,copilot_swe_agent_oidc_token_exchange,copilot_swe_agent_logs_url_trailer,copilot_swe_agent_sandbox_server_token_cleanup,copilot_swe_agent_use_attachment_proxy,copilot_swe_agent_co_author_hook,copilot_feature_agentic_memory_user_scoped,copilot_feature_agentic_memory_user_scoped_cfi,copilot_swe_agent_chronicle,copilot_swe_agent_automation_subagent_allowlist,copilot-feature-agentic-memory
+2026-10-07T23:25:43.8131898Z   COPILOT_EXPERIMENTS: mcp_permission_gate:true
+2026-10-07T23:25:43.8132246Z   COPILOT_EXPERIMENT_ASSIGNMENT_CONTEXT: 
+2026-10-07T23:25:43.8132596Z   COPILOT_PERMISSION_GATE_REASON: ineligible_app
+2026-10-07T23:25:43.8132930Z   COPILOT_PERMISSION_MODE: 
+2026-10-07T23:25:43.8133685Z   COPILOT_AGENT_REQUEST_HEADERS: {"X-Copilot-Client-Exp-Assignment-Context":"fe38h306:1241318;ccr_pr_nudge_adoption:1319471;4cj51803:1433348;cmc_aa_c:1435710;seataa-a98d0257:1447868;"}
+2026-10-07T23:25:43.8134558Z   COPILOT_AGENT_SESSION_ID: d8bf2eb8-cfaf-40c1-bff5-69eb16aa7abe
+2026-10-07T23:25:43.8134962Z   COPILOT_AGENT_RESUME_SESSION_ID: 
+2026-10-07T23:25:43.8135276Z ##[endgroup]
+2026-10-07T23:25:43.8228027Z RUNNER_TEMP=/home/runner/work/_temp
+2026-10-07T23:25:43.8266973Z ::stop-commands::***
+2026-10-07T23:25:43.8267668Z Starting git-proxy...
+2026-10-07T23:25:43.8268246Z git-proxy logs: /home/runner/work/_temp/git-proxy.log
+2026-10-07T23:25:44.0307941Z git-proxy started (pid=3301)
+2026-10-07T23:25:44.0573680Z Processing requests...
+2026-10-07T23:25:44.0643005Z Launcher version: be8d138d53230cacd8761a82196399e292e12d77, 0.0.61, 1.4.4
+2026-10-07T23:25:44.3136796Z ==============================
+2026-10-07T23:25:44.3137403Z Allow list
+2026-10-07T23:25:44.3137791Z ----
+2026-10-07T23:25:44.3138208Z localhost
+2026-10-07T23:25:44.3138807Z https://github.com/
+2026-10-07T23:25:44.3139424Z githubusercontent.com
+2026-10-07T23:25:44.3139987Z https://raw.githubusercontent.com/
+2026-10-07T23:25:44.3141994Z https://objects.githubusercontent.com/
+2026-10-07T23:25:44.3142573Z https://codeload.github.com/
+2026-10-07T23:25:44.3143801Z https://uploads.github.com/user-attachments/assets/
+2026-10-07T23:25:44.3144589Z https://api.github.com/internal/user-attachments/assets/
+2026-10-07T23:25:44.3145248Z https://api.github.com/advisories
+2026-10-07T23:25:44.3145798Z https://api.github.com/copilot_internal/user
+2026-10-07T23:25:44.3146418Z https://api.github.com/copilot/mcp_registry
+2026-10-07T23:25:44.3147110Z https://api.github.com/user
+2026-10-07T23:25:44.3147715Z https://api.github.com/cmc_internal/api/agents/environments
+2026-10-07T23:25:44.3148569Z https://api.github.com/repos/PostHog/posthog.com/copilot_internal/
+2026-10-07T23:25:44.3155666Z https://api.github.com/repos/PostHog/posthog.com/compare/
+2026-10-07T23:25:44.3157064Z https://api.github.com/repos/PostHog/posthog.com/code-scanning/codeql/databases/
+2026-10-07T23:25:44.3158240Z https://api.github.com/embeddings/code/search
+2026-10-07T23:25:44.3159321Z https://github.githubassets.com/assets
+2026-10-07T23:25:44.3160906Z https://*.githubusercontent.com
+2026-10-07T23:25:44.3161560Z https://uploads.github.com
+2026-10-07T23:25:44.3162152Z 172.18.0.1
+2026-10-07T23:25:44.3162544Z 168.63.129.16
+2026-10-07T23:25:44.3162980Z host.docker.internal
+2026-10-07T23:25:44.3163444Z https://lfs.github.com/
+2026-10-07T23:25:44.3163966Z https://github-cloud.githubusercontent.com/
+2026-10-07T23:25:44.3164606Z https://github-cloud.s3.amazonaws.com/
+2026-10-07T23:25:44.3165344Z https://api.github.com/repos/github/codeql-action/releases/
+2026-10-07T23:25:44.3166106Z https://api.github.com/repos/dependabot/cli/releases/
+2026-10-07T23:25:44.3166832Z https://productionresultssa0.blob.core.windows.net/
+2026-10-07T23:25:44.3167529Z https://productionresultssa1.blob.core.windows.net/
+2026-10-07T23:25:44.3168249Z https://productionresultssa2.blob.core.windows.net/
+2026-10-07T23:25:44.3168978Z https://productionresultssa3.blob.core.windows.net/
+2026-10-07T23:25:44.3169687Z https://productionresultssa4.blob.core.windows.net/
+2026-10-07T23:25:44.3170806Z https://productionresultssa5.blob.core.windows.net/
+2026-10-07T23:25:44.3171514Z https://productionresultssa6.blob.core.windows.net/
+2026-10-07T23:25:44.3172269Z https://productionresultssa7.blob.core.windows.net/
+2026-10-07T23:25:44.3173000Z https://productionresultssa8.blob.core.windows.net/
+2026-10-07T23:25:44.3173716Z https://productionresultssa9.blob.core.windows.net/
+2026-10-07T23:25:44.3174793Z https://productionresultssa10.blob.core.windows.net/
+2026-10-07T23:25:44.3175476Z https://productionresultssa11.blob.core.windows.net/
+2026-10-07T23:25:44.3176207Z https://productionresultssa12.blob.core.windows.net/
+2026-10-07T23:25:44.3176909Z https://productionresultssa13.blob.core.windows.net/
+2026-10-07T23:25:44.3177382Z https://productionresultssa14.blob.core.windows.net/
+2026-10-07T23:25:44.3178020Z https://productionresultssa15.blob.core.windows.net/
+2026-10-07T23:25:44.3178596Z https://productionresultssa16.blob.core.windows.net/
+2026-10-07T23:25:44.3179057Z https://productionresultssa17.blob.core.windows.net/
+2026-10-07T23:25:44.3179504Z https://productionresultssa18.blob.core.windows.net/
+2026-10-07T23:25:44.3179931Z https://productionresultssa19.blob.core.windows.net/
+2026-10-07T23:25:44.3180732Z https://production-copilot-host.webpubsub.azure.com/
+2026-10-07T23:25:44.3181296Z https://queryconsoleprod.blob.core.windows.net/github-codeql-query-console-prod/
+2026-10-07T23:25:44.3181823Z https://api.githubcopilot.com/
+2026-10-07T23:25:44.3182284Z https://api.githubcopilot.com/
+2026-10-07T23:25:44.3182784Z api.individual.githubcopilot.com
+2026-10-07T23:25:44.3183170Z https://github.com
+2026-10-07T23:25:44.3183407Z ----
+2026-10-07T23:25:44.3183619Z ==============================
+2026-10-07T23:25:44.3183942Z Using Firewall Recommended Rules
+2026-10-07T23:25:44.3184220Z ----
+2026-10-07T23:25:44.3184511Z 
+2026-10-07T23:25:44.3184605Z ---
+2026-10-07T23:25:44.3184814Z version: 0.0.1
+2026-10-07T23:25:44.3185035Z rules:
+2026-10-07T23:25:44.3185251Z   - kind: ip-rule
+2026-10-07T23:25:44.3185620Z     name: azure-metadata-ip
+2026-10-07T23:25:44.3186074Z     ip: 168.63.129.16
+2026-10-07T23:25:44.3186577Z 
+2026-10-07T23:25:44.3186746Z ---
+2026-10-07T23:25:44.3187096Z version: 0.0.1
+2026-10-07T23:25:44.3187491Z rules:
+2026-10-07T23:25:44.3187865Z   - kind: http-rule
+2026-10-07T23:25:44.3188325Z     url: { domain: crl3.digicert.com }
+2026-10-07T23:25:44.3188931Z   - kind: http-rule
+2026-10-07T23:25:44.3189392Z     url: { domain: crl4.digicert.com }
+2026-10-07T23:25:44.3189919Z   - kind: http-rule
+2026-10-07T23:25:44.3190896Z     url: { domain: ocsp.digicert.com }
+2026-10-07T23:25:44.3191421Z   - kind: http-rule
+2026-10-07T23:25:44.3191894Z     url: { domain: ts-crl.ws.symantec.com }
+2026-10-07T23:25:44.3192444Z   - kind: http-rule
+2026-10-07T23:25:44.3192907Z     url: { domain: ts-ocsp.ws.symantec.com }
+2026-10-07T23:25:44.3193455Z   - kind: http-rule
+2026-10-07T23:25:44.3193896Z     url: { domain: crl.geotrust.com }
+2026-10-07T23:25:44.3194403Z   - kind: http-rule
+2026-10-07T23:25:44.3194846Z     url: { domain: ocsp.geotrust.com }
+2026-10-07T23:25:44.3195349Z   - kind: http-rule
+2026-10-07T23:25:44.3195800Z     url: { domain: crl.thawte.com }
+2026-10-07T23:25:44.3196132Z   - kind: http-rule
+2026-10-07T23:25:44.3196402Z     url: { domain: ocsp.thawte.com }
+2026-10-07T23:25:44.3196696Z   - kind: http-rule
+2026-10-07T23:25:44.3196949Z     url: { domain: crl.verisign.com }
+2026-10-07T23:25:44.3197256Z   - kind: http-rule
+2026-10-07T23:25:44.3197593Z     url: { domain: ocsp.verisign.com }
+2026-10-07T23:25:44.3198121Z   - kind: http-rule
+2026-10-07T23:25:44.3198545Z     url: { domain: crl.globalsign.com }
+2026-10-07T23:25:44.3199051Z   - kind: http-rule
+2026-10-07T23:25:44.3199491Z     url: { domain: ocsp.globalsign.com }
+2026-10-07T23:25:44.3199991Z   - kind: http-rule
+2026-10-07T23:25:44.3200641Z     url: { domain: crls.ssl.com }
+2026-10-07T23:25:44.3201131Z   - kind: http-rule
+2026-10-07T23:25:44.3201549Z     url: { domain: ocsp.ssl.com }
+2026-10-07T23:25:44.3202003Z   - kind: http-rule
+2026-10-07T23:25:44.3202432Z     url: { domain: crl.identrust.com }
+2026-10-07T23:25:44.3202932Z   - kind: http-rule
+2026-10-07T23:25:44.3203364Z     url: { domain: ocsp.identrust.com }
+2026-10-07T23:25:44.3203898Z   - kind: http-rule
+2026-10-07T23:25:44.3204319Z     url: { domain: crl.sectigo.com }
+2026-10-07T23:25:44.3204907Z   - kind: http-rule
+2026-10-07T23:25:44.3205344Z     url: { domain: ocsp.sectigo.com }
+2026-10-07T23:25:44.3206152Z   - kind: http-rule
+2026-10-07T23:25:44.3206605Z     url: { domain: crl.usertrust.com }
+2026-10-07T23:25:44.3207141Z   - kind: http-rule
+2026-10-07T23:25:44.3207603Z     url: { domain: ocsp.usertrust.com }
+2026-10-07T23:25:44.3208151Z   - kind: http-rule
+2026-10-07T23:25:44.3208580Z     url: { domain: s.symcb.com }
+2026-10-07T23:25:44.3209072Z   - kind: http-rule
+2026-10-07T23:25:44.3209499Z     url: { domain: s.symcd.com }
+2026-10-07T23:25:44.3209814Z 
+2026-10-07T23:25:44.3209975Z ---
+2026-10-07T23:25:44.3210721Z version: 0.0.1
+2026-10-07T23:25:44.3211113Z rules:
+2026-10-07T23:25:44.3211475Z   - kind: ip-rule
+2026-10-07T23:25:44.3211906Z     name: docker-compose-bridge-ip
+2026-10-07T23:25:44.3212424Z     ip: "172.18.0.1"
+2026-10-07T23:25:44.3212841Z   - kind: http-rule
+2026-10-07T23:25:44.3213391Z     url: { scheme: ["https"], domain: ghcr.io }
+2026-10-07T23:25:44.3213952Z   - kind: http-rule
+2026-10-07T23:25:44.3214493Z     url: { scheme: ["https"], domain: registry.hub.docker.com }
+2026-10-07T23:25:44.3215152Z   - kind: http-rule
+2026-10-07T23:25:44.3215596Z     url: { domain: docker.io, allow-any-subdomain: true }
+2026-10-07T23:25:44.3215968Z   - kind: http-rule
+2026-10-07T23:25:44.3216278Z     url: { domain: docker.com, allow-any-subdomain: true }
+2026-10-07T23:25:44.3216628Z   - kind: http-rule
+2026-10-07T23:25:44.3216963Z     url: { scheme: ["https"], domain: production.cloudflare.docker.com }
+2026-10-07T23:25:44.3217369Z   - kind: http-rule
+2026-10-07T23:25:44.3217648Z     url: { scheme: ["https"], domain: dl.k8s.io }
+2026-10-07T23:25:44.3217977Z   - kind: http-rule
+2026-10-07T23:25:44.3218276Z     url: { scheme: ["https"], domain: pkgs.k8s.io }
+2026-10-07T23:25:44.3218887Z   - kind: http-rule
+2026-10-07T23:25:44.3219375Z     url: { scheme: ["https"], domain: quay.io }
+2026-10-07T23:25:44.3219922Z   - kind: http-rule
+2026-10-07T23:25:44.3220645Z     url: { scheme: ["https"], domain: mcr.microsoft.com }
+2026-10-07T23:25:44.3221246Z   - kind: http-rule
+2026-10-07T23:25:44.3221722Z     url: { scheme: ["https"], domain: gcr.io }
+2026-10-07T23:25:44.3222255Z   - kind: http-rule
+2026-10-07T23:25:44.3222759Z     url: { scheme: ["https"], domain: public.ecr.aws }
+2026-10-07T23:25:44.3223206Z   - kind: http-rule
+2026-10-07T23:25:44.3223490Z     url: { scheme: ["https"], domain: auth.docker.io }
+2026-10-07T23:25:44.3223737Z 
+2026-10-07T23:25:44.3223828Z ---
+2026-10-07T23:25:44.3224036Z version: 0.0.1
+2026-10-07T23:25:44.3224254Z rules:
+2026-10-07T23:25:44.3224463Z   - kind: http-rule
+2026-10-07T23:25:44.3224733Z     url: { scheme: ["https"], domain: nuget.org }
+2026-10-07T23:25:44.3225051Z   - kind: http-rule
+2026-10-07T23:25:44.3225321Z     url: { scheme: ["https"], domain: dist.nuget.org }
+2026-10-07T23:25:44.3225658Z   - kind: http-rule
+2026-10-07T23:25:44.3225949Z     url: { scheme: ["https"], domain: api.nuget.org }
+2026-10-07T23:25:44.3226275Z   - kind: http-rule
+2026-10-07T23:25:44.3226573Z     url: { scheme: ["https"], domain: nuget.pkg.github.com }
+2026-10-07T23:25:44.3226927Z   - kind: http-rule
+2026-10-07T23:25:44.3227219Z     url: { scheme: ["https"], domain: dotnet.microsoft.com }
+2026-10-07T23:25:44.3227562Z   - kind: http-rule
+2026-10-07T23:25:44.3227846Z     url: { scheme: ["https"], domain: pkgs.dev.azure.com }
+2026-10-07T23:25:44.3228195Z   - kind: http-rule
+2026-10-07T23:25:44.3228525Z     url: { scheme: ["https"], domain: builds.dotnet.microsoft.com }
+2026-10-07T23:25:44.3228900Z   - kind: http-rule
+2026-10-07T23:25:44.3229231Z     url: { scheme: ["https"], domain: dotnetcli.blob.core.windows.net }
+2026-10-07T23:25:44.3229616Z   - kind: http-rule
+2026-10-07T23:25:44.3229841Z     url:
+2026-10-07T23:25:44.3230490Z       { scheme: ["https"], domain: nugetregistryv2prod.blob.core.windows.net }
+2026-10-07T23:25:44.3230935Z   - kind: http-rule
+2026-10-07T23:25:44.3231268Z     url: { scheme: ["https"], domain: azuresearch-usnc.nuget.org }
+2026-10-07T23:25:44.3231640Z   - kind: http-rule
+2026-10-07T23:25:44.3231954Z     url: { scheme: ["https"], domain: azuresearch-ussc.nuget.org }
+2026-10-07T23:25:44.3232512Z   - kind: http-rule
+2026-10-07T23:25:44.3232839Z     url: { scheme: ["https"], domain: dc.services.visualstudio.com }
+2026-10-07T23:25:44.3233207Z   - kind: http-rule
+2026-10-07T23:25:44.3233470Z     url: { scheme: ["https"], domain: dot.net }
+2026-10-07T23:25:44.3233783Z   - kind: http-rule
+2026-10-07T23:25:44.3234125Z     url: { scheme: ["https"], domain: download.visualstudio.microsoft.com }
+2026-10-07T23:25:44.3234629Z   - kind: http-rule
+2026-10-07T23:25:44.3235019Z     url: { scheme: ["https"], domain: dotnetcli.azureedge.net }
+2026-10-07T23:25:44.3235384Z   - kind: http-rule
+2026-10-07T23:25:44.3235647Z     url: { scheme: ["https"], domain: ci.dot.net }
+2026-10-07T23:25:44.3236038Z   - kind: http-rule
+2026-10-07T23:25:44.3236537Z     url: { scheme: ["https"], domain: www.microsoft.com }
+2026-10-07T23:25:44.3237137Z   - kind: http-rule
+2026-10-07T23:25:44.3237694Z     url: { scheme: ["https"], domain: oneocsp.microsoft.com }
+2026-10-07T23:25:44.3238250Z   - kind: http-rule
+2026-10-07T23:25:44.3238559Z     name: "Allow certificate revocation list over http"
+2026-10-07T23:25:44.3238886Z     url:
+2026-10-07T23:25:44.3239107Z       scheme: ["http"]
+2026-10-07T23:25:44.3239376Z       domain: "www.microsoft.com"
+2026-10-07T23:25:44.3239672Z       path: "/pkiops/crl/"
+2026-10-07T23:25:44.3239839Z 
+2026-10-07T23:25:44.3239925Z ---
+2026-10-07T23:25:44.3240588Z version: 0.0.1
+2026-10-07T23:25:44.3240859Z rules:
+2026-10-07T23:25:44.3241072Z   - kind: http-rule
+2026-10-07T23:25:44.3241348Z     url: { scheme: ["https"], domain: pub.dev }
+2026-10-07T23:25:44.3241679Z   - kind: http-rule
+2026-10-07T23:25:44.3241971Z     url: { scheme: ["https"], domain: pub.dartlang.org }
+2026-10-07T23:25:44.3242523Z   - kind: http-rule
+2026-10-07T23:25:44.3242953Z     url:
+2026-10-07T23:25:44.3243338Z       scheme: ["https"]
+2026-10-07T23:25:44.3243790Z       domain: storage.googleapis.com
+2026-10-07T23:25:44.3244326Z       path: "/pub-packages/"
+2026-10-07T23:25:44.3244807Z   - kind: http-rule
+2026-10-07T23:25:44.3245230Z     url:
+2026-10-07T23:25:44.3245587Z       scheme: ["https"]
+2026-10-07T23:25:44.3246031Z       domain: storage.googleapis.com
+2026-10-07T23:25:44.3246428Z       path: "/dart-archive/"
+2026-10-07T23:25:44.3246602Z 
+2026-10-07T23:25:44.3246688Z ---
+2026-10-07T23:25:44.3246896Z version: 0.0.1
+2026-10-07T23:25:44.3247116Z rules:
+2026-10-07T23:25:44.3247328Z   - kind: http-rule
+2026-10-07T23:25:44.3247663Z     url: { domain: githubusercontent.com, allow-any-subdomain: true }
+2026-10-07T23:25:44.3248054Z   - kind: http-rule
+2026-10-07T23:25:44.3248365Z     url: { scheme: ["https"], domain: raw.githubusercontent.com }
+2026-10-07T23:25:44.3248724Z   - kind: http-rule
+2026-10-07T23:25:44.3249054Z     url: { scheme: ["https"], domain: objects.githubusercontent.com }
+2026-10-07T23:25:44.3249428Z   - kind: http-rule
+2026-10-07T23:25:44.3249703Z     url: { scheme: ["https"], domain: lfs.github.com }
+2026-10-07T23:25:44.3250261Z   - kind: http-rule
+2026-10-07T23:25:44.3250734Z     url: { scheme: ["https"], domain: github-cloud.githubusercontent.com }
+2026-10-07T23:25:44.3251142Z   - kind: http-rule
+2026-10-07T23:25:44.3251460Z     url: { scheme: ["https"], domain: github-cloud.s3.amazonaws.com }
+2026-10-07T23:25:44.3251822Z   - kind: http-rule
+2026-10-07T23:25:44.3252115Z     url: { scheme: ["https"], domain: codeload.github.com }
+2026-10-07T23:25:44.3252457Z   - kind: http-rule
+2026-10-07T23:25:44.3252734Z     url: { scheme: ["https"], domain: codeql.github.com }
+2026-10-07T23:25:44.3253068Z   - kind: http-rule
+2026-10-07T23:25:44.3253376Z     url: { scheme: ["https"], domain: scanning-api.github.com }
+2026-10-07T23:25:44.3253733Z   - kind: http-rule
+2026-10-07T23:25:44.3254019Z     url: { scheme: ["https"], domain: api.mcp.github.com }
+2026-10-07T23:25:44.3254361Z   - kind: http-rule
+2026-10-07T23:25:44.3254637Z     url: { scheme: ["https"], domain: docs.github.com }
+2026-10-07T23:25:44.3254964Z   - kind: http-rule
+2026-10-07T23:25:44.3255195Z     url:
+2026-10-07T23:25:44.3255414Z       scheme: ["https"]
+2026-10-07T23:25:44.3255854Z       domain: uploads.github.com
+2026-10-07T23:25:44.3256156Z       path: "/copilot/chat/attachments/"
+2026-10-07T23:25:44.3256729Z   # GitHub Actions workflow run artifact storage accounts (Azure blob storage endpoints productionresultssa0-19)
+2026-10-07T23:25:44.3257285Z   - kind: http-rule
+2026-10-07T23:25:44.3257668Z     url: { scheme: ["https"], domain: productionresultssa0.blob.core.windows.net }
+2026-10-07T23:25:44.3258097Z   - kind: http-rule
+2026-10-07T23:25:44.3258468Z     url: { scheme: ["https"], domain: productionresultssa1.blob.core.windows.net }
+2026-10-07T23:25:44.3258908Z   - kind: http-rule
+2026-10-07T23:25:44.3259289Z     url: { scheme: ["https"], domain: productionresultssa2.blob.core.windows.net }
+2026-10-07T23:25:44.3259714Z   - kind: http-rule
+2026-10-07T23:25:44.3260380Z     url: { scheme: ["https"], domain: productionresultssa3.blob.core.windows.net }
+2026-10-07T23:25:44.3261077Z   - kind: http-rule
+2026-10-07T23:25:44.3261747Z     url: { scheme: ["https"], domain: productionresultssa4.blob.core.windows.net }
+2026-10-07T23:25:44.3262532Z   - kind: http-rule
+2026-10-07T23:25:44.3263193Z     url: { scheme: ["https"], domain: productionresultssa5.blob.core.windows.net }
+2026-10-07T23:25:44.3263656Z   - kind: http-rule
+2026-10-07T23:25:44.3264025Z     url: { scheme: ["https"], domain: productionresultssa6.blob.core.windows.net }
+2026-10-07T23:25:44.3264460Z   - kind: http-rule
+2026-10-07T23:25:44.3264825Z     url: { scheme: ["https"], domain: productionresultssa7.blob.core.windows.net }
+2026-10-07T23:25:44.3265249Z   - kind: http-rule
+2026-10-07T23:25:44.3265704Z     url: { scheme: ["https"], domain: productionresultssa8.blob.core.windows.net }
+2026-10-07T23:25:44.3266356Z   - kind: http-rule
+2026-10-07T23:25:44.3266731Z     url: { scheme: ["https"], domain: productionresultssa9.blob.core.windows.net }
+2026-10-07T23:25:44.3267145Z   - kind: http-rule
+2026-10-07T23:25:44.3267518Z     url: { scheme: ["https"], domain: productionresultssa10.blob.core.windows.net }
+2026-10-07T23:25:44.3267954Z   - kind: http-rule
+2026-10-07T23:25:44.3268319Z     url: { scheme: ["https"], domain: productionresultssa11.blob.core.windows.net }
+2026-10-07T23:25:44.3268739Z   - kind: http-rule
+2026-10-07T23:25:44.3269102Z     url: { scheme: ["https"], domain: productionresultssa12.blob.core.windows.net }
+2026-10-07T23:25:44.3269524Z   - kind: http-rule
+2026-10-07T23:25:44.3269889Z     url: { scheme: ["https"], domain: productionresultssa13.blob.core.windows.net }
+2026-10-07T23:25:44.3270628Z   - kind: http-rule
+2026-10-07T23:25:44.3270998Z     url: { scheme: ["https"], domain: productionresultssa14.blob.core.windows.net }
+2026-10-07T23:25:44.3271420Z   - kind: http-rule
+2026-10-07T23:25:44.3271788Z     url: { scheme: ["https"], domain: productionresultssa15.blob.core.windows.net }
+2026-10-07T23:25:44.3272210Z   - kind: http-rule
+2026-10-07T23:25:44.3272573Z     url: { scheme: ["https"], domain: productionresultssa16.blob.core.windows.net }
+2026-10-07T23:25:44.3272994Z   - kind: http-rule
+2026-10-07T23:25:44.3273353Z     url: { scheme: ["https"], domain: productionresultssa17.blob.core.windows.net }
+2026-10-07T23:25:44.3273777Z   - kind: http-rule
+2026-10-07T23:25:44.3274135Z     url: { scheme: ["https"], domain: productionresultssa18.blob.core.windows.net }
+2026-10-07T23:25:44.3274566Z   - kind: http-rule
+2026-10-07T23:25:44.3274936Z     url: { scheme: ["https"], domain: productionresultssa19.blob.core.windows.net }
+2026-10-07T23:25:44.3275280Z 
+2026-10-07T23:25:44.3275406Z   # Copilot telemetry service endpoints
+2026-10-07T23:25:44.3275711Z   - kind: http-rule
+2026-10-07T23:25:44.3275939Z     url:
+2026-10-07T23:25:44.3276150Z       scheme: ["https"]
+2026-10-07T23:25:44.3276471Z       domain: copilot-telemetry.githubusercontent.com
+2026-10-07T23:25:44.3276823Z   - kind: http-rule
+2026-10-07T23:25:44.3277050Z     url:
+2026-10-07T23:25:44.3277264Z       scheme: ["https"]
+2026-10-07T23:25:44.3277570Z       domain: telemetry.individual.githubcopilot.com
+2026-10-07T23:25:44.3277913Z   - kind: http-rule
+2026-10-07T23:25:44.3278274Z     url:
+2026-10-07T23:25:44.3278485Z       scheme: ["https"]
+2026-10-07T23:25:44.3278776Z       domain: telemetry.business.githubcopilot.com
+2026-10-07T23:25:44.3279105Z   - kind: http-rule
+2026-10-07T23:25:44.3279335Z     url:
+2026-10-07T23:25:44.3279548Z       scheme: ["https"]
+2026-10-07T23:25:44.3279849Z       domain: telemetry.enterprise.githubcopilot.com
+2026-10-07T23:25:44.3280372Z 
+2026-10-07T23:25:44.3280518Z ---
+2026-10-07T23:25:44.3280742Z version: 0.0.1
+2026-10-07T23:25:44.3280974Z rules:
+2026-10-07T23:25:44.3281185Z   - kind: http-rule
+2026-10-07T23:25:44.3281456Z     url: { scheme: ["https"], domain: go.dev }
+2026-10-07T23:25:44.3281772Z   - kind: http-rule
+2026-10-07T23:25:44.3282057Z     url: { scheme: ["https"], domain: golang.org }
+2026-10-07T23:25:44.3282367Z   - kind: http-rule
+2026-10-07T23:25:44.3282667Z     url: { scheme: ["https"], domain: proxy.golang.org }
+2026-10-07T23:25:44.3283002Z   - kind: http-rule
+2026-10-07T23:25:44.3283275Z     url: { scheme: ["https"], domain: sum.golang.org }
+2026-10-07T23:25:44.3283606Z   - kind: http-rule
+2026-10-07T23:25:44.3283879Z     url: { scheme: ["https"], domain: pkg.go.dev }
+2026-10-07T23:25:44.3284197Z   - kind: http-rule
+2026-10-07T23:25:44.3284453Z     url: { scheme: ["https"], domain: goproxy.io }
+2026-10-07T23:25:44.3284770Z   - kind: http-rule
+2026-10-07T23:25:44.3284994Z     url:
+2026-10-07T23:25:44.3285202Z       scheme: ["https"]
+2026-10-07T23:25:44.3285466Z       domain: storage.googleapis.com
+2026-10-07T23:25:44.3285789Z       path: "/proxy-golang-org-prod/"
+2026-10-07T23:25:44.3285992Z 
+2026-10-07T23:25:44.3286080Z ---
+2026-10-07T23:25:44.3286453Z version: 0.0.1
+2026-10-07T23:25:44.3286712Z rules:
+2026-10-07T23:25:44.3287066Z   - kind: http-rule
+2026-10-07T23:25:44.3287378Z     url: { scheme: ["https"], domain: releases.hashicorp.com }
+2026-10-07T23:25:44.3287732Z   - kind: http-rule
+2026-10-07T23:25:44.3288053Z     url: { scheme: ["https"], domain: apt.releases.hashicorp.com }
+2026-10-07T23:25:44.3288743Z   - kind: http-rule
+2026-10-07T23:25:44.3289298Z     url: { scheme: ["https"], domain: yum.releases.hashicorp.com }
+2026-10-07T23:25:44.3289954Z   - kind: http-rule
+2026-10-07T23:25:44.3290711Z     url: { scheme: ["https"], domain: registry.terraform.io }
+2026-10-07T23:25:44.3290992Z 
+2026-10-07T23:25:44.3291085Z ---
+2026-10-07T23:25:44.3291294Z version: 0.0.1
+2026-10-07T23:25:44.3291692Z rules:
+2026-10-07T23:25:44.3291921Z   - kind: http-rule
+2026-10-07T23:25:44.3292192Z     url: { scheme: ["https"], domain: haskell.org }
+2026-10-07T23:25:44.3292518Z   - kind: http-rule
+2026-10-07T23:25:44.3292853Z     url: { domain: hackage.haskell.org, allow-any-subdomain: true }
+2026-10-07T23:25:44.3293235Z   - kind: http-rule
+2026-10-07T23:25:44.3293545Z     url: { scheme: ["https"], domain: get-ghcup.haskell.org }
+2026-10-07T23:25:44.3293903Z   - kind: http-rule
+2026-10-07T23:25:44.3294203Z     url: { scheme: ["https"], domain: downloads.haskell.org }
+2026-10-07T23:25:44.3294465Z 
+2026-10-07T23:25:44.3294548Z ---
+2026-10-07T23:25:44.3294763Z version: 0.0.1
+2026-10-07T23:25:44.3295048Z rules:
+2026-10-07T23:25:44.3295397Z   - kind: http-rule
+2026-10-07T23:25:44.3295864Z     url: { scheme: ["https"], domain: www.java.com }
+2026-10-07T23:25:44.3296433Z   - kind: http-rule
+2026-10-07T23:25:44.3296920Z     url: { scheme: ["https"], domain: jdk.java.net }
+2026-10-07T23:25:44.3297482Z   - kind: http-rule
+2026-10-07T23:25:44.3298071Z     url: { scheme: ["https"], domain: api.adoptium.net }
+2026-10-07T23:25:44.3298685Z   - kind: http-rule
+2026-10-07T23:25:44.3299181Z     url: { scheme: ["https"], domain: adoptium.net }
+2026-10-07T23:25:44.3299760Z   - kind: http-rule
+2026-10-07T23:25:44.3300501Z     url: { scheme: ["https"], domain: search.maven.org }
+2026-10-07T23:25:44.3301122Z   - kind: http-rule
+2026-10-07T23:25:44.3301619Z     url: { scheme: ["https"], domain: maven.apache.org }
+2026-10-07T23:25:44.3302221Z   - kind: http-rule
+2026-10-07T23:25:44.3302755Z     url: { scheme: ["https"], domain: repo.maven.apache.org }
+2026-10-07T23:25:44.3303647Z   - kind: http-rule
+2026-10-07T23:25:44.3304142Z     url: { scheme: ["https"], domain: repo1.maven.org }
+2026-10-07T23:25:44.3304728Z   - kind: http-rule
+2026-10-07T23:25:44.3305251Z     url: { scheme: ["https"], domain: maven.pkg.github.com }
+2026-10-07T23:25:44.3305869Z   - kind: http-rule
+2026-10-07T23:25:44.3306272Z     url:
+2026-10-07T23:25:44.3306637Z       {
+2026-10-07T23:25:44.3307000Z         scheme: ["https"],
+2026-10-07T23:25:44.3307587Z         domain: maven-central.storage-download.googleapis.com,
+2026-10-07T23:25:44.3308166Z       }
+2026-10-07T23:25:44.3308392Z   - kind: http-rule
+2026-10-07T23:25:44.3308689Z     url: { scheme: ["https"], domain: maven.google.com }
+2026-10-07T23:25:44.3309039Z   - kind: http-rule
+2026-10-07T23:25:44.3309332Z     url: { scheme: ["https"], domain: maven.oracle.com }
+2026-10-07T23:25:44.3309682Z   - kind: http-rule
+2026-10-07T23:25:44.3309982Z     url: { scheme: ["https"], domain: jcenter.bintray.com }
+2026-10-07T23:25:44.3310884Z   - kind: http-rule
+2026-10-07T23:25:44.3311408Z     url: { scheme: ["https"], domain: oss.sonatype.org }
+2026-10-07T23:25:44.3311989Z   - kind: http-rule
+2026-10-07T23:25:44.3312457Z     url: { scheme: ["https"], domain: repo.spring.io }
+2026-10-07T23:25:44.3313220Z   - kind: http-rule
+2026-10-07T23:25:44.3313698Z     url: { scheme: ["https"], domain: gradle.org }
+2026-10-07T23:25:44.3314263Z   - kind: http-rule
+2026-10-07T23:25:44.3314588Z     url: { scheme: ["https"], domain: services.gradle.org }
+2026-10-07T23:25:44.3314932Z   - kind: http-rule
+2026-10-07T23:25:44.3315220Z     url: { scheme: ["https"], domain: plugins.gradle.org }
+2026-10-07T23:25:44.3315591Z   - kind: http-rule
+2026-10-07T23:25:44.3316340Z     url: { scheme: ["https"], domain: plugins-artifacts.gradle.org }
+2026-10-07T23:25:44.3316847Z   - kind: http-rule
+2026-10-07T23:25:44.3317369Z     url: { scheme: ["https"], domain: repo.grails.org }
+2026-10-07T23:25:44.3317833Z   - kind: http-rule
+2026-10-07T23:25:44.3332612Z     url: { scheme: ["https"], domain: download.eclipse.org }
+2026-10-07T23:25:44.3333103Z   - kind: http-rule
+2026-10-07T23:25:44.3333435Z     url: { scheme: ["https"], domain: download.oracle.com }
+2026-10-07T23:25:44.3333706Z 
+2026-10-07T23:25:44.3333805Z ---
+2026-10-07T23:25:44.3334020Z version: 0.0.1
+2026-10-07T23:25:44.3334240Z rules:
+2026-10-07T23:25:44.3334452Z   - kind: http-rule
+2026-10-07T23:25:44.3334753Z     url: { scheme: ["https"], domain: json-schema.org }
+2026-10-07T23:25:44.3335097Z   - kind: http-rule
+2026-10-07T23:25:44.3335397Z     url: { scheme: ["https"], domain: json.schemastore.org }
+2026-10-07T23:25:44.3335660Z 
+2026-10-07T23:25:44.3335749Z ---
+2026-10-07T23:25:44.3335958Z version: 0.0.1
+2026-10-07T23:25:44.3336178Z rules:
+2026-10-07T23:25:44.3336996Z   # Reminder: Lots of `apt` repositories don't use HTTP see: https://superuser.com/questions/1356786/ubuntu-apt-why-are-the-respositories-accessed-over-http
+2026-10-07T23:25:44.3337644Z 
+2026-10-07T23:25:44.3337736Z   # Ubuntu
+2026-10-07T23:25:44.3337961Z   - kind: http-rule
+2026-10-07T23:25:44.3338290Z     url: { scheme: ["http", "https"], domain: archive.ubuntu.com }
+2026-10-07T23:25:44.3338654Z   - kind: http-rule
+2026-10-07T23:25:44.3338972Z     url: { scheme: ["http", "https"], domain: security.ubuntu.com }
+2026-10-07T23:25:44.3339338Z   - kind: http-rule
+2026-10-07T23:25:44.3339644Z     url: { scheme: ["http", "https"], domain: ppa.launchpad.net }
+2026-10-07T23:25:44.3340004Z   - kind: http-rule
+2026-10-07T23:25:44.3340707Z     url: { scheme: ["http", "https"], domain: keyserver.ubuntu.com }
+2026-10-07T23:25:44.3341103Z   - kind: http-rule
+2026-10-07T23:25:44.3341435Z     url: { scheme: ["http", "https"], domain: azure.archive.ubuntu.com }
+2026-10-07T23:25:44.3342124Z   - kind: http-rule
+2026-10-07T23:25:44.3342680Z     url: { scheme: ["http", "https"], domain: api.snapcraft.io }
+2026-10-07T23:25:44.3343132Z 
+2026-10-07T23:25:44.3343284Z   # Debian
+2026-10-07T23:25:44.3343650Z   - kind: http-rule
+2026-10-07T23:25:44.3344158Z     url: { scheme: ["http", "https"], domain: deb.debian.org }
+2026-10-07T23:25:44.3345061Z   - kind: http-rule
+2026-10-07T23:25:44.3345606Z     url: { scheme: ["http", "https"], domain: security.debian.org }
+2026-10-07T23:25:44.3346229Z   - kind: http-rule
+2026-10-07T23:25:44.3346754Z     url: { scheme: ["http", "https"], domain: keyring.debian.org }
+2026-10-07T23:25:44.3347375Z   - kind: http-rule
+2026-10-07T23:25:44.3347895Z     url: { scheme: ["http", "https"], domain: packages.debian.org }
+2026-10-07T23:25:44.3348532Z   - kind: http-rule
+2026-10-07T23:25:44.3349129Z     url: { scheme: ["http", "https"], domain: debian.map.fastlydns.net }
+2026-10-07T23:25:44.3349795Z   - kind: http-rule
+2026-10-07T23:25:44.3350468Z     url: { scheme: ["http", "https"], domain: apt.llvm.org }
+2026-10-07T23:25:44.3350777Z 
+2026-10-07T23:25:44.3350870Z   # Fedora
+2026-10-07T23:25:44.3351096Z   - kind: http-rule
+2026-10-07T23:25:44.3351399Z     url: { scheme: ["https"], domain: dl.fedoraproject.org }
+2026-10-07T23:25:44.3351737Z   - kind: http-rule
+2026-10-07T23:25:44.3352056Z     url: { scheme: ["https"], domain: mirrors.fedoraproject.org }
+2026-10-07T23:25:44.3352420Z   - kind: http-rule
+2026-10-07T23:25:44.3352727Z     url: { scheme: ["https"], domain: download.fedoraproject.org }
+2026-10-07T23:25:44.3352999Z 
+2026-10-07T23:25:44.3353083Z   # CentOS
+2026-10-07T23:25:44.3353298Z   - kind: http-rule
+2026-10-07T23:25:44.3353581Z     url: { scheme: ["https"], domain: mirror.centos.org }
+2026-10-07T23:25:44.3353914Z   - kind: http-rule
+2026-10-07T23:25:44.3354190Z     url: { scheme: ["https"], domain: vault.centos.org }
+2026-10-07T23:25:44.3354443Z 
+2026-10-07T23:25:44.3354531Z   # Alpine
+2026-10-07T23:25:44.3354747Z   - kind: http-rule
+2026-10-07T23:25:44.3355211Z     url: { scheme: ["https"], domain: dl-cdn.alpinelinux.org }
+2026-10-07T23:25:44.3355576Z   - kind: http-rule
+2026-10-07T23:25:44.3355870Z     url: { scheme: ["https"], domain: pkg.alpinelinux.org }
+2026-10-07T23:25:44.3356120Z 
+2026-10-07T23:25:44.3356213Z   # Arch
+2026-10-07T23:25:44.3356417Z   - kind: http-rule
+2026-10-07T23:25:44.3356713Z     url: { scheme: ["https"], domain: mirror.archlinux.org }
+2026-10-07T23:25:44.3357046Z   - kind: http-rule
+2026-10-07T23:25:44.3357325Z     url: { scheme: ["https"], domain: archlinux.org }
+2026-10-07T23:25:44.3357553Z 
+2026-10-07T23:25:44.3357644Z   # SUSE
+2026-10-07T23:25:44.3357878Z   - kind: http-rule
+2026-10-07T23:25:44.3358175Z     url: { scheme: ["https"], domain: download.opensuse.org }
+2026-10-07T23:25:44.3358431Z 
+2026-10-07T23:25:44.3358517Z   # Red Hat
+2026-10-07T23:25:44.3358735Z   - kind: http-rule
+2026-10-07T23:25:44.3359009Z     url: { scheme: ["https"], domain: cdn.redhat.com }
+2026-10-07T23:25:44.3359245Z 
+2026-10-07T23:25:44.3359356Z   # Common Package Mirrors
+2026-10-07T23:25:44.3359612Z   - kind: http-rule
+2026-10-07T23:25:44.3359976Z     url: { scheme: ["https"], domain: packagecloud.io }
+2026-10-07T23:25:44.3360789Z   - kind: http-rule
+2026-10-07T23:25:44.3361358Z     url: { scheme: ["https"], domain: packages.cloud.google.com }
+2026-10-07T23:25:44.3361840Z 
+2026-10-07T23:25:44.3362019Z   # Microsoft Sources
+2026-10-07T23:25:44.3362490Z   - kind: http-rule
+2026-10-07T23:25:44.3363034Z     url: { scheme: ["https"], domain: packages.microsoft.com }
+2026-10-07T23:25:44.3363500Z 
+2026-10-07T23:25:44.3363633Z ---
+2026-10-07T23:25:44.3363845Z version: 0.0.1
+2026-10-07T23:25:44.3364077Z rules:
+2026-10-07T23:25:44.3364298Z   - kind: http-rule
+2026-10-07T23:25:44.3364569Z     url: { scheme: ["https"], domain: npmjs.org }
+2026-10-07T23:25:44.3364899Z   - kind: http-rule
+2026-10-07T23:25:44.3365170Z     url: { scheme: ["https"], domain: npmjs.com }
+2026-10-07T23:25:44.3365483Z   - kind: http-rule
+2026-10-07T23:25:44.3365785Z     url: { scheme: ["https"], domain: registry.npmjs.com }
+2026-10-07T23:25:44.3366140Z   - kind: http-rule
+2026-10-07T23:25:44.3366426Z     url: { scheme: ["https"], domain: registry.npmjs.org }
+2026-10-07T23:25:44.3366751Z   - kind: http-rule
+2026-10-07T23:25:44.3367028Z     url: { scheme: ["https"], domain: skimdb.npmjs.com }
+2026-10-07T23:25:44.3367576Z   - kind: http-rule
+2026-10-07T23:25:44.3367877Z     url: { scheme: ["https"], domain: npm.pkg.github.com }
+2026-10-07T23:25:44.3368203Z   - kind: http-rule
+2026-10-07T23:25:44.3368477Z     url: { scheme: ["https"], domain: api.npms.io }
+2026-10-07T23:25:44.3368812Z   - kind: http-rule
+2026-10-07T23:25:44.3369071Z     url: { scheme: ["https"], domain: nodejs.org }
+2026-10-07T23:25:44.3369386Z   - kind: http-rule
+2026-10-07T23:25:44.3369645Z     url: { scheme: ["https"], domain: yarnpkg.com }
+2026-10-07T23:25:44.3369963Z   - kind: http-rule
+2026-10-07T23:25:44.3370614Z     url: { scheme: ["https"], domain: registry.yarnpkg.com }
+2026-10-07T23:25:44.3370965Z   - kind: http-rule
+2026-10-07T23:25:44.3371252Z     url: { scheme: ["https"], domain: repo.yarnpkg.com }
+2026-10-07T23:25:44.3371577Z   - kind: http-rule
+2026-10-07T23:25:44.3371917Z     url: { domain: deb.nodesource.com }
+2026-10-07T23:25:44.3372457Z   - kind: http-rule
+2026-10-07T23:25:44.3372924Z     url: { scheme: ["https"], domain: get.pnpm.io }
+2026-10-07T23:25:44.3373504Z   - kind: http-rule
+2026-10-07T23:25:44.3373944Z     url: { scheme: ["https"], domain: bun.sh }
+2026-10-07T23:25:44.3374511Z   - kind: http-rule
+2026-10-07T23:25:44.3374961Z     url: { scheme: ["https"], domain: deno.land }
+2026-10-07T23:25:44.3375457Z   - kind: http-rule
+2026-10-07T23:25:44.3375755Z     url: { scheme: ["https"], domain: registry.bower.io }
+2026-10-07T23:25:44.3376103Z   - kind: http-rule
+2026-10-07T23:25:44.3376390Z     url: { scheme: ["https"], domain: binaries.prisma.sh }
+2026-10-07T23:25:44.3376739Z   - kind: http-rule
+2026-10-07T23:25:44.3377007Z     url: { scheme: ["https"], domain: aspire.dev }
+2026-10-07T23:25:44.3377234Z 
+2026-10-07T23:25:44.3377325Z ---
+2026-10-07T23:25:44.3377695Z version: 0.0.1
+2026-10-07T23:25:44.3377930Z rules:
+2026-10-07T23:25:44.3378147Z   - kind: http-rule
+2026-10-07T23:25:44.3378405Z     url: { scheme: ["https"], domain: cpan.org }
+2026-10-07T23:25:44.3378725Z   - kind: http-rule
+2026-10-07T23:25:44.3378996Z     url: { scheme: ["https"], domain: www.cpan.org }
+2026-10-07T23:25:44.3379318Z   - kind: http-rule
+2026-10-07T23:25:44.3379577Z     url: { scheme: ["https"], domain: metacpan.org }
+2026-10-07T23:25:44.3379894Z   - kind: http-rule
+2026-10-07T23:25:44.3380485Z     url: { scheme: ["https"], domain: cpan.metacpan.org }
+2026-10-07T23:25:44.3380743Z 
+2026-10-07T23:25:44.3380826Z ---
+2026-10-07T23:25:44.3381028Z version: 0.0.1
+2026-10-07T23:25:44.3381248Z rules:
+2026-10-07T23:25:44.3381454Z   - kind: http-rule
+2026-10-07T23:25:44.3381734Z     url: { scheme: ["https"], domain: repo.packagist.org }
+2026-10-07T23:25:44.3382066Z   - kind: http-rule
+2026-10-07T23:25:44.3382342Z     url: { scheme: ["https"], domain: packagist.org }
+2026-10-07T23:25:44.3382660Z   - kind: http-rule
+2026-10-07T23:25:44.3382941Z     url: { scheme: ["https"], domain: getcomposer.org }
+2026-10-07T23:25:44.3383178Z 
+2026-10-07T23:25:44.3383264Z ---
+2026-10-07T23:25:44.3383467Z version: 0.0.1
+2026-10-07T23:25:44.3383678Z rules:
+2026-10-07T23:25:44.3383878Z   - kind: http-rule
+2026-10-07T23:25:44.3384239Z     url: { scheme: ["https"], domain: playwright.download.prss.microsoft.com }
+2026-10-07T23:25:44.3384646Z   - kind: http-rule
+2026-10-07T23:25:44.3384933Z     url: { scheme: ["https"], domain: cdn.playwright.dev }
+2026-10-07T23:25:44.3385270Z   - kind: http-rule
+2026-10-07T23:25:44.3385577Z     url: { scheme: ["https"], domain: playwright.azureedge.net }
+2026-10-07T23:25:44.3385930Z   - kind: http-rule
+2026-10-07T23:25:44.3386256Z     url: { scheme: ["https"], domain: playwright-akamai.azureedge.net }
+2026-10-07T23:25:44.3386643Z   - kind: http-rule
+2026-10-07T23:25:44.3387125Z     url: { scheme: ["https"], domain: playwright-verizon.azureedge.net }
+2026-10-07T23:25:44.3387849Z   - kind: http-rule
+2026-10-07T23:25:44.3388249Z     url:
+2026-10-07T23:25:44.3388640Z       scheme: ["https"]
+2026-10-07T23:25:44.3389100Z       domain: storage.googleapis.com
+2026-10-07T23:25:44.3389660Z       path: "/chrome-for-testing-public"
+2026-10-07T23:25:44.3389911Z 
+2026-10-07T23:25:44.3390492Z ---
+2026-10-07T23:25:44.3390710Z version: 0.0.1
+2026-10-07T23:25:44.3390938Z rules:
+2026-10-07T23:25:44.3391156Z   - kind: http-rule
+2026-10-07T23:25:44.3391467Z     url: { scheme: ["https"], domain: pypi.python.org }
+2026-10-07T23:25:44.3391813Z   - kind: http-rule
+2026-10-07T23:25:44.3392090Z     url: { scheme: ["https"], domain: pypi.org }
+2026-10-07T23:25:44.3392413Z   - kind: http-rule
+2026-10-07T23:25:44.3392674Z     url: { scheme: ["https"], domain: pip.pypa.io }
+2026-10-07T23:25:44.3393006Z   - kind: http-rule
+2026-10-07T23:25:44.3393235Z     url:
+2026-10-07T23:25:44.3393576Z       { scheme: ["https"], domain: pythonhosted.org, allow-any-subdomain: true }
+2026-10-07T23:25:44.3393995Z   - kind: http-rule
+2026-10-07T23:25:44.3394309Z     url: { scheme: ["https"], domain: files.pythonhosted.org }
+2026-10-07T23:25:44.3394665Z   - kind: http-rule
+2026-10-07T23:25:44.3394948Z     url: { scheme: ["https"], domain: bootstrap.pypa.io }
+2026-10-07T23:25:44.3395294Z   - kind: http-rule
+2026-10-07T23:25:44.3395577Z     url: { scheme: ["https"], domain: conda.binstar.org }
+2026-10-07T23:25:44.3395902Z   - kind: http-rule
+2026-10-07T23:25:44.3396179Z     url: { scheme: ["https"], domain: conda.anaconda.org }
+2026-10-07T23:25:44.3396515Z   - kind: http-rule
+2026-10-07T23:25:44.3396777Z     url: { scheme: ["https"], domain: binstar.org }
+2026-10-07T23:25:44.3397095Z   - kind: http-rule
+2026-10-07T23:25:44.3397432Z     url: { scheme: ["https"], domain: anaconda.org }
+2026-10-07T23:25:44.3398001Z   - kind: http-rule
+2026-10-07T23:25:44.3398519Z     url: { scheme: ["https"], domain: download.pytorch.org }
+2026-10-07T23:25:44.3399126Z   - kind: http-rule
+2026-10-07T23:25:44.3399834Z     url: { scheme: ["https"], domain: repo.continuum.io }
+2026-10-07T23:25:44.3400473Z   - kind: http-rule
+2026-10-07T23:25:44.3400768Z     url: { scheme: ["https"], domain: repo.anaconda.com }
+2026-10-07T23:25:44.3401010Z 
+2026-10-07T23:25:44.3401103Z ---
+2026-10-07T23:25:44.3401312Z version: 0.0.1
+2026-10-07T23:25:44.3401531Z rules:
+2026-10-07T23:25:44.3401742Z   - kind: http-rule
+2026-10-07T23:25:44.3402256Z     url: { scheme: ["https"], domain: rubygems.org }
+2026-10-07T23:25:44.3402883Z   - kind: http-rule
+2026-10-07T23:25:44.3403393Z     url: { scheme: ["https"], domain: api.rubygems.org }
+2026-10-07T23:25:44.3403948Z   - kind: http-rule
+2026-10-07T23:25:44.3404396Z     url: { scheme: ["https"], domain: rubygems.pkg.github.com }
+2026-10-07T23:25:44.3404968Z   - kind: http-rule
+2026-10-07T23:25:44.3405422Z     url: { scheme: ["https"], domain: bundler.rubygems.org }
+2026-10-07T23:25:44.3406027Z   - kind: http-rule
+2026-10-07T23:25:44.3406487Z     url: { scheme: ["https"], domain: gems.rubyforge.org }
+2026-10-07T23:25:44.3407007Z   - kind: http-rule
+2026-10-07T23:25:44.3407490Z     url: { scheme: ["https"], domain: gems.rubyonrails.org }
+2026-10-07T23:25:44.3408155Z   - kind: http-rule
+2026-10-07T23:25:44.3408605Z     url: { scheme: ["https"], domain: index.rubygems.org }
+2026-10-07T23:25:44.3409137Z   - kind: http-rule
+2026-10-07T23:25:44.3409594Z     url: { scheme: ["https"], domain: cache.ruby-lang.org }
+2026-10-07T23:25:44.3410390Z   - kind: http-rule
+2026-10-07T23:25:44.3410884Z     url: { domain: rvm.io, allow-any-subdomain: true }
+2026-10-07T23:25:44.3411282Z 
+2026-10-07T23:25:44.3411430Z ---
+2026-10-07T23:25:44.3411776Z version: 0.0.1
+2026-10-07T23:25:44.3412065Z rules:
+2026-10-07T23:25:44.3412277Z   - kind: http-rule
+2026-10-07T23:25:44.3412551Z     url: { scheme: ["https"], domain: crates.io }
+2026-10-07T23:25:44.3412872Z   - kind: http-rule
+2026-10-07T23:25:44.3413214Z     url: { scheme: ["https"], domain: index.crates.io }
+2026-10-07T23:25:44.3413551Z   - kind: http-rule
+2026-10-07T23:25:44.3413860Z     url: { scheme: ["https"], domain: static.crates.io }
+2026-10-07T23:25:44.3414198Z   - kind: http-rule
+2026-10-07T23:25:44.3414469Z     url: { scheme: ["https"], domain: sh.rustup.rs }
+2026-10-07T23:25:44.3414792Z   - kind: http-rule
+2026-10-07T23:25:44.3415091Z     url: { scheme: ["https"], domain: static.rust-lang.org }
+2026-10-07T23:25:44.3415548Z 
+2026-10-07T23:25:44.3415641Z ---
+2026-10-07T23:25:44.3415842Z version: 0.0.1
+2026-10-07T23:25:44.3416062Z rules:
+2026-10-07T23:25:44.3416272Z   - kind: http-rule
+2026-10-07T23:25:44.3416554Z     url: { scheme: ["https"], domain: download.swift.org }
+2026-10-07T23:25:44.3417053Z   - kind: http-rule
+2026-10-07T23:25:44.3417519Z     url: { scheme: ["https"], domain: swift.org }
+2026-10-07T23:25:44.3418059Z   - kind: http-rule
+2026-10-07T23:25:44.3418541Z     url: { scheme: ["https"], domain: cocoapods.org }
+2026-10-07T23:25:44.3419132Z   - kind: http-rule
+2026-10-07T23:25:44.3419643Z     url: { scheme: ["https"], domain: cdn.cocoapods.org }
+2026-10-07T23:25:44.3420306Z 
+2026-10-07T23:25:44.3420469Z ----
+2026-10-07T23:25:46.5880519Z Loaded 6 secret(s) from stdin
+2026-10-07T23:25:47.1236495Z Using integration ID from job details: copilot-pr-reviews
+2026-10-07T23:25:47.1238496Z Analyzing PostHog/posthog.com PR #20928, request-id 989F:3624D0:22CBDF:26ED19:6AC6D49B (autofind.js version: 0.1.149)
+2026-10-07T23:25:47.1364102Z Fetching PR metadata for PostHog/posthog.com#20928
+2026-10-07T23:25:47.8385210Z Fetched PR metadata for PostHog/posthog.com#20928 (object format: sha1).
+2026-10-07T23:25:47.8407276Z [fork-gate] PostHog/posthog.com#20928: isForked=false, loading instructions/skills from head checkout.
+2026-10-07T23:25:47.8415191Z Fetching diff 8ddf4e741e4006555de597a48f8c664a4b37301a...54f64780495612d9fb4290a675e4200b9863d273 for PostHog/posthog.com
+2026-10-07T23:25:47.8416731Z Preparing repository...
+2026-10-07T23:25:47.8605686Z Repository is not checked out at /home/runner/work/posthog.com/posthog.com. Checking out a fresh copy.
+2026-10-07T23:25:47.8613365Z Checking out PostHog/posthog.com at SHA 54f64780495612d9fb4290a675e4200b9863d273 into /home/runner/work/posthog.com/posthog.com
+2026-10-07T23:25:54.1075008Z [customInstructions] Built 2 custom instruction(s) for PostHog/posthog.com; names=["AGENTS.md","CLAUDE.md"]
+2026-10-07T23:25:54.1086607Z Running detector: ccr[ApplyContentExclusions=true;CommentTitleModelName=gpt-5.6-luna;ContextAgentModelName=;ContextV2Prompt=false;CostBudgetUsd=5;CostHardThresholdRatio=0.95;CostSoftThresholdRatio=0.5;DedupModelName=capi-prod-gpt-5.6-luna;EnableAgenticTools=true;EnableAutoApproval=true;EnableCommentTool=true;EnableContextPlanTool=false;EnableFeedbackInUserMessage=true;EnableMcpProxy=true;EnableMemoryStorage=true;EnableMemoryUsage=true;EnablePlanTool=false;EnableRestrictedResultPublication=true;EnableSemanticIssueSearchTool=false;EnableSemanticIssueSearchToolIssuesOnly=false;EnableSemanticIssuesInject=false;EnableSkills=true;FixGeneratorMaxExpansionLines=20;GenerateFixesInStoreComment=true;GroupingWithinReviewModelName=capi-prod-gpt-5.4-mini[ReasoningEffort=none];InlineApprovalReadinessReasoning=true;LateFindsCurationModelName=gpt-5.6-luna;MaxPromptTokens=110000;MemoryLimit=0;MoreThorough=false;MustUseSemanticIssueSearchTool=false;QueryAgentModelName=;ResolutionVerificationEmitBasis=true;ResolutionVerificationModelName=capi-prod-gpt-5.6-luna;SeverityClassifierModelName=gpt-5.4-mini;SkipRegionFiltering=false;SplitLinesMaxGap=3;UseCliBashTool=true;UseCliFileTools=true;UseGPT5Model=true;UseV3BashPrompt=true;VerificationModelName=] (autofind.js version: 0.1.149)
+2026-10-07T23:25:54.1096127Z [memory] CCA path: building memoryApiConfig (pull_request_id=4779006234, job_id=60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931, exp_flight_names_present=false)
+2026-10-07T23:25:54.1097936Z Resolved repo directory: /home/runner/work/posthog.com/posthog.com
+2026-10-07T23:25:54.1098607Z Running in CCA: true
+2026-10-07T23:25:54.1129270Z [debug] Using copilot CLI path: /home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/copilot-cli/node_modules/@github/copilot/npm-loader.js
+2026-10-07T23:25:54.3367539Z Using default CAPI authentication (token)
+2026-10-07T23:25:56.6969346Z Using existing session ID from COPILOT_AGENT_SESSION_ID: d8bf2eb8-cfaf-40c1-bff5-69eb16aa7abe
+2026-10-07T23:25:57.9299190Z Fetching Copilot content exclusions for https://github.com/PostHog/posthog.com
+2026-10-07T23:25:58.2776269Z HttpError: Not Found - https://docs.github.com/rest
+2026-10-07T23:25:58.2777404Z     at kf (file:///home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/autofind.js:518:9237)
+2026-10-07T23:25:58.2778258Z     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-10-07T23:25:58.2779292Z     at async lrI (file:///home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/autofind.js:520:91574)
+2026-10-07T23:25:58.2781004Z     at async N.doExecute (file:///home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/autofind.js:22:13856)
+2026-10-07T23:25:58.2783000Z content exclusion policy fetch failed for PostHog/posthog.com; proceeding without exclusions: Failed to fetch Copilot content exclusions for https://github.com/PostHog/posthog.com (status=404, x-github-request-id=B043:29C496:293F0D:88F543:6AC6D505): HttpError: Not Found - https://docs.github.com/rest
+2026-10-07T23:25:58.2785368Z [memory] retrieval started (repo=PostHog/posthog.com, exp_flight_names_present=false)
+2026-10-07T23:25:58.2786793Z [memory] enabled check: assignment context present, no flights — control arm
+2026-10-07T23:25:59.0706315Z [memory] enabled check: enabled=true
+2026-10-07T23:25:59.7179520Z Retrieved memory prompts (0 memories)
+2026-10-07T23:25:59.7180892Z [memory] retrieval completed (repo=PostHog/posthog.com, success=true, count=0, duration_ms=1440)
+2026-10-07T23:25:59.7184453Z [semantic_repository_search] {"received_mode":"absent","reason":"control","repository":"PostHog/posthog.com","job_id":"60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931","review_request_id":"989F:3624D0:22CBDF:26ED19:6AC6D49B","interaction_id":"eaef37ed-5b0f-43d2-a77c-bde90cff2a74"}
+2026-10-07T23:25:59.7665257Z [skills] session=github/copilot-code-review catalogEntries=4 droppedUnreadable=1 droppedInvalidMetadata=0 droppedExcluded=0 droppedTruncated=0 incomplete=false runtimeDirectories=configured
+2026-10-07T23:26:00.6259135Z Built prompt with 15432 tokens
+2026-10-07T23:26:00.6289437Z Creating copilot-sdk session with model: gpt-5.6-sol[ReasoningEffort=high] and clientName: github/copilot-code-review and contextTier: default
+2026-10-07T23:26:00.6291366Z [skills] session=github/copilot-code-review enabled=true source=head-checkout configuredDirectories=1
+2026-10-07T23:26:00.8264710Z [mcp] server="playwright" status=pending
+2026-10-07T23:26:00.8267595Z [mcp] server="github-mcp-server" status=pending
+2026-10-07T23:26:00.9461266Z [mcp] server="github-mcp-server" status=connected connect_ms=317
+2026-10-07T23:26:01.7919511Z [mcp] server="github-mcp-server" status=connected
+2026-10-07T23:26:01.7921808Z [mcp] server="playwright" status=connected connect_ms=1163
+2026-10-07T23:26:01.7958843Z [mcp] server="playwright" status=connected
+2026-10-07T23:27:26.2004160Z CCR Agent: Invoking store_comment tool
+2026-10-07T23:27:26.2019158Z CCR Agent: Comment stored (id=001, type=discrepancy_with_pr_description, file=contents/teams/feature-flags/objectives.mdx, start=39, end=40, fixed=false, severity=moderate)
+2026-10-07T23:27:26.2021483Z CCR Agent: Inline fix skipped for comment [ID: 001] (reason: judgment_call)
+2026-10-07T23:27:26.2042463Z CCR Agent: Invoking store_comment tool
+2026-10-07T23:27:26.2057124Z CCR Agent: Comment stored (id=002, type=documentation, file=contents/teams/feature-flags/objectives.mdx, start=42, end=42, fixed=false, severity=moderate)
+2026-10-07T23:27:26.2058765Z CCR Agent: Inline fix stored for comment [ID: 002]
+2026-10-07T23:27:26.2061740Z CCR Agent: Invoking store_comment tool
+2026-10-07T23:27:26.2064245Z CCR Agent: Comment stored (id=003, type=codebase_conventions, file=contents/teams/feature-flags/objectives.mdx, start=52, end=52, fixed=false, severity=moderate)
+2026-10-07T23:27:26.2066085Z CCR Agent: Inline fix skipped for comment [ID: 003] (reason: judgment_call)
+2026-10-07T23:27:26.2067049Z CCR Agent: Invoking store_comment tool
+2026-10-07T23:27:26.2069398Z CCR Agent: Comment stored (id=004, type=codebase_conventions, file=contents/teams/feature-flags/objectives.mdx, start=44, end=44, fixed=false, severity=moderate)
+2026-10-07T23:27:26.2071882Z CCR Agent: Inline fix skipped for comment [ID: 004] (reason: judgment_call)
+2026-10-07T23:27:26.2072880Z CCR Agent: Invoking store_comment tool
+2026-10-07T23:27:26.2081342Z CCR Agent: Comment stored (id=005, type=codebase_conventions, file=contents/teams/feature-flags/objectives.mdx, start=24, end=24, fixed=false, severity=moderate)
+2026-10-07T23:27:26.2083457Z CCR Agent: Inline fix skipped for comment [ID: 005] (reason: judgment_call)
+2026-10-07T23:27:33.6705103Z [memory] store invoked (repo=PostHog/posthog.com, tool_call_id=call_c0WM8Imi08jUSKoKTkSBD2pw)
+2026-10-07T23:27:34.6301785Z Memory stored successfully
+2026-10-07T23:27:34.6303104Z [memory] store completed (repo=PostHog/posthog.com, tool_call_id=call_c0WM8Imi08jUSKoKTkSBD2pw, scope=repo, success=true, duration_ms=959)
+2026-10-07T23:27:39.5241410Z Fetching PR metadata for PostHog/posthog.com#20928
+2026-10-07T23:27:41.6494664Z Creating sub-agent session with model: capi-prod-gpt-5.4-mini[ReasoningEffort=none] and clientName: github/copilot-code-review/grouping-within-review
+2026-10-07T23:27:42.5425837Z Creating sub-agent session with model: gpt-5.4-mini[ReasoningEffort=low] and clientName: github/copilot-code-review/severity
+2026-10-07T23:27:44.4444461Z Severity classifier: 3/3 classified (nit=2, moderate=1)
+2026-10-07T23:27:44.4506572Z Creating sub-agent session with model: gpt-5.6-luna and clientName: github/copilot-code-review/comment-title-generation
+2026-10-07T23:27:46.3689689Z [mcp] session=github/copilot-code-review summary: "playwright"=connected/invocations=0, "github-mcp-server"=connected/invocations=13
+2026-10-07T23:27:47.1748480Z Reporting results to sweagentd...
+2026-10-07T23:27:47.2596936Z Results successfully reported to sweagentd.
+2026-10-07T23:27:48.3703267Z Stopping git-proxy (pid=3301)...
+2026-10-07T23:27:48.9751479Z ::***::
+2026-10-07T23:27:48.9831328Z ##[group]Run echo "Cleaning up..." && \
+2026-10-07T23:27:48.9831722Z [36;1mecho "Cleaning up..." && \[0m
+2026-10-07T23:27:48.9832137Z [36;1mmkdir -p "/home/runner/work/_temp/runtime-logs" && \[0m
+2026-10-07T23:27:48.9833251Z [36;1mcleanup_list="***,***,***,***" && \[0m
+2026-10-07T23:27:48.9833566Z [36;1m[0m
+2026-10-07T23:27:48.9834253Z [36;1mcurl -L -H "Content-Type: application/json" -H "Accept: application/json" --data '{"oid":'$GITHUB_REPOSITORY_OWNER_ID',"rid":'$GITHUB_REPOSITORY_ID',"wid":'$GITHUB_RUN_ID'}' \[0m
+2026-10-07T23:27:48.9835418Z [36;1m  -H "Authorization: ***" -H "X-GitHub-Copilot-Cleanup-List: $cleanup_list" \[0m
+2026-10-07T23:27:48.9836226Z [36;1m  "https://api.individual.githubcopilot.com/agents/swe/agent/cleanup" > "/home/runner/work/_temp/runtime-logs/clean.log" 2>&1[0m
+2026-10-07T23:27:48.9896833Z shell: /usr/bin/bash -e {0}
+2026-10-07T23:27:48.9897126Z env:
+2026-10-07T23:27:48.9897352Z   SHOULD_CONTINUE: true
+2026-10-07T23:27:48.9897669Z   COPILOT_AGENT_START_TIME_SEC: 1791415525
+2026-10-07T23:27:48.9897998Z   COPILOT_AGENT_TIMEOUT_MIN: 20
+2026-10-07T23:27:48.9898277Z   NODE_USE_ENV_PROXY: 1
+2026-10-07T23:27:48.9899018Z   AUTOFIND_COPILOT_CLI_PATH: /home/runner/work/_temp/***-action-main/dist-autofind-ts/ts/copilot-cli/node_modules/@github/copilot/npm-loader.js
+2026-10-07T23:27:48.9899812Z   COPILOT_AGENT_JOB_ID: 60330232-260550412-49cfcd93-5631-4fc6-94b2-c98a8a3ab931
+2026-10-07T23:27:48.9900596Z   COPILOT_AGENT_MODEL: sweagent-capi:gpt-5.6-sol[ReasoningEffort=high]
+2026-10-07T23:27:48.9901103Z   COPILOT_API_URL: https://api.individual.githubcopilot.com
+2026-10-07T23:27:48.9901657Z   COPILOT_JOB_NONCE: ***
+2026-10-07T23:27:48.9901934Z   COPILOT_AGENT_ACTOR_ID: 19977
+2026-10-07T23:27:48.9902229Z   COPILOT_ENABLE_SECRET_FILTERING: true
+2026-10-07T23:27:48.9902586Z   AUTOFIND_OCTOKIT_PROXY_URL: http://127.0.0.1:33585
+2026-10-07T23:27:48.9903044Z   AUTOFIND_OCTOKIT_PROXY_SECRET: ***
+2026-10-07T23:27:48.9903336Z ##[endgroup]
+2026-10-07T23:27:48.9982331Z Cleaning up...
+2026-10-07T23:27:49.7297841Z Cleaning up orphan processes
+2026-10-07T23:27:49.7656630Z Terminate orphan process: pid (2262) (MainThread)
+2026-10-07T23:27:49.7690241Z Terminate orphan process: pid (2285) (npm exec @playw)
+2026-10-07T23:27:49.7729434Z Terminate orphan process: pid (3255) (MainThread)
+2026-10-07T23:27:49.7814787Z Terminate orphan process: pid (3277) (sh)

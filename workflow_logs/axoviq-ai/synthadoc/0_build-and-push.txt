@@ -1,0 +1,2283 @@
+﻿2026-10-14T01:18:19.3635250Z Current runner version: '2.337.0'
+2026-10-14T01:18:19.3655551Z ##[group]Runner Image Provisioner
+2026-10-14T01:18:19.3656260Z Hosted Compute Agent
+2026-10-14T01:18:19.3656867Z Version: 20261002.596
+2026-10-14T01:18:19.3657393Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T01:18:19.3658023Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T01:18:19.3658630Z Worker ID: {532b8e4f-b919-4e01-87aa-4f7024974efd}
+2026-10-14T01:18:19.3659254Z Region: westus3
+2026-10-14T01:18:19.3659817Z Cloud: Azure
+2026-10-14T01:18:19.3660274Z ##[endgroup]
+2026-10-14T01:18:19.3661509Z ##[group]Operating System
+2026-10-14T01:18:19.3662045Z Ubuntu
+2026-10-14T01:18:19.3662515Z 24.04.5
+2026-10-14T01:18:19.3663001Z LTS
+2026-10-14T01:18:19.3663448Z ##[endgroup]
+2026-10-14T01:18:19.3663975Z ##[group]Runner Image
+2026-10-14T01:18:19.3664536Z Image: ubuntu-24.04
+2026-10-14T01:18:19.3665209Z Version: 20261004.327.1
+2026-10-14T01:18:19.3666760Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T01:18:19.3668091Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T01:18:19.3668887Z ##[endgroup]
+2026-10-14T01:18:19.3669927Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T01:18:19.3671546Z Contents: read
+2026-10-14T01:18:19.3672091Z Metadata: read
+2026-10-14T01:18:19.3672578Z Packages: write
+2026-10-14T01:18:19.3673055Z ##[endgroup]
+2026-10-14T01:18:19.3674755Z Secret source: Actions
+2026-10-14T01:18:19.3675927Z Cache mode: write
+2026-10-14T01:18:19.3676579Z Prepare workflow directory
+2026-10-14T01:18:19.3979412Z Prepare all required actions
+2026-10-14T01:18:19.4023451Z Getting action download info
+2026-10-14T01:18:19.7030501Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-14T01:18:19.8856073Z Download action repository 'docker/setup-qemu-action@v3' (SHA:c7c53464625b32c7a7e944ae62b3e17d2b600130)
+2026-10-14T01:18:21.1975882Z Download action repository 'docker/setup-buildx-action@v3' (SHA:8d2750c68a42422c14e847fe6c8ac0403b4cbd6f)
+2026-10-14T01:18:22.2777395Z Download action repository 'docker/login-action@v3' (SHA:c94ce9fb468520275223c153574b00df6fe4bcc9)
+2026-10-14T01:18:23.8239268Z Download action repository 'docker/build-push-action@v6' (SHA:10e90e3645eae34f1e60eeb005ba3a3d33f178e8)
+2026-10-14T01:18:24.8310128Z Complete job name: build-and-push
+2026-10-14T01:18:24.8894270Z ##[group]Run actions/checkout@v4
+2026-10-14T01:18:24.8894890Z with:
+2026-10-14T01:18:24.8895352Z   ref: b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa
+2026-10-14T01:18:24.8895793Z   fetch-depth: 0
+2026-10-14T01:18:24.8896171Z   repository: axoviq-ai/synthadoc
+2026-10-14T01:18:24.8898395Z   token: ***
+2026-10-14T01:18:24.8898740Z   ssh-strict: true
+2026-10-14T01:18:24.8899038Z   ssh-user: git
+2026-10-14T01:18:24.8899336Z   persist-credentials: true
+2026-10-14T01:18:24.8899647Z   clean: true
+2026-10-14T01:18:24.8899934Z   sparse-checkout-cone-mode: true
+2026-10-14T01:18:24.8900316Z   fetch-tags: false
+2026-10-14T01:18:24.8900631Z   show-progress: true
+2026-10-14T01:18:24.8900921Z   lfs: false
+2026-10-14T01:18:24.8901192Z   submodules: false
+2026-10-14T01:18:24.8901482Z   set-safe-directory: true
+2026-10-14T01:18:24.8901842Z   allow-unsafe-pr-checkout: false
+2026-10-14T01:18:24.8902348Z env:
+2026-10-14T01:18:24.8902633Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:24.8902933Z ##[endgroup]
+2026-10-14T01:18:24.9788683Z Syncing repository: axoviq-ai/synthadoc
+2026-10-14T01:18:24.9790278Z ##[group]Getting Git version info
+2026-10-14T01:18:24.9790841Z Working directory is '/home/runner/work/synthadoc/synthadoc'
+2026-10-14T01:18:24.9791545Z [command]/usr/bin/git version
+2026-10-14T01:18:24.9791871Z git version 2.55.0
+2026-10-14T01:18:24.9792960Z ##[endgroup]
+2026-10-14T01:18:24.9797686Z Temporarily overriding HOME='/home/runner/work/_temp/522512b3-b316-4bc1-bfdf-26c2439b4b1e' before making global git config changes
+2026-10-14T01:18:24.9798998Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T01:18:24.9800111Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/synthadoc/synthadoc
+2026-10-14T01:18:24.9856302Z Deleting the contents of '/home/runner/work/synthadoc/synthadoc'
+2026-10-14T01:18:24.9886335Z ##[group]Initializing the repository
+2026-10-14T01:18:24.9886872Z [command]/usr/bin/git init /home/runner/work/synthadoc/synthadoc
+2026-10-14T01:18:24.9915829Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T01:18:24.9916691Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T01:18:24.9917468Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T01:18:24.9918076Z hint: call:
+2026-10-14T01:18:24.9918453Z hint:
+2026-10-14T01:18:24.9918951Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T01:18:24.9919479Z hint:
+2026-10-14T01:18:24.9920929Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T01:18:24.9921654Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T01:18:24.9922151Z hint:
+2026-10-14T01:18:24.9922424Z hint: 	git branch -m <name>
+2026-10-14T01:18:24.9922780Z hint:
+2026-10-14T01:18:24.9923204Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T01:18:24.9923920Z Initialized empty Git repository in /home/runner/work/synthadoc/synthadoc/.git/
+2026-10-14T01:18:24.9928127Z [command]/usr/bin/git remote add origin https://github.com/axoviq-ai/synthadoc
+2026-10-14T01:18:24.9966200Z ##[endgroup]
+2026-10-14T01:18:24.9966814Z ##[group]Disabling automatic garbage collection
+2026-10-14T01:18:24.9968940Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T01:18:24.9994532Z ##[endgroup]
+2026-10-14T01:18:24.9995158Z ##[group]Setting up auth
+2026-10-14T01:18:24.9999810Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T01:18:25.0025512Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T01:18:25.0691618Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T01:18:25.0721910Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T01:18:25.0910083Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T01:18:25.0939419Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T01:18:25.1128655Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T01:18:25.1164648Z ##[endgroup]
+2026-10-14T01:18:25.1165264Z ##[group]Fetching the repository
+2026-10-14T01:18:25.1172388Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-14T01:18:28.4744327Z From https://github.com/axoviq-ai/synthadoc
+2026-10-14T01:18:28.4744926Z  * [new branch]      badges     -> origin/badges
+2026-10-14T01:18:28.4745550Z  * [new branch]      main       -> origin/main
+2026-10-14T01:18:28.4745989Z  * [new branch]      pdev1      -> origin/pdev1
+2026-10-14T01:18:28.4746340Z  * [new tag]         v0.1.0     -> v0.1.0
+2026-10-14T01:18:28.4746656Z  * [new tag]         v0.2.0     -> v0.2.0
+2026-10-14T01:18:28.4747006Z  * [new tag]         v0.3.0     -> v0.3.0
+2026-10-14T01:18:28.4747300Z  * [new tag]         v0.4.0     -> v0.4.0
+2026-10-14T01:18:28.4747605Z  * [new tag]         v0.5.0     -> v0.5.0
+2026-10-14T01:18:28.4747929Z  * [new tag]         v0.6.0     -> v0.6.0
+2026-10-14T01:18:28.4748224Z  * [new tag]         v0.7.0     -> v0.7.0
+2026-10-14T01:18:28.4748527Z  * [new tag]         v0.8.0     -> v0.8.0
+2026-10-14T01:18:28.4749153Z  * [new tag]         v0.9.0     -> v0.9.0
+2026-10-14T01:18:28.4749476Z  * [new tag]         v0.9.1     -> v0.9.1
+2026-10-14T01:18:28.4749839Z  * [new tag]         v0.9.2     -> v0.9.2
+2026-10-14T01:18:28.4750203Z  * [new tag]         v0.9.3     -> v0.9.3
+2026-10-14T01:18:28.4750547Z  * [new tag]         v1.0.0     -> v1.0.0
+2026-10-14T01:18:28.4750910Z  * [new tag]         v1.0.1     -> v1.0.1
+2026-10-14T01:18:28.4751214Z  * [new tag]         v1.0.2     -> v1.0.2
+2026-10-14T01:18:28.4751579Z  * [new tag]         v1.1.0     -> v1.1.0
+2026-10-14T01:18:28.4751934Z  * [new tag]         v1.1.2     -> v1.1.2
+2026-10-14T01:18:28.4752289Z  * [new tag]         v1.1.3     -> v1.1.3
+2026-10-14T01:18:28.4752635Z  * [new tag]         v1.12      -> v1.12
+2026-10-14T01:18:28.4752984Z  * [new tag]         v1.2.0     -> v1.2.0
+2026-10-14T01:18:28.4753335Z  * [new tag]         v1.2.1     -> v1.2.1
+2026-10-14T01:18:28.4753726Z  * [new tag]         v1.3.0     -> v1.3.0
+2026-10-14T01:18:28.4754087Z  * [new tag]         v1.3.1     -> v1.3.1
+2026-10-14T01:18:28.4754420Z  * [new tag]         v1.3.2     -> v1.3.2
+2026-10-14T01:18:28.4754761Z  * [new tag]         v1.3.3     -> v1.3.3
+2026-10-14T01:18:28.4755368Z  * [new tag]         v1.3.4     -> v1.3.4
+2026-10-14T01:18:28.4755946Z  * [new tag]         v1.3.5     -> v1.3.5
+2026-10-14T01:18:28.4756289Z  * [new tag]         v1.4.0     -> v1.4.0
+2026-10-14T01:18:28.4756677Z  * [new tag]         v1.4.1     -> v1.4.1
+2026-10-14T01:18:28.4757041Z  * [new tag]         v1.4.2     -> v1.4.2
+2026-10-14T01:18:28.4758801Z [command]/usr/bin/git rev-parse --verify --quiet b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa^{object}
+2026-10-14T01:18:28.4785502Z b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa
+2026-10-14T01:18:28.4801318Z ##[endgroup]
+2026-10-14T01:18:28.4801800Z ##[group]Determining the checkout info
+2026-10-14T01:18:28.4802330Z ##[endgroup]
+2026-10-14T01:18:28.4802661Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T01:18:28.4842974Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T01:18:28.4874015Z ##[group]Checking out the ref
+2026-10-14T01:18:28.4878153Z [command]/usr/bin/git checkout --progress --force b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa
+2026-10-14T01:18:28.7108313Z Note: switching to 'b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa'.
+2026-10-14T01:18:28.7109389Z 
+2026-10-14T01:18:28.7110439Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T01:18:28.7111429Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T01:18:28.7112135Z state without impacting any branches by switching back to a branch.
+2026-10-14T01:18:28.7112559Z 
+2026-10-14T01:18:28.7112870Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T01:18:28.7113403Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T01:18:28.7113709Z 
+2026-10-14T01:18:28.7113917Z   git switch -c <new-branch-name>
+2026-10-14T01:18:28.7114433Z 
+2026-10-14T01:18:28.7114843Z Or undo this operation with:
+2026-10-14T01:18:28.7115425Z 
+2026-10-14T01:18:28.7115550Z   git switch -
+2026-10-14T01:18:28.7115695Z 
+2026-10-14T01:18:28.7116032Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T01:18:28.7116403Z 
+2026-10-14T01:18:28.7116624Z HEAD is now at b95d311 Merge pull request #476 from peterwhite22/main
+2026-10-14T01:18:28.7152074Z ##[endgroup]
+2026-10-14T01:18:28.7236213Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T01:18:28.7278933Z b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa
+2026-10-14T01:18:28.7482238Z ##[group]Run if [ "workflow_dispatch" = "workflow_dispatch" ]; then
+2026-10-14T01:18:28.7482690Z [36;1mif [ "workflow_dispatch" = "workflow_dispatch" ]; then[0m
+2026-10-14T01:18:28.7483001Z [36;1m  echo "tag=1.4.2" >> "$GITHUB_OUTPUT"[0m
+2026-10-14T01:18:28.7483239Z [36;1melse[0m
+2026-10-14T01:18:28.7483458Z [36;1m  TAG=$(git describe --tags --exact-match HEAD)[0m
+2026-10-14T01:18:28.7483735Z [36;1m  echo "tag=${TAG#v}" >> "$GITHUB_OUTPUT"[0m
+2026-10-14T01:18:28.7484125Z [36;1mfi[0m
+2026-10-14T01:18:28.8673731Z shell: /usr/bin/bash -e {0}
+2026-10-14T01:18:28.8674000Z env:
+2026-10-14T01:18:28.8674198Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:28.8674405Z ##[endgroup]
+2026-10-14T01:18:28.8819085Z ##[group]Run VERSION="1.4.2"
+2026-10-14T01:18:28.8819484Z [36;1mVERSION="1.4.2"[0m
+2026-10-14T01:18:28.8819809Z [36;1mfor i in $(seq 1 30); do[0m
+2026-10-14T01:18:28.8820345Z [36;1m  if python3 -m pip download --no-deps --no-cache-dir -q -d /tmp/pypi-check "synthadoc==${VERSION}"; then[0m
+2026-10-14T01:18:28.8820924Z [36;1m    echo "synthadoc==${VERSION} is available on PyPI"[0m
+2026-10-14T01:18:28.8821333Z [36;1m    exit 0[0m
+2026-10-14T01:18:28.8822081Z [36;1m  fi[0m
+2026-10-14T01:18:28.8822476Z [36;1m  echo "synthadoc==${VERSION} not on PyPI yet (attempt ${i}/30); retrying in 20s"[0m
+2026-10-14T01:18:28.8822937Z [36;1m  sleep 20[0m
+2026-10-14T01:18:28.8823183Z [36;1mdone[0m
+2026-10-14T01:18:28.8823581Z [36;1mecho "synthadoc==${VERSION} never became available on PyPI" >&2[0m
+2026-10-14T01:18:28.8823984Z [36;1mexit 1[0m
+2026-10-14T01:18:28.8873137Z shell: /usr/bin/bash -e {0}
+2026-10-14T01:18:28.8873532Z env:
+2026-10-14T01:18:28.8873924Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:28.8874233Z ##[endgroup]
+2026-10-14T01:18:30.3436617Z synthadoc==1.4.2 is available on PyPI
+2026-10-14T01:18:30.3483258Z ##[group]Run docker/setup-qemu-action@v3
+2026-10-14T01:18:30.3483501Z with:
+2026-10-14T01:18:30.3483693Z   image: docker.io/tonistiigi/binfmt:latest
+2026-10-14T01:18:30.3483943Z   platforms: all
+2026-10-14T01:18:30.3484121Z   cache-image: true
+2026-10-14T01:18:30.3484306Z env:
+2026-10-14T01:18:30.3484476Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:30.3484664Z ##[endgroup]
+2026-10-14T01:18:30.5317845Z ##[group]Docker info
+2026-10-14T01:18:30.5334719Z (node:2126) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:18:30.5335687Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:18:30.5357378Z [command]/usr/bin/docker version
+2026-10-14T01:18:32.5217227Z Client: Docker Engine - Community
+2026-10-14T01:18:32.5217538Z  Version:           28.0.4
+2026-10-14T01:18:32.5219025Z  API version:       1.48
+2026-10-14T01:18:32.5219234Z  Go version:        go1.23.7
+2026-10-14T01:18:32.5219542Z  Git commit:        b8034c0
+2026-10-14T01:18:32.5219751Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:32.5219978Z  OS/Arch:           linux/amd64
+2026-10-14T01:18:32.5220177Z  Context:           default
+2026-10-14T01:18:32.5220299Z 
+2026-10-14T01:18:32.5220390Z Server: Docker Engine - Community
+2026-10-14T01:18:32.5220594Z  Engine:
+2026-10-14T01:18:32.5220753Z   Version:          28.0.4
+2026-10-14T01:18:32.5220965Z   API version:      1.48 (minimum version 1.24)
+2026-10-14T01:18:32.5221215Z   Go version:       go1.23.7
+2026-10-14T01:18:32.5221408Z   Git commit:       6430e49
+2026-10-14T01:18:32.5221632Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:32.5221867Z   OS/Arch:          linux/amd64
+2026-10-14T01:18:32.5222067Z   Experimental:     false
+2026-10-14T01:18:32.5222254Z  containerd:
+2026-10-14T01:18:32.5222415Z   Version:          v2.3.6
+2026-10-14T01:18:32.5222657Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:32.5222902Z  runc:
+2026-10-14T01:18:32.5223063Z   Version:          1.5.1
+2026-10-14T01:18:32.5223252Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-14T01:18:32.5223469Z  docker-init:
+2026-10-14T01:18:32.5223645Z   Version:          0.19.0
+2026-10-14T01:18:32.5223832Z   GitCommit:        de40ad0
+2026-10-14T01:18:32.5266633Z [command]/usr/bin/docker info
+2026-10-14T01:18:36.6990709Z Client: Docker Engine - Community
+2026-10-14T01:18:36.6991004Z  Version:    28.0.4
+2026-10-14T01:18:36.6991195Z  Context:    default
+2026-10-14T01:18:36.6991379Z  Debug Mode: false
+2026-10-14T01:18:36.6991620Z  Plugins:
+2026-10-14T01:18:36.6991851Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-14T01:18:36.6992409Z     Version:  v0.37.2
+2026-10-14T01:18:36.6992644Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-14T01:18:36.6992928Z   compose: Docker Compose (Docker Inc.)
+2026-10-14T01:18:36.6993147Z     Version:  v2.38.2
+2026-10-14T01:18:36.6993371Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-14T01:18:36.6993567Z 
+2026-10-14T01:18:36.6993641Z Server:
+2026-10-14T01:18:36.6993868Z  Containers: 0
+2026-10-14T01:18:36.6994065Z   Running: 0
+2026-10-14T01:18:36.6994243Z   Paused: 0
+2026-10-14T01:18:36.6994398Z   Stopped: 0
+2026-10-14T01:18:36.6994550Z  Images: 6
+2026-10-14T01:18:36.6994710Z  Server Version: 28.0.4
+2026-10-14T01:18:36.6994906Z  Storage Driver: overlay2
+2026-10-14T01:18:36.6995251Z   Backing Filesystem: extfs
+2026-10-14T01:18:36.6995448Z   Supports d_type: true
+2026-10-14T01:18:36.6995623Z   Using metacopy: false
+2026-10-14T01:18:36.6996119Z   Native Overlay Diff: false
+2026-10-14T01:18:36.6996511Z   userxattr: false
+2026-10-14T01:18:36.6996853Z  Logging Driver: json-file
+2026-10-14T01:18:36.6997200Z  Cgroup Driver: systemd
+2026-10-14T01:18:36.6997550Z  Cgroup Version: 2
+2026-10-14T01:18:36.6997873Z  Plugins:
+2026-10-14T01:18:36.6998149Z   Volume: local
+2026-10-14T01:18:36.6998515Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-14T01:18:36.6999315Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-14T01:18:36.6999724Z  Swarm: inactive
+2026-10-14T01:18:36.7000025Z  Runtimes: io.containerd.runc.v2 runc
+2026-10-14T01:18:36.7000405Z  Default Runtime: runc
+2026-10-14T01:18:36.7000882Z  Init Binary: docker-init
+2026-10-14T01:18:36.7001260Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:36.7001665Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-14T01:18:36.7002031Z  init version: de40ad0
+2026-10-14T01:18:36.7002314Z  Security Options:
+2026-10-14T01:18:36.7002630Z   apparmor
+2026-10-14T01:18:36.7002981Z   seccomp
+2026-10-14T01:18:36.7003235Z    Profile: builtin
+2026-10-14T01:18:36.7003560Z   cgroupns
+2026-10-14T01:18:36.7003804Z  Kernel Version: 6.17.0-1022-azure
+2026-10-14T01:18:36.7004176Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-14T01:18:36.7004547Z  OSType: linux
+2026-10-14T01:18:36.7004863Z  Architecture: x86_64
+2026-10-14T01:18:36.7005228Z  CPUs: 4
+2026-10-14T01:18:36.7005484Z  Total Memory: 15.61GiB
+2026-10-14T01:18:36.7005811Z  Name: runnervmmprz5
+2026-10-14T01:18:36.7006178Z  ID: 07f0e779-c305-4162-b8ec-c48c30f52fbe
+2026-10-14T01:18:36.7006564Z  Docker Root Dir: /var/lib/docker
+2026-10-14T01:18:36.7006922Z  Debug Mode: false
+2026-10-14T01:18:36.7007252Z  Username: githubactions
+2026-10-14T01:18:36.7007601Z  Experimental: false
+2026-10-14T01:18:36.7007927Z  Insecure Registries:
+2026-10-14T01:18:36.7011095Z   ::1/128
+2026-10-14T01:18:36.7011453Z   127.0.0.0/8
+2026-10-14T01:18:36.7011741Z  Live Restore Enabled: false
+2026-10-14T01:18:36.7012015Z 
+2026-10-14T01:18:36.7012566Z ##[endgroup]
+2026-10-14T01:18:36.7012896Z ##[group]Pulling binfmt Docker image
+2026-10-14T01:18:36.9031746Z Cache hit for: docker.io--tonistiigi--binfmt-latest-linux-x64
+2026-10-14T01:18:36.9096531Z (node:2126) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T01:18:38.1344597Z Received 32265029 of 32265029 (100.0%), 30.6 MBs/sec
+2026-10-14T01:18:38.1345443Z Cache Size: ~31 MB (32265029 B)
+2026-10-14T01:18:38.1367296Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9e32d421-ff6b-4115-90bc-4a1f6f63632f/cache.tzst -P -C /home/runner/work/synthadoc/synthadoc --use-compress-program unzstd
+2026-10-14T01:18:38.2531806Z Cache restored successfully
+2026-10-14T01:18:38.2547780Z Restored docker.io--tonistiigi--binfmt-latest-linux-x64 from GitHub Actions cache
+2026-10-14T01:18:38.6409631Z Cached to hosted tool cache /opt/hostedtoolcache/docker.io--tonistiigi--binfmt/latest/linux-x64
+2026-10-14T01:18:38.6410473Z Copying /opt/hostedtoolcache/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar to /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-14T01:18:39.1583813Z Image found from cache in /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-14T01:18:39.1599722Z [command]/usr/bin/docker load -i /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-14T01:18:41.0930756Z Loaded image: tonistiigi/binfmt:latest
+2026-10-14T01:18:41.1051163Z [command]/usr/bin/docker pull docker.io/tonistiigi/binfmt:latest
+2026-10-14T01:18:42.4504651Z latest: Pulling from tonistiigi/binfmt
+2026-10-14T01:18:43.5720759Z Digest: sha256:400a4873b838d1b89194d982c45e5fb3cda4593fbfd7e08a02e76b03b21166f0
+2026-10-14T01:18:43.5725537Z Status: Image is up to date for tonistiigi/binfmt:latest
+2026-10-14T01:18:43.5733110Z docker.io/tonistiigi/binfmt:latest
+2026-10-14T01:18:43.5761157Z [command]/usr/bin/docker save -o /home/runner/work/_temp/docker-actions-toolkit-WuyNJp/749e64100d3fa0c09bdbc8a02e4fb9cb3ee64266f7f661c98371040689abacb3.tar docker.io/tonistiigi/binfmt:latest
+2026-10-14T01:18:44.4076437Z Copying /home/runner/work/_temp/docker-actions-toolkit-WuyNJp/749e64100d3fa0c09bdbc8a02e4fb9cb3ee64266f7f661c98371040689abacb3.tar to /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-14T01:18:45.2766734Z Image cached to /home/runner/.docker/.cache/images/docker.io--tonistiigi--binfmt/latest/linux-x64/image.tar
+2026-10-14T01:18:45.2767979Z ##[endgroup]
+2026-10-14T01:18:45.2769336Z ##[group]Image info
+2026-10-14T01:18:45.2780819Z [command]/usr/bin/docker image inspect docker.io/tonistiigi/binfmt:latest
+2026-10-14T01:18:45.2898907Z [
+2026-10-14T01:18:45.2907169Z     {
+2026-10-14T01:18:45.2907634Z         "Id": "sha256:15935d0512bf0a8e5afa1df990d971cf97a619ede08fa60f2d5966a62de6d6b7",
+2026-10-14T01:18:45.2908185Z         "RepoTags": [
+2026-10-14T01:18:45.2908482Z             "tonistiigi/binfmt:latest"
+2026-10-14T01:18:45.2908823Z         ],
+2026-10-14T01:18:45.2909056Z         "RepoDigests": [
+2026-10-14T01:18:45.2909593Z             "tonistiigi/binfmt@sha256:400a4873b838d1b89194d982c45e5fb3cda4593fbfd7e08a02e76b03b21166f0"
+2026-10-14T01:18:45.2910151Z         ],
+2026-10-14T01:18:45.2910401Z         "Parent": "",
+2026-10-14T01:18:45.2910720Z         "Comment": "buildkit.dockerfile.v0",
+2026-10-14T01:18:45.2911111Z         "Created": "2026-06-05T19:12:02.167333037Z",
+2026-10-14T01:18:45.2911493Z         "DockerVersion": "",
+2026-10-14T01:18:45.2911794Z         "Author": "",
+2026-10-14T01:18:45.2912066Z         "Config": {
+2026-10-14T01:18:45.2912339Z             "Hostname": "",
+2026-10-14T01:18:45.2912638Z             "Domainname": "",
+2026-10-14T01:18:45.2912936Z             "User": "",
+2026-10-14T01:18:45.2913218Z             "AttachStdin": false,
+2026-10-14T01:18:45.2939250Z             "AttachStdout": false,
+2026-10-14T01:18:45.2939614Z             "AttachStderr": false,
+2026-10-14T01:18:45.2939947Z             "Tty": false,
+2026-10-14T01:18:45.2940206Z             "OpenStdin": false,
+2026-10-14T01:18:45.2940408Z             "StdinOnce": false,
+2026-10-14T01:18:45.2940597Z             "Env": [
+2026-10-14T01:18:45.2940891Z                 "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+2026-10-14T01:18:45.2941221Z                 "QEMU_PRESERVE_ARGV0=1"
+2026-10-14T01:18:45.2941445Z             ],
+2026-10-14T01:18:45.2941616Z             "Cmd": null,
+2026-10-14T01:18:45.2941799Z             "Image": "",
+2026-10-14T01:18:45.2941981Z             "Volumes": {
+2026-10-14T01:18:45.2942157Z                 "/tmp": {}
+2026-10-14T01:18:45.2942339Z             },
+2026-10-14T01:18:45.2942513Z             "WorkingDir": "/",
+2026-10-14T01:18:45.2942738Z             "Entrypoint": [
+2026-10-14T01:18:45.2942935Z                 "/usr/bin/binfmt"
+2026-10-14T01:18:45.2943139Z             ],
+2026-10-14T01:18:45.2943305Z             "OnBuild": null,
+2026-10-14T01:18:45.2943505Z             "Labels": null
+2026-10-14T01:18:45.2943958Z         },
+2026-10-14T01:18:45.2944131Z         "Architecture": "amd64",
+2026-10-14T01:18:45.2944442Z         "Os": "linux",
+2026-10-14T01:18:45.2944704Z         "Size": 85304497,
+2026-10-14T01:18:45.2945104Z         "GraphDriver": {
+2026-10-14T01:18:45.2945374Z             "Data": {
+2026-10-14T01:18:45.2945974Z                 "LowerDir": "/var/lib/docker/overlay2/0ad278466bb185d0951d277c97d8e3f16261238b02b9952727f458f8644cc5d0/diff",
+2026-10-14T01:18:45.2946885Z                 "MergedDir": "/var/lib/docker/overlay2/1abbb18a0502572b977a9eb3b3dc2ba549ecc08f9c7c4aec7cc9b5800f2fb34c/merged",
+2026-10-14T01:18:45.2947532Z                 "UpperDir": "/var/lib/docker/overlay2/1abbb18a0502572b977a9eb3b3dc2ba549ecc08f9c7c4aec7cc9b5800f2fb34c/diff",
+2026-10-14T01:18:45.2948140Z                 "WorkDir": "/var/lib/docker/overlay2/1abbb18a0502572b977a9eb3b3dc2ba549ecc08f9c7c4aec7cc9b5800f2fb34c/work"
+2026-10-14T01:18:45.2948550Z             },
+2026-10-14T01:18:45.2948732Z             "Name": "overlay2"
+2026-10-14T01:18:45.2948929Z         },
+2026-10-14T01:18:45.2949099Z         "RootFS": {
+2026-10-14T01:18:45.2949278Z             "Type": "layers",
+2026-10-14T01:18:45.2949469Z             "Layers": [
+2026-10-14T01:18:45.2949767Z                 "sha256:c747b796d990a647df062f87e24f1ef5e4a90a312cd9c4ae8b7d09667d57befb",
+2026-10-14T01:18:45.2950354Z                 "sha256:6d831b0f477d9df7afe18e5a65c97e8084fef8fe10c2930b65f728ab68d0bb5b"
+2026-10-14T01:18:45.2950680Z             ]
+2026-10-14T01:18:45.2950842Z         },
+2026-10-14T01:18:45.2951006Z         "Metadata": {
+2026-10-14T01:18:45.2951220Z             "LastTagTime": "0001-01-01T00:00:00Z"
+2026-10-14T01:18:45.2951527Z         }
+2026-10-14T01:18:45.2951722Z     }
+2026-10-14T01:18:45.2951877Z ]
+2026-10-14T01:18:45.2952657Z ##[endgroup]
+2026-10-14T01:18:45.2952964Z ##[group]Binfmt version
+2026-10-14T01:18:45.2953414Z [command]/usr/bin/docker run --rm --privileged docker.io/tonistiigi/binfmt:latest --version
+2026-10-14T01:18:46.5155290Z binfmt/e29e7d7 qemu/v10.2.3 go/1.26.4
+2026-10-14T01:18:46.6322061Z ##[endgroup]
+2026-10-14T01:18:46.6322459Z ##[group]Installing QEMU static binaries
+2026-10-14T01:18:46.6332184Z [command]/usr/bin/docker run --rm --privileged docker.io/tonistiigi/binfmt:latest --install all
+2026-10-14T01:18:46.7521642Z installing: arm64 OK
+2026-10-14T01:18:46.7522059Z installing: arm OK
+2026-10-14T01:18:46.7522306Z installing: ppc64le OK
+2026-10-14T01:18:46.7522578Z installing: mips64le OK
+2026-10-14T01:18:46.7522865Z installing: loong64 OK
+2026-10-14T01:18:46.7523053Z installing: s390x OK
+2026-10-14T01:18:46.7523237Z installing: riscv64 OK
+2026-10-14T01:18:46.7523416Z installing: mips64 OK
+2026-10-14T01:18:46.7714666Z {
+2026-10-14T01:18:46.7716548Z   "supported": [
+2026-10-14T01:18:46.7716847Z     "linux/amd64",
+2026-10-14T01:18:46.7717084Z     "linux/amd64/v2",
+2026-10-14T01:18:46.7717349Z     "linux/amd64/v3",
+2026-10-14T01:18:46.7717623Z     "linux/amd64/v4",
+2026-10-14T01:18:46.7717904Z     "linux/arm64",
+2026-10-14T01:18:46.7718204Z     "linux/riscv64",
+2026-10-14T01:18:46.7718486Z     "linux/ppc64le",
+2026-10-14T01:18:46.7718767Z     "linux/s390x",
+2026-10-14T01:18:46.7719046Z     "linux/386",
+2026-10-14T01:18:46.7719317Z     "linux/mips64le",
+2026-10-14T01:18:46.7719594Z     "linux/mips64",
+2026-10-14T01:18:46.7719862Z     "linux/loong64",
+2026-10-14T01:18:46.7720137Z     "linux/arm/v7",
+2026-10-14T01:18:46.7720424Z     "linux/arm/v6"
+2026-10-14T01:18:46.7720678Z   ],
+2026-10-14T01:18:46.7720925Z   "emulators": [
+2026-10-14T01:18:46.7721244Z     "llvm-16-runtime.binfmt",
+2026-10-14T01:18:46.7721583Z     "llvm-17-runtime.binfmt",
+2026-10-14T01:18:46.7721901Z     "llvm-18-runtime.binfmt",
+2026-10-14T01:18:46.7722221Z     "python3.12",
+2026-10-14T01:18:46.7722490Z     "qemu-aarch64",
+2026-10-14T01:18:46.7722753Z     "qemu-arm",
+2026-10-14T01:18:46.7723149Z     "qemu-loongarch64",
+2026-10-14T01:18:46.7723439Z     "qemu-mips64",
+2026-10-14T01:18:46.7723633Z     "qemu-mips64el",
+2026-10-14T01:18:46.7723813Z     "qemu-ppc64le",
+2026-10-14T01:18:46.7724348Z     "qemu-riscv64",
+2026-10-14T01:18:46.7724529Z     "qemu-s390x"
+2026-10-14T01:18:46.7724694Z   ]
+2026-10-14T01:18:46.7724839Z }
+2026-10-14T01:18:46.8460717Z ##[endgroup]
+2026-10-14T01:18:46.8461111Z ##[group]Extracting available platforms
+2026-10-14T01:18:47.2181361Z linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6
+2026-10-14T01:18:47.2183013Z ##[endgroup]
+2026-10-14T01:18:47.2367007Z ##[group]Run docker/setup-buildx-action@v3
+2026-10-14T01:18:47.2367269Z with:
+2026-10-14T01:18:47.2367454Z   driver: docker-container
+2026-10-14T01:18:47.2367655Z   use: true
+2026-10-14T01:18:47.2367831Z   keep-state: false
+2026-10-14T01:18:47.2368021Z   cache-binary: true
+2026-10-14T01:18:47.2368205Z   cleanup: true
+2026-10-14T01:18:47.2368384Z   install: false
+2026-10-14T01:18:47.2368552Z env:
+2026-10-14T01:18:47.2368725Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:47.2368945Z ##[endgroup]
+2026-10-14T01:18:47.4285126Z (node:2574) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:18:47.4285735Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:18:47.4335881Z ##[group]Docker info
+2026-10-14T01:18:47.4343444Z [command]/usr/bin/docker version
+2026-10-14T01:18:47.4520355Z Client: Docker Engine - Community
+2026-10-14T01:18:47.4520831Z  Version:           28.0.4
+2026-10-14T01:18:47.4521255Z  API version:       1.48
+2026-10-14T01:18:47.4521557Z  Go version:        go1.23.7
+2026-10-14T01:18:47.4521844Z  Git commit:        b8034c0
+2026-10-14T01:18:47.4522154Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:47.4522508Z  OS/Arch:           linux/amd64
+2026-10-14T01:18:47.4522814Z  Context:           default
+2026-10-14T01:18:47.4523030Z 
+2026-10-14T01:18:47.4523163Z Server: Docker Engine - Community
+2026-10-14T01:18:47.4523470Z  Engine:
+2026-10-14T01:18:47.4523729Z   Version:          28.0.4
+2026-10-14T01:18:47.4524055Z   API version:      1.48 (minimum version 1.24)
+2026-10-14T01:18:47.4524410Z   Go version:       go1.23.7
+2026-10-14T01:18:47.4524706Z   Git commit:       6430e49
+2026-10-14T01:18:47.4525175Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:47.4525678Z   OS/Arch:          linux/amd64
+2026-10-14T01:18:47.4525978Z   Experimental:     false
+2026-10-14T01:18:47.4526431Z  containerd:
+2026-10-14T01:18:47.4526673Z   Version:          v2.3.6
+2026-10-14T01:18:47.4527031Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:47.4527422Z  runc:
+2026-10-14T01:18:47.4527658Z   Version:          1.5.1
+2026-10-14T01:18:47.4527945Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-14T01:18:47.4528276Z  docker-init:
+2026-10-14T01:18:47.4528525Z   Version:          0.19.0
+2026-10-14T01:18:47.4528814Z   GitCommit:        de40ad0
+2026-10-14T01:18:47.4554489Z [command]/usr/bin/docker info
+2026-10-14T01:18:47.5310231Z Client: Docker Engine - Community
+2026-10-14T01:18:47.5320241Z  Version:    28.0.4
+2026-10-14T01:18:47.5320549Z  Context:    default
+2026-10-14T01:18:47.5320916Z  Debug Mode: false
+2026-10-14T01:18:47.5321173Z  Plugins:
+2026-10-14T01:18:47.5321436Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-14T01:18:47.5321717Z     Version:  v0.37.2
+2026-10-14T01:18:47.5321959Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-14T01:18:47.5322253Z   compose: Docker Compose (Docker Inc.)
+2026-10-14T01:18:47.5322491Z     Version:  v2.38.2
+2026-10-14T01:18:47.5322722Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-14T01:18:47.5322914Z 
+2026-10-14T01:18:47.5322992Z Server:
+2026-10-14T01:18:47.5323151Z  Containers: 0
+2026-10-14T01:18:47.5323317Z   Running: 0
+2026-10-14T01:18:47.5323485Z   Paused: 0
+2026-10-14T01:18:47.5323647Z   Stopped: 0
+2026-10-14T01:18:47.5323808Z  Images: 7
+2026-10-14T01:18:47.5324056Z  Server Version: 28.0.4
+2026-10-14T01:18:47.5324266Z  Storage Driver: overlay2
+2026-10-14T01:18:47.5324820Z   Backing Filesystem: extfs
+2026-10-14T01:18:47.5325303Z   Supports d_type: true
+2026-10-14T01:18:47.5325560Z   Using metacopy: false
+2026-10-14T01:18:47.5325749Z   Native Overlay Diff: false
+2026-10-14T01:18:47.5325946Z   userxattr: false
+2026-10-14T01:18:47.5326133Z  Logging Driver: json-file
+2026-10-14T01:18:47.5326328Z  Cgroup Driver: systemd
+2026-10-14T01:18:47.5326525Z  Cgroup Version: 2
+2026-10-14T01:18:47.5326698Z  Plugins:
+2026-10-14T01:18:47.5326878Z   Volume: local
+2026-10-14T01:18:47.5327278Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-14T01:18:47.5327626Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-14T01:18:47.5327928Z  Swarm: inactive
+2026-10-14T01:18:47.5328228Z  Runtimes: io.containerd.runc.v2 runc
+2026-10-14T01:18:47.5328491Z  Default Runtime: runc
+2026-10-14T01:18:47.5328685Z  Init Binary: docker-init
+2026-10-14T01:18:47.5328953Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:47.5329235Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-14T01:18:47.5329455Z  init version: de40ad0
+2026-10-14T01:18:47.5329649Z  Security Options:
+2026-10-14T01:18:47.5329822Z   apparmor
+2026-10-14T01:18:47.5329978Z   seccomp
+2026-10-14T01:18:47.5330143Z    Profile: builtin
+2026-10-14T01:18:47.5330316Z   cgroupns
+2026-10-14T01:18:47.5330486Z  Kernel Version: 6.17.0-1022-azure
+2026-10-14T01:18:47.5330716Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-14T01:18:47.5330932Z  OSType: linux
+2026-10-14T01:18:47.5331108Z  Architecture: x86_64
+2026-10-14T01:18:47.5331389Z  CPUs: 4
+2026-10-14T01:18:47.5331556Z  Total Memory: 15.61GiB
+2026-10-14T01:18:47.5331749Z  Name: runnervmmprz5
+2026-10-14T01:18:47.5331941Z  ID: 07f0e779-c305-4162-b8ec-c48c30f52fbe
+2026-10-14T01:18:47.5332169Z  Docker Root Dir: /var/lib/docker
+2026-10-14T01:18:47.5332384Z  Debug Mode: false
+2026-10-14T01:18:47.5332559Z  Username: githubactions
+2026-10-14T01:18:47.5332757Z  Experimental: false
+2026-10-14T01:18:47.5332937Z  Insecure Registries:
+2026-10-14T01:18:47.5333221Z   ::1/128
+2026-10-14T01:18:47.5333384Z   127.0.0.0/8
+2026-10-14T01:18:47.5333562Z  Live Restore Enabled: false
+2026-10-14T01:18:47.5333692Z 
+2026-10-14T01:18:47.5334026Z ##[endgroup]
+2026-10-14T01:18:47.6794919Z ##[group]Buildx version
+2026-10-14T01:18:47.6818038Z [command]/usr/bin/docker buildx version
+2026-10-14T01:18:47.7379181Z github.com/docker/buildx v0.37.2 2d379c0c3f22da0d2759d132a0ec81ca949098f0
+2026-10-14T01:18:47.7405298Z ##[endgroup]
+2026-10-14T01:18:47.7537197Z ##[group]Inspecting default docker context
+2026-10-14T01:18:47.7652540Z [
+2026-10-14T01:18:47.7652796Z   {
+2026-10-14T01:18:47.7653048Z     "Name": "default",
+2026-10-14T01:18:47.7653338Z     "Metadata": {},
+2026-10-14T01:18:47.7653616Z     "Endpoints": {
+2026-10-14T01:18:47.7653894Z       "docker": {
+2026-10-14T01:18:47.7654198Z         "Host": "unix:///var/run/docker.sock",
+2026-10-14T01:18:47.7654615Z         "SkipTLSVerify": false
+2026-10-14T01:18:47.7654938Z       }
+2026-10-14T01:18:47.7655396Z     },
+2026-10-14T01:18:47.7655659Z     "TLSMaterial": {},
+2026-10-14T01:18:47.7655956Z     "Storage": {
+2026-10-14T01:18:47.7656256Z       "MetadataPath": "<IN MEMORY>",
+2026-10-14T01:18:47.7656627Z       "TLSPath": "<IN MEMORY>"
+2026-10-14T01:18:47.7656947Z     }
+2026-10-14T01:18:47.7657198Z   }
+2026-10-14T01:18:47.7657434Z ]
+2026-10-14T01:18:47.7657945Z ##[endgroup]
+2026-10-14T01:18:47.7658439Z ##[group]Creating a new builder instance
+2026-10-14T01:18:47.8636504Z [command]/usr/bin/docker buildx create --name builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682 --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
+2026-10-14T01:18:47.9624125Z builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682
+2026-10-14T01:18:47.9653234Z ##[endgroup]
+2026-10-14T01:18:47.9653892Z ##[group]Booting builder
+2026-10-14T01:18:47.9682039Z [command]/usr/bin/docker buildx inspect --bootstrap --builder builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682
+2026-10-14T01:18:48.0168738Z #1 [internal] booting buildkit
+2026-10-14T01:18:48.1675672Z #1 pulling image moby/buildkit:buildx-stable-1
+2026-10-14T01:18:52.3376760Z #1 pulling image moby/buildkit:buildx-stable-1 4.3s done
+2026-10-14T01:18:52.4894226Z #1 creating container buildx_buildkit_builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820
+2026-10-14T01:18:52.8455150Z #1 creating container buildx_buildkit_builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820 0.5s done
+2026-10-14T01:18:52.8784567Z #1 DONE 4.8s
+2026-10-14T01:18:52.9101185Z Name:          builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682
+2026-10-14T01:18:52.9101661Z Driver:        docker-container
+2026-10-14T01:18:52.9102046Z Last Activity: 2026-10-14 01:18:47 +0000 UTC
+2026-10-14T01:18:52.9102295Z 
+2026-10-14T01:18:52.9102393Z Nodes:
+2026-10-14T01:18:52.9102700Z Name:                  builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820
+2026-10-14T01:18:52.9103007Z Endpoint:              unix:///var/run/docker.sock
+2026-10-14T01:18:52.9103262Z Status:                running
+2026-10-14T01:18:52.9103730Z BuildKit daemon flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+2026-10-14T01:18:52.9104182Z BuildKit version:      v0.33.1
+2026-10-14T01:18:52.9104827Z Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/mips64le, linux/mips64, linux/loong64, linux/arm/v7, linux/arm/v6
+2026-10-14T01:18:52.9105790Z Labels:
+2026-10-14T01:18:52.9106013Z  org.mobyproject.buildkit.worker.executor:         oci
+2026-10-14T01:18:52.9106366Z  org.mobyproject.buildkit.worker.hostname:         878e42daf822
+2026-10-14T01:18:52.9106700Z  org.mobyproject.buildkit.worker.network:          host
+2026-10-14T01:18:52.9107041Z  org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+2026-10-14T01:18:52.9107372Z  org.mobyproject.buildkit.worker.selinux.enabled:  false
+2026-10-14T01:18:52.9107700Z  org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+2026-10-14T01:18:52.9107987Z GC Policy rule#0:
+2026-10-14T01:18:52.9108166Z  All:            false
+2026-10-14T01:18:52.9108446Z  Filters:        type==source.local type==exec.cachemount type==source.git.checkout
+2026-10-14T01:18:52.9108772Z  Keep Duration:  48h0m0s
+2026-10-14T01:18:52.9108968Z  Max Used Space: 488.3MiB
+2026-10-14T01:18:52.9109153Z GC Policy rule#1:
+2026-10-14T01:18:52.9109331Z  All:            false
+2026-10-14T01:18:52.9109509Z  Keep Duration:  1440h0m0s
+2026-10-14T01:18:52.9109707Z  Reserved Space: 9.313GiB
+2026-10-14T01:18:52.9109894Z  Max Used Space: 93.13GiB
+2026-10-14T01:18:52.9110074Z  Min Free Space: 27.01GiB
+2026-10-14T01:18:52.9110255Z GC Policy rule#2:
+2026-10-14T01:18:52.9110417Z  All:            false
+2026-10-14T01:18:52.9110591Z  Reserved Space: 9.313GiB
+2026-10-14T01:18:52.9110838Z  Max Used Space: 93.13GiB
+2026-10-14T01:18:52.9111020Z  Min Free Space: 27.01GiB
+2026-10-14T01:18:52.9111192Z GC Policy rule#3:
+2026-10-14T01:18:52.9111357Z  All:            true
+2026-10-14T01:18:52.9111533Z  Reserved Space: 9.313GiB
+2026-10-14T01:18:52.9111715Z  Max Used Space: 93.13GiB
+2026-10-14T01:18:52.9111902Z  Min Free Space: 27.01GiB
+2026-10-14T01:18:52.9150925Z ##[endgroup]
+2026-10-14T01:18:52.9910192Z ##[group]Inspect builder
+2026-10-14T01:18:52.9912311Z {
+2026-10-14T01:18:52.9912545Z   "nodes": [
+2026-10-14T01:18:52.9912821Z     {
+2026-10-14T01:18:52.9913103Z       "name": "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820",
+2026-10-14T01:18:52.9913523Z       "endpoint": "unix:///var/run/docker.sock",
+2026-10-14T01:18:52.9913900Z       "status": "running",
+2026-10-14T01:18:52.9914492Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2026-10-14T01:18:52.9915206Z       "buildkit": "v0.33.1",
+2026-10-14T01:18:52.9915928Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6",
+2026-10-14T01:18:52.9916622Z       "features": {
+2026-10-14T01:18:52.9917372Z         "Automatically load images to the Docker Engine image store": true,
+2026-10-14T01:18:52.9917797Z         "Cache export": true,
+2026-10-14T01:18:52.9918073Z         "Direct push": true,
+2026-10-14T01:18:52.9918356Z         "Docker exporter": true,
+2026-10-14T01:18:52.9918662Z         "Multi-platform build": true,
+2026-10-14T01:18:52.9918982Z         "OCI exporter": true
+2026-10-14T01:18:52.9919249Z       },
+2026-10-14T01:18:52.9919411Z       "labels": {
+2026-10-14T01:18:52.9920059Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2026-10-14T01:18:52.9920476Z         "org.mobyproject.buildkit.worker.hostname": "878e42daf822",
+2026-10-14T01:18:52.9920813Z         "org.mobyproject.buildkit.worker.network": "host",
+2026-10-14T01:18:52.9921154Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2026-10-14T01:18:52.9921527Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2026-10-14T01:18:52.9921898Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2026-10-14T01:18:52.9922203Z       },
+2026-10-14T01:18:52.9922368Z       "gcPolicy": [
+2026-10-14T01:18:52.9922537Z         {
+2026-10-14T01:18:52.9922722Z           "all": false,
+2026-10-14T01:18:52.9922904Z           "filter": [
+2026-10-14T01:18:52.9923171Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+2026-10-14T01:18:52.9923474Z           ],
+2026-10-14T01:18:52.9923651Z           "keepDuration": "48h0m0s",
+2026-10-14T01:18:52.9923874Z           "maxUsedSpace": "488.3MiB"
+2026-10-14T01:18:52.9924099Z         },
+2026-10-14T01:18:52.9924251Z         {
+2026-10-14T01:18:52.9924422Z           "all": false,
+2026-10-14T01:18:52.9924614Z           "keepDuration": "1440h0m0s",
+2026-10-14T01:18:52.9924843Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:52.9925235Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:52.9925465Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:52.9925676Z         },
+2026-10-14T01:18:52.9925831Z         {
+2026-10-14T01:18:52.9925992Z           "all": false,
+2026-10-14T01:18:52.9926170Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:52.9926392Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:52.9926608Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:52.9926838Z         },
+2026-10-14T01:18:52.9927001Z         {
+2026-10-14T01:18:52.9927192Z           "all": true,
+2026-10-14T01:18:52.9927397Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:52.9927636Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:52.9927864Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:52.9928098Z         }
+2026-10-14T01:18:52.9928254Z       ]
+2026-10-14T01:18:52.9928404Z     }
+2026-10-14T01:18:52.9928558Z   ],
+2026-10-14T01:18:52.9928785Z   "name": "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682",
+2026-10-14T01:18:52.9929071Z   "driver": "docker-container",
+2026-10-14T01:18:52.9929319Z   "lastActivity": "2026-10-14T01:18:47.000Z"
+2026-10-14T01:18:52.9929553Z }
+2026-10-14T01:18:52.9929906Z ##[endgroup]
+2026-10-14T01:18:52.9930254Z ##[group]BuildKit version
+2026-10-14T01:18:52.9930512Z builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820: v0.33.1
+2026-10-14T01:18:52.9930907Z ##[endgroup]
+2026-10-14T01:18:53.0053136Z ##[group]Run docker/login-action@v3
+2026-10-14T01:18:53.0053366Z with:
+2026-10-14T01:18:53.0053624Z   username: ***
+2026-10-14T01:18:53.0053859Z   password: ***
+2026-10-14T01:18:53.0054034Z   logout: true
+2026-10-14T01:18:53.0054207Z env:
+2026-10-14T01:18:53.0054375Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:53.0054567Z ##[endgroup]
+2026-10-14T01:18:53.2429685Z Logging into docker.io...
+2026-10-14T01:18:53.2447137Z (node:3110) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:18:53.2447832Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:18:53.8254091Z Login Succeeded!
+2026-10-14T01:18:53.8422877Z ##[group]Run docker/build-push-action@v6
+2026-10-14T01:18:53.8423130Z with:
+2026-10-14T01:18:53.8423453Z   context: .
+2026-10-14T01:18:53.8423635Z   push: true
+2026-10-14T01:18:53.8423846Z   tags: chenp/synthadoc:1.4.2
+chenp/synthadoc:latest
+
+2026-10-14T01:18:53.8424127Z   build-args: SYNTHADOC_VERSION=1.4.2
+
+2026-10-14T01:18:53.8424370Z   platforms: linux/amd64,linux/arm64
+2026-10-14T01:18:53.8424586Z   load: false
+2026-10-14T01:18:53.8424753Z   no-cache: false
+2026-10-14T01:18:53.8424932Z   pull: false
+2026-10-14T01:18:53.8427267Z   github-token: ***
+2026-10-14T01:18:53.8427454Z env:
+2026-10-14T01:18:53.8427622Z   IMAGE: chenp/synthadoc
+2026-10-14T01:18:53.8427813Z ##[endgroup]
+2026-10-14T01:18:54.0336537Z (node:3131) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:18:54.0337515Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:18:54.0351877Z ##[group]GitHub Actions runtime token ACs
+2026-10-14T01:18:54.0357541Z refs/heads/main: read/write
+2026-10-14T01:18:54.0358382Z ##[endgroup]
+2026-10-14T01:18:54.0358874Z ##[group]Docker info
+2026-10-14T01:18:54.0402809Z [command]/usr/bin/docker version
+2026-10-14T01:18:54.0576210Z Client: Docker Engine - Community
+2026-10-14T01:18:54.0576935Z  Version:           28.0.4
+2026-10-14T01:18:54.0578843Z  API version:       1.48
+2026-10-14T01:18:54.0579171Z  Go version:        go1.23.7
+2026-10-14T01:18:54.0579491Z  Git commit:        b8034c0
+2026-10-14T01:18:54.0579798Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:54.0580150Z  OS/Arch:           linux/amd64
+2026-10-14T01:18:54.0580447Z  Context:           default
+2026-10-14T01:18:54.0580633Z 
+2026-10-14T01:18:54.0580759Z Server: Docker Engine - Community
+2026-10-14T01:18:54.0581079Z  Engine:
+2026-10-14T01:18:54.0581311Z   Version:          28.0.4
+2026-10-14T01:18:54.0581629Z   API version:      1.48 (minimum version 1.24)
+2026-10-14T01:18:54.0582034Z   Go version:       go1.23.7
+2026-10-14T01:18:54.0582328Z   Git commit:       6430e49
+2026-10-14T01:18:54.0582635Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-14T01:18:54.0584096Z   OS/Arch:          linux/amd64
+2026-10-14T01:18:54.0584405Z   Experimental:     false
+2026-10-14T01:18:54.0584693Z  containerd:
+2026-10-14T01:18:54.0584926Z   Version:          v2.3.6
+2026-10-14T01:18:54.0585450Z   GitCommit:        ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:54.0586872Z  runc:
+2026-10-14T01:18:54.0587159Z   Version:          1.5.1
+2026-10-14T01:18:54.0587472Z   GitCommit:        v1.5.1-0-g8f2685a4
+2026-10-14T01:18:54.0588261Z  docker-init:
+2026-10-14T01:18:54.0588634Z   Version:          0.19.0
+2026-10-14T01:18:54.0588906Z   GitCommit:        de40ad0
+2026-10-14T01:18:54.0622093Z [command]/usr/bin/docker info
+2026-10-14T01:18:54.1152774Z Client: Docker Engine - Community
+2026-10-14T01:18:54.1153221Z  Version:    28.0.4
+2026-10-14T01:18:54.1153517Z  Context:    default
+2026-10-14T01:18:54.1153849Z  Debug Mode: false
+2026-10-14T01:18:54.1154122Z  Plugins:
+2026-10-14T01:18:54.1154402Z   buildx: Docker Buildx (Docker Inc.)
+2026-10-14T01:18:54.1154771Z     Version:  v0.37.2
+2026-10-14T01:18:54.1155264Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2026-10-14T01:18:54.1155724Z   compose: Docker Compose (Docker Inc.)
+2026-10-14T01:18:54.1156074Z     Version:  v2.38.2
+2026-10-14T01:18:54.1156437Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2026-10-14T01:18:54.1156752Z 
+2026-10-14T01:18:54.1156862Z Server:
+2026-10-14T01:18:54.1157089Z  Containers: 1
+2026-10-14T01:18:54.1157347Z   Running: 1
+2026-10-14T01:18:54.1157596Z   Paused: 0
+2026-10-14T01:18:54.1157839Z   Stopped: 0
+2026-10-14T01:18:54.1158088Z  Images: 8
+2026-10-14T01:18:54.1158334Z  Server Version: 28.0.4
+2026-10-14T01:18:54.1158632Z  Storage Driver: overlay2
+2026-10-14T01:18:54.1158942Z   Backing Filesystem: extfs
+2026-10-14T01:18:54.1159247Z   Supports d_type: true
+2026-10-14T01:18:54.1159533Z   Using metacopy: false
+2026-10-14T01:18:54.1160270Z   Native Overlay Diff: false
+2026-10-14T01:18:54.1160589Z   userxattr: false
+2026-10-14T01:18:54.1160870Z  Logging Driver: json-file
+2026-10-14T01:18:54.1161334Z  Cgroup Driver: systemd
+2026-10-14T01:18:54.1161629Z  Cgroup Version: 2
+2026-10-14T01:18:54.1161890Z  Plugins:
+2026-10-14T01:18:54.1162138Z   Volume: local
+2026-10-14T01:18:54.1162447Z   Network: bridge host ipvlan macvlan null overlay
+2026-10-14T01:18:54.1162994Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2026-10-14T01:18:54.1163500Z  Swarm: inactive
+2026-10-14T01:18:54.1163788Z  Runtimes: runc io.containerd.runc.v2
+2026-10-14T01:18:54.1164141Z  Default Runtime: runc
+2026-10-14T01:18:54.1164464Z  Init Binary: docker-init
+2026-10-14T01:18:54.1164838Z  containerd version: ee2735368117d2eb259779949d5e75cdafec9761
+2026-10-14T01:18:54.1165759Z  runc version: v1.5.1-0-g8f2685a4
+2026-10-14T01:18:54.1166094Z  init version: de40ad0
+2026-10-14T01:18:54.1166381Z  Security Options:
+2026-10-14T01:18:54.1166649Z   apparmor
+2026-10-14T01:18:54.1166886Z   seccomp
+2026-10-14T01:18:54.1167139Z    Profile: builtin
+2026-10-14T01:18:54.1167397Z   cgroupns
+2026-10-14T01:18:54.1167651Z  Kernel Version: 6.17.0-1022-azure
+2026-10-14T01:18:54.1168007Z  Operating System: Ubuntu 24.04.5 LTS
+2026-10-14T01:18:54.1168355Z  OSType: linux
+2026-10-14T01:18:54.1168615Z  Architecture: x86_64
+2026-10-14T01:18:54.1168890Z  CPUs: 4
+2026-10-14T01:18:54.1169138Z  Total Memory: 15.61GiB
+2026-10-14T01:18:54.1169478Z  Name: runnervmmprz5
+2026-10-14T01:18:54.1169779Z  ID: 07f0e779-c305-4162-b8ec-c48c30f52fbe
+2026-10-14T01:18:54.1170139Z  Docker Root Dir: /var/lib/docker
+2026-10-14T01:18:54.1170461Z  Debug Mode: false
+2026-10-14T01:18:54.1170911Z  Username: ***
+2026-10-14T01:18:54.1171193Z  Experimental: false
+2026-10-14T01:18:54.1171641Z  Insecure Registries:
+2026-10-14T01:18:54.1171959Z   ::1/128
+2026-10-14T01:18:54.1172191Z   127.0.0.0/8
+2026-10-14T01:18:54.1172620Z  Live Restore Enabled: false
+2026-10-14T01:18:54.1172827Z 
+2026-10-14T01:18:54.1175821Z ##[endgroup]
+2026-10-14T01:18:54.1176414Z ##[group]Proxy configuration
+2026-10-14T01:18:54.1178476Z No proxy configuration found
+2026-10-14T01:18:54.1180040Z ##[endgroup]
+2026-10-14T01:18:54.1667738Z ##[group]Buildx version
+2026-10-14T01:18:54.1686816Z [command]/usr/bin/docker buildx version
+2026-10-14T01:18:54.2198458Z github.com/docker/buildx v0.37.2 2d379c0c3f22da0d2759d132a0ec81ca949098f0
+2026-10-14T01:18:54.2226245Z ##[endgroup]
+2026-10-14T01:18:54.2226681Z ##[group]Builder info
+2026-10-14T01:18:54.3280986Z {
+2026-10-14T01:18:54.3282482Z   "nodes": [
+2026-10-14T01:18:54.3282779Z     {
+2026-10-14T01:18:54.3283179Z       "name": "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820",
+2026-10-14T01:18:54.3283710Z       "endpoint": "unix:///var/run/docker.sock",
+2026-10-14T01:18:54.3284115Z       "status": "running",
+2026-10-14T01:18:54.3284840Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2026-10-14T01:18:54.3286675Z       "buildkit": "v0.33.1",
+2026-10-14T01:18:54.3287645Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/loong64,linux/arm/v7,linux/arm/v6",
+2026-10-14T01:18:54.3288623Z       "features": {
+2026-10-14T01:18:54.3289033Z         "Automatically load images to the Docker Engine image store": true,
+2026-10-14T01:18:54.3289478Z         "Cache export": true,
+2026-10-14T01:18:54.3289753Z         "Direct push": true,
+2026-10-14T01:18:54.3290035Z         "Docker exporter": true,
+2026-10-14T01:18:54.3290353Z         "Multi-platform build": true,
+2026-10-14T01:18:54.3290701Z         "OCI exporter": true
+2026-10-14T01:18:54.3291006Z       },
+2026-10-14T01:18:54.3291261Z       "labels": {
+2026-10-14T01:18:54.3291614Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2026-10-14T01:18:54.3292158Z         "org.mobyproject.buildkit.worker.hostname": "878e42daf822",
+2026-10-14T01:18:54.3293104Z         "org.mobyproject.buildkit.worker.network": "host",
+2026-10-14T01:18:54.3293707Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2026-10-14T01:18:54.3294526Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2026-10-14T01:18:54.3295253Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2026-10-14T01:18:54.3295692Z       },
+2026-10-14T01:18:54.3295979Z       "gcPolicy": [
+2026-10-14T01:18:54.3296239Z         {
+2026-10-14T01:18:54.3296500Z           "all": false,
+2026-10-14T01:18:54.3296817Z           "filter": [
+2026-10-14T01:18:54.3297241Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+2026-10-14T01:18:54.3297728Z           ],
+2026-10-14T01:18:54.3298024Z           "keepDuration": "48h0m0s",
+2026-10-14T01:18:54.3298392Z           "maxUsedSpace": "488.3MiB"
+2026-10-14T01:18:54.3298757Z         },
+2026-10-14T01:18:54.3299007Z         {
+2026-10-14T01:18:54.3299246Z           "all": false,
+2026-10-14T01:18:54.3299561Z           "keepDuration": "1440h0m0s",
+2026-10-14T01:18:54.3299910Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:54.3300254Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:54.3300662Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:54.3300989Z         },
+2026-10-14T01:18:54.3301262Z         {
+2026-10-14T01:18:54.3301513Z           "all": false,
+2026-10-14T01:18:54.3301829Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:54.3302197Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:54.3302596Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:54.3302916Z         },
+2026-10-14T01:18:54.3303150Z         {
+2026-10-14T01:18:54.3303398Z           "all": true,
+2026-10-14T01:18:54.3303670Z           "reservedSpace": "9.313GiB",
+2026-10-14T01:18:54.3304020Z           "maxUsedSpace": "93.13GiB",
+2026-10-14T01:18:54.3304407Z           "minFreeSpace": "27.01GiB"
+2026-10-14T01:18:54.3304716Z         }
+2026-10-14T01:18:54.3305245Z       ]
+2026-10-14T01:18:54.3305466Z     }
+2026-10-14T01:18:54.3305711Z   ],
+2026-10-14T01:18:54.3306037Z   "name": "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682",
+2026-10-14T01:18:54.3306493Z   "driver": "docker-container",
+2026-10-14T01:18:54.3306848Z   "lastActivity": "2026-10-14T01:18:47.000Z"
+2026-10-14T01:18:54.3307223Z }
+2026-10-14T01:18:54.3307819Z ##[endgroup]
+2026-10-14T01:18:54.4681154Z [command]/usr/bin/docker buildx build --build-arg SYNTHADOC_VERSION=1.4.2 --iidfile /home/runner/work/_temp/docker-actions-toolkit-zBVjgN/build-iidfile-f97f8df858.txt --platform linux/amd64,linux/arm64 --attest type=provenance,mode=max,builder-id=https://github.com/axoviq-ai/synthadoc/actions/runs/38494977719/attempts/1 --tag chenp/synthadoc:1.4.2 --tag chenp/synthadoc:latest --metadata-file /home/runner/work/_temp/docker-actions-toolkit-zBVjgN/build-metadata-a4f3136f8e.json --push .
+2026-10-14T01:18:54.8533187Z #0 building with "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682" instance using docker-container driver
+2026-10-14T01:18:54.8533602Z 
+2026-10-14T01:18:54.8533751Z #1 [internal] load build definition from Dockerfile
+2026-10-14T01:18:54.8534038Z #1 transferring dockerfile: 3.25kB 0.0s done
+2026-10-14T01:18:54.8534292Z #1 DONE 0.0s
+2026-10-14T01:18:54.8534393Z 
+2026-10-14T01:18:54.8534577Z #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-10-14T01:18:55.0346381Z #2 ...
+2026-10-14T01:18:55.0346560Z 
+2026-10-14T01:18:55.0346750Z #3 [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-10-14T01:18:55.0347053Z #3 DONE 0.0s
+2026-10-14T01:18:55.1842337Z 
+2026-10-14T01:18:55.1842998Z #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-10-14T01:18:55.4869262Z #2 DONE 0.8s
+2026-10-14T01:18:55.6454682Z 
+2026-10-14T01:18:55.6455648Z #4 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+2026-10-14T01:18:55.6456360Z #4 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e done
+2026-10-14T01:18:55.6474334Z #4 sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 14.28MB / 14.28MB 0.2s
+2026-10-14T01:18:55.7860616Z #4 sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 14.28MB / 14.28MB 0.2s done
+2026-10-14T01:18:55.7861910Z #4 extracting sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 0.1s done
+2026-10-14T01:18:55.7862402Z #4 DONE 0.3s
+2026-10-14T01:18:55.8960974Z 
+2026-10-14T01:18:55.8961633Z #5 [auth] library/python:pull token for registry-1.docker.io
+2026-10-14T01:18:56.0469189Z #5 DONE 0.0s
+2026-10-14T01:18:56.0469355Z 
+2026-10-14T01:18:56.0469564Z #6 [linux/amd64 internal] load metadata for docker.io/library/python:3.12-slim
+2026-10-14T01:18:56.4313694Z #6 DONE 0.6s
+2026-10-14T01:18:56.4314084Z 
+2026-10-14T01:18:56.4314559Z #7 [linux/arm64 internal] load metadata for docker.io/library/python:3.12-slim
+2026-10-14T01:18:56.6068478Z #7 DONE 0.6s
+2026-10-14T01:18:56.6068640Z 
+2026-10-14T01:18:56.6068730Z #8 [internal] load .dockerignore
+2026-10-14T01:18:56.6069026Z #8 transferring context: 503B done
+2026-10-14T01:18:56.6069239Z #8 DONE 0.0s
+2026-10-14T01:18:56.6499642Z 
+2026-10-14T01:18:56.6504005Z #9 [internal] load build context
+2026-10-14T01:18:56.6504381Z #9 DONE 0.0s
+2026-10-14T01:18:56.8628554Z 
+2026-10-14T01:18:56.8629583Z #10 [linux/amd64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:56.8630478Z #10 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+2026-10-14T01:18:56.9818190Z #10 sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 249B / 249B 0.2s done
+2026-10-14T01:18:56.9818821Z #10 sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 1.29MB / 1.29MB 0.1s done
+2026-10-14T01:18:57.1050039Z #10 sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 12.12MB / 12.12MB 0.2s done
+2026-10-14T01:18:57.1051183Z #10 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 11.53MB / 29.84MB 0.2s
+2026-10-14T01:18:57.2543408Z #10 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 29.84MB / 29.84MB 0.3s
+2026-10-14T01:18:57.6316169Z #10 ...
+2026-10-14T01:18:57.6316372Z 
+2026-10-14T01:18:57.6316510Z #9 [internal] load build context
+2026-10-14T01:18:57.6316911Z #9 transferring context: 53.65MB 0.8s done
+2026-10-14T01:18:57.6317286Z #9 DONE 0.8s
+2026-10-14T01:18:57.6317796Z 
+2026-10-14T01:18:57.6318371Z #10 [linux/amd64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:57.6319237Z #10 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 29.84MB / 29.84MB 0.6s done
+2026-10-14T01:18:57.6319753Z #10 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e
+2026-10-14T01:18:58.3587609Z #10 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 0.9s done
+2026-10-14T01:18:58.3588400Z #10 DONE 1.7s
+2026-10-14T01:18:58.3588689Z 
+2026-10-14T01:18:58.3589519Z #11 [linux/arm64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:58.3591059Z #11 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+2026-10-14T01:18:58.3592012Z #11 sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18 249B / 249B 0.1s done
+2026-10-14T01:18:58.3593019Z #11 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 12.06MB / 12.06MB 0.5s done
+2026-10-14T01:18:58.3593877Z #11 sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f 1.28MB / 1.28MB 0.4s done
+2026-10-14T01:18:58.3594759Z #11 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 30.20MB / 30.20MB 0.4s done
+2026-10-14T01:18:58.3596003Z #11 extracting sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba
+2026-10-14T01:18:58.5357051Z #11 extracting sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 0.9s done
+2026-10-14T01:18:58.5358097Z #11 extracting sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f
+2026-10-14T01:18:58.5748725Z #11 ...
+2026-10-14T01:18:58.5749084Z 
+2026-10-14T01:18:58.5749733Z #10 [linux/amd64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:58.5750553Z #10 extracting sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 0.2s done
+2026-10-14T01:18:58.5750929Z #10 DONE 1.9s
+2026-10-14T01:18:58.7292000Z 
+2026-10-14T01:18:58.7293036Z #11 [linux/arm64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:58.7294105Z #11 extracting sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f 0.2s done
+2026-10-14T01:18:58.7294914Z #11 extracting sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16
+2026-10-14T01:18:59.0483717Z #11 ...
+2026-10-14T01:18:59.0484462Z 
+2026-10-14T01:18:59.0486058Z #10 [linux/amd64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:59.0487503Z #10 extracting sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 0.5s done
+2026-10-14T01:18:59.0488270Z #10 DONE 2.4s
+2026-10-14T01:18:59.2112103Z 
+2026-10-14T01:18:59.2112928Z #11 [linux/arm64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:59.2113613Z #11 extracting sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 0.5s done
+2026-10-14T01:18:59.2114119Z #11 extracting sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18
+2026-10-14T01:18:59.2503672Z #11 ...
+2026-10-14T01:18:59.2504214Z 
+2026-10-14T01:18:59.2505292Z #10 [linux/amd64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:59.2506346Z #10 extracting sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 0.2s done
+2026-10-14T01:18:59.2506921Z #10 DONE 2.6s
+2026-10-14T01:18:59.4300950Z 
+2026-10-14T01:18:59.4303540Z #11 [linux/arm64 builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+2026-10-14T01:18:59.4304235Z #11 extracting sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18 0.2s done
+2026-10-14T01:18:59.4304635Z #11 DONE 2.6s
+2026-10-14T01:18:59.4304739Z 
+2026-10-14T01:18:59.4305281Z #12 [linux/arm64 runtime 2/5] RUN groupadd --gid 1000 synthadoc  && useradd --uid 1000 --gid synthadoc --create-home synthadoc
+2026-10-14T01:19:02.1943059Z #12 ...
+2026-10-14T01:19:02.1943360Z 
+2026-10-14T01:19:02.1943538Z #13 [linux/amd64 builder 2/4] WORKDIR /build
+2026-10-14T01:19:02.1944111Z #13 DONE 2.9s
+2026-10-14T01:19:02.3476602Z 
+2026-10-14T01:19:02.3477382Z #14 [linux/arm64 builder 2/4] WORKDIR /build
+2026-10-14T01:19:02.3477970Z #14 DONE 2.9s
+2026-10-14T01:19:02.3478244Z 
+2026-10-14T01:19:02.3479005Z #12 [linux/arm64 runtime 2/5] RUN groupadd --gid 1000 synthadoc  && useradd --uid 1000 --gid synthadoc --create-home synthadoc
+2026-10-14T01:19:02.3479720Z #12 DONE 2.9s
+2026-10-14T01:19:02.3479880Z 
+2026-10-14T01:19:02.3480339Z #15 [linux/amd64 runtime 2/5] RUN groupadd --gid 1000 synthadoc  && useradd --uid 1000 --gid synthadoc --create-home synthadoc
+2026-10-14T01:19:02.3480998Z #15 DONE 2.9s
+2026-10-14T01:19:02.3481150Z 
+2026-10-14T01:19:02.3481300Z #16 [linux/arm64 builder 3/4] COPY . /build/source/
+2026-10-14T01:19:02.9846385Z #16 ...
+2026-10-14T01:19:02.9847311Z 
+2026-10-14T01:19:02.9847906Z #17 [linux/amd64 builder 3/4] COPY . /build/source/
+2026-10-14T01:19:02.9848941Z #17 DONE 0.8s
+2026-10-14T01:19:03.1372098Z 
+2026-10-14T01:19:03.1375552Z #16 [linux/arm64 builder 3/4] COPY . /build/source/
+2026-10-14T01:19:03.1376340Z #16 DONE 0.8s
+2026-10-14T01:19:03.1376776Z 
+2026-10-14T01:19:03.1377773Z #18 [linux/amd64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:05.0952606Z #18 2.109 Requirement already satisfied: pip in /usr/local/lib/python3.12/site-packages (25.0.1)
+2026-10-14T01:19:05.1997677Z #18 2.172 Collecting pip
+2026-10-14T01:19:05.1998336Z #18 2.213   Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-10-14T01:19:05.3227259Z #18 2.226 Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-10-14T01:19:05.3228363Z #18 2.292    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 39.8 MB/s eta 0:00:00
+2026-10-14T01:19:05.3228983Z #18 2.304 Installing collected packages: pip
+2026-10-14T01:19:05.3229437Z #18 2.304   Attempting uninstall: pip
+2026-10-14T01:19:05.3229960Z #18 2.307     Found existing installation: pip 25.0.1
+2026-10-14T01:19:05.3230428Z #18 2.336     Uninstalling pip-25.0.1:
+2026-10-14T01:19:05.4377827Z #18 2.451       Successfully uninstalled pip-25.0.1
+2026-10-14T01:19:06.0872795Z #18 3.100 Successfully installed pip-26.2.1
+2026-10-14T01:19:06.2383406Z #18 3.101 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-14T01:19:06.4692127Z #18 3.483 Collecting synthadoc==1.4.2
+2026-10-14T01:19:06.5720227Z #18 3.525   Downloading synthadoc-1.4.2-py3-none-any.whl.metadata (100 kB)
+2026-10-14T01:19:06.5720884Z #18 3.550 Collecting aiosqlite>=0.20 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.5721502Z #18 3.560   Downloading aiosqlite-0.22.1-py3-none-any.whl.metadata (4.3 kB)
+2026-10-14T01:19:06.5722063Z #18 3.585 Collecting anthropic>=0.30 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.6886264Z #18 3.596   Downloading anthropic-1.13.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-14T01:19:06.6887440Z #18 3.605 Collecting beautifulsoup4>=4.12 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.6888859Z #18 3.702   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-14T01:19:06.7952457Z #18 3.712 Collecting certifi>=2024.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.7953134Z #18 3.724   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:06.7953712Z #18 3.736 Collecting croniter>=2.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.7954123Z #18 3.746   Downloading croniter-6.2.4-py3-none-any.whl.metadata (23 kB)
+2026-10-14T01:19:06.7954573Z #18 3.773 Collecting fastapi>=0.111 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.7954926Z #18 3.783   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+2026-10-14T01:19:06.7955582Z #18 3.808 Collecting filelock>=3.15 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.9061136Z #18 3.819   Downloading filelock-4.1.1-py3-none-any.whl.metadata (2.0 kB)
+2026-10-14T01:19:06.9062135Z #18 3.828 Collecting httpx>=0.27 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.9062692Z #18 3.839   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-14T01:19:06.9063224Z #18 3.850 Collecting mcp<2.0,>=1.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.9063755Z #18 3.860   Downloading mcp-1.30.0-py3-none-any.whl.metadata (9.3 kB)
+2026-10-14T01:19:06.9064086Z #18 3.872 Collecting networkx>=3.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:06.9064482Z #18 3.883   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-10-14T01:19:06.9064823Z #18 3.919 Collecting openai>=1.40 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.0426326Z #18 3.930   Downloading openai-3.29.0-py3-none-any.whl.metadata (44 kB)
+2026-10-14T01:19:07.0426989Z #18 3.941 Collecting openpyxl>=3.1 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.0427922Z #18 3.951   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:07.0428660Z #18 3.961 Collecting opentelemetry-sdk>=1.25 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.0429640Z #18 3.971   Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl.metadata (1.6 kB)
+2026-10-14T01:19:07.0430227Z #18 3.978 Collecting pdfminer-six>=20221105 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.0430813Z #18 3.989   Downloading pdfminer_six-20260107-py3-none-any.whl.metadata (4.3 kB)
+2026-10-14T01:19:07.0431371Z #18 4.056 Collecting pydantic>=2.7 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.1544331Z #18 4.067   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+2026-10-14T01:19:07.1545969Z #18 4.092 Collecting pypdf>=4.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.1546691Z #18 4.102   Downloading pypdf-6.20.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-14T01:19:07.1547462Z #18 4.112 Collecting python-docx>=1.1 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.1548192Z #18 4.122   Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+2026-10-14T01:19:07.1548913Z #18 4.128 Collecting python-louvain>=0.16 (from synthadoc==1.4.2)
+2026-10-14T01:19:07.1549571Z #18 4.140   Downloading python-louvain-0.16.tar.gz (204 kB)
+2026-10-14T01:19:07.1550193Z #18 4.168   Installing build dependencies: started
+2026-10-14T01:19:07.8751183Z #18 4.888   Installing build dependencies: finished with status 'done'
+2026-10-14T01:19:08.0262109Z #18 4.889   Getting requirements to build wheel: started
+2026-10-14T01:19:08.1542334Z #18 5.168   Getting requirements to build wheel: finished with status 'done'
+2026-10-14T01:19:08.2998045Z #18 5.169   Preparing metadata (pyproject.toml): started
+2026-10-14T01:19:08.2999170Z #18 5.313   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-14T01:19:08.4021490Z #18 5.321 Collecting python-pptx>=1.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.4022289Z #18 5.331   Downloading python_pptx-1.0.2-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:08.4023201Z #18 5.352 Collecting pyyaml>=6.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.4087338Z #18 5.362   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-14T01:19:08.4088268Z #18 5.368 Collecting rank-bm25>=0.2 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.4088783Z #18 5.378   Downloading rank_bm25-0.2.2-py3-none-any.whl.metadata (3.2 kB)
+2026-10-14T01:19:08.4089337Z #18 5.395 Collecting rich>=13 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.4089824Z #18 5.405   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-14T01:19:08.4090359Z #18 5.415 Collecting tavily-python>=0.5 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.5078041Z #18 5.426   Downloading tavily_python-0.8.5-py3-none-any.whl.metadata (14 kB)
+2026-10-14T01:19:08.5078689Z #18 5.438 Collecting typer>=0.12 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.5079205Z #18 5.449   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+2026-10-14T01:19:08.5079760Z #18 5.463 Collecting uvicorn>=0.30 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.5080289Z #18 5.474   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-14T01:19:08.5080900Z #18 5.483 Collecting youtube-transcript-api>=0.6 (from synthadoc==1.4.2)
+2026-10-14T01:19:08.5081384Z #18 5.493   Downloading youtube_transcript_api-1.2.4-py3-none-any.whl.metadata (24 kB)
+2026-10-14T01:19:08.5081818Z #18 5.504 Collecting anyio>=4.5 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.5082186Z #18 5.515   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-14T01:19:08.5082555Z #18 5.521 Collecting httpx-sse>=0.4 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.6104786Z #18 5.531   Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+2026-10-14T01:19:08.6106031Z #18 5.544 Collecting jsonschema>=4.20.0 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.6106720Z #18 5.555   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-14T01:19:08.6107881Z #18 5.564 Collecting pydantic-settings>=2.5.2 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.6108592Z #18 5.574   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+2026-10-14T01:19:08.6109535Z #18 5.586 Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.6110226Z #18 5.596   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:19:08.6110854Z #18 5.604 Collecting python-multipart>=0.0.9 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.6111558Z #18 5.614   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-10-14T01:19:08.6112217Z #18 5.624 Collecting sse-starlette>=1.6.1 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.7155600Z #18 5.634   Downloading sse_starlette-3.5.0-py3-none-any.whl.metadata (15 kB)
+2026-10-14T01:19:08.7156499Z #18 5.651 Collecting starlette>=0.27 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.7157252Z #18 5.661   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-14T01:19:08.7158015Z #18 5.672 Collecting typing-extensions>=4.9.0 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.7158828Z #18 5.692   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-14T01:19:08.7159606Z #18 5.698 Collecting typing-inspection>=0.4.1 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:08.7160392Z #18 5.708   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-14T01:19:08.7161112Z #18 5.719 Collecting httpcore==1.* (from httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:19:08.7161792Z #18 5.729   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-14T01:19:08.9196219Z #18 5.738 Collecting idna (from httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:19:08.9197351Z #18 5.749   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-14T01:19:08.9198309Z #18 5.755 Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:19:08.9199027Z #18 5.766   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-14T01:19:08.9199694Z #18 5.772 Collecting annotated-types>=0.6.0 (from pydantic>=2.7->synthadoc==1.4.2)
+2026-10-14T01:19:08.9200419Z #18 5.782   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-14T01:19:09.3216556Z #18 6.335 Collecting pydantic-core==2.50.1 (from pydantic>=2.7->synthadoc==1.4.2)
+2026-10-14T01:19:09.4322995Z #18 6.346   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+2026-10-14T01:19:09.4324046Z #18 6.356 Collecting docstring-parser<1,>=0.15 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.4325563Z #18 6.366   Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:19:09.4326543Z #18 6.373 Collecting httpx2<3,>=2.0.0 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.4327375Z #18 6.384   Downloading httpx2-2.13.1-py3-none-any.whl.metadata (9.8 kB)
+2026-10-14T01:19:09.4328171Z #18 6.446 Collecting jiter<1,>=0.4.0 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.5413790Z #18 6.457   Downloading jiter-0.17.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2026-10-14T01:19:09.5414935Z #18 6.464 Collecting sniffio<2,>=1 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.5415985Z #18 6.474   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-10-14T01:19:09.5416749Z #18 6.485 Collecting httpcore2==2.13.1 (from httpx2<3,>=2.0.0->anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.5417507Z #18 6.495   Downloading httpcore2-2.13.1-py3-none-any.whl.metadata (26 kB)
+2026-10-14T01:19:09.5418242Z #18 6.503 Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:09.5418982Z #18 6.513   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+2026-10-14T01:19:09.5419684Z #18 6.526 Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12->synthadoc==1.4.2)
+2026-10-14T01:19:09.5420641Z #18 6.536   Downloading soupsieve-3.0.3-py3-none-any.whl.metadata (4.4 kB)
+2026-10-14T01:19:09.5421307Z #18 6.545 Collecting python-dateutil (from croniter>=2.0->synthadoc==1.4.2)
+2026-10-14T01:19:09.5422233Z #18 6.555   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-10-14T01:19:09.6542903Z #18 6.566 Collecting annotated-doc>=0.0.2 (from fastapi>=0.111->synthadoc==1.4.2)
+2026-10-14T01:19:09.6543770Z #18 6.576   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-14T01:19:09.6544469Z #18 6.586 Collecting opentelemetry-api>=1.44.0 (from fastapi>=0.111->synthadoc==1.4.2)
+2026-10-14T01:19:09.6545233Z #18 6.596   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-14T01:19:09.6545909Z #18 6.606 Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:09.6546559Z #18 6.616   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-14T01:19:09.6547186Z #18 6.623 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:09.6547740Z #18 6.633   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-14T01:19:09.6548210Z #18 6.667 Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:09.8152299Z #18 6.678   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-14T01:19:09.8380855Z #18 6.851 Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:09.9743415Z #18 6.862   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-14T01:19:09.9745696Z #18 6.875 Collecting et-xmlfile (from openpyxl>=3.1->synthadoc==1.4.2)
+2026-10-14T01:19:09.9746127Z #18 6.885   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2026-10-14T01:19:09.9746763Z #18 6.896 Collecting opentelemetry-semantic-conventions==0.66b1 (from opentelemetry-sdk>=1.25->synthadoc==1.4.2)
+2026-10-14T01:19:09.9747501Z #18 6.906   Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl.metadata (2.4 kB)
+2026-10-14T01:19:09.9748342Z #18 6.988 Collecting charset-normalizer>=2.0.0 (from pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:19:10.1085710Z #18 6.998   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-14T01:19:10.1086651Z #18 7.122 Collecting cryptography>=36.0.0 (from pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:19:10.2150201Z #18 7.133   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+2026-10-14T01:19:10.2152983Z #18 7.201 Collecting cffi>=2.0.0 (from cryptography>=36.0.0->pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:19:10.2154191Z #18 7.211   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-10-14T01:19:10.2155590Z #18 7.218 Collecting pycparser (from cffi>=2.0.0->cryptography>=36.0.0->pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:19:10.2156648Z #18 7.228   Downloading pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+2026-10-14T01:19:10.4158758Z #18 7.268 Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.5.2->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:10.4159875Z #18 7.279   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-14T01:19:10.4323250Z #18 7.446 Collecting lxml>=3.1.0 (from python-docx>=1.1->synthadoc==1.4.2)
+2026-10-14T01:19:10.5812292Z #18 7.456   Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+2026-10-14T01:19:10.5813343Z #18 7.594 Collecting numpy (from python-louvain>=0.16->synthadoc==1.4.2)
+2026-10-14T01:19:10.7038624Z #18 7.605   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-10-14T01:19:10.7039879Z #18 7.717 Collecting Pillow>=3.3.2 (from python-pptx>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:10.8054329Z #18 7.728   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-14T01:19:10.8055864Z #18 7.748 Collecting XlsxWriter>=0.5.7 (from python-pptx>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:10.8056933Z #18 7.758   Downloading xlsxwriter-3.2.9-py3-none-any.whl.metadata (2.7 kB)
+2026-10-14T01:19:10.8057777Z #18 7.771 Collecting markdown-it-py>=2.2.0 (from rich>=13->synthadoc==1.4.2)
+2026-10-14T01:19:10.8058619Z #18 7.781   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-14T01:19:10.8059459Z #18 7.792 Collecting pygments<3.0.0,>=2.13.0 (from rich>=13->synthadoc==1.4.2)
+2026-10-14T01:19:10.8060287Z #18 7.802   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:10.8061163Z #18 7.809 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13->synthadoc==1.4.2)
+2026-10-14T01:19:10.8062041Z #18 7.819   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-14T01:19:10.9562892Z #18 7.841 Collecting requests (from tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:19:10.9563803Z #18 7.909   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-14T01:19:10.9565773Z #18 7.970 Collecting tiktoken>=0.5.1 (from tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:19:11.1172225Z #18 7.980   Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+2026-10-14T01:19:11.2229466Z #18 8.236 Collecting regex (from tiktoken>=0.5.1->tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:19:11.3321842Z #18 8.247   Downloading regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-10-14T01:19:11.3323744Z #18 8.257 Collecting shellingham>=1.3.0 (from typer>=0.12->synthadoc==1.4.2)
+2026-10-14T01:19:11.3324455Z #18 8.267   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:19:11.3325407Z #18 8.281 Collecting click>=7.0 (from uvicorn>=0.30->synthadoc==1.4.2)
+2026-10-14T01:19:11.3325815Z #18 8.291   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-14T01:19:11.3326430Z #18 8.298 Collecting defusedxml<0.8.0,>=0.7.1 (from youtube-transcript-api>=0.6->synthadoc==1.4.2)
+2026-10-14T01:19:11.3326981Z #18 8.309   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-10-14T01:19:11.3327401Z #18 8.320 Collecting six>=1.5 (from python-dateutil->croniter>=2.0->synthadoc==1.4.2)
+2026-10-14T01:19:11.3327897Z #18 8.330   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-10-14T01:19:11.3328347Z #18 8.346 Collecting urllib3<3,>=1.26 (from requests->tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:19:11.4376693Z #18 8.356   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-14T01:19:11.4377145Z #18 8.374 Downloading synthadoc-1.4.2-py3-none-any.whl (5.4 MB)
+2026-10-14T01:19:11.4377923Z #18 8.430    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 100.3 MB/s  0:00:00
+2026-10-14T01:19:11.4378389Z #18 8.441 Downloading mcp-1.30.0-py3-none-any.whl (234 kB)
+2026-10-14T01:19:11.4378703Z #18 8.451 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-14T01:19:11.5385754Z #18 8.461 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-14T01:19:11.5386360Z #18 8.471 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-14T01:19:11.5386821Z #18 8.482 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-14T01:19:11.5387566Z #18 8.486    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 824.6 MB/s  0:00:00
+2026-10-14T01:19:11.5387933Z #18 8.496 Downloading aiosqlite-0.22.1-py3-none-any.whl (17 kB)
+2026-10-14T01:19:11.5388282Z #18 8.507 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-14T01:19:11.5388628Z #18 8.517 Downloading anthropic-1.13.0-py3-none-any.whl (2.0 MB)
+2026-10-14T01:19:11.5389026Z #18 8.521    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 799.9 MB/s  0:00:00
+2026-10-14T01:19:11.5389612Z #18 8.531 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-14T01:19:11.5389946Z #18 8.541 Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+2026-10-14T01:19:11.5390415Z #18 8.552 Downloading httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-14T01:19:11.6415385Z #18 8.562 Downloading httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-14T01:19:11.6416141Z #18 8.572 Downloading jiter-0.17.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (345 kB)
+2026-10-14T01:19:11.6416831Z #18 8.583 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-10-14T01:19:11.6417221Z #18 8.593 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-14T01:19:11.6417593Z #18 8.604 Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-10-14T01:19:11.6417945Z #18 8.614 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-14T01:19:11.6418261Z #18 8.624 Downloading croniter-6.2.4-py3-none-any.whl (46 kB)
+2026-10-14T01:19:11.6418609Z #18 8.635 Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+2026-10-14T01:19:11.6418935Z #18 8.645 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-14T01:19:11.6419270Z #18 8.655 Downloading filelock-4.1.1-py3-none-any.whl (132 kB)
+2026-10-14T01:19:11.7477372Z #18 8.666 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-14T01:19:11.7478086Z #18 8.676 Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+2026-10-14T01:19:11.7478663Z #18 8.686 Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-14T01:19:11.7479214Z #18 8.697 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-14T01:19:11.7479728Z #18 8.707 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-14T01:19:11.7480344Z #18 8.718 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-14T01:19:11.7480944Z #18 8.728 Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-10-14T01:19:11.7481773Z #18 8.733    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 620.6 MB/s  0:00:00
+2026-10-14T01:19:11.7482325Z #18 8.745 Downloading openai-3.29.0-py3-none-any.whl (2.2 MB)
+2026-10-14T01:19:11.7483064Z #18 8.751    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 549.4 MB/s  0:00:00
+2026-10-14T01:19:11.7483641Z #18 8.761 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-10-14T01:19:11.8564582Z #18 8.772 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-14T01:19:11.8565478Z #18 8.783 Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl (140 kB)
+2026-10-14T01:19:11.8566388Z #18 8.794 Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl (206 kB)
+2026-10-14T01:19:11.8567057Z #18 8.804 Downloading pdfminer_six-20260107-py3-none-any.whl (6.6 MB)
+2026-10-14T01:19:11.8567838Z #18 8.819    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 520.8 MB/s  0:00:00
+2026-10-14T01:19:11.8568406Z #18 8.829 Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+2026-10-14T01:19:11.8569020Z #18 8.840 Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-10-14T01:19:11.8569512Z #18 8.849    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 656.7 MB/s  0:00:00
+2026-10-14T01:19:11.8569966Z #18 8.859 Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-10-14T01:19:11.8570409Z #18 8.870 Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+2026-10-14T01:19:11.9666303Z #18 8.880 Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-10-14T01:19:11.9669384Z #18 8.891 Downloading pypdf-6.20.1-py3-none-any.whl (402 kB)
+2026-10-14T01:19:11.9670063Z #18 8.902 Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+2026-10-14T01:19:11.9670751Z #18 8.913 Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-10-14T01:19:11.9671581Z #18 8.923    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 674.1 MB/s  0:00:00
+2026-10-14T01:19:11.9672214Z #18 8.934 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-14T01:19:11.9672569Z #18 8.944 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-10-14T01:19:11.9673065Z #18 8.955 Downloading python_pptx-1.0.2-py3-none-any.whl (472 kB)
+2026-10-14T01:19:11.9673531Z #18 8.966 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-10-14T01:19:12.0769818Z #18 8.980    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 570.1 MB/s  0:00:00
+2026-10-14T01:19:12.0773721Z #18 8.991 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-10-14T01:19:12.0774944Z #18 8.993    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 939.0 MB/s  0:00:00
+2026-10-14T01:19:12.0775937Z #18 9.004 Downloading rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+2026-10-14T01:19:12.0776670Z #18 9.014 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-14T01:19:12.0777066Z #18 9.024 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-14T01:19:12.0777443Z #18 9.035 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-14T01:19:12.0777941Z #18 9.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.0 GB/s  0:00:00
+2026-10-14T01:19:12.0778332Z #18 9.049 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-14T01:19:12.0778672Z #18 9.059 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-14T01:19:12.0779107Z #18 9.069 Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-10-14T01:19:12.0779532Z #18 9.080 Downloading soupsieve-3.0.3-py3-none-any.whl (41 kB)
+2026-10-14T01:19:12.0779855Z #18 9.090 Downloading sse_starlette-3.5.0-py3-none-any.whl (17 kB)
+2026-10-14T01:19:12.1852228Z #18 9.101 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+2026-10-14T01:19:12.1853929Z #18 9.112 Downloading tavily_python-0.8.5-py3-none-any.whl (24 kB)
+2026-10-14T01:19:12.1855121Z #18 9.123 Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl (1.2 MB)
+2026-10-14T01:19:12.1856196Z #18 9.126    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.0 GB/s  0:00:00
+2026-10-14T01:19:12.1856781Z #18 9.137 Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-14T01:19:12.1857337Z #18 9.147 Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-14T01:19:12.1857879Z #18 9.158 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-14T01:19:12.1858476Z #18 9.168 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-14T01:19:12.1859025Z #18 9.178 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-14T01:19:12.1859527Z #18 9.188 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-14T01:19:12.1860032Z #18 9.198 Downloading xlsxwriter-3.2.9-py3-none-any.whl (175 kB)
+2026-10-14T01:19:12.2885818Z #18 9.210 Downloading youtube_transcript_api-1.2.4-py3-none-any.whl (485 kB)
+2026-10-14T01:19:12.2886988Z #18 9.220 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-10-14T01:19:12.2888215Z #18 9.231 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-10-14T01:19:12.2889096Z #18 9.241 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-10-14T01:19:12.2890636Z #18 9.271    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 613.3 MB/s  0:00:00
+2026-10-14T01:19:12.2891441Z #18 9.281 Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+2026-10-14T01:19:12.2892242Z #18 9.292 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-14T01:19:12.2892996Z #18 9.302 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-14T01:19:12.4727206Z #18 9.312 Downloading regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-10-14T01:19:12.4728916Z #18 9.315    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.8/807.8 kB 1.0 GB/s  0:00:00
+2026-10-14T01:19:12.4729795Z #18 9.325 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-14T01:19:12.4730482Z #18 9.335 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-14T01:19:12.6478117Z #18 9.661 Building wheels for collected packages: python-louvain
+2026-10-14T01:19:12.7992289Z #18 9.662   Building wheel for python-louvain (pyproject.toml): started
+2026-10-14T01:19:12.8216625Z #18 9.835   Building wheel for python-louvain (pyproject.toml): finished with status 'done'
+2026-10-14T01:19:12.9510283Z #18 9.836   Created wheel for python-louvain: filename=python_louvain-0.16-py3-none-any.whl size=9458 sha256=5386022e9ebf7bbd90b2b24b4b01938163d1afb1c2c9758178150ba68bd11048
+2026-10-14T01:19:12.9512109Z #18 9.836   Stored in directory: /tmp/pip-ephem-wheel-cache-ka9692n7/wheels/40/f1/e3/485b698c520fa0baee1d07897abc7b8d6479b7d199ce96f4af
+2026-10-14T01:19:12.9513060Z #18 9.837 Successfully built python-louvain
+2026-10-14T01:19:12.9517922Z #18 9.964 Installing collected packages: XlsxWriter, urllib3, typing-extensions, truststore, soupsieve, sniffio, six, shellingham, rpds-py, regex, pyyaml, python-multipart, python-dotenv, pypdf, pyjwt, pygments, pycparser, Pillow, numpy, networkx, mdurl, lxml, jiter, idna, httpx-sse, h11, filelock, et-xmlfile, docstring-parser, defusedxml, click, charset-normalizer, certifi, attrs, annotated-types, annotated-doc, aiosqlite, uvicorn, typing-inspection, requests, referencing, rank-bm25, python-pptx, python-louvain, python-docx, python-dateutil, pydantic-core, opentelemetry-api, openpyxl, markdown-it-py, httpcore2, httpcore, cffi, beautifulsoup4, anyio, youtube-transcript-api, tiktoken, starlette, rich, pydantic, opentelemetry-semantic-conventions, jsonschema-specifications, httpx2, httpx, cryptography, croniter, typer, tavily-python, sse-starlette, pydantic-settings, pdfminer-six, opentelemetry-sdk, openai, jsonschema, fastapi, anthropic, mcp, synthadoc
+2026-10-14T01:19:13.1015931Z #18 ...
+2026-10-14T01:19:13.1016102Z 
+2026-10-14T01:19:13.1016733Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:13.5344615Z #19 ...
+2026-10-14T01:19:13.5345259Z 
+2026-10-14T01:19:13.5346524Z #18 [linux/amd64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:13.5347910Z #18 10.55   WARNING: The script dotenv is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:13.5348907Z #18 10.55   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:14.3016479Z #18 11.31   WARNING: The script pygmentize is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:14.3017473Z #18 11.31   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:16.1134531Z #18 13.13   WARNING: The scripts f2py and numpy-config are installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:16.1135814Z #18 13.13   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:17.2696756Z #18 14.28   WARNING: The script idna is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:17.2697959Z #18 14.28   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:17.6802199Z #18 14.69   WARNING: The script normalizer is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:17.6803209Z #18 14.69   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:17.7987661Z #18 14.81   WARNING: The script uvicorn is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:17.7989006Z #18 14.81   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:18.4557738Z #18 15.47   WARNING: The script markdown-it is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:18.4558811Z #18 15.47   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:18.6010901Z #18 15.61   WARNING: The script cffi-gen-src is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:18.6013191Z #18 15.61   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:18.7595156Z #18 15.77   WARNING: The script youtube_transcript_api is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:18.7596861Z #18 15.77   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:19.3991156Z #18 16.41   WARNING: The script httpx2 is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:19.3991999Z #18 16.41   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:19.5966823Z #18 16.46   WARNING: The script httpx is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:19.5968063Z #18 16.46   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:19.7753859Z #18 16.79   WARNING: The script typer is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:19.7754724Z #18 16.79   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:20.9090639Z #18 ...
+2026-10-14T01:19:20.9090900Z 
+2026-10-14T01:19:20.9092421Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:20.9094057Z #19 17.92 Requirement already satisfied: pip in /usr/local/lib/python3.12/site-packages (25.0.1)
+2026-10-14T01:19:21.6258441Z #19 18.64 Collecting pip
+2026-10-14T01:19:21.8218442Z #19 18.84   Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-10-14T01:19:22.0204453Z #19 18.88 Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-10-14T01:19:22.1779040Z #19 19.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 17.3 MB/s eta 0:00:00
+2026-10-14T01:19:22.2071424Z #19 19.22 Installing collected packages: pip
+2026-10-14T01:19:22.3875735Z #19 19.22   Attempting uninstall: pip
+2026-10-14T01:19:22.3876630Z #19 19.25     Found existing installation: pip 25.0.1
+2026-10-14T01:19:22.6587311Z #19 19.67     Uninstalling pip-25.0.1:
+2026-10-14T01:19:23.7057795Z #19 20.72       Successfully uninstalled pip-25.0.1
+2026-10-14T01:19:25.5245521Z #19 ...
+2026-10-14T01:19:25.5246192Z 
+2026-10-14T01:19:25.5247644Z #18 [linux/amd64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:25.5249331Z #18 18.45   WARNING: The script jsonschema is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:25.5250455Z #18 18.45   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:25.5251619Z #18 18.55   WARNING: The script fastapi is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:25.5252901Z #18 18.55   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:25.5253965Z #18 19.87   WARNING: The script mcp is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:25.5255257Z #18 19.87   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:25.5256343Z #18 20.40   WARNING: The script synthadoc is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:19:25.5257332Z #18 20.40   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:19:25.5257999Z #18 20.55 
+2026-10-14T01:19:25.5264300Z #18 20.56 Successfully installed Pillow-12.3.0 XlsxWriter-3.2.9 aiosqlite-0.22.1 annotated-doc-0.0.5 annotated-types-0.8.0 anthropic-1.13.0 anyio-4.15.1 attrs-26.1.0 beautifulsoup4-4.15.0 certifi-2026.7.22 cffi-2.1.1 charset-normalizer-3.5.2 click-8.5.0 croniter-6.2.4 cryptography-50.0.2 defusedxml-0.7.1 docstring-parser-0.18.0 et-xmlfile-2.0.0 fastapi-0.143.0 filelock-4.1.1 h11-0.16.0 httpcore-1.0.9 httpcore2-2.13.1 httpx-0.28.1 httpx-sse-0.4.3 httpx2-2.13.1 idna-3.20 jiter-0.17.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lxml-6.1.3 markdown-it-py-4.2.0 mcp-1.30.0 mdurl-0.1.2 networkx-3.7 numpy-2.5.4 openai-3.29.0 openpyxl-3.1.5 opentelemetry-api-1.45.1 opentelemetry-sdk-1.45.1 opentelemetry-semantic-conventions-0.66b1 pdfminer-six-20260107 pycparser-3.11 pydantic-2.14.1 pydantic-core-2.50.1 pydantic-settings-2.15.0 pygments-2.21.0 pyjwt-2.15.1 pypdf-6.20.1 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dotenv-1.2.4 python-louvain-0.16 python-multipart-0.0.32 python-pptx-1.0.2 pyyaml-6.0.3 rank-bm25-0.2.2 referencing-0.37.0 regex-2026.9.29 requests-2.34.2 rich-15.0.0 rpds-py-2026.9.1 shellingham-1.5.4 six-1.17.0 sniffio-1.3.1 soupsieve-3.0.3 sse-starlette-3.5.0 starlette-1.8.0 synthadoc-1.4.2 tavily-python-0.8.5 tiktoken-0.14.0 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 uvicorn-0.54.0 youtube-transcript-api-1.2.4
+2026-10-14T01:19:25.5272523Z #18 20.56 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-14T01:19:25.5274330Z #18 DONE 22.5s
+2026-10-14T01:19:25.6755569Z 
+2026-10-14T01:19:25.6757417Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:26.6502066Z #19 ...
+2026-10-14T01:19:26.6502839Z 
+2026-10-14T01:19:26.6503333Z #20 [linux/amd64 runtime 3/5] COPY --from=builder --chown=synthadoc:synthadoc /root/.local /home/synthadoc/.local
+2026-10-14T01:19:30.4504432Z #20 DONE 3.8s
+2026-10-14T01:19:30.4504670Z 
+2026-10-14T01:19:30.4507570Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:30.6010100Z #19 ...
+2026-10-14T01:19:30.6010651Z 
+2026-10-14T01:19:30.6010977Z #21 [linux/amd64 runtime 4/5] RUN mkdir /wiki && chown synthadoc:synthadoc /wiki
+2026-10-14T01:19:30.6487045Z #21 DONE 0.2s
+2026-10-14T01:19:30.6487442Z 
+2026-10-14T01:19:30.6488526Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:30.8066774Z #19 ...
+2026-10-14T01:19:30.8066945Z 
+2026-10-14T01:19:30.8067056Z #22 [linux/amd64 runtime 5/5] WORKDIR /wiki
+2026-10-14T01:19:30.8067327Z #22 DONE 0.0s
+2026-10-14T01:19:30.9569421Z 
+2026-10-14T01:19:30.9570468Z #19 [linux/arm64 builder 4/4] RUN pip install --no-cache-dir --upgrade pip  && if [ -n "1.4.2" ]; then       pip install --no-cache-dir --user "synthadoc==1.4.2";     else       pip install --no-cache-dir --user /build/source/;     fi
+2026-10-14T01:19:33.4610174Z #19 30.47 Successfully installed pip-26.2.1
+2026-10-14T01:19:33.6144238Z #19 30.48 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-14T01:19:38.7005680Z #19 35.71 Collecting synthadoc==1.4.2
+2026-10-14T01:19:38.9838563Z #19 36.00   Downloading synthadoc-1.4.2-py3-none-any.whl.metadata (100 kB)
+2026-10-14T01:19:39.1890077Z #19 36.20 Collecting aiosqlite>=0.20 (from synthadoc==1.4.2)
+2026-10-14T01:19:39.3626737Z #19 36.23   Downloading aiosqlite-0.22.1-py3-none-any.whl.metadata (4.3 kB)
+2026-10-14T01:19:39.6494593Z #19 36.66 Collecting anthropic>=0.30 (from synthadoc==1.4.2)
+2026-10-14T01:19:39.8090204Z #19 36.68   Downloading anthropic-1.13.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-14T01:19:39.8090867Z #19 36.82 Collecting beautifulsoup4>=4.12 (from synthadoc==1.4.2)
+2026-10-14T01:19:39.9746655Z #19 36.84   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-14T01:19:39.9747495Z #19 36.99 Collecting certifi>=2024.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:40.1468492Z #19 37.01   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:40.1650356Z #19 37.18 Collecting croniter>=2.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:40.3372324Z #19 37.20   Downloading croniter-6.2.4-py3-none-any.whl.metadata (23 kB)
+2026-10-14T01:19:40.7073571Z #19 37.72 Collecting fastapi>=0.111 (from synthadoc==1.4.2)
+2026-10-14T01:19:40.8803080Z #19 37.74   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+2026-10-14T01:19:41.0661659Z #19 38.08 Collecting filelock>=3.15 (from synthadoc==1.4.2)
+2026-10-14T01:19:41.2174371Z #19 38.10   Downloading filelock-4.1.1-py3-none-any.whl.metadata (2.0 kB)
+2026-10-14T01:19:41.2175184Z #19 38.23 Collecting httpx>=0.27 (from synthadoc==1.4.2)
+2026-10-14T01:19:41.3893393Z #19 38.25   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-14T01:19:41.4225561Z #19 38.44 Collecting mcp<2.0,>=1.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:41.5946189Z #19 38.46   Downloading mcp-1.30.0-py3-none-any.whl.metadata (9.3 kB)
+2026-10-14T01:19:41.6456820Z #19 38.66 Collecting networkx>=3.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:41.8183214Z #19 38.68   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-10-14T01:19:42.4222815Z #19 39.44 Collecting openai>=1.40 (from synthadoc==1.4.2)
+2026-10-14T01:19:42.5947738Z #19 39.46   Downloading openai-3.29.0-py3-none-any.whl.metadata (44 kB)
+2026-10-14T01:19:42.6025350Z #19 39.62 Collecting openpyxl>=3.1 (from synthadoc==1.4.2)
+2026-10-14T01:19:42.7759298Z #19 39.64   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:42.7900170Z #19 39.80 Collecting opentelemetry-sdk>=1.25 (from synthadoc==1.4.2)
+2026-10-14T01:19:42.9012197Z #19 39.83   Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl.metadata (1.6 kB)
+2026-10-14T01:19:42.9013088Z #19 39.91 Collecting pdfminer-six>=20221105 (from synthadoc==1.4.2)
+2026-10-14T01:19:43.0737211Z #19 39.94   Downloading pdfminer_six-20260107-py3-none-any.whl.metadata (4.3 kB)
+2026-10-14T01:19:44.2750166Z #19 41.29 Collecting pydantic>=2.7 (from synthadoc==1.4.2)
+2026-10-14T01:19:44.4474478Z #19 41.31   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+2026-10-14T01:19:44.5823764Z #19 41.60 Collecting pypdf>=4.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:44.7060170Z #19 41.62   Downloading pypdf-6.20.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-14T01:19:44.7060919Z #19 41.72 Collecting python-docx>=1.1 (from synthadoc==1.4.2)
+2026-10-14T01:19:44.9512555Z #19 41.74   Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+2026-10-14T01:19:45.0248555Z #19 41.79 Collecting python-louvain>=0.16 (from synthadoc==1.4.2)
+2026-10-14T01:19:45.0249167Z #19 41.81   Downloading python-louvain-0.16.tar.gz (204 kB)
+2026-10-14T01:19:45.0249673Z #19 42.04   Installing build dependencies: started
+2026-10-14T01:19:51.2689257Z #19 48.28   Installing build dependencies: finished with status 'done'
+2026-10-14T01:19:51.4245888Z #19 48.29   Getting requirements to build wheel: started
+2026-10-14T01:19:55.4307307Z #19 52.44   Getting requirements to build wheel: finished with status 'done'
+2026-10-14T01:19:55.5894788Z #19 52.45   Preparing metadata (pyproject.toml): started
+2026-10-14T01:19:57.5836155Z #19 54.60   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-14T01:19:57.8307258Z #19 54.67 Collecting python-pptx>=1.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:57.8307708Z #19 54.69   Downloading python_pptx-1.0.2-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:19:58.0869800Z #19 55.10 Collecting pyyaml>=6.0 (from synthadoc==1.4.2)
+2026-10-14T01:19:58.3312237Z #19 55.12   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+2026-10-14T01:19:58.3312871Z #19 55.17 Collecting rank-bm25>=0.2 (from synthadoc==1.4.2)
+2026-10-14T01:19:58.3313228Z #19 55.19   Downloading rank_bm25-0.2.2-py3-none-any.whl.metadata (3.2 kB)
+2026-10-14T01:19:58.4896034Z #19 55.50 Collecting rich>=13 (from synthadoc==1.4.2)
+2026-10-14T01:19:58.6621994Z #19 55.52   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-14T01:19:58.6773259Z #19 55.69 Collecting tavily-python>=0.5 (from synthadoc==1.4.2)
+2026-10-14T01:19:58.8524446Z #19 55.72   Downloading tavily_python-0.8.5-py3-none-any.whl.metadata (14 kB)
+2026-10-14T01:19:58.8982886Z #19 55.91 Collecting typer>=0.12 (from synthadoc==1.4.2)
+2026-10-14T01:19:59.0707585Z #19 55.93   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+2026-10-14T01:19:59.1690118Z #19 56.18 Collecting uvicorn>=0.30 (from synthadoc==1.4.2)
+2026-10-14T01:19:59.2972729Z #19 56.20   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-14T01:19:59.2973672Z #19 56.31 Collecting youtube-transcript-api>=0.6 (from synthadoc==1.4.2)
+2026-10-14T01:19:59.4698923Z #19 56.33   Downloading youtube_transcript_api-1.2.4-py3-none-any.whl.metadata (24 kB)
+2026-10-14T01:19:59.4890127Z #19 56.50 Collecting anyio>=4.5 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:59.7391702Z #19 56.52   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-14T01:19:59.7392377Z #19 56.58 Collecting httpx-sse>=0.4 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:59.7392988Z #19 56.60   Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+2026-10-14T01:19:59.7938196Z #19 56.81 Collecting jsonschema>=4.20.0 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:19:59.9450606Z #19 56.83   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-14T01:19:59.9451845Z #19 56.96 Collecting pydantic-settings>=2.5.2 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:00.1173548Z #19 56.98   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+2026-10-14T01:20:00.1408274Z #19 57.15 Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:00.2622811Z #19 57.18   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:20:00.2623921Z #19 57.28 Collecting python-multipart>=0.0.9 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:00.4360317Z #19 57.30   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-10-14T01:20:00.4412039Z #19 57.45 Collecting sse-starlette>=1.6.1 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:00.6135163Z #19 57.48   Downloading sse_starlette-3.5.0-py3-none-any.whl.metadata (15 kB)
+2026-10-14T01:20:00.7466325Z #19 57.76 Collecting starlette>=0.27 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:00.9079500Z #19 57.79   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-14T01:20:00.9080441Z #19 57.92 Collecting typing-extensions>=4.9.0 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:01.0096754Z #19 57.94   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-14T01:20:01.0097917Z #19 58.00 Collecting typing-inspection>=0.4.1 (from mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:01.0098885Z #19 58.02   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-14T01:20:01.1762114Z #19 58.19 Collecting httpcore==1.* (from httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:20:01.3241556Z #19 58.21   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-14T01:20:01.3242377Z #19 58.34 Collecting idna (from httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:20:01.4416312Z #19 58.36   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-14T01:20:01.4416987Z #19 58.43 Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.27->synthadoc==1.4.2)
+2026-10-14T01:20:01.4417602Z #19 58.46   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-14T01:20:01.6791243Z #19 58.52 Collecting annotated-types>=0.6.0 (from pydantic>=2.7->synthadoc==1.4.2)
+2026-10-14T01:20:01.6792028Z #19 58.54   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-14T01:20:10.9278752Z #19 67.94 Collecting pydantic-core==2.50.1 (from pydantic>=2.7->synthadoc==1.4.2)
+2026-10-14T01:20:11.0807309Z #19 67.96   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.5 kB)
+2026-10-14T01:20:11.0808138Z #19 68.09 Collecting docstring-parser<1,>=0.15 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:11.1874028Z #19 68.12   Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:20:11.1874779Z #19 68.20 Collecting httpx2<3,>=2.0.0 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:11.3593440Z #19 68.22   Downloading httpx2-2.13.1-py3-none-any.whl.metadata (9.8 kB)
+2026-10-14T01:20:12.4205644Z #19 69.43 Collecting jiter<1,>=0.4.0 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:12.5469461Z #19 69.47   Downloading jiter-0.17.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (5.2 kB)
+2026-10-14T01:20:12.5470368Z #19 69.56 Collecting sniffio<2,>=1 (from anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:12.7074448Z #19 69.58   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-10-14T01:20:12.7075214Z #19 69.72 Collecting httpcore2==2.13.1 (from httpx2<3,>=2.0.0->anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:12.8295114Z #19 69.74   Downloading httpcore2-2.13.1-py3-none-any.whl.metadata (26 kB)
+2026-10-14T01:20:12.8295997Z #19 69.84 Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->anthropic>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:13.0012179Z #19 69.86   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+2026-10-14T01:20:13.0417116Z #19 70.06 Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12->synthadoc==1.4.2)
+2026-10-14T01:20:13.1803048Z #19 70.08   Downloading soupsieve-3.0.3-py3-none-any.whl.metadata (4.4 kB)
+2026-10-14T01:20:13.1803969Z #19 70.19 Collecting python-dateutil (from croniter>=2.0->synthadoc==1.4.2)
+2026-10-14T01:20:13.3519390Z #19 70.22   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-10-14T01:20:13.3520365Z #19 70.37 Collecting annotated-doc>=0.0.2 (from fastapi>=0.111->synthadoc==1.4.2)
+2026-10-14T01:20:13.5230893Z #19 70.39   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-14T01:20:13.5231410Z #19 70.54 Collecting opentelemetry-api>=1.44.0 (from fastapi>=0.111->synthadoc==1.4.2)
+2026-10-14T01:20:13.6828364Z #19 70.56   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-14T01:20:13.6829164Z #19 70.70 Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:13.7889532Z #19 70.72   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-14T01:20:13.7890344Z #19 70.80 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:13.9606861Z #19 70.82   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-14T01:20:14.1057036Z #19 71.12 Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:14.2777863Z #19 71.14   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-14T01:20:17.7245872Z #19 74.74 Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:17.8971765Z #19 74.76   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
+2026-10-14T01:20:17.9334284Z #19 74.95 Collecting et-xmlfile (from openpyxl>=3.1->synthadoc==1.4.2)
+2026-10-14T01:20:18.1058449Z #19 74.97   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2026-10-14T01:20:18.1112243Z #19 75.12 Collecting opentelemetry-semantic-conventions==0.66b1 (from opentelemetry-sdk>=1.25->synthadoc==1.4.2)
+2026-10-14T01:20:18.2843880Z #19 75.15   Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl.metadata (2.4 kB)
+2026-10-14T01:20:19.8153035Z #19 76.83 Collecting charset-normalizer>=2.0.0 (from pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:20:19.9886850Z #19 76.85   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (46 kB)
+2026-10-14T01:20:22.3966870Z #19 79.41 Collecting cryptography>=36.0.0 (from pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:20:22.5698799Z #19 79.43   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_aarch64.whl.metadata (4.4 kB)
+2026-10-14T01:20:23.8178494Z #19 80.83 Collecting cffi>=2.0.0 (from cryptography>=36.0.0->pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:20:23.9387186Z #19 80.85   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (2.5 kB)
+2026-10-14T01:20:23.9388358Z #19 80.93 Collecting pycparser (from cffi>=2.0.0->cryptography>=36.0.0->pdfminer-six>=20221105->synthadoc==1.4.2)
+2026-10-14T01:20:23.9389258Z #19 80.95   Downloading pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+2026-10-14T01:20:24.1917885Z #19 81.21 Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.5.2->mcp<2.0,>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:24.3645181Z #19 81.23   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-14T01:20:27.6797674Z #19 84.69 Collecting lxml>=3.1.0 (from python-docx>=1.1->synthadoc==1.4.2)
+2026-10-14T01:20:27.8525565Z #19 84.72   Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (3.3 kB)
+2026-10-14T01:20:30.4732447Z #19 87.49 Collecting numpy (from python-louvain>=0.16->synthadoc==1.4.2)
+2026-10-14T01:20:30.6458170Z #19 87.51   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+2026-10-14T01:20:32.7656467Z #19 89.78 Collecting Pillow>=3.3.2 (from python-pptx>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:32.9384698Z #19 89.80   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.1 kB)
+2026-10-14T01:20:33.1088603Z #19 90.12 Collecting XlsxWriter>=0.5.7 (from python-pptx>=1.0->synthadoc==1.4.2)
+2026-10-14T01:20:33.2808264Z #19 90.14   Downloading xlsxwriter-3.2.9-py3-none-any.whl.metadata (2.7 kB)
+2026-10-14T01:20:33.3079688Z #19 90.32 Collecting markdown-it-py>=2.2.0 (from rich>=13->synthadoc==1.4.2)
+2026-10-14T01:20:33.4810501Z #19 90.34   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-14T01:20:33.5149097Z #19 90.53 Collecting pygments<3.0.0,>=2.13.0 (from rich>=13->synthadoc==1.4.2)
+2026-10-14T01:20:33.6242241Z #19 90.55   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-14T01:20:33.6242804Z #19 90.62 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13->synthadoc==1.4.2)
+2026-10-14T01:20:33.6243316Z #19 90.64   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-14T01:20:34.0026442Z #19 91.02 Collecting requests (from tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:20:34.1747652Z #19 91.04   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-14T01:20:34.6430794Z #19 91.66 Collecting tiktoken>=0.5.1 (from tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:20:34.8177386Z #19 91.68   Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_aarch64.whl.metadata (6.7 kB)
+2026-10-14T01:20:40.0257253Z #19 97.04 Collecting regex (from tiktoken>=0.5.1->tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:20:40.1768263Z #19 97.06   Downloading regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (40 kB)
+2026-10-14T01:20:40.1769268Z #19 97.19 Collecting shellingham>=1.3.0 (from typer>=0.12->synthadoc==1.4.2)
+2026-10-14T01:20:40.3488815Z #19 97.21   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-10-14T01:20:40.4025704Z #19 97.42 Collecting click>=7.0 (from uvicorn>=0.30->synthadoc==1.4.2)
+2026-10-14T01:20:40.5153254Z #19 97.44   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-14T01:20:40.5153796Z #19 97.53 Collecting defusedxml<0.8.0,>=0.7.1 (from youtube-transcript-api>=0.6->synthadoc==1.4.2)
+2026-10-14T01:20:40.6865457Z #19 97.55   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-10-14T01:20:40.6925865Z #19 97.71 Collecting six>=1.5 (from python-dateutil->croniter>=2.0->synthadoc==1.4.2)
+2026-10-14T01:20:40.8660854Z #19 97.73   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-10-14T01:20:40.9822308Z #19 98.00 Collecting urllib3<3,>=1.26 (from requests->tavily-python>=0.5->synthadoc==1.4.2)
+2026-10-14T01:20:41.0958053Z #19 98.02   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-14T01:20:41.0958931Z #19 98.11 Downloading synthadoc-1.4.2-py3-none-any.whl (5.4 MB)
+2026-10-14T01:20:41.5138879Z #19 98.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 21.0 MB/s  0:00:00
+2026-10-14T01:20:41.5139664Z #19 98.43 Downloading mcp-1.30.0-py3-none-any.whl (234 kB)
+2026-10-14T01:20:41.5140381Z #19 98.45 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-14T01:20:41.5140912Z #19 98.47 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-14T01:20:41.5141373Z #19 98.49 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-14T01:20:41.5141864Z #19 98.53 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+2026-10-14T01:20:41.6193776Z #19 98.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 45.8 MB/s  0:00:00
+2026-10-14T01:20:41.6194419Z #19 98.61 Downloading aiosqlite-0.22.1-py3-none-any.whl (17 kB)
+2026-10-14T01:20:41.6195165Z #19 98.63 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-14T01:20:41.7393635Z #19 98.65 Downloading anthropic-1.13.0-py3-none-any.whl (2.0 MB)
+2026-10-14T01:20:41.7394699Z #19 98.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 54.1 MB/s  0:00:00
+2026-10-14T01:20:41.7395456Z #19 98.73 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-14T01:20:41.7396003Z #19 98.75 Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+2026-10-14T01:20:41.8523012Z #19 98.77 Downloading httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-14T01:20:41.8523642Z #19 98.80 Downloading httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-14T01:20:41.8524603Z #19 98.82 Downloading jiter-0.17.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (341 kB)
+2026-10-14T01:20:41.8525475Z #19 98.84 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-10-14T01:20:41.8526010Z #19 98.87 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-14T01:20:41.9658646Z #19 98.89 Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-10-14T01:20:41.9659444Z #19 98.91 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-14T01:20:41.9660063Z #19 98.93 Downloading croniter-6.2.4-py3-none-any.whl (46 kB)
+2026-10-14T01:20:41.9660656Z #19 98.96 Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+2026-10-14T01:20:41.9661247Z #19 98.98 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-14T01:20:42.0732001Z #19 99.00 Downloading filelock-4.1.1-py3-none-any.whl (132 kB)
+2026-10-14T01:20:42.0733091Z #19 99.02 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-14T01:20:42.0733904Z #19 99.04 Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+2026-10-14T01:20:42.0734525Z #19 99.06 Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-14T01:20:42.0735235Z #19 99.09 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-14T01:20:42.1908750Z #19 99.11 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-14T01:20:42.1909574Z #19 99.13 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-14T01:20:42.1909964Z #19 99.15 Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-10-14T01:20:42.3123911Z #19 99.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 62.5 MB/s  0:00:00
+2026-10-14T01:20:42.3124562Z #19 99.23 Downloading openai-3.29.0-py3-none-any.whl (2.2 MB)
+2026-10-14T01:20:42.3125392Z #19 99.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 67.7 MB/s  0:00:00
+2026-10-14T01:20:42.3126011Z #19 99.30 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-10-14T01:20:42.3126584Z #19 99.33 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-14T01:20:42.4992366Z #19 99.35 Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl (140 kB)
+2026-10-14T01:20:42.4993718Z #19 99.37 Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl (206 kB)
+2026-10-14T01:20:42.4994551Z #19 99.40 Downloading pdfminer_six-20260107-py3-none-any.whl (6.6 MB)
+2026-10-14T01:20:42.6349872Z #19 99.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 68.3 MB/s  0:00:00
+2026-10-14T01:20:42.6350824Z #19 99.54 Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (246 kB)
+2026-10-14T01:20:42.6351455Z #19 99.56 Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_aarch64.whl (4.7 MB)
+2026-10-14T01:20:42.7497211Z #19 99.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 68.2 MB/s  0:00:00
+2026-10-14T01:20:42.7498029Z #19 99.67 Downloading cffi-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (222 kB)
+2026-10-14T01:20:42.7498804Z #19 99.69 Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+2026-10-14T01:20:42.7499406Z #19 99.72 Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-10-14T01:20:42.7499907Z #19 99.74 Downloading pypdf-6.20.1-py3-none-any.whl (402 kB)
+2026-10-14T01:20:42.7500441Z #19 99.76 Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+2026-10-14T01:20:42.8673685Z #19 99.79 Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (5.0 MB)
+2026-10-14T01:20:43.0701553Z #19 99.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 66.8 MB/s  0:00:00
+2026-10-14T01:20:43.0715947Z #19 99.90 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-14T01:20:43.0716567Z #19 99.93 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-10-14T01:20:43.0717134Z #19 99.95 Downloading python_pptx-1.0.2-py3-none-any.whl (472 kB)
+2026-10-14T01:20:43.0718150Z #19 99.97 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+2026-10-14T01:20:43.1862490Z #19 100.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 68.4 MB/s  0:00:00
+2026-10-14T01:20:43.1863798Z #19 100.1 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (775 kB)
+2026-10-14T01:20:43.1864801Z #19 100.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.1/775.1 kB 69.5 MB/s  0:00:00
+2026-10-14T01:20:43.1865750Z #19 100.2 Downloading rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+2026-10-14T01:20:43.1866375Z #19 100.2 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-14T01:20:43.1866893Z #19 100.2 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-14T01:20:43.2939603Z #19 100.2 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-14T01:20:43.2940532Z #19 100.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 68.8 MB/s  0:00:00
+2026-10-14T01:20:43.2941166Z #19 100.3 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-14T01:20:43.2941698Z #19 100.3 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-14T01:20:43.4076259Z #19 100.3 Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (373 kB)
+2026-10-14T01:20:43.4077048Z #19 100.4 Downloading soupsieve-3.0.3-py3-none-any.whl (41 kB)
+2026-10-14T01:20:43.4077597Z #19 100.4 Downloading sse_starlette-3.5.0-py3-none-any.whl (17 kB)
+2026-10-14T01:20:43.4078140Z #19 100.4 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+2026-10-14T01:20:43.4078675Z #19 100.4 Downloading tavily_python-0.8.5-py3-none-any.whl (24 kB)
+2026-10-14T01:20:43.5102569Z #19 100.4 Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_aarch64.whl (1.2 MB)
+2026-10-14T01:20:43.5103649Z #19 100.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 68.8 MB/s  0:00:00
+2026-10-14T01:20:43.5104242Z #19 100.5 Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-14T01:20:43.5104829Z #19 100.5 Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-14T01:20:43.6224597Z #19 100.5 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-14T01:20:43.6225408Z #19 100.6 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-14T01:20:43.6226111Z #19 100.6 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-14T01:20:43.6226642Z #19 100.6 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-14T01:20:43.6227148Z #19 100.6 Downloading xlsxwriter-3.2.9-py3-none-any.whl (175 kB)
+2026-10-14T01:20:43.8667908Z #19 100.7 Downloading youtube_transcript_api-1.2.4-py3-none-any.whl (485 kB)
+2026-10-14T01:20:43.8668373Z #19 100.7 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-10-14T01:20:43.8668727Z #19 100.7 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-10-14T01:20:43.8669181Z #19 100.7 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (15.7 MB)
+2026-10-14T01:20:44.0834846Z #19 101.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 68.4 MB/s  0:00:00
+2026-10-14T01:20:44.0835718Z #19 101.0 Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+2026-10-14T01:20:44.0836682Z #19 101.0 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-14T01:20:44.0837440Z #19 101.0 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-14T01:20:44.0838307Z #19 101.1 Downloading regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (805 kB)
+2026-10-14T01:20:44.2803007Z #19 101.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.9/805.9 kB 68.0 MB/s  0:00:00
+2026-10-14T01:20:44.2803655Z #19 101.1 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-14T01:20:44.2804227Z #19 101.1 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-14T01:20:47.4391516Z #19 104.5 Building wheels for collected packages: python-louvain
+2026-10-14T01:20:47.5943188Z #19 104.5   Building wheel for python-louvain (pyproject.toml): started
+2026-10-14T01:20:49.9984394Z #19 107.0   Building wheel for python-louvain (pyproject.toml): finished with status 'done'
+2026-10-14T01:20:50.1715647Z #19 107.0   Created wheel for python-louvain: filename=python_louvain-0.16-py3-none-any.whl size=9458 sha256=9404c6eda5f71398985f6be63c91d1729391bd0033b88c72317c4e75ac8d9705
+2026-10-14T01:20:50.1716590Z #19 107.0   Stored in directory: /tmp/pip-ephem-wheel-cache-5t53xmsg/wheels/40/f1/e3/485b698c520fa0baee1d07897abc7b8d6479b7d199ce96f4af
+2026-10-14T01:20:50.1717087Z #19 107.0 Successfully built python-louvain
+2026-10-14T01:20:52.1547543Z #19 109.2 Installing collected packages: XlsxWriter, urllib3, typing-extensions, truststore, soupsieve, sniffio, six, shellingham, rpds-py, regex, pyyaml, python-multipart, python-dotenv, pypdf, pyjwt, pygments, pycparser, Pillow, numpy, networkx, mdurl, lxml, jiter, idna, httpx-sse, h11, filelock, et-xmlfile, docstring-parser, defusedxml, click, charset-normalizer, certifi, attrs, annotated-types, annotated-doc, aiosqlite, uvicorn, typing-inspection, requests, referencing, rank-bm25, python-pptx, python-louvain, python-docx, python-dateutil, pydantic-core, opentelemetry-api, openpyxl, markdown-it-py, httpcore2, httpcore, cffi, beautifulsoup4, anyio, youtube-transcript-api, tiktoken, starlette, rich, pydantic, opentelemetry-semantic-conventions, jsonschema-specifications, httpx2, httpx, cryptography, croniter, typer, tavily-python, sse-starlette, pydantic-settings, pdfminer-six, opentelemetry-sdk, openai, jsonschema, fastapi, anthropic, mcp, synthadoc
+2026-10-14T01:20:57.8021398Z #19 114.8   WARNING: The script dotenv is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:20:57.8022260Z #19 114.8   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:21:09.4403566Z #19 126.5   WARNING: The script pygmentize is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:21:09.4405050Z #19 126.5   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:21:34.5067876Z #19 151.5   WARNING: The scripts f2py and numpy-config are installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:21:34.5068969Z #19 151.5   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:21:50.9443575Z #19 168.0   WARNING: The script idna is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:21:50.9444497Z #19 168.0   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:21:53.7447566Z #19 170.8   WARNING: The script normalizer is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:21:53.7448414Z #19 170.8   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:21:55.1829724Z #19 172.2   WARNING: The script uvicorn is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:21:55.1831183Z #19 172.2   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:03.7557916Z #19 180.8   WARNING: The script markdown-it is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:03.7558688Z #19 180.8   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:05.8326195Z #19 182.8   WARNING: The script cffi-gen-src is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:05.8326964Z #19 182.8   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:08.0030637Z #19 185.0   WARNING: The script youtube_transcript_api is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:08.0031646Z #19 185.0   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:17.2357662Z #19 194.2   WARNING: The script httpx2 is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:17.2358729Z #19 194.2   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:17.9191336Z #19 194.9   WARNING: The script httpx is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:17.9192244Z #19 194.9   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:21.0633555Z #19 198.1   WARNING: The script typer is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:21.0634488Z #19 198.1   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:41.2308008Z #19 218.2   WARNING: The script jsonschema is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:41.2309024Z #19 218.2   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:42.4009273Z #19 219.4   WARNING: The script fastapi is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:42.4009947Z #19 219.4   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:22:57.8553064Z #19 234.9   WARNING: The script mcp is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:22:57.8554016Z #19 234.9   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:23:01.8491612Z #19 238.9   WARNING: The script synthadoc is installed in '/root/.local/bin' which is not on PATH.
+2026-10-14T01:23:01.8492815Z #19 238.9   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+2026-10-14T01:23:02.0326318Z #19 239.0 
+2026-10-14T01:23:02.0333037Z #19 239.0 Successfully installed Pillow-12.3.0 XlsxWriter-3.2.9 aiosqlite-0.22.1 annotated-doc-0.0.5 annotated-types-0.8.0 anthropic-1.13.0 anyio-4.15.1 attrs-26.1.0 beautifulsoup4-4.15.0 certifi-2026.7.22 cffi-2.1.1 charset-normalizer-3.5.2 click-8.5.0 croniter-6.2.4 cryptography-50.0.2 defusedxml-0.7.1 docstring-parser-0.18.0 et-xmlfile-2.0.0 fastapi-0.143.0 filelock-4.1.1 h11-0.16.0 httpcore-1.0.9 httpcore2-2.13.1 httpx-0.28.1 httpx-sse-0.4.3 httpx2-2.13.1 idna-3.20 jiter-0.17.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lxml-6.1.3 markdown-it-py-4.2.0 mcp-1.30.0 mdurl-0.1.2 networkx-3.7 numpy-2.5.4 openai-3.29.0 openpyxl-3.1.5 opentelemetry-api-1.45.1 opentelemetry-sdk-1.45.1 opentelemetry-semantic-conventions-0.66b1 pdfminer-six-20260107 pycparser-3.11 pydantic-2.14.1 pydantic-core-2.50.1 pydantic-settings-2.15.0 pygments-2.21.0 pyjwt-2.15.1 pypdf-6.20.1 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dotenv-1.2.4 python-louvain-0.16 python-multipart-0.0.32 python-pptx-1.0.2 pyyaml-6.0.3 rank-bm25-0.2.2 referencing-0.37.0 regex-2026.9.29 requests-2.34.2 rich-15.0.0 rpds-py-2026.9.1 shellingham-1.5.4 six-1.17.0 sniffio-1.3.1 soupsieve-3.0.3 sse-starlette-3.5.0 starlette-1.8.0 synthadoc-1.4.2 tavily-python-0.8.5 tiktoken-0.14.0 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 uvicorn-0.54.0 youtube-transcript-api-1.2.4
+2026-10-14T01:23:02.1860458Z #19 239.0 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-14T01:23:03.4073392Z #19 DONE 240.4s
+2026-10-14T01:23:04.4506328Z 
+2026-10-14T01:23:04.4507387Z #23 [linux/arm64 runtime 3/5] COPY --from=builder --chown=synthadoc:synthadoc /root/.local /home/synthadoc/.local
+2026-10-14T01:23:08.3095315Z #23 DONE 3.9s
+2026-10-14T01:23:08.4604679Z 
+2026-10-14T01:23:08.4605393Z #24 [linux/arm64 runtime 4/5] RUN mkdir /wiki && chown synthadoc:synthadoc /wiki
+2026-10-14T01:23:08.6440493Z #24 DONE 0.3s
+2026-10-14T01:23:08.8028028Z 
+2026-10-14T01:23:08.8028806Z #25 [linux/arm64 runtime 5/5] WORKDIR /wiki
+2026-10-14T01:23:08.8029250Z #25 DONE 0.0s
+2026-10-14T01:23:08.8029411Z 
+2026-10-14T01:23:08.8029524Z #26 exporting to image
+2026-10-14T01:23:08.8029813Z #26 exporting layers
+2026-10-14T01:23:16.2064753Z #26 exporting layers 7.6s done
+2026-10-14T01:23:16.3721188Z #26 exporting manifest sha256:2e144176b5f77fb3118e561ff80f8338b9faa3ec22d53b5b69a6c163ad6f523e done
+2026-10-14T01:23:16.3721967Z #26 exporting config sha256:be136da5997c34c01c3726da7b4429e67726a2ba23ad11c7d6f457def2fbd439 done
+2026-10-14T01:23:16.3722540Z #26 exporting attestation manifest sha256:b6c39aa1f179d17bbd9b76b81d35d4c706d1f3296261b44af147c0e2303bad6c done
+2026-10-14T01:23:16.3723081Z #26 exporting manifest sha256:c07b5db34d8932262fe53d1e38ea4c01bac28bb93151b5c72686aa55457c4377
+2026-10-14T01:23:16.3844243Z #26 exporting manifest sha256:c07b5db34d8932262fe53d1e38ea4c01bac28bb93151b5c72686aa55457c4377 0.2s done
+2026-10-14T01:23:16.3845382Z #26 exporting config sha256:0e1751a592a529089fa03d48625e7dc9215e92ffc90f3096e4f6d867c3f897e6
+2026-10-14T01:23:16.5476977Z #26 exporting config sha256:0e1751a592a529089fa03d48625e7dc9215e92ffc90f3096e4f6d867c3f897e6 done
+2026-10-14T01:23:16.5477602Z #26 exporting attestation manifest sha256:944c5c768db6b3c40912464fdd4027aabc4e0c3266635d94483eed4b38f41aa0 done
+2026-10-14T01:23:16.5478174Z #26 exporting manifest list sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034 done
+2026-10-14T01:23:16.5478572Z #26 pushing layers
+2026-10-14T01:23:16.5820737Z #26 ...
+2026-10-14T01:23:16.5820878Z 
+2026-10-14T01:23:16.5821053Z #27 [auth] chenp/synthadoc:pull,push token for registry-1.docker.io
+2026-10-14T01:23:16.7325376Z #27 DONE 0.0s
+2026-10-14T01:23:16.7325538Z 
+2026-10-14T01:23:16.7325624Z #26 exporting to image
+2026-10-14T01:23:21.5387045Z #26 pushing layers 5.1s done
+2026-10-14T01:23:21.5387634Z #26 pushing manifest for docker.io/chenp/synthadoc:1.4.2@sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034
+2026-10-14T01:23:25.1352007Z #26 pushing manifest for docker.io/chenp/synthadoc:1.4.2@sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034 3.6s done
+2026-10-14T01:23:25.4520440Z #26 pushing layers 0.3s done
+2026-10-14T01:23:25.4521282Z #26 pushing manifest for docker.io/chenp/synthadoc:latest@sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034
+2026-10-14T01:23:27.6207114Z #26 pushing manifest for docker.io/chenp/synthadoc:latest@sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034 2.2s done
+2026-10-14T01:23:27.6207984Z #26 DONE 19.0s
+2026-10-14T01:23:27.8693646Z 
+2026-10-14T01:23:27.8694197Z #28 resolving provenance for metadata file
+2026-10-14T01:23:27.8798856Z #28 DONE 0.2s
+2026-10-14T01:23:27.9912814Z ##[group]ImageID
+2026-10-14T01:23:27.9913577Z sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034
+2026-10-14T01:23:27.9916101Z ##[endgroup]
+2026-10-14T01:23:27.9916683Z ##[group]Digest
+2026-10-14T01:23:27.9917432Z sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034
+2026-10-14T01:23:27.9918120Z ##[endgroup]
+2026-10-14T01:23:27.9918559Z ##[group]Metadata
+2026-10-14T01:23:27.9918896Z {
+2026-10-14T01:23:27.9919154Z   "buildx.build.provenance/linux/amd64": {
+2026-10-14T01:23:27.9919517Z     "builder": {
+2026-10-14T01:23:27.9919985Z       "id": "https://github.com/axoviq-ai/synthadoc/actions/runs/38494977719/attempts/1"
+2026-10-14T01:23:27.9920621Z     },
+2026-10-14T01:23:27.9921006Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2026-10-14T01:23:27.9921449Z     "materials": [
+2026-10-14T01:23:27.9921712Z       {
+2026-10-14T01:23:27.9921982Z         "uri": "pkg:docker/docker/dockerfile@1",
+2026-10-14T01:23:27.9922335Z         "digest": {
+2026-10-14T01:23:27.9922781Z           "sha256": "4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e"
+2026-10-14T01:23:27.9923292Z         }
+2026-10-14T01:23:27.9923523Z       },
+2026-10-14T01:23:27.9923736Z       {
+2026-10-14T01:23:27.9924082Z         "uri": "pkg:docker/python@3.12-slim?platform=linux%2Famd64",
+2026-10-14T01:23:27.9924500Z         "digest": {
+2026-10-14T01:23:27.9924874Z           "sha256": "a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1"
+2026-10-14T01:23:27.9925493Z         }
+2026-10-14T01:23:27.9925718Z       }
+2026-10-14T01:23:27.9925912Z     ],
+2026-10-14T01:23:27.9926126Z     "invocation": {
+2026-10-14T01:23:27.9926374Z       "configSource": {
+2026-10-14T01:23:27.9926679Z         "entryPoint": "Dockerfile"
+2026-10-14T01:23:27.9926994Z       },
+2026-10-14T01:23:27.9927228Z       "parameters": {
+2026-10-14T01:23:27.9927519Z         "frontend": "gateway.v0",
+2026-10-14T01:23:27.9927825Z         "args": {
+2026-10-14T01:23:27.9928134Z           "build-arg:SYNTHADOC_VERSION": "1.4.2",
+2026-10-14T01:23:27.9928492Z           "cmdline": "docker/dockerfile:1",
+2026-10-14T01:23:27.9928848Z           "source": "docker/dockerfile:1"
+2026-10-14T01:23:27.9929142Z         },
+2026-10-14T01:23:27.9929371Z         "locals": [
+2026-10-14T01:23:27.9929617Z           {
+2026-10-14T01:23:27.9929857Z             "name": "context"
+2026-10-14T01:23:27.9930142Z           },
+2026-10-14T01:23:27.9930403Z           {
+2026-10-14T01:23:27.9930641Z             "name": "dockerfile"
+2026-10-14T01:23:27.9930932Z           }
+2026-10-14T01:23:27.9931085Z         ],
+2026-10-14T01:23:27.9931238Z         "root": {
+2026-10-14T01:23:27.9931412Z           "configSource": {
+2026-10-14T01:23:27.9931607Z             "path": "Dockerfile"
+2026-10-14T01:23:27.9931799Z           },
+2026-10-14T01:23:27.9931958Z           "request": {
+2026-10-14T01:23:27.9932126Z             "args": {
+2026-10-14T01:23:27.9932359Z               "build-arg:SYNTHADOC_VERSION": "1.4.2",
+2026-10-14T01:23:27.9932615Z               "vcs:localdir:context": ".",
+2026-10-14T01:23:27.9932851Z               "vcs:localdir:dockerfile": ".",
+2026-10-14T01:23:27.9933138Z               "vcs:revision": "b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa",
+2026-10-14T01:23:27.9933484Z               "vcs:source": "https://github.com/axoviq-ai/synthadoc"
+2026-10-14T01:23:27.9933740Z             }
+2026-10-14T01:23:27.9933897Z           }
+2026-10-14T01:23:27.9934044Z         },
+2026-10-14T01:23:27.9934211Z         "compatibilityVersion": 30
+2026-10-14T01:23:27.9934415Z       },
+2026-10-14T01:23:27.9934570Z       "environment": {
+2026-10-14T01:23:27.9934765Z         "github_actor": "william-Johnason",
+2026-10-14T01:23:27.9935514Z         "github_actor_id": "4006820",
+2026-10-14T01:23:27.9935868Z         "github_event_name": "workflow_dispatch",
+2026-10-14T01:23:27.9936229Z         "github_event_payload": {
+2026-10-14T01:23:27.9936543Z           "inputs": {
+2026-10-14T01:23:27.9936800Z             "tag": "1.4.2"
+2026-10-14T01:23:27.9937046Z           },
+2026-10-14T01:23:27.9937269Z           "organization": {
+2026-10-14T01:23:27.9937859Z             "avatar_url": "https://avatars.githubusercontent.com/u/275206488?v=4",
+2026-10-14T01:23:27.9938904Z             "description": "axoviq-ai occupies the intersection of deep technology and domain expertise. To deliver autonomous, closed-loop multi-agent AI systems and strategic consulting.",
+2026-10-14T01:23:27.9940042Z             "events_url": "https://api.github.com/orgs/axoviq-ai/events",
+2026-10-14T01:23:27.9940564Z             "hooks_url": "https://api.github.com/orgs/axoviq-ai/hooks",
+2026-10-14T01:23:27.9940955Z             "id": 275206488,
+2026-10-14T01:23:27.9941324Z             "issues_url": "https://api.github.com/orgs/axoviq-ai/issues",
+2026-10-14T01:23:27.9941760Z             "login": "axoviq-ai",
+2026-10-14T01:23:27.9942172Z             "members_url": "https://api.github.com/orgs/axoviq-ai/members{/member}",
+2026-10-14T01:23:27.9942640Z             "node_id": "O_kgDOEGdRWA",
+2026-10-14T01:23:27.9943156Z             "public_members_url": "https://api.github.com/orgs/axoviq-ai/public_members{/member}",
+2026-10-14T01:23:27.9943800Z             "repos_url": "https://api.github.com/orgs/axoviq-ai/repos",
+2026-10-14T01:23:27.9944275Z             "url": "https://api.github.com/orgs/axoviq-ai"
+2026-10-14T01:23:27.9944649Z           },
+2026-10-14T01:23:27.9944901Z           "ref": "refs/heads/main",
+2026-10-14T01:23:27.9945524Z           "repository": {
+2026-10-14T01:23:27.9945813Z             "allow_forking": true,
+2026-10-14T01:23:27.9946294Z             "archive_url": "https://api.github.com/repos/axoviq-ai/synthadoc/{archive_format}{/ref}",
+2026-10-14T01:23:27.9946815Z             "archived": false,
+2026-10-14T01:23:27.9947335Z             "assignees_url": "https://api.github.com/repos/axoviq-ai/synthadoc/assignees{/user}",
+2026-10-14T01:23:27.9948058Z             "blobs_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/blobs{/sha}",
+2026-10-14T01:23:27.9948696Z             "branches_url": "https://api.github.com/repos/axoviq-ai/synthadoc/branches{/branch}",
+2026-10-14T01:23:27.9949294Z             "clone_url": "https://github.com/axoviq-ai/synthadoc.git",
+2026-10-14T01:23:27.9949959Z             "collaborators_url": "https://api.github.com/repos/axoviq-ai/synthadoc/collaborators{/collaborator}",
+2026-10-14T01:23:27.9950732Z             "comments_url": "https://api.github.com/repos/axoviq-ai/synthadoc/comments{/number}",
+2026-10-14T01:23:27.9951456Z             "commits_url": "https://api.github.com/repos/axoviq-ai/synthadoc/commits{/sha}",
+2026-10-14T01:23:27.9952198Z             "compare_url": "https://api.github.com/repos/axoviq-ai/synthadoc/compare/{base}...{head}",
+2026-10-14T01:23:27.9952970Z             "contents_url": "https://api.github.com/repos/axoviq-ai/synthadoc/contents/{+path}",
+2026-10-14T01:23:27.9953695Z             "contributors_url": "https://api.github.com/repos/axoviq-ai/synthadoc/contributors",
+2026-10-14T01:23:27.9954228Z             "created_at": "2026-04-11T03:50:12Z",
+2026-10-14T01:23:27.9954647Z             "custom_properties": {},
+2026-10-14T01:23:27.9955189Z             "default_branch": "main",
+2026-10-14T01:23:27.9955728Z             "deployments_url": "https://api.github.com/repos/axoviq-ai/synthadoc/deployments",
+2026-10-14T01:23:27.9957360Z             "description": "Synthadoc: An open-source LLM knowledge compilation engine that turns raw documents into structured, local-first wikis. A transparent, human-readable alternative to traditional RAG, which can be self-managed and self-improved without the use of any tools.",
+2026-10-14T01:23:27.9958798Z             "disabled": false,
+2026-10-14T01:23:27.9959354Z             "downloads_url": "https://api.github.com/repos/axoviq-ai/synthadoc/downloads",
+2026-10-14T01:23:27.9960064Z             "events_url": "https://api.github.com/repos/axoviq-ai/synthadoc/events",
+2026-10-14T01:23:27.9960503Z             "fork": false,
+2026-10-14T01:23:27.9960748Z             "forks": 159,
+2026-10-14T01:23:27.9961008Z             "forks_count": 159,
+2026-10-14T01:23:27.9961642Z             "forks_url": "https://api.github.com/repos/axoviq-ai/synthadoc/forks",
+2026-10-14T01:23:27.9962103Z             "full_name": "axoviq-ai/synthadoc",
+2026-10-14T01:23:27.9962644Z             "git_commits_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/commits{/sha}",
+2026-10-14T01:23:27.9963572Z             "git_refs_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/refs{/sha}",
+2026-10-14T01:23:27.9964412Z             "git_tags_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/tags{/sha}",
+2026-10-14T01:23:27.9965183Z             "git_url": "git://github.com/axoviq-ai/synthadoc.git",
+2026-10-14T01:23:27.9965629Z             "has_discussions": false,
+2026-10-14T01:23:27.9965984Z             "has_downloads": false,
+2026-10-14T01:23:27.9966323Z             "has_issues": true,
+2026-10-14T01:23:27.9966642Z             "has_pages": false,
+2026-10-14T01:23:27.9966956Z             "has_projects": true,
+2026-10-14T01:23:27.9967339Z             "has_pull_requests": true,
+2026-10-14T01:23:27.9967748Z             "has_wiki": true,
+2026-10-14T01:23:27.9968060Z             "homepage": "",
+2026-10-14T01:23:27.9968502Z             "hooks_url": "https://api.github.com/repos/axoviq-ai/synthadoc/hooks",
+2026-10-14T01:23:27.9969054Z             "html_url": "https://github.com/axoviq-ai/synthadoc",
+2026-10-14T01:23:27.9969417Z             "id": 1207529559,
+2026-10-14T01:23:27.9969756Z             "is_template": false,
+2026-10-14T01:23:27.9970353Z             "issue_comment_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues/comments{/number}",
+2026-10-14T01:23:27.9971228Z             "issue_events_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues/events{/number}",
+2026-10-14T01:23:27.9971997Z             "issues_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues{/number}",
+2026-10-14T01:23:27.9972712Z             "keys_url": "https://api.github.com/repos/axoviq-ai/synthadoc/keys{/key_id}",
+2026-10-14T01:23:27.9973414Z             "labels_url": "https://api.github.com/repos/axoviq-ai/synthadoc/labels{/name}",
+2026-10-14T01:23:27.9973974Z             "language": "Python",
+2026-10-14T01:23:27.9974498Z             "languages_url": "https://api.github.com/repos/axoviq-ai/synthadoc/languages",
+2026-10-14T01:23:27.9975203Z             "license": {
+2026-10-14T01:23:27.9975633Z               "key": "agpl-3.0",
+2026-10-14T01:23:27.9976011Z               "name": "GNU Affero General Public License v3.0",
+2026-10-14T01:23:27.9976438Z               "node_id": "MDc6TGljZW5zZTE=",
+2026-10-14T01:23:27.9976832Z               "spdx_id": "AGPL-3.0",
+2026-10-14T01:23:27.9977231Z               "url": "https://api.github.com/licenses/agpl-3.0"
+2026-10-14T01:23:27.9977638Z             },
+2026-10-14T01:23:27.9978049Z             "merges_url": "https://api.github.com/repos/axoviq-ai/synthadoc/merges",
+2026-10-14T01:23:27.9978811Z             "milestones_url": "https://api.github.com/repos/axoviq-ai/synthadoc/milestones{/number}",
+2026-10-14T01:23:27.9979409Z             "mirror_url": null,
+2026-10-14T01:23:27.9979717Z             "name": "synthadoc",
+2026-10-14T01:23:27.9980069Z             "node_id": "R_kgDOR_lwVw",
+2026-10-14T01:23:27.9980750Z             "notifications_url": "https://api.github.com/repos/axoviq-ai/synthadoc/notifications{?since,all,participating}",
+2026-10-14T01:23:27.9981498Z             "open_issues": 3,
+2026-10-14T01:23:27.9981795Z             "open_issues_count": 3,
+2026-10-14T01:23:27.9982127Z             "owner": {
+2026-10-14T01:23:27.9982550Z               "avatar_url": "https://avatars.githubusercontent.com/u/275206488?v=4",
+2026-10-14T01:23:27.9983210Z               "events_url": "https://api.github.com/users/axoviq-ai/events{/privacy}",
+2026-10-14T01:23:27.9983866Z               "followers_url": "https://api.github.com/users/axoviq-ai/followers",
+2026-10-14T01:23:27.9984582Z               "following_url": "https://api.github.com/users/axoviq-ai/following{/other_user}",
+2026-10-14T01:23:27.9985415Z               "gists_url": "https://api.github.com/users/axoviq-ai/gists{/gist_id}",
+2026-10-14T01:23:27.9986128Z               "gravatar_id": "",
+2026-10-14T01:23:27.9986533Z               "html_url": "https://github.com/axoviq-ai",
+2026-10-14T01:23:27.9986920Z               "id": 275206488,
+2026-10-14T01:23:27.9987352Z               "login": "axoviq-ai",
+2026-10-14T01:23:27.9987712Z               "node_id": "O_kgDOEGdRWA",
+2026-10-14T01:23:27.9988219Z               "organizations_url": "https://api.github.com/users/axoviq-ai/orgs",
+2026-10-14T01:23:27.9988911Z               "received_events_url": "https://api.github.com/users/axoviq-ai/received_events",
+2026-10-14T01:23:27.9989575Z               "repos_url": "https://api.github.com/users/axoviq-ai/repos",
+2026-10-14T01:23:27.9990040Z               "site_admin": false,
+2026-10-14T01:23:27.9990557Z               "starred_url": "https://api.github.com/users/axoviq-ai/starred{/owner}{/repo}",
+2026-10-14T01:23:27.9991284Z               "subscriptions_url": "https://api.github.com/users/axoviq-ai/subscriptions",
+2026-10-14T01:23:27.9991850Z               "type": "Organization",
+2026-10-14T01:23:27.9992274Z               "url": "https://api.github.com/users/axoviq-ai",
+2026-10-14T01:23:27.9992709Z               "user_view_type": "public"
+2026-10-14T01:23:27.9993045Z             },
+2026-10-14T01:23:27.9993312Z             "private": false,
+2026-10-14T01:23:27.9993665Z             "pull_request_creation_policy": "all",
+2026-10-14T01:23:27.9994245Z             "pulls_url": "https://api.github.com/repos/axoviq-ai/synthadoc/pulls{/number}",
+2026-10-14T01:23:27.9994824Z             "pushed_at": "2026-10-14T01:17:33Z",
+2026-10-14T01:23:27.9995581Z             "releases_url": "https://api.github.com/repos/axoviq-ai/synthadoc/releases{/id}",
+2026-10-14T01:23:27.9996156Z             "size": 95089,
+2026-10-14T01:23:27.9996532Z             "ssh_url": "git@github.com:axoviq-ai/synthadoc.git",
+2026-10-14T01:23:27.9996980Z             "stargazers_count": 1583,
+2026-10-14T01:23:27.9997524Z             "stargazers_url": "https://api.github.com/repos/axoviq-ai/synthadoc/stargazers",
+2026-10-14T01:23:27.9998336Z             "statuses_url": "https://api.github.com/repos/axoviq-ai/synthadoc/statuses/{sha}",
+2026-10-14T01:23:27.9999048Z             "subscribers_url": "https://api.github.com/repos/axoviq-ai/synthadoc/subscribers",
+2026-10-14T01:23:27.9999807Z             "subscription_url": "https://api.github.com/repos/axoviq-ai/synthadoc/subscription",
+2026-10-14T01:23:28.0000414Z             "svn_url": "https://github.com/axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0000965Z             "tags_url": "https://api.github.com/repos/axoviq-ai/synthadoc/tags",
+2026-10-14T01:23:28.0001600Z             "teams_url": "https://api.github.com/repos/axoviq-ai/synthadoc/teams",
+2026-10-14T01:23:28.0002051Z             "topics": [
+2026-10-14T01:23:28.0002338Z               "agent-skills",
+2026-10-14T01:23:28.0002656Z               "agentic-ai",
+2026-10-14T01:23:28.0002953Z               "cli-tool",
+2026-10-14T01:23:28.0003269Z               "domain-adaptation",
+2026-10-14T01:23:28.0003591Z               "enterprise",
+2026-10-14T01:23:28.0003927Z               "enterprise-solutions",
+2026-10-14T01:23:28.0004230Z               "knowledge-graph",
+2026-10-14T01:23:28.0004450Z               "local-llm",
+2026-10-14T01:23:28.0004665Z               "obsidian-md",
+2026-10-14T01:23:28.0004856Z               "obsidian-plugin",
+2026-10-14T01:23:28.0005271Z               "personal-knowledge-management",
+2026-10-14T01:23:28.0005509Z               "pkm",
+2026-10-14T01:23:28.0005691Z               "rag-alternative",
+2026-10-14T01:23:28.0005887Z               "synthetic",
+2026-10-14T01:23:28.0006079Z               "synthetic-data"
+2026-10-14T01:23:28.0006266Z             ],
+2026-10-14T01:23:28.0006551Z             "trees_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/trees{/sha}",
+2026-10-14T01:23:28.0006888Z             "updated_at": "2026-10-14T01:08:45Z",
+2026-10-14T01:23:28.0007167Z             "url": "https://api.github.com/repos/axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0007442Z             "visibility": "public",
+2026-10-14T01:23:28.0007821Z             "watchers": 1583,
+2026-10-14T01:23:28.0008020Z             "watchers_count": 1583,
+2026-10-14T01:23:28.0008244Z             "web_commit_signoff_required": false
+2026-10-14T01:23:28.0008566Z           },
+2026-10-14T01:23:28.0008725Z           "sender": {
+2026-10-14T01:23:28.0008991Z             "avatar_url": "https://avatars.githubusercontent.com/u/4006820?v=4",
+2026-10-14T01:23:28.0009399Z             "events_url": "https://api.github.com/users/william-Johnason/events{/privacy}",
+2026-10-14T01:23:28.0009822Z             "followers_url": "https://api.github.com/users/william-Johnason/followers",
+2026-10-14T01:23:28.0010260Z             "following_url": "https://api.github.com/users/william-Johnason/following{/other_user}",
+2026-10-14T01:23:28.0010692Z             "gists_url": "https://api.github.com/users/william-Johnason/gists{/gist_id}",
+2026-10-14T01:23:28.0011014Z             "gravatar_id": "",
+2026-10-14T01:23:28.0011248Z             "html_url": "https://github.com/william-Johnason",
+2026-10-14T01:23:28.0011504Z             "id": 4006820,
+2026-10-14T01:23:28.0011701Z             "login": "william-Johnason",
+2026-10-14T01:23:28.0011937Z             "node_id": "MDQ6VXNlcjQwMDY4MjA=",
+2026-10-14T01:23:28.0012293Z             "organizations_url": "https://api.github.com/users/william-Johnason/orgs",
+2026-10-14T01:23:28.0012754Z             "received_events_url": "https://api.github.com/users/william-Johnason/received_events",
+2026-10-14T01:23:28.0013168Z             "repos_url": "https://api.github.com/users/william-Johnason/repos",
+2026-10-14T01:23:28.0013475Z             "site_admin": false,
+2026-10-14T01:23:28.0013798Z             "starred_url": "https://api.github.com/users/william-Johnason/starred{/owner}{/repo}",
+2026-10-14T01:23:28.0014254Z             "subscriptions_url": "https://api.github.com/users/william-Johnason/subscriptions",
+2026-10-14T01:23:28.0014586Z             "type": "User",
+2026-10-14T01:23:28.0014828Z             "url": "https://api.github.com/users/william-Johnason",
+2026-10-14T01:23:28.0015264Z             "user_view_type": "public"
+2026-10-14T01:23:28.0015466Z           },
+2026-10-14T01:23:28.0015668Z           "workflow": ".github/workflows/docker-publish.yml"
+2026-10-14T01:23:28.0015921Z         },
+2026-10-14T01:23:28.0016091Z         "github_job": "build-and-push",
+2026-10-14T01:23:28.0016320Z         "github_ref": "refs/heads/main",
+2026-10-14T01:23:28.0016538Z         "github_ref_name": "main",
+2026-10-14T01:23:28.0016748Z         "github_ref_protected": "true",
+2026-10-14T01:23:28.0016966Z         "github_ref_type": "branch",
+2026-10-14T01:23:28.0017197Z         "github_repository": "axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0017444Z         "github_repository_id": "1207529559",
+2026-10-14T01:23:28.0017685Z         "github_repository_owner": "axoviq-ai",
+2026-10-14T01:23:28.0017930Z         "github_repository_owner_id": "275206488",
+2026-10-14T01:23:28.0018176Z         "github_run_attempt": "1",
+2026-10-14T01:23:28.0018383Z         "github_run_id": "38494977719",
+2026-10-14T01:23:28.0018594Z         "github_run_number": "4",
+2026-10-14T01:23:28.0018802Z         "github_runner_arch": "X64",
+2026-10-14T01:23:28.0019041Z         "github_runner_environment": "github-hosted",
+2026-10-14T01:23:28.0019288Z         "github_runner_image_os": "ubuntu24",
+2026-10-14T01:23:28.0019539Z         "github_runner_image_version": "20261004.327.1",
+2026-10-14T01:23:28.0019807Z         "github_runner_name": "GitHub Actions 1000007737",
+2026-10-14T01:23:28.0020179Z         "github_runner_os": "Linux",
+2026-10-14T01:23:28.0020681Z         "github_runner_tracking_id": "github_7227593f-1a76-4e5f-adea-123efb1ba5da",
+2026-10-14T01:23:28.0021045Z         "github_server_url": "https://github.com",
+2026-10-14T01:23:28.0021323Z         "github_triggering_actor": "william-Johnason",
+2026-10-14T01:23:28.0021597Z         "github_workflow": "Publish Docker Image",
+2026-10-14T01:23:28.0022062Z         "github_workflow_ref": "axoviq-ai/synthadoc/.github/workflows/docker-publish.yml@refs/heads/main",
+2026-10-14T01:23:28.0023023Z         "github_workflow_sha": "b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa",
+2026-10-14T01:23:28.0023501Z         "platform": "linux/amd64"
+2026-10-14T01:23:28.0023927Z       }
+2026-10-14T01:23:28.0024152Z     }
+2026-10-14T01:23:28.0024369Z   },
+2026-10-14T01:23:28.0024632Z   "buildx.build.provenance/linux/arm64": {
+2026-10-14T01:23:28.0025146Z     "builder": {
+2026-10-14T01:23:28.0025571Z       "id": "https://github.com/axoviq-ai/synthadoc/actions/runs/38494977719/attempts/1"
+2026-10-14T01:23:28.0026062Z     },
+2026-10-14T01:23:28.0026361Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2026-10-14T01:23:28.0026753Z     "materials": [
+2026-10-14T01:23:28.0027005Z       {
+2026-10-14T01:23:28.0027268Z         "uri": "pkg:docker/docker/dockerfile@1",
+2026-10-14T01:23:28.0027620Z         "digest": {
+2026-10-14T01:23:28.0028063Z           "sha256": "4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e"
+2026-10-14T01:23:28.0028564Z         }
+2026-10-14T01:23:28.0028780Z       },
+2026-10-14T01:23:28.0029007Z       {
+2026-10-14T01:23:28.0029326Z         "uri": "pkg:docker/python@3.12-slim?platform=linux%2Farm64",
+2026-10-14T01:23:28.0029738Z         "digest": {
+2026-10-14T01:23:28.0030161Z           "sha256": "a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1"
+2026-10-14T01:23:28.0030649Z         }
+2026-10-14T01:23:28.0030870Z       }
+2026-10-14T01:23:28.0031082Z     ],
+2026-10-14T01:23:28.0031306Z     "invocation": {
+2026-10-14T01:23:28.0031572Z       "configSource": {
+2026-10-14T01:23:28.0031907Z         "entryPoint": "Dockerfile"
+2026-10-14T01:23:28.0032216Z       },
+2026-10-14T01:23:28.0032447Z       "parameters": {
+2026-10-14T01:23:28.0032728Z         "frontend": "gateway.v0",
+2026-10-14T01:23:28.0033024Z         "args": {
+2026-10-14T01:23:28.0033305Z           "build-arg:SYNTHADOC_VERSION": "1.4.2",
+2026-10-14T01:23:28.0033683Z           "cmdline": "docker/dockerfile:1",
+2026-10-14T01:23:28.0034045Z           "source": "docker/dockerfile:1"
+2026-10-14T01:23:28.0034392Z         },
+2026-10-14T01:23:28.0034622Z         "locals": [
+2026-10-14T01:23:28.0034898Z           {
+2026-10-14T01:23:28.0035272Z             "name": "context"
+2026-10-14T01:23:28.0035568Z           },
+2026-10-14T01:23:28.0035802Z           {
+2026-10-14T01:23:28.0036053Z             "name": "dockerfile"
+2026-10-14T01:23:28.0036348Z           }
+2026-10-14T01:23:28.0036570Z         ],
+2026-10-14T01:23:28.0036788Z         "root": {
+2026-10-14T01:23:28.0037034Z           "configSource": {
+2026-10-14T01:23:28.0037328Z             "path": "Dockerfile"
+2026-10-14T01:23:28.0037603Z           },
+2026-10-14T01:23:28.0037823Z           "request": {
+2026-10-14T01:23:28.0038066Z             "args": {
+2026-10-14T01:23:28.0038338Z               "build-arg:SYNTHADOC_VERSION": "1.4.2",
+2026-10-14T01:23:28.0038696Z               "vcs:localdir:context": ".",
+2026-10-14T01:23:28.0039042Z               "vcs:localdir:dockerfile": ".",
+2026-10-14T01:23:28.0039468Z               "vcs:revision": "b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa",
+2026-10-14T01:23:28.0039958Z               "vcs:source": "https://github.com/axoviq-ai/synthadoc"
+2026-10-14T01:23:28.0040355Z             }
+2026-10-14T01:23:28.0040572Z           }
+2026-10-14T01:23:28.0040773Z         },
+2026-10-14T01:23:28.0041023Z         "compatibilityVersion": 30
+2026-10-14T01:23:28.0041322Z       },
+2026-10-14T01:23:28.0041539Z       "environment": {
+2026-10-14T01:23:28.0041813Z         "github_actor": "william-Johnason",
+2026-10-14T01:23:28.0042168Z         "github_actor_id": "4006820",
+2026-10-14T01:23:28.0042503Z         "github_event_name": "workflow_dispatch",
+2026-10-14T01:23:28.0042881Z         "github_event_payload": {
+2026-10-14T01:23:28.0043201Z           "inputs": {
+2026-10-14T01:23:28.0043462Z             "tag": "1.4.2"
+2026-10-14T01:23:28.0043736Z           },
+2026-10-14T01:23:28.0043972Z           "organization": {
+2026-10-14T01:23:28.0044426Z             "avatar_url": "https://avatars.githubusercontent.com/u/275206488?v=4",
+2026-10-14T01:23:28.0045844Z             "description": "axoviq-ai occupies the intersection of deep technology and domain expertise. To deliver autonomous, closed-loop multi-agent AI systems and strategic consulting.",
+2026-10-14T01:23:28.0047011Z             "events_url": "https://api.github.com/orgs/axoviq-ai/events",
+2026-10-14T01:23:28.0047565Z             "hooks_url": "https://api.github.com/orgs/axoviq-ai/hooks",
+2026-10-14T01:23:28.0048001Z             "id": 275206488,
+2026-10-14T01:23:28.0048404Z             "issues_url": "https://api.github.com/orgs/axoviq-ai/issues",
+2026-10-14T01:23:28.0048851Z             "login": "axoviq-ai",
+2026-10-14T01:23:28.0049317Z             "members_url": "https://api.github.com/orgs/axoviq-ai/members{/member}",
+2026-10-14T01:23:28.0049811Z             "node_id": "O_kgDOEGdRWA",
+2026-10-14T01:23:28.0050305Z             "public_members_url": "https://api.github.com/orgs/axoviq-ai/public_members{/member}",
+2026-10-14T01:23:28.0050913Z             "repos_url": "https://api.github.com/orgs/axoviq-ai/repos",
+2026-10-14T01:23:28.0051409Z             "url": "https://api.github.com/orgs/axoviq-ai"
+2026-10-14T01:23:28.0051810Z           },
+2026-10-14T01:23:28.0052075Z           "ref": "refs/heads/main",
+2026-10-14T01:23:28.0052392Z           "repository": {
+2026-10-14T01:23:28.0052688Z             "allow_forking": true,
+2026-10-14T01:23:28.0053196Z             "archive_url": "https://api.github.com/repos/axoviq-ai/synthadoc/{archive_format}{/ref}",
+2026-10-14T01:23:28.0053747Z             "archived": false,
+2026-10-14T01:23:28.0054451Z             "assignees_url": "https://api.github.com/repos/axoviq-ai/synthadoc/assignees{/user}",
+2026-10-14T01:23:28.0055249Z             "blobs_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/blobs{/sha}",
+2026-10-14T01:23:28.0055923Z             "branches_url": "https://api.github.com/repos/axoviq-ai/synthadoc/branches{/branch}",
+2026-10-14T01:23:28.0056559Z             "clone_url": "https://github.com/axoviq-ai/synthadoc.git",
+2026-10-14T01:23:28.0057270Z             "collaborators_url": "https://api.github.com/repos/axoviq-ai/synthadoc/collaborators{/collaborator}",
+2026-10-14T01:23:28.0058083Z             "comments_url": "https://api.github.com/repos/axoviq-ai/synthadoc/comments{/number}",
+2026-10-14T01:23:28.0058738Z             "commits_url": "https://api.github.com/repos/axoviq-ai/synthadoc/commits{/sha}",
+2026-10-14T01:23:28.0059193Z             "compare_url": "https://api.github.com/repos/axoviq-ai/synthadoc/compare/{base}...{head}",
+2026-10-14T01:23:28.0059649Z             "contents_url": "https://api.github.com/repos/axoviq-ai/synthadoc/contents/{+path}",
+2026-10-14T01:23:28.0060094Z             "contributors_url": "https://api.github.com/repos/axoviq-ai/synthadoc/contributors",
+2026-10-14T01:23:28.0060443Z             "created_at": "2026-04-11T03:50:12Z",
+2026-10-14T01:23:28.0060682Z             "custom_properties": {},
+2026-10-14T01:23:28.0060901Z             "default_branch": "main",
+2026-10-14T01:23:28.0061236Z             "deployments_url": "https://api.github.com/repos/axoviq-ai/synthadoc/deployments",
+2026-10-14T01:23:28.0062191Z             "description": "Synthadoc: An open-source LLM knowledge compilation engine that turns raw documents into structured, local-first wikis. A transparent, human-readable alternative to traditional RAG, which can be self-managed and self-improved without the use of any tools.",
+2026-10-14T01:23:28.0063024Z             "disabled": false,
+2026-10-14T01:23:28.0063334Z             "downloads_url": "https://api.github.com/repos/axoviq-ai/synthadoc/downloads",
+2026-10-14T01:23:28.0063745Z             "events_url": "https://api.github.com/repos/axoviq-ai/synthadoc/events",
+2026-10-14T01:23:28.0064051Z             "fork": false,
+2026-10-14T01:23:28.0064238Z             "forks": 159,
+2026-10-14T01:23:28.0064430Z             "forks_count": 159,
+2026-10-14T01:23:28.0064713Z             "forks_url": "https://api.github.com/repos/axoviq-ai/synthadoc/forks",
+2026-10-14T01:23:28.0065181Z             "full_name": "axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0065702Z             "git_commits_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/commits{/sha}",
+2026-10-14T01:23:28.0066282Z             "git_refs_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/refs{/sha}",
+2026-10-14T01:23:28.0066709Z             "git_tags_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/tags{/sha}",
+2026-10-14T01:23:28.0067074Z             "git_url": "git://github.com/axoviq-ai/synthadoc.git",
+2026-10-14T01:23:28.0067341Z             "has_discussions": false,
+2026-10-14T01:23:28.0067563Z             "has_downloads": false,
+2026-10-14T01:23:28.0067770Z             "has_issues": true,
+2026-10-14T01:23:28.0067972Z             "has_pages": false,
+2026-10-14T01:23:28.0068182Z             "has_projects": true,
+2026-10-14T01:23:28.0068392Z             "has_pull_requests": true,
+2026-10-14T01:23:28.0068604Z             "has_wiki": true,
+2026-10-14T01:23:28.0068806Z             "homepage": "",
+2026-10-14T01:23:28.0069078Z             "hooks_url": "https://api.github.com/repos/axoviq-ai/synthadoc/hooks",
+2026-10-14T01:23:28.0069426Z             "html_url": "https://github.com/axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0069687Z             "id": 1207529559,
+2026-10-14T01:23:28.0069876Z             "is_template": false,
+2026-10-14T01:23:28.0070233Z             "issue_comment_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues/comments{/number}",
+2026-10-14T01:23:28.0070767Z             "issue_events_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues/events{/number}",
+2026-10-14T01:23:28.0071226Z             "issues_url": "https://api.github.com/repos/axoviq-ai/synthadoc/issues{/number}",
+2026-10-14T01:23:28.0071640Z             "keys_url": "https://api.github.com/repos/axoviq-ai/synthadoc/keys{/key_id}",
+2026-10-14T01:23:28.0072043Z             "labels_url": "https://api.github.com/repos/axoviq-ai/synthadoc/labels{/name}",
+2026-10-14T01:23:28.0072373Z             "language": "Python",
+2026-10-14T01:23:28.0072689Z             "languages_url": "https://api.github.com/repos/axoviq-ai/synthadoc/languages",
+2026-10-14T01:23:28.0073013Z             "license": {
+2026-10-14T01:23:28.0073209Z               "key": "agpl-3.0",
+2026-10-14T01:23:28.0073450Z               "name": "GNU Affero General Public License v3.0",
+2026-10-14T01:23:28.0073725Z               "node_id": "MDc6TGljZW5zZTE=",
+2026-10-14T01:23:28.0073953Z               "spdx_id": "AGPL-3.0",
+2026-10-14T01:23:28.0074202Z               "url": "https://api.github.com/licenses/agpl-3.0"
+2026-10-14T01:23:28.0074450Z             },
+2026-10-14T01:23:28.0074706Z             "merges_url": "https://api.github.com/repos/axoviq-ai/synthadoc/merges",
+2026-10-14T01:23:28.0075386Z             "milestones_url": "https://api.github.com/repos/axoviq-ai/synthadoc/milestones{/number}",
+2026-10-14T01:23:28.0075747Z             "mirror_url": null,
+2026-10-14T01:23:28.0075943Z             "name": "synthadoc",
+2026-10-14T01:23:28.0076155Z             "node_id": "R_kgDOR_lwVw",
+2026-10-14T01:23:28.0076573Z             "notifications_url": "https://api.github.com/repos/axoviq-ai/synthadoc/notifications{?since,all,participating}",
+2026-10-14T01:23:28.0076993Z             "open_issues": 3,
+2026-10-14T01:23:28.0077197Z             "open_issues_count": 3,
+2026-10-14T01:23:28.0077402Z             "owner": {
+2026-10-14T01:23:28.0077670Z               "avatar_url": "https://avatars.githubusercontent.com/u/275206488?v=4",
+2026-10-14T01:23:28.0084456Z               "events_url": "https://api.github.com/users/axoviq-ai/events{/privacy}",
+2026-10-14T01:23:28.0084886Z               "followers_url": "https://api.github.com/users/axoviq-ai/followers",
+2026-10-14T01:23:28.0085549Z               "following_url": "https://api.github.com/users/axoviq-ai/following{/other_user}",
+2026-10-14T01:23:28.0085957Z               "gists_url": "https://api.github.com/users/axoviq-ai/gists{/gist_id}",
+2026-10-14T01:23:28.0086258Z               "gravatar_id": "",
+2026-10-14T01:23:28.0086503Z               "html_url": "https://github.com/axoviq-ai",
+2026-10-14T01:23:28.0086897Z               "id": 275206488,
+2026-10-14T01:23:28.0087101Z               "login": "axoviq-ai",
+2026-10-14T01:23:28.0087421Z               "node_id": "O_kgDOEGdRWA",
+2026-10-14T01:23:28.0087721Z               "organizations_url": "https://api.github.com/users/axoviq-ai/orgs",
+2026-10-14T01:23:28.0088135Z               "received_events_url": "https://api.github.com/users/axoviq-ai/received_events",
+2026-10-14T01:23:28.0088514Z               "repos_url": "https://api.github.com/users/axoviq-ai/repos",
+2026-10-14T01:23:28.0088794Z               "site_admin": false,
+2026-10-14T01:23:28.0089101Z               "starred_url": "https://api.github.com/users/axoviq-ai/starred{/owner}{/repo}",
+2026-10-14T01:23:28.0089516Z               "subscriptions_url": "https://api.github.com/users/axoviq-ai/subscriptions",
+2026-10-14T01:23:28.0089838Z               "type": "Organization",
+2026-10-14T01:23:28.0090088Z               "url": "https://api.github.com/users/axoviq-ai",
+2026-10-14T01:23:28.0090343Z               "user_view_type": "public"
+2026-10-14T01:23:28.0090553Z             },
+2026-10-14T01:23:28.0090722Z             "private": false,
+2026-10-14T01:23:28.0090940Z             "pull_request_creation_policy": "all",
+2026-10-14T01:23:28.0091278Z             "pulls_url": "https://api.github.com/repos/axoviq-ai/synthadoc/pulls{/number}",
+2026-10-14T01:23:28.0091609Z             "pushed_at": "2026-10-14T01:17:33Z",
+2026-10-14T01:23:28.0091933Z             "releases_url": "https://api.github.com/repos/axoviq-ai/synthadoc/releases{/id}",
+2026-10-14T01:23:28.0092251Z             "size": 95089,
+2026-10-14T01:23:28.0092481Z             "ssh_url": "git@github.com:axoviq-ai/synthadoc.git",
+2026-10-14T01:23:28.0092747Z             "stargazers_count": 1583,
+2026-10-14T01:23:28.0093061Z             "stargazers_url": "https://api.github.com/repos/axoviq-ai/synthadoc/stargazers",
+2026-10-14T01:23:28.0093479Z             "statuses_url": "https://api.github.com/repos/axoviq-ai/synthadoc/statuses/{sha}",
+2026-10-14T01:23:28.0093907Z             "subscribers_url": "https://api.github.com/repos/axoviq-ai/synthadoc/subscribers",
+2026-10-14T01:23:28.0094339Z             "subscription_url": "https://api.github.com/repos/axoviq-ai/synthadoc/subscription",
+2026-10-14T01:23:28.0094715Z             "svn_url": "https://github.com/axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0095231Z             "tags_url": "https://api.github.com/repos/axoviq-ai/synthadoc/tags",
+2026-10-14T01:23:28.0095604Z             "teams_url": "https://api.github.com/repos/axoviq-ai/synthadoc/teams",
+2026-10-14T01:23:28.0095904Z             "topics": [
+2026-10-14T01:23:28.0096087Z               "agent-skills",
+2026-10-14T01:23:28.0096280Z               "agentic-ai",
+2026-10-14T01:23:28.0096469Z               "cli-tool",
+2026-10-14T01:23:28.0096660Z               "domain-adaptation",
+2026-10-14T01:23:28.0096863Z               "enterprise",
+2026-10-14T01:23:28.0097065Z               "enterprise-solutions",
+2026-10-14T01:23:28.0097283Z               "knowledge-graph",
+2026-10-14T01:23:28.0097486Z               "local-llm",
+2026-10-14T01:23:28.0097670Z               "obsidian-md",
+2026-10-14T01:23:28.0097866Z               "obsidian-plugin",
+2026-10-14T01:23:28.0098085Z               "personal-knowledge-management",
+2026-10-14T01:23:28.0098310Z               "pkm",
+2026-10-14T01:23:28.0098482Z               "rag-alternative",
+2026-10-14T01:23:28.0098674Z               "synthetic",
+2026-10-14T01:23:28.0098857Z               "synthetic-data"
+2026-10-14T01:23:28.0099044Z             ],
+2026-10-14T01:23:28.0099315Z             "trees_url": "https://api.github.com/repos/axoviq-ai/synthadoc/git/trees{/sha}",
+2026-10-14T01:23:28.0099647Z             "updated_at": "2026-10-14T01:08:45Z",
+2026-10-14T01:23:28.0099928Z             "url": "https://api.github.com/repos/axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0100203Z             "visibility": "public",
+2026-10-14T01:23:28.0100410Z             "watchers": 1583,
+2026-10-14T01:23:28.0100610Z             "watchers_count": 1583,
+2026-10-14T01:23:28.0100942Z             "web_commit_signoff_required": false
+2026-10-14T01:23:28.0101161Z           },
+2026-10-14T01:23:28.0101421Z           "sender": {
+2026-10-14T01:23:28.0101684Z             "avatar_url": "https://avatars.githubusercontent.com/u/4006820?v=4",
+2026-10-14T01:23:28.0102090Z             "events_url": "https://api.github.com/users/william-Johnason/events{/privacy}",
+2026-10-14T01:23:28.0102503Z             "followers_url": "https://api.github.com/users/william-Johnason/followers",
+2026-10-14T01:23:28.0102939Z             "following_url": "https://api.github.com/users/william-Johnason/following{/other_user}",
+2026-10-14T01:23:28.0103375Z             "gists_url": "https://api.github.com/users/william-Johnason/gists{/gist_id}",
+2026-10-14T01:23:28.0103688Z             "gravatar_id": "",
+2026-10-14T01:23:28.0103913Z             "html_url": "https://github.com/william-Johnason",
+2026-10-14T01:23:28.0104166Z             "id": 4006820,
+2026-10-14T01:23:28.0104359Z             "login": "william-Johnason",
+2026-10-14T01:23:28.0104595Z             "node_id": "MDQ6VXNlcjQwMDY4MjA=",
+2026-10-14T01:23:28.0104921Z             "organizations_url": "https://api.github.com/users/william-Johnason/orgs",
+2026-10-14T01:23:28.0105524Z             "received_events_url": "https://api.github.com/users/william-Johnason/received_events",
+2026-10-14T01:23:28.0105950Z             "repos_url": "https://api.github.com/users/william-Johnason/repos",
+2026-10-14T01:23:28.0106242Z             "site_admin": false,
+2026-10-14T01:23:28.0106557Z             "starred_url": "https://api.github.com/users/william-Johnason/starred{/owner}{/repo}",
+2026-10-14T01:23:28.0107016Z             "subscriptions_url": "https://api.github.com/users/william-Johnason/subscriptions",
+2026-10-14T01:23:28.0107349Z             "type": "User",
+2026-10-14T01:23:28.0107588Z             "url": "https://api.github.com/users/william-Johnason",
+2026-10-14T01:23:28.0107854Z             "user_view_type": "public"
+2026-10-14T01:23:28.0108059Z           },
+2026-10-14T01:23:28.0108265Z           "workflow": ".github/workflows/docker-publish.yml"
+2026-10-14T01:23:28.0108512Z         },
+2026-10-14T01:23:28.0108690Z         "github_job": "build-and-push",
+2026-10-14T01:23:28.0108914Z         "github_ref": "refs/heads/main",
+2026-10-14T01:23:28.0109138Z         "github_ref_name": "main",
+2026-10-14T01:23:28.0109347Z         "github_ref_protected": "true",
+2026-10-14T01:23:28.0109563Z         "github_ref_type": "branch",
+2026-10-14T01:23:28.0109793Z         "github_repository": "axoviq-ai/synthadoc",
+2026-10-14T01:23:28.0110048Z         "github_repository_id": "1207529559",
+2026-10-14T01:23:28.0110285Z         "github_repository_owner": "axoviq-ai",
+2026-10-14T01:23:28.0110528Z         "github_repository_owner_id": "275206488",
+2026-10-14T01:23:28.0110765Z         "github_run_attempt": "1",
+2026-10-14T01:23:28.0110965Z         "github_run_id": "38494977719",
+2026-10-14T01:23:28.0111171Z         "github_run_number": "4",
+2026-10-14T01:23:28.0111385Z         "github_runner_arch": "X64",
+2026-10-14T01:23:28.0111621Z         "github_runner_environment": "github-hosted",
+2026-10-14T01:23:28.0111874Z         "github_runner_image_os": "ubuntu24",
+2026-10-14T01:23:28.0112119Z         "github_runner_image_version": "20261004.327.1",
+2026-10-14T01:23:28.0112387Z         "github_runner_name": "GitHub Actions 1000007737",
+2026-10-14T01:23:28.0112637Z         "github_runner_os": "Linux",
+2026-10-14T01:23:28.0112935Z         "github_runner_tracking_id": "github_7227593f-1a76-4e5f-adea-123efb1ba5da",
+2026-10-14T01:23:28.0113266Z         "github_server_url": "https://github.com",
+2026-10-14T01:23:28.0113534Z         "github_triggering_actor": "william-Johnason",
+2026-10-14T01:23:28.0113786Z         "github_workflow": "Publish Docker Image",
+2026-10-14T01:23:28.0114176Z         "github_workflow_ref": "axoviq-ai/synthadoc/.github/workflows/docker-publish.yml@refs/heads/main",
+2026-10-14T01:23:28.0114623Z         "github_workflow_sha": "b95d31130a7edbcd61f6ddf4efbc4ab74ee73aaa",
+2026-10-14T01:23:28.0115174Z         "platform": "linux/amd64"
+2026-10-14T01:23:28.0115382Z       }
+2026-10-14T01:23:28.0115530Z     }
+2026-10-14T01:23:28.0115772Z   },
+2026-10-14T01:23:28.0116216Z   "buildx.build.ref": "builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682/builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820/hnmzmy6oe12ta9y0pyh0chzqg",
+2026-10-14T01:23:28.0116713Z   "containerimage.descriptor": {
+2026-10-14T01:23:28.0116974Z     "mediaType": "application/vnd.oci.image.index.v1+json",
+2026-10-14T01:23:28.0117349Z     "digest": "sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034",
+2026-10-14T01:23:28.0117671Z     "size": 1609
+2026-10-14T01:23:28.0117834Z   },
+2026-10-14T01:23:28.0118138Z   "containerimage.digest": "sha256:94c80bbb10507264849c41dbce609c0f0782d239444ad88eb46fc8c78be5e034",
+2026-10-14T01:23:28.0118556Z   "image.name": "chenp/synthadoc:1.4.2,chenp/synthadoc:latest"
+2026-10-14T01:23:28.0118818Z }
+2026-10-14T01:23:28.0119165Z ##[endgroup]
+2026-10-14T01:23:28.0119444Z ##[group]Reference
+2026-10-14T01:23:28.0119838Z builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682/builder-497cf30e-817c-41a2-a9ba-8dc21dd6c6820/hnmzmy6oe12ta9y0pyh0chzqg
+2026-10-14T01:23:28.0120363Z ##[endgroup]
+2026-10-14T01:23:28.0120636Z ##[group]Check build summary support
+2026-10-14T01:23:28.0120956Z Build summary supported!
+2026-10-14T01:23:28.0121231Z ##[endgroup]
+2026-10-14T01:23:28.0200376Z Post job cleanup.
+2026-10-14T01:23:28.2038007Z ##[group]Generating build summary
+2026-10-14T01:23:28.2041068Z exporting build record to /home/runner/work/_temp/docker-actions-toolkit-ubjB8C/export
+2026-10-14T01:23:28.2051391Z (node:3861) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:23:28.2052122Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:23:28.4090775Z [command]/usr/bin/docker buildx history export --builder builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682 --output /home/runner/work/_temp/docker-actions-toolkit-ubjB8C/export/axoviq-ai~synthadoc~HNMZMY.dockerbuild hnmzmy6oe12ta9y0pyh0chzqg --finalize
+2026-10-14T01:23:28.9238599Z Build record written to /home/runner/work/_temp/docker-actions-toolkit-ubjB8C/export/axoviq-ai~synthadoc~HNMZMY.dockerbuild (103.51 KB)
+2026-10-14T01:23:28.9254038Z Uploading axoviq-ai~synthadoc~HNMZMY.dockerbuild to blob storage
+2026-10-14T01:23:29.2436895Z Beginning upload of artifact content to blob storage
+2026-10-14T01:23:29.2502525Z (node:3861) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T01:23:29.2509820Z Uploaded bytes 65536
+2026-10-14T01:23:29.2511574Z Uploaded bytes 105996
+2026-10-14T01:23:29.6230141Z Finished uploading artifact content to blob storage!
+2026-10-14T01:23:29.6233601Z SHA256 hash of uploaded artifact is 21455476ec61d782e3976ad80f2d1cb56e659823dad8ce8949355b931d40fb20
+2026-10-14T01:23:29.6235602Z Finalizing artifact upload
+2026-10-14T01:23:29.9895987Z Artifact successfully finalized (11863528953)
+2026-10-14T01:23:29.9897227Z Artifact download URL: https://github.com/axoviq-ai/synthadoc/actions/runs/38494977719/artifacts/11863528953
+2026-10-14T01:23:29.9918002Z Writing summary
+2026-10-14T01:23:29.9928372Z ##[endgroup]
+2026-10-14T01:23:29.9929033Z ##[group]Removing temp folder /home/runner/work/_temp/docker-actions-toolkit-zBVjgN
+2026-10-14T01:23:29.9932304Z ##[endgroup]
+2026-10-14T01:23:29.9932722Z ##[group]Post cache
+2026-10-14T01:23:29.9933691Z State not set
+2026-10-14T01:23:29.9934186Z ##[endgroup]
+2026-10-14T01:23:30.0063923Z Post job cleanup.
+2026-10-14T01:23:30.2392299Z ##[group]Logout from docker.io
+2026-10-14T01:23:30.2408349Z (node:4021) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:23:30.2409063Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:23:30.2425629Z [command]/usr/bin/docker logout docker.io
+2026-10-14T01:23:30.2541324Z Removing login credentials for docker.io
+2026-10-14T01:23:30.2563851Z ##[endgroup]
+2026-10-14T01:23:30.2565124Z ##[group]Post cache
+2026-10-14T01:23:30.2565486Z State not set
+2026-10-14T01:23:30.2566094Z ##[endgroup]
+2026-10-14T01:23:30.2683650Z Post job cleanup.
+2026-10-14T01:23:30.4687335Z ##[group]Removing builder
+2026-10-14T01:23:30.4692333Z (node:4041) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:23:30.4693241Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:23:30.5635984Z [command]/usr/bin/docker buildx rm builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682
+2026-10-14T01:23:42.3716098Z builder-497cf30e-817c-41a2-a9ba-8dc21dd6c682 removed
+2026-10-14T01:23:42.3746155Z ##[endgroup]
+2026-10-14T01:23:42.3746869Z ##[group]Cleaning up certificates
+2026-10-14T01:23:42.3748325Z ##[endgroup]
+2026-10-14T01:23:42.3748895Z ##[group]Post cache
+2026-10-14T01:23:42.3751281Z State not set
+2026-10-14T01:23:42.3751768Z ##[endgroup]
+2026-10-14T01:23:42.3872806Z Post job cleanup.
+2026-10-14T01:23:42.5700414Z ##[group]Post cache
+2026-10-14T01:23:42.5701913Z Caching docker.io--tonistiigi--binfmt-latest-linux-x64 to GitHub Actions cache
+2026-10-14T01:23:42.5717809Z (node:4171) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T01:23:42.5718566Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T01:23:42.5866192Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/synthadoc/synthadoc --files-from manifest.txt --use-compress-program zstdmt
+2026-10-14T01:23:42.9989384Z Failed to save: Unable to reserve cache with key docker.io--tonistiigi--binfmt-latest-linux-x64, another job may be creating this cache.
+2026-10-14T01:23:43.0017605Z ##[endgroup]
+2026-10-14T01:23:43.0155873Z Post job cleanup.
+2026-10-14T01:23:43.1003593Z [command]/usr/bin/git version
+2026-10-14T01:23:43.1040238Z git version 2.55.0
+2026-10-14T01:23:43.1068769Z Temporarily overriding HOME='/home/runner/work/_temp/b2c3a023-a05a-46a7-b0d6-f6b3d4c2200f' before making global git config changes
+2026-10-14T01:23:43.1069900Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T01:23:43.1072500Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/synthadoc/synthadoc
+2026-10-14T01:23:43.1103688Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T01:23:43.1136319Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T01:23:43.1355596Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T01:23:43.1374878Z http.https://github.com/.extraheader
+2026-10-14T01:23:43.1386445Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T01:23:43.1417339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T01:23:43.1631070Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T01:23:43.1664426Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T01:23:43.2006220Z Evaluate and set environment url
+2026-10-14T01:23:43.2008819Z Evaluated environment url: https://hub.docker.com/r/chenp/synthadoc/tags
+2026-10-14T01:23:43.2009552Z Cleaning up orphan processes
+2026-10-14T01:23:43.2266508Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, docker/build-push-action@v6, docker/login-action@v3, docker/setup-buildx-action@v3, docker/setup-qemu-action@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

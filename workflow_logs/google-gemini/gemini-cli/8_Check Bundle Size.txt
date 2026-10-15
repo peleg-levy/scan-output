@@ -1,0 +1,578 @@
+﻿2026-10-14T16:47:50.0273221Z Current runner version: '2.337.0'
+2026-10-14T16:47:50.0281124Z Runner name: 'gemini-cli-ubuntu-16-core-1062650379'
+2026-10-14T16:47:50.0282049Z Runner group name: 'gemini-cli-large-runners'
+2026-10-14T16:47:50.0301520Z ##[group]Runner Image Provisioner
+2026-10-14T16:47:50.0302458Z Hosted Compute Agent
+2026-10-14T16:47:50.0303087Z Version: 20260925.591
+2026-10-14T16:47:50.0303730Z Commit: 4bbd3026ee0327b231371970207de01818f92dc2
+2026-10-14T16:47:50.0304569Z Build Date: 2026-09-14T11:04:13Z
+2026-10-14T16:47:50.0305222Z ##[endgroup]
+2026-10-14T16:47:50.0306468Z ##[group]Operating System
+2026-10-14T16:47:50.0307187Z Ubuntu
+2026-10-14T16:47:50.0307741Z 24.04.5
+2026-10-14T16:47:50.0308315Z LTS
+2026-10-14T16:47:50.0308914Z ##[endgroup]
+2026-10-14T16:47:50.0309510Z ##[group]Runner Image
+2026-10-14T16:47:50.0310465Z Image: ubuntu-24.04
+2026-10-14T16:47:50.0311062Z Version: 20261004.327.1
+2026-10-14T16:47:50.0312430Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T16:47:50.0313928Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T16:47:50.0314946Z ##[endgroup]
+2026-10-14T16:47:50.0316165Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T16:47:50.0318187Z Contents: read
+2026-10-14T16:47:50.0318798Z Metadata: read
+2026-10-14T16:47:50.0319531Z PullRequests: read
+2026-10-14T16:47:50.0320395Z ##[endgroup]
+2026-10-14T16:47:50.0322577Z Secret source: None
+2026-10-14T16:47:50.0323658Z Cache mode: write
+2026-10-14T16:47:50.0324385Z Prepare workflow directory
+2026-10-14T16:47:50.0728846Z Prepare all required actions
+2026-10-14T16:47:50.0776776Z Getting action download info
+2026-10-14T16:47:50.3662730Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2026-10-14T16:47:50.8126772Z Download action repository 'preactjs/compressed-size-action@946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a' (SHA:946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a)
+2026-10-14T16:47:51.3076108Z Complete job name: Check Bundle Size
+2026-10-14T16:47:51.3921256Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+2026-10-14T16:47:51.3922335Z with:
+2026-10-14T16:47:51.3922788Z   persist-credentials: false
+2026-10-14T16:47:51.3923328Z   ref: refs/pull/29725/merge
+2026-10-14T16:47:51.3923817Z   fetch-depth: 1
+2026-10-14T16:47:51.3924287Z   repository: google-gemini/gemini-cli
+2026-10-14T16:47:51.3928304Z   token: ***
+2026-10-14T16:47:51.3928748Z   ssh-strict: true
+2026-10-14T16:47:51.3929197Z   ssh-user: git
+2026-10-14T16:47:51.3929626Z   clean: true
+2026-10-14T16:47:51.3930298Z   sparse-checkout-cone-mode: true
+2026-10-14T16:47:51.3930826Z   fetch-tags: false
+2026-10-14T16:47:51.3931279Z   show-progress: true
+2026-10-14T16:47:51.3931735Z   lfs: false
+2026-10-14T16:47:51.3932150Z   submodules: false
+2026-10-14T16:47:51.3932602Z   set-safe-directory: true
+2026-10-14T16:47:51.3933265Z ##[endgroup]
+2026-10-14T16:47:51.4913166Z Syncing repository: google-gemini/gemini-cli
+2026-10-14T16:47:51.4915105Z ##[group]Getting Git version info
+2026-10-14T16:47:51.4915840Z Working directory is '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:47:51.4916964Z [command]/usr/bin/git version
+2026-10-14T16:47:51.5881318Z git version 2.55.0
+2026-10-14T16:47:51.5898566Z ##[endgroup]
+2026-10-14T16:47:51.5913135Z Temporarily overriding HOME='/home/runner/work/_temp/6259b043-0f2f-433b-857d-5b41302c7037' before making global git config changes
+2026-10-14T16:47:51.5914529Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:47:51.5917407Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:47:51.6138967Z Deleting the contents of '/home/runner/work/gemini-cli/gemini-cli'
+2026-10-14T16:47:51.6142805Z ##[group]Initializing the repository
+2026-10-14T16:47:51.6147396Z [command]/usr/bin/git init /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:47:51.6634296Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T16:47:51.6635748Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T16:47:51.6636707Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T16:47:51.6637451Z hint: call:
+2026-10-14T16:47:51.6637864Z hint:
+2026-10-14T16:47:51.6638391Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T16:47:51.6639010Z hint:
+2026-10-14T16:47:51.6639588Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T16:47:51.6640653Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T16:47:51.6641394Z hint:
+2026-10-14T16:47:51.6641810Z hint: 	git branch -m <name>
+2026-10-14T16:47:51.6642280Z hint:
+2026-10-14T16:47:51.6642893Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T16:47:51.6643917Z Initialized empty Git repository in /home/runner/work/gemini-cli/gemini-cli/.git/
+2026-10-14T16:47:51.6647707Z [command]/usr/bin/git remote add origin https://github.com/google-gemini/gemini-cli
+2026-10-14T16:47:51.6914428Z ##[endgroup]
+2026-10-14T16:47:51.6915235Z ##[group]Disabling automatic garbage collection
+2026-10-14T16:47:51.6918928Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T16:47:51.6951269Z ##[endgroup]
+2026-10-14T16:47:51.6952052Z ##[group]Setting up auth
+2026-10-14T16:47:51.6957506Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:47:51.6989182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:47:51.8789400Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:47:51.8823542Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:47:51.9069247Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T16:47:51.9108452Z ##[endgroup]
+2026-10-14T16:47:51.9109648Z ##[group]Fetching the repository
+2026-10-14T16:47:51.9117074Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/pull/29725/merge:refs/remotes/pull/29725/merge
+2026-10-14T16:47:54.6139054Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T16:47:54.6139810Z  * [new ref]         refs/pull/29725/merge -> pull/29725/merge
+2026-10-14T16:47:54.6142506Z ##[endgroup]
+2026-10-14T16:47:54.6143067Z ##[group]Determining the checkout info
+2026-10-14T16:47:54.6144862Z ##[endgroup]
+2026-10-14T16:47:54.6150142Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T16:47:54.6307210Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T16:47:54.6338429Z ##[group]Checking out the ref
+2026-10-14T16:47:54.6343006Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/29725/merge
+2026-10-14T16:47:55.0741656Z Note: switching to 'refs/remotes/pull/29725/merge'.
+2026-10-14T16:47:55.0743117Z 
+2026-10-14T16:47:55.0743377Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T16:47:55.0743961Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T16:47:55.0744521Z state without impacting any branches by switching back to a branch.
+2026-10-14T16:47:55.0744878Z 
+2026-10-14T16:47:55.0745097Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T16:47:55.0745640Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T16:47:55.0745922Z 
+2026-10-14T16:47:55.0746065Z   git switch -c <new-branch-name>
+2026-10-14T16:47:55.0746263Z 
+2026-10-14T16:47:55.0746408Z Or undo this operation with:
+2026-10-14T16:47:55.0746595Z 
+2026-10-14T16:47:55.0747085Z   git switch -
+2026-10-14T16:47:55.0747309Z 
+2026-10-14T16:47:55.0747662Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T16:47:55.0748010Z 
+2026-10-14T16:47:55.0748381Z HEAD is now at 1f2767f Merge 32469a2a91741084ad1c4ec0230dd84b92bac100 into a6321abb69aa877288417f6eb85a7acc0165ea1f
+2026-10-14T16:47:55.0756397Z ##[endgroup]
+2026-10-14T16:47:55.0808165Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T16:47:55.0833315Z 1f2767f9590f1b25e5be6881dcd428560f10cc0b
+2026-10-14T16:47:55.0843041Z ##[group]Removing auth
+2026-10-14T16:47:55.0846551Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:47:55.0876695Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:47:55.1121397Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:47:55.1148887Z http.https://github.com/.extraheader
+2026-10-14T16:47:55.1155192Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T16:47:55.1187508Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:47:55.1429777Z ##[endgroup]
+2026-10-14T16:47:55.1753117Z ##[group]Run preactjs/compressed-size-action@946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a
+2026-10-14T16:47:55.1753643Z with:
+2026-10-14T16:47:55.1756343Z   repo-token: ***
+2026-10-14T16:47:55.1756598Z   pattern: ./bundle/**/*.{js,sb}
+2026-10-14T16:47:55.1756887Z   minimum-change-threshold: 1000
+2026-10-14T16:47:55.1757156Z   compression: none
+2026-10-14T16:47:55.1757384Z   clean-script: clean
+2026-10-14T16:47:55.1757609Z   build-script: build
+2026-10-14T16:47:55.1757821Z   show-total: true
+2026-10-14T16:47:55.1758067Z   collapse-unchanged: true
+2026-10-14T16:47:55.1758309Z ##[endgroup]
+2026-10-14T16:47:55.2373205Z PR #29725 is targeted at main (main)
+2026-10-14T16:47:55.2376976Z ##[group][current] Install Dependencies
+2026-10-14T16:47:55.2377308Z Installing using npm ci
+2026-10-14T16:47:55.2398587Z [command]/usr/local/bin/npm ci
+2026-10-14T16:48:04.9263032Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-10-14T16:48:05.4502967Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2026-10-14T16:49:33.0126451Z 
+2026-10-14T16:49:33.0127107Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae prepare
+2026-10-14T16:49:33.0127564Z > husky && npm run bundle
+2026-10-14T16:49:33.0127728Z 
+2026-10-14T16:49:33.1481320Z 
+2026-10-14T16:49:33.1481881Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-14T16:49:33.1483104Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-14T16:49:33.1483889Z 
+2026-10-14T16:49:33.2428063Z 
+2026-10-14T16:49:33.2428546Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:49:33.2429016Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:49:33.2429232Z 
+2026-10-14T16:49:33.4364576Z 
+2026-10-14T16:49:33.4365211Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:33.4365832Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:49:33.4366183Z 
+2026-10-14T16:49:33.5528269Z 
+2026-10-14T16:49:33.5529172Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:49:33.5529638Z > node esbuild.client.js
+2026-10-14T16:49:33.5529833Z 
+2026-10-14T16:49:34.8741843Z 
+2026-10-14T16:49:34.8742512Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:49:34.8743018Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:49:34.8743695Z 
+2026-10-14T16:49:35.5251126Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:49:35.5692302Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:49:36.5934216Z Copied 9 policy files to bundle/policies/
+2026-10-14T16:49:36.5941671Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-14T16:49:36.6013287Z Copied docs to bundle/docs/
+2026-10-14T16:49:36.6018150Z Copied built-in skills to bundle/builtin/
+2026-10-14T16:49:36.6164124Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-14T16:49:36.6215049Z Copied extension examples to bundle/examples/
+2026-10-14T16:49:36.6215610Z Assets copied to bundle/
+2026-10-14T16:49:36.6505429Z 
+2026-10-14T16:49:36.6505955Z added 1410 packages, and audited 1418 packages in 2m
+2026-10-14T16:49:36.6506231Z 
+2026-10-14T16:49:36.6506346Z 389 packages are looking for funding
+2026-10-14T16:49:36.6506675Z   run `npm fund` for details
+2026-10-14T16:49:36.9268457Z 
+2026-10-14T16:49:36.9268948Z 100 vulnerabilities (4 low, 44 moderate, 45 high, 7 critical)
+2026-10-14T16:49:36.9269298Z 
+2026-10-14T16:49:36.9269452Z To address issues that do not require attention, run:
+2026-10-14T16:49:36.9269777Z   npm audit fix
+2026-10-14T16:49:36.9270147Z 
+2026-10-14T16:49:36.9270365Z To address all issues (including breaking changes), run:
+2026-10-14T16:49:36.9271270Z   npm audit fix --force
+2026-10-14T16:49:36.9271414Z 
+2026-10-14T16:49:36.9271516Z Run `npm audit` for details.
+2026-10-14T16:49:37.0313840Z ##[endgroup]
+2026-10-14T16:49:37.0314274Z ##[group][current] Build using npm
+2026-10-14T16:49:37.0314568Z Building using npm run build
+2026-10-14T16:49:37.0325120Z [command]/usr/local/bin/npm run build
+2026-10-14T16:49:37.1269066Z 
+2026-10-14T16:49:37.1269460Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:37.1270167Z > node scripts/build.js
+2026-10-14T16:49:37.1270363Z 
+2026-10-14T16:49:37.2509551Z 
+2026-10-14T16:49:37.2510378Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:49:37.2510835Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:49:37.2511057Z 
+2026-10-14T16:49:37.3378144Z CI environment detected. Building workspaces sequentially...
+2026-10-14T16:49:37.4468936Z 
+2026-10-14T16:49:37.4469568Z > @google/gemini-cli-a2a-server@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:37.4470292Z > node ../../scripts/build_package.js
+2026-10-14T16:49:37.4470494Z 
+2026-10-14T16:49:45.7729848Z Successfully copied files.
+2026-10-14T16:49:45.7791065Z 
+2026-10-14T16:49:45.7791394Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:49:45.7791823Z > node ../../scripts/build_package.js
+2026-10-14T16:49:45.7792014Z 
+2026-10-14T16:50:24.2653990Z Successfully copied files.
+2026-10-14T16:50:24.2726750Z 
+2026-10-14T16:50:24.2727118Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:24.2727595Z > node ../../scripts/build_package.js
+2026-10-14T16:50:24.2727789Z 
+2026-10-14T16:50:24.4790342Z Running chrome devtools MCP bundling...
+2026-10-14T16:50:24.5940313Z 
+2026-10-14T16:50:24.5941083Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:50:24.5941592Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:50:24.5941780Z 
+2026-10-14T16:50:25.2681324Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:50:25.3126471Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:50:25.3805711Z Successfully copied files.
+2026-10-14T16:50:25.3922935Z Copied documentation to dist/docs
+2026-10-14T16:50:25.3959578Z 
+2026-10-14T16:50:25.3959840Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:25.3960494Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:50:25.3961053Z 
+2026-10-14T16:50:25.5094826Z 
+2026-10-14T16:50:25.5095600Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:50:25.5096089Z > node esbuild.client.js
+2026-10-14T16:50:25.5096246Z 
+2026-10-14T16:50:26.6396640Z 
+2026-10-14T16:50:26.6397171Z > @google/gemini-cli-sdk@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:26.6397634Z > node ../../scripts/build_package.js
+2026-10-14T16:50:26.6397831Z 
+2026-10-14T16:50:28.7756979Z Successfully copied files.
+2026-10-14T16:50:28.7813557Z 
+2026-10-14T16:50:28.7813868Z > @google/gemini-cli-test-utils@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:28.7814316Z > node ../../scripts/build_package.js
+2026-10-14T16:50:28.7814510Z 
+2026-10-14T16:50:30.7056024Z Successfully copied files.
+2026-10-14T16:50:30.7112332Z 
+2026-10-14T16:50:30.7112631Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:30.7113073Z > npm run build:dev
+2026-10-14T16:50:30.7113255Z 
+2026-10-14T16:50:30.8260009Z 
+2026-10-14T16:50:30.8260568Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build:dev
+2026-10-14T16:50:30.8261069Z > node esbuild.js
+2026-10-14T16:50:30.8261209Z 
+2026-10-14T16:50:30.8799380Z [watch] build started
+2026-10-14T16:50:31.2631038Z [watch] build finished
+2026-10-14T16:50:32.4379417Z ##[endgroup]
+2026-10-14T16:50:32.4390578Z [command]/usr/bin/git reset --hard
+2026-10-14T16:50:32.6420260Z HEAD is now at 1f2767f Merge 32469a2a91741084ad1c4ec0230dd84b92bac100 into a6321abb69aa877288417f6eb85a7acc0165ea1f
+2026-10-14T16:50:32.6774035Z ##[group][base] Checkout target branch
+2026-10-14T16:50:32.6784690Z [command]/usr/bin/git fetch -n origin main:main
+2026-10-14T16:50:39.7517865Z From https://github.com/google-gemini/gemini-cli
+2026-10-14T16:50:39.7518280Z  * [new branch]          main       -> main
+2026-10-14T16:50:39.7518607Z  * [new branch]          main       -> origin/main
+2026-10-14T16:50:39.7524374Z successfully fetched base.ref
+2026-10-14T16:50:39.7524728Z checking out and building base commit
+2026-10-14T16:50:39.7537101Z [command]/usr/bin/git reset --hard main
+2026-10-14T16:50:39.7725339Z HEAD is now at a6321abb6 chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae (#29740)
+2026-10-14T16:50:39.7731749Z ##[endgroup]
+2026-10-14T16:50:39.7732315Z ##[group][base] Cleanup via npm run clean
+2026-10-14T16:50:39.7740784Z [command]/usr/local/bin/npm run clean
+2026-10-14T16:50:39.8640356Z 
+2026-10-14T16:50:39.8641098Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae clean
+2026-10-14T16:50:39.8641507Z > node scripts/clean.js
+2026-10-14T16:50:39.8641670Z 
+2026-10-14T16:50:44.4685301Z ##[endgroup]
+2026-10-14T16:50:44.4687392Z ##[group][base] Install Dependencies
+2026-10-14T16:50:44.4688077Z Installing using npm ci
+2026-10-14T16:50:44.4697494Z [command]/usr/local/bin/npm ci
+2026-10-14T16:50:49.6367862Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2026-10-14T16:50:50.2384296Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-10-14T16:50:57.8958242Z 
+2026-10-14T16:50:57.8958760Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae prepare
+2026-10-14T16:50:57.8959176Z > husky && npm run bundle
+2026-10-14T16:50:57.8959327Z 
+2026-10-14T16:50:58.0578200Z 
+2026-10-14T16:50:58.0578791Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae bundle
+2026-10-14T16:50:58.0579785Z > npm run generate && npm run build --workspace=@google/gemini-cli-devtools && npm run bundle:browser-mcp -w @google/gemini-cli-core && node esbuild.config.js && node scripts/copy_bundle_assets.js
+2026-10-14T16:50:58.0580617Z 
+2026-10-14T16:50:58.1512972Z 
+2026-10-14T16:50:58.1513474Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:50:58.1513939Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:50:58.1514155Z 
+2026-10-14T16:50:58.3446382Z 
+2026-10-14T16:50:58.3446969Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:50:58.3447803Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:50:58.3448049Z 
+2026-10-14T16:50:58.4619621Z 
+2026-10-14T16:50:58.4620430Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:50:58.4620902Z > node esbuild.client.js
+2026-10-14T16:50:58.4621054Z 
+2026-10-14T16:50:59.6897280Z 
+2026-10-14T16:50:59.6897870Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:50:59.6898405Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:50:59.6898605Z 
+2026-10-14T16:51:00.3470317Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:51:00.3913724Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:51:01.4930876Z Copied 9 policy files to bundle/policies/
+2026-10-14T16:51:01.4938345Z Copied 9 policy files to packages/a2a-server/dist/policies/
+2026-10-14T16:51:01.5009461Z Copied docs to bundle/docs/
+2026-10-14T16:51:01.5014422Z Copied built-in skills to bundle/builtin/
+2026-10-14T16:51:01.5163177Z Copied bundled chrome-devtools-mcp to bundle/bundled/
+2026-10-14T16:51:01.5211265Z Copied extension examples to bundle/examples/
+2026-10-14T16:51:01.5211618Z Assets copied to bundle/
+2026-10-14T16:51:01.5531636Z 
+2026-10-14T16:51:01.5531904Z added 1410 packages, and audited 1418 packages in 17s
+2026-10-14T16:51:01.5532478Z 
+2026-10-14T16:51:01.5532595Z 389 packages are looking for funding
+2026-10-14T16:51:01.5532886Z   run `npm fund` for details
+2026-10-14T16:51:01.8330268Z 
+2026-10-14T16:51:01.8330710Z 100 vulnerabilities (4 low, 44 moderate, 45 high, 7 critical)
+2026-10-14T16:51:01.8331039Z 
+2026-10-14T16:51:01.8331184Z To address issues that do not require attention, run:
+2026-10-14T16:51:01.8331501Z   npm audit fix
+2026-10-14T16:51:01.8331628Z 
+2026-10-14T16:51:01.8331774Z To address all issues (including breaking changes), run:
+2026-10-14T16:51:01.8332140Z   npm audit fix --force
+2026-10-14T16:51:01.8332278Z 
+2026-10-14T16:51:01.8332382Z Run `npm audit` for details.
+2026-10-14T16:51:01.9313074Z ##[endgroup]
+2026-10-14T16:51:01.9313532Z ##[group][base] Build using npm
+2026-10-14T16:51:01.9327801Z [command]/usr/local/bin/npm run build
+2026-10-14T16:51:02.0248171Z 
+2026-10-14T16:51:02.0248635Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:02.0249037Z > node scripts/build.js
+2026-10-14T16:51:02.0249232Z 
+2026-10-14T16:51:02.1480737Z 
+2026-10-14T16:51:02.1481364Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae generate
+2026-10-14T16:51:02.1481825Z > node scripts/generate-git-commit-info.js
+2026-10-14T16:51:02.1482034Z 
+2026-10-14T16:51:02.2353717Z CI environment detected. Building workspaces sequentially...
+2026-10-14T16:51:02.3465564Z 
+2026-10-14T16:51:02.3466276Z > @google/gemini-cli-a2a-server@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:02.3466742Z > node ../../scripts/build_package.js
+2026-10-14T16:51:02.3466975Z 
+2026-10-14T16:51:10.6221556Z Successfully copied files.
+2026-10-14T16:51:10.6284131Z 
+2026-10-14T16:51:10.6284444Z > @google/gemini-cli@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:10.6284848Z > node ../../scripts/build_package.js
+2026-10-14T16:51:10.6285045Z 
+2026-10-14T16:51:48.9410428Z Successfully copied files.
+2026-10-14T16:51:48.9485720Z 
+2026-10-14T16:51:48.9486003Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:48.9486468Z > node ../../scripts/build_package.js
+2026-10-14T16:51:48.9486667Z 
+2026-10-14T16:51:49.1616035Z Running chrome devtools MCP bundling...
+2026-10-14T16:51:49.2770873Z 
+2026-10-14T16:51:49.2771424Z > @google/gemini-cli-core@0.66.0-nightly.20261013.g204db94ae bundle:browser-mcp
+2026-10-14T16:51:49.2771924Z > node scripts/bundle-browser-mcp.mjs
+2026-10-14T16:51:49.2772125Z 
+2026-10-14T16:51:49.9433086Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/chrome-devtools-mcp.mjs
+2026-10-14T16:51:49.9883429Z Sanitizing hardcoded API key in: /home/runner/work/gemini-cli/gemini-cli/packages/core/dist/bundled/third_party/index.js
+2026-10-14T16:51:50.0593004Z Successfully copied files.
+2026-10-14T16:51:50.0710174Z Copied documentation to dist/docs
+2026-10-14T16:51:50.0747316Z 
+2026-10-14T16:51:50.0747598Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:50.0748103Z > npm run build:client && tsc -p tsconfig.build.json
+2026-10-14T16:51:50.0748338Z 
+2026-10-14T16:51:50.1889835Z 
+2026-10-14T16:51:50.1890217Z > @google/gemini-cli-devtools@0.66.0-nightly.20261013.g204db94ae build:client
+2026-10-14T16:51:50.1890667Z > node esbuild.client.js
+2026-10-14T16:51:50.1890818Z 
+2026-10-14T16:51:51.3088250Z 
+2026-10-14T16:51:51.3088872Z > @google/gemini-cli-sdk@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:51.3089342Z > node ../../scripts/build_package.js
+2026-10-14T16:51:51.3089555Z 
+2026-10-14T16:51:53.4646948Z Successfully copied files.
+2026-10-14T16:51:53.4704462Z 
+2026-10-14T16:51:53.4704773Z > @google/gemini-cli-test-utils@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:53.4705223Z > node ../../scripts/build_package.js
+2026-10-14T16:51:53.4705412Z 
+2026-10-14T16:51:55.3805457Z Successfully copied files.
+2026-10-14T16:51:55.3876506Z 
+2026-10-14T16:51:55.3876827Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build
+2026-10-14T16:51:55.3877269Z > npm run build:dev
+2026-10-14T16:51:55.3877756Z 
+2026-10-14T16:51:55.5183623Z 
+2026-10-14T16:51:55.5184319Z > gemini-cli-vscode-ide-companion@0.66.0-nightly.20261013.g204db94ae build:dev
+2026-10-14T16:51:55.5185109Z > node esbuild.js
+2026-10-14T16:51:55.5185310Z 
+2026-10-14T16:51:55.5922465Z [watch] build started
+2026-10-14T16:51:56.0399978Z [watch] build finished
+2026-10-14T16:51:57.2577601Z ##[endgroup]
+2026-10-14T16:51:57.2588271Z [command]/usr/bin/git reset --hard
+2026-10-14T16:51:57.2758298Z HEAD is now at a6321abb6 chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae (#29740)
+2026-10-14T16:51:57.2941981Z ##[group]Size Differences:
+2026-10-14T16:51:57.2952668Z          ./bundle/bundled/third_party/index.js ⏤  8 MB
+2026-10-14T16:51:57.2953163Z                     ./bundle/chunk-2J3JWUVR.js ⏤  0 B (-3.77 kB)
+2026-10-14T16:51:57.2953592Z                     ./bundle/chunk-34MYV7JD.js ⏤  2.45 kB
+2026-10-14T16:51:57.2954068Z                     ./bundle/chunk-4WUSV2U7.js ⏤  0 B (-13.7 kB)
+2026-10-14T16:51:57.2954479Z                     ./bundle/chunk-5AUYMPVF.js ⏤  858 B
+2026-10-14T16:51:57.2954844Z                     ./bundle/chunk-5PS3AYFU.js ⏤  1.18 kB
+2026-10-14T16:51:57.2955196Z                     ./bundle/chunk-664ZODQF.js ⏤  124 kB
+2026-10-14T16:51:57.2955576Z                     ./bundle/chunk-775K274T.js ⏤  0 B (-670 kB)
+2026-10-14T16:51:57.2955962Z                     ./bundle/chunk-7DMKYD36.js ⏤  0 B (-3.43 kB)
+2026-10-14T16:51:57.2956336Z                     ./bundle/chunk-AJ7TCWQL.js ⏤  0 B (-19.5 kB)
+2026-10-14T16:51:57.2956695Z                     ./bundle/chunk-DAHVX5MI.js ⏤  206 kB
+2026-10-14T16:51:57.2957073Z                     ./bundle/chunk-EGGAEO3M.js ⏤  0 B (-49.2 kB)
+2026-10-14T16:51:57.2957430Z                     ./bundle/chunk-IUUIT4SU.js ⏤  56.5 kB
+2026-10-14T16:51:57.2957772Z                     ./bundle/chunk-L5V3KIDT.js ⏤  1.62 kB
+2026-10-14T16:51:57.2958112Z                     ./bundle/chunk-L6PII3GR.js ⏤  41.5 kB
+2026-10-14T16:51:57.2958475Z                     ./bundle/chunk-PFYJ3F4G.js ⏤  0 B (-16.8 MB)
+2026-10-14T16:51:57.2958869Z                     ./bundle/chunk-ZSJOMVVI.js ⏤  0 B (-3.68 MB)
+2026-10-14T16:51:57.2959261Z                   ./bundle/cleanup-MWTV5BNW.js ⏤  0 B (-902 B)
+2026-10-14T16:51:57.2959755Z                      ./bundle/core-LTZFCWYO.js ⏤  0 B (-53.1 kB)
+2026-10-14T16:51:57.2960256Z                  ./bundle/devtools-TYCPOPV3.js ⏤  683 kB
+2026-10-14T16:51:57.2960662Z           ./bundle/devtoolsService-UJHKGVAT.js ⏤  0 B (-147 kB)
+2026-10-14T16:51:57.2961055Z                    ./bundle/events-XB7DADIJ.js ⏤  418 B
+2026-10-14T16:51:57.2961769Z    ./bundle/examples/hooks/scripts/on-start.js ⏤  188 B
+2026-10-14T16:51:57.2962160Z        ./bundle/examples/mcp-server/example.js ⏤  1.43 kB
+2026-10-14T16:51:57.2962553Z                    ./bundle/gemini-64MJMGX4.js ⏤  0 B (-649 kB)
+2026-10-14T16:51:57.2962916Z                             ./bundle/gemini.js ⏤  5.09 kB
+2026-10-14T16:51:57.2963278Z          ./bundle/getMachineId-bsd-TXG52NKR.js ⏤  1.55 kB
+2026-10-14T16:51:57.2963697Z       ./bundle/getMachineId-darwin-7OE4DDZ6.js ⏤  1.55 kB
+2026-10-14T16:51:57.2964098Z        ./bundle/getMachineId-linux-SHIFKOOX.js ⏤  1.34 kB
+2026-10-14T16:51:57.2964501Z  ./bundle/getMachineId-unsupported-5U5DOEYY.js ⏤  1.06 kB
+2026-10-14T16:51:57.2964908Z          ./bundle/getMachineId-win-6KLLGOI4.js ⏤  1.72 kB
+2026-10-14T16:51:57.2965285Z         ./bundle/https-proxy-agent-JWL7GO47.js ⏤  479 B
+2026-10-14T16:51:57.2965703Z            ./bundle/interactiveCli-4JB5DYAX.js ⏤  0 B (-1.33 MB)
+2026-10-14T16:51:57.2966137Z       ./bundle/liteRtServerManager-4OU6IJIP.js ⏤  0 B (-2.08 kB)
+2026-10-14T16:51:57.2966564Z          ./bundle/multipart-parser-E7RMVJWU.js ⏤  11.7 kB
+2026-10-14T16:51:57.2966954Z          ./bundle/multipart-parser-KPBZEGQU.js ⏤  11.7 kB
+2026-10-14T16:51:57.2967363Z           ./bundle/oauth2-provider-P4YEBUKA.js ⏤  0 B (-10.6 kB)
+2026-10-14T16:51:57.2967795Z      ./bundle/sandbox-macos-permissive-open.sb ⏤  8.69 kB
+2026-10-14T16:51:57.2968206Z   ./bundle/sandbox-macos-permissive-proxied.sb ⏤  8.97 kB
+2026-10-14T16:51:57.2968766Z     ./bundle/sandbox-macos-restrictive-open.sb ⏤  6.86 kB
+2026-10-14T16:51:57.2969198Z  ./bundle/sandbox-macos-restrictive-proxied.sb ⏤  7.06 kB
+2026-10-14T16:51:57.2969601Z          ./bundle/sandbox-macos-strict-open.sb ⏤  8.23 kB
+2026-10-14T16:51:57.2970118Z       ./bundle/sandbox-macos-strict-proxied.sb ⏤  8.44 kB
+2026-10-14T16:51:57.2970491Z                       ./bundle/src-65GKNWUJ.js ⏤  45.4 kB
+2026-10-14T16:51:57.2970829Z                       ./bundle/src-U45KTUYT.js ⏤  45.7 kB
+2026-10-14T16:51:57.2971185Z                       ./bundle/src-XZYPU6PJ.js ⏤  352 kB
+2026-10-14T16:51:57.2971551Z                     ./bundle/start-6LZYNIQ6.js ⏤  0 B (-622 B)
+2026-10-14T16:51:57.2971917Z               ./bundle/tree-sitter-7U6MW5PS.js ⏤  274 kB
+2026-10-14T16:51:57.2972278Z          ./bundle/tree-sitter-bash-34ZGLXVX.js ⏤  1.84 MB
+2026-10-14T16:51:57.2972648Z                ./bundle/worker/worker-entry.js ⏤  363 kB
+2026-10-14T16:51:57.2973038Z                     ./bundle/chunk-3WQPLPFX.js ⏤  670 kB (+670 kB)
+2026-10-14T16:51:57.2973450Z                     ./bundle/chunk-B5FHSNK6.js ⏤  13.7 kB (+13.7 kB)
+2026-10-14T16:51:57.2973860Z                     ./bundle/chunk-B5H2NTTA.js ⏤  49.2 kB (+49.2 kB)
+2026-10-14T16:51:57.2974249Z                     ./bundle/chunk-D4VKZ65I.js ⏤  3.68 MB (+3.68 MB)
+2026-10-14T16:51:57.2974629Z                     ./bundle/chunk-E6POQCN2.js ⏤  3.43 kB (+3.43 kB)
+2026-10-14T16:51:57.2975011Z                     ./bundle/chunk-FPN62F6J.js ⏤  16.8 MB (+16.8 MB)
+2026-10-14T16:51:57.2975403Z                     ./bundle/chunk-KO7OBZHZ.js ⏤  19.5 kB (+19.5 kB)
+2026-10-14T16:51:57.2975817Z                     ./bundle/chunk-OVEHX7ID.js ⏤  3.77 kB (+3.77 kB)
+2026-10-14T16:51:57.2976206Z                   ./bundle/cleanup-NEAKGU52.js ⏤  902 B (+902 B)
+2026-10-14T16:51:57.2976604Z                      ./bundle/core-5PJ3WEYO.js ⏤  53.4 kB (+53.4 kB)
+2026-10-14T16:51:57.2977025Z           ./bundle/devtoolsService-EHNGZUYI.js ⏤  147 kB (+147 kB)
+2026-10-14T16:51:57.2977465Z                    ./bundle/gemini-LI5NMDLE.js ⏤  649 kB (+649 kB)
+2026-10-14T16:51:57.2977881Z            ./bundle/interactiveCli-5C7XV6JB.js ⏤  1.33 MB (+1.33 MB)
+2026-10-14T16:51:57.2978327Z       ./bundle/liteRtServerManager-GP7JDHEV.js ⏤  2.08 kB (+2.08 kB)
+2026-10-14T16:51:57.2978773Z           ./bundle/oauth2-provider-Q4Q2GBVW.js ⏤  10.6 kB (+10.6 kB)
+2026-10-14T16:51:57.2979175Z                     ./bundle/start-FLIFGEHS.js ⏤  622 B (+622 B)
+2026-10-14T16:51:57.2979387Z 
+2026-10-14T16:51:57.2979663Z ##[endgroup]
+2026-10-14T16:51:57.2980316Z ##[group]Updating stats PR comment
+2026-10-14T16:51:57.3083658Z (node:2687) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T16:51:57.3084675Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T16:51:57.7171683Z Creating new comment
+2026-10-14T16:51:57.9466809Z Error creating comment: Resource not accessible by integration
+2026-10-14T16:51:57.9467256Z Submitting a PR review comment instead...
+2026-10-14T16:51:58.1356396Z Error creating PR review.
+2026-10-14T16:51:58.1357150Z ##[endgroup]
+2026-10-14T16:51:58.1357286Z 
+2026-10-14T16:51:58.1357474Z Error: compressed-size-action was unable to comment on your PR.
+2026-10-14T16:51:58.1357979Z This can happen for PR's originating from a fork without write permissions.
+2026-10-14T16:51:58.1358476Z You can copy the size table directly into a comment using the markdown below:
+2026-10-14T16:51:58.1358806Z 
+2026-10-14T16:51:58.1358810Z 
+2026-10-14T16:51:58.1358913Z **Size Change:** +5.54 kB (+0.02%) 
+2026-10-14T16:51:58.1359079Z 
+2026-10-14T16:51:58.1359175Z **Total Size:** 35.5 MB
+2026-10-14T16:51:58.1359315Z 
+2026-10-14T16:51:58.1359415Z | Filename | Size | Change |  |
+2026-10-14T16:51:58.1359699Z | :--- | :---: | :---: | :---: |
+2026-10-14T16:51:58.1361059Z | `./bundle/chunk-2J3JWUVR.js` | 0 B | -3.77 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1361602Z | `./bundle/chunk-4WUSV2U7.js` | 0 B | -13.7 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1362057Z | `./bundle/chunk-775K274T.js` | 0 B | -670 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1362514Z | `./bundle/chunk-7DMKYD36.js` | 0 B | -3.43 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1363038Z | `./bundle/chunk-AJ7TCWQL.js` | 0 B | -19.5 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1363525Z | `./bundle/chunk-EGGAEO3M.js` | 0 B | -49.2 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1364007Z | `./bundle/chunk-PFYJ3F4G.js` | 0 B | -16.8 MB (removed) | 🏆 |
+2026-10-14T16:51:58.1364493Z | `./bundle/chunk-ZSJOMVVI.js` | 0 B | -3.68 MB (removed) | 🏆 |
+2026-10-14T16:51:58.1364967Z | `./bundle/core-LTZFCWYO.js` | 0 B | -53.1 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1365495Z | `./bundle/devtoolsService-UJHKGVAT.js` | 0 B | -147 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1366002Z | `./bundle/gemini-64MJMGX4.js` | 0 B | -649 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1366523Z | `./bundle/interactiveCli-4JB5DYAX.js` | 0 B | -1.33 MB (removed) | 🏆 |
+2026-10-14T16:51:58.1367121Z | `./bundle/liteRtServerManager-4OU6IJIP.js` | 0 B | -2.08 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1367729Z | `./bundle/oauth2-provider-P4YEBUKA.js` | 0 B | -10.6 kB (removed) | 🏆 |
+2026-10-14T16:51:58.1368298Z | `./bundle/chunk-3WQPLPFX.js` | 670 kB | +670 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1368806Z | `./bundle/chunk-B5FHSNK6.js` | 13.7 kB | +13.7 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1369290Z | `./bundle/chunk-B5H2NTTA.js` | 49.2 kB | +49.2 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1369806Z | `./bundle/chunk-D4VKZ65I.js` | 3.68 MB | +3.68 MB (new file) | 🆕 |
+2026-10-14T16:51:58.1370422Z | `./bundle/chunk-E6POQCN2.js` | 3.43 kB | +3.43 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1370920Z | `./bundle/chunk-FPN62F6J.js` | 16.8 MB | +16.8 MB (new file) | 🆕 |
+2026-10-14T16:51:58.1371413Z | `./bundle/chunk-KO7OBZHZ.js` | 19.5 kB | +19.5 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1371917Z | `./bundle/chunk-OVEHX7ID.js` | 3.77 kB | +3.77 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1372406Z | `./bundle/core-5PJ3WEYO.js` | 53.4 kB | +53.4 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1372958Z | `./bundle/devtoolsService-EHNGZUYI.js` | 147 kB | +147 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1373513Z | `./bundle/gemini-LI5NMDLE.js` | 649 kB | +649 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1374077Z | `./bundle/interactiveCli-5C7XV6JB.js` | 1.33 MB | +1.33 MB (new file) | 🆕 |
+2026-10-14T16:51:58.1374692Z | `./bundle/liteRtServerManager-GP7JDHEV.js` | 2.08 kB | +2.08 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1375503Z | `./bundle/oauth2-provider-Q4Q2GBVW.js` | 10.6 kB | +10.6 kB (new file) | 🆕 |
+2026-10-14T16:51:58.1375825Z 
+2026-10-14T16:51:58.1376103Z <details><summary>ℹ️ <strong>View Unchanged</strong></summary>
+2026-10-14T16:51:58.1376393Z 
+2026-10-14T16:51:58.1376493Z | Filename | Size | Change |  |
+2026-10-14T16:51:58.1376772Z | :--- | :---: | :---: | :---: |
+2026-10-14T16:51:58.1377090Z | `./bundle/bundled/third_party/index.js` | 8 MB | 0 B |  |
+2026-10-14T16:51:58.1377482Z | `./bundle/chunk-34MYV7JD.js` | 2.45 kB | 0 B |  |
+2026-10-14T16:51:58.1377824Z | `./bundle/chunk-5AUYMPVF.js` | 858 B | 0 B |  |
+2026-10-14T16:51:58.1378156Z | `./bundle/chunk-5PS3AYFU.js` | 1.18 kB | 0 B |  |
+2026-10-14T16:51:58.1378483Z | `./bundle/chunk-664ZODQF.js` | 124 kB | 0 B |  |
+2026-10-14T16:51:58.1378809Z | `./bundle/chunk-DAHVX5MI.js` | 206 kB | 0 B |  |
+2026-10-14T16:51:58.1379128Z | `./bundle/chunk-IUUIT4SU.js` | 56.5 kB | 0 B |  |
+2026-10-14T16:51:58.1379467Z | `./bundle/chunk-L5V3KIDT.js` | 1.62 kB | 0 B |  |
+2026-10-14T16:51:58.1379811Z | `./bundle/chunk-L6PII3GR.js` | 41.5 kB | 0 B |  |
+2026-10-14T16:51:58.1380427Z | `./bundle/cleanup-MWTV5BNW.js` | 0 B | -902 B (removed) | 🏆 |
+2026-10-14T16:51:58.1380832Z | `./bundle/devtools-TYCPOPV3.js` | 683 kB | 0 B |  |
+2026-10-14T16:51:58.1381151Z | `./bundle/events-XB7DADIJ.js` | 418 B | 0 B |  |
+2026-10-14T16:51:58.1381508Z | `./bundle/examples/hooks/scripts/on-start.js` | 188 B | 0 B |  |
+2026-10-14T16:51:58.1382056Z | `./bundle/examples/mcp-server/example.js` | 1.43 kB | 0 B |  |
+2026-10-14T16:51:58.1382401Z | `./bundle/gemini.js` | 5.09 kB | 0 B |  |
+2026-10-14T16:51:58.1382754Z | `./bundle/getMachineId-bsd-TXG52NKR.js` | 1.55 kB | 0 B |  |
+2026-10-14T16:51:58.1383169Z | `./bundle/getMachineId-darwin-7OE4DDZ6.js` | 1.55 kB | 0 B |  |
+2026-10-14T16:51:58.1383588Z | `./bundle/getMachineId-linux-SHIFKOOX.js` | 1.34 kB | 0 B |  |
+2026-10-14T16:51:58.1384058Z | `./bundle/getMachineId-unsupported-5U5DOEYY.js` | 1.06 kB | 0 B |  |
+2026-10-14T16:51:58.1384530Z | `./bundle/getMachineId-win-6KLLGOI4.js` | 1.72 kB | 0 B |  |
+2026-10-14T16:51:58.1384953Z | `./bundle/https-proxy-agent-JWL7GO47.js` | 479 B | 0 B |  |
+2026-10-14T16:51:58.1385399Z | `./bundle/multipart-parser-E7RMVJWU.js` | 11.7 kB | 0 B |  |
+2026-10-14T16:51:58.1385811Z | `./bundle/multipart-parser-KPBZEGQU.js` | 11.7 kB | 0 B |  |
+2026-10-14T16:51:58.1386229Z | `./bundle/sandbox-macos-permissive-open.sb` | 8.69 kB | 0 B |  |
+2026-10-14T16:51:58.1386668Z | `./bundle/sandbox-macos-permissive-proxied.sb` | 8.97 kB | 0 B |  |
+2026-10-14T16:51:58.1387100Z | `./bundle/sandbox-macos-restrictive-open.sb` | 6.86 kB | 0 B |  |
+2026-10-14T16:51:58.1387534Z | `./bundle/sandbox-macos-restrictive-proxied.sb` | 7.06 kB | 0 B |  |
+2026-10-14T16:51:58.1387940Z | `./bundle/sandbox-macos-strict-open.sb` | 8.23 kB | 0 B |  |
+2026-10-14T16:51:58.1388327Z | `./bundle/sandbox-macos-strict-proxied.sb` | 8.44 kB | 0 B |  |
+2026-10-14T16:51:58.1388683Z | `./bundle/src-65GKNWUJ.js` | 45.4 kB | 0 B |  |
+2026-10-14T16:51:58.1388990Z | `./bundle/src-U45KTUYT.js` | 45.7 kB | 0 B |  |
+2026-10-14T16:51:58.1389305Z | `./bundle/src-XZYPU6PJ.js` | 352 kB | 0 B |  |
+2026-10-14T16:51:58.1389736Z | `./bundle/start-6LZYNIQ6.js` | 0 B | -622 B (removed) | 🏆 |
+2026-10-14T16:51:58.1390249Z | `./bundle/tree-sitter-7U6MW5PS.js` | 274 kB | 0 B |  |
+2026-10-14T16:51:58.1390621Z | `./bundle/tree-sitter-bash-34ZGLXVX.js` | 1.84 MB | 0 B |  |
+2026-10-14T16:51:58.1390978Z | `./bundle/worker/worker-entry.js` | 363 kB | 0 B |  |
+2026-10-14T16:51:58.1391426Z | `./bundle/cleanup-NEAKGU52.js` | 902 B | +902 B (new file) | 🆕 |
+2026-10-14T16:51:58.1391896Z | `./bundle/start-FLIFGEHS.js` | 622 B | +622 B (new file) | 🆕 |
+2026-10-14T16:51:58.1392137Z 
+2026-10-14T16:51:58.1392225Z </details>
+2026-10-14T16:51:58.1392337Z 
+2026-10-14T16:51:58.1392341Z 
+2026-10-14T16:51:58.1392345Z 
+2026-10-14T16:51:58.1392655Z <a href="https://github.com/preactjs/compressed-size-action"><sub>compressed-size-action</sub></a>
+2026-10-14T16:51:58.1393064Z 
+2026-10-14T16:51:58.1393372Z 
+2026-10-14T16:51:58.1393375Z 
+2026-10-14T16:51:58.1393459Z All done!
+2026-10-14T16:51:58.1548516Z Post job cleanup.
+2026-10-14T16:51:58.2400083Z [command]/usr/bin/git version
+2026-10-14T16:51:58.2467518Z git version 2.55.0
+2026-10-14T16:51:58.2500330Z Temporarily overriding HOME='/home/runner/work/_temp/56592db0-ba28-41ff-86d3-e4a969c6a00b' before making global git config changes
+2026-10-14T16:51:58.2501088Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T16:51:58.2504820Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/gemini-cli/gemini-cli
+2026-10-14T16:51:58.2538941Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T16:51:58.2570379Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T16:51:58.2813558Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T16:51:58.2844447Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T16:51:58.3229547Z Cleaning up orphan processes
+2026-10-14T16:51:58.3731369Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: preactjs/compressed-size-action@946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

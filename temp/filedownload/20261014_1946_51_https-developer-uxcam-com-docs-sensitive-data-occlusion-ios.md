@@ -1,0 +1,148 @@
+---
+updatedAt: 2026-07-07T09:45:55.000Z
+agentTools:
+  projectIndex: https://developer.uxcam.com/llms.txt
+---
+
+# Mask PII & Sensitive Content
+
+Hide sensitive data and PII from session recordings in your iOS app
+
+Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA and Apple’s App Store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
+
+<OcclusionDemo />
+
+> 📘 **UIKit vs SwiftUI** The APIs below come in  *both*  flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
+
+***
+
+# What’s hidden by default?
+
+| Platform    | Occluded out of the box                                                                                |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| **UIKit**   | `UITextField` with `UITextContentType` of `password`, `creditCardNumber`, `newPassword`, `oneTimeCode` |
+| **SwiftUI** | Any `TextField` or `SecureField` wrapped in `.uxcamOcclude()`                                          |
+
+No code required—these never reach UXCam servers.
+
+***
+
+# Dashboard‑first rules (zero‑code)
+
+1. **Settings → Video Recording Privacy** in your UXCam dashboard.
+2. Choose **Record • Occlude • Blur** globally *or* per screen.
+3. (Optional) **Blur radius** selector and **Record gestures** toggle.
+4. Save → record a test session to verify.
+
+<Image align="center" border={false} caption="Selecting the Blur option will also enable you to select the blur radius once applied." src="https://files.readme.io/0ab7d3d80f51c44741d7eeaa809c94228d1783c5f4e58a79583c430466674cc7-screenDash.png" />
+
+> 🛠️ **Priority ladder**\
+> Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
+
+<Image align="center" border={false} caption="You can add screen specific rules with different occlusion types" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
+
+<Image align="center" border={false} caption="You can also choose to occlude all **text input** fields on one or multiple screens." src="https://files.readme.io/3a9d7654b24bb774443f0dd6f44b297f90c668016bc954e25f9d488e389baba3-textDash.png" />
+
+***
+
+<br />
+
+# One‑liner occlusion APIs
+
+### Overlay an entire screen
+
+```swift
+let yellow = UXCamOverlaySetting(color: .systemYellow)
+UXCam.applyOcclusion(yellow) // UIKit
+// SwiftUI: UXCamCore.applyOcclusion(yellow)
+```
+
+<Image align="center" border={false} caption="You'll see the desired screen completely hidden while your users navigate trough it." src="https://files.readme.io/a96f4d9bacac9f2662cea981b3f7f3e3c04ebfc58f76759a9b17772643b302cb-image.png" />
+
+### Blur with custom radius
+
+```swift
+let blur = UXCamBlurSetting(radius: 6, hideGestures: false)
+UXCam.applyOcclusion(blur)
+```
+
+<Image align="center" border={false} caption="You'll see the chosen screens with a blur applied on top" src="https://files.readme.io/18a9a5d2c25698585101efd6c5e495151a3ad7649c8686872b62e0a84868b43b-UXCam_Dashboard_May_24_2022.gif" />
+
+<Image align="center" border={false} caption="Blur radios strength examples" src="https://files.readme.io/7e030fe3e85402cffea6959bbfa70cf985b6cfd53ddb7ce61f0bd23cbef6d6bc-Blur_Results_Comparison_-_Sensitive_Data_Occlusion.png" />
+
+<br />
+
+### Hide *all* text inputs
+
+```swift
+UXCam.applyOcclusion(UXCamOccludeAllTextFields())
+```
+
+### Hide a single sensitive view
+
+```swift
+passwordField.uxcamOcclude()                 // SwiftUI
+UXCam.occludeSensitiveView(cardNumberView)   // UIKit
+```
+
+### Remove occlusion
+
+```swift
+UXCam.removeOcclusion()            // everything
+UXCam.removeOcclusion(of: .blur)   // just blurs
+```
+
+***
+
+# Apply at config time (recommended)
+
+```swift
+let blur = UXCamBlurSetting(radius: 5)
+let occlusion = UXCamOcclusion()
+occlusion.apply(blur, screens: ["CheckoutViewController"]) // or SwiftUI tag
+
+let config = UXCamConfiguration(appKey: key)
+config.occlusion = occlusion
+UXCam.start(with: config)
+```
+
+This keeps all rules **in one place** and avoids race conditions.
+
+***
+
+# Sample SwiftUI snippet
+
+```swift
+init() {
+  UXCamCore.optIntoVideoRecordings()
+  let cfg = Configuration(appKey: key)
+  cfg.enableAutomaticScreenNameTagging = true
+  UXCamSwiftUI.start(with: cfg)
+}
+
+var body: some View {
+  SecureField("Password", text: $pwd)
+     .uxcamOcclude(blockGestures: true) // hide & block gestures
+}
+```
+
+***
+
+# Verification checklist
+
+1. Record a debug session through sensitive flows.
+2. Play it back, passwords & cards must be *red‑boxed or blurred*.
+3. Use the “Record gestures” toggle if taps should *not* be shown.
+
+***
+
+# Troubleshooting
+
+| Issue                                    | Cause                               | Fix                                    |
+| ---------------------------------------- | ----------------------------------- | -------------------------------------- |
+| Overlay shows but gestures still visible | `hideGestures` defaulted to `false` | Set `hideGestures = true`              |
+| Blur only on some devices                | `radius` too low on @3x screens     | Use ≥ 5 or switch to overlay           |
+| Text inputs still visible                | Custom `UITextField` subclass       | Call `uxcamOcclude()` manually         |
+| WebView leaks card numbers               | Bridge not injected                 | See *Sensitive Data in WebViews* guide |
+
+***

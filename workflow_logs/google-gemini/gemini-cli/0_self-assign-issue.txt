@@ -1,0 +1,125 @@
+﻿2026-10-12T20:09:03.4227705Z Current runner version: '2.337.0'
+2026-10-12T20:09:03.4254768Z ##[group]Runner Image Provisioner
+2026-10-12T20:09:03.4256094Z Hosted Compute Agent
+2026-10-12T20:09:03.4257030Z Version: 20261002.596
+2026-10-12T20:09:03.4257972Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-12T20:09:03.4259103Z Build Date: 2026-10-02T22:28:27Z
+2026-10-12T20:09:03.4260146Z Worker ID: {76082ae3-082a-4b7d-af7d-6a8108706ea8}
+2026-10-12T20:09:03.4261241Z Region: eastus
+2026-10-12T20:09:03.4262073Z Cloud: Azure
+2026-10-12T20:09:03.4262912Z ##[endgroup]
+2026-10-12T20:09:03.4264995Z ##[group]Operating System
+2026-10-12T20:09:03.4266113Z Ubuntu
+2026-10-12T20:09:03.4266959Z 24.04.5
+2026-10-12T20:09:03.4267799Z LTS
+2026-10-12T20:09:03.4268628Z ##[endgroup]
+2026-10-12T20:09:03.4269636Z ##[group]Runner Image
+2026-10-12T20:09:03.4270549Z Image: ubuntu-24.04
+2026-10-12T20:09:03.4271437Z Version: 20261004.327.1
+2026-10-12T20:09:03.4273103Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-12T20:09:03.4275248Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-12T20:09:03.4276560Z ##[endgroup]
+2026-10-12T20:09:03.4278432Z ##[group]GITHUB_TOKEN Permissions
+2026-10-12T20:09:03.4280774Z Contents: read
+2026-10-12T20:09:03.4281704Z Issues: write
+2026-10-12T20:09:03.4282617Z Metadata: read
+2026-10-12T20:09:03.4283469Z Packages: read
+2026-10-12T20:09:03.4284860Z Statuses: write
+2026-10-12T20:09:03.4285803Z ##[endgroup]
+2026-10-12T20:09:03.4288352Z Secret source: Actions
+2026-10-12T20:09:03.4289787Z Cache mode: read
+2026-10-12T20:09:03.4290739Z Prepare workflow directory
+2026-10-12T20:09:03.4701405Z Prepare all required actions
+2026-10-12T20:09:03.4750603Z Getting action download info
+2026-10-12T20:09:03.6868411Z Download action repository 'actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b' (SHA:a8d616148505b5069dccd32f177bb87d7f39123b)
+2026-10-12T20:09:03.9189544Z Download action repository 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea' (SHA:60a0d83039c74a4aee543508d2ffcb1c3799cdea)
+2026-10-12T20:09:04.1313673Z Complete job name: self-assign-issue
+2026-10-12T20:09:04.2320453Z ##[group]Run actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b
+2026-10-12T20:09:04.2321884Z with:
+2026-10-12T20:09:04.2322625Z   app-id: ***
+2026-10-12T20:09:04.2335220Z   private-key: ***
+2026-10-12T20:09:04.2335928Z   permission-issues: write
+2026-10-12T20:09:04.2336638Z   skip-token-revoke: false
+2026-10-12T20:09:04.2337373Z   github-api-url: https://api.github.com
+2026-10-12T20:09:04.2338482Z ##[endgroup]
+2026-10-12T20:09:04.3498692Z Inputs 'owner' and 'repositories' are not set. Creating token for this repository (google-gemini/gemini-cli).
+2026-10-12T20:09:04.7640488Z ##[group]Run actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2026-10-12T20:09:04.7641959Z with:
+2026-10-12T20:09:04.7646506Z   github-token: ***
+2026-10-12T20:09:04.7662409Z   script: const issueNumber = context.issue.number;
+const commenter = context.actor;
+const owner = context.repo.owner;
+const repo = context.repo.repo;
+const MAX_ISSUES_ASSIGNED = 3;
+
+const issue = await github.rest.issues.get({
+  owner: context.repo.owner,
+  repo: context.repo.repo,
+  issue_number: issueNumber,
+});
+
+const hasHelpWantedLabel = issue.data.labels.some(label => label.name === 'help wanted');
+
+if (!hasHelpWantedLabel) {
+  await github.rest.issues.createComment({
+    owner: owner,
+    repo: repo,
+    issue_number: issueNumber,
+    body: `👋 @${commenter}, thanks for your interest in this issue! We're reserving self-assignment for issues that have been marked with the \`help wanted\` label. Feel free to check out our list of [issues that need attention](https://github.com/google-gemini/gemini-cli/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).`
+  });
+  return;
+}
+
+// Search for open issues already assigned to the commenter in this repo
+const { data: assignedIssues } = await github.rest.search.issuesAndPullRequests({
+  q: `is:issue repo:${owner}/${repo} assignee:${commenter} is:open`,
+  advanced_search: true
+});
+
+if (assignedIssues.total_count >= MAX_ISSUES_ASSIGNED) {
+  await github.rest.issues.createComment({
+    owner: owner,
+    repo: repo,
+    issue_number: issueNumber,
+    body: `👋 @${commenter}! You currently have ${assignedIssues.total_count} issues assigned to you. We have a ${MAX_ISSUES_ASSIGNED} max issues assigned at once policy. Once you close out an existing issue it will open up space to take another. You can also unassign yourself from an existing issue but please work on a hand-off if someone is expecting work on that issue.`
+  });
+  return; // exit
+}
+
+if (issue.data.assignees.length > 0) {
+  // Comment that it's already assigned
+  await github.rest.issues.createComment({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    issue_number: issueNumber,
+    body: `@${commenter} Thanks for taking interest but this issue is already assigned. We'd still love to have you contribute. Check out our [Help Wanted](https://github.com/google-gemini/gemini-cli/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22help%20wanted%22) list for issues where we need some extra attention.`
+  });
+  return;
+}
+
+// If not taken, assign the user who commented
+await github.rest.issues.addAssignees({
+  owner: context.repo.owner,
+  repo: context.repo.repo,
+  issue_number: issueNumber,
+  assignees: [commenter]
+});
+
+// Post a comment to confirm assignment
+await github.rest.issues.createComment({
+  owner: context.repo.owner,
+  repo: context.repo.repo,
+  issue_number: issueNumber,
+  body: `👋 @${commenter}, you've been assigned to this issue! Thank you for taking the time to contribute. Make sure to check out our [contributing guidelines](https://github.com/google-gemini/gemini-cli/blob/main/CONTRIBUTING.md).`
+});
+
+2026-10-12T20:09:04.7679318Z   debug: false
+2026-10-12T20:09:04.7679986Z   user-agent: actions/github-script
+2026-10-12T20:09:04.7680733Z   result-encoding: json
+2026-10-12T20:09:04.7681389Z   retries: 0
+2026-10-12T20:09:04.7682129Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-12T20:09:04.7682935Z ##[endgroup]
+2026-10-12T20:09:05.9243048Z Post job cleanup.
+2026-10-12T20:09:06.2415825Z Token revoked
+2026-10-12T20:09:06.2808017Z Cleaning up orphan processes
+2026-10-12T20:09:06.3118654Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b, actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

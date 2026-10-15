@@ -1,0 +1,256 @@
+﻿2026-10-14T13:38:32.3167786Z Current runner version: '2.337.0'
+2026-10-14T13:38:32.3192582Z ##[group]Runner Image Provisioner
+2026-10-14T13:38:32.3193720Z Hosted Compute Agent
+2026-10-14T13:38:32.3194410Z Version: 20261012.601
+2026-10-14T13:38:32.3195244Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-14T13:38:32.3196198Z Build Date: 2026-10-12T17:48:21Z
+2026-10-14T13:38:32.3197469Z Worker ID: {cd83f199-d19f-4332-a1c6-5d5921df9ce7}
+2026-10-14T13:38:32.3198401Z Region: westus3
+2026-10-14T13:38:32.3199032Z Cloud: Azure
+2026-10-14T13:38:32.3199692Z ##[endgroup]
+2026-10-14T13:38:32.3201155Z ##[group]Operating System
+2026-10-14T13:38:32.3201984Z Ubuntu
+2026-10-14T13:38:32.3202570Z 24.04.5
+2026-10-14T13:38:32.3203144Z LTS
+2026-10-14T13:38:32.3203769Z ##[endgroup]
+2026-10-14T13:38:32.3204434Z ##[group]Runner Image
+2026-10-14T13:38:32.3205222Z Image: ubuntu-24.04
+2026-10-14T13:38:32.3205903Z Version: 20261012.334.1
+2026-10-14T13:38:32.3208000Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T13:38:32.3210440Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-14T13:38:32.3211893Z ##[endgroup]
+2026-10-14T13:38:32.3213499Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T13:38:32.3215815Z Contents: write
+2026-10-14T13:38:32.3216653Z Metadata: read
+2026-10-14T13:38:32.3217392Z Packages: write
+2026-10-14T13:38:32.3218058Z ##[endgroup]
+2026-10-14T13:38:32.3220117Z Secret source: Actions
+2026-10-14T13:38:32.3221292Z Cache mode: write
+2026-10-14T13:38:32.3222122Z Prepare workflow directory
+2026-10-14T13:38:32.3593880Z Prepare all required actions
+2026-10-14T13:38:32.3638947Z Getting action download info
+2026-10-14T13:38:32.6865161Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-14T13:38:32.8010078Z Download action repository 'actions-hub/kubectl@master' (SHA:d95b167fd6c1be77bcace93d188d57d19dfc5258)
+2026-10-14T13:38:33.1607475Z Complete job name: deploy-premium-image-to-kubernetes
+2026-10-14T13:38:33.1982030Z ##[group]Build container for action use: '/home/runner/work/_actions/actions-hub/kubectl/master/Dockerfile'.
+2026-10-14T13:38:33.2058711Z ##[command]/usr/bin/docker build -t 48b56f:3b34f51b31254e86b28033e20eaa1d73 -f "/home/runner/work/_actions/actions-hub/kubectl/master/Dockerfile" "/home/runner/work/_actions/actions-hub/kubectl/master"
+2026-10-14T13:38:33.8066063Z #0 building with "default" instance using docker driver
+2026-10-14T13:38:33.8067086Z 
+2026-10-14T13:38:33.8067449Z #1 [internal] load build definition from Dockerfile
+2026-10-14T13:38:33.8068595Z #1 transferring dockerfile: 765B 0.0s done
+2026-10-14T13:38:33.8070092Z #1 WARN: MaintainerDeprecated: Maintainer instruction is deprecated in favor of using label (line 2)
+2026-10-14T13:38:33.8071613Z #1 DONE 0.0s
+2026-10-14T13:38:33.8071985Z 
+2026-10-14T13:38:33.8072442Z #2 [internal] load metadata for docker.io/library/alpine:3.17
+2026-10-14T13:38:34.0024167Z #2 ...
+2026-10-14T13:38:34.0025020Z 
+2026-10-14T13:38:34.0025695Z #3 [auth] library/alpine:pull token for registry-1.docker.io
+2026-10-14T13:38:34.0026938Z #3 DONE 0.0s
+2026-10-14T13:38:34.1522938Z 
+2026-10-14T13:38:34.1524553Z #2 [internal] load metadata for docker.io/library/alpine:3.17
+2026-10-14T13:38:34.5070579Z #2 DONE 0.9s
+2026-10-14T13:38:34.6271586Z 
+2026-10-14T13:38:34.6273053Z #4 [internal] load .dockerignore
+2026-10-14T13:38:34.6274669Z #4 transferring context: 2B done
+2026-10-14T13:38:34.6275902Z #4 DONE 0.0s
+2026-10-14T13:38:34.6276812Z 
+2026-10-14T13:38:34.6277409Z #5 [internal] load build context
+2026-10-14T13:38:34.6278713Z #5 transferring context: 1.80kB done
+2026-10-14T13:38:34.6279751Z #5 DONE 0.0s
+2026-10-14T13:38:34.6280268Z 
+2026-10-14T13:38:34.6281150Z #6 [1/3] FROM docker.io/library/alpine:3.17@sha256:8fc3dacfb6d69da8d44e42390de777e48577085db99aa4e4af35f483eb08b989
+2026-10-14T13:38:34.6283140Z #6 resolve docker.io/library/alpine:3.17@sha256:8fc3dacfb6d69da8d44e42390de777e48577085db99aa4e4af35f483eb08b989 done
+2026-10-14T13:38:34.6285294Z #6 sha256:8fc3dacfb6d69da8d44e42390de777e48577085db99aa4e4af35f483eb08b989 8.08kB / 8.08kB done
+2026-10-14T13:38:34.6287061Z #6 sha256:920690a8d840be3c20bf5205001bc913be3a4d8c39ea191bbdaf8e187ffcb180 1.02kB / 1.02kB done
+2026-10-14T13:38:34.6288569Z #6 sha256:775f483016a7d128be2a6c6978785619990f9ac24abb5ff1868222020118b279 601B / 601B done
+2026-10-14T13:38:34.6290183Z #6 sha256:fbcfea79c1c4819e0689385057cfd4cbd2ee9ba20e6d420b360644788a22862c 3.39MB / 3.39MB 0.1s
+2026-10-14T13:38:34.7442422Z #6 sha256:fbcfea79c1c4819e0689385057cfd4cbd2ee9ba20e6d420b360644788a22862c 3.39MB / 3.39MB 0.1s done
+2026-10-14T13:38:34.7444764Z #6 extracting sha256:fbcfea79c1c4819e0689385057cfd4cbd2ee9ba20e6d420b360644788a22862c 0.1s done
+2026-10-14T13:38:34.9669139Z #6 DONE 0.2s
+2026-10-14T13:38:34.9670135Z 
+2026-10-14T13:38:34.9671405Z #7 [2/3] COPY entrypoint.sh /entrypoint.sh
+2026-10-14T13:38:34.9673399Z #7 DONE 0.1s
+2026-10-14T13:38:34.9674398Z 
+2026-10-14T13:38:34.9678840Z #8 [3/3] RUN if [ "linux/amd64" = "linux/amd64" ]; then ARCHITECTURE=amd64; elif [ "linux/amd64" = "linux/arm/v7" ]; then ARCHITECTURE=arm; elif [ "linux/amd64" = "linux/arm64" ]; then ARCHITECTURE=arm64; else ARCHITECTURE=amd64; fi &&     chmod +x /entrypoint.sh &&     apk add --no-cache --update openssl curl ca-certificates &&     curl -L https://dl.k8s.io/release/v1.37.1/bin/linux/$ARCHITECTURE/kubectl -o /usr/local/bin/kubectl &&     chmod +x /usr/local/bin/kubectl &&     rm -rf /var/cache/apk/*
+2026-10-14T13:38:34.9683843Z #8 0.141 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz
+2026-10-14T13:38:35.3079476Z #8 0.482 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/x86_64/APKINDEX.tar.gz
+2026-10-14T13:38:35.6872099Z #8 0.861 (1/8) Upgrading libcrypto3 (3.0.15-r0 -> 3.0.19-r0)
+2026-10-14T13:38:35.8080989Z #8 0.943 (2/8) Upgrading libssl3 (3.0.15-r0 -> 3.0.19-r0)
+2026-10-14T13:38:35.8081512Z #8 0.959 (3/8) Installing ca-certificates (20240226-r0)
+2026-10-14T13:38:35.8082072Z #8 0.982 (4/8) Installing brotli-libs (1.0.9-r9)
+2026-10-14T13:38:35.9353634Z #8 1.002 (5/8) Installing nghttp2-libs (1.51.0-r2)
+2026-10-14T13:38:35.9354403Z #8 1.013 (6/8) Installing libcurl (8.9.0-r0)
+2026-10-14T13:38:35.9355213Z #8 1.032 (7/8) Installing curl (8.9.0-r0)
+2026-10-14T13:38:35.9355916Z #8 1.046 (8/8) Installing openssl (3.0.19-r0)
+2026-10-14T13:38:35.9356734Z #8 1.065 Executing busybox-1.35.0-r31.trigger
+2026-10-14T13:38:35.9357400Z #8 1.068 Executing ca-certificates-20240226-r0.trigger
+2026-10-14T13:38:35.9358012Z #8 1.110 OK: 11 MiB in 21 packages
+2026-10-14T13:38:36.1627938Z #8 1.145   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-10-14T13:38:36.1629324Z #8 1.145                                  Dload  Upload   Total   Spent    Left  Speed
+2026-10-14T13:38:36.1630191Z #8 1.145 
+2026-10-14T13:38:36.1631474Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-10-14T13:38:36.1632325Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-10-14T13:38:36.1633059Z 100 59.0M  100 59.0M    0     0   307M      0 --:--:-- --:--:-- --:--:--  307M
+2026-10-14T13:38:36.5913563Z #8 DONE 1.8s
+2026-10-14T13:38:36.7448201Z 
+2026-10-14T13:38:36.7449813Z #9 exporting to image
+2026-10-14T13:38:36.7450953Z #9 exporting layers
+2026-10-14T13:38:37.0147745Z #9 exporting layers 0.4s done
+2026-10-14T13:38:37.0544654Z #9 writing image sha256:97e0f6de91910d674235f0f44767398194433f892e72d24046acafc1d403c9a6 done
+2026-10-14T13:38:37.0545736Z #9 naming to docker.io/library/48b56f:3b34f51b31254e86b28033e20eaa1d73 done
+2026-10-14T13:38:37.0546854Z #9 DONE 0.4s
+2026-10-14T13:38:37.0547331Z 
+2026-10-14T13:38:37.0547993Z  [33m1 warning found (use docker --debug to expand):
+2026-10-14T13:38:37.0548988Z [0m - MaintainerDeprecated: Maintainer instruction is deprecated in favor of using label (line 2)
+2026-10-14T13:38:37.0693080Z ##[endgroup]
+2026-10-14T13:38:37.0970577Z ##[group]Run actions/checkout@v4
+2026-10-14T13:38:37.0971077Z with:
+2026-10-14T13:38:37.0971351Z   lfs: true
+2026-10-14T13:38:37.0971829Z   submodules: true
+2026-10-14T13:38:37.0972716Z   token: ***
+2026-10-14T13:38:37.0973063Z   repository: invoice-collector/invoice-collector
+2026-10-14T13:38:37.0973430Z   ssh-strict: true
+2026-10-14T13:38:37.0973702Z   ssh-user: git
+2026-10-14T13:38:37.0974083Z   persist-credentials: true
+2026-10-14T13:38:37.0974408Z   clean: true
+2026-10-14T13:38:37.0974721Z   sparse-checkout-cone-mode: true
+2026-10-14T13:38:37.0975040Z   fetch-depth: 1
+2026-10-14T13:38:37.0975301Z   fetch-tags: false
+2026-10-14T13:38:37.0975676Z   show-progress: true
+2026-10-14T13:38:37.0976004Z   set-safe-directory: true
+2026-10-14T13:38:37.0976510Z   allow-unsafe-pr-checkout: false
+2026-10-14T13:38:37.0977039Z env:
+2026-10-14T13:38:37.0977348Z   TAG: master
+2026-10-14T13:38:37.0977728Z   IMAGE_NAME: ghcr.io/invoice-collector/invoice-collector
+2026-10-14T13:38:37.0978305Z   IMAGE_NAME_PREMIUM: ghcr.io/invoice-collector/invoice-collector-premium
+2026-10-14T13:38:37.0978773Z   DEPLOYMENT_NAME_DEMO: invoice-collector-demo
+2026-10-14T13:38:37.0979167Z   DEPLOYMENT_NAME_PROD: invoice-collector-prod
+2026-10-14T13:38:37.0979601Z   DOCKER_BUILD_RECORD_UPLOAD: false
+2026-10-14T13:38:37.0979930Z ##[endgroup]
+2026-10-14T13:38:37.1912769Z Syncing repository: invoice-collector/invoice-collector
+2026-10-14T13:38:37.1915149Z ##[group]Getting Git version info
+2026-10-14T13:38:37.1916581Z Working directory is '/home/runner/work/invoice-collector/invoice-collector'
+2026-10-14T13:38:37.1917731Z [command]/usr/bin/git version
+2026-10-14T13:38:37.1918270Z git version 2.55.0
+2026-10-14T13:38:37.1929949Z [command]/usr/bin/git lfs version
+2026-10-14T13:38:37.7220951Z git-lfs/3.8.0 (GitHub; linux amd64; go 1.27.0)
+2026-10-14T13:38:37.7239773Z ##[endgroup]
+2026-10-14T13:38:37.7253816Z Temporarily overriding HOME='/home/runner/work/_temp/f73a20b0-c5ce-428b-a5ec-a89bda7790bd' before making global git config changes
+2026-10-14T13:38:37.7255102Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T13:38:37.7259396Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-10-14T13:38:37.7300858Z Deleting the contents of '/home/runner/work/invoice-collector/invoice-collector'
+2026-10-14T13:38:37.7304269Z ##[group]Initializing the repository
+2026-10-14T13:38:37.7308409Z [command]/usr/bin/git init /home/runner/work/invoice-collector/invoice-collector
+2026-10-14T13:38:37.7385070Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T13:38:37.7385830Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T13:38:37.7386514Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T13:38:37.7387106Z hint: call:
+2026-10-14T13:38:37.7387385Z hint:
+2026-10-14T13:38:37.7387777Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T13:38:37.7388161Z hint:
+2026-10-14T13:38:37.7388536Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T13:38:37.7389090Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T13:38:37.7389505Z hint:
+2026-10-14T13:38:37.7389862Z hint: 	git branch -m <name>
+2026-10-14T13:38:37.7390159Z hint:
+2026-10-14T13:38:37.7390512Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T13:38:37.7393462Z Initialized empty Git repository in /home/runner/work/invoice-collector/invoice-collector/.git/
+2026-10-14T13:38:37.7408630Z [command]/usr/bin/git remote add origin https://github.com/invoice-collector/invoice-collector
+2026-10-14T13:38:37.7442948Z ##[endgroup]
+2026-10-14T13:38:37.7443696Z ##[group]Disabling automatic garbage collection
+2026-10-14T13:38:37.7446321Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T13:38:37.7471340Z ##[endgroup]
+2026-10-14T13:38:37.7472194Z ##[group]Setting up auth
+2026-10-14T13:38:37.7478900Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T13:38:37.7507256Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T13:38:37.7717278Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T13:38:37.7741206Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T13:38:37.7913898Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T13:38:37.7939270Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T13:38:37.8111636Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T13:38:37.8140335Z ##[endgroup]
+2026-10-14T13:38:37.8144880Z [command]/usr/bin/git lfs install --local
+2026-10-14T13:38:37.8460955Z Updated Git hooks.
+2026-10-14T13:38:37.8461801Z Git LFS initialized.
+2026-10-14T13:38:37.8465134Z ##[group]Fetching the repository
+2026-10-14T13:38:37.8473614Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d3e53b39ffaee83bea090a674446c2e7a79220f2:refs/remotes/origin/master
+2026-10-14T13:38:39.1375598Z From https://github.com/invoice-collector/invoice-collector
+2026-10-14T13:38:39.1376744Z  * [new ref]           d3e53b39ffaee83bea090a674446c2e7a79220f2 -> origin/master
+2026-10-14T13:38:39.1379662Z ##[endgroup]
+2026-10-14T13:38:39.1380252Z ##[group]Determining the checkout info
+2026-10-14T13:38:39.1382140Z ##[endgroup]
+2026-10-14T13:38:39.1382902Z ##[group]Fetching LFS objects
+2026-10-14T13:38:39.1388672Z [command]/usr/bin/git lfs fetch origin refs/remotes/origin/master
+2026-10-14T13:38:39.1637144Z Fetching reference refs/remotes/origin/master
+2026-10-14T13:38:39.8126266Z ##[endgroup]
+2026-10-14T13:38:39.8132562Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T13:38:39.8177025Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T13:38:39.8202169Z ##[group]Checking out the ref
+2026-10-14T13:38:39.8206134Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-14T13:38:40.2823265Z Reset branch 'master'
+2026-10-14T13:38:40.2827107Z branch 'master' set up to track 'origin/master'.
+2026-10-14T13:38:40.3809823Z ##[endgroup]
+2026-10-14T13:38:40.3810587Z ##[group]Setting up auth for fetching submodules
+2026-10-14T13:38:40.3816013Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T13:38:40.5832407Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-14T13:38:40.5859451Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-14T13:38:40.5885491Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-154613923@github.com:
+2026-10-14T13:38:40.5910842Z ##[endgroup]
+2026-10-14T13:38:40.5911444Z ##[group]Fetching submodules
+2026-10-14T13:38:40.5914345Z [command]/usr/bin/git submodule sync
+2026-10-14T13:38:40.6119276Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1
+2026-10-14T13:38:40.6349995Z Submodule 'src/premium' (https://github.com/invoice-collector/premium-collectors) registered for path 'src/premium'
+2026-10-14T13:38:40.6371815Z Cloning into '/home/runner/work/invoice-collector/invoice-collector/src/premium'...
+2026-10-14T13:38:41.4511876Z Submodule path 'src/premium': checked out '3037d6e9cf6279f57a1cff3a4e14f940f0e0d1e5'
+2026-10-14T13:38:41.4524662Z [command]/usr/bin/git submodule foreach git config --local gc.auto 0
+2026-10-14T13:38:41.4723076Z Entering 'src/premium'
+2026-10-14T13:38:41.4756947Z ##[endgroup]
+2026-10-14T13:38:41.4757904Z ##[group]Persisting credentials for submodules
+2026-10-14T13:38:41.4764176Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2026-10-14T13:38:41.4960428Z Entering 'src/premium'
+2026-10-14T13:38:41.5008817Z [command]/usr/bin/git submodule foreach sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-14T13:38:41.5199749Z Entering 'src/premium'
+2026-10-14T13:38:41.5235282Z file:/home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config	remote.origin.url
+2026-10-14T13:38:41.5255136Z [command]/usr/bin/git submodule foreach git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2026-10-14T13:38:41.5446322Z Entering 'src/premium'
+2026-10-14T13:38:41.5477724Z [command]/usr/bin/git submodule foreach git config --local --add 'url.https://github.com/.insteadOf' 'org-154613923@github.com:'
+2026-10-14T13:38:41.5665195Z Entering 'src/premium'
+2026-10-14T13:38:41.5691901Z ##[endgroup]
+2026-10-14T13:38:41.5730175Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T13:38:41.5770746Z d3e53b39ffaee83bea090a674446c2e7a79220f2
+2026-10-14T13:38:41.5973374Z ##[group]Run actions-hub/kubectl@master
+2026-10-14T13:38:41.5973770Z with:
+2026-10-14T13:38:41.5974097Z   args: rollout restart deployment/invoice-collector-prod
+2026-10-14T13:38:41.5974497Z env:
+2026-10-14T13:38:41.5974813Z   TAG: master
+2026-10-14T13:38:41.5975161Z   IMAGE_NAME: ghcr.io/invoice-collector/invoice-collector
+2026-10-14T13:38:41.5975627Z   IMAGE_NAME_PREMIUM: ghcr.io/invoice-collector/invoice-collector-premium
+2026-10-14T13:38:41.5976111Z   DEPLOYMENT_NAME_DEMO: invoice-collector-demo
+2026-10-14T13:38:41.5976698Z   DEPLOYMENT_NAME_PROD: invoice-collector-prod
+2026-10-14T13:38:41.5977201Z   DOCKER_BUILD_RECORD_UPLOAD: false
+2026-10-14T13:38:41.7254560Z   KUBE_CONFIG: ***
+2026-10-14T13:38:41.7255057Z ##[endgroup]
+2026-10-14T13:38:41.7356568Z ##[command]/usr/bin/docker run --name b56f3b34f51b31254e86b28033e20eaa1d73_aebd47 --label 48b56f --workdir /github/workspace --rm -e "TAG" -e "IMAGE_NAME" -e "IMAGE_NAME_PREMIUM" -e "DEPLOYMENT_NAME_DEMO" -e "DEPLOYMENT_NAME_PROD" -e "DOCKER_BUILD_RECORD_UPLOAD" -e "KUBE_CONFIG" -e "INPUT_ARGS" -e "INPUT_REDIRECT-TO" -e "dest" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_CACHE_MODE" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/invoice-collector/invoice-collector":"/github/workspace" 48b56f:3b34f51b31254e86b28033e20eaa1d73 rollout restart deployment/invoice-collector-prod
+2026-10-14T13:38:43.6746031Z deployment.apps/invoice-collector-prod restarted
+2026-10-14T13:38:43.7647861Z Post job cleanup.
+2026-10-14T13:38:43.8416899Z [command]/usr/bin/git version
+2026-10-14T13:38:43.8449831Z git version 2.55.0
+2026-10-14T13:38:43.8484069Z Temporarily overriding HOME='/home/runner/work/_temp/7b576389-aa79-4cf8-af8e-537fb26f2204' before making global git config changes
+2026-10-14T13:38:43.8485207Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T13:38:43.8488089Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-10-14T13:38:43.8521160Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T13:38:43.8551268Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T13:38:43.8759828Z Entering 'src/premium'
+2026-10-14T13:38:43.8809643Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T13:38:43.8840570Z http.https://github.com/.extraheader
+2026-10-14T13:38:43.8851076Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T13:38:43.8879308Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T13:38:43.9104710Z Entering 'src/premium'
+2026-10-14T13:38:43.9127369Z http.https://github.com/.extraheader
+2026-10-14T13:38:43.9177541Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T13:38:43.9209340Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T13:38:43.9419653Z Entering 'src/premium'
+2026-10-14T13:38:43.9437378Z file:/home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config	remote.origin.url
+2026-10-14T13:38:43.9463289Z [command]/usr/bin/git config --file /home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T13:38:43.9631114Z Cleaning up orphan processes
+2026-10-14T13:38:43.9893022Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

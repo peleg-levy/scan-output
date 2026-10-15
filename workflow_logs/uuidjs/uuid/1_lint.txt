@@ -1,0 +1,290 @@
+﻿2026-10-13T13:01:39.2629734Z Current runner version: '2.337.0'
+2026-10-13T13:01:39.2648998Z ##[group]Runner Image Provisioner
+2026-10-13T13:01:39.2649663Z Hosted Compute Agent
+2026-10-13T13:01:39.2650022Z Version: 20261002.596
+2026-10-13T13:01:39.2650432Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T13:01:39.2650887Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T13:01:39.2651327Z Worker ID: {d5dab573-e589-4007-b367-dc774d88f367}
+2026-10-13T13:01:39.2652075Z Region: centralus
+2026-10-13T13:01:39.2652423Z Cloud: Azure
+2026-10-13T13:01:39.2652782Z ##[endgroup]
+2026-10-13T13:01:39.2653720Z ##[group]Operating System
+2026-10-13T13:01:39.2654092Z Ubuntu
+2026-10-13T13:01:39.2654490Z 24.04.5
+2026-10-13T13:01:39.2654809Z LTS
+2026-10-13T13:01:39.2655120Z ##[endgroup]
+2026-10-13T13:01:39.2655495Z ##[group]Runner Image
+2026-10-13T13:01:39.2655882Z Image: ubuntu-24.04
+2026-10-13T13:01:39.2656325Z Version: 20261004.327.1
+2026-10-13T13:01:39.2657107Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T13:01:39.2657997Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T13:01:39.2658586Z ##[endgroup]
+2026-10-13T13:01:39.2659318Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T13:01:39.2660717Z Contents: read
+2026-10-13T13:01:39.2661383Z Metadata: read
+2026-10-13T13:01:39.2661895Z ##[endgroup]
+2026-10-13T13:01:39.2663398Z Secret source: Actions
+2026-10-13T13:01:39.2664028Z Cache mode: write
+2026-10-13T13:01:39.2664579Z Prepare workflow directory
+2026-10-13T13:01:39.3619286Z Prepare all required actions
+2026-10-13T13:01:39.3666742Z Getting action download info
+2026-10-13T13:01:39.6398264Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-10-13T13:01:39.8205694Z Download action repository 'actions/setup-node@v5' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+2026-10-13T13:01:40.3068861Z Complete job name: lint
+2026-10-13T13:01:40.3591669Z ##[group]Run actions/checkout@v5
+2026-10-13T13:01:40.3592230Z with:
+2026-10-13T13:01:40.3592484Z   repository: uuidjs/uuid
+2026-10-13T13:01:40.3594552Z   token: ***
+2026-10-13T13:01:40.3594801Z   ssh-strict: true
+2026-10-13T13:01:40.3595057Z   ssh-user: git
+2026-10-13T13:01:40.3595322Z   persist-credentials: true
+2026-10-13T13:01:40.3595610Z   clean: true
+2026-10-13T13:01:40.3595877Z   sparse-checkout-cone-mode: true
+2026-10-13T13:01:40.3596178Z   fetch-depth: 1
+2026-10-13T13:01:40.3596435Z   fetch-tags: false
+2026-10-13T13:01:40.3596705Z   show-progress: true
+2026-10-13T13:01:40.3596969Z   lfs: false
+2026-10-13T13:01:40.3597230Z   submodules: false
+2026-10-13T13:01:40.3597507Z   set-safe-directory: true
+2026-10-13T13:01:40.3597805Z   allow-unsafe-pr-checkout: false
+2026-10-13T13:01:40.3598181Z env:
+2026-10-13T13:01:40.3598414Z   LEFTHOOK: 0
+2026-10-13T13:01:40.3598671Z ##[endgroup]
+2026-10-13T13:01:40.4272512Z Syncing repository: uuidjs/uuid
+2026-10-13T13:01:40.4273913Z ##[group]Getting Git version info
+2026-10-13T13:01:40.4274391Z Working directory is '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:40.4274954Z [command]/usr/bin/git version
+2026-10-13T13:01:40.4333529Z git version 2.55.0
+2026-10-13T13:01:40.4346893Z ##[endgroup]
+2026-10-13T13:01:40.4358150Z Temporarily overriding HOME='/home/runner/work/_temp/9c2b16d8-4638-4dab-87a9-325b3004abb1' before making global git config changes
+2026-10-13T13:01:40.4359500Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:01:40.4362549Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:01:40.5438068Z Deleting the contents of '/home/runner/work/uuid/uuid'
+2026-10-13T13:01:40.5439107Z ##[group]Initializing the repository
+2026-10-13T13:01:40.5442277Z [command]/usr/bin/git init /home/runner/work/uuid/uuid
+2026-10-13T13:01:40.5641220Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T13:01:40.5642610Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T13:01:40.5643385Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T13:01:40.5643789Z hint: call:
+2026-10-13T13:01:40.5644011Z hint:
+2026-10-13T13:01:40.5644414Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T13:01:40.5644854Z hint:
+2026-10-13T13:01:40.5645244Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T13:01:40.5645800Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T13:01:40.5646197Z hint:
+2026-10-13T13:01:40.5646427Z hint: 	git branch -m <name>
+2026-10-13T13:01:40.5646684Z hint:
+2026-10-13T13:01:40.5647024Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T13:01:40.5647530Z Initialized empty Git repository in /home/runner/work/uuid/uuid/.git/
+2026-10-13T13:01:40.5648600Z [command]/usr/bin/git remote add origin https://github.com/uuidjs/uuid
+2026-10-13T13:01:40.6246393Z ##[endgroup]
+2026-10-13T13:01:40.6246938Z ##[group]Disabling automatic garbage collection
+2026-10-13T13:01:40.6255207Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T13:01:40.6396063Z ##[endgroup]
+2026-10-13T13:01:40.6396467Z ##[group]Setting up auth
+2026-10-13T13:01:40.6401104Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:01:40.6426812Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:01:40.6759162Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:01:40.6787070Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:01:40.6989742Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:01:40.7013530Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:01:40.7184190Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T13:01:40.7223692Z ##[endgroup]
+2026-10-13T13:01:40.7224820Z ##[group]Fetching the repository
+2026-10-13T13:01:40.7231698Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b9ed7c753ec7c6db913849a7117be0efc0a3c186:refs/remotes/origin/main
+2026-10-13T13:01:41.2773303Z From https://github.com/uuidjs/uuid
+2026-10-13T13:01:41.2774130Z  * [new ref]         b9ed7c753ec7c6db913849a7117be0efc0a3c186 -> origin/main
+2026-10-13T13:01:41.2776796Z ##[endgroup]
+2026-10-13T13:01:41.2777777Z ##[group]Determining the checkout info
+2026-10-13T13:01:41.2778740Z ##[endgroup]
+2026-10-13T13:01:41.2781816Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T13:01:41.2844936Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T13:01:41.2909950Z ##[group]Checking out the ref
+2026-10-13T13:01:41.2914079Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T13:01:41.3040780Z Switched to a new branch 'main'
+2026-10-13T13:01:41.3048593Z branch 'main' set up to track 'origin/main'.
+2026-10-13T13:01:41.3053343Z ##[endgroup]
+2026-10-13T13:01:41.3095511Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T13:01:41.3119379Z b9ed7c753ec7c6db913849a7117be0efc0a3c186
+2026-10-13T13:01:41.3869227Z ##[group]Run actions/setup-node@v5
+2026-10-13T13:01:41.3869820Z with:
+2026-10-13T13:01:41.3870299Z   node-version: 24.x
+2026-10-13T13:01:41.3870793Z   always-auth: false
+2026-10-13T13:01:41.3871283Z   check-latest: false
+2026-10-13T13:01:41.3873534Z   token: ***
+2026-10-13T13:01:41.3874033Z   package-manager-cache: true
+2026-10-13T13:01:41.3874544Z env:
+2026-10-13T13:01:41.3875003Z   LEFTHOOK: 0
+2026-10-13T13:01:41.3875702Z ##[endgroup]
+2026-10-13T13:01:41.4858801Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-13T13:01:41.4861855Z (node:2088) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:01:41.4862737Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:01:41.4863843Z ##[group]Environment details
+2026-10-13T13:01:44.5735686Z node: v24.21.0
+2026-10-13T13:01:44.5736044Z npm: 11.19.0
+2026-10-13T13:01:44.5736279Z yarn: 1.22.22
+2026-10-13T13:01:44.5737021Z ##[endgroup]
+2026-10-13T13:01:44.5751035Z [command]/opt/hostedtoolcache/node/24.21.0/x64/bin/npm config get cache
+2026-10-13T13:01:44.8947071Z /home/runner/.npm
+2026-10-13T13:01:45.0708120Z Cache hit for: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:45.0778152Z (node:2088) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T13:01:46.2246293Z Received 85099621 of 97682533 (87.1%), 81.1 MBs/sec
+2026-10-13T13:01:46.4745864Z Received 97682533 of 97682533 (100.0%), 74.5 MBs/sec
+2026-10-13T13:01:46.4746255Z Cache Size: ~93 MB (97682533 B)
+2026-10-13T13:01:46.4791288Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a3f6b000-c62e-4716-add6-45567cc167b6/cache.tzst -P -C /home/runner/work/uuid/uuid --use-compress-program unzstd
+2026-10-13T13:01:46.6729031Z Cache restored successfully
+2026-10-13T13:01:46.6774434Z Cache restored from key: node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd
+2026-10-13T13:01:46.6922010Z ##[group]Run npm ci
+2026-10-13T13:01:46.6922200Z [36;1mnpm ci[0m
+2026-10-13T13:01:46.7209902Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:46.7210102Z env:
+2026-10-13T13:01:46.7210248Z   LEFTHOOK: 0
+2026-10-13T13:01:46.7210375Z ##[endgroup]
+2026-10-13T13:01:49.9535920Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T13:01:50.2428352Z npm warn deprecated stringify-package@1.0.1: This module is not used anymore, and has been replaced by @npmcli/package-json
+2026-10-13T13:01:50.2698662Z npm warn deprecated git-semver-tags@4.1.1: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:50.2787674Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:50.2797230Z npm warn deprecated git-raw-commits@2.0.11: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+2026-10-13T13:01:50.3433386Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:50.3754279Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2026-10-13T13:01:50.3755470Z npm warn deprecated
+2026-10-13T13:01:50.3755970Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2026-10-13T13:01:51.0012690Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T13:01:52.5469800Z 
+2026-10-13T13:01:52.5470323Z > uuid@14.0.3 prepare
+2026-10-13T13:01:52.5470777Z > if [ -d .git ]; then npx lefthook install; fi
+2026-10-13T13:01:52.5470941Z 
+2026-10-13T13:01:53.0572709Z sync hooks: ✔️(pre-commit, commit-msg)
+2026-10-13T13:01:53.1292836Z 
+2026-10-13T13:01:53.1293740Z added 886 packages, and audited 887 packages in 6s
+2026-10-13T13:01:53.1294003Z 
+2026-10-13T13:01:53.1294137Z 220 packages are looking for funding
+2026-10-13T13:01:53.1294375Z   run `npm fund` for details
+2026-10-13T13:01:53.1522940Z 
+2026-10-13T13:01:53.1523699Z 26 vulnerabilities (20 moderate, 4 high, 2 critical)
+2026-10-13T13:01:53.1524010Z 
+2026-10-13T13:01:53.1524198Z To address issues that do not require attention, run:
+2026-10-13T13:01:53.1524484Z   npm audit fix
+2026-10-13T13:01:53.1524594Z 
+2026-10-13T13:01:53.1524824Z To address all issues possible (including breaking changes), run:
+2026-10-13T13:01:53.1525154Z   npm audit fix --force
+2026-10-13T13:01:53.1525425Z 
+2026-10-13T13:01:53.1525579Z Some issues need review, and may require choosing
+2026-10-13T13:01:53.1525852Z a different dependency.
+2026-10-13T13:01:53.1525977Z 
+2026-10-13T13:01:53.1526084Z Run `npm audit` for details.
+2026-10-13T13:01:53.1530967Z npm warn install-scripts 3 packages have install scripts not yet covered by allowScripts:
+2026-10-13T13:01:53.1531733Z npm warn install-scripts   @parcel/watcher@2.6.0 (install: node scripts/build-from-source.js)
+2026-10-13T13:01:53.1532357Z npm warn install-scripts   lefthook@2.1.12 (postinstall: node postinstall.js)
+2026-10-13T13:01:53.1533356Z npm warn install-scripts   unrs-resolver@1.12.2 (postinstall: node postinstall.js)
+2026-10-13T13:01:53.1533750Z npm warn install-scripts
+2026-10-13T13:01:53.1534278Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+2026-10-13T13:01:54.0044235Z ##[group]Run npm run lint
+2026-10-13T13:01:54.0044415Z [36;1mnpm run lint[0m
+2026-10-13T13:01:54.0098049Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:54.0098201Z env:
+2026-10-13T13:01:54.0098316Z   LEFTHOOK: 0
+2026-10-13T13:01:54.0098430Z ##[endgroup]
+2026-10-13T13:01:54.0825350Z 
+2026-10-13T13:01:54.0826079Z > uuid@14.0.3 lint
+2026-10-13T13:01:54.0826394Z > npm run biome:check
+2026-10-13T13:01:54.0826536Z 
+2026-10-13T13:01:54.1498714Z 
+2026-10-13T13:01:54.1499345Z > uuid@14.0.3 biome:check
+2026-10-13T13:01:54.1499596Z > biome check .
+2026-10-13T13:01:54.1499673Z 
+2026-10-13T13:01:54.2569219Z biome.jsonc:2:14 deserialize ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-10-13T13:01:54.2569611Z 
+2026-10-13T13:01:54.2569883Z   i The configuration schema version does not match the CLI version 2.5.13
+2026-10-13T13:01:54.2570230Z   
+2026-10-13T13:01:54.2570434Z     1 │ {
+2026-10-13T13:01:54.2570982Z   > 2 │   "$schema": "https://biomejs.dev/schemas/2.4.10/schema.json",
+2026-10-13T13:01:54.2571580Z       │              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-13T13:01:54.2571928Z     3 │   "formatter": {
+2026-10-13T13:01:54.2572232Z     4 │     "indentStyle": "space",
+2026-10-13T13:01:54.2572467Z   
+2026-10-13T13:01:54.2572678Z   i   Expected:                     2.5.13
+2026-10-13T13:01:54.2572959Z       Found:                        2.4.10
+2026-10-13T13:01:54.2573192Z   
+2026-10-13T13:01:54.2573351Z   
+2026-10-13T13:01:54.2573639Z   i Run the command biome migrate to migrate the configuration file.
+2026-10-13T13:01:54.2573960Z   
+2026-10-13T13:01:54.2574051Z 
+2026-10-13T13:01:54.2582171Z Checked 103 files in 55ms. No fixes applied.
+2026-10-13T13:01:54.2590138Z Found 1 info.
+2026-10-13T13:01:54.3023083Z ##[group]Run npm run docs:diff
+2026-10-13T13:01:54.3023377Z [36;1mnpm run docs:diff[0m
+2026-10-13T13:01:54.3094203Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:54.3094481Z env:
+2026-10-13T13:01:54.3094660Z   LEFTHOOK: 0
+2026-10-13T13:01:54.3094844Z ##[endgroup]
+2026-10-13T13:01:54.3856904Z 
+2026-10-13T13:01:54.3857466Z > uuid@14.0.3 docs:diff
+2026-10-13T13:01:54.3858057Z > npm run docs && git diff README.md
+2026-10-13T13:01:54.3858181Z 
+2026-10-13T13:01:54.4507875Z 
+2026-10-13T13:01:54.4508488Z > uuid@14.0.3 docs
+2026-10-13T13:01:54.4508931Z > npm run build && npx runmd --output=README.md README_js.md
+2026-10-13T13:01:54.4509161Z 
+2026-10-13T13:01:54.5108633Z 
+2026-10-13T13:01:54.5109249Z > uuid@14.0.3 build
+2026-10-13T13:01:54.5109526Z > ./scripts/build.sh
+2026-10-13T13:01:54.5109624Z 
+2026-10-13T13:01:54.5165326Z Building in /home/runner/work/uuid/uuid/dist and /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:01:54.5184183Z Compiling TypeScript files to /home/runner/work/uuid/uuid/dist-node
+2026-10-13T13:01:55.4135553Z Packing tarball
+2026-10-13T13:01:56.8570553Z -- fin --
+2026-10-13T13:01:58.3525084Z diff --git a/README.md b/README.md
+2026-10-13T13:01:58.3525447Z index 53f506f..f5ca17e 100644
+2026-10-13T13:01:58.3525614Z --- a/README.md
+2026-10-13T13:01:58.3525792Z +++ b/README.md
+2026-10-13T13:01:58.3526038Z @@ -310,7 +310,7 @@ This method takes the same arguments as uuid.v1().
+2026-10-13T13:01:58.3526360Z  ```javascript
+2026-10-13T13:01:58.3526581Z  import { v6 as uuidv6 } from 'uuid';
+2026-10-13T13:01:58.3526809Z  
+2026-10-13T13:01:58.3527385Z -uuidv6(); // ⇨ '1efc7d35-7fd0-6000-841d-504d2167fc5b'
+2026-10-13T13:01:58.3527716Z +uuidv6(); // ⇨ '1efc7d35-7fd0-6000-841d-514d2167fc5b'
+2026-10-13T13:01:58.3527880Z  ```
+2026-10-13T13:01:58.3527981Z  
+2026-10-13T13:01:58.3528100Z  Example using `options`:
+2026-10-13T13:01:58.3528389Z @@ -464,7 +464,7 @@ Prior to `uuid@11`, it was possible for `options` state to interfere with the in
+2026-10-13T13:01:58.3528616Z  
+2026-10-13T13:01:58.3529165Z  **Browsers**: `uuid` [builds are tested](/uuidjs/uuid/blob/main/wdio.conf.js) against the latest version of desktop Chrome, Safari, Firefox, and Edge. Mobile versions of these same browsers are expected to work but aren't currently tested.
+2026-10-13T13:01:58.3529675Z  
+2026-10-13T13:01:58.3530238Z -**Node**: `uuid` releases are tested against [Node LTS versions](https://github.com/nodejs/Release), plus one prior.  (E.g. At the time of this writing the oldest LTS version of Node is `node@22`, so `uuid` would support back to `node@20`)
+2026-10-13T13:01:58.3531387Z +**Node**: `uuid` [builds are tested](https://github.com/uuidjs/uuid/blob/main/.github/workflows/ci.yml#L31) against node ([LTS releases](https://github.com/nodejs/Release)), plus one prior. E.g. At the time of this writing `node@20` is the "maintenance" release and `node@24` is the "current" release, so `uuid` supports `node@20`-`node@24`.
+2026-10-13T13:01:58.3532150Z  
+2026-10-13T13:01:58.3532542Z  **Typescript**: TS versions released within the past two years are supported. [source](https://github.com/microsoft/TypeScript/issues/49088#issuecomment-2468723715)
+2026-10-13T13:01:58.3532902Z  
+2026-10-13T13:01:58.3610288Z ##[group]Run npm exec publint --strict
+2026-10-13T13:01:58.3610489Z [36;1mnpm exec publint --strict[0m
+2026-10-13T13:01:58.3661287Z shell: /usr/bin/bash -e {0}
+2026-10-13T13:01:58.3661573Z env:
+2026-10-13T13:01:58.3661699Z   LEFTHOOK: 0
+2026-10-13T13:01:58.3661815Z ##[endgroup]
+2026-10-13T13:01:58.5112211Z npm warn Unknown cli config "--strict". This will stop working in the next major version of npm.
+2026-10-13T13:01:58.5600908Z Running [1mpublint v0.3.24[22m for [1muuid[22m...
+2026-10-13T13:01:58.5618178Z Packing files with `npm pack`...
+2026-10-13T13:01:58.8786288Z Linting...
+2026-10-13T13:01:58.8859558Z [1m[34mSuggestions:[39m[22m
+2026-10-13T13:01:58.8860792Z [2m1. [22mThe package does not specify the [1m"engines.node"[22m field. Consumers may install it on an unsupported Node.js version. Consider adding the field with your actual minimum supported Node.js version. (This may be a breaking change)
+2026-10-13T13:01:58.8862781Z [2m2. [22m[1mpkg.repository.url[22m is [1mhttps://github.com/uuidjs/uuid.git[22m but could be a full git URL like "[1mgit+https://github.com/uuidjs/uuid.git[22m".
+2026-10-13T13:01:58.9064578Z Post job cleanup.
+2026-10-13T13:01:58.9896704Z (node:2679) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T13:01:58.9897580Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T13:01:58.9898504Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-55f2dac0a156148ac5ab07c60352fb746e3f697796a2984a4751c0dcaa3c1ebd, not saving cache.
+2026-10-13T13:01:59.0027134Z Post job cleanup.
+2026-10-13T13:01:59.0564443Z [command]/usr/bin/git version
+2026-10-13T13:01:59.0592618Z git version 2.55.0
+2026-10-13T13:01:59.0613480Z Temporarily overriding HOME='/home/runner/work/_temp/f0fcd0df-b980-4534-9346-fbd2612856d0' before making global git config changes
+2026-10-13T13:01:59.0614162Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T13:01:59.0616817Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/uuid/uuid
+2026-10-13T13:01:59.0646229Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T13:01:59.0671853Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T13:01:59.0843269Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T13:01:59.0863998Z http.https://github.com/.extraheader
+2026-10-13T13:01:59.0871153Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T13:01:59.0896962Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T13:01:59.1074422Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T13:01:59.1101093Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T13:01:59.1406991Z Cleaning up orphan processes

@@ -1,0 +1,624 @@
+﻿2026-10-14T15:53:05.0930979Z Current runner version: '2.337.0'
+2026-10-14T15:53:05.0966567Z ##[group]Runner Image Provisioner
+2026-10-14T15:53:05.0967983Z Hosted Compute Agent
+2026-10-14T15:53:05.0969039Z Version: 20261002.596
+2026-10-14T15:53:05.0970144Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T15:53:05.0971461Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T15:53:05.0972600Z Worker ID: {c2566245-6b3b-4f53-8efa-805f4e94e1df}
+2026-10-14T15:53:05.0973711Z Region: eastus
+2026-10-14T15:53:05.0974814Z Cloud: Azure
+2026-10-14T15:53:05.0976081Z ##[endgroup]
+2026-10-14T15:53:05.0978959Z ##[group]Operating System
+2026-10-14T15:53:05.0979977Z Ubuntu
+2026-10-14T15:53:05.0980871Z 24.04.5
+2026-10-14T15:53:05.0981801Z LTS
+2026-10-14T15:53:05.0982656Z ##[endgroup]
+2026-10-14T15:53:05.0983650Z ##[group]Runner Image
+2026-10-14T15:53:05.0984643Z Image: ubuntu-24.04
+2026-10-14T15:53:05.0985859Z Version: 20261004.327.1
+2026-10-14T15:53:05.0988138Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T15:53:05.0990921Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T15:53:05.0992643Z ##[endgroup]
+2026-10-14T15:53:05.0994762Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:53:05.0998113Z Contents: read
+2026-10-14T15:53:05.0999241Z Metadata: read
+2026-10-14T15:53:05.1000173Z ##[endgroup]
+2026-10-14T15:53:05.1003402Z Secret source: Actions
+2026-10-14T15:53:05.1004888Z Cache mode: write
+2026-10-14T15:53:05.1006500Z Prepare workflow directory
+2026-10-14T15:53:05.1654173Z Prepare all required actions
+2026-10-14T15:53:05.1726181Z Getting action download info
+2026-10-14T15:53:05.3544633Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-10-14T15:53:05.5858372Z Complete job name: semgrep-js
+2026-10-14T15:53:05.6380963Z ##[group]Checking docker version
+2026-10-14T15:53:05.6394973Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-10-14T15:53:05.7201937Z '1.48'
+2026-10-14T15:53:05.7211238Z Docker daemon API version: '1.48'
+2026-10-14T15:53:05.7212179Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-10-14T15:53:05.7388388Z '1.48'
+2026-10-14T15:53:05.7402074Z Docker client API version: '1.48'
+2026-10-14T15:53:05.7409333Z ##[endgroup]
+2026-10-14T15:53:05.7412921Z ##[group]Clean up resources from previous jobs
+2026-10-14T15:53:05.7419283Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=21f6fe"
+2026-10-14T15:53:05.7577668Z ##[command]/usr/bin/docker network prune --force --filter "label=21f6fe"
+2026-10-14T15:53:05.7712844Z ##[endgroup]
+2026-10-14T15:53:05.7713383Z ##[group]Create local container network
+2026-10-14T15:53:05.7724417Z ##[command]/usr/bin/docker network create --label 21f6fe github_network_11023d7077fa42729e16ceac3d758a1a
+2026-10-14T15:53:05.8260388Z 87dea43aa78de6d5501d0332980bfafd5fa50e1fb6e22d2f9c2c39b1fa492411
+2026-10-14T15:53:05.8282498Z ##[endgroup]
+2026-10-14T15:53:05.8308620Z ##[group]Starting job container
+2026-10-14T15:53:05.8331795Z ##[command]/usr/bin/docker pull semgrep/semgrep:1.163.0@sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03
+2026-10-14T15:53:06.2222772Z docker.io/semgrep/semgrep@sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03: Pulling from semgrep/semgrep
+2026-10-14T15:53:06.2922580Z 6a0ac1617861: Pulling fs layer
+2026-10-14T15:53:06.2923672Z 439ee48acbb9: Pulling fs layer
+2026-10-14T15:53:06.2924402Z bd9ddc54bea9: Pulling fs layer
+2026-10-14T15:53:06.2931816Z aad7d18ce013: Pulling fs layer
+2026-10-14T15:53:06.2932676Z 49fdab8c7045: Pulling fs layer
+2026-10-14T15:53:06.2933389Z 9c13b2504849: Pulling fs layer
+2026-10-14T15:53:06.2934059Z e00c4363751f: Pulling fs layer
+2026-10-14T15:53:06.2934809Z f7d3ddc48162: Pulling fs layer
+2026-10-14T15:53:06.2935919Z f730955b216b: Pulling fs layer
+2026-10-14T15:53:06.2936575Z 9836a1e7cec5: Pulling fs layer
+2026-10-14T15:53:06.2937208Z 99f3fe3621d0: Pulling fs layer
+2026-10-14T15:53:06.2938233Z b119cd27608f: Pulling fs layer
+2026-10-14T15:53:06.2938903Z f0fc35fca6b6: Pulling fs layer
+2026-10-14T15:53:06.2939554Z c9509eee5f01: Pulling fs layer
+2026-10-14T15:53:06.2940195Z 225c88686972: Pulling fs layer
+2026-10-14T15:53:06.2940827Z c3058751af70: Pulling fs layer
+2026-10-14T15:53:06.2941451Z 3fa457b01ee8: Pulling fs layer
+2026-10-14T15:53:06.2942555Z 68678f9f0677: Pulling fs layer
+2026-10-14T15:53:06.2943584Z 8381e9ae9508: Pulling fs layer
+2026-10-14T15:53:06.2944575Z 9706acf3ac46: Pulling fs layer
+2026-10-14T15:53:06.2945815Z 68adb1a75fd8: Pulling fs layer
+2026-10-14T15:53:06.2946757Z 49fdab8c7045: Waiting
+2026-10-14T15:53:06.2947472Z 9c13b2504849: Waiting
+2026-10-14T15:53:06.2948470Z e00c4363751f: Waiting
+2026-10-14T15:53:06.2949210Z f7d3ddc48162: Waiting
+2026-10-14T15:53:06.2950183Z f730955b216b: Waiting
+2026-10-14T15:53:06.2951080Z 9836a1e7cec5: Waiting
+2026-10-14T15:53:06.2951947Z 99f3fe3621d0: Waiting
+2026-10-14T15:53:06.2952981Z b119cd27608f: Waiting
+2026-10-14T15:53:06.2953620Z f0fc35fca6b6: Waiting
+2026-10-14T15:53:06.2954420Z c9509eee5f01: Waiting
+2026-10-14T15:53:06.2955331Z 225c88686972: Waiting
+2026-10-14T15:53:06.2956200Z 8381e9ae9508: Waiting
+2026-10-14T15:53:06.2956956Z 9706acf3ac46: Waiting
+2026-10-14T15:53:06.2957530Z c3058751af70: Waiting
+2026-10-14T15:53:06.2958299Z 68adb1a75fd8: Waiting
+2026-10-14T15:53:06.2958930Z 3fa457b01ee8: Waiting
+2026-10-14T15:53:06.2959610Z 68678f9f0677: Waiting
+2026-10-14T15:53:06.2960266Z aad7d18ce013: Waiting
+2026-10-14T15:53:06.3217490Z bd9ddc54bea9: Verifying Checksum
+2026-10-14T15:53:06.3218862Z bd9ddc54bea9: Download complete
+2026-10-14T15:53:06.3453557Z 6a0ac1617861: Verifying Checksum
+2026-10-14T15:53:06.3457677Z 6a0ac1617861: Download complete
+2026-10-14T15:53:06.3747305Z aad7d18ce013: Verifying Checksum
+2026-10-14T15:53:06.3748829Z aad7d18ce013: Download complete
+2026-10-14T15:53:06.3756067Z 49fdab8c7045: Download complete
+2026-10-14T15:53:06.3990086Z 9c13b2504849: Verifying Checksum
+2026-10-14T15:53:06.3991377Z 9c13b2504849: Download complete
+2026-10-14T15:53:06.4449421Z 439ee48acbb9: Verifying Checksum
+2026-10-14T15:53:06.4452044Z 439ee48acbb9: Download complete
+2026-10-14T15:53:06.4470509Z e00c4363751f: Verifying Checksum
+2026-10-14T15:53:06.4473439Z e00c4363751f: Download complete
+2026-10-14T15:53:06.4620557Z f7d3ddc48162: Verifying Checksum
+2026-10-14T15:53:06.4622976Z f7d3ddc48162: Download complete
+2026-10-14T15:53:06.4890772Z 99f3fe3621d0: Verifying Checksum
+2026-10-14T15:53:06.4892713Z 99f3fe3621d0: Download complete
+2026-10-14T15:53:06.5094610Z 6a0ac1617861: Pull complete
+2026-10-14T15:53:06.5177253Z b119cd27608f: Verifying Checksum
+2026-10-14T15:53:06.5179725Z b119cd27608f: Download complete
+2026-10-14T15:53:06.8899465Z f730955b216b: Verifying Checksum
+2026-10-14T15:53:06.8903689Z f730955b216b: Download complete
+2026-10-14T15:53:06.9936908Z 9836a1e7cec5: Verifying Checksum
+2026-10-14T15:53:06.9942951Z 9836a1e7cec5: Download complete
+2026-10-14T15:53:07.0846631Z 225c88686972: Download complete
+2026-10-14T15:53:07.1115982Z c3058751af70: Download complete
+2026-10-14T15:53:07.1285293Z f0fc35fca6b6: Verifying Checksum
+2026-10-14T15:53:07.1289661Z f0fc35fca6b6: Download complete
+2026-10-14T15:53:07.1381144Z 3fa457b01ee8: Download complete
+2026-10-14T15:53:07.1578206Z 68678f9f0677: Verifying Checksum
+2026-10-14T15:53:07.1582671Z 68678f9f0677: Download complete
+2026-10-14T15:53:07.1684814Z 8381e9ae9508: Verifying Checksum
+2026-10-14T15:53:07.1688624Z 8381e9ae9508: Download complete
+2026-10-14T15:53:07.1855847Z 9706acf3ac46: Verifying Checksum
+2026-10-14T15:53:07.1858824Z 9706acf3ac46: Download complete
+2026-10-14T15:53:07.1916394Z 68adb1a75fd8: Verifying Checksum
+2026-10-14T15:53:07.1920648Z 68adb1a75fd8: Download complete
+2026-10-14T15:53:07.3264977Z c9509eee5f01: Verifying Checksum
+2026-10-14T15:53:07.3266035Z c9509eee5f01: Download complete
+2026-10-14T15:53:08.5875921Z 439ee48acbb9: Pull complete
+2026-10-14T15:53:08.5974403Z bd9ddc54bea9: Pull complete
+2026-10-14T15:53:08.6227155Z aad7d18ce013: Pull complete
+2026-10-14T15:53:08.6309435Z 49fdab8c7045: Pull complete
+2026-10-14T15:53:08.6404608Z 9c13b2504849: Pull complete
+2026-10-14T15:53:08.7407595Z e00c4363751f: Pull complete
+2026-10-14T15:53:08.7914720Z f7d3ddc48162: Pull complete
+2026-10-14T15:53:10.9211663Z f730955b216b: Pull complete
+2026-10-14T15:53:12.5855275Z 9836a1e7cec5: Pull complete
+2026-10-14T15:53:12.5952307Z 99f3fe3621d0: Pull complete
+2026-10-14T15:53:12.6060627Z b119cd27608f: Pull complete
+2026-10-14T15:53:16.7857734Z f0fc35fca6b6: Pull complete
+2026-10-14T15:53:18.9224555Z c9509eee5f01: Pull complete
+2026-10-14T15:53:19.0344205Z 225c88686972: Pull complete
+2026-10-14T15:53:19.0624099Z c3058751af70: Pull complete
+2026-10-14T15:53:19.0718740Z 3fa457b01ee8: Pull complete
+2026-10-14T15:53:19.0788099Z 68678f9f0677: Pull complete
+2026-10-14T15:53:19.0900990Z 8381e9ae9508: Pull complete
+2026-10-14T15:53:19.0982313Z 9706acf3ac46: Pull complete
+2026-10-14T15:53:19.1068412Z 68adb1a75fd8: Pull complete
+2026-10-14T15:53:19.1112143Z Digest: sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03
+2026-10-14T15:53:19.1119039Z Status: Downloaded newer image for semgrep/semgrep@sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03
+2026-10-14T15:53:19.1131760Z docker.io/semgrep/semgrep:1.163.0@sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03
+2026-10-14T15:53:19.1243045Z ##[command]/usr/bin/docker create --name 4ecb82e8541344b9b2f7f704c7437035_semgrepsemgrep11630sha2567cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03_df0b17 --label 21f6fe --workdir /__w/posthog.com/posthog.com --network github_network_11023d7077fa42729e16ceac3d758a1a  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.337.0/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" semgrep/semgrep:1.163.0@sha256:7cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03 "-f" "/dev/null"
+2026-10-14T15:53:19.1626456Z bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:53:19.1648011Z ##[command]/usr/bin/docker start bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:53:19.3838229Z bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:53:19.3854953Z ##[command]/usr/bin/docker ps --all --filter id=bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-10-14T15:53:19.3983679Z bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c Up Less than a second
+2026-10-14T15:53:19.4005777Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:53:19.4164502Z HOME=/github/home
+2026-10-14T15:53:19.4164845Z GITHUB_ACTIONS=true
+2026-10-14T15:53:19.4165418Z CI=true
+2026-10-14T15:53:19.4165866Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-10-14T15:53:19.4166457Z SEMGREP_IN_DOCKER=1
+2026-10-14T15:53:19.4166770Z SEMGREP_USER_AGENT_APPEND=Docker
+2026-10-14T15:53:19.4167107Z PYTHONIOENCODING=utf8
+2026-10-14T15:53:19.4167388Z PYTHONUNBUFFERED=1
+2026-10-14T15:53:19.4168759Z DOCKER_OTEL_RESOURCE_ATTRIBUTES=vcs.ref.head.name=develop,vcs.ref.head.revision=143cb5483d63a9c5167d182140936db508340156,vcs.repository.url.full=github.com/semgrep/semgrep-proprietary,docker.base_image=alpine:3.23
+2026-10-14T15:53:19.4170148Z DD_SERVICE=semgrep-core
+2026-10-14T15:53:19.4170491Z TSAN_OPTIONS=exitcode=0 report_signal_unsafe=0
+2026-10-14T15:53:19.4196559Z ##[endgroup]
+2026-10-14T15:53:19.4208176Z ##[group]Waiting for all services to be ready
+2026-10-14T15:53:19.4210271Z ##[endgroup]
+2026-10-14T15:53:19.4541925Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-10-14T15:53:19.4542893Z with:
+2026-10-14T15:53:19.4543127Z   repository: PostHog/posthog.com
+2026-10-14T15:53:19.4545987Z   token: ***
+2026-10-14T15:53:19.4546204Z   ssh-strict: true
+2026-10-14T15:53:19.4546414Z   ssh-user: git
+2026-10-14T15:53:19.4546630Z   persist-credentials: true
+2026-10-14T15:53:19.4546869Z   clean: true
+2026-10-14T15:53:19.4547079Z   sparse-checkout-cone-mode: true
+2026-10-14T15:53:19.4547332Z   fetch-depth: 1
+2026-10-14T15:53:19.4547530Z   fetch-tags: false
+2026-10-14T15:53:19.4547735Z   show-progress: true
+2026-10-14T15:53:19.4547948Z   lfs: false
+2026-10-14T15:53:19.4548147Z   submodules: false
+2026-10-14T15:53:19.4548361Z   set-safe-directory: true
+2026-10-14T15:53:19.4548837Z env:
+2026-10-14T15:53:19.4549055Z   SEMGREP_ENABLE_VERSION_CHECK: false
+2026-10-14T15:53:19.4549320Z ##[endgroup]
+2026-10-14T15:53:19.4705532Z ##[command]/usr/bin/docker exec  bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c sh -c "cat /etc/*release | grep ^ID"
+2026-10-14T15:53:19.7008448Z Syncing repository: PostHog/posthog.com
+2026-10-14T15:53:19.7011016Z ##[group]Getting Git version info
+2026-10-14T15:53:19.7011721Z Working directory is '/__w/posthog.com/posthog.com'
+2026-10-14T15:53:19.7012717Z [command]/usr/bin/git version
+2026-10-14T15:53:19.7022659Z git version 2.52.0
+2026-10-14T15:53:19.7064293Z ##[endgroup]
+2026-10-14T15:53:19.7092912Z Temporarily overriding HOME='/__w/_temp/9708d987-771e-44b2-bb20-2cbeb329656e' before making global git config changes
+2026-10-14T15:53:19.7094404Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:53:19.7102707Z [command]/usr/bin/git config --global --add safe.directory /__w/posthog.com/posthog.com
+2026-10-14T15:53:19.7142652Z Deleting the contents of '/__w/posthog.com/posthog.com'
+2026-10-14T15:53:19.7150240Z ##[group]Initializing the repository
+2026-10-14T15:53:19.7156328Z [command]/usr/bin/git init /__w/posthog.com/posthog.com
+2026-10-14T15:53:19.7213105Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T15:53:19.7214347Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T15:53:19.7216032Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T15:53:19.7217199Z hint: call:
+2026-10-14T15:53:19.7217788Z hint:
+2026-10-14T15:53:19.7218348Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T15:53:19.7218919Z hint:
+2026-10-14T15:53:19.7219462Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T15:53:19.7220118Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T15:53:19.7220558Z hint:
+2026-10-14T15:53:19.7220776Z hint: 	git branch -m <name>
+2026-10-14T15:53:19.7221014Z hint:
+2026-10-14T15:53:19.7221363Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T15:53:19.7221956Z Initialized empty Git repository in /__w/posthog.com/posthog.com/.git/
+2026-10-14T15:53:19.7229835Z [command]/usr/bin/git remote add origin https://github.com/PostHog/posthog.com
+2026-10-14T15:53:19.7266105Z ##[endgroup]
+2026-10-14T15:53:19.7266574Z ##[group]Disabling automatic garbage collection
+2026-10-14T15:53:19.7271812Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T15:53:19.7305018Z ##[endgroup]
+2026-10-14T15:53:19.7305676Z ##[group]Setting up auth
+2026-10-14T15:53:19.7309564Z Removing SSH command configuration
+2026-10-14T15:53:19.7318495Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:53:19.7356414Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:53:19.7563084Z Removing HTTP extra header
+2026-10-14T15:53:19.7572056Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:53:19.7606243Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:53:19.7835665Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:53:19.7845424Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:53:19.7880681Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:53:19.8095427Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T15:53:19.8136634Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/posthog.com/posthog.com/.git.path /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:53:19.8167401Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/posthog.com/posthog.com/.git/worktrees/*.path /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:53:19.8200031Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:53:19.8234472Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:53:19.8263531Z ##[endgroup]
+2026-10-14T15:53:19.8264232Z ##[group]Fetching the repository
+2026-10-14T15:53:19.8287692Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45bfb442fa21a89c783a4879bdd264dd2f976fd0:refs/remotes/pull/21204/merge
+2026-10-14T15:53:23.2382768Z From https://github.com/PostHog/posthog.com
+2026-10-14T15:53:23.2383770Z  * [new ref]         45bfb442fa21a89c783a4879bdd264dd2f976fd0 -> pull/21204/merge
+2026-10-14T15:53:23.2418301Z ##[endgroup]
+2026-10-14T15:53:23.2419297Z ##[group]Determining the checkout info
+2026-10-14T15:53:23.2420275Z ##[endgroup]
+2026-10-14T15:53:23.2429804Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T15:53:23.2487098Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T15:53:23.2519213Z ##[group]Checking out the ref
+2026-10-14T15:53:23.2536538Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/21204/merge
+2026-10-14T15:53:24.2759780Z Updating files:  85% (6296/7369)
+2026-10-14T15:53:24.2859434Z Updating files:  86% (6338/7369)
+2026-10-14T15:53:24.3029814Z Updating files:  87% (6412/7369)
+2026-10-14T15:53:24.3141743Z Updating files:  88% (6485/7369)
+2026-10-14T15:53:24.3256047Z Updating files:  89% (6559/7369)
+2026-10-14T15:53:24.3590141Z Updating files:  90% (6633/7369)
+2026-10-14T15:53:24.4067557Z Updating files:  91% (6706/7369)
+2026-10-14T15:53:24.4402262Z Updating files:  92% (6780/7369)
+2026-10-14T15:53:24.4547528Z Updating files:  93% (6854/7369)
+2026-10-14T15:53:24.4935856Z Updating files:  94% (6927/7369)
+2026-10-14T15:53:24.5306535Z Updating files:  95% (7001/7369)
+2026-10-14T15:53:24.5741281Z Updating files:  96% (7075/7369)
+2026-10-14T15:53:24.6299662Z Updating files:  97% (7148/7369)
+2026-10-14T15:53:24.7112679Z Updating files:  98% (7222/7369)
+2026-10-14T15:53:24.8189810Z Updating files:  99% (7296/7369)
+2026-10-14T15:53:24.8190302Z Updating files: 100% (7369/7369)
+2026-10-14T15:53:24.8190736Z Updating files: 100% (7369/7369), done.
+2026-10-14T15:53:24.8323676Z Note: switching to 'refs/remotes/pull/21204/merge'.
+2026-10-14T15:53:24.8323990Z 
+2026-10-14T15:53:24.8324214Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T15:53:24.8324732Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T15:53:24.8325496Z state without impacting any branches by switching back to a branch.
+2026-10-14T15:53:24.8326081Z 
+2026-10-14T15:53:24.8326290Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T15:53:24.8327187Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T15:53:24.8327659Z 
+2026-10-14T15:53:24.8327870Z   git switch -c <new-branch-name>
+2026-10-14T15:53:24.8328183Z 
+2026-10-14T15:53:24.8328376Z Or undo this operation with:
+2026-10-14T15:53:24.8328690Z 
+2026-10-14T15:53:24.8328851Z   git switch -
+2026-10-14T15:53:24.8329083Z 
+2026-10-14T15:53:24.8329509Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T15:53:24.8330177Z 
+2026-10-14T15:53:24.8330850Z HEAD is now at 45bfb44 Merge a04d59985ecf80588123ffe058a6a15f82ec6968 into 16bcd832491947c0ddad13fcd6dad068732a0761
+2026-10-14T15:53:24.8385387Z ##[endgroup]
+2026-10-14T15:53:24.8426773Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T15:53:24.8450326Z 45bfb442fa21a89c783a4879bdd264dd2f976fd0
+2026-10-14T15:53:24.8722136Z ##[group]Run semgrep \
+2026-10-14T15:53:24.8722467Z [36;1msemgrep \[0m
+2026-10-14T15:53:24.8722770Z [36;1m  --config "p/javascript" \[0m
+2026-10-14T15:53:24.8723068Z [36;1m  --config "p/owasp-top-ten" \[0m
+2026-10-14T15:53:24.8723378Z [36;1m  --config "p/security-audit" \[0m
+2026-10-14T15:53:24.8723671Z [36;1m  --config "p/trailofbits" \[0m
+2026-10-14T15:53:24.8724262Z [36;1m  --exclude-rule typescript.react.security.react-markdown-insecure-html.react-markdown-insecure-html \[0m
+2026-10-14T15:53:24.8724843Z [36;1m  --error \[0m
+2026-10-14T15:53:24.8725393Z [36;1m  --metrics=off \[0m
+2026-10-14T15:53:24.8725653Z [36;1m  --verbose \[0m
+2026-10-14T15:53:24.8725958Z [36;1m  src/ gatsby/ plugins/ api/ *.js *.ts *.tsx[0m
+2026-10-14T15:53:24.8729695Z shell: sh -e {0}
+2026-10-14T15:53:24.8729921Z env:
+2026-10-14T15:53:24.8730134Z   SEMGREP_ENABLE_VERSION_CHECK: false
+2026-10-14T15:53:24.8730410Z ##[endgroup]
+2026-10-14T15:53:28.3147885Z running 812 rules from 4 configs
+2026-10-14T15:53:28.3188177Z Rules:
+2026-10-14T15:53:28.3189063Z <SKIPPED DATA (too many entries; use --max-log-list-entries)>
+2026-10-14T15:53:31.3888670Z                
+2026-10-14T15:53:31.3889188Z                
+2026-10-14T15:53:31.3890066Z ┌─────────────┐
+2026-10-14T15:53:31.3890765Z │ Scan Status │
+2026-10-14T15:53:31.3891272Z └─────────────┘
+2026-10-14T15:53:31.3902341Z   Scanning 2445 files tracked by git with 812 Code rules:
+2026-10-14T15:53:31.7700767Z                                                                                                                         
+2026-10-14T15:53:31.7701886Z   Language      Rules   Files          Origin      Rules                                                                
+2026-10-14T15:53:31.7703370Z  ─────────────────────────────        ───────────────────                                                               
+2026-10-14T15:53:31.7704512Z   <multilang>      25    2445          Community     812                                                                
+2026-10-14T15:53:31.7705863Z   ts               95    1602                                                                                           
+2026-10-14T15:53:31.7706796Z   js               89     157                                                                                           
+2026-10-14T15:53:31.7707663Z   json              3      31                                                                                           
+2026-10-14T15:53:31.7708547Z   bash              1       1                                                                                           
+2026-10-14T15:53:31.7709386Z                                                                                                                         
+2026-10-14T15:54:19.2414082Z SCA findings adjustment: No SCA rules to adjust
+2026-10-14T15:54:19.2416745Z [WARN] Syntax error at line src/components/ActiveWindowsPanel/index.tsx:117:
+2026-10-14T15:54:19.2417578Z  `& layout.` was unexpected
+2026-10-14T15:54:19.2418627Z [WARN] Syntax error at line src/components/Home/HeroCarousel/slides.tsx:547:
+2026-10-14T15:54:19.2419915Z  `& get feedback` was unexpected
+2026-10-14T15:54:19.2420466Z [WARN] Syntax error at line src/components/Lawyers/index.tsx:80:
+2026-10-14T15:54:19.2421030Z  `&t=55` was unexpected
+2026-10-14T15:54:19.2421659Z [WARN] Syntax error at line src/components/MainNav/index.tsx:403:
+2026-10-14T15:54:19.2422293Z  `&t=883` was unexpected
+2026-10-14T15:54:19.2422972Z [WARN] Syntax error at line src/components/NotFoundPage/BlueScreenOfDeath.tsx:210:
+2026-10-14T15:54:19.2423719Z  `&A, and
+2026-10-14T15:54:19.2424282Z                             Company handbook. Error recovery success rate: 98.3%` was unexpected
+2026-10-14T15:54:19.2425439Z [WARN] Syntax error at line src/components/PlatformInstall/schema.tsx:198:
+2026-10-14T15:54:19.2426107Z  `& Integrations` was unexpected
+2026-10-14T15:54:19.2426742Z [WARN] Syntax error at line src/components/Pricing/CloudVsSelfHost/index.tsx:18:
+2026-10-14T15:54:19.2427745Z  `& managed by PostHog` was unexpected
+2026-10-14T15:54:19.2428465Z [WARN] Syntax error at line src/components/Pricing/PricingCalculator/Tabbed.tsx:919:
+2026-10-14T15:54:19.2429186Z  `& add-ons` was unexpected
+2026-10-14T15:54:19.2429816Z [WARN] Syntax error at line src/components/Squeak/components/Authentication.tsx:73:
+2026-10-14T15:54:19.2430519Z  `& help others.` was unexpected
+2026-10-14T15:54:19.2431130Z [WARN] Syntax error at line src/components/Startups/StartupProgram.tsx:661:
+2026-10-14T15:54:19.2431771Z  `& Engineering Lead, Y
+2026-10-14T15:54:19.2432190Z                                 Combinator` was unexpected
+2026-10-14T15:54:19.2432861Z [WARN] Syntax error at line src/components/Students/StudentProgram.tsx:387:
+2026-10-14T15:54:19.2433504Z  `&A later in the semester. It's
+2026-10-14T15:54:19.2434333Z                         about learning how things actually get built and meeting the people who do the building.` was unexpected
+2026-10-14T15:54:19.2435759Z [WARN] Syntax error at line src/hooks/useAppStatus.ts:43:
+2026-10-14T15:54:19.2436280Z  `]
+2026-10-14T15:54:19.2436563Z }
+2026-10-14T15:54:19.2436861Z 
+2026-10-14T15:54:19.2438250Z export type NormalizedStatus = 'operational' | 'degradedPerformance' | 'partialOutage' | 'majorOutage' | 'unknown'
+2026-10-14T15:54:19.2439029Z 
+2026-10-14T15:54:19.2439751Z export const getStatusColor = (status?: NormalizedStatus | string): string => {
+2026-10-14T15:54:19.2440751Z     switch (status) {
+2026-10-14T15:54:19.2441121Z         case 'operational':
+2026-10-14T15:54:19.2441511Z             return 'text-green'
+2026-10-14T15:54:19.2441927Z         case 'degradedPerformance':
+2026-10-14T15:54:19.2443141Z             return 'text-yellow'
+2026-10-14T15:54:19.2443586Z         case 'partialOutage':
+2026-10-14T15:54:19.2443987Z             return 'text-yellow'
+2026-10-14T15:54:19.2444588Z         case 'majorOutage':
+2026-10-14T15:54:19.2444968Z             return 'text-red'
+2026-10-14T15:54:19.2445487Z         default:
+2026-10-14T15:54:19.2445827Z             return 'text-gray'
+2026-10-14T15:54:19.2446193Z     }
+2026-10-14T15:54:19.2446472Z }
+2026-10-14T15:54:19.2446633Z 
+2026-10-14T15:54:19.2447051Z export const getStatusDescription = (status?: NormalizedStatus | string): string => {
+2026-10-14T15:54:19.2447650Z     switch (status) {
+2026-10-14T15:54:19.2447878Z         case 'operational':
+2026-10-14T15:54:19.2448136Z             return 'All systems operational'
+2026-10-14T15:54:19.2448424Z         case 'degradedPerformance':
+2026-10-14T15:54:19.2448692Z             return 'Degraded performance'
+2026-10-14T15:54:19.2448963Z         case 'partialOutage':
+2026-10-14T15:54:19.2449200Z             return 'Partial outage'
+2026-10-14T15:54:19.2449442Z         case 'majorOutage':
+2026-10-14T15:54:19.2449672Z             return 'Major outage'
+2026-10-14T15:54:19.2449901Z         default:
+2026-10-14T15:54:19.2450099Z             return 'Unknown'
+2026-10-14T15:54:19.2450312Z     }
+2026-10-14T15:54:19.2450488Z }` was unexpected
+2026-10-14T15:54:19.2450755Z [WARN] Syntax error at line src/pages/cdp/index.tsx:155:
+2026-10-14T15:54:19.2451092Z  `& analytics` was unexpected
+2026-10-14T15:54:19.2451569Z [WARN] Syntax error at line src/pages/community.tsx:275:
+2026-10-14T15:54:19.2451900Z  `&D club.` was unexpected
+2026-10-14T15:54:19.2452227Z [WARN] Syntax error at line src/pages/components/index.tsx:1254:
+2026-10-14T15:54:19.2452567Z  `& label` was unexpected
+2026-10-14T15:54:19.2452914Z [WARN] Syntax error at line src/pages/context-warehouse/data-modeling.tsx:99:
+2026-10-14T15:54:19.2453350Z  `& vcs integrations:` was unexpected
+2026-10-14T15:54:19.2453723Z [WARN] Syntax error at line src/pages/dpa.tsx:1063:
+2026-10-14T15:54:19.2454038Z  `& Confidentiality` was unexpected
+2026-10-14T15:54:19.2454340Z [WARN] Syntax error at line src/pages/hogreads.tsx:120:
+2026-10-14T15:54:19.2454724Z  `&family=Merriweather:wght@400;700&display=swap` was unexpected
+2026-10-14T15:54:19.2455451Z [WARN] Syntax error at line src/pages/r/observability.tsx:497:
+2026-10-14T15:54:19.2455952Z  `& Errors` was unexpected
+2026-10-14T15:54:19.2456276Z [WARN] Syntax error at line src/pages/teams/new/index.tsx:67:
+2026-10-14T15:54:19.2456619Z  `& publish` was unexpected
+2026-10-14T15:54:19.6091874Z 
+2026-10-14T15:54:19.6092338Z ========================================
+2026-10-14T15:54:19.6092912Z Files skipped:
+2026-10-14T15:54:19.6093284Z ========================================
+2026-10-14T15:54:19.6093593Z 
+2026-10-14T15:54:19.6093759Z   Always skipped by Semgrep:
+2026-10-14T15:54:19.6094025Z 
+2026-10-14T15:54:19.6094399Z    • <none>
+2026-10-14T15:54:19.6094589Z 
+2026-10-14T15:54:19.6094756Z   Skipped by .gitignore:
+2026-10-14T15:54:19.6095718Z   (Disable by passing --no-git-ignore)
+2026-10-14T15:54:19.6096062Z 
+2026-10-14T15:54:19.6096454Z    • <all files not listed by `git ls-files` were skipped>
+2026-10-14T15:54:19.6096897Z 
+2026-10-14T15:54:19.6097089Z   Skipped by .semgrepignore:
+2026-10-14T15:54:19.6097861Z   - https://semgrep.dev/docs/ignoring-files-folders-code/#understand-semgrep-defaults
+2026-10-14T15:54:19.6098601Z 
+2026-10-14T15:54:19.6098825Z    • <none>
+2026-10-14T15:54:19.6099019Z 
+2026-10-14T15:54:19.6099203Z   Skipped by --include patterns:
+2026-10-14T15:54:19.6099540Z 
+2026-10-14T15:54:19.6099755Z    • <none>
+2026-10-14T15:54:19.6099936Z 
+2026-10-14T15:54:19.6100099Z   Skipped by --exclude patterns:
+2026-10-14T15:54:19.6100399Z 
+2026-10-14T15:54:19.6100586Z    • <none>
+2026-10-14T15:54:19.6100786Z 
+2026-10-14T15:54:19.6100937Z   Files that couldn't be accessed:
+2026-10-14T15:54:19.6101212Z 
+2026-10-14T15:54:19.6101380Z    • <none>
+2026-10-14T15:54:19.6101552Z 
+2026-10-14T15:54:19.6101795Z   Skipped by limiting to files smaller than 1000000 bytes:
+2026-10-14T15:54:19.6102371Z   (Adjust with the --max-target-bytes flag)
+2026-10-14T15:54:19.6102698Z 
+2026-10-14T15:54:19.6103336Z    • src/components/Home/lotties/dark.ts
+2026-10-14T15:54:19.6104550Z    • src/components/Home/lotties/light.ts
+2026-10-14T15:54:19.6106398Z    • src/images/landing-page-background-small.svg
+2026-10-14T15:54:19.6107520Z    • src/images/retro-feature-flags.svg
+2026-10-14T15:54:19.6108129Z 
+2026-10-14T15:54:19.6108728Z   Partially analyzed due to parsing or internal Semgrep errors
+2026-10-14T15:54:19.6109478Z 
+2026-10-14T15:54:19.6110257Z    • src/components/ActiveWindowsPanel/index.tsx (~0.7% of lines always skipped)
+2026-10-14T15:54:19.6110892Z 
+2026-10-14T15:54:19.6111137Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6111511Z 
+2026-10-14T15:54:19.6111963Z      • lines 117-117 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6112452Z 
+2026-10-14T15:54:19.6112922Z    • src/components/Home/HeroCarousel/slides.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6113457Z 
+2026-10-14T15:54:19.6113662Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6114030Z 
+2026-10-14T15:54:19.6114450Z      • lines 547-547 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6114925Z 
+2026-10-14T15:54:19.6115609Z    • src/components/Lawyers/index.tsx (~0.9% of lines always skipped)
+2026-10-14T15:54:19.6116080Z 
+2026-10-14T15:54:19.6116300Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6117054Z 
+2026-10-14T15:54:19.6117491Z      • lines 80-80 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6117928Z 
+2026-10-14T15:54:19.6118294Z    • src/components/MainNav/index.tsx (~0.1% of lines always skipped)
+2026-10-14T15:54:19.6118722Z 
+2026-10-14T15:54:19.6118914Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6119237Z 
+2026-10-14T15:54:19.6119582Z      • lines 403-403 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6119986Z 
+2026-10-14T15:54:19.6120409Z    • src/components/NotFoundPage/BlueScreenOfDeath.tsx (~0.7% of lines always skipped)
+2026-10-14T15:54:19.6120893Z 
+2026-10-14T15:54:19.6121097Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6121472Z 
+2026-10-14T15:54:19.6122183Z      • lines 210-211 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6122656Z 
+2026-10-14T15:54:19.6123100Z    • src/components/PlatformInstall/schema.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6123572Z 
+2026-10-14T15:54:19.6123771Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6124169Z 
+2026-10-14T15:54:19.6124545Z      • lines 198-198 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6124973Z 
+2026-10-14T15:54:19.6125674Z    • src/components/Pricing/CloudVsSelfHost/index.tsx (~5.1% of lines always skipped)
+2026-10-14T15:54:19.6126187Z 
+2026-10-14T15:54:19.6126380Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6126701Z 
+2026-10-14T15:54:19.6127069Z      • lines 18-18 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6127822Z      • lines 33-33 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6128233Z 
+2026-10-14T15:54:19.6128710Z    • src/components/Pricing/PricingCalculator/Tabbed.tsx (~0.1% of lines always skipped)
+2026-10-14T15:54:19.6129243Z 
+2026-10-14T15:54:19.6129447Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6129782Z 
+2026-10-14T15:54:19.6130165Z      • lines 919-919 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6130599Z 
+2026-10-14T15:54:19.6131069Z    • src/components/Squeak/components/Authentication.tsx (~0.7% of lines always skipped)
+2026-10-14T15:54:19.6131599Z 
+2026-10-14T15:54:19.6131791Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6132109Z 
+2026-10-14T15:54:19.6132510Z      • lines 73-73 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6132928Z 
+2026-10-14T15:54:19.6133348Z    • src/components/Startups/StartupProgram.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6133814Z 
+2026-10-14T15:54:19.6133998Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6134314Z 
+2026-10-14T15:54:19.6134689Z      • lines 661-662 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6135341Z 
+2026-10-14T15:54:19.6135774Z    • src/components/Students/StudentProgram.tsx (~0.4% of lines always skipped)
+2026-10-14T15:54:19.6136265Z 
+2026-10-14T15:54:19.6136470Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6136796Z 
+2026-10-14T15:54:19.6137172Z      • lines 387-388 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6137618Z 
+2026-10-14T15:54:19.6137934Z    • src/hooks/useAppStatus.ts (~27.8% of lines always skipped)
+2026-10-14T15:54:19.6138304Z 
+2026-10-14T15:54:19.6138486Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6138817Z 
+2026-10-14T15:54:19.6139181Z      • lines 43-76 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6139950Z      • lines 113-113 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6140732Z      • lines 113-113 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6141501Z      • lines 113-113 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6142140Z 
+2026-10-14T15:54:19.6142439Z    • src/pages/cdp/index.tsx (~1.1% of lines always skipped)
+2026-10-14T15:54:19.6142782Z 
+2026-10-14T15:54:19.6142977Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6143298Z 
+2026-10-14T15:54:19.6143663Z      • lines 155-155 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6144435Z      • lines 162-162 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6144863Z 
+2026-10-14T15:54:19.6145382Z    • src/pages/community.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6145744Z 
+2026-10-14T15:54:19.6145944Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6146262Z 
+2026-10-14T15:54:19.6146647Z      • lines 275-275 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6147081Z 
+2026-10-14T15:54:19.6147611Z    • src/pages/components/index.tsx (~0.1% of lines always skipped)
+2026-10-14T15:54:19.6148035Z 
+2026-10-14T15:54:19.6148231Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6148566Z 
+2026-10-14T15:54:19.6148951Z      • lines 1254-1254 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6149761Z      • lines 1289-1289 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6150568Z      • lines 1419-1419 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6151007Z 
+2026-10-14T15:54:19.6151442Z    • src/pages/context-warehouse/data-modeling.tsx (~0.6% of lines always skipped)
+2026-10-14T15:54:19.6151934Z 
+2026-10-14T15:54:19.6152127Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6152455Z 
+2026-10-14T15:54:19.6152826Z      • lines 99-99 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6153260Z 
+2026-10-14T15:54:19.6153536Z    • src/pages/dpa.tsx (~0.1% of lines always skipped)
+2026-10-14T15:54:19.6153867Z 
+2026-10-14T15:54:19.6154057Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6154407Z 
+2026-10-14T15:54:19.6154800Z      • lines 1063-1063 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6155470Z 
+2026-10-14T15:54:19.6155779Z    • src/pages/hogreads.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6156125Z 
+2026-10-14T15:54:19.6156315Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6156629Z 
+2026-10-14T15:54:19.6157015Z      • lines 120-120 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6157443Z 
+2026-10-14T15:54:19.6157780Z    • src/pages/r/observability.tsx (~0.2% of lines always skipped)
+2026-10-14T15:54:19.6158167Z 
+2026-10-14T15:54:19.6158353Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6158685Z 
+2026-10-14T15:54:19.6159061Z      • lines 497-497 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6159486Z 
+2026-10-14T15:54:19.6159807Z    • src/pages/teams/new/index.tsx (~1.1% of lines always skipped)
+2026-10-14T15:54:19.6160204Z 
+2026-10-14T15:54:19.6160397Z      The following lines were skipped for all analysis:
+2026-10-14T15:54:19.6160717Z 
+2026-10-14T15:54:19.6161083Z      • lines 67-67 due to exception "PartialParsing" raised during analysis
+2026-10-14T15:54:19.6161494Z 
+2026-10-14T15:54:19.6161610Z                 
+2026-10-14T15:54:19.6161889Z                 
+2026-10-14T15:54:19.6162223Z ┌──────────────┐
+2026-10-14T15:54:19.6162536Z │ Scan Summary │
+2026-10-14T15:54:19.6162858Z └──────────────┘
+2026-10-14T15:54:19.6163213Z ✅ Scan completed successfully.
+2026-10-14T15:54:19.6163643Z  • Findings: 0 (0 blocking)
+2026-10-14T15:54:19.6164016Z  • Rules run: 124
+2026-10-14T15:54:19.6164359Z  • Targets scanned: 2445
+2026-10-14T15:54:19.6164731Z  • Parsed lines: ~99.9%
+2026-10-14T15:54:19.6165279Z  • Scan skipped: 
+2026-10-14T15:54:19.6165692Z    ◦ Files larger than  files 1.0 MB: 4
+2026-10-14T15:54:19.6166179Z  • Scan was limited to files tracked by git
+2026-10-14T15:54:19.6167003Z Ran 124 rules on 2445 files: 0 findings.
+2026-10-14T15:54:19.6167561Z (need more rules? `semgrep login` for additional free Semgrep Registry rules)
+2026-10-14T15:54:19.6168033Z 
+2026-10-14T15:54:19.6189783Z Not sending pseudonymous metrics since metrics are configured to OFF, registry usage is True, and login status is False
+2026-10-14T15:54:19.9464543Z Post job cleanup.
+2026-10-14T15:54:19.9495837Z ##[command]/usr/bin/docker exec  bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c sh -c "cat /etc/*release | grep ^ID"
+2026-10-14T15:54:20.1546889Z [command]/usr/bin/git version
+2026-10-14T15:54:20.1595916Z git version 2.52.0
+2026-10-14T15:54:20.1688136Z Copying '/github/home/.gitconfig' to '/__w/_temp/e0ed8918-817e-4a7f-9119-20e8705766f6/.gitconfig'
+2026-10-14T15:54:20.1702573Z Temporarily overriding HOME='/__w/_temp/e0ed8918-817e-4a7f-9119-20e8705766f6' before making global git config changes
+2026-10-14T15:54:20.1707495Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:54:20.1715581Z [command]/usr/bin/git config --global --add safe.directory /__w/posthog.com/posthog.com
+2026-10-14T15:54:20.1749555Z Removing SSH command configuration
+2026-10-14T15:54:20.1759909Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:54:20.1804033Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:54:20.2037874Z Removing HTTP extra header
+2026-10-14T15:54:20.2045427Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:54:20.2085296Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:54:20.2318155Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:54:20.2330038Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:54:20.2357843Z includeif.gitdir:/__w/posthog.com/posthog.com/.git.path
+2026-10-14T15:54:20.2358751Z includeif.gitdir:/__w/posthog.com/posthog.com/.git/worktrees/*.path
+2026-10-14T15:54:20.2359501Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:54:20.2360170Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:54:20.2371533Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/posthog.com/posthog.com/.git.path
+2026-10-14T15:54:20.2393426Z /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2410149Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/posthog.com/posthog.com/.git.path /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2455559Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/posthog.com/posthog.com/.git/worktrees/*.path
+2026-10-14T15:54:20.2478918Z /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2489990Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/posthog.com/posthog.com/.git/worktrees/*.path /__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2533889Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:54:20.2556798Z /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2568054Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2610634Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:54:20.2630002Z /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2639695Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config
+2026-10-14T15:54:20.2685424Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:54:20.2890822Z Removing credentials config '/__w/_temp/git-credentials-ff3eef20-2744-4ad8-ae60-0433a753e3b6.config'
+2026-10-14T15:54:20.3064820Z Stop and remove container: 4ecb82e8541344b9b2f7f704c7437035_semgrepsemgrep11630sha2567cad2bc2d1e44f87f0bf4be6d1fa23aa90fb72015bebc89fb91385d813987a03_df0b17
+2026-10-14T15:54:20.3069901Z ##[command]/usr/bin/docker rm --force bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:54:20.4410074Z bc2a25dd96072451ce55d8478500046d7d7a5b39357e0baa9a2e2d76d443d78c
+2026-10-14T15:54:20.4449470Z Remove container network: github_network_11023d7077fa42729e16ceac3d758a1a
+2026-10-14T15:54:20.4454778Z ##[command]/usr/bin/docker network rm github_network_11023d7077fa42729e16ceac3d758a1a
+2026-10-14T15:54:20.5431294Z github_network_11023d7077fa42729e16ceac3d758a1a
+2026-10-14T15:54:20.5504364Z Cleaning up orphan processes

@@ -1,0 +1,337 @@
+﻿2026-10-11T21:05:45.9857821Z Current runner version: '2.337.0'
+2026-10-11T21:05:45.9897050Z ##[group]Runner Image Provisioner
+2026-10-11T21:05:45.9898730Z Hosted Compute Agent
+2026-10-11T21:05:45.9899899Z Version: 20261002.596
+2026-10-11T21:05:45.9901061Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-11T21:05:45.9902951Z Build Date: 2026-10-02T22:28:27Z
+2026-10-11T21:05:45.9904400Z Worker ID: {d28dc524-89f0-4c21-a002-2fde3b1730bb}
+2026-10-11T21:05:45.9905947Z Region: eastus
+2026-10-11T21:05:45.9907034Z Cloud: Azure
+2026-10-11T21:05:45.9908045Z ##[endgroup]
+2026-10-11T21:05:45.9911121Z ##[group]Operating System
+2026-10-11T21:05:45.9912300Z Ubuntu
+2026-10-11T21:05:45.9913302Z 24.04.5
+2026-10-11T21:05:45.9914371Z LTS
+2026-10-11T21:05:45.9915498Z ##[endgroup]
+2026-10-11T21:05:45.9916597Z ##[group]Runner Image
+2026-10-11T21:05:45.9917711Z Image: ubuntu-24.04
+2026-10-11T21:05:45.9918776Z Version: 20261004.327.1
+2026-10-11T21:05:45.9921105Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-11T21:05:45.9924020Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-11T21:05:45.9926128Z ##[endgroup]
+2026-10-11T21:05:45.9928473Z ##[group]GITHUB_TOKEN Permissions
+2026-10-11T21:05:45.9931576Z Contents: read
+2026-10-11T21:05:45.9932858Z Metadata: read
+2026-10-11T21:05:45.9933899Z SecurityEvents: write
+2026-10-11T21:05:45.9935403Z ##[endgroup]
+2026-10-11T21:05:45.9938491Z Secret source: Actions
+2026-10-11T21:05:45.9939978Z Cache mode: write
+2026-10-11T21:05:45.9942802Z Prepare workflow directory
+2026-10-11T21:05:46.0598059Z Prepare all required actions
+2026-10-11T21:05:46.0675942Z Getting action download info
+2026-10-11T21:05:46.2433015Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-11T21:05:46.3422809Z Download action repository 'github/codeql-action@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2' (SHA:2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2)
+2026-10-11T21:05:46.6271092Z Complete job name: semgrep
+2026-10-11T21:05:46.6788848Z ##[group]Checking docker version
+2026-10-11T21:05:46.6802081Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-10-11T21:05:46.7832332Z '1.48'
+2026-10-11T21:05:46.7842213Z Docker daemon API version: '1.48'
+2026-10-11T21:05:46.7843024Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-10-11T21:05:46.8010261Z '1.48'
+2026-10-11T21:05:46.8022952Z Docker client API version: '1.48'
+2026-10-11T21:05:46.8028835Z ##[endgroup]
+2026-10-11T21:05:46.8032337Z ##[group]Clean up resources from previous jobs
+2026-10-11T21:05:46.8038406Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=3d380b"
+2026-10-11T21:05:46.8195515Z ##[command]/usr/bin/docker network prune --force --filter "label=3d380b"
+2026-10-11T21:05:46.8331628Z ##[endgroup]
+2026-10-11T21:05:46.8332179Z ##[group]Create local container network
+2026-10-11T21:05:46.8342708Z ##[command]/usr/bin/docker network create --label 3d380b github_network_116ebffc845448a0a75c9d2ed5ca0329
+2026-10-11T21:05:46.8888432Z 042c1e4198af43deb0acd3d55bb74d00198d45e15d651ec726adf23bd66d01ae
+2026-10-11T21:05:46.8906569Z ##[endgroup]
+2026-10-11T21:05:46.8931202Z ##[group]Starting job container
+2026-10-11T21:05:46.8953137Z ##[command]/usr/bin/docker pull semgrep/semgrep@sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b
+2026-10-11T21:05:47.0812366Z docker.io/semgrep/semgrep@sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b: Pulling from semgrep/semgrep
+2026-10-11T21:05:47.1520749Z e6f31ffc071e: Pulling fs layer
+2026-10-11T21:05:47.1521850Z 42bad1cc6051: Pulling fs layer
+2026-10-11T21:05:47.1522720Z bd9ddc54bea9: Pulling fs layer
+2026-10-11T21:05:47.1523416Z 8e6007cdabcf: Pulling fs layer
+2026-10-11T21:05:47.1524156Z 7fc22c96d532: Pulling fs layer
+2026-10-11T21:05:47.1525108Z fc93e0d4b30a: Pulling fs layer
+2026-10-11T21:05:47.1525763Z 04ad62ac3cfc: Pulling fs layer
+2026-10-11T21:05:47.1526904Z 4f5f23011c36: Pulling fs layer
+2026-10-11T21:05:47.1527671Z d03f619051a8: Pulling fs layer
+2026-10-11T21:05:47.1528246Z 9705a0e6141c: Pulling fs layer
+2026-10-11T21:05:47.1529001Z dfac586a76c3: Pulling fs layer
+2026-10-11T21:05:47.1529588Z aed85b97781a: Pulling fs layer
+2026-10-11T21:05:47.1530343Z b99a4a97b185: Pulling fs layer
+2026-10-11T21:05:47.1530958Z 8e6007cdabcf: Waiting
+2026-10-11T21:05:47.1531585Z 7fc22c96d532: Waiting
+2026-10-11T21:05:47.1532156Z fc93e0d4b30a: Waiting
+2026-10-11T21:05:47.1532813Z 04ad62ac3cfc: Waiting
+2026-10-11T21:05:47.1533589Z 4f5f23011c36: Waiting
+2026-10-11T21:05:47.1534131Z d03f619051a8: Waiting
+2026-10-11T21:05:47.1535071Z 9705a0e6141c: Waiting
+2026-10-11T21:05:47.1535607Z dfac586a76c3: Waiting
+2026-10-11T21:05:47.1536268Z aed85b97781a: Waiting
+2026-10-11T21:05:47.1536788Z b99a4a97b185: Waiting
+2026-10-11T21:05:47.2021850Z bd9ddc54bea9: Verifying Checksum
+2026-10-11T21:05:47.2023002Z bd9ddc54bea9: Download complete
+2026-10-11T21:05:47.2288384Z e6f31ffc071e: Verifying Checksum
+2026-10-11T21:05:47.2294484Z e6f31ffc071e: Download complete
+2026-10-11T21:05:47.2575705Z 8e6007cdabcf: Verifying Checksum
+2026-10-11T21:05:47.2586010Z 8e6007cdabcf: Download complete
+2026-10-11T21:05:47.3864543Z 42bad1cc6051: Verifying Checksum
+2026-10-11T21:05:47.3867447Z 42bad1cc6051: Download complete
+2026-10-11T21:05:47.4522982Z e6f31ffc071e: Pull complete
+2026-10-11T21:05:47.4708394Z 04ad62ac3cfc: Verifying Checksum
+2026-10-11T21:05:47.4711396Z 04ad62ac3cfc: Download complete
+2026-10-11T21:05:47.5023571Z 4f5f23011c36: Verifying Checksum
+2026-10-11T21:05:47.5034412Z 4f5f23011c36: Download complete
+2026-10-11T21:05:47.5303755Z d03f619051a8: Verifying Checksum
+2026-10-11T21:05:47.5319384Z d03f619051a8: Download complete
+2026-10-11T21:05:47.5649660Z 9705a0e6141c: Verifying Checksum
+2026-10-11T21:05:47.5653652Z 9705a0e6141c: Download complete
+2026-10-11T21:05:47.5929570Z dfac586a76c3: Verifying Checksum
+2026-10-11T21:05:47.5939210Z dfac586a76c3: Download complete
+2026-10-11T21:05:47.6239186Z aed85b97781a: Verifying Checksum
+2026-10-11T21:05:47.6245147Z aed85b97781a: Download complete
+2026-10-11T21:05:47.6506853Z b99a4a97b185: Verifying Checksum
+2026-10-11T21:05:47.6509140Z b99a4a97b185: Download complete
+2026-10-11T21:05:47.9141049Z 7fc22c96d532: Verifying Checksum
+2026-10-11T21:05:47.9142596Z 7fc22c96d532: Download complete
+2026-10-11T21:05:48.0296403Z fc93e0d4b30a: Verifying Checksum
+2026-10-11T21:05:48.0298428Z fc93e0d4b30a: Download complete
+2026-10-11T21:05:52.2394834Z 42bad1cc6051: Pull complete
+2026-10-11T21:05:52.2528071Z bd9ddc54bea9: Pull complete
+2026-10-11T21:05:52.2812906Z 8e6007cdabcf: Pull complete
+2026-10-11T21:05:52.9819084Z 7fc22c96d532: Pull complete
+2026-10-11T21:05:58.8781785Z fc93e0d4b30a: Pull complete
+2026-10-11T21:05:58.9411517Z 04ad62ac3cfc: Pull complete
+2026-10-11T21:05:58.9506091Z 4f5f23011c36: Pull complete
+2026-10-11T21:05:58.9641462Z d03f619051a8: Pull complete
+2026-10-11T21:05:58.9745928Z 9705a0e6141c: Pull complete
+2026-10-11T21:05:58.9883841Z dfac586a76c3: Pull complete
+2026-10-11T21:05:58.9966263Z aed85b97781a: Pull complete
+2026-10-11T21:05:59.0060569Z b99a4a97b185: Pull complete
+2026-10-11T21:05:59.0109471Z Digest: sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b
+2026-10-11T21:05:59.0115694Z Status: Downloaded newer image for semgrep/semgrep@sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b
+2026-10-11T21:05:59.0129397Z docker.io/semgrep/semgrep@sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b
+2026-10-11T21:05:59.0209874Z ##[command]/usr/bin/docker create --name 40a62934635d4ad19b03d609b59caa3a_semgrepsemgrepsha25665dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b_cf5275 --label 3d380b --workdir /__w/dns-caa-catalog/dns-caa-catalog --network github_network_116ebffc845448a0a75c9d2ed5ca0329  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.337.0/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" semgrep/semgrep@sha256:65dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b "-f" "/dev/null"
+2026-10-11T21:05:59.0472039Z a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:05:59.0493148Z ##[command]/usr/bin/docker start a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:05:59.2490626Z a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:05:59.2525960Z ##[command]/usr/bin/docker ps --all --filter id=a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-10-11T21:05:59.2651614Z a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b Up Less than a second
+2026-10-11T21:05:59.2668618Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:05:59.2797518Z HOME=/github/home
+2026-10-11T21:05:59.2798185Z GITHUB_ACTIONS=true
+2026-10-11T21:05:59.2806090Z CI=true
+2026-10-11T21:05:59.2806713Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-10-11T21:05:59.2807191Z SEMGREP_IN_DOCKER=1
+2026-10-11T21:05:59.2807520Z SEMGREP_USER_AGENT_APPEND=Docker
+2026-10-11T21:05:59.2808639Z PYTHONIOENCODING=utf8
+2026-10-11T21:05:59.2809028Z PYTHONUNBUFFERED=1
+2026-10-11T21:05:59.2810622Z DOCKER_OTEL_RESOURCE_ATTRIBUTES=vcs.ref.head.name=release-1.172.0,vcs.ref.head.revision=10ec7647a6e9c69faf3928ded204fc4fe85e06f0,vcs.repository.url.full=github.com/semgrep/semgrep-proprietary,docker.base_image=alpine:3.23
+2026-10-11T21:05:59.2811593Z DD_SERVICE=semgrep-core
+2026-10-11T21:05:59.2811857Z TSAN_OPTIONS=exitcode=0 report_signal_unsafe=0
+2026-10-11T21:05:59.2818828Z ##[endgroup]
+2026-10-11T21:05:59.2828523Z ##[group]Waiting for all services to be ready
+2026-10-11T21:05:59.2830118Z ##[endgroup]
+2026-10-11T21:05:59.3133235Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-11T21:05:59.3133933Z with:
+2026-10-11T21:05:59.3134166Z   persist-credentials: false
+2026-10-11T21:05:59.3134477Z   repository: UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:59.3137100Z   token: ***
+2026-10-11T21:05:59.3137306Z   ssh-strict: true
+2026-10-11T21:05:59.3137509Z   ssh-user: git
+2026-10-11T21:05:59.3137697Z   clean: true
+2026-10-11T21:05:59.3137905Z   sparse-checkout-cone-mode: true
+2026-10-11T21:05:59.3138158Z   fetch-depth: 1
+2026-10-11T21:05:59.3138347Z   fetch-tags: false
+2026-10-11T21:05:59.3138548Z   show-progress: true
+2026-10-11T21:05:59.3138745Z   lfs: false
+2026-10-11T21:05:59.3138925Z   submodules: false
+2026-10-11T21:05:59.3139127Z   set-safe-directory: true
+2026-10-11T21:05:59.3139443Z   allow-unsafe-pr-checkout: false
+2026-10-11T21:05:59.3139971Z ##[endgroup]
+2026-10-11T21:05:59.3202279Z ##[command]/usr/bin/docker exec  a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b sh -c "cat /etc/*release | grep ^ID"
+2026-10-11T21:05:59.5453633Z Syncing repository: UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:59.5455763Z ##[group]Getting Git version info
+2026-10-11T21:05:59.5456395Z Working directory is '/__w/dns-caa-catalog/dns-caa-catalog'
+2026-10-11T21:05:59.5457468Z [command]/usr/bin/git version
+2026-10-11T21:05:59.5495251Z git version 2.52.0
+2026-10-11T21:05:59.5536862Z ##[endgroup]
+2026-10-11T21:05:59.5574042Z Temporarily overriding HOME='/__w/_temp/f11770cd-454e-4a14-bf87-0409f4cda006' before making global git config changes
+2026-10-11T21:05:59.5576290Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T21:05:59.5581866Z [command]/usr/bin/git config --global --add safe.directory /__w/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:05:59.5637007Z Deleting the contents of '/__w/dns-caa-catalog/dns-caa-catalog'
+2026-10-11T21:05:59.5638763Z ##[group]Determining repository object format
+2026-10-11T21:05:59.5645729Z ##[endgroup]
+2026-10-11T21:05:59.5650402Z ##[group]Initializing the repository
+2026-10-11T21:05:59.5651383Z [command]/usr/bin/git init /__w/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:05:59.5712677Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-11T21:05:59.5745646Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-11T21:05:59.5768164Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-11T21:05:59.5782974Z hint: call:
+2026-10-11T21:05:59.5809075Z hint:
+2026-10-11T21:05:59.5832402Z hint: 	git config --global init.defaultBranch <name>
+2026-10-11T21:05:59.5856009Z hint:
+2026-10-11T21:05:59.5875654Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-11T21:05:59.5886844Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-11T21:05:59.5888019Z hint:
+2026-10-11T21:05:59.5889972Z hint: 	git branch -m <name>
+2026-10-11T21:05:59.5891083Z hint:
+2026-10-11T21:05:59.5892012Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-11T21:05:59.5893331Z Initialized empty Git repository in /__w/dns-caa-catalog/dns-caa-catalog/.git/
+2026-10-11T21:05:59.5896426Z [command]/usr/bin/git remote add origin https://github.com/UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:05:59.5897941Z ##[endgroup]
+2026-10-11T21:05:59.5898494Z ##[group]Disabling automatic garbage collection
+2026-10-11T21:05:59.5899004Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-11T21:05:59.5900200Z ##[endgroup]
+2026-10-11T21:05:59.5900689Z ##[group]Setting up auth
+2026-10-11T21:05:59.5901096Z Removing SSH command configuration
+2026-10-11T21:05:59.5901652Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:05:59.5904532Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:05:59.6106098Z Removing HTTP extra header
+2026-10-11T21:05:59.6112671Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:05:59.6151701Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:05:59.6405401Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:05:59.6416494Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:05:59.6456143Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:05:59.6678911Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-11T21:05:59.6726023Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git.path /__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:05:59.6764479Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path /__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:05:59.6796783Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:05:59.6828768Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:05:59.6856350Z ##[endgroup]
+2026-10-11T21:05:59.6856839Z ##[group]Fetching the repository
+2026-10-11T21:05:59.6864052Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +90ffcf54f324e786ab8b653e6adc20ec821c29d6:refs/remotes/origin/main
+2026-10-11T21:06:00.1069511Z From https://github.com/UnitVectorY-Labs/dns-caa-catalog
+2026-10-11T21:06:00.1070056Z  * [new ref]         90ffcf54f324e786ab8b653e6adc20ec821c29d6 -> origin/main
+2026-10-11T21:06:00.1105477Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-11T21:06:00.1133030Z   origin/main
+2026-10-11T21:06:00.1143759Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-11T21:06:00.1167337Z 90ffcf54f324e786ab8b653e6adc20ec821c29d6
+2026-10-11T21:06:00.1173172Z ##[endgroup]
+2026-10-11T21:06:00.1173568Z ##[group]Determining the checkout info
+2026-10-11T21:06:00.1178777Z ##[endgroup]
+2026-10-11T21:06:00.1183260Z [command]/usr/bin/git sparse-checkout disable
+2026-10-11T21:06:00.1235536Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-11T21:06:00.1266864Z ##[group]Checking out the ref
+2026-10-11T21:06:00.1271342Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-11T21:06:01.0684561Z branch 'main' set up to track 'origin/main'.
+2026-10-11T21:06:01.0688284Z Switched to a new branch 'main'
+2026-10-11T21:06:01.0699869Z ##[endgroup]
+2026-10-11T21:06:01.0750190Z [command]/usr/bin/git log -1 --format=%H
+2026-10-11T21:06:01.0778756Z 90ffcf54f324e786ab8b653e6adc20ec821c29d6
+2026-10-11T21:06:01.0788318Z ##[group]Removing auth
+2026-10-11T21:06:01.0788811Z Removing SSH command configuration
+2026-10-11T21:06:01.0793344Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:06:01.0830744Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:06:01.1047929Z Removing HTTP extra header
+2026-10-11T21:06:01.1053644Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:06:01.1090996Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:06:01.1313088Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:06:01.1313954Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:06:01.1339569Z includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git.path
+2026-10-11T21:06:01.1340556Z includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path
+2026-10-11T21:06:01.1341402Z includeif.gitdir:/github/workspace/.git.path
+2026-10-11T21:06:01.1342043Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-11T21:06:01.1351128Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git.path
+2026-10-11T21:06:01.1375371Z /__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:06:01.1385875Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git.path \/__w\/_temp\/git\-credentials\-e5a0f4da\-38a6\-408a\-90f9\-09564b6c28e6\.config
+2026-10-11T21:06:01.1432231Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path
+2026-10-11T21:06:01.1455332Z /__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:06:01.1464653Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/dns-caa-catalog/dns-caa-catalog/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-e5a0f4da\-38a6\-408a\-90f9\-09564b6c28e6\.config
+2026-10-11T21:06:01.1510575Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-11T21:06:01.1539118Z /github/runner_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:06:01.1555965Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-e5a0f4da\-38a6\-408a\-90f9\-09564b6c28e6\.config
+2026-10-11T21:06:01.1602050Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-11T21:06:01.1624108Z /github/runner_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config
+2026-10-11T21:06:01.1633825Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-e5a0f4da\-38a6\-408a\-90f9\-09564b6c28e6\.config
+2026-10-11T21:06:01.1679127Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:06:01.1881073Z Removing credentials config '/__w/_temp/git-credentials-e5a0f4da-38a6-408a-90f9-09564b6c28e6.config'
+2026-10-11T21:06:01.1892167Z ##[endgroup]
+2026-10-11T21:06:01.2118642Z ##[group]Run semgrep scan --config auto --sarif --output semgrep.sarif
+2026-10-11T21:06:01.2119220Z [36;1msemgrep scan --config auto --sarif --output semgrep.sarif[0m
+2026-10-11T21:06:01.2122289Z shell: sh -e {0}
+2026-10-11T21:06:01.2122513Z ##[endgroup]
+2026-10-11T21:06:17.8037748Z                
+2026-10-11T21:06:17.8038158Z                
+2026-10-11T21:06:17.8038911Z ┌─────────────┐
+2026-10-11T21:06:17.8039529Z │ Scan Status │
+2026-10-11T21:06:17.8039921Z └─────────────┘
+2026-10-11T21:06:17.8064370Z   Scanning 10037 files tracked by git with 1074 Code rules:
+2026-10-11T21:06:18.8991499Z                                                                                                                         
+2026-10-11T21:06:18.8992442Z   Language      Rules   Files          Origin      Rules                                                                
+2026-10-11T21:06:18.8993782Z  ─────────────────────────────        ───────────────────                                                               
+2026-10-11T21:06:18.8995095Z   <multilang>      60   10037          Community    1074                                                                
+2026-10-11T21:06:18.8995977Z   json              4   10001                                                                                           
+2026-10-11T21:06:18.8996749Z   yaml             36      13                                                                                           
+2026-10-11T21:06:18.8997491Z   html              1       9                                                                                           
+2026-10-11T21:06:18.8998210Z   go               84       1                                                                                           
+2026-10-11T21:06:18.8998900Z                                                                                                                         
+2026-10-11T21:06:35.8109980Z                 
+2026-10-11T21:06:35.8110364Z                 
+2026-10-11T21:06:35.8110993Z ┌──────────────┐
+2026-10-11T21:06:35.8111379Z │ Scan Summary │
+2026-10-11T21:06:35.8111751Z └──────────────┘
+2026-10-11T21:06:35.8112219Z ✅ Scan completed successfully.
+2026-10-11T21:06:35.8112712Z  • Findings: 7 (7 blocking)
+2026-10-11T21:06:35.8113128Z  • Rules run: 183
+2026-10-11T21:06:35.8113510Z  • Targets scanned: 10037
+2026-10-11T21:06:35.8113903Z  • Parsed lines: ~99.9%
+2026-10-11T21:06:35.8114375Z  • Scan was limited to files tracked by git
+2026-10-11T21:06:35.8115853Z  • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+2026-10-11T21:06:35.8116576Z Ran 183 rules on 10037 files: 7 findings.
+2026-10-11T21:06:35.8199102Z 
+2026-10-11T21:06:35.8199900Z A new version of Semgrep is available. See https://semgrep.dev/docs/upgrading
+2026-10-11T21:06:36.9364088Z ##[group]Run github/codeql-action/upload-sarif@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2
+2026-10-11T21:06:36.9364565Z with:
+2026-10-11T21:06:36.9364768Z   sarif_file: semgrep.sarif
+2026-10-11T21:06:36.9365315Z   category: semgrep
+2026-10-11T21:06:36.9365841Z   checkout_path: /home/runner/work/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:06:36.9368250Z   token: ***
+2026-10-11T21:06:36.9368447Z   matrix: null
+2026-10-11T21:06:36.9368654Z   wait-for-processing: true
+2026-10-11T21:06:36.9368887Z ##[endgroup]
+2026-10-11T21:06:36.9374781Z ##[command]/usr/bin/docker exec  a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b sh -c "cat /etc/*release | grep ^ID"
+2026-10-11T21:06:37.3527069Z Job run UUID is 535e8cf1-c0aa-446d-98c3-bfae699d4419.
+2026-10-11T21:06:37.8980192Z Post-processing sarif files: ["semgrep.sarif"]
+2026-10-11T21:06:37.9184408Z Validating semgrep.sarif
+2026-10-11T21:06:38.3283256Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-11T21:06:38.3649689Z ##[group]Uploading code scanning results
+2026-10-11T21:06:38.4159319Z Uploading results
+2026-10-11T21:06:39.0705454Z Successfully uploaded results
+2026-10-11T21:06:39.0706277Z ##[endgroup]
+2026-10-11T21:06:39.0710617Z ##[group]Waiting for processing to finish
+2026-10-11T21:06:44.2182971Z Analysis upload status is complete.
+2026-10-11T21:06:44.2184095Z ##[endgroup]
+2026-10-11T21:06:44.5718090Z Post job cleanup.
+2026-10-11T21:06:44.5723742Z ##[command]/usr/bin/docker exec  a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b sh -c "cat /etc/*release | grep ^ID"
+2026-10-11T21:06:44.9946340Z ##[group]Uploading combined SARIF debug artifact
+2026-10-11T21:06:44.9952672Z ##[endgroup]
+2026-10-11T21:06:45.0247131Z Post job cleanup.
+2026-10-11T21:06:45.0254525Z ##[command]/usr/bin/docker exec  a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b sh -c "cat /etc/*release | grep ^ID"
+2026-10-11T21:06:45.2272100Z [command]/usr/bin/git version
+2026-10-11T21:06:45.2327415Z git version 2.52.0
+2026-10-11T21:06:45.2391601Z Copying '/github/home/.gitconfig' to '/__w/_temp/e451cff4-f82a-4175-85fd-619b9b890d8b/.gitconfig'
+2026-10-11T21:06:45.2405375Z Temporarily overriding HOME='/__w/_temp/e451cff4-f82a-4175-85fd-619b9b890d8b' before making global git config changes
+2026-10-11T21:06:45.2407288Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T21:06:45.2428795Z [command]/usr/bin/git config --global --add safe.directory /__w/dns-caa-catalog/dns-caa-catalog
+2026-10-11T21:06:45.2463150Z Removing SSH command configuration
+2026-10-11T21:06:45.2470964Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T21:06:45.2521926Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T21:06:45.2744022Z Removing HTTP extra header
+2026-10-11T21:06:45.2755045Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T21:06:45.2793880Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T21:06:45.3029425Z Removing includeIf entries pointing to credentials config files
+2026-10-11T21:06:45.3037175Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T21:06:45.3086902Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T21:06:45.3541633Z Stop and remove container: 40a62934635d4ad19b03d609b59caa3a_semgrepsemgrepsha25665dcd4408adda7c183a6b4550cb1e9b19f7f627a6fbb7e0559bd466bedc44d7b_cf5275
+2026-10-11T21:06:45.3547255Z ##[command]/usr/bin/docker rm --force a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:06:45.5277476Z a11ec9ffae89414ea672040f607bd78fd2b720571a25f2ca85a5eb32d3b5fa4b
+2026-10-11T21:06:45.5307461Z Remove container network: github_network_116ebffc845448a0a75c9d2ed5ca0329
+2026-10-11T21:06:45.5313258Z ##[command]/usr/bin/docker network rm github_network_116ebffc845448a0a75c9d2ed5ca0329
+2026-10-11T21:06:45.6340759Z github_network_116ebffc845448a0a75c9d2ed5ca0329
+2026-10-11T21:06:45.6415550Z Cleaning up orphan processes

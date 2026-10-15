@@ -1,0 +1,1067 @@
+﻿2026-10-14T11:58:27.8388951Z Current runner version: '2.337.0'
+2026-10-14T11:58:27.8423274Z ##[group]Runner Image Provisioner
+2026-10-14T11:58:27.8424627Z Hosted Compute Agent
+2026-10-14T11:58:27.8425622Z Version: 20261002.596
+2026-10-14T11:58:27.8426748Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T11:58:27.8427995Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T11:58:27.8429123Z Worker ID: {65420e74-104b-46c9-b1f2-2e42756d347d}
+2026-10-14T11:58:27.8430368Z Region: eastus
+2026-10-14T11:58:27.8431580Z Cloud: Azure
+2026-10-14T11:58:27.8432629Z ##[endgroup]
+2026-10-14T11:58:27.8434861Z ##[group]Operating System
+2026-10-14T11:58:27.8436348Z Ubuntu
+2026-10-14T11:58:27.8437345Z 24.04.5
+2026-10-14T11:58:27.8438135Z LTS
+2026-10-14T11:58:27.8439183Z ##[endgroup]
+2026-10-14T11:58:27.8440154Z ##[group]Runner Image
+2026-10-14T11:58:27.8441952Z Image: ubuntu-24.04
+2026-10-14T11:58:27.8443130Z Version: 20261004.327.1
+2026-10-14T11:58:27.8445247Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T11:58:27.8448230Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T11:58:27.8450036Z ##[endgroup]
+2026-10-14T11:58:27.8455962Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T11:58:27.8459340Z Actions: write
+2026-10-14T11:58:27.8460285Z ArtifactMetadata: write
+2026-10-14T11:58:27.8461635Z Attestations: write
+2026-10-14T11:58:27.8462606Z Checks: write
+2026-10-14T11:58:27.8463463Z CodeQuality: write
+2026-10-14T11:58:27.8464565Z Contents: write
+2026-10-14T11:58:27.8465530Z CopilotRequests: write
+2026-10-14T11:58:27.8466550Z Deployments: write
+2026-10-14T11:58:27.8467513Z Discussions: write
+2026-10-14T11:58:27.8468484Z Drives: write
+2026-10-14T11:58:27.8469512Z Issues: write
+2026-10-14T11:58:27.8470487Z Metadata: read
+2026-10-14T11:58:27.8471814Z Models: read
+2026-10-14T11:58:27.8472734Z Packages: write
+2026-10-14T11:58:27.8473576Z Pages: write
+2026-10-14T11:58:27.8474606Z PullRequests: write
+2026-10-14T11:58:27.8475626Z RepositoryProjects: write
+2026-10-14T11:58:27.8476774Z SecurityEvents: write
+2026-10-14T11:58:27.8477708Z Statuses: write
+2026-10-14T11:58:27.8478737Z VulnerabilityAlerts: read
+2026-10-14T11:58:27.8479850Z ##[endgroup]
+2026-10-14T11:58:27.8483057Z Secret source: Actions
+2026-10-14T11:58:27.8484660Z Cache mode: write
+2026-10-14T11:58:27.8486139Z Prepare workflow directory
+2026-10-14T11:58:27.8922641Z Prepare all required actions
+2026-10-14T11:58:27.8970274Z Getting action download info
+2026-10-14T11:58:28.0979591Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-14T11:58:28.1991491Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-14T11:58:28.2831556Z Download action repository 'peaceiris/actions-gh-pages@v3' (SHA:373f7f263a76c20808c831209c920827a82a2847)
+2026-10-14T11:58:28.5456591Z Complete job name: build (22.x)
+2026-10-14T11:58:28.6198292Z ##[group]Run actions/checkout@v4
+2026-10-14T11:58:28.6199204Z with:
+2026-10-14T11:58:28.6199630Z   fetch-depth: 0
+2026-10-14T11:58:28.6200197Z   repository: nhsbsa/nhsbsa-digital-playbook
+2026-10-14T11:58:28.6204332Z   token: ***
+2026-10-14T11:58:28.6204768Z   ssh-strict: true
+2026-10-14T11:58:28.6205199Z   ssh-user: git
+2026-10-14T11:58:28.6205641Z   persist-credentials: true
+2026-10-14T11:58:28.6206127Z   clean: true
+2026-10-14T11:58:28.6206577Z   sparse-checkout-cone-mode: true
+2026-10-14T11:58:28.6207093Z   fetch-tags: false
+2026-10-14T11:58:28.6207525Z   show-progress: true
+2026-10-14T11:58:28.6207981Z   lfs: false
+2026-10-14T11:58:28.6208397Z   submodules: false
+2026-10-14T11:58:28.6208861Z   set-safe-directory: true
+2026-10-14T11:58:28.6209373Z   allow-unsafe-pr-checkout: false
+2026-10-14T11:58:28.6210166Z ##[endgroup]
+2026-10-14T11:58:28.7217890Z Syncing repository: nhsbsa/nhsbsa-digital-playbook
+2026-10-14T11:58:28.7220253Z ##[group]Getting Git version info
+2026-10-14T11:58:28.7221631Z Working directory is '/home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook'
+2026-10-14T11:58:28.7223648Z [command]/usr/bin/git version
+2026-10-14T11:58:28.7419710Z git version 2.55.0
+2026-10-14T11:58:28.7445540Z ##[endgroup]
+2026-10-14T11:58:28.7462624Z Temporarily overriding HOME='/home/runner/work/_temp/cbcade3c-1cd2-4285-a4d2-2c74d9f0eab1' before making global git config changes
+2026-10-14T11:58:28.7464437Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T11:58:28.7470443Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook
+2026-10-14T11:58:28.7527454Z Deleting the contents of '/home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook'
+2026-10-14T11:58:28.7532983Z ##[group]Initializing the repository
+2026-10-14T11:58:28.7538331Z [command]/usr/bin/git init /home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook
+2026-10-14T11:58:28.7684401Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T11:58:28.7686438Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T11:58:28.7688212Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T11:58:28.7689613Z hint: call:
+2026-10-14T11:58:28.7690411Z hint:
+2026-10-14T11:58:28.7691672Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T11:58:28.7692859Z hint:
+2026-10-14T11:58:28.7693906Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T11:58:28.7695626Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T11:58:28.7696946Z hint:
+2026-10-14T11:58:28.7697677Z hint: 	git branch -m <name>
+2026-10-14T11:58:28.7698487Z hint:
+2026-10-14T11:58:28.7699599Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T11:58:28.7702016Z Initialized empty Git repository in /home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook/.git/
+2026-10-14T11:58:28.7705437Z [command]/usr/bin/git remote add origin https://github.com/nhsbsa/nhsbsa-digital-playbook
+2026-10-14T11:58:28.7766695Z ##[endgroup]
+2026-10-14T11:58:28.7768288Z ##[group]Disabling automatic garbage collection
+2026-10-14T11:58:28.7770685Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T11:58:28.7808978Z ##[endgroup]
+2026-10-14T11:58:28.7810397Z ##[group]Setting up auth
+2026-10-14T11:58:28.7818258Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T11:58:28.7865768Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T11:58:28.8332049Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T11:58:28.8366600Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T11:58:28.8630269Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T11:58:28.8677100Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T11:58:28.8943622Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T11:58:28.8987013Z ##[endgroup]
+2026-10-14T11:58:28.8988237Z ##[group]Fetching the repository
+2026-10-14T11:58:28.8998960Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-14T11:58:31.0827199Z From https://github.com/nhsbsa/nhsbsa-digital-playbook
+2026-10-14T11:58:31.0832292Z  * [new branch]          222-update-all-suggest-a-change-to-this-page-footer-links-to-point-to-github-discussions-instead-of-issues -> origin/222-update-all-suggest-a-change-to-this-page-footer-links-to-point-to-github-discussions-instead-of-issues
+2026-10-14T11:58:31.0839728Z  * [new branch]          254-add-actions-and-artefacts-to-what-is-expected-from-a-service-designer-in-xxx-phase-pages -> origin/254-add-actions-and-artefacts-to-what-is-expected-from-a-service-designer-in-xxx-phase-pages
+2026-10-14T11:58:31.0844486Z  * [new branch]          375-git-guidance-rework -> origin/375-git-guidance-rework
+2026-10-14T11:58:31.0846463Z  * [new branch]          375-git-strategy-diagram -> origin/375-git-strategy-diagram
+2026-10-14T11:58:31.0848398Z  * [new branch]          388-update-developer-licensing -> origin/388-update-developer-licensing
+2026-10-14T11:58:31.0851285Z  * [new branch]          393-add-product-ownership-content-into-the-playbook -> origin/393-add-product-ownership-content-into-the-playbook
+2026-10-14T11:58:31.0854659Z  * [new branch]          437-change-to-page-designcontent-designerabout-role -> origin/437-change-to-page-designcontent-designerabout-role
+2026-10-14T11:58:31.0856677Z  * [new branch]          440-change-to-page-designinteraction-designernew-starter-guide -> origin/440-change-to-page-designinteraction-designernew-starter-guide
+2026-10-14T11:58:31.0858472Z  * [new branch]          489-update-service-and-interaction-content -> origin/489-update-service-and-interaction-content
+2026-10-14T11:58:31.0859890Z  * [new branch]          507-nhsbsa-service-design-standards -> origin/507-nhsbsa-service-design-standards
+2026-10-14T11:58:31.0861392Z  * [new branch]          515-ixd-and-sd-content-amends -> origin/515-ixd-and-sd-content-amends
+2026-10-14T11:58:31.0862767Z  * [new branch]          chore-release-adoption-schedule -> origin/chore-release-adoption-schedule
+2026-10-14T11:58:31.0865088Z  * [new branch]          chore/actions-runner-upgrade -> origin/chore/actions-runner-upgrade
+2026-10-14T11:58:31.0866298Z  * [new branch]          chore/audit             -> origin/chore/audit
+2026-10-14T11:58:31.0867301Z  * [new branch]          chore/audit-fix         -> origin/chore/audit-fix
+2026-10-14T11:58:31.0868194Z  * [new branch]          chore/broken-links      -> origin/chore/broken-links
+2026-10-14T11:58:31.0869252Z  * [new branch]          chore/release-adoption-schedule -> origin/chore/release-adoption-schedule
+2026-10-14T11:58:31.0870394Z  * [new branch]          feature-cd-google-analytics -> origin/feature-cd-google-analytics
+2026-10-14T11:58:31.0871927Z  * [new branch]          feature-cd-google-analytics-PT -> origin/feature-cd-google-analytics-PT
+2026-10-14T11:58:31.0873035Z  * [new branch]          feature-data-vis-backup -> origin/feature-data-vis-backup
+2026-10-14T11:58:31.0874003Z  * [new branch]          feature-git-guidance    -> origin/feature-git-guidance
+2026-10-14T11:58:31.0875256Z  * [new branch]          feature/375-branching-strategy-review-PT -> origin/feature/375-branching-strategy-review-PT
+2026-10-14T11:58:31.0876874Z  * [new branch]          feature/464-new-user-research-articles -> origin/feature/464-new-user-research-articles
+2026-10-14T11:58:31.0878252Z  * [new branch]          feature/NO-JIRA-branching-strategy -> origin/feature/NO-JIRA-branching-strategy
+2026-10-14T11:58:31.0879318Z  * [new branch]          feature/a11y-dev        -> origin/feature/a11y-dev
+2026-10-14T11:58:31.0880242Z  * [new branch]          feature/a11y-test-fixes -> origin/feature/a11y-test-fixes
+2026-10-14T11:58:31.0881441Z  * [new branch]          feature/a11y-tidy       -> origin/feature/a11y-tidy
+2026-10-14T11:58:31.0883152Z  * [new branch]          feature/accessibility   -> origin/feature/accessibility
+2026-10-14T11:58:31.0885351Z  * [new branch]          feature/accessible-development -> origin/feature/accessible-development
+2026-10-14T11:58:31.0887817Z  * [new branch]          feature/beta-banner     -> origin/feature/beta-banner
+2026-10-14T11:58:31.0889818Z  * [new branch]          feature/color-card      -> origin/feature/color-card
+2026-10-14T11:58:31.0892217Z  * [new branch]          feature/cookie-component-wip -> origin/feature/cookie-component-wip
+2026-10-14T11:58:31.0895029Z  * [new branch]          feature/data-migration-testing -> origin/feature/data-migration-testing
+2026-10-14T11:58:31.0896816Z  * [new branch]          feature/data-visualisation-drafts -> origin/feature/data-visualisation-drafts
+2026-10-14T11:58:31.0899799Z  * [new branch]          feature/data-visualisation-section -> origin/feature/data-visualisation-section
+2026-10-14T11:58:31.0902674Z  * [new branch]          feature/data-visualisation-section-2 -> origin/feature/data-visualisation-section-2
+2026-10-14T11:58:31.0905046Z  * [new branch]          feature/delivery-improvements -> origin/feature/delivery-improvements
+2026-10-14T11:58:31.0907277Z  * [new branch]          feature/dependency-updates -> origin/feature/dependency-updates
+2026-10-14T11:58:31.0908873Z  * [new branch]          feature/dev-behaviour-tests -> origin/feature/dev-behaviour-tests
+2026-10-14T11:58:31.0910078Z  * [new branch]          feature/dev-testing-feedback -> origin/feature/dev-testing-feedback
+2026-10-14T11:58:31.0911608Z  * [new branch]          feature/document-control-refactor -> origin/feature/document-control-refactor
+2026-10-14T11:58:31.0912803Z  * [new branch]          feature/environments    -> origin/feature/environments
+2026-10-14T11:58:31.0913840Z  * [new branch]          feature/external-link-fix -> origin/feature/external-link-fix
+2026-10-14T11:58:31.0914893Z  * [new branch]          feature/git-cheat-sheet -> origin/feature/git-cheat-sheet
+2026-10-14T11:58:31.0915952Z  * [new branch]          feature/headings        -> origin/feature/headings
+2026-10-14T11:58:31.0918246Z  * [new branch]          feature/jest-unit-test-support-PT-review -> origin/feature/jest-unit-test-support-PT-review
+2026-10-14T11:58:31.0919559Z  * [new branch]          feature/mermaid         -> origin/feature/mermaid
+2026-10-14T11:58:31.0920485Z  * [new branch]          feature/mermaid-js      -> origin/feature/mermaid-js
+2026-10-14T11:58:31.0921924Z  * [new branch]          feature/migrate-e11ty-version -> origin/feature/migrate-e11ty-version
+2026-10-14T11:58:31.0923120Z  * [new branch]          feature/migrate-nhsuk-frontend -> origin/feature/migrate-nhsuk-frontend
+2026-10-14T11:58:31.0924235Z  * [new branch]          feature/nhs-card-component -> origin/feature/nhs-card-component
+2026-10-14T11:58:31.0925342Z  * [new branch]          feature/nhsbsa-docs     -> origin/feature/nhsbsa-docs
+2026-10-14T11:58:31.0927327Z  * [new branch]          feature/nhsuk-frontend-v7 -> origin/feature/nhsuk-frontend-v7
+2026-10-14T11:58:31.0929477Z  * [new branch]          feature/npm-guidance    -> origin/feature/npm-guidance
+2026-10-14T11:58:31.0931791Z  * [new branch]          feature/nunjucks-color  -> origin/feature/nunjucks-color
+2026-10-14T11:58:31.0933781Z  * [new branch]          feature/open-sourcing   -> origin/feature/open-sourcing
+2026-10-14T11:58:31.0935848Z  * [new branch]          feature/pa11y-test      -> origin/feature/pa11y-test
+2026-10-14T11:58:31.0938385Z  * [new branch]          feature/pbi-template-content -> origin/feature/pbi-template-content
+2026-10-14T11:58:31.0940724Z  * [new branch]          feature/phase-banner    -> origin/feature/phase-banner
+2026-10-14T11:58:31.0942648Z  * [new branch]          feature/pnpm            -> origin/feature/pnpm
+2026-10-14T11:58:31.0944676Z  * [new branch]          feature/python-guidance -> origin/feature/python-guidance
+2026-10-14T11:58:31.0946525Z  * [new branch]          feature/reflow-card-tags -> origin/feature/reflow-card-tags
+2026-10-14T11:58:31.0948695Z  * [new branch]          feature/remove-unused-component -> origin/feature/remove-unused-component
+2026-10-14T11:58:31.0951162Z  * [new branch]          feature/review-issues   -> origin/feature/review-issues
+2026-10-14T11:58:31.0953141Z  * [new branch]          feature/route-to-live   -> origin/feature/route-to-live
+2026-10-14T11:58:31.0954872Z  * [new branch]          feature/standards       -> origin/feature/standards
+2026-10-14T11:58:31.0956583Z  * [new branch]          feature/testing-refresh -> origin/feature/testing-refresh
+2026-10-14T11:58:31.0958818Z  * [new branch]          feature/unit-testing-refresh -> origin/feature/unit-testing-refresh
+2026-10-14T11:58:31.0961349Z  * [new branch]          feature/unit-testing-refresh-diagrams -> origin/feature/unit-testing-refresh-diagrams
+2026-10-14T11:58:31.0962697Z  * [new branch]          features/research-managing-data -> origin/features/research-managing-data
+2026-10-14T11:58:31.0963786Z  * [new branch]          fix/375-draft-status    -> origin/fix/375-draft-status
+2026-10-14T11:58:31.0964717Z  * [new branch]          fix/git-last-modified   -> origin/fix/git-last-modified
+2026-10-14T11:58:31.0965610Z  * [new branch]          gh-pages                -> origin/gh-pages
+2026-10-14T11:58:31.0966692Z  * [new branch]          hotfix/NO-JIRA-fix-admonition-classes -> origin/hotfix/NO-JIRA-fix-admonition-classes
+2026-10-14T11:58:31.0967758Z  * [new branch]          main                    -> origin/main
+2026-10-14T11:58:31.0969213Z  * [new branch]          naming-conventions      -> origin/naming-conventions
+2026-10-14T11:58:31.0970679Z  * [new branch]          patch-1                 -> origin/patch-1
+2026-10-14T11:58:31.0971976Z  * [new branch]          pnpm-guide              -> origin/pnpm-guide
+2026-10-14T11:58:31.0973855Z [command]/usr/bin/git branch --list --remote origin/pnpm-guide
+2026-10-14T11:58:31.0974649Z   origin/pnpm-guide
+2026-10-14T11:58:31.0975885Z [command]/usr/bin/git rev-parse refs/remotes/origin/pnpm-guide
+2026-10-14T11:58:31.0976637Z b7c71c197be947ab0b570b553685e23cf9fd003e
+2026-10-14T11:58:31.0978092Z ##[endgroup]
+2026-10-14T11:58:31.0978857Z ##[group]Determining the checkout info
+2026-10-14T11:58:31.0979715Z ##[endgroup]
+2026-10-14T11:58:31.0980217Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T11:58:31.1007867Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T11:58:31.1041329Z ##[group]Checking out the ref
+2026-10-14T11:58:31.1045560Z [command]/usr/bin/git checkout --progress --force -B pnpm-guide refs/remotes/origin/pnpm-guide
+2026-10-14T11:58:31.1498026Z Switched to a new branch 'pnpm-guide'
+2026-10-14T11:58:31.1503544Z branch 'pnpm-guide' set up to track 'origin/pnpm-guide'.
+2026-10-14T11:58:31.1513574Z ##[endgroup]
+2026-10-14T11:58:31.1562411Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T11:58:31.1590847Z b7c71c197be947ab0b570b553685e23cf9fd003e
+2026-10-14T11:58:31.1961472Z ##[group]Run actions/setup-node@v4
+2026-10-14T11:58:31.1962161Z with:
+2026-10-14T11:58:31.1962618Z   node-version: 22.x
+2026-10-14T11:58:31.1963178Z   always-auth: false
+2026-10-14T11:58:31.1963681Z   check-latest: false
+2026-10-14T11:58:31.1967763Z   token: ***
+2026-10-14T11:58:31.1968228Z ##[endgroup]
+2026-10-14T11:58:31.3455002Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-14T11:58:31.3459669Z (node:2319) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T11:58:31.3462709Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T11:58:31.3465125Z ##[group]Environment details
+2026-10-14T11:58:31.7838003Z node: v22.23.3
+2026-10-14T11:58:31.7839798Z npm: 10.9.9
+2026-10-14T11:58:31.7840800Z yarn: 1.22.22
+2026-10-14T11:58:31.7843838Z ##[endgroup]
+2026-10-14T11:58:31.8033149Z ##[group]Run npm ci
+2026-10-14T11:58:31.8034382Z [36;1mnpm ci[0m
+2026-10-14T11:58:31.8036188Z [36;1mNODE_ENV=production BASE_URL=https://nhsbsa.github.io npm run build    [0m
+2026-10-14T11:58:31.8327394Z shell: /usr/bin/bash -e {0}
+2026-10-14T11:58:31.8328675Z ##[endgroup]
+2026-10-14T11:58:34.3846951Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-14T11:58:34.6664813Z npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-10-14T11:58:35.7728920Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-14T11:58:37.6993110Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-14T11:58:37.8003451Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-14T11:58:37.9514545Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-14T11:58:37.9758493Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-14T11:58:38.1475063Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-14T11:58:39.7090472Z npm warn deprecated puppeteer@23.11.1: < 24.15.0 is no longer supported
+2026-10-14T11:58:51.0587412Z 
+2026-10-14T11:58:51.0588193Z added 942 packages, and audited 943 packages in 19s
+2026-10-14T11:58:51.0588856Z 
+2026-10-14T11:58:51.0589187Z 144 packages are looking for funding
+2026-10-14T11:58:51.0589814Z   run `npm fund` for details
+2026-10-14T11:58:51.2066324Z 
+2026-10-14T11:58:51.2067252Z 79 vulnerabilities (2 low, 14 moderate, 60 high, 3 critical)
+2026-10-14T11:58:51.2067898Z 
+2026-10-14T11:58:51.2068352Z To address issues that do not require attention, run:
+2026-10-14T11:58:51.2069039Z   npm audit fix
+2026-10-14T11:58:51.2069327Z 
+2026-10-14T11:58:51.2069952Z To address all issues possible (including breaking changes), run:
+2026-10-14T11:58:51.2070745Z   npm audit fix --force
+2026-10-14T11:58:51.2071326Z 
+2026-10-14T11:58:51.2071734Z Some issues need review, and may require choosing
+2026-10-14T11:58:51.2072247Z a different dependency.
+2026-10-14T11:58:51.2072450Z 
+2026-10-14T11:58:51.2072612Z Run `npm audit` for details.
+2026-10-14T11:58:51.3664501Z 
+2026-10-14T11:58:51.3665252Z > nhsbsa-digital-playbook@1.0.0 build
+2026-10-14T11:58:51.3666522Z > cross-env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'
+2026-10-14T11:58:51.3667260Z 
+2026-10-14T11:58:51.9254467Z configuring CSS class appender for [dl_open,code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline,footnote_ref,footnote_block_open,footnote_block_close,footnote_open,footnote_close,footnote_anchor,footnote_caption,footnote_anchor_name,emoji,container_card_open,container_card_close,container_details_open,container_details_close]
+2026-10-14T11:58:54.3564069Z Technologies requires review = true
+2026-10-14T11:58:54.3569470Z Technologies requires review = true
+2026-10-14T11:58:54.3581882Z Application patching requires review = true
+2026-10-14T11:58:54.3582912Z Application patching requires review = true
+2026-10-14T11:58:54.3601971Z Release adoption schedule requires review = true
+2026-10-14T11:58:54.3602849Z Release adoption schedule requires review = true
+2026-10-14T11:58:54.3603517Z APIs requires review = true
+2026-10-14T11:58:54.3604030Z APIs requires review = true
+2026-10-14T11:58:54.3606483Z Frontends requires review = true
+2026-10-14T11:58:54.3609474Z Frontends requires review = true
+2026-10-14T11:58:54.3622286Z Licensing software or code requires review = true
+2026-10-14T11:58:54.3623333Z Licensing software or code requires review = true
+2026-10-14T11:58:54.3624344Z Naming conventions requires review = true
+2026-10-14T11:58:54.3625284Z Naming conventions requires review = true
+2026-10-14T11:58:54.3626716Z Logging requires review = true
+2026-10-14T11:58:54.3627582Z Logging requires review = true
+2026-10-14T11:58:54.3641896Z Peer review requires review = true
+2026-10-14T11:58:54.3642644Z Peer review requires review = true
+2026-10-14T11:58:54.3643374Z Static code analysis requires review = true
+2026-10-14T11:58:54.3644084Z Static code analysis requires review = true
+2026-10-14T11:58:54.3644783Z Secure development requires review = true
+2026-10-14T11:58:54.3645728Z Secure development requires review = true
+2026-10-14T11:58:54.3671887Z Standard code repository files requires review = true
+2026-10-14T11:58:54.3673602Z Standard code repository files requires review = true
+2026-10-14T11:58:54.3680265Z Git requires review = true
+2026-10-14T11:58:54.3711830Z Git requires review = true
+2026-10-14T11:58:54.3734032Z Testing requires review = true
+2026-10-14T11:58:54.3761737Z Testing requires review = true
+2026-10-14T11:58:54.3762737Z Coding requires review = true
+2026-10-14T11:58:54.3786293Z Coding requires review = true
+2026-10-14T11:58:54.3811783Z New starter guide requires review = true
+2026-10-14T11:58:54.3831783Z New starter guide requires review = true
+2026-10-14T11:58:54.3832508Z Training & Resources requires review = true
+2026-10-14T11:58:54.3833497Z Training & Resources requires review = true
+2026-10-14T11:58:54.3909839Z Data visualisation accessibility requires review = true
+2026-10-14T11:58:54.3911895Z Data visualisation accessibility requires review = true
+2026-10-14T11:58:54.3915027Z Data accessibility requires review = true
+2026-10-14T11:58:54.3916826Z Data accessibility requires review = true
+2026-10-14T11:58:54.3919559Z Designing for accessibility requires review = true
+2026-10-14T11:58:54.3921978Z Designing for accessibility requires review = true
+2026-10-14T11:58:54.3932930Z Alternative formats for charts requires review = true
+2026-10-14T11:58:54.3934472Z Alternative formats for charts requires review = true
+2026-10-14T11:58:54.3937097Z Chart types requires review = true
+2026-10-14T11:58:54.3939115Z Chart types requires review = true
+2026-10-14T11:58:54.3942069Z Considerations when designing a chart requires review = true
+2026-10-14T11:58:54.3944114Z Considerations when designing a chart requires review = true
+2026-10-14T11:58:54.3946724Z Chart titles, labels and legends requires review = true
+2026-10-14T11:58:54.3948656Z Chart titles, labels and legends requires review = true
+2026-10-14T11:58:54.3959323Z Categorical Data requires review = true
+2026-10-14T11:58:54.3961279Z Categorical Data requires review = true
+2026-10-14T11:58:54.3965524Z Colour guidance requires review = true
+2026-10-14T11:58:54.3967175Z Colour guidance requires review = true
+2026-10-14T11:58:54.3969674Z Primary Colours requires review = true
+2026-10-14T11:58:54.3971727Z Primary Colours requires review = true
+2026-10-14T11:58:54.3974274Z Sequential Data requires review = true
+2026-10-14T11:58:54.3975780Z Sequential Data requires review = true
+2026-10-14T11:58:54.3985185Z Table or chart? requires review = true
+2026-10-14T11:58:54.3986979Z Table or chart? requires review = true
+2026-10-14T11:58:54.3989261Z Table standards requires review = true
+2026-10-14T11:58:54.3990929Z Table standards requires review = true
+2026-10-14T11:58:54.4007025Z Document control requires review = true
+2026-10-14T11:58:54.4008749Z Document control requires review = true
+2026-10-14T11:58:54.4027415Z Using pnpm requires review = false
+2026-10-14T11:58:54.4029101Z Using pnpm requires review = false
+2026-10-14T11:58:54.4033195Z Java requires review = true
+2026-10-14T11:58:54.4033822Z Java requires review = true
+2026-10-14T11:58:54.4036657Z Node.js requires review = true
+2026-10-14T11:58:54.4038279Z Node.js requires review = true
+2026-10-14T11:58:54.4059075Z Decluttering and pulling focus requires review = true
+2026-10-14T11:58:54.4060743Z Decluttering and pulling focus requires review = true
+2026-10-14T11:58:54.4063370Z Visual encoding requires review = true
+2026-10-14T11:58:54.4065147Z Visual encoding requires review = true
+2026-10-14T11:58:54.4067746Z Filters requires review = true
+2026-10-14T11:58:54.4069205Z Filters requires review = true
+2026-10-14T11:58:54.4071818Z Key performance indicator (KPI) cards requires review = true
+2026-10-14T11:58:54.4073645Z Key performance indicator (KPI) cards requires review = true
+2026-10-14T11:58:54.4080386Z Dashboard non-functional requirements (NFRs) requires review = true
+2026-10-14T11:58:54.4081503Z Dashboard non-functional requirements (NFRs) requires review = true
+2026-10-14T11:58:54.4082272Z Pie and doughnut charts requires review = true
+2026-10-14T11:58:54.4083035Z Pie and doughnut charts requires review = true
+2026-10-14T11:58:54.4085013Z User friendly naming conventions requires review = true
+2026-10-14T11:58:54.4086928Z User friendly naming conventions requires review = true
+2026-10-14T11:58:54.4089180Z Product purpose requires review = true
+2026-10-14T11:58:54.4091118Z Product purpose requires review = true
+2026-10-14T11:58:54.4093836Z Tooltips requires review = true
+2026-10-14T11:58:54.4095914Z Tooltips requires review = true
+2026-10-14T11:58:54.4098398Z Measures in Power BI requires review = true
+2026-10-14T11:58:54.4100304Z Measures in Power BI requires review = true
+2026-10-14T11:58:54.4110505Z The NHSBSA Power BI template requires review = true
+2026-10-14T11:58:54.4112819Z The NHSBSA Power BI template requires review = true
+2026-10-14T11:58:54.4180730Z Rewriting Git history requires review = true
+2026-10-14T11:58:54.4182372Z Rewriting Git history requires review = true
+2026-10-14T11:58:54.4185922Z Git branching strategy requires review = true
+2026-10-14T11:58:54.4187383Z Git branching strategy requires review = true
+2026-10-14T11:58:54.4189484Z Writing clean tests requires review = true
+2026-10-14T11:58:54.4191007Z Writing clean tests requires review = true
+2026-10-14T11:58:54.4193306Z Writing integration tests (Java) requires review = true
+2026-10-14T11:58:54.4194652Z Writing integration tests (Java) requires review = true
+2026-10-14T11:58:54.4199589Z Content Security Policy requires review = true
+2026-10-14T11:58:54.4201263Z Content Security Policy requires review = true
+2026-10-14T11:58:54.4203672Z Protecting against NPM dependency chain abuse requires review = false
+2026-10-14T11:58:54.4204952Z Protecting against NPM dependency chain abuse requires review = false
+2026-10-14T11:58:54.4206801Z Security headers requires review = true
+2026-10-14T11:58:54.4208096Z Security headers requires review = true
+2026-10-14T11:58:54.4210099Z Writing READMEs requires review = true
+2026-10-14T11:58:54.4211445Z Writing READMEs requires review = true
+2026-10-14T11:58:54.4256099Z status moved to REVIEW for Technologies
+2026-10-14T11:58:54.4256969Z status moved to REVIEW for Application patching
+2026-10-14T11:58:54.4257750Z status moved to REVIEW for Release adoption schedule
+2026-10-14T11:58:54.4258238Z status moved to REVIEW for APIs
+2026-10-14T11:58:54.4258645Z status moved to REVIEW for Frontends
+2026-10-14T11:58:54.4259132Z status moved to REVIEW for Licensing software or code
+2026-10-14T11:58:54.4259644Z status moved to REVIEW for Naming conventions
+2026-10-14T11:58:54.4260083Z status moved to REVIEW for Logging
+2026-10-14T11:58:54.4260623Z status moved to REVIEW for Peer review
+2026-10-14T11:58:54.4261525Z status moved to REVIEW for Static code analysis
+2026-10-14T11:58:54.4262102Z status moved to REVIEW for Secure development
+2026-10-14T11:58:54.4262696Z status moved to REVIEW for Standard code repository files
+2026-10-14T11:58:54.4263110Z status moved to REVIEW for Git
+2026-10-14T11:58:54.4263423Z status moved to REVIEW for Testing
+2026-10-14T11:58:54.4263769Z status moved to REVIEW for Coding
+2026-10-14T11:58:54.4264135Z status moved to REVIEW for New starter guide
+2026-10-14T11:58:54.4264573Z status moved to REVIEW for Training & Resources
+2026-10-14T11:58:54.4265028Z status moved to REVIEW for Data visualisation accessibility
+2026-10-14T11:58:54.4265467Z status moved to REVIEW for Data accessibility
+2026-10-14T11:58:54.4265873Z status moved to REVIEW for Designing for accessibility
+2026-10-14T11:58:54.4266610Z status moved to REVIEW for Alternative formats for charts
+2026-10-14T11:58:54.4267120Z status moved to REVIEW for Chart types
+2026-10-14T11:58:54.4267574Z status moved to REVIEW for Considerations when designing a chart
+2026-10-14T11:58:54.4268452Z status moved to REVIEW for Chart titles, labels and legends
+2026-10-14T11:58:54.4269296Z status moved to REVIEW for Categorical Data
+2026-10-14T11:58:54.4270008Z status moved to REVIEW for Colour guidance
+2026-10-14T11:58:54.4270700Z status moved to REVIEW for Primary Colours
+2026-10-14T11:58:54.4271641Z status moved to REVIEW for Sequential Data
+2026-10-14T11:58:54.4272335Z status moved to REVIEW for Table or chart?
+2026-10-14T11:58:54.4273020Z status moved to REVIEW for Table standards
+2026-10-14T11:58:54.4273699Z status moved to REVIEW for Document control
+2026-10-14T11:58:54.4274363Z status moved to REVIEW for Java
+2026-10-14T11:58:54.4275219Z status moved to REVIEW for Node.js
+2026-10-14T11:58:54.4276029Z status moved to REVIEW for Decluttering and pulling focus
+2026-10-14T11:58:54.4276739Z status moved to REVIEW for Visual encoding
+2026-10-14T11:58:54.4277389Z status moved to REVIEW for Filters
+2026-10-14T11:58:54.4278233Z status moved to REVIEW for Key performance indicator (KPI) cards
+2026-10-14T11:58:54.4279114Z status moved to REVIEW for Dashboard non-functional requirements (NFRs)
+2026-10-14T11:58:54.4279880Z status moved to REVIEW for Pie and doughnut charts
+2026-10-14T11:58:54.4280707Z status moved to REVIEW for User friendly naming conventions
+2026-10-14T11:58:54.4281548Z status moved to REVIEW for Product purpose
+2026-10-14T11:58:54.4282206Z status moved to REVIEW for Tooltips
+2026-10-14T11:58:54.4282920Z status moved to REVIEW for Measures in Power BI
+2026-10-14T11:58:54.4283754Z status moved to REVIEW for The NHSBSA Power BI template
+2026-10-14T11:58:54.4284485Z status moved to REVIEW for Rewriting Git history
+2026-10-14T11:58:54.4285231Z status moved to REVIEW for Git branching strategy
+2026-10-14T11:58:54.4285935Z status moved to REVIEW for Writing clean tests
+2026-10-14T11:58:54.4286765Z status moved to REVIEW for Writing integration tests (Java)
+2026-10-14T11:58:54.4287494Z status moved to REVIEW for Content Security Policy
+2026-10-14T11:58:54.4288199Z status moved to REVIEW for Security headers
+2026-10-14T11:58:54.4288890Z status moved to REVIEW for Writing READMEs
+2026-10-14T11:58:54.4289565Z status moved to REVIEW for Technologies
+2026-10-14T11:58:54.4290280Z status moved to REVIEW for Application patching
+2026-10-14T11:58:54.4291230Z status moved to REVIEW for Release adoption schedule
+2026-10-14T11:58:54.4291837Z status moved to REVIEW for APIs
+2026-10-14T11:58:54.4292491Z status moved to REVIEW for Frontends
+2026-10-14T11:58:54.4293234Z status moved to REVIEW for Licensing software or code
+2026-10-14T11:58:54.4293990Z status moved to REVIEW for Naming conventions
+2026-10-14T11:58:54.4294637Z status moved to REVIEW for Logging
+2026-10-14T11:58:54.4295299Z status moved to REVIEW for Peer review
+2026-10-14T11:58:54.4296017Z status moved to REVIEW for Static code analysis
+2026-10-14T11:58:54.4296716Z status moved to REVIEW for Secure development
+2026-10-14T11:58:54.4297488Z status moved to REVIEW for Standard code repository files
+2026-10-14T11:58:54.4298131Z status moved to REVIEW for Git
+2026-10-14T11:58:54.4298763Z status moved to REVIEW for Testing
+2026-10-14T11:58:54.4299383Z status moved to REVIEW for Coding
+2026-10-14T11:58:54.4300048Z status moved to REVIEW for New starter guide
+2026-10-14T11:58:54.4300756Z status moved to REVIEW for Training & Resources
+2026-10-14T11:58:54.4301763Z status moved to REVIEW for Data visualisation accessibility
+2026-10-14T11:58:54.4302533Z status moved to REVIEW for Data accessibility
+2026-10-14T11:58:54.4303239Z status moved to REVIEW for Designing for accessibility
+2026-10-14T11:58:54.4304009Z status moved to REVIEW for Alternative formats for charts
+2026-10-14T11:58:54.4304701Z status moved to REVIEW for Chart types
+2026-10-14T11:58:54.4305446Z status moved to REVIEW for Considerations when designing a chart
+2026-10-14T11:58:54.4306233Z status moved to REVIEW for Chart titles, labels and legends
+2026-10-14T11:58:54.4306658Z status moved to REVIEW for Categorical Data
+2026-10-14T11:58:54.4307012Z status moved to REVIEW for Colour guidance
+2026-10-14T11:58:54.4307356Z status moved to REVIEW for Primary Colours
+2026-10-14T11:58:54.4307734Z status moved to REVIEW for Sequential Data
+2026-10-14T11:58:54.4308073Z status moved to REVIEW for Table or chart?
+2026-10-14T11:58:54.4308405Z status moved to REVIEW for Table standards
+2026-10-14T11:58:54.4308747Z status moved to REVIEW for Document control
+2026-10-14T11:58:54.4309070Z status moved to REVIEW for Java
+2026-10-14T11:58:54.4309368Z status moved to REVIEW for Node.js
+2026-10-14T11:58:54.4309755Z status moved to REVIEW for Decluttering and pulling focus
+2026-10-14T11:58:54.4310149Z status moved to REVIEW for Visual encoding
+2026-10-14T11:58:54.4310623Z status moved to REVIEW for Filters
+2026-10-14T11:58:54.4311180Z status moved to REVIEW for Key performance indicator (KPI) cards
+2026-10-14T11:58:54.4311721Z status moved to REVIEW for Dashboard non-functional requirements (NFRs)
+2026-10-14T11:58:54.4312204Z status moved to REVIEW for Pie and doughnut charts
+2026-10-14T11:58:54.4312666Z status moved to REVIEW for User friendly naming conventions
+2026-10-14T11:58:54.4313074Z status moved to REVIEW for Product purpose
+2026-10-14T11:58:54.4313407Z status moved to REVIEW for Tooltips
+2026-10-14T11:58:54.4313753Z status moved to REVIEW for Measures in Power BI
+2026-10-14T11:58:54.4314192Z status moved to REVIEW for The NHSBSA Power BI template
+2026-10-14T11:58:54.4314602Z status moved to REVIEW for Rewriting Git history
+2026-10-14T11:58:54.4315339Z status moved to REVIEW for Git branching strategy
+2026-10-14T11:58:54.4316063Z status moved to REVIEW for Writing clean tests
+2026-10-14T11:58:54.4316862Z status moved to REVIEW for Writing integration tests (Java)
+2026-10-14T11:58:54.4317704Z status moved to REVIEW for Content Security Policy
+2026-10-14T11:58:54.4318421Z status moved to REVIEW for Security headers
+2026-10-14T11:58:54.4318802Z status moved to REVIEW for Writing READMEs
+2026-10-14T11:58:54.4319146Z status moved to REVIEW for Technologies
+2026-10-14T11:58:54.4319509Z status moved to REVIEW for Application patching
+2026-10-14T11:58:54.4319908Z status moved to REVIEW for Release adoption schedule
+2026-10-14T11:58:54.4320268Z status moved to REVIEW for APIs
+2026-10-14T11:58:54.4320574Z status moved to REVIEW for Frontends
+2026-10-14T11:58:54.4321217Z status moved to REVIEW for Licensing software or code
+2026-10-14T11:58:54.4321624Z status moved to REVIEW for Naming conventions
+2026-10-14T11:58:54.4321962Z status moved to REVIEW for Logging
+2026-10-14T11:58:54.4322278Z status moved to REVIEW for Peer review
+2026-10-14T11:58:54.4322634Z status moved to REVIEW for Static code analysis
+2026-10-14T11:58:54.4323007Z status moved to REVIEW for Secure development
+2026-10-14T11:58:54.4323419Z status moved to REVIEW for Standard code repository files
+2026-10-14T11:58:54.4323784Z status moved to REVIEW for Git
+2026-10-14T11:58:54.4324090Z status moved to REVIEW for Testing
+2026-10-14T11:58:54.4324392Z status moved to REVIEW for Coding
+2026-10-14T11:58:54.4324717Z status moved to REVIEW for New starter guide
+2026-10-14T11:58:54.4325081Z status moved to REVIEW for Training & Resources
+2026-10-14T11:58:54.4325506Z status moved to REVIEW for Data visualisation accessibility
+2026-10-14T11:58:54.4325923Z status moved to REVIEW for Data accessibility
+2026-10-14T11:58:54.4326318Z status moved to REVIEW for Designing for accessibility
+2026-10-14T11:58:54.4326747Z status moved to REVIEW for Alternative formats for charts
+2026-10-14T11:58:54.4327124Z status moved to REVIEW for Chart types
+2026-10-14T11:58:54.4327543Z status moved to REVIEW for Considerations when designing a chart
+2026-10-14T11:58:54.4328019Z status moved to REVIEW for Chart titles, labels and legends
+2026-10-14T11:58:54.4328650Z status moved to REVIEW for Categorical Data
+2026-10-14T11:58:54.4329329Z status moved to REVIEW for Colour guidance
+2026-10-14T11:58:54.4330212Z status moved to REVIEW for Primary Colours
+2026-10-14T11:58:54.4331132Z status moved to REVIEW for Sequential Data
+2026-10-14T11:58:54.4331835Z status moved to REVIEW for Table or chart?
+2026-10-14T11:58:54.4332496Z status moved to REVIEW for Table standards
+2026-10-14T11:58:54.4333154Z status moved to REVIEW for Document control
+2026-10-14T11:58:54.4333764Z status moved to REVIEW for Java
+2026-10-14T11:58:54.4334331Z status moved to REVIEW for Node.js
+2026-10-14T11:58:54.4334869Z status moved to REVIEW for Decluttering and pulling focus
+2026-10-14T11:58:54.4335295Z status moved to REVIEW for Visual encoding
+2026-10-14T11:58:54.4335625Z status moved to REVIEW for Filters
+2026-10-14T11:58:54.4336039Z status moved to REVIEW for Key performance indicator (KPI) cards
+2026-10-14T11:58:54.4336573Z status moved to REVIEW for Dashboard non-functional requirements (NFRs)
+2026-10-14T11:58:54.4337244Z status moved to REVIEW for Pie and doughnut charts
+2026-10-14T11:58:54.4337690Z status moved to REVIEW for User friendly naming conventions
+2026-10-14T11:58:54.4338098Z status moved to REVIEW for Product purpose
+2026-10-14T11:58:54.4338436Z status moved to REVIEW for Tooltips
+2026-10-14T11:58:54.4338798Z status moved to REVIEW for Measures in Power BI
+2026-10-14T11:58:54.4339215Z status moved to REVIEW for The NHSBSA Power BI template
+2026-10-14T11:58:54.4339618Z status moved to REVIEW for Rewriting Git history
+2026-10-14T11:58:54.4340003Z status moved to REVIEW for Git branching strategy
+2026-10-14T11:58:54.4340379Z status moved to REVIEW for Writing clean tests
+2026-10-14T11:58:54.4340801Z status moved to REVIEW for Writing integration tests (Java)
+2026-10-14T11:58:54.4341455Z status moved to REVIEW for Content Security Policy
+2026-10-14T11:58:54.4341833Z status moved to REVIEW for Security headers
+2026-10-14T11:58:54.4342188Z status moved to REVIEW for Writing READMEs
+2026-10-14T11:58:55.7983182Z [11ty] Writing _site/nhsbsa-digital-playbook/accessibility-statement/index.html from ./src/accessibility-statement.md (njk)
+2026-10-14T11:58:55.7984428Z [11ty] Writing _site/nhsbsa-digital-playbook/cookie-policy/cookies-settings/index.html from ./src/cookie-policy/cookies-settings.md (njk)
+2026-10-14T11:58:55.7985640Z [11ty] Writing _site/nhsbsa-digital-playbook/cookie-policy/cookies-confirmation/index.html from ./src/cookie-policy/cookies-confirmation.md (njk)
+2026-10-14T11:58:55.7988254Z [11ty] Writing _site/nhsbsa-digital-playbook/cookie-policy/index.html from ./src/cookie-policy/index.md (njk)
+2026-10-14T11:58:55.7989693Z [11ty] Writing _site/nhsbsa-digital-playbook/index.html from ./src/index.md (njk)
+2026-10-14T11:58:55.7991271Z [11ty] Writing _site/nhsbsa-digital-playbook/research/index.html from ./src/research/index.md (njk)
+2026-10-14T11:58:55.7992651Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/index.html from ./src/testing/index.md (njk)
+2026-10-14T11:58:55.7994121Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/index.html from ./src/testing-old/index.md (njk)
+2026-10-14T11:58:55.7995570Z [11ty] Writing _site/nhsbsa-digital-playbook/training/index.html from ./src/training/index.md (njk)
+2026-10-14T11:58:55.8000337Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/accessibility/index.html from ./src/data/data-visualisation/accessibility/index.md (njk)
+2026-10-14T11:58:55.8002768Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/charts/index.html from ./src/data/data-visualisation/charts/index.md (njk)
+2026-10-14T11:58:55.8004864Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/colour/index.html from ./src/data/data-visualisation/colour/index.md (njk)
+2026-10-14T11:58:55.8006910Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/tables/index.html from ./src/data/data-visualisation/tables/index.md (njk)
+2026-10-14T11:58:55.8008602Z [11ty] Writing _site/nhsbsa-digital-playbook/delivery/index.html from ./src/delivery/index.md (njk)
+2026-10-14T11:58:55.8010324Z [11ty] Writing _site/nhsbsa-digital-playbook/development/index.html from ./src/development/index.md (njk)
+2026-10-14T11:58:55.8011959Z [11ty] Writing _site/nhsbsa-digital-playbook/design/index.html from ./src/design/index.md (njk)
+2026-10-14T11:58:55.8013297Z [11ty] Writing _site/nhsbsa-digital-playbook/product/index.html from ./src/product/index.md (njk)
+2026-10-14T11:58:55.8014754Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/index.html from ./src/design/content-designer/index.md (njk)
+2026-10-14T11:58:55.8015835Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/index.html from ./src/design/interaction-designer/index.md (njk)
+2026-10-14T11:58:55.8016907Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/index.html from ./src/design/service-designer/index.md (njk)
+2026-10-14T11:58:55.8017744Z [11ty] Writing _site/nhsbsa-digital-playbook/drafts/index.html from ./src/drafts.md (njk)
+2026-10-14T11:58:55.8018667Z [11ty] Writing _site/nhsbsa-digital-playbook/review/index.html from ./src/review.md (njk)
+2026-10-14T11:58:55.8019476Z [11ty] Writing _site/nhsbsa-digital-playbook/accessibility/index.html from ./src/accessibility/index.md (njk)
+2026-10-14T11:58:55.8020363Z [11ty] Writing _site/nhsbsa-digital-playbook/cpd/pluralsight/index.html from ./src/cpd/pluralsight.md (njk)
+2026-10-14T11:58:55.8021623Z [11ty] Writing _site/nhsbsa-digital-playbook/data/index.html from ./src/data/index.md (njk)
+2026-10-14T11:58:55.8022865Z [11ty] Writing _site/nhsbsa-digital-playbook/glossary/index.html from ./src/glossary/index.md (njk)
+2026-10-14T11:58:55.8024663Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/document-control/index.html from ./src/how-to-contribute/document-control.md (njk)
+2026-10-14T11:58:55.8026522Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/index.html from ./src/how-to-contribute/index.md (njk)
+2026-10-14T11:58:55.8028534Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/github-discussions/index.html from ./src/how-to-contribute/github-discussions.md (njk)
+2026-10-14T11:58:55.8031045Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/information-architecture/index.html from ./src/how-to-contribute/information-architecture.md (njk)
+2026-10-14T11:58:55.8033201Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/nunjucks/index.html from ./src/how-to-contribute/nunjucks.md (njk)
+2026-10-14T11:58:55.8035045Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/markdown/index.html from ./src/how-to-contribute/markdown.md (njk)
+2026-10-14T11:58:55.8037145Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/playbook-technologies/index.html from ./src/how-to-contribute/playbook-technologies.md (njk)
+2026-10-14T11:58:55.8038944Z [11ty] Writing _site/nhsbsa-digital-playbook/research/alpha/index.html from ./src/research/alpha.md (njk)
+2026-10-14T11:58:55.8040515Z [11ty] Writing _site/nhsbsa-digital-playbook/research/about-role/index.html from ./src/research/about-role.md (njk)
+2026-10-14T11:58:55.8042664Z [11ty] Writing _site/nhsbsa-digital-playbook/how-to-contribute/writing-an-article/index.html from ./src/how-to-contribute/writing-an-article.md (njk)
+2026-10-14T11:58:55.8043748Z [11ty] Writing _site/nhsbsa-digital-playbook/research/assessments/index.html from ./src/research/assessments.md (njk)
+2026-10-14T11:58:55.8044626Z [11ty] Writing _site/nhsbsa-digital-playbook/research/beta/index.html from ./src/research/beta.md (njk)
+2026-10-14T11:58:55.8045622Z [11ty] Writing _site/nhsbsa-digital-playbook/research/conducting-user-research/index.html from ./src/research/conducting-user-research.md (njk)
+2026-10-14T11:58:55.8046639Z [11ty] Writing _site/nhsbsa-digital-playbook/research/discovery/index.html from ./src/research/discovery.md (njk)
+2026-10-14T11:58:55.8047659Z [11ty] Writing _site/nhsbsa-digital-playbook/research/ethics-and-safeguarding/index.html from ./src/research/ethics-and-safeguarding.md (njk)
+2026-10-14T11:58:55.8048698Z [11ty] Writing _site/nhsbsa-digital-playbook/research/live/index.html from ./src/research/live.md (njk)
+2026-10-14T11:58:55.8049761Z [11ty] Writing _site/nhsbsa-digital-playbook/research/new-starters/index.html from ./src/research/new-starters.md (njk)
+2026-10-14T11:58:55.8050726Z [11ty] Writing _site/nhsbsa-digital-playbook/research/managing-data/index.html from ./src/research/managing-data.md (njk)
+2026-10-14T11:58:55.8051904Z [11ty] Writing _site/nhsbsa-digital-playbook/research/ucd-log/index.html from ./src/research/ucd-log.md (njk)
+2026-10-14T11:58:55.8052836Z [11ty] Writing _site/nhsbsa-digital-playbook/research/supporting-ur/index.html from ./src/research/supporting-ur.md (njk)
+2026-10-14T11:58:55.8053784Z [11ty] Writing _site/nhsbsa-digital-playbook/research/recruitment/index.html from ./src/research/recruitment.md (njk)
+2026-10-14T11:58:55.8054858Z [11ty] Writing _site/nhsbsa-digital-playbook/research/user-research-community/index.html from ./src/research/user-research-community.md (njk)
+2026-10-14T11:58:55.8056182Z [11ty] Writing _site/nhsbsa-digital-playbook/research/user-research-training/index.html from ./src/research/user-research-training.md (njk)
+2026-10-14T11:58:55.8057100Z [11ty] Writing _site/nhsbsa-digital-playbook/rtl/cicd/index.html from ./src/rtl/cicd.md (njk)
+2026-10-14T11:58:55.8057907Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/index.html from ./src/technologies/index.md (njk)
+2026-10-14T11:58:55.8058841Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-cloud/index.html from ./src/technologies/tech-cloud.md (njk)
+2026-10-14T11:58:55.8059882Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-node-pnpm/index.html from ./src/technologies/tech-node-pnpm.md (njk)
+2026-10-14T11:58:55.8061148Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-java/index.html from ./src/technologies/tech-java.md (njk)
+2026-10-14T11:58:55.8062876Z [11ty] Writing _site/nhsbsa-digital-playbook/rtl/route-to-live/index.html from ./src/rtl/route-to-live.md (njk)
+2026-10-14T11:58:55.8064696Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-patching/index.html from ./src/technologies/tech-patching.md (njk)
+2026-10-14T11:58:55.8066555Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-node/index.html from ./src/technologies/tech-node.md (njk)
+2026-10-14T11:58:55.8068313Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-strategy/index.html from ./src/testing/test-strategy.md (njk)
+2026-10-14T11:58:55.8070137Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/testing-in-general/index.html from ./src/testing/testing-in-general.md (njk)
+2026-10-14T11:58:55.8072276Z [11ty] Writing _site/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/index.html from ./src/technologies/tech-release-adoption-schedule.md (njk)
+2026-10-14T11:58:55.8074468Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/defect-management/index.html from ./src/testing-old/defect-management.md (njk)
+2026-10-14T11:58:55.8076571Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/definitions-of-done/index.html from ./src/testing-old/definitions-of-done.md (njk)
+2026-10-14T11:58:55.8078113Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/documentation/index.html from ./src/testing-old/documentation.md (njk)
+2026-10-14T11:58:55.8079475Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stack/index.html from ./src/testing-old/test-tech-stack.md (njk)
+2026-10-14T11:58:55.8080570Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/release-assurance/index.html from ./src/testing-old/release-assurance.md (njk)
+2026-10-14T11:58:55.8082006Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test/index.html from ./src/testing-old/test.md (njk)
+2026-10-14T11:58:55.8083448Z [11ty] Writing _site/nhsbsa-digital-playbook/training/external-resources/index.html from ./src/training/external-resources.md (njk)
+2026-10-14T11:58:55.8084972Z [11ty] Writing _site/nhsbsa-digital-playbook/training/learning-and-development-support/index.html from ./src/training/learning-and-development-support.md (njk)
+2026-10-14T11:58:55.8086586Z [11ty] Writing _site/nhsbsa-digital-playbook/training/mentoring-and-coaching/index.html from ./src/training/mentoring-and-coaching.md (njk)
+2026-10-14T11:58:55.8088715Z [11ty] Writing _site/nhsbsa-digital-playbook/training/quality-and-continuous-improvement/index.html from ./src/training/quality-and-continuous-improvement.md (njk)
+2026-10-14T11:58:55.8090497Z [11ty] Writing _site/nhsbsa-digital-playbook/training/training-and-self-development/index.html from ./src/training/training-and-self-development.md (njk)
+2026-10-14T11:58:55.8091756Z [11ty] Writing _site/nhsbsa-digital-playbook/data/power-bi/index.html from ./src/data/power-bi/index.md (njk)
+2026-10-14T11:58:55.8092805Z [11ty] Writing _site/nhsbsa-digital-playbook/training/communities-of-practice/index.html from ./src/training/communities-of-practice.md (njk)
+2026-10-14T11:58:55.8094905Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/index.html from ./src/testing/test-frameworks/index.md (njk)
+2026-10-14T11:58:55.8096135Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/index.html from ./src/testing/test-standards/index.md (njk)
+2026-10-14T11:58:55.8097664Z [11ty] Writing _site/nhsbsa-digital-playbook/data/producing-quality-analysis/index.html from ./src/data/producing-quality-analysis/index.md (njk)
+2026-10-14T11:58:55.8098842Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/index.html from ./src/testing-old/test-frameworks/index.md (njk)
+2026-10-14T11:58:55.8100515Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stacks/acceptance-test-tech-stack/index.html from ./src/testing-old/test-tech-stacks/acceptance-test-tech-stack.md (njk)
+2026-10-14T11:58:55.8102565Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stacks/api-test-tech-stack/index.html from ./src/testing-old/test-tech-stacks/api-test-tech-stack.md (njk)
+2026-10-14T11:58:55.8104401Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stacks/accessibility-test-tech-stack/index.html from ./src/testing-old/test-tech-stacks/accessibility-test-tech-stack.md (njk)
+2026-10-14T11:58:55.8106284Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stacks/performance-test-tech-stack/index.html from ./src/testing-old/test-tech-stacks/performance-test-tech-stack.md (njk)
+2026-10-14T11:58:55.8108171Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-tech-stacks/compatibility-test-tech-stack/index.html from ./src/testing-old/test-tech-stacks/compatibility-test-tech-stack.md (njk)
+2026-10-14T11:58:55.8109915Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/accessibility/a11y/index.html from ./src/data/data-visualisation/accessibility/a11y.md (njk)
+2026-10-14T11:58:55.8112587Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/accessibility/data-a11y/index.html from ./src/data/data-visualisation/accessibility/data-a11y.md (njk)
+2026-10-14T11:58:55.8114340Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/accessibility/design-a11y/index.html from ./src/data/data-visualisation/accessibility/design-a11y.md (njk)
+2026-10-14T11:58:55.8115559Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/index.html from ./src/data/data-visualisation/index.md (njk)
+2026-10-14T11:58:55.8117136Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/charts/alternative-formats/index.html from ./src/data/data-visualisation/charts/alternative-formats.md (njk)
+2026-10-14T11:58:55.8119073Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/charts/chart-types/index.html from ./src/data/data-visualisation/charts/chart-types.md (njk)
+2026-10-14T11:58:55.8120403Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/charts/chart-design/index.html from ./src/data/data-visualisation/charts/chart-design.md (njk)
+2026-10-14T11:58:55.8122588Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/charts/titles-labels-legends/index.html from ./src/data/data-visualisation/charts/titles-labels-legends.md (njk)
+2026-10-14T11:58:55.8124330Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/colour/cat-data/index.html from ./src/data/data-visualisation/colour/cat-data.md (njk)
+2026-10-14T11:58:55.8125926Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/colour/colour-guidance/index.html from ./src/data/data-visualisation/colour/colour-guidance.md (njk)
+2026-10-14T11:58:55.8151124Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/colour/primary-colours/index.html from ./src/data/data-visualisation/colour/primary-colours.md (njk)
+2026-10-14T11:58:55.8152555Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/colour/seq-data/index.html from ./src/data/data-visualisation/colour/seq-data.md (njk)
+2026-10-14T11:58:55.8154514Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/decluttering/index.html from ./src/data/data-visualisation/decluttering/decluttering.md (njk)
+2026-10-14T11:58:55.8156622Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/encoding/viz-encoding/index.html from ./src/data/data-visualisation/encoding/viz-encoding.md (njk)
+2026-10-14T11:58:55.8157896Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/filters/index.html from ./src/data/data-visualisation/filters/filters.md (njk)
+2026-10-14T11:58:55.8159735Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/kpi-cards/index.html from ./src/data/data-visualisation/kpi-cards/kpi-cards.md (njk)
+2026-10-14T11:58:55.8161607Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/non-functional/non-functional-req/index.html from ./src/data/data-visualisation/non-functional/non-functional-req.md (njk)
+2026-10-14T11:58:55.8163582Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/pie-and-doughnut-charts/pie-and-doughnut/index.html from ./src/data/data-visualisation/pie-and-doughnut-charts/pie-and-doughnut.md (njk)
+2026-10-14T11:58:55.8166153Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/naming-conventions/user-friendly-names/index.html from ./src/data/data-visualisation/naming-conventions/user-friendly-names.md (njk)
+2026-10-14T11:58:55.8168174Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/product-purpose/index.html from ./src/data/data-visualisation/product-purpose/product-purpose.md (njk)
+2026-10-14T11:58:55.8169682Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/tables/table-or-chart/index.html from ./src/data/data-visualisation/tables/table-or-chart.md (njk)
+2026-10-14T11:58:55.8171602Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/tooltips/index.html from ./src/data/data-visualisation/tooltips/tooltips.md (njk)
+2026-10-14T11:58:55.8173550Z [11ty] Writing _site/nhsbsa-digital-playbook/data/data-visualisation/tables/tables-best-practice/index.html from ./src/data/data-visualisation/tables/tables-best-practice.md (njk)
+2026-10-14T11:58:55.8174818Z [11ty] Writing _site/nhsbsa-digital-playbook/data/power-bi/measures/index.html from ./src/data/power-bi/measures/measures.md (njk)
+2026-10-14T11:58:55.8176326Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/acceptance-test/index.html from ./src/testing/test-frameworks/acceptance-test/index.md (njk)
+2026-10-14T11:58:55.8178126Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/accessibility-test/index.html from ./src/testing/test-frameworks/accessibility-test/index.md (njk)
+2026-10-14T11:58:55.8179684Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/api-test/index.html from ./src/testing/test-frameworks/api-test/index.md (njk)
+2026-10-14T11:58:55.8181268Z [11ty] Writing _site/nhsbsa-digital-playbook/data/power-bi/template/pbi-template/index.html from ./src/data/power-bi/template/pbi-template.md (njk)
+2026-10-14T11:58:55.8182751Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/compatibility-test/index.html from ./src/testing/test-frameworks/compatibility-test/index.md (njk)
+2026-10-14T11:58:55.8184353Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/data-test/index.html from ./src/testing/test-frameworks/data-test/index.md (njk)
+2026-10-14T11:58:55.8186080Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/under-development/index.html from ./src/testing/test-frameworks/under-development/index.md (njk)
+2026-10-14T11:58:55.8187690Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/perfomance-test/index.html from ./src/testing/test-frameworks/perfomance-test/index.md (njk)
+2026-10-14T11:58:55.8189087Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/under-development/power-bi/index.html from ./src/testing/test-frameworks/under-development/power-bi.md (njk)
+2026-10-14T11:58:55.8191084Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/under-development/security-test/index.html from ./src/testing/test-frameworks/under-development/security-test.md (njk)
+2026-10-14T11:58:55.8192836Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/under-development/test-ai/index.html from ./src/testing/test-frameworks/under-development/test-ai.md (njk)
+2026-10-14T11:58:55.8194347Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-frameworks/user-acceptance-test/index.html from ./src/testing/test-frameworks/user-acceptance-test/index.md (njk)
+2026-10-14T11:58:55.8195916Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/defect-management/index.html from ./src/testing/test-standards/defect-management/index.md (njk)
+2026-10-14T11:58:55.8197198Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/entry-criteria/index.html from ./src/testing/test-standards/entry-criteria/index.md (njk)
+2026-10-14T11:58:55.8198489Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/release-assurance/index.html from ./src/testing/test-standards/release-assurance/index.md (njk)
+2026-10-14T11:58:55.8200062Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/exit-criteria/index.html from ./src/testing/test-standards/exit-criteria/index.md (njk)
+2026-10-14T11:58:55.8201469Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-documents/index.html from ./src/testing/test-standards/test-documents/index.md (njk)
+2026-10-14T11:58:55.8202662Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-data/index.html from ./src/testing/test-standards/test-data/index.md (njk)
+2026-10-14T11:58:55.8204149Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-env/index.html from ./src/testing/test-standards/test-env/index.md (njk)
+2026-10-14T11:58:55.8205381Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-methods/index.html from ./src/testing/test-standards/test-methods/index.md (njk)
+2026-10-14T11:58:55.8206995Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/acceptance-test-tools/index.html from ./src/testing/test-standards/test-tools/acceptance-test-tools.md (njk)
+2026-10-14T11:58:55.8209000Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/accessibility-test-tools/index.html from ./src/testing/test-standards/test-tools/accessibility-test-tools.md (njk)
+2026-10-14T11:58:55.8210790Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/api-test-tools/index.html from ./src/testing/test-standards/test-tools/api-test-tools.md (njk)
+2026-10-14T11:58:55.8212970Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/compatibility-test-tools/index.html from ./src/testing/test-standards/test-tools/compatibility-test-tools.md (njk)
+2026-10-14T11:58:55.8214474Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/data-test-tools/index.html from ./src/testing/test-standards/test-tools/data-test-tools.md (njk)
+2026-10-14T11:58:55.8216303Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/index.html from ./src/testing/test-standards/test-tools/index.md (njk)
+2026-10-14T11:58:55.8217861Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/test-tools/perfomance-test-tools/index.html from ./src/testing/test-standards/test-tools/perfomance-test-tools.md (njk)
+2026-10-14T11:58:55.8219871Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/writing-tests/test-automation/index.html from ./src/testing/test-standards/writing-tests/test-automation.md (njk)
+2026-10-14T11:58:55.8222289Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/automated-acceptance-testing/index.html from ./src/testing-old/test-frameworks/acceptance-test/automated-acceptance-testing.md (njk)
+2026-10-14T11:58:55.8224206Z [11ty] Writing _site/nhsbsa-digital-playbook/testing/test-standards/writing-tests/index.html from ./src/testing/test-standards/writing-tests/index.md (njk)
+2026-10-14T11:58:55.8226070Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/automation-test-process/index.html from ./src/testing-old/test-frameworks/acceptance-test/automation-test-process.md (njk)
+2026-10-14T11:58:55.8228694Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/index.html from ./src/testing-old/test-frameworks/acceptance-test/index.md (njk)
+2026-10-14T11:58:55.8231292Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/accessibility-test/accessibility-checkers/index.html from ./src/testing-old/test-frameworks/accessibility-test/accessibility-checkers.md (njk)
+2026-10-14T11:58:55.8234795Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/manual-acceptance-testing/index.html from ./src/testing-old/test-frameworks/acceptance-test/manual-acceptance-testing.md (njk)
+2026-10-14T11:58:55.8236772Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/accessibility-test/index.html from ./src/testing-old/test-frameworks/accessibility-test/index.md (njk)
+2026-10-14T11:58:55.8239691Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/accessibility-test/checklists-assistive-technologies/index.html from ./src/testing-old/test-frameworks/accessibility-test/checklists-assistive-technologies.md (njk)
+2026-10-14T11:58:55.8243301Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/compatibility-test/compatibility-setup/index.html from ./src/testing-old/test-frameworks/compatibility-test/compatibility-setup.md (njk)
+2026-10-14T11:58:55.8246657Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/compatibility-test/compatibility-test-coverage/index.html from ./src/testing-old/test-frameworks/compatibility-test/compatibility-test-coverage.md (njk)
+2026-10-14T11:58:55.8250700Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/compatibility-test/compatibility-testing-capability-with-saucelabs/index.html from ./src/testing-old/test-frameworks/compatibility-test/compatibility-testing-capability-with-saucelabs.md (njk)
+2026-10-14T11:58:55.8254286Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/compatibility-test/index.html from ./src/testing-old/test-frameworks/compatibility-test/index.md (njk)
+2026-10-14T11:58:55.8256727Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/api-test/index.html from ./src/testing-old/test-frameworks/api-test/index.md (njk)
+2026-10-14T11:58:55.8259198Z [11ty] Writing _site/nhsbsa-digital-playbook/testing-old/test-frameworks/performance-test/index.html from ./src/testing-old/test-frameworks/performance-test/index.md (njk)
+2026-10-14T11:58:55.8261492Z [11ty] Writing _site/nhsbsa-digital-playbook/delivery/about-role/index.html from ./src/delivery/about-role.md (njk)
+2026-10-14T11:58:55.8263157Z [11ty] Writing _site/nhsbsa-digital-playbook/delivery/agile-delivery/index.html from ./src/delivery/agile-delivery.md (njk)
+2026-10-14T11:58:55.8264890Z [11ty] Writing _site/nhsbsa-digital-playbook/delivery/delivery-team/index.html from ./src/delivery/delivery-team.md (njk)
+2026-10-14T11:58:55.8266693Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-apis/index.html from ./src/development/coding-apis.md (njk)
+2026-10-14T11:58:55.8268465Z [11ty] Writing _site/nhsbsa-digital-playbook/delivery/financial-practices/index.html from ./src/delivery/financial-practices.md (njk)
+2026-10-14T11:58:55.8270642Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-clean-code/index.html from ./src/development/coding-clean-code.md (njk)
+2026-10-14T11:58:55.8272732Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-frontend/index.html from ./src/development/coding-frontend.md (njk)
+2026-10-14T11:58:55.8274729Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-licences/index.html from ./src/development/coding-licences.md (njk)
+2026-10-14T11:58:55.8277483Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-naming-conventions/index.html from ./src/development/coding-naming-conventions.md (njk)
+2026-10-14T11:58:55.8280476Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-git-rewrite-history/index.html from ./src/development/coding-git-rewrite-history.md (njk)
+2026-10-14T11:58:55.8283215Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-logging/index.html from ./src/development/coding-logging.md (njk)
+2026-10-14T11:58:55.8285424Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-peer-review/index.html from ./src/development/coding-peer-review.md (njk)
+2026-10-14T11:58:55.8287551Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-quality-assurance/index.html from ./src/development/coding-quality-assurance.md (njk)
+2026-10-14T11:58:55.8290145Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-secrets-detection/index.html from ./src/development/coding-secrets-detection.md (njk)
+2026-10-14T11:58:55.8292231Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-securely/index.html from ./src/development/coding-securely.md (njk)
+2026-10-14T11:58:55.8293543Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-documentation/index.html from ./src/development/dev-documentation.md (njk)
+2026-10-14T11:58:55.8294835Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-git/index.html from ./src/development/dev-git.md (njk)
+2026-10-14T11:58:55.8296243Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-style-guide/index.html from ./src/development/coding-style-guide.md (njk)
+2026-10-14T11:58:55.8298125Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-git-branching-strategy/index.html from ./src/development/dev-git-branching-strategy.md (njk)
+2026-10-14T11:58:55.8300327Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-tests-coding/index.html from ./src/development/dev-tests-coding.md (njk)
+2026-10-14T11:58:55.8302589Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-tests-coding-v2/index.html from ./src/development/dev-tests-coding-v2.md (njk)
+2026-10-14T11:58:55.8304711Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-tests-integration/index.html from ./src/development/dev-tests-integration.md (njk)
+2026-10-14T11:58:55.8306251Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-tests/index.html from ./src/development/dev-tests.md (njk)
+2026-10-14T11:58:55.8307252Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-tests-v2/index.html from ./src/development/dev-tests-v2.md (njk)
+2026-10-14T11:58:55.8308634Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding-securely-personal-data/index.html from ./src/development/coding-securely-personal-data.md (njk)
+2026-10-14T11:58:55.8310119Z [11ty] Writing _site/nhsbsa-digital-playbook/design/customer-experience-team/index.html from ./src/design/customer-experience-team.md (njk)
+2026-10-14T11:58:55.8311556Z [11ty] Writing _site/nhsbsa-digital-playbook/design/design-system/index.html from ./src/design/design-system.md (njk)
+2026-10-14T11:58:55.8312939Z [11ty] Writing _site/nhsbsa-digital-playbook/design/design-tools-resources/index.html from ./src/design/design-tools-resources.md (njk)
+2026-10-14T11:58:55.8314219Z [11ty] Writing _site/nhsbsa-digital-playbook/design/ways-of-working/index.html from ./src/design/ways-of-working.md (njk)
+2026-10-14T11:58:55.8315166Z [11ty] Writing _site/nhsbsa-digital-playbook/product/agile-team/index.html from ./src/product/agile-team.md (njk)
+2026-10-14T11:58:55.8316369Z [11ty] Writing _site/nhsbsa-digital-playbook/product/about-role/index.html from ./src/product/about-role.md (njk)
+2026-10-14T11:58:55.8317731Z [11ty] Writing _site/nhsbsa-digital-playbook/product/prioritisation/index.html from ./src/product/prioritisation.md (njk)
+2026-10-14T11:58:55.8319152Z [11ty] Writing _site/nhsbsa-digital-playbook/product/service-assessments/index.html from ./src/product/service-assessments.md (njk)
+2026-10-14T11:58:55.8320510Z [11ty] Writing _site/nhsbsa-digital-playbook/product/roadmaps/index.html from ./src/product/roadmaps.md (njk)
+2026-10-14T11:58:55.8321717Z [11ty] Writing _site/nhsbsa-digital-playbook/security/content-security-policy/index.html from ./src/security/content-security-policy.md (njk)
+2026-10-14T11:58:55.8323068Z [11ty] Writing _site/nhsbsa-digital-playbook/product/user-stories/index.html from ./src/product/user-stories.md (njk)
+2026-10-14T11:58:55.8324846Z [11ty] Writing _site/nhsbsa-digital-playbook/security/tech-node-dependency-chain-abuse/index.html from ./src/security/tech-node-dependency-chain-abuse.md (njk)
+2026-10-14T11:58:55.8326176Z [11ty] Writing _site/nhsbsa-digital-playbook/security/index.html from ./src/security/index.md (njk)
+2026-10-14T11:58:55.8327907Z [11ty] Writing _site/nhsbsa-digital-playbook/security/security-headers/index.html from ./src/security/security-headers.md (njk)
+2026-10-14T11:58:55.8328989Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/beta/index.html from ./src/design/content-designer/beta.md (njk)
+2026-10-14T11:58:55.8330256Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/live/index.html from ./src/design/content-designer/live.md (njk)
+2026-10-14T11:58:55.8331613Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/alpha/index.html from ./src/design/content-designer/alpha.md (njk)
+2026-10-14T11:58:55.8333084Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/discovery/index.html from ./src/design/content-designer/discovery.md (njk)
+2026-10-14T11:58:55.8334636Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/about-role/index.html from ./src/design/content-designer/about-role.md (njk)
+2026-10-14T11:58:55.8336018Z [11ty] Writing _site/nhsbsa-digital-playbook/design/content-designer/ucd-log/index.html from ./src/design/content-designer/ucd-log.md (njk)
+2026-10-14T11:58:55.8337208Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/about-role/index.html from ./src/design/interaction-designer/about-role.md (njk)
+2026-10-14T11:58:55.8338612Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/beta/index.html from ./src/design/interaction-designer/beta.md (njk)
+2026-10-14T11:58:55.8339982Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/alpha/index.html from ./src/design/interaction-designer/alpha.md (njk)
+2026-10-14T11:58:55.8341838Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/code-prototype-standards/index.html from ./src/design/interaction-designer/code-prototype-standards.md (njk)
+2026-10-14T11:58:55.8343171Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/discovery/index.html from ./src/design/interaction-designer/discovery.md (njk)
+2026-10-14T11:58:55.8344330Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/live/index.html from ./src/design/interaction-designer/live.md (njk)
+2026-10-14T11:58:55.8345587Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/new-starter-guide/index.html from ./src/design/interaction-designer/new-starter-guide.md (njk)
+2026-10-14T11:58:55.8347186Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/prototypes/index.html from ./src/design/interaction-designer/prototypes.md (njk)
+2026-10-14T11:58:55.8348665Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/ucd-log/index.html from ./src/design/interaction-designer/ucd-log.md (njk)
+2026-10-14T11:58:55.8350136Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/about-role/index.html from ./src/design/service-designer/about-role.md (njk)
+2026-10-14T11:58:55.8351681Z [11ty] Writing _site/nhsbsa-digital-playbook/design/interaction-designer/training-resources/index.html from ./src/design/interaction-designer/training-resources.md (njk)
+2026-10-14T11:58:55.8353232Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/alpha/index.html from ./src/design/service-designer/alpha.md (njk)
+2026-10-14T11:58:55.8354719Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/beta/index.html from ./src/design/service-designer/beta.md (njk)
+2026-10-14T11:58:55.8356557Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/discovery/index.html from ./src/design/service-designer/discovery.md (njk)
+2026-10-14T11:58:55.8358662Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/live/index.html from ./src/design/service-designer/live.md (njk)
+2026-10-14T11:58:55.8360087Z [11ty] Writing _site/nhsbsa-digital-playbook/design/service-designer/ucd-log/index.html from ./src/design/service-designer/ucd-log.md (njk)
+2026-10-14T11:58:55.8361616Z [11ty] Writing _site/nhsbsa-digital-playbook/development/coding/index.html from ./src/development/coding.md (njk)
+2026-10-14T11:58:55.8363337Z [11ty] Writing _site/nhsbsa-digital-playbook/development/dev-documentation-readme/index.html from ./src/development/dev-documentation-readme.md (njk)
+2026-10-14T11:58:55.9067488Z [11ty] Benchmark    400ms  10%   348× (Configuration) "toc" Nunjucks Filter
+2026-10-14T11:58:55.9076434Z [11ty] Copied 94 files / Wrote 211 files in 3.69 seconds (17.5ms each, v2.0.1)
+2026-10-14T11:58:56.0610600Z ##[group]Run npm run test
+2026-10-14T11:58:56.0611192Z [36;1mnpm run test[0m
+2026-10-14T11:58:56.0611451Z [36;1mnpm run test:eslint    [0m
+2026-10-14T11:58:56.0677044Z shell: /usr/bin/bash -e {0}
+2026-10-14T11:58:56.0677317Z ##[endgroup]
+2026-10-14T11:58:56.1698335Z 
+2026-10-14T11:58:56.1698936Z > nhsbsa-digital-playbook@1.0.0 test
+2026-10-14T11:58:56.1699410Z > cross-env NODE_ENV=test jest
+2026-10-14T11:58:56.1699608Z 
+2026-10-14T11:58:57.6066938Z PASS lib/tests/computed/schedule.test.js
+2026-10-14T11:58:57.6122529Z   ✓ should be able to handle multiple technologies - settig default phase to pending (1 ms)
+2026-10-14T11:58:57.6152201Z   ✓ should be able to handle multiple technologies - with different values (2 ms)
+2026-10-14T11:58:57.6153536Z   releaseAdoptionSchedule empty dataset tests
+2026-10-14T11:58:57.6182881Z     ✓ should return empty releaseAdoptionSchedule if data has no releaseAdoptionSchedule (8 ms)
+2026-10-14T11:58:57.6212364Z     ✓ should return empty releaseAdoptionSchedule if data has empty releaseAdoptionSchedule
+2026-10-14T11:58:57.6213755Z   technology phase tests - releaseAdoptionSchedule
+2026-10-14T11:58:57.6242082Z     ✓ should return pending as default phase (1 ms)
+2026-10-14T11:58:57.6272254Z     ✓ should return assess phase when java release date is in the past (3 ms)
+2026-10-14T11:58:57.6302035Z     ✓ should return adopt as phase when java adopt date today (2 ms)
+2026-10-14T11:58:57.6303617Z     ✓ should return assess as phase when technology adopt date is in the future (1 ms)
+2026-10-14T11:58:57.6341794Z   multiple versions test: same technology - releaseAdoptionSchedule
+2026-10-14T11:58:57.6372112Z     ✓ should return correct phase cycles for multiple version fixture data (5 ms)
+2026-10-14T11:58:57.6373080Z 
+2026-10-14T11:58:57.6401926Z PASS lib/tests/javascripts/statusCollections.test.js
+2026-10-14T11:58:57.6431624Z   statusCollections
+2026-10-14T11:58:57.6461869Z     ✓ should export module as a function (5 ms)
+2026-10-14T11:58:57.6462906Z     ✓ should call addCollection for each status (3 ms)
+2026-10-14T11:58:57.6491810Z   statusCollections callback
+2026-10-14T11:58:57.6522014Z     ✓ should return correct collection data when status is: DRAFT (2 ms)
+2026-10-14T11:58:57.6552084Z     ✓ should return correct collection data when status is: REVIEW (1 ms)
+2026-10-14T11:58:57.6553716Z     ✓ should return correct collection data when status is: FINAL (2 ms)
+2026-10-14T11:58:57.6574887Z     ✓ should return an array of multiple DRAFT entries and no other data when status is: DRAFT (2 ms)
+2026-10-14T11:58:57.6602295Z     ✓ should return an array of multiple DRAFT entries and no other data when status is: REVIEW (2 ms)
+2026-10-14T11:58:57.6612077Z     ✓ should return an array of multiple DRAFT entries and no other data when status is: FINAL (1 ms)
+2026-10-14T11:58:57.6614391Z     ✓ should update status to REVIEW when article requires_review (3 ms)
+2026-10-14T11:58:57.6615241Z 
+2026-10-14T11:58:57.6903043Z PASS lib/tests/filters/sort.test.js
+2026-10-14T11:58:57.6932113Z   sort
+2026-10-14T11:58:57.6932561Z   console.log
+2026-10-14T11:58:57.6951879Z     Dummy playbook page requires review = false
+2026-10-14T11:58:57.6962093Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:57.6981961Z     ✓ should return empty array when input
+2026-10-14T11:58:57.6982374Z 
+2026-10-14T11:58:57.6982983Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.6991975Z     ✓ should sort the array based on the given key (1 ms)
+2026-10-14T11:58:57.7002610Z     ✓ should sort when duplicate data present
+2026-10-14T11:58:57.7003728Z     ✓ should return same input if unknown key (1 ms)
+2026-10-14T11:58:57.7004592Z 
+2026-10-14T11:58:57.7041463Z 
+2026-10-14T11:58:57.7071781Z   console.log
+2026-10-14T11:58:57.7091750Z     Dummy playbook page requires review = false
+2026-10-14T11:58:57.7111364Z 
+2026-10-14T11:58:57.7121928Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7151443Z 
+2026-10-14T11:58:57.7182203Z   console.log
+2026-10-14T11:58:57.7211728Z     Dummy playbook page requires review = false
+2026-10-14T11:58:57.7217589Z 
+2026-10-14T11:58:57.7262004Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7311290Z 
+2026-10-14T11:58:57.7439981Z   console.log
+2026-10-14T11:58:57.7471981Z     Dummy playbook page requires review = false
+2026-10-14T11:58:57.7472670Z 
+2026-10-14T11:58:57.7502001Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7551406Z 
+2026-10-14T11:58:57.7601789Z   console.log
+2026-10-14T11:58:57.7619508Z     Dummy playbook page requires review = true
+2026-10-14T11:58:57.7641780Z PASS lib/tests/computed/reviewData.test.js
+2026-10-14T11:58:57.7642424Z 
+2026-10-14T11:58:57.7731675Z   reviewData empty dataset tests
+2026-10-14T11:58:57.7732712Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7822225Z     ✓ should return empty object if empty data object supplied (6 ms)
+2026-10-14T11:58:57.7823132Z 
+2026-10-14T11:58:57.7828405Z   reviewData functional dataset tests
+2026-10-14T11:58:57.7861485Z   console.log
+2026-10-14T11:58:57.7882277Z     ✓ should not require review if last review date is this year (61 ms)
+2026-10-14T11:58:57.7891789Z     Dummy playbook page requires review = false
+2026-10-14T11:58:57.7893282Z     ✓ should return valid reviewData when null cycle (4 ms)
+2026-10-14T11:58:57.7893929Z 
+2026-10-14T11:58:57.7894734Z     ✓ should return valid reviewData when undefined cycle (5 ms)
+2026-10-14T11:58:57.7896271Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7897641Z     ✓ throws error with correct message for invalid review cycle (20 ms)
+2026-10-14T11:58:57.7898339Z 
+2026-10-14T11:58:57.7899123Z     ✓ should return valid reviewData when custom cycle (21 ms)
+2026-10-14T11:58:57.7900061Z   console.log
+2026-10-14T11:58:57.7901406Z     ✓ should require review if last review date over a year old (4 ms)
+2026-10-14T11:58:57.7902472Z     Dummy playbook page requires review = true
+2026-10-14T11:58:57.7903708Z     ✓ should not require review if issue sheet approval date is this year (6 ms)
+2026-10-14T11:58:57.7904402Z 
+2026-10-14T11:58:57.7905194Z     ✓ should require review if issue sheet approval date is over a year old (3 ms)
+2026-10-14T11:58:57.7906317Z       at console.<anonymous> (node_modules/jest-mock/build/index.js:794:25)
+2026-10-14T11:58:57.7907730Z     ✓ should return empty object when no review date or issue sheet approval date
+2026-10-14T11:58:57.7908485Z 
+2026-10-14T11:58:57.7908689Z 
+2026-10-14T11:58:57.8051473Z PASS lib/tests/javascripts/dateConverter.test.js
+2026-10-14T11:58:57.8061774Z   dateConverter
+2026-10-14T11:58:57.8092005Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:57.8112465Z     ✓ should return the input value when instance of luxon DateTime (35 ms)
+2026-10-14T11:58:57.8122069Z     ✓ should return the current luxon date when value is a js date (1 ms)
+2026-10-14T11:58:57.8152040Z     ✓ should return the current luxon date when value is: now
+2026-10-14T11:58:57.8182113Z     ✓ should return the correct luxon date from string (4 ms)
+2026-10-14T11:58:57.8211357Z     ✓ should return undefined when value is: null
+2026-10-14T11:58:57.8212580Z     ✓ should return undefined when value is: undefined
+2026-10-14T11:58:57.8247257Z     ✓ should return undefined when value is: 
+2026-10-14T11:58:57.8271369Z 
+2026-10-14T11:58:57.8502023Z PASS lib/tests/filters/convertColor.test.js
+2026-10-14T11:58:57.8531669Z   blank
+2026-10-14T11:58:57.8542024Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:57.8572224Z     ✓ should return RGB when input is: { value: '#000000', format: 'RGB', expected: '0,0,0' }
+2026-10-14T11:58:57.8602129Z     ✓ should return RGB when input is: { value: '#FFFFFF', format: 'RGB', expected: '255,255,255' } (1 ms)
+2026-10-14T11:58:57.8603871Z     ✓ should return RGB when input is: { value: '#FF0000', format: 'RGB', expected: '255,0,0' } (1 ms)
+2026-10-14T11:58:57.8632821Z     ✓ should return RGB when input is: { value: '#00FF00', format: 'RGB', expected: '0,255,0' }
+2026-10-14T11:58:57.8662228Z     ✓ should return RGB when input is: { value: '#0000FF', format: 'RGB', expected: '0,0,255' } (1 ms)
+2026-10-14T11:58:57.8682407Z     ✓ should return CMYK when input is: { value: '#000000', format: 'CMYK', expected: '0,0,0,100' }
+2026-10-14T11:58:57.8693443Z     ✓ should return CMYK when input is: { value: '#FFFFFF', format: 'CMYK', expected: '0,0,0,0' } (1 ms)
+2026-10-14T11:58:57.8722308Z     ✓ should return CMYK when input is: { value: '#FF0000', format: 'CMYK', expected: '0,100,100,0' }
+2026-10-14T11:58:57.8756655Z     ✓ should return CMYK when input is: { value: '#00FF00', format: 'CMYK', expected: '100,0,100,0' } (1 ms)
+2026-10-14T11:58:57.8784992Z     ✓ should return CMYK when input is: { value: '#0000FF', format: 'CMYK', expected: '100,100,0,0' }
+2026-10-14T11:58:57.8785854Z   console.log
+2026-10-14T11:58:57.8812173Z     ✓ should return CMYK when input is: { value: '#00FFFF', format: 'CMYK', expected: '100,0,0,0' }
+2026-10-14T11:58:57.8813761Z     configuring CSS class appender for [code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline]
+2026-10-14T11:58:57.8816789Z     ✓ should return CMYK when input is: { value: '#FF00FF', format: 'CMYK', expected: '0,100,0,0' }
+2026-10-14T11:58:57.8817496Z 
+2026-10-14T11:58:57.8842325Z     ✓ should return CMYK when input is: { value: '#FFFF00', format: 'CMYK', expected: '0,0,100,0' }
+2026-10-14T11:58:57.8843451Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.8901961Z 
+2026-10-14T11:58:57.8901978Z 
+2026-10-14T11:58:57.8932203Z   console.log
+2026-10-14T11:58:57.8956992Z     configuring CSS class appender for [code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline]
+2026-10-14T11:58:57.8991357Z 
+2026-10-14T11:58:57.9021484Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.9022054Z 
+2026-10-14T11:58:57.9058310Z PASS lib/tests/computed/badges.test.js
+2026-10-14T11:58:57.9058826Z   console.log
+2026-10-14T11:58:57.9093180Z   badge status
+2026-10-14T11:58:57.9094390Z     configuring CSS class appender for [heading_open,code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline]
+2026-10-14T11:58:57.9122120Z     ✓ should return grey and DRAFT when data has DRAFT status and no review (1 ms)
+2026-10-14T11:58:57.9122709Z 
+2026-10-14T11:58:57.9123799Z     ✓ should return yellow and REVIEW when data has review and DRAFT status (1 ms)
+2026-10-14T11:58:57.9124908Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.9152152Z     ✓ should return yellow and REVIEW when data has review and FINAL status
+2026-10-14T11:58:57.9153219Z 
+2026-10-14T11:58:57.9181987Z     ✓ will return empty if FINAL status and no review
+2026-10-14T11:58:57.9182676Z   console.log
+2026-10-14T11:58:57.9202020Z     ✓ will retain user-defined badges
+2026-10-14T11:58:57.9202678Z     configuring CSS class appender for []
+2026-10-14T11:58:57.9221473Z 
+2026-10-14T11:58:57.9221492Z 
+2026-10-14T11:58:57.9222170Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.9222857Z 
+2026-10-14T11:58:57.9223162Z   console.log
+2026-10-14T11:58:57.9224332Z     configuring CSS class appender for [code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline]
+2026-10-14T11:58:57.9225349Z 
+2026-10-14T11:58:57.9225905Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.9226551Z 
+2026-10-14T11:58:57.9226904Z   console.log
+2026-10-14T11:58:57.9228052Z     configuring CSS class appender for [code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline]
+2026-10-14T11:58:57.9229079Z 
+2026-10-14T11:58:57.9229641Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:57.9230291Z 
+2026-10-14T11:58:57.9242430Z PASS lib/tests/javascripts/markdownClassAppender.test.js
+2026-10-14T11:58:57.9271691Z   markdownClassAppender
+2026-10-14T11:58:57.9302146Z     ✓ should add class to default rules (52 ms)
+2026-10-14T11:58:57.9302924Z     ✓ will miss without config for explicit tokens (8 ms)
+2026-10-14T11:58:57.9331967Z     ✓ should add class to configured tokens (3 ms)
+2026-10-14T11:58:57.9362018Z     ✓ should miss class when default rules excluded (3 ms)
+2026-10-14T11:58:57.9382202Z     ✓ should exclude patterns specified as types of strings (4 ms)
+2026-10-14T11:58:57.9401977Z     ✓ should exclude patterns specified as types of strings (3 ms)
+2026-10-14T11:58:57.9416963Z 
+2026-10-14T11:58:57.9492085Z PASS lib/tests/filters/sortByOrder.test.js
+2026-10-14T11:58:57.9493074Z   sortByOrder
+2026-10-14T11:58:57.9521941Z     ✓ should export module as a function
+2026-10-14T11:58:57.9551989Z     ✓ should return an empty array when given an empty array
+2026-10-14T11:58:57.9581804Z     ✓ should sort an array of one object correctly (1 ms)
+2026-10-14T11:58:57.9583316Z     ✓ should sort an array of objects correctly with specified order parameter: asc
+2026-10-14T11:58:57.9611383Z 
+2026-10-14T11:58:57.9844579Z PASS lib/tests/filters/total-from-rows.test.js
+2026-10-14T11:58:57.9845590Z   total-from-rows
+2026-10-14T11:58:57.9846660Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:57.9847731Z     ✓ should return 0 for empty input
+2026-10-14T11:58:57.9848941Z     ✓ should return 0 when all rows have 0 as the second element (1 ms)
+2026-10-14T11:58:57.9850427Z     ✓ should return the sum of the second column even if an item is a string
+2026-10-14T11:58:57.9851971Z     ✓ should recieve NaN when undefined present
+2026-10-14T11:58:57.9853026Z     ✓ returns 26 when input is: 
+2026-10-14T11:58:57.9854013Z     ✓ returns 2four6 when input is: four
+2026-10-14T11:58:57.9855086Z     ✓ returns 8 when input is: null (1 ms)
+2026-10-14T11:58:57.9855735Z 
+2026-10-14T11:58:58.0612067Z PASS lib/tests/filters/urls.test.js
+2026-10-14T11:58:58.0631806Z   urlResolver
+2026-10-14T11:58:58.0633424Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.0634444Z     ✓ should resolve URL with default base URL (1 ms)
+2026-10-14T11:58:58.0635424Z     ✓ should resolve URL with query parameters
+2026-10-14T11:58:58.0636361Z     ✓ should resolve URL with fragment identifier
+2026-10-14T11:58:58.0637403Z     ✓ should resolve URL with special characters
+2026-10-14T11:58:58.0638462Z     ✓ should pass through protocol URLs unchanged
+2026-10-14T11:58:58.0639064Z 
+2026-10-14T11:58:58.0670789Z PASS lib/tests/filters/slug.test.js
+2026-10-14T11:58:58.0671783Z   slugify
+2026-10-14T11:58:58.0672768Z     ✓ should export module as a function
+2026-10-14T11:58:58.0673809Z     ✓ should replace spaces with hyphens
+2026-10-14T11:58:58.0674998Z     ✓ should replace spaces with hyphens and return lowercase (1 ms)
+2026-10-14T11:58:58.0676517Z     ✓ should replace non-alphanumeric characters
+2026-10-14T11:58:58.0678000Z     ✓ should replace non-alphanumeric, spaces and uppercase characters correctly (1 ms)
+2026-10-14T11:58:58.0679305Z     ✓ should return empty string if input
+2026-10-14T11:58:58.0680258Z     ✓ should throw an error for null input (3 ms)
+2026-10-14T11:58:58.0681492Z     ✓ should throw an error for undefined input (1 ms)
+2026-10-14T11:58:58.0682112Z 
+2026-10-14T11:58:58.1342207Z PASS lib/tests/filters/date.test.js
+2026-10-14T11:58:58.1371807Z   formatDate
+2026-10-14T11:58:58.1373024Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.1402267Z     ✓ should return a formatted date string when given a valid date and format (2 ms)
+2026-10-14T11:58:58.1432169Z     ✓ should return '-' when value is: null and format present
+2026-10-14T11:58:58.1461936Z     ✓ should return '-' when value is: undefined and format present (1 ms)
+2026-10-14T11:58:58.1463247Z     ✓ should return '-' when value is:  and format present
+2026-10-14T11:58:58.1492077Z     ✓ should return the original value when given no format (2 ms)
+2026-10-14T11:58:58.1522012Z     ✓ should return a undefined when given no value and no format (1 ms)
+2026-10-14T11:58:58.1541855Z 
+2026-10-14T11:58:58.1551899Z PASS lib/tests/filters/fixed.test.js
+2026-10-14T11:58:58.1582196Z   formatNumber should format number to the specified number of digits. If more or no digits provided then input will be returned
+2026-10-14T11:58:58.1611880Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.1621715Z     ✓ returns 0.1 when: 0.1 is input (1 ms)
+2026-10-14T11:58:58.1644370Z     ✓ returns 0.6 when: 0.6 is input
+2026-10-14T11:58:58.1644914Z   console.log
+2026-10-14T11:58:58.1671848Z     ✓ returns 0.6 when: 0.64 is input (1 ms)
+2026-10-14T11:58:58.1675026Z     configuring CSS class appender for [dl_open,code_inline,code_block,fence,image,hardbreak,softbreak,text,html_block,html_inline,footnote_ref,footnote_block_open,footnote_block_close,footnote_open,footnote_close,footnote_anchor,footnote_caption,footnote_anchor_name,emoji,container_card_open,container_card_close,container_details_open,container_details_close]
+2026-10-14T11:58:58.1692098Z     ✓ returns 0.7 when: 0.66 is input
+2026-10-14T11:58:58.1692897Z     ✓ returns 123 when: 123.45678 is input (1 ms)
+2026-10-14T11:58:58.1693653Z     ✓ returns 123 when: 123.45678 is input
+2026-10-14T11:58:58.1694362Z     ✓ returns 123 when: 123.45678 is input (1 ms)
+2026-10-14T11:58:58.1695044Z     ✓ returns 123.4 when: 123.45678 is input
+2026-10-14T11:58:58.1695724Z     ✓ returns 123.45 when: 123.45678 is input
+2026-10-14T11:58:58.1696475Z     ✓ returns 123.456 when: 123.45678 is input
+2026-10-14T11:58:58.1697209Z     ✓ returns 123.4567 when: 123.45678 is input
+2026-10-14T11:58:58.1697931Z     ✓ returns 123.45678 when: 123.45678 is input
+2026-10-14T11:58:58.1698706Z     ✓ returns 123.45678 when: 123.45678 is input (1 ms)
+2026-10-14T11:58:58.1699130Z 
+2026-10-14T11:58:58.1791292Z 
+2026-10-14T11:58:58.1821858Z       at Function.log (lib/_javascripts/markdownClassAppender.js:56:11)
+2026-10-14T11:58:58.1881286Z 
+2026-10-14T11:58:58.2042069Z PASS lib/tests/filters/markdown.test.js
+2026-10-14T11:58:58.2071605Z   markdown
+2026-10-14T11:58:58.2092131Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.2121888Z     ✓ should render with html p tag and default value (32 ms)
+2026-10-14T11:58:58.2141994Z     ✓ should render inline html without p tag (2 ms)
+2026-10-14T11:58:58.2161891Z     ✓ should render html block with correct attributes (1 ms)
+2026-10-14T11:58:58.2182253Z     ✓ should return undefined when null string input (1 ms)
+2026-10-14T11:58:58.2219176Z     ✓ should return undefined when undefined string input
+2026-10-14T11:58:58.2232129Z     ✓ should return undefined when  string input
+2026-10-14T11:58:58.2233020Z 
+2026-10-14T11:58:58.2233707Z PASS lib/tests/filters/tokenize.test.js
+2026-10-14T11:58:58.2234507Z   toekenize
+2026-10-14T11:58:58.2235379Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.2236801Z     ✓ should convert to lowercase (1 ms)
+2026-10-14T11:58:58.2237810Z     ✓ should remove HTML elements (1 ms)
+2026-10-14T11:58:58.2238756Z     ✓ should remove punctuation and newlines
+2026-10-14T11:58:58.2239919Z     ✓ should remove short and less meaningful words (1 ms)
+2026-10-14T11:58:58.2241307Z     ✓ should remove duplicated tokens
+2026-10-14T11:58:58.2279913Z     ✓ should remove repeated spaces (1 ms)
+2026-10-14T11:58:58.2283846Z 
+2026-10-14T11:58:58.2426439Z PASS lib/tests/filters/blank.test.js
+2026-10-14T11:58:58.2451584Z   blank
+2026-10-14T11:58:58.2452701Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.2482464Z     ✓ should return first defined value when input is: { value: 'defined', blank: undefined } (9 ms)
+2026-10-14T11:58:58.2512291Z     ✓ should return first defined value when input is: { value: undefined, blank: 'defined' } (4 ms)
+2026-10-14T11:58:58.2542118Z     ✓ should return first defined value when input is: { value: 'defined', blank: 'defined' }
+2026-10-14T11:58:58.2553592Z     ✓ should return first defined value when input is: { value: '', blank: 'defined' }
+2026-10-14T11:58:58.2572609Z     ✓ should return '-' when input is: { value: undefined, blank: undefined }
+2026-10-14T11:58:58.2602200Z     ✓ should return '-' when input is: { value: undefined, blank: '' } (5 ms)
+2026-10-14T11:58:58.2631966Z     ✓ should return '-' when input is: { value: '', blank: undefined }
+2026-10-14T11:58:58.2661950Z     ✓ should return '-' when input is: { value: null, blank: '' }
+2026-10-14T11:58:58.2663197Z     ✓ should return '-' when input is: { value: '', blank: null }
+2026-10-14T11:58:58.2694833Z     ✓ should return '-' when input is: { value: null, blank: null }
+2026-10-14T11:58:58.2721926Z     ✓ should return '-' when input is: { value: '', blank: '' }
+2026-10-14T11:58:58.2848536Z 
+2026-10-14T11:58:58.2992052Z PASS lib/tests/filters/debug.test.js
+2026-10-14T11:58:58.3111856Z   debug
+2026-10-14T11:58:58.3173885Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.3238402Z     should return object type and value as a string
+2026-10-14T11:58:58.3251798Z       ✓ returns object {} when: {} is input
+2026-10-14T11:58:58.3252323Z       ✓ returns string "hello" when: hello is input (1 ms)
+2026-10-14T11:58:58.3252756Z       ✓ returns number 42 when: 42 is input
+2026-10-14T11:58:58.3253145Z       ✓ returns boolean true when: true is input
+2026-10-14T11:58:58.3253537Z       ✓ returns object null when: null is input
+2026-10-14T11:58:58.3253980Z       ✓ returns undefined undefined when: undefined is input
+2026-10-14T11:58:58.3254431Z       ✓ returns string "" when:  is input (1 ms)
+2026-10-14T11:58:58.3254640Z 
+2026-10-14T11:58:58.3291762Z PASS lib/tests/filters/pretty.test.js
+2026-10-14T11:58:58.3321571Z   pretty
+2026-10-14T11:58:58.3339171Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.3341921Z     ✓ should remove index.html from a string (1 ms)
+2026-10-14T11:58:58.3342989Z     ✓ should return an empty string when given an empty string
+2026-10-14T11:58:58.3344002Z     ✓ should return a string of other types (6 ms)
+2026-10-14T11:58:58.3344545Z 
+2026-10-14T11:58:58.3345027Z PASS lib/tests/filters/widont.test.js
+2026-10-14T11:58:58.3345700Z   widont
+2026-10-14T11:58:58.3346465Z     ✓ should export module as a function (1 ms)
+2026-10-14T11:58:58.3347391Z     ✓ returns  when input is:  (1 ms)
+2026-10-14T11:58:58.3348389Z     ✓ returns Hello, world when input is: Hello, world
+2026-10-14T11:58:58.3349410Z     ✓ returns Hello, world when input is: Hello,  world
+2026-10-14T11:58:58.3350634Z     ✓ returns Hello, world when input is: Hello,  world  
+2026-10-14T11:58:58.3351852Z     ✓ returns Hello when input is: Hello
+2026-10-14T11:58:58.3352720Z     ✓ returns  Hello when input is:  Hello
+2026-10-14T11:58:58.3353067Z 
+2026-10-14T11:58:58.3592439Z PASS lib/tests/filters/urlEncode.test.js
+2026-10-14T11:58:58.3593114Z   urlEncode
+2026-10-14T11:58:58.3595125Z     ✓ should export module as a function (3 ms)
+2026-10-14T11:58:58.3595890Z     ✓ should return empty string when empty string given
+2026-10-14T11:58:58.3596317Z     ✓ should encode a string value
+2026-10-14T11:58:58.3596667Z     ✓ encodes special characters (1 ms)
+2026-10-14T11:58:58.3596877Z 
+2026-10-14T11:58:58.3834295Z Test Suites: 21 passed, 21 total
+2026-10-14T11:58:58.3834963Z Tests:       162 passed, 162 total
+2026-10-14T11:58:58.3835478Z Snapshots:   0 total
+2026-10-14T11:58:58.3835926Z Time:        1.751 s
+2026-10-14T11:58:58.3836352Z Ran all test suites.
+2026-10-14T11:58:58.4998077Z 
+2026-10-14T11:58:58.4998829Z > nhsbsa-digital-playbook@1.0.0 test:eslint
+2026-10-14T11:58:58.4999652Z > cross-env NODE_ENV=test npx eslint .
+2026-10-14T11:58:58.4999986Z 
+2026-10-14T11:58:59.9926205Z Post job cleanup.
+2026-10-14T11:59:00.1194918Z (node:2760) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T11:59:00.1196330Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T11:59:00.1359534Z Post job cleanup.
+2026-10-14T11:59:00.2253706Z [command]/usr/bin/git version
+2026-10-14T11:59:00.2299250Z git version 2.55.0
+2026-10-14T11:59:00.2340819Z Temporarily overriding HOME='/home/runner/work/_temp/dc692879-f996-4078-b5a7-889b1ca0cbba' before making global git config changes
+2026-10-14T11:59:00.2342605Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T11:59:00.2346996Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nhsbsa-digital-playbook/nhsbsa-digital-playbook
+2026-10-14T11:59:00.2386847Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T11:59:00.2423236Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T11:59:00.2675037Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T11:59:00.2712368Z http.https://github.com/.extraheader
+2026-10-14T11:59:00.2726213Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-14T11:59:00.2755027Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T11:59:00.3119486Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T11:59:00.3172232Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T11:59:00.3627137Z Cleaning up orphan processes
+2026-10-14T11:59:00.3958772Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

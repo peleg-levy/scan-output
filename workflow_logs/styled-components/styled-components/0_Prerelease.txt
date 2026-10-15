@@ -1,0 +1,882 @@
+﻿2026-10-12T23:54:44.9516649Z Current runner version: '2.337.0'
+2026-10-12T23:54:44.9554671Z ##[group]Runner Image Provisioner
+2026-10-12T23:54:44.9555230Z Hosted Compute Agent
+2026-10-12T23:54:44.9555720Z Version: 20261002.596
+2026-10-12T23:54:44.9556112Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-12T23:54:44.9556592Z Build Date: 2026-10-02T22:28:27Z
+2026-10-12T23:54:44.9557049Z Worker ID: {f4966486-0c74-489e-84ff-fa5e2a4bd18a}
+2026-10-12T23:54:44.9557480Z Region: centralus
+2026-10-12T23:54:44.9557885Z Cloud: Azure
+2026-10-12T23:54:44.9558221Z ##[endgroup]
+2026-10-12T23:54:44.9559019Z ##[group]Operating System
+2026-10-12T23:54:44.9559487Z Ubuntu
+2026-10-12T23:54:44.9559811Z 24.04.5
+2026-10-12T23:54:44.9560206Z LTS
+2026-10-12T23:54:44.9560526Z ##[endgroup]
+2026-10-12T23:54:44.9560855Z ##[group]Runner Image
+2026-10-12T23:54:44.9561502Z Image: ubuntu-24.04
+2026-10-12T23:54:44.9561850Z Version: 20261004.327.1
+2026-10-12T23:54:44.9562690Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-12T23:54:44.9563565Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-12T23:54:44.9564272Z ##[endgroup]
+2026-10-12T23:54:44.9564971Z ##[group]GITHUB_TOKEN Permissions
+2026-10-12T23:54:44.9566237Z Contents: write
+2026-10-12T23:54:44.9566596Z Metadata: read
+2026-10-12T23:54:44.9567027Z ##[endgroup]
+2026-10-12T23:54:44.9568519Z Secret source: Actions
+2026-10-12T23:54:44.9569157Z Cache mode: write
+2026-10-12T23:54:44.9569611Z Prepare workflow directory
+2026-10-12T23:54:44.9798660Z Prepare all required actions
+2026-10-12T23:54:44.9832575Z Getting action download info
+2026-10-12T23:54:45.2052250Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-12T23:54:45.2802740Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-10-12T23:54:45.7784488Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-12T23:54:45.9547371Z Complete job name: Prerelease
+2026-10-12T23:54:46.0135049Z ##[group]Run actions/checkout@v4
+2026-10-12T23:54:46.0135516Z with:
+2026-10-12T23:54:46.0135776Z   fetch-depth: 0
+2026-10-12T23:54:46.0136088Z   repository: styled-components/styled-components
+2026-10-12T23:54:46.0138447Z   token: ***
+2026-10-12T23:54:46.0138701Z   ssh-strict: true
+2026-10-12T23:54:46.0138962Z   ssh-user: git
+2026-10-12T23:54:46.0139234Z   persist-credentials: true
+2026-10-12T23:54:46.0139527Z   clean: true
+2026-10-12T23:54:46.0139797Z   sparse-checkout-cone-mode: true
+2026-10-12T23:54:46.0140110Z   fetch-tags: false
+2026-10-12T23:54:46.0140380Z   show-progress: true
+2026-10-12T23:54:46.0140647Z   lfs: false
+2026-10-12T23:54:46.0140908Z   submodules: false
+2026-10-12T23:54:46.0141188Z   set-safe-directory: true
+2026-10-12T23:54:46.0141713Z   allow-unsafe-pr-checkout: false
+2026-10-12T23:54:46.0142128Z ##[endgroup]
+2026-10-12T23:54:46.0857874Z Syncing repository: styled-components/styled-components
+2026-10-12T23:54:46.0859331Z ##[group]Getting Git version info
+2026-10-12T23:54:46.0859894Z Working directory is '/home/runner/work/styled-components/styled-components'
+2026-10-12T23:54:46.0860662Z [command]/usr/bin/git version
+2026-10-12T23:54:46.0918896Z git version 2.55.0
+2026-10-12T23:54:46.0932158Z ##[endgroup]
+2026-10-12T23:54:46.0942622Z Temporarily overriding HOME='/home/runner/work/_temp/27ee2bc6-925c-40ec-865f-b233b3acd5dc' before making global git config changes
+2026-10-12T23:54:46.0943548Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-12T23:54:46.0946808Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-12T23:54:46.0993640Z Deleting the contents of '/home/runner/work/styled-components/styled-components'
+2026-10-12T23:54:46.0997329Z ##[group]Initializing the repository
+2026-10-12T23:54:46.1000274Z [command]/usr/bin/git init /home/runner/work/styled-components/styled-components
+2026-10-12T23:54:46.1104344Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-12T23:54:46.1105098Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-12T23:54:46.1105655Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-12T23:54:46.1106423Z hint: call:
+2026-10-12T23:54:46.1106668Z hint:
+2026-10-12T23:54:46.1107004Z hint: 	git config --global init.defaultBranch <name>
+2026-10-12T23:54:46.1107369Z hint:
+2026-10-12T23:54:46.1107713Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-12T23:54:46.1108256Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-12T23:54:46.1108694Z hint:
+2026-10-12T23:54:46.1108943Z hint: 	git branch -m <name>
+2026-10-12T23:54:46.1109225Z hint:
+2026-10-12T23:54:46.1109598Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-12T23:54:46.1114978Z Initialized empty Git repository in /home/runner/work/styled-components/styled-components/.git/
+2026-10-12T23:54:46.1122596Z [command]/usr/bin/git remote add origin https://github.com/styled-components/styled-components
+2026-10-12T23:54:46.1167540Z ##[endgroup]
+2026-10-12T23:54:46.1168081Z ##[group]Disabling automatic garbage collection
+2026-10-12T23:54:46.1170440Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-12T23:54:46.1197238Z ##[endgroup]
+2026-10-12T23:54:46.1197758Z ##[group]Setting up auth
+2026-10-12T23:54:46.1203365Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-12T23:54:46.1229417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-12T23:54:46.1528080Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-12T23:54:46.1555235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-12T23:54:46.1733956Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-12T23:54:46.1760084Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-12T23:54:46.1942497Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-12T23:54:46.1974740Z ##[endgroup]
+2026-10-12T23:54:46.1975547Z ##[group]Fetching the repository
+2026-10-12T23:54:46.1982269Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-12T23:54:48.7963092Z From https://github.com/styled-components/styled-components
+2026-10-12T23:54:48.7963745Z  * [new branch]        2127-add-test            -> origin/2127-add-test
+2026-10-12T23:54:48.7964260Z  * [new branch]        6.x                      -> origin/6.x
+2026-10-12T23:54:48.7964719Z  * [new branch]        changeset-release/main   -> origin/changeset-release/main
+2026-10-12T23:54:48.7965195Z  * [new branch]        chore/pnpm-12            -> origin/chore/pnpm-12
+2026-10-12T23:54:48.7965652Z  * [new branch]        chore/pnpm-12-6x         -> origin/chore/pnpm-12-6x
+2026-10-12T23:54:48.7966121Z  * [new branch]        create-styled            -> origin/create-styled
+2026-10-12T23:54:48.7966595Z  * [new branch]        css-var-injection        -> origin/css-var-injection
+2026-10-12T23:54:48.7967082Z  * [new branch]        cursor/library-optimization-exploration-7097 -> origin/cursor/library-optimization-exploration-7097
+2026-10-12T23:54:48.7967615Z  * [new branch]        dependabot/npm_and_yarn/next-16.3.8 -> origin/dependabot/npm_and_yarn/next-16.3.8
+2026-10-12T23:54:48.7968263Z  * [new branch]        detail/dead-code/chore-remove-dead-nativestyle-re-exports-and-reset-de2f72 -> origin/detail/dead-code/chore-remove-dead-nativestyle-re-exports-and-reset-de2f72
+2026-10-12T23:54:48.7969390Z  * [new branch]        detail/dead-code/chore-remove-dead-removeglobalstyletag-utility-dee1e9 -> origin/detail/dead-code/chore-remove-dead-removeglobalstyletag-utility-dee1e9
+2026-10-12T23:54:48.7970133Z  * [new branch]        detail/dead-code/chore-remove-unused-lineareasing-polyfill-8d2527 -> origin/detail/dead-code/chore-remove-unused-lineareasing-polyfill-8d2527
+2026-10-12T23:54:48.7970920Z  * [new branch]        detail/dead-code/chore-remove-unused-tokenstream-matchkind-matchide-9d3091 -> origin/detail/dead-code/chore-remove-unused-tokenstream-matchkind-matchide-9d3091
+2026-10-12T23:54:48.7972289Z  * [new branch]        detail/dead-code/chore-remove-unused-type-re-exports-from-nativepla-b412b5 -> origin/detail/dead-code/chore-remove-unused-type-re-exports-from-nativepla-b412b5
+2026-10-12T23:54:48.7973240Z  * [new branch]        feat/rule-hoisting       -> origin/feat/rule-hoisting
+2026-10-12T23:54:48.7973911Z  * [new branch]        fix/5819-bare-process-treeshake-guard -> origin/fix/5819-bare-process-treeshake-guard
+2026-10-12T23:54:48.7974527Z  * [new branch]        fix/hmr-style-tag-accumulation -> origin/fix/hmr-style-tag-accumulation
+2026-10-12T23:54:48.7974896Z  * [new branch]        fix/parser-slot-comments -> origin/fix/parser-slot-comments
+2026-10-12T23:54:48.7975310Z  * [new branch]        fix/prerelease-notes-edited-changesets -> origin/fix/prerelease-notes-edited-changesets
+2026-10-12T23:54:48.7975770Z  * [new branch]        fix/replace-server-switch-ssr -> origin/fix/replace-server-switch-ssr
+2026-10-12T23:54:48.7976172Z  * [new branch]        fix/rsc-restyling-specificity -> origin/fix/rsc-restyling-specificity
+2026-10-12T23:54:48.7976580Z  * [new branch]        fix/ssm-nesting-inheritance -> origin/fix/ssm-nesting-inheritance
+2026-10-12T23:54:48.7976985Z  * [new branch]        fix/v7-interpolation-render-cache -> origin/fix/v7-interpolation-render-cache
+2026-10-12T23:54:48.7977501Z  * [new branch]        legacy-v2                -> origin/legacy-v2
+2026-10-12T23:54:48.7977777Z  * [new branch]        legacy-v4                -> origin/legacy-v4
+2026-10-12T23:54:48.7978071Z  * [new branch]        legacy-v5                -> origin/legacy-v5
+2026-10-12T23:54:48.7978339Z  * [new branch]        main                     -> origin/main
+2026-10-12T23:54:48.7978608Z  * [new branch]        maintain                 -> origin/maintain
+2026-10-12T23:54:48.7979157Z  * [new branch]        next13-sandbox-example   -> origin/next13-sandbox-example
+2026-10-12T23:54:48.7979537Z  * [new branch]        preview-bundlesize       -> origin/preview-bundlesize
+2026-10-12T23:54:48.7979859Z  * [new branch]        preview-bundlesize2      -> origin/preview-bundlesize2
+2026-10-12T23:54:48.7980195Z  * [new branch]        refactor-to-named-exports -> origin/refactor-to-named-exports
+2026-10-12T23:54:48.7980541Z  * [new branch]        refactor/remove-react-is -> origin/refactor/remove-react-is
+2026-10-12T23:54:48.7980881Z  * [new branch]        refactoring              -> origin/refactoring
+2026-10-12T23:54:48.7981174Z  * [new branch]        remove-with-config       -> origin/remove-with-config
+2026-10-12T23:54:48.7981640Z  * [new branch]        strict-mode              -> origin/strict-mode
+2026-10-12T23:54:48.7981928Z  * [new branch]        test-stipsan-pr          -> origin/test-stipsan-pr
+2026-10-12T23:54:48.7982282Z  * [new branch]        test/snapshot-createGlobalStyle -> origin/test/snapshot-createGlobalStyle
+2026-10-12T23:54:48.7982717Z  * [new branch]        test/snapshot-memoization-rehydration -> origin/test/snapshot-memoization-rehydration
+2026-10-12T23:54:48.7983133Z  * [new branch]        test/snapshot-rsc-assertions -> origin/test/snapshot-rsc-assertions
+2026-10-12T23:54:48.7983490Z  * [new branch]        test/ssr-inline-snapshots -> origin/test/ssr-inline-snapshots
+2026-10-12T23:54:48.7983853Z  * [new branch]        theme-isolated-styled-type -> origin/theme-isolated-styled-type
+2026-10-12T23:54:48.7984276Z  * [new branch]        v7                       -> origin/v7
+2026-10-12T23:54:48.7984564Z  * [new branch]        vulnerable-workflow      -> origin/vulnerable-workflow
+2026-10-12T23:54:48.7984895Z  * [new branch]        worktree-agent-a40aa390  -> origin/worktree-agent-a40aa390
+2026-10-12T23:54:48.7985232Z  * [new branch]        worktree-agent-a411c2d5  -> origin/worktree-agent-a411c2d5
+2026-10-12T23:54:48.7985565Z  * [new branch]        worktree-agent-a6e16c33  -> origin/worktree-agent-a6e16c33
+2026-10-12T23:54:48.7985897Z  * [new branch]        worktree-agent-aeac35b8  -> origin/worktree-agent-aeac35b8
+2026-10-12T23:54:48.7986183Z  * [new tag]           2.4.1                    -> 2.4.1
+2026-10-12T23:54:48.7986419Z  * [new tag]           3.1.4                    -> 3.1.4
+2026-10-12T23:54:48.7986665Z  * [new tag]           sandbox@4.2.0            -> sandbox@4.2.0
+2026-10-12T23:54:48.7986977Z  * [new tag]           styled-components@4.1.4-alpha.2 -> styled-components@4.1.4-alpha.2
+2026-10-12T23:54:48.7987347Z  * [new tag]           styled-components@4.1.4-alpha.3 -> styled-components@4.1.4-alpha.3
+2026-10-12T23:54:48.7987714Z  * [new tag]           styled-components@4.1.4-alpha.4 -> styled-components@4.1.4-alpha.4
+2026-10-12T23:54:48.7988085Z  * [new tag]           styled-components@4.1.4-alpha.5 -> styled-components@4.1.4-alpha.5
+2026-10-12T23:54:48.7988418Z  * [new tag]           styled-components@4.2.0  -> styled-components@4.2.0
+2026-10-12T23:54:48.7988731Z  * [new tag]           styled-components@6.1.14 -> styled-components@6.1.14
+2026-10-12T23:54:48.7989042Z  * [new tag]           styled-components@6.1.15 -> styled-components@6.1.15
+2026-10-12T23:54:48.7989345Z  * [new tag]           styled-components@6.1.16 -> styled-components@6.1.16
+2026-10-12T23:54:48.7989649Z  * [new tag]           styled-components@6.1.17 -> styled-components@6.1.17
+2026-10-12T23:54:48.7989951Z  * [new tag]           styled-components@6.1.18 -> styled-components@6.1.18
+2026-10-12T23:54:48.7990256Z  * [new tag]           styled-components@6.1.19 -> styled-components@6.1.19
+2026-10-12T23:54:48.7990666Z  * [new tag]           styled-components@6.2.0  -> styled-components@6.2.0
+2026-10-12T23:54:48.8052415Z  * [new tag]           styled-components@6.3.0  -> styled-components@6.3.0
+2026-10-12T23:54:48.8052983Z  * [new tag]           styled-components@6.3.1  -> styled-components@6.3.1
+2026-10-12T23:54:48.8053638Z  * [new tag]           styled-components@6.3.10 -> styled-components@6.3.10
+2026-10-12T23:54:48.8054169Z  * [new tag]           styled-components@6.3.11 -> styled-components@6.3.11
+2026-10-12T23:54:48.8054632Z  * [new tag]           styled-components@6.3.12 -> styled-components@6.3.12
+2026-10-12T23:54:48.8055074Z  * [new tag]           styled-components@6.3.2  -> styled-components@6.3.2
+2026-10-12T23:54:48.8055526Z  * [new tag]           styled-components@6.3.3  -> styled-components@6.3.3
+2026-10-12T23:54:48.8056032Z  * [new tag]           styled-components@6.3.4  -> styled-components@6.3.4
+2026-10-12T23:54:48.8056478Z  * [new tag]           styled-components@6.3.5  -> styled-components@6.3.5
+2026-10-12T23:54:48.8056941Z  * [new tag]           styled-components@6.3.6  -> styled-components@6.3.6
+2026-10-12T23:54:48.8057415Z  * [new tag]           styled-components@6.3.7  -> styled-components@6.3.7
+2026-10-12T23:54:48.8057877Z  * [new tag]           styled-components@6.3.8  -> styled-components@6.3.8
+2026-10-12T23:54:48.8058330Z  * [new tag]           styled-components@6.3.9  -> styled-components@6.3.9
+2026-10-12T23:54:48.8058795Z  * [new tag]           styled-components@6.4.0  -> styled-components@6.4.0
+2026-10-12T23:54:48.8059274Z  * [new tag]           styled-components@6.4.1  -> styled-components@6.4.1
+2026-10-12T23:54:48.8059955Z  * [new tag]           styled-components@6.4.1-prerelease-20260417184031 -> styled-components@6.4.1-prerelease-20260417184031
+2026-10-12T23:54:48.8060812Z  * [new tag]           styled-components@6.4.1-prerelease-20260417184545 -> styled-components@6.4.1-prerelease-20260417184545
+2026-10-12T23:54:48.8061927Z  * [new tag]           styled-components@6.4.2  -> styled-components@6.4.2
+2026-10-12T23:54:48.8062633Z  * [new tag]           styled-components@6.4.2-prerelease-20260514182414 -> styled-components@6.4.2-prerelease-20260514182414
+2026-10-12T23:54:48.8063493Z  * [new tag]           styled-components@6.4.2-prerelease-20260514184932 -> styled-components@6.4.2-prerelease-20260514184932
+2026-10-12T23:54:48.8064354Z  * [new tag]           styled-components@6.4.2-prerelease-20260514185513 -> styled-components@6.4.2-prerelease-20260514185513
+2026-10-12T23:54:48.8065209Z  * [new tag]           styled-components@6.4.2-prerelease-20260516150535 -> styled-components@6.4.2-prerelease-20260516150535
+2026-10-12T23:54:48.8065880Z  * [new tag]           styled-components@6.4.3  -> styled-components@6.4.3
+2026-10-12T23:54:48.8066588Z  * [new tag]           styled-components@6.4.3-prerelease-20260602021501 -> styled-components@6.4.3-prerelease-20260602021501
+2026-10-12T23:54:48.8067214Z  * [new tag]           styled-components@6.4.4  -> styled-components@6.4.4
+2026-10-12T23:54:48.8067680Z  * [new tag]           styled-components@6.4.4-prerelease-20260718230802 -> styled-components@6.4.4-prerelease-20260718230802
+2026-10-12T23:54:48.8068080Z  * [new tag]           styled-components@6.5.0  -> styled-components@6.5.0
+2026-10-12T23:54:48.8068493Z  * [new tag]           styled-components@6.5.0-prerelease-20260804151232 -> styled-components@6.5.0-prerelease-20260804151232
+2026-10-12T23:54:48.8068892Z  * [new tag]           styled-components@6.5.1  -> styled-components@6.5.1
+2026-10-12T23:54:48.8069303Z  * [new tag]           styled-components@6.5.1-prerelease-20260806232123 -> styled-components@6.5.1-prerelease-20260806232123
+2026-10-12T23:54:48.8069700Z  * [new tag]           styled-components@6.5.2  -> styled-components@6.5.2
+2026-10-12T23:54:48.8070211Z  * [new tag]           styled-components@6.5.2-prerelease-20260810214005 -> styled-components@6.5.2-prerelease-20260810214005
+2026-10-12T23:54:48.8070838Z  * [new tag]           styled-components@6.5.3  -> styled-components@6.5.3
+2026-10-12T23:54:48.8071792Z  * [new tag]           styled-components@6.5.3-prerelease-20260815150702 -> styled-components@6.5.3-prerelease-20260815150702
+2026-10-12T23:54:48.8072418Z  * [new tag]           styled-components@6.6.0  -> styled-components@6.6.0
+2026-10-12T23:54:48.8072822Z  * [new tag]           styled-components@6.6.0-prerelease-20260815222953 -> styled-components@6.6.0-prerelease-20260815222953
+2026-10-12T23:54:48.8073313Z  * [new tag]           styled-components@6.6.0-prerelease-20260817175248 -> styled-components@6.6.0-prerelease-20260817175248
+2026-10-12T23:54:48.8073809Z  * [new tag]           styled-components@6.6.0-prerelease-20260905051044 -> styled-components@6.6.0-prerelease-20260905051044
+2026-10-12T23:54:48.8074304Z  * [new tag]           styled-components@6.6.0-prerelease-20260908162735 -> styled-components@6.6.0-prerelease-20260908162735
+2026-10-12T23:54:48.8074822Z  * [new tag]           styled-components@6.6.0-prerelease-20260925231434 -> styled-components@6.6.0-prerelease-20260925231434
+2026-10-12T23:54:48.8075462Z  * [new tag]           styled-components@6.6.0-prerelease-20261012163214 -> styled-components@6.6.0-prerelease-20261012163214
+2026-10-12T23:54:48.8076216Z  * [new tag]           styled-components@7.0.0-prerelease-20260511073743 -> styled-components@7.0.0-prerelease-20260511073743
+2026-10-12T23:54:48.8076824Z  * [new tag]           styled-components@7.0.0-prerelease-20260511181111 -> styled-components@7.0.0-prerelease-20260511181111
+2026-10-12T23:54:48.8077311Z  * [new tag]           styled-components@7.0.0-prerelease-20260511181437 -> styled-components@7.0.0-prerelease-20260511181437
+2026-10-12T23:54:48.8077790Z  * [new tag]           styled-components@7.0.0-prerelease-20260511203830 -> styled-components@7.0.0-prerelease-20260511203830
+2026-10-12T23:54:48.8078276Z  * [new tag]           styled-components@7.0.0-prerelease-20260513034901 -> styled-components@7.0.0-prerelease-20260513034901
+2026-10-12T23:54:48.8078769Z  * [new tag]           styled-components@7.0.0-prerelease-20260513173704 -> styled-components@7.0.0-prerelease-20260513173704
+2026-10-12T23:54:48.8079350Z  * [new tag]           styled-components@7.0.0-prerelease-20260519035351 -> styled-components@7.0.0-prerelease-20260519035351
+2026-10-12T23:54:48.8079837Z  * [new tag]           styled-components@7.0.0-prerelease-20260524213421 -> styled-components@7.0.0-prerelease-20260524213421
+2026-10-12T23:54:48.8080322Z  * [new tag]           styled-components@7.0.0-prerelease-20260526020504 -> styled-components@7.0.0-prerelease-20260526020504
+2026-10-12T23:54:48.8080810Z  * [new tag]           styled-components@7.0.0-prerelease-20260530064039 -> styled-components@7.0.0-prerelease-20260530064039
+2026-10-12T23:54:48.8081630Z  * [new tag]           styled-components@7.0.0-prerelease-20260610071139 -> styled-components@7.0.0-prerelease-20260610071139
+2026-10-12T23:54:48.8082415Z  * [new tag]           styled-components@7.0.0-prerelease-20260611043336 -> styled-components@7.0.0-prerelease-20260611043336
+2026-10-12T23:54:48.8083228Z  * [new tag]           styled-components@7.0.0-prerelease-20260719013821 -> styled-components@7.0.0-prerelease-20260719013821
+2026-10-12T23:54:48.8083833Z  * [new tag]           styled-components@7.0.0-prerelease-20260730150545 -> styled-components@7.0.0-prerelease-20260730150545
+2026-10-12T23:54:48.8084322Z  * [new tag]           styled-components@7.0.0-prerelease-20260730151206 -> styled-components@7.0.0-prerelease-20260730151206
+2026-10-12T23:54:48.8084809Z  * [new tag]           styled-components@7.0.0-prerelease-20260730182544 -> styled-components@7.0.0-prerelease-20260730182544
+2026-10-12T23:54:48.8085294Z  * [new tag]           styled-components@7.0.0-prerelease-20260730182818 -> styled-components@7.0.0-prerelease-20260730182818
+2026-10-12T23:54:48.8085779Z  * [new tag]           styled-components@7.0.0-prerelease-20260730200819 -> styled-components@7.0.0-prerelease-20260730200819
+2026-10-12T23:54:48.8086387Z  * [new tag]           styled-components@7.0.0-prerelease-20260730205751 -> styled-components@7.0.0-prerelease-20260730205751
+2026-10-12T23:54:48.8086873Z  * [new tag]           styled-components@7.0.0-prerelease-20260730220331 -> styled-components@7.0.0-prerelease-20260730220331
+2026-10-12T23:54:48.8087356Z  * [new tag]           styled-components@7.0.0-prerelease-20260731031704 -> styled-components@7.0.0-prerelease-20260731031704
+2026-10-12T23:54:48.8087837Z  * [new tag]           styled-components@7.0.0-prerelease-20260731032118 -> styled-components@7.0.0-prerelease-20260731032118
+2026-10-12T23:54:48.8088318Z  * [new tag]           styled-components@7.0.0-prerelease-20260731035917 -> styled-components@7.0.0-prerelease-20260731035917
+2026-10-12T23:54:48.8088803Z  * [new tag]           styled-components@7.0.0-prerelease-20260731041038 -> styled-components@7.0.0-prerelease-20260731041038
+2026-10-12T23:54:48.8089287Z  * [new tag]           styled-components@7.0.0-prerelease-20260806233720 -> styled-components@7.0.0-prerelease-20260806233720
+2026-10-12T23:54:48.8089935Z  * [new tag]           styled-components@7.0.0-prerelease-20260807223715 -> styled-components@7.0.0-prerelease-20260807223715
+2026-10-12T23:54:48.8090702Z  * [new tag]           styled-components@7.0.0-prerelease-20260808041113 -> styled-components@7.0.0-prerelease-20260808041113
+2026-10-12T23:54:48.8091196Z  * [new tag]           styled-components@7.0.0-prerelease-20260908153432 -> styled-components@7.0.0-prerelease-20260908153432
+2026-10-12T23:54:48.8092139Z  * [new tag]           styled-components@7.0.0-prerelease-20260908195050 -> styled-components@7.0.0-prerelease-20260908195050
+2026-10-12T23:54:48.8092967Z  * [new tag]           styled-components@7.0.0-prerelease-20260925191055 -> styled-components@7.0.0-prerelease-20260925191055
+2026-10-12T23:54:48.8093780Z  * [new tag]           styled-components@7.0.0-prerelease-20261012164616 -> styled-components@7.0.0-prerelease-20261012164616
+2026-10-12T23:54:48.8094580Z  * [new tag]           styled-components@7.0.0-prerelease-20261012182411 -> styled-components@7.0.0-prerelease-20261012182411
+2026-10-12T23:54:48.8095369Z  * [new tag]           v0.0.2                   -> v0.0.2
+2026-10-12T23:54:48.8095750Z  * [new tag]           v0.0.3                   -> v0.0.3
+2026-10-12T23:54:48.8096120Z  * [new tag]           v0.0.4                   -> v0.0.4
+2026-10-12T23:54:48.8096479Z  * [new tag]           v0.0.5                   -> v0.0.5
+2026-10-12T23:54:48.8096853Z  * [new tag]           v0.0.5-0                 -> v0.0.5-0
+2026-10-12T23:54:48.8097228Z  * [new tag]           v0.0.5-1                 -> v0.0.5-1
+2026-10-12T23:54:48.8097608Z  * [new tag]           v0.0.6                   -> v0.0.6
+2026-10-12T23:54:48.8097976Z  * [new tag]           v0.1.0                   -> v0.1.0
+2026-10-12T23:54:48.8098335Z  * [new tag]           v0.1.1                   -> v0.1.1
+2026-10-12T23:54:48.8098691Z  * [new tag]           v0.1.2                   -> v0.1.2
+2026-10-12T23:54:48.8099044Z  * [new tag]           v0.1.3                   -> v0.1.3
+2026-10-12T23:54:48.8099417Z  * [new tag]           v0.1.4                   -> v0.1.4
+2026-10-12T23:54:48.8099765Z  * [new tag]           v0.1.5                   -> v0.1.5
+2026-10-12T23:54:48.8100133Z  * [new tag]           v0.1.6                   -> v0.1.6
+2026-10-12T23:54:48.8100491Z  * [new tag]           v0.1.7                   -> v0.1.7
+2026-10-12T23:54:48.8100858Z  * [new tag]           v0.1.8                   -> v0.1.8
+2026-10-12T23:54:48.8101213Z  * [new tag]           v0.1.9                   -> v0.1.9
+2026-10-12T23:54:48.8101713Z  * [new tag]           v0.2.0                   -> v0.2.0
+2026-10-12T23:54:48.8102063Z  * [new tag]           v0.2.1                   -> v0.2.1
+2026-10-12T23:54:48.8102413Z  * [new tag]           v0.2.2                   -> v0.2.2
+2026-10-12T23:54:48.8102760Z  * [new tag]           v0.2.3                   -> v0.2.3
+2026-10-12T23:54:48.8103109Z  * [new tag]           v0.2.4                   -> v0.2.4
+2026-10-12T23:54:48.8103465Z  * [new tag]           v0.2.5                   -> v0.2.5
+2026-10-12T23:54:48.8104001Z  * [new tag]           v0.3.0                   -> v0.3.0
+2026-10-12T23:54:48.8104353Z  * [new tag]           v0.3.1                   -> v0.3.1
+2026-10-12T23:54:48.8104737Z  * [new tag]           v0.3.2                   -> v0.3.2
+2026-10-12T23:54:48.8105246Z  * [new tag]           v0.3.3                   -> v0.3.3
+2026-10-12T23:54:48.8105635Z  * [new tag]           v0.3.4                   -> v0.3.4
+2026-10-12T23:54:48.8105865Z  * [new tag]           v0.4.0                   -> v0.4.0
+2026-10-12T23:54:48.8106093Z  * [new tag]           v0.4.1                   -> v0.4.1
+2026-10-12T23:54:48.8106318Z  * [new tag]           v0.4.2                   -> v0.4.2
+2026-10-12T23:54:48.8106548Z  * [new tag]           v1.0.0                   -> v1.0.0
+2026-10-12T23:54:48.8106782Z  * [new tag]           v1.0.1                   -> v1.0.1
+2026-10-12T23:54:48.8107010Z  * [new tag]           v1.0.10                  -> v1.0.10
+2026-10-12T23:54:48.8107245Z  * [new tag]           v1.0.11                  -> v1.0.11
+2026-10-12T23:54:48.8107492Z  * [new tag]           v1.0.12-0                -> v1.0.12-0
+2026-10-12T23:54:48.8107731Z  * [new tag]           v1.0.2                   -> v1.0.2
+2026-10-12T23:54:48.8107958Z  * [new tag]           v1.0.3                   -> v1.0.3
+2026-10-12T23:54:48.8108184Z  * [new tag]           v1.0.4                   -> v1.0.4
+2026-10-12T23:54:48.8108409Z  * [new tag]           v1.0.5                   -> v1.0.5
+2026-10-12T23:54:48.8108637Z  * [new tag]           v1.0.6                   -> v1.0.6
+2026-10-12T23:54:48.8108864Z  * [new tag]           v1.0.7                   -> v1.0.7
+2026-10-12T23:54:48.8109090Z  * [new tag]           v1.0.8                   -> v1.0.8
+2026-10-12T23:54:48.8109314Z  * [new tag]           v1.0.9                   -> v1.0.9
+2026-10-12T23:54:48.8109540Z  * [new tag]           v1.1.0                   -> v1.1.0
+2026-10-12T23:54:48.8109763Z  * [new tag]           v1.1.1                   -> v1.1.1
+2026-10-12T23:54:48.8110127Z  * [new tag]           v1.1.2                   -> v1.1.2
+2026-10-12T23:54:48.8110356Z  * [new tag]           v1.1.3                   -> v1.1.3
+2026-10-12T23:54:48.8110733Z  * [new tag]           v1.2.0                   -> v1.2.0
+2026-10-12T23:54:48.8111082Z  * [new tag]           v1.2.1                   -> v1.2.1
+2026-10-12T23:54:48.8111543Z  * [new tag]           v1.3.0                   -> v1.3.0
+2026-10-12T23:54:48.8111904Z  * [new tag]           v1.3.1                   -> v1.3.1
+2026-10-12T23:54:48.8112259Z  * [new tag]           v1.4.0                   -> v1.4.0
+2026-10-12T23:54:48.8112489Z  * [new tag]           v1.4.1                   -> v1.4.1
+2026-10-12T23:54:48.8112715Z  * [new tag]           v1.4.2                   -> v1.4.2
+2026-10-12T23:54:48.8112940Z  * [new tag]           v1.4.3                   -> v1.4.3
+2026-10-12T23:54:48.8113182Z  * [new tag]           v1.4.4                   -> v1.4.4
+2026-10-12T23:54:48.8113409Z  * [new tag]           v1.4.5                   -> v1.4.5
+2026-10-12T23:54:48.8113643Z  * [new tag]           v1.4.6                   -> v1.4.6
+2026-10-12T23:54:48.8113867Z  * [new tag]           v2.0.0                   -> v2.0.0
+2026-10-12T23:54:48.8114098Z  * [new tag]           v2.0.0-0                 -> v2.0.0-0
+2026-10-12T23:54:48.8114333Z  * [new tag]           v2.0.0-1                 -> v2.0.0-1
+2026-10-12T23:54:48.8114567Z  * [new tag]           v2.0.0-10                -> v2.0.0-10
+2026-10-12T23:54:48.8114803Z  * [new tag]           v2.0.0-11                -> v2.0.0-11
+2026-10-12T23:54:48.8115030Z  * [new tag]           v2.0.0-12                -> v2.0.0-12
+2026-10-12T23:54:48.8115261Z  * [new tag]           v2.0.0-13                -> v2.0.0-13
+2026-10-12T23:54:48.8115488Z  * [new tag]           v2.0.0-14                -> v2.0.0-14
+2026-10-12T23:54:48.8115710Z  * [new tag]           v2.0.0-15                -> v2.0.0-15
+2026-10-12T23:54:48.8115938Z  * [new tag]           v2.0.0-16                -> v2.0.0-16
+2026-10-12T23:54:48.8116160Z  * [new tag]           v2.0.0-17                -> v2.0.0-17
+2026-10-12T23:54:48.8116542Z  * [new tag]           v2.0.0-18                -> v2.0.0-18
+2026-10-12T23:54:48.8116767Z  * [new tag]           v2.0.0-19                -> v2.0.0-19
+2026-10-12T23:54:48.8116993Z  * [new tag]           v2.0.0-2                 -> v2.0.0-2
+2026-10-12T23:54:48.8117219Z  * [new tag]           v2.0.0-3                 -> v2.0.0-3
+2026-10-12T23:54:48.8117442Z  * [new tag]           v2.0.0-4                 -> v2.0.0-4
+2026-10-12T23:54:48.8117664Z  * [new tag]           v2.0.0-5                 -> v2.0.0-5
+2026-10-12T23:54:48.8117886Z  * [new tag]           v2.0.0-6                 -> v2.0.0-6
+2026-10-12T23:54:48.8118107Z  * [new tag]           v2.0.0-7                 -> v2.0.0-7
+2026-10-12T23:54:48.8118332Z  * [new tag]           v2.0.0-8                 -> v2.0.0-8
+2026-10-12T23:54:48.8118552Z  * [new tag]           v2.0.0-9                 -> v2.0.0-9
+2026-10-12T23:54:48.8118774Z  * [new tag]           v2.0.1                   -> v2.0.1
+2026-10-12T23:54:48.8119004Z  * [new tag]           v2.1.0                   -> v2.1.0
+2026-10-12T23:54:48.8119222Z  * [new tag]           v2.1.1                   -> v2.1.1
+2026-10-12T23:54:48.8119442Z  * [new tag]           v2.1.1-0                 -> v2.1.1-0
+2026-10-12T23:54:48.8119664Z  * [new tag]           v2.1.2                   -> v2.1.2
+2026-10-12T23:54:48.8119886Z  * [new tag]           v2.1.3-0                 -> v2.1.3-0
+2026-10-12T23:54:48.8120108Z  * [new tag]           v2.1.3-1                 -> v2.1.3-1
+2026-10-12T23:54:48.8120331Z  * [new tag]           v2.2.0                   -> v2.2.0
+2026-10-12T23:54:48.8120552Z  * [new tag]           v2.2.1                   -> v2.2.1
+2026-10-12T23:54:48.8120768Z  * [new tag]           v2.2.2                   -> v2.2.2
+2026-10-12T23:54:48.8120986Z  * [new tag]           v2.2.3                   -> v2.2.3
+2026-10-12T23:54:48.8121203Z  * [new tag]           v2.2.4                   -> v2.2.4
+2026-10-12T23:54:48.8121584Z  * [new tag]           v2.3.0                   -> v2.3.0
+2026-10-12T23:54:48.8121930Z  * [new tag]           v2.3.1                   -> v2.3.1
+2026-10-12T23:54:48.8122147Z  * [new tag]           v2.3.2                   -> v2.3.2
+2026-10-12T23:54:48.8122364Z  * [new tag]           v2.3.3                   -> v2.3.3
+2026-10-12T23:54:48.8122586Z  * [new tag]           v2.3.3-0                 -> v2.3.3-0
+2026-10-12T23:54:48.8122807Z  * [new tag]           v2.4.0                   -> v2.4.0
+2026-10-12T23:54:48.8123024Z  * [new tag]           v2.4.1                   -> v2.4.1
+2026-10-12T23:54:48.8123240Z  * [new tag]           v3.0.0                   -> v3.0.0
+2026-10-12T23:54:48.8123455Z  * [new tag]           v3.0.1                   -> v3.0.1
+2026-10-12T23:54:48.8123670Z  * [new tag]           v3.0.2                   -> v3.0.2
+2026-10-12T23:54:48.8123884Z  * [new tag]           v3.1.0                   -> v3.1.0
+2026-10-12T23:54:48.8124098Z  * [new tag]           v3.1.1                   -> v3.1.1
+2026-10-12T23:54:48.8124315Z  * [new tag]           v3.1.2                   -> v3.1.2
+2026-10-12T23:54:48.8124537Z  * [new tag]           v3.1.3                   -> v3.1.3
+2026-10-12T23:54:48.8124752Z  * [new tag]           v3.1.4                   -> v3.1.4
+2026-10-12T23:54:48.8124968Z  * [new tag]           v3.1.5                   -> v3.1.5
+2026-10-12T23:54:48.8125182Z  * [new tag]           v3.1.6                   -> v3.1.6
+2026-10-12T23:54:48.8125397Z  * [new tag]           v3.2.0                   -> v3.2.0
+2026-10-12T23:54:48.8125612Z  * [new tag]           v3.2.1                   -> v3.2.1
+2026-10-12T23:54:48.8125827Z  * [new tag]           v3.2.2                   -> v3.2.2
+2026-10-12T23:54:48.8126041Z  * [new tag]           v3.2.3                   -> v3.2.3
+2026-10-12T23:54:48.8126259Z  * [new tag]           v3.2.4                   -> v3.2.4
+2026-10-12T23:54:48.8126475Z  * [new tag]           v3.2.5                   -> v3.2.5
+2026-10-12T23:54:48.8126690Z  * [new tag]           v3.2.6                   -> v3.2.6
+2026-10-12T23:54:48.8126908Z  * [new tag]           v3.3.0                   -> v3.3.0
+2026-10-12T23:54:48.8127213Z  * [new tag]           v3.3.2                   -> v3.3.2
+2026-10-12T23:54:48.8127429Z  * [new tag]           v3.3.3                   -> v3.3.3
+2026-10-12T23:54:48.8127647Z  * [new tag]           v3.4.0                   -> v3.4.0
+2026-10-12T23:54:48.8127862Z  * [new tag]           v3.4.1                   -> v3.4.1
+2026-10-12T23:54:48.8128086Z  * [new tag]           v3.4.10                  -> v3.4.10
+2026-10-12T23:54:48.8128310Z  * [new tag]           v3.4.2                   -> v3.4.2
+2026-10-12T23:54:48.8128528Z  * [new tag]           v3.4.3                   -> v3.4.3
+2026-10-12T23:54:48.8128744Z  * [new tag]           v3.4.4                   -> v3.4.4
+2026-10-12T23:54:48.8128960Z  * [new tag]           v3.4.5                   -> v3.4.5
+2026-10-12T23:54:48.8129175Z  * [new tag]           v3.4.6                   -> v3.4.6
+2026-10-12T23:54:48.8129389Z  * [new tag]           v3.4.7                   -> v3.4.7
+2026-10-12T23:54:48.8129618Z  * [new tag]           v3.4.8                   -> v3.4.8
+2026-10-12T23:54:48.8129833Z  * [new tag]           v3.4.9                   -> v3.4.9
+2026-10-12T23:54:48.8130054Z  * [new tag]           v3.5.0-0                 -> v3.5.0-0
+2026-10-12T23:54:48.8130274Z  * [new tag]           v4.0.0                   -> v4.0.0
+2026-10-12T23:54:48.8130508Z  * [new tag]           v4.0.0-beta.0            -> v4.0.0-beta.0
+2026-10-12T23:54:48.8130757Z  * [new tag]           v4.0.0-beta.1            -> v4.0.0-beta.1
+2026-10-12T23:54:48.8131003Z  * [new tag]           v4.0.0-beta.10           -> v4.0.0-beta.10
+2026-10-12T23:54:48.8131381Z  * [new tag]           v4.0.0-beta.11           -> v4.0.0-beta.11
+2026-10-12T23:54:48.8131635Z  * [new tag]           v4.0.0-beta.2            -> v4.0.0-beta.2
+2026-10-12T23:54:48.8131876Z  * [new tag]           v4.0.0-beta.3            -> v4.0.0-beta.3
+2026-10-12T23:54:48.8132112Z  * [new tag]           v4.0.0-beta.4            -> v4.0.0-beta.4
+2026-10-12T23:54:48.8132449Z  * [new tag]           v4.0.0-beta.5            -> v4.0.0-beta.5
+2026-10-12T23:54:48.8132682Z  * [new tag]           v4.0.0-beta.6            -> v4.0.0-beta.6
+2026-10-12T23:54:48.8132919Z  * [new tag]           v4.0.0-beta.7            -> v4.0.0-beta.7
+2026-10-12T23:54:48.8133158Z  * [new tag]           v4.0.0-beta.8            -> v4.0.0-beta.8
+2026-10-12T23:54:48.8133394Z  * [new tag]           v4.0.0-beta.9            -> v4.0.0-beta.9
+2026-10-12T23:54:48.8133625Z  * [new tag]           v4.0.1                   -> v4.0.1
+2026-10-12T23:54:48.8133846Z  * [new tag]           v4.0.2                   -> v4.0.2
+2026-10-12T23:54:48.8134065Z  * [new tag]           v4.0.3                   -> v4.0.3
+2026-10-12T23:54:48.8134284Z  * [new tag]           v4.1.0                   -> v4.1.0
+2026-10-12T23:54:48.8134502Z  * [new tag]           v4.1.1                   -> v4.1.1
+2026-10-12T23:54:48.8134719Z  * [new tag]           v4.1.2                   -> v4.1.2
+2026-10-12T23:54:48.8134936Z  * [new tag]           v4.1.3                   -> v4.1.3
+2026-10-12T23:54:48.8135177Z  * [new tag]           v4.1.4-alpha.0           -> v4.1.4-alpha.0
+2026-10-12T23:54:48.8135422Z  * [new tag]           v4.1.4-alpha.1           -> v4.1.4-alpha.1
+2026-10-12T23:54:48.8135654Z  * [new tag]           v4.2.0                   -> v4.2.0
+2026-10-12T23:54:48.8135873Z  * [new tag]           v4.2.1                   -> v4.2.1
+2026-10-12T23:54:48.8136090Z  * [new tag]           v4.3.0                   -> v4.3.0
+2026-10-12T23:54:48.8136308Z  * [new tag]           v4.3.1                   -> v4.3.1
+2026-10-12T23:54:48.8136524Z  * [new tag]           v4.3.2                   -> v4.3.2
+2026-10-12T23:54:48.8136739Z  * [new tag]           v4.4.0                   -> v4.4.0
+2026-10-12T23:54:48.8137047Z  * [new tag]           v4.4.1                   -> v4.4.1
+2026-10-12T23:54:48.8137392Z  * [new tag]           v5.0.0                   -> v5.0.0
+2026-10-12T23:54:48.8137760Z  * [new tag]           v5.0.0-alpha.2           -> v5.0.0-alpha.2
+2026-10-12T23:54:48.8138303Z  * [new tag]           v5.0.0-beta.1            -> v5.0.0-beta.1
+2026-10-12T23:54:48.8138693Z  * [new tag]           v5.0.0-beta.10           -> v5.0.0-beta.10
+2026-10-12T23:54:48.8139088Z  * [new tag]           v5.0.0-beta.11           -> v5.0.0-beta.11
+2026-10-12T23:54:48.8139471Z  * [new tag]           v5.0.0-beta.2            -> v5.0.0-beta.2
+2026-10-12T23:54:48.8139846Z  * [new tag]           v5.0.0-beta.3            -> v5.0.0-beta.3
+2026-10-12T23:54:48.8140232Z  * [new tag]           v5.0.0-beta.4            -> v5.0.0-beta.4
+2026-10-12T23:54:48.8140623Z  * [new tag]           v5.0.0-beta.5            -> v5.0.0-beta.5
+2026-10-12T23:54:48.8141011Z  * [new tag]           v5.0.0-beta.6            -> v5.0.0-beta.6
+2026-10-12T23:54:48.8141591Z  * [new tag]           v5.0.0-beta.7            -> v5.0.0-beta.7
+2026-10-12T23:54:48.8141984Z  * [new tag]           v5.0.0-beta.8            -> v5.0.0-beta.8
+2026-10-12T23:54:48.8142362Z  * [new tag]           v5.0.0-beta.9            -> v5.0.0-beta.9
+2026-10-12T23:54:48.8142768Z  * [new tag]           v5.0.0-rc.0              -> v5.0.0-rc.0
+2026-10-12T23:54:48.8143170Z  * [new tag]           v5.0.0-rc.1              -> v5.0.0-rc.1
+2026-10-12T23:54:48.8143546Z  * [new tag]           v5.0.0-rc.2              -> v5.0.0-rc.2
+2026-10-12T23:54:48.8143929Z  * [new tag]           v5.0.0-rc.3              -> v5.0.0-rc.3
+2026-10-12T23:54:48.8144299Z  * [new tag]           v5.0.1                   -> v5.0.1
+2026-10-12T23:54:48.8144651Z  * [new tag]           v5.1.0                   -> v5.1.0
+2026-10-12T23:54:48.8144994Z  * [new tag]           v5.1.1                   -> v5.1.1
+2026-10-12T23:54:48.8145342Z  * [new tag]           v5.2.0                   -> v5.2.0
+2026-10-12T23:54:48.8145710Z  * [new tag]           v5.2.0-test.10           -> v5.2.0-test.10
+2026-10-12T23:54:48.8146079Z  * [new tag]           v5.2.1                   -> v5.2.1
+2026-10-12T23:54:48.8146426Z  * [new tag]           v5.2.2                   -> v5.2.2
+2026-10-12T23:54:48.8146776Z  * [new tag]           v5.2.3                   -> v5.2.3
+2026-10-12T23:54:48.8147304Z  * [new tag]           v5.3.0                   -> v5.3.0
+2026-10-12T23:54:48.8147649Z  * [new tag]           v5.3.1                   -> v5.3.1
+2026-10-12T23:54:48.8148039Z  * [new tag]           v5.3.10                  -> v5.3.10
+2026-10-12T23:54:48.8148533Z  * [new tag]           v5.3.11                  -> v5.3.11
+2026-10-12T23:54:48.8148792Z  * [new tag]           v5.3.3                   -> v5.3.3
+2026-10-12T23:54:48.8149012Z  * [new tag]           v5.3.5                   -> v5.3.5
+2026-10-12T23:54:48.8149228Z  * [new tag]           v5.3.6                   -> v5.3.6
+2026-10-12T23:54:48.8149442Z  * [new tag]           v5.3.7                   -> v5.3.7
+2026-10-12T23:54:48.8149672Z  * [new tag]           v5.3.7-fixed             -> v5.3.7-fixed
+2026-10-12T23:54:48.8149906Z  * [new tag]           v5.3.8                   -> v5.3.8
+2026-10-12T23:54:48.8150124Z  * [new tag]           v5.3.9                   -> v5.3.9
+2026-10-12T23:54:48.8150351Z  * [new tag]           v6.0.0                   -> v6.0.0
+2026-10-12T23:54:48.8150581Z  * [new tag]           v6.0.0-alpha.0           -> v6.0.0-alpha.0
+2026-10-12T23:54:48.8150829Z  * [new tag]           v6.0.0-alpha.1           -> v6.0.0-alpha.1
+2026-10-12T23:54:48.8151072Z  * [new tag]           v6.0.0-alpha.2           -> v6.0.0-alpha.2
+2026-10-12T23:54:48.8151466Z  * [new tag]           v6.0.0-alpha.4           -> v6.0.0-alpha.4
+2026-10-12T23:54:48.8151706Z  * [new tag]           v6.0.0-alpha.5           -> v6.0.0-alpha.5
+2026-10-12T23:54:48.8151947Z  * [new tag]           v6.0.0-beta.0            -> v6.0.0-beta.0
+2026-10-12T23:54:48.8152187Z  * [new tag]           v6.0.0-beta.1            -> v6.0.0-beta.1
+2026-10-12T23:54:48.8152426Z  * [new tag]           v6.0.0-beta.10           -> v6.0.0-beta.10
+2026-10-12T23:54:48.8152666Z  * [new tag]           v6.0.0-beta.11           -> v6.0.0-beta.11
+2026-10-12T23:54:48.8152907Z  * [new tag]           v6.0.0-beta.12           -> v6.0.0-beta.12
+2026-10-12T23:54:48.8153252Z  * [new tag]           v6.0.0-beta.13           -> v6.0.0-beta.13
+2026-10-12T23:54:48.8153491Z  * [new tag]           v6.0.0-beta.14           -> v6.0.0-beta.14
+2026-10-12T23:54:48.8153731Z  * [new tag]           v6.0.0-beta.15           -> v6.0.0-beta.15
+2026-10-12T23:54:48.8154042Z  * [new tag]           v6.0.0-beta.2            -> v6.0.0-beta.2
+2026-10-12T23:54:48.8154416Z  * [new tag]           v6.0.0-beta.3            -> v6.0.0-beta.3
+2026-10-12T23:54:48.8154789Z  * [new tag]           v6.0.0-beta.4            -> v6.0.0-beta.4
+2026-10-12T23:54:48.8155160Z  * [new tag]           v6.0.0-beta.5            -> v6.0.0-beta.5
+2026-10-12T23:54:48.8155549Z  * [new tag]           v6.0.0-beta.6            -> v6.0.0-beta.6
+2026-10-12T23:54:48.8155974Z  * [new tag]           v6.0.0-beta.7            -> v6.0.0-beta.7
+2026-10-12T23:54:48.8156212Z  * [new tag]           v6.0.0-beta.8            -> v6.0.0-beta.8
+2026-10-12T23:54:48.8156447Z  * [new tag]           v6.0.0-beta.9            -> v6.0.0-beta.9
+2026-10-12T23:54:48.8156698Z  * [new tag]           v6.0.0-rc.0              -> v6.0.0-rc.0
+2026-10-12T23:54:48.8156934Z  * [new tag]           v6.0.0-rc.1              -> v6.0.0-rc.1
+2026-10-12T23:54:48.8157165Z  * [new tag]           v6.0.0-rc.2              -> v6.0.0-rc.2
+2026-10-12T23:54:48.8157398Z  * [new tag]           v6.0.0-rc.3              -> v6.0.0-rc.3
+2026-10-12T23:54:48.8157632Z  * [new tag]           v6.0.0-rc.4              -> v6.0.0-rc.4
+2026-10-12T23:54:48.8157868Z  * [new tag]           v6.0.0-rc.5              -> v6.0.0-rc.5
+2026-10-12T23:54:48.8158097Z  * [new tag]           v6.0.0-rc.6              -> v6.0.0-rc.6
+2026-10-12T23:54:48.8158321Z  * [new tag]           v6.0.1                   -> v6.0.1
+2026-10-12T23:54:48.8158542Z  * [new tag]           v6.0.2                   -> v6.0.2
+2026-10-12T23:54:48.8158761Z  * [new tag]           v6.0.3                   -> v6.0.3
+2026-10-12T23:54:48.8158981Z  * [new tag]           v6.0.4                   -> v6.0.4
+2026-10-12T23:54:48.8159318Z  * [new tag]           v6.0.5                   -> v6.0.5
+2026-10-12T23:54:48.8159536Z  * [new tag]           v6.0.6                   -> v6.0.6
+2026-10-12T23:54:48.8159754Z  * [new tag]           v6.0.7                   -> v6.0.7
+2026-10-12T23:54:48.8159971Z  * [new tag]           v6.0.8                   -> v6.0.8
+2026-10-12T23:54:48.8160185Z  * [new tag]           v6.0.9                   -> v6.0.9
+2026-10-12T23:54:48.8160401Z  * [new tag]           v6.1.0                   -> v6.1.0
+2026-10-12T23:54:48.8160617Z  * [new tag]           v6.1.1                   -> v6.1.1
+2026-10-12T23:54:48.8160837Z  * [new tag]           v6.1.10                  -> v6.1.10
+2026-10-12T23:54:48.8161059Z  * [new tag]           v6.1.11                  -> v6.1.11
+2026-10-12T23:54:48.8161444Z  * [new tag]           v6.1.12                  -> v6.1.12
+2026-10-12T23:54:48.8161665Z  * [new tag]           v6.1.13                  -> v6.1.13
+2026-10-12T23:54:48.8161886Z  * [new tag]           v6.1.2                   -> v6.1.2
+2026-10-12T23:54:48.8162111Z  * [new tag]           v6.1.3                   -> v6.1.3
+2026-10-12T23:54:48.8162328Z  * [new tag]           v6.1.4                   -> v6.1.4
+2026-10-12T23:54:48.8162542Z  * [new tag]           v6.1.5                   -> v6.1.5
+2026-10-12T23:54:48.8162759Z  * [new tag]           v6.1.6                   -> v6.1.6
+2026-10-12T23:54:48.8162973Z  * [new tag]           v6.1.7                   -> v6.1.7
+2026-10-12T23:54:48.8163188Z  * [new tag]           v6.1.8                   -> v6.1.8
+2026-10-12T23:54:48.8163401Z  * [new tag]           v6.1.9                   -> v6.1.9
+2026-10-12T23:54:48.8164454Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-12T23:54:48.8164669Z   origin/main
+2026-10-12T23:54:48.8165285Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-12T23:54:48.8165654Z 379477dabb6875cc7d332269db5da61282d225e9
+2026-10-12T23:54:48.8166458Z ##[endgroup]
+2026-10-12T23:54:48.8166882Z ##[group]Determining the checkout info
+2026-10-12T23:54:48.8167334Z ##[endgroup]
+2026-10-12T23:54:48.8167773Z [command]/usr/bin/git sparse-checkout disable
+2026-10-12T23:54:48.8168594Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-12T23:54:48.8169545Z ##[group]Checking out the ref
+2026-10-12T23:54:48.8171529Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-12T23:54:48.8649575Z Switched to a new branch 'main'
+2026-10-12T23:54:48.8653437Z branch 'main' set up to track 'origin/main'.
+2026-10-12T23:54:48.8660220Z ##[endgroup]
+2026-10-12T23:54:48.8697419Z [command]/usr/bin/git log -1 --format=%H
+2026-10-12T23:54:48.8718004Z 379477dabb6875cc7d332269db5da61282d225e9
+2026-10-12T23:54:48.8931663Z ##[group]Run pnpm/action-setup@v4
+2026-10-12T23:54:48.8931866Z with:
+2026-10-12T23:54:48.8932010Z   dest: ~/setup-pnpm
+2026-10-12T23:54:48.8932156Z   run_install: null
+2026-10-12T23:54:48.8932299Z   cache: false
+2026-10-12T23:54:48.8932449Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-12T23:54:48.8932650Z   package_json_file: package.json
+2026-10-12T23:54:48.8932822Z   standalone: false
+2026-10-12T23:54:48.8932966Z ##[endgroup]
+2026-10-12T23:54:48.9804445Z ##[group]Running self-installer...
+2026-10-12T23:54:49.2124861Z (node:2117) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-12T23:54:49.2125710Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-12T23:54:49.4805138Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-12T23:54:49.8196438Z 
+2026-10-12T23:54:49.8197020Z dependencies:
+2026-10-12T23:54:49.8197281Z + pnpm 10.0.0
+2026-10-12T23:54:49.8197353Z 
+2026-10-12T23:54:49.8272088Z Packages: +1
+2026-10-12T23:54:49.8311782Z +
+2026-10-12T23:54:49.8740863Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-12T23:54:49.8937615Z Done in 813ms
+2026-10-12T23:54:49.9075885Z ##[endgroup]
+2026-10-12T23:54:49.9144898Z Installation Completed!
+2026-10-12T23:54:49.9216173Z ##[group]Run actions/setup-node@v4
+2026-10-12T23:54:49.9216330Z with:
+2026-10-12T23:54:49.9216441Z   cache: pnpm
+2026-10-12T23:54:49.9216560Z   node-version-file: .nvmrc
+2026-10-12T23:54:49.9216715Z   registry-url: https://registry.npmjs.org
+2026-10-12T23:54:49.9216875Z   always-auth: false
+2026-10-12T23:54:49.9216998Z   check-latest: false
+2026-10-12T23:54:49.9218382Z   token: ***
+2026-10-12T23:54:49.9218490Z env:
+2026-10-12T23:54:49.9218640Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:49.9218814Z ##[endgroup]
+2026-10-12T23:54:50.0100379Z Node version file is not JSON file
+2026-10-12T23:54:50.0100796Z Resolved .nvmrc as 24
+2026-10-12T23:54:50.0139441Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-12T23:54:50.0143162Z (node:2130) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-12T23:54:50.0143833Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-12T23:54:50.0145788Z ##[group]Environment details
+2026-10-12T23:54:50.3437960Z node: v24.21.0
+2026-10-12T23:54:50.3438225Z npm: 11.19.0
+2026-10-12T23:54:50.3438391Z yarn: 1.22.22
+2026-10-12T23:54:50.3439474Z ##[endgroup]
+2026-10-12T23:54:50.3458525Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-10-12T23:54:50.6115001Z /home/runner/setup-pnpm/node_modules/.bin/store/v10
+2026-10-12T23:54:50.7767485Z Cache hit for: node-cache-Linux-x64-pnpm-6e9cd3c50fc7ad4863ebde17ed9bd31c5b123baf85c4107e09d99d5414ebdde3
+2026-10-12T23:54:50.7842385Z (node:2130) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-12T23:54:51.9616509Z Received 104857600 of 349528609 (30.0%), 100.0 MBs/sec
+2026-10-12T23:54:52.9642626Z Received 310378496 of 349528609 (88.8%), 148.0 MBs/sec
+2026-10-12T23:54:53.1021959Z Received 349528609 of 349528609 (100.0%), 155.8 MBs/sec
+2026-10-12T23:54:53.1022455Z Cache Size: ~333 MB (349528609 B)
+2026-10-12T23:54:53.1113637Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e9121bb6-82be-481f-9e25-281b0ced8089/cache.tzst -P -C /home/runner/work/styled-components/styled-components --use-compress-program unzstd
+2026-10-12T23:54:55.2946484Z Cache restored successfully
+2026-10-12T23:54:55.3090853Z Cache restored from key: node-cache-Linux-x64-pnpm-6e9cd3c50fc7ad4863ebde17ed9bd31c5b123baf85c4107e09d99d5414ebdde3
+2026-10-12T23:54:55.3423084Z ##[group]Run pnpm install --frozen-lockfile
+2026-10-12T23:54:55.3423438Z [36;1mpnpm install --frozen-lockfile[0m
+2026-10-12T23:54:55.3746680Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:54:55.3746869Z env:
+2026-10-12T23:54:55.3747034Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:55.3747253Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:54:55.3747448Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:54:55.3747625Z ##[endgroup]
+2026-10-12T23:54:55.5742655Z Scope: all 7 workspace projects
+2026-10-12T23:54:55.6499356Z Lockfile is up to date, resolution step is skipped
+2026-10-12T23:54:55.8538320Z Packages: +1720
+2026-10-12T23:54:55.8538578Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-12T23:54:55.8563045Z Progress: resolved 0, reused 1, downloaded 0, added 0
+2026-10-12T23:54:56.8574172Z Progress: resolved 0, reused 1342, downloaded 0, added 215
+2026-10-12T23:54:57.8581562Z Progress: resolved 0, reused 1342, downloaded 0, added 1121
+2026-10-12T23:54:58.8585552Z Progress: resolved 0, reused 1342, downloaded 0, added 1600
+2026-10-12T23:54:59.1825491Z Progress: resolved 0, reused 1342, downloaded 0, added 1720, done
+2026-10-12T23:54:59.3194468Z 
+2026-10-12T23:54:59.3195440Z The following dependencies have build scripts that were ignored: sharp, unrs-resolver
+2026-10-12T23:54:59.3196412Z To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+2026-10-12T23:54:59.3197240Z 
+2026-10-12T23:54:59.3853711Z . postinstall$ pnpm --filter styled-components generateErrors
+2026-10-12T23:54:59.5670411Z . postinstall: > styled-components@6.4.1 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:54:59.5671065Z . postinstall: > node scripts/generateErrorMap.js
+2026-10-12T23:54:59.5958357Z . postinstall: Done
+2026-10-12T23:54:59.5960897Z . prepare$ husky
+2026-10-12T23:54:59.6277260Z . prepare: Done
+2026-10-12T23:54:59.6302634Z Done in 4.2s
+2026-10-12T23:54:59.6870708Z ##[group]Run shopt -s nullglob
+2026-10-12T23:54:59.6870909Z [36;1mshopt -s nullglob[0m
+2026-10-12T23:54:59.6871041Z [36;1mcount=0[0m
+2026-10-12T23:54:59.6871202Z [36;1mfor f in .changeset/*.md; do[0m
+2026-10-12T23:54:59.6871594Z [36;1m  [ "$(basename "$f")" = "README.md" ] && continue[0m
+2026-10-12T23:54:59.6871790Z [36;1m  count=$((count + 1))[0m
+2026-10-12T23:54:59.6871926Z [36;1mdone[0m
+2026-10-12T23:54:59.6872127Z [36;1mecho "has_pending=$([ $count -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"[0m
+2026-10-12T23:54:59.6924343Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-12T23:54:59.6924534Z env:
+2026-10-12T23:54:59.6924678Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:59.6924876Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:54:59.6925063Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:54:59.6925219Z ##[endgroup]
+2026-10-12T23:54:59.7771681Z ##[group]Run git config user.name "github-actions[bot]"
+2026-10-12T23:54:59.7771922Z [36;1mgit config user.name "github-actions[bot]"[0m
+2026-10-12T23:54:59.7772174Z [36;1mgit config user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+2026-10-12T23:54:59.7823836Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:54:59.7824059Z env:
+2026-10-12T23:54:59.7824276Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:59.7824568Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:54:59.7824838Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:54:59.7825068Z ##[endgroup]
+2026-10-12T23:54:59.7939249Z ##[group]Run mkdir -p /tmp/changeset-stash
+2026-10-12T23:54:59.7939454Z [36;1mmkdir -p /tmp/changeset-stash[0m
+2026-10-12T23:54:59.7939638Z [36;1mcp .changeset/*.md /tmp/changeset-stash/[0m
+2026-10-12T23:54:59.7986746Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:54:59.7986887Z env:
+2026-10-12T23:54:59.7987029Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:59.7987234Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:54:59.7987420Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:54:59.7987574Z ##[endgroup]
+2026-10-12T23:54:59.8115445Z ##[group]Run pnpm changeset version --snapshot prerelease
+2026-10-12T23:54:59.8115699Z [36;1mpnpm changeset version --snapshot prerelease[0m
+2026-10-12T23:54:59.8115959Z [36;1m# Restore the stashed `.md` files so the release-notes builder can[0m
+2026-10-12T23:54:59.8116221Z [36;1m# read them via `@changesets/read`. `changeset publish` does not[0m
+2026-10-12T23:54:59.8116438Z [36;1m# re-consume them, so this is safe.[0m
+2026-10-12T23:54:59.8116619Z [36;1mcp /tmp/changeset-stash/*.md .changeset/[0m
+2026-10-12T23:54:59.8116828Z [36;1mecho "## Snapshot versions" >> "$GITHUB_STEP_SUMMARY"[0m
+2026-10-12T23:54:59.8117024Z [36;1mecho '```' >> "$GITHUB_STEP_SUMMARY"[0m
+2026-10-12T23:54:59.8117208Z [36;1mfor pkg_json in packages/*/package.json; do[0m
+2026-10-12T23:54:59.8117418Z [36;1m  is_private=$(jq -r '.private // false' "$pkg_json")[0m
+2026-10-12T23:54:59.8117615Z [36;1m  [ "$is_private" = "true" ] && continue[0m
+2026-10-12T23:54:59.8117889Z [36;1m  echo "$(jq -r '.name' "$pkg_json")@$(jq -r '.version' "$pkg_json")" | tee -a "$GITHUB_STEP_SUMMARY"[0m
+2026-10-12T23:54:59.8118127Z [36;1mdone[0m
+2026-10-12T23:54:59.8118250Z [36;1mecho '```' >> "$GITHUB_STEP_SUMMARY"[0m
+2026-10-12T23:54:59.8164050Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:54:59.8164188Z env:
+2026-10-12T23:54:59.8164335Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:54:59.8164542Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:54:59.8164735Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:54:59.8164892Z ##[endgroup]
+2026-10-12T23:55:00.8054129Z 🦋  All files have been updated. Review them and commit at your leisure
+2026-10-12T23:55:00.8486764Z styled-components@7.0.0-prerelease-20261012235500
+2026-10-12T23:55:00.8525860Z ##[group]Run mkdir -p "$RELEASE_NOTES_OUTPUT_DIR"
+2026-10-12T23:55:00.8526097Z [36;1mmkdir -p "$RELEASE_NOTES_OUTPUT_DIR"[0m
+2026-10-12T23:55:00.8526318Z [36;1mnode scripts/release-notes/build-prerelease-release-notes.ts[0m
+2026-10-12T23:55:00.8576073Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-12T23:55:00.8576258Z env:
+2026-10-12T23:55:00.8576399Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:55:00.8576609Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:55:00.8576789Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:55:00.8576962Z   RELEASE_NOTES_OUTPUT_DIR: /tmp/release-notes
+2026-10-12T23:55:00.8577123Z ##[endgroup]
+2026-10-12T23:55:01.4273790Z Wrote prerelease notes to /tmp/release-notes (RELEASE_NOTES_OUTPUT_DIR overrides path).
+2026-10-12T23:55:01.4404300Z ##[group]Run pnpm release --tag test --no-git-tag
+2026-10-12T23:55:01.4404646Z [36;1mpnpm release --tag test --no-git-tag[0m
+2026-10-12T23:55:01.4460105Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:55:01.4460254Z env:
+2026-10-12T23:55:01.4460401Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:55:01.4460613Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:55:01.4460806Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:55:01.4460963Z ##[endgroup]
+2026-10-12T23:55:01.6214197Z 
+2026-10-12T23:55:01.6215335Z > styled-components-project@ release /home/runner/work/styled-components/styled-components
+2026-10-12T23:55:01.6216181Z > pnpm --filter styled-components prepublishOnly && changeset publish "--tag" "test" "--no-git-tag"
+2026-10-12T23:55:01.6216555Z 
+2026-10-12T23:55:01.8230307Z 
+2026-10-12T23:55:01.8231168Z > styled-components@7.0.0-prerelease-20261012235500 prepublishOnly /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:01.8231955Z > pnpm run build
+2026-10-12T23:55:01.8232074Z 
+2026-10-12T23:55:01.9993627Z 
+2026-10-12T23:55:01.9994401Z > styled-components@7.0.0-prerelease-20261012235500 prebuild /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:01.9995200Z > node -e "require('fs').rmSync('dist',{recursive:true,force:true}); require('fs').rmSync('native/dist',{recursive:true,force:true})" && pnpm run generateErrors && pnpm run typecheck
+2026-10-12T23:55:01.9995530Z 
+2026-10-12T23:55:02.2056795Z 
+2026-10-12T23:55:02.2057801Z > styled-components@7.0.0-prerelease-20261012235500 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:02.2058282Z > node scripts/generateErrorMap.js
+2026-10-12T23:55:02.2058398Z 
+2026-10-12T23:55:02.4040141Z 
+2026-10-12T23:55:02.4041961Z > styled-components@7.0.0-prerelease-20261012235500 typecheck /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:02.4043716Z > tsc --noEmit
+2026-10-12T23:55:02.4043991Z 
+2026-10-12T23:55:06.9824928Z 
+2026-10-12T23:55:06.9825808Z > styled-components@7.0.0-prerelease-20261012235500 build /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:06.9826419Z > rollup -c
+2026-10-12T23:55:06.9826529Z 
+2026-10-12T23:55:07.2540267Z [36m
+2026-10-12T23:55:07.2541062Z [1m./src/index-standalone.ts[22m → [1mdist/styled-components.js[22m...[39m
+2026-10-12T23:55:13.8844242Z [32mcreated [1mdist/styled-components.js[22m in [1m6.6s[22m[39m
+2026-10-12T23:55:13.8844729Z [36m
+2026-10-12T23:55:13.8845054Z [1m./src/index-standalone.ts[22m → [1mdist/styled-components.min.js[22m...[39m
+2026-10-12T23:55:16.4674877Z [32mcreated [1mdist/styled-components.min.js[22m in [1m2.5s[22m[39m
+2026-10-12T23:55:16.4675344Z [36m
+2026-10-12T23:55:16.4675953Z [1m./src/index.ts[22m → [1mdist/styled-components.esm.js, dist/styled-components.cjs.js[22m...[39m
+2026-10-12T23:55:19.2881764Z [32mcreated [1mdist/styled-components.esm.js, dist/styled-components.cjs.js[22m in [1m2.8s[22m[39m
+2026-10-12T23:55:19.2882118Z [36m
+2026-10-12T23:55:19.2882534Z [1m./src/index.ts[22m → [1mdist/styled-components.browser.esm.js, dist/styled-components.browser.cjs.js[22m...[39m
+2026-10-12T23:55:21.9496575Z [32mcreated [1mdist/styled-components.browser.esm.js, dist/styled-components.browser.cjs.js[22m in [1m2.6s[22m[39m
+2026-10-12T23:55:21.9497068Z [36m
+2026-10-12T23:55:21.9497613Z [1m./src/native/index.ts[22m → [1mnative/dist/styled-components.native.js, native/dist/styled-components.native.esm.js[22m...[39m
+2026-10-12T23:55:32.0955826Z [32mcreated [1mnative/dist/styled-components.native.js, native/dist/styled-components.native.esm.js[22m in [1m10.1s[22m[39m
+2026-10-12T23:55:32.0956700Z [36m
+2026-10-12T23:55:32.0957239Z [1m./src/plugins/index.ts[22m → [1mdist/plugins.esm.js, dist/plugins.cjs.js[22m...[39m
+2026-10-12T23:55:38.3401180Z [32mcreated [1mdist/plugins.esm.js, dist/plugins.cjs.js[22m in [1m6.2s[22m[39m
+2026-10-12T23:55:38.3401895Z [36m
+2026-10-12T23:55:38.3402803Z [1m./src/native/reanimated/index.ts[22m → [1mnative/dist/styled-components.native.reanimated.cjs.js, native/dist/styled-components.native.reanimated.esm.js[22m...[39m
+2026-10-12T23:55:43.6909629Z [32mcreated [1mnative/dist/styled-components.native.reanimated.cjs.js, native/dist/styled-components.native.reanimated.esm.js[22m in [1m5.3s[22m[39m
+2026-10-12T23:55:43.6910331Z [36m
+2026-10-12T23:55:43.6911434Z [1m./src/native/web-bridge/index.tsx[22m → [1mnative/dist/styled-components.web.js, native/dist/styled-components.js, native/dist/styled-components.web.esm.js[22m...[39m
+2026-10-12T23:55:48.5584833Z [32mcreated [1mnative/dist/styled-components.web.js, native/dist/styled-components.js, native/dist/styled-components.web.esm.js[22m in [1m4.8s[22m[39m
+2026-10-12T23:55:48.7887608Z 
+2026-10-12T23:55:48.7888694Z > styled-components@7.0.0-prerelease-20261012235500 postbuild /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:48.7889344Z > pnpm run test:build
+2026-10-12T23:55:48.7889475Z 
+2026-10-12T23:55:48.9534706Z 
+2026-10-12T23:55:48.9535781Z > styled-components@7.0.0-prerelease-20261012235500 test:build /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-12T23:55:48.9536485Z > jest -c jest.config.build.js
+2026-10-12T23:55:48.9536653Z 
+2026-10-12T23:55:51.2298671Z   console.log
+2026-10-12T23:55:51.2299041Z       styled-components.min.js: 15.38kB gzip
+2026-10-12T23:55:51.2299238Z 
+2026-10-12T23:55:51.2299353Z       at Object.log (src/test/treeshake.test.ts:575:13)
+2026-10-12T23:55:51.2299494Z 
+2026-10-12T23:55:51.6797641Z   console.log
+2026-10-12T23:55:51.6798094Z       production bundle (webpack): 14.24kB gzip
+2026-10-12T23:55:51.6799180Z 
+2026-10-12T23:55:51.6799447Z       at Object.log (src/test/treeshake.test.ts:629:15)
+2026-10-12T23:55:51.6799690Z 
+2026-10-12T23:55:52.1098684Z   console.log
+2026-10-12T23:55:52.1098951Z       all-in consumer bundle: 14.24kB gzip
+2026-10-12T23:55:52.1099099Z 
+2026-10-12T23:55:52.1099213Z       at Object.log (src/test/treeshake.test.ts:710:15)
+2026-10-12T23:55:52.1099363Z 
+2026-10-12T23:55:53.2489652Z npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-12T23:55:53.2490798Z npm warn Unknown env config "node-linker". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-12T23:55:53.2492373Z npm warn Unknown env config "minimum-version-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-12T23:55:53.2493353Z npm warn Unknown env config "recursive". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-12T23:55:53.2494362Z npm warn Unknown user config "always-auth". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-12T23:55:53.2550503Z PASS src/test/treeshake.test.ts
+2026-10-12T23:55:53.2552961Z   dead-code elimination: browser build
+2026-10-12T23:55:53.2554742Z     ✓ eliminates __SERVER__ identifier (1 ms)
+2026-10-12T23:55:53.2555128Z     ✓ eliminates IS_RSC createContext check
+2026-10-12T23:55:53.2555452Z     ✓ exports createTheme
+2026-10-12T23:55:53.2555848Z     ✓ eliminates ServerStyleSheet streaming internals (1 ms)
+2026-10-12T23:55:53.2556232Z   browser build on an edge-runtime server
+2026-10-12T23:55:53.2559862Z     ✓ reports the edge-runtime fix when React has no createContext (301 ms)
+2026-10-12T23:55:53.2560382Z     ✓ loads when React has createContext (1 ms)
+2026-10-12T23:55:53.2560886Z     ✓ carries the guard only in the bundles that can reach an edge runtime (2 ms)
+2026-10-12T23:55:53.2561475Z   dead-code elimination: server build
+2026-10-12T23:55:53.2562197Z     ✓ eliminates __SERVER__ identifier
+2026-10-12T23:55:53.2562506Z     ✓ exports createTheme
+2026-10-12T23:55:53.2562793Z   dead-code elimination: standalone production build
+2026-10-12T23:55:53.2563114Z     ✓ eliminates __SERVER__ identifier (1 ms)
+2026-10-12T23:55:53.2563404Z     ✓ eliminates IS_RSC createContext check
+2026-10-12T23:55:53.2563634Z     ✓ eliminates development-only code
+2026-10-12T23:55:53.2563842Z   __DEV__ substitution in built output
+2026-10-12T23:55:53.2564081Z     ✓ leaves no rebound negation in plugins.cjs.js
+2026-10-12T23:55:53.2564318Z     ✓ leaves no rebound negation in plugins.esm.js
+2026-10-12T23:55:53.2564609Z     ✓ leaves no rebound negation in styled-components.browser.cjs.js
+2026-10-12T23:55:53.2564964Z     ✓ leaves no rebound negation in styled-components.browser.esm.js (1 ms)
+2026-10-12T23:55:53.2565286Z     ✓ leaves no rebound negation in styled-components.cjs.js
+2026-10-12T23:55:53.2565577Z     ✓ leaves no rebound negation in styled-components.esm.js
+2026-10-12T23:55:53.2565845Z     ✓ leaves no rebound negation in styled-components.js
+2026-10-12T23:55:53.2566105Z     ✓ leaves no rebound negation in styled-components.min.js
+2026-10-12T23:55:53.2566406Z     ✓ leaves no rebound negation in native/styled-components.js (1 ms)
+2026-10-12T23:55:53.2566757Z     ✓ leaves no rebound negation in native/styled-components.native.esm.js
+2026-10-12T23:55:53.2567120Z     ✓ leaves no rebound negation in native/styled-components.native.js (1 ms)
+2026-10-12T23:55:53.2567506Z     ✓ leaves no rebound negation in native/styled-components.native.reanimated.cjs.js
+2026-10-12T23:55:53.2567895Z     ✓ leaves no rebound negation in native/styled-components.native.reanimated.esm.js
+2026-10-12T23:55:53.2568258Z     ✓ leaves no rebound negation in native/styled-components.web.esm.js
+2026-10-12T23:55:53.2568580Z     ✓ leaves no rebound negation in native/styled-components.web.js
+2026-10-12T23:55:53.2568876Z     ✓ throws readable errors outside production (235 ms)
+2026-10-12T23:55:53.2569128Z     ✓ emits warnings outside production (2 ms)
+2026-10-12T23:55:53.2569307Z   native build isolation
+2026-10-12T23:55:53.2569549Z     ✓ does not contain unguarded document or window references (1 ms)
+2026-10-12T23:55:53.2569893Z     ✓ exports createTheme via the native-only path (no DOM/GlobalStyle import)
+2026-10-12T23:55:53.2570209Z     ✓ eliminates IS_RSC createContext check
+2026-10-12T23:55:53.2570456Z     ✓ does not contain StyleSheetManager (web-only)
+2026-10-12T23:55:53.2570783Z     ✓ drops the rn-web matrix3d transport rewrite from the Hermes bundle (1 ms)
+2026-10-12T23:55:53.2571008Z   rn-web bridge build
+2026-10-12T23:55:53.2571681Z     ✓ exists and is meaningfully smaller than the Hermes native bundle
+2026-10-12T23:55:53.2572203Z     ✓ eliminates the native CSS engine (compileNative, native polyfills, color math)
+2026-10-12T23:55:53.2572731Z     ✓ keeps the 16-element matrix → matrix3d rewrite for rn-web preprocess
+2026-10-12T23:55:53.2573249Z     ✓ uses the styleq $$css escape hatch to compose classNames with rn-web atomic CSS
+2026-10-12T23:55:53.2573693Z   Hermes native build keeps the Animated-bridge adapter
+2026-10-12T23:55:53.2574042Z     ✓ contains createAnimatedComponent
+2026-10-12T23:55:53.2574338Z   native subpath platform-extension entries
+2026-10-12T23:55:53.2574749Z     ✓ main is extensionless so Metro applies platform extensions
+2026-10-12T23:55:53.2575150Z     ✓ ships no browser object-map (the bug source)
+2026-10-12T23:55:53.2575581Z     ✓ module points at the rn-web bridge ESM for tree-shaking web bundlers
+2026-10-12T23:55:53.2576045Z     ✓ the .native.js entry is the Hermes engine, not the bridge
+2026-10-12T23:55:53.2576484Z     ✓ the .web.js and .js entries are the rn-web bridge (1 ms)
+2026-10-12T23:55:53.2576986Z     ✓ every native subpath package.json resolves main/module/types to real files
+2026-10-12T23:55:53.2577274Z   rscPlugin tree-shaking
+2026-10-12T23:55:53.2577477Z     ✓ is excluded from the standalone UMD bundle
+2026-10-12T23:55:53.2577940Z     ✓ is available in the plugins subpath bundles for downstream tree-shaking
+2026-10-12T23:55:53.2578224Z     ✓ is eliminated by webpack when unused (795 ms)
+2026-10-12T23:55:53.2578422Z   per-plugin DCE from plugins subpath
+2026-10-12T23:55:53.2578697Z     ✓ keeps rtlPlugin and drops prefix/rsc when only rtl is imported (103 ms)
+2026-10-12T23:55:53.2579065Z     ✓ keeps prefixPlugin and drops rtl/rsc when only prefix is imported (99 ms)
+2026-10-12T23:55:53.2579416Z     ✓ keeps rscPlugin and drops rtl/prefix when only rsc is imported (100 ms)
+2026-10-12T23:55:53.2579701Z   built bundles reach only declared packages
+2026-10-12T23:55:53.2579890Z     ✓ plugins.cjs.js
+2026-10-12T23:55:53.2580042Z     ✓ plugins.esm.js
+2026-10-12T23:55:53.2580222Z     ✓ styled-components.browser.cjs.js
+2026-10-12T23:55:53.2580443Z     ✓ styled-components.browser.esm.js (1 ms)
+2026-10-12T23:55:53.2580669Z     ✓ styled-components.cjs.js
+2026-10-12T23:55:53.2580865Z     ✓ styled-components.esm.js
+2026-10-12T23:55:53.2581052Z     ✓ styled-components.js (1 ms)
+2026-10-12T23:55:53.2582463Z     ✓ styled-components.min.js
+2026-10-12T23:55:53.2582671Z     ✓ native/styled-components.js (1 ms)
+2026-10-12T23:55:53.2582897Z     ✓ native/styled-components.native.esm.js (1 ms)
+2026-10-12T23:55:53.2583118Z     ✓ native/styled-components.native.js
+2026-10-12T23:55:53.2583360Z     ✓ native/styled-components.native.reanimated.cjs.js
+2026-10-12T23:55:53.2583635Z     ✓ native/styled-components.native.reanimated.esm.js (1 ms)
+2026-10-12T23:55:53.2583881Z     ✓ native/styled-components.web.esm.js
+2026-10-12T23:55:53.2584085Z     ✓ native/styled-components.web.js
+2026-10-12T23:55:53.2584236Z   bundle size
+2026-10-12T23:55:53.2584464Z     ✓ standalone minified bundle stays under its gzip ceiling (8 ms)
+2026-10-12T23:55:53.2584764Z     ✓ production bundle size with real bundler tree-shaking (450 ms)
+2026-10-12T23:55:53.2585127Z     ✓ all-in consumer bundle (only react/react-dom external) stays under its gzip ceiling (429 ms)
+2026-10-12T23:55:53.2585385Z   ESM tree-shakeability
+2026-10-12T23:55:53.2585568Z     ✓ browser ESM uses named exports
+2026-10-12T23:55:53.2585753Z     ✓ server ESM uses named exports
+2026-10-12T23:55:53.2585978Z     ✓ package.json declares sideEffects: false (1 ms)
+2026-10-12T23:55:53.2586252Z     ✓ package.json has browser field for build-specific resolution
+2026-10-12T23:55:53.2586530Z     ✓ supports a default import from native Node ESM (31 ms)
+2026-10-12T23:55:53.2586723Z   published package contents
+2026-10-12T23:55:53.2586901Z     ✓ packs no node_modules path
+2026-10-12T23:55:53.2587099Z     ✓ packs no repo-only test helpers (1 ms)
+2026-10-12T23:55:53.2587313Z     ✓ still packs the native entry points (1 ms)
+2026-10-12T23:55:53.2587543Z 
+2026-10-12T23:55:53.2587628Z Test Suites: 1 passed, 1 total
+2026-10-12T23:55:53.2587798Z Tests:       77 passed, 77 total
+2026-10-12T23:55:53.2587949Z Snapshots:   0 total
+2026-10-12T23:55:53.2588080Z Time:        4.084 s
+2026-10-12T23:55:53.2588213Z Ran all test suites.
+2026-10-12T23:55:53.5737796Z 🦋  [33mwarn[39m [31m===============================IMPORTANT!===============================[39m
+2026-10-12T23:55:53.5738286Z 🦋  [33mwarn[39m Packages will be released under the test tag
+2026-10-12T23:55:53.5738768Z 🦋  [33mwarn[39m [31m----------------------------------------------------------------------[39m
+2026-10-12T23:55:53.5762929Z 🦋  [36minfo[39m npm info styled-components
+2026-10-12T23:55:53.9204766Z 🦋  [36minfo[39m styled-components is being published because our local version (7.0.0-prerelease-20261012235500) has not been published on npm
+2026-10-12T23:55:53.9205737Z 🦋  [36minfo[39m Publishing [36m"styled-components"[39m at [32m"7.0.0-prerelease-20261012235500"[39m
+2026-10-12T23:56:50.5134588Z 🦋  [32msuccess[39m packages published successfully:
+2026-10-12T23:56:50.5134947Z 🦋  styled-components@7.0.0-prerelease-20261012235500
+2026-10-12T23:56:50.5310643Z ##[group]Run for pkg_json in packages/*/package.json; do
+2026-10-12T23:56:50.5310899Z [36;1mfor pkg_json in packages/*/package.json; do[0m
+2026-10-12T23:56:50.5311110Z [36;1m  is_private=$(jq -r '.private // false' "$pkg_json")[0m
+2026-10-12T23:56:50.5311511Z [36;1m  [ "$is_private" = "true" ] && continue[0m
+2026-10-12T23:56:50.5311711Z [36;1m  name=$(jq -r '.name' "$pkg_json")[0m
+2026-10-12T23:56:50.5311942Z [36;1m  version=$(jq -r '.version' "$pkg_json")[0m
+2026-10-12T23:56:50.5312108Z [36;1m  ref="${name}@${version}"[0m
+2026-10-12T23:56:50.5312272Z [36;1m  safe=$(printf '%s' "$name" | tr '@/' '_')[0m
+2026-10-12T23:56:50.5312456Z [36;1m  notes_file="/tmp/release-notes/${safe}.md"[0m
+2026-10-12T23:56:50.5312627Z [36;1m  git tag -a "$ref" -m "$ref"[0m
+2026-10-12T23:56:50.5312799Z [36;1m  git push origin "refs/tags/$ref"[0m
+2026-10-12T23:56:50.5312960Z [36;1m  if [ -s "$notes_file" ]; then[0m
+2026-10-12T23:56:50.5313221Z [36;1m    gh release create "$ref" --prerelease --title "$ref" --notes-file "$notes_file"[0m
+2026-10-12T23:56:50.5313448Z [36;1m  else[0m
+2026-10-12T23:56:50.5313649Z [36;1m    gh release create "$ref" --prerelease --title "$ref" --notes "Internal changes only."[0m
+2026-10-12T23:56:50.5313878Z [36;1m  fi[0m
+2026-10-12T23:56:50.5313987Z [36;1mdone[0m
+2026-10-12T23:56:50.5362171Z shell: /usr/bin/bash -e {0}
+2026-10-12T23:56:50.5362310Z env:
+2026-10-12T23:56:50.5362450Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-12T23:56:50.5362652Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+2026-10-12T23:56:50.5362835Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+2026-10-12T23:56:50.5364604Z   GH_TOKEN: ***
+2026-10-12T23:56:50.5364720Z ##[endgroup]
+2026-10-12T23:56:51.6539399Z To https://github.com/styled-components/styled-components
+2026-10-12T23:56:51.6540118Z  * [new tag]           styled-components@7.0.0-prerelease-20261012235500 -> styled-components@7.0.0-prerelease-20261012235500
+2026-10-12T23:56:52.6212856Z https://github.com/styled-components/styled-components/releases/tag/styled-components%407.0.0-prerelease-20261012235500
+2026-10-12T23:56:52.6285598Z Post job cleanup.
+2026-10-12T23:56:52.7110781Z (node:3186) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-12T23:56:52.7111771Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-12T23:56:52.7113132Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-6e9cd3c50fc7ad4863ebde17ed9bd31c5b123baf85c4107e09d99d5414ebdde3, not saving cache.
+2026-10-12T23:56:52.7201475Z Post job cleanup.
+2026-10-12T23:56:52.8111740Z Pruning is unnecessary.
+2026-10-12T23:56:52.8228160Z Post job cleanup.
+2026-10-12T23:56:52.8777289Z [command]/usr/bin/git version
+2026-10-12T23:56:52.8806138Z git version 2.55.0
+2026-10-12T23:56:52.8829102Z Temporarily overriding HOME='/home/runner/work/_temp/053f2352-8f24-498b-a02c-1aa397320616' before making global git config changes
+2026-10-12T23:56:52.8830215Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-12T23:56:52.8833020Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-12T23:56:52.8865083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-12T23:56:52.8892124Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-12T23:56:52.9073041Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-12T23:56:52.9093658Z http.https://github.com/.extraheader
+2026-10-12T23:56:52.9100563Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-12T23:56:52.9126058Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-12T23:56:52.9302914Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-12T23:56:52.9330564Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-12T23:56:52.9664213Z Cleaning up orphan processes
+2026-10-12T23:56:52.9899514Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

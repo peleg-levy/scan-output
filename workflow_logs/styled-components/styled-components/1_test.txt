@@ -1,0 +1,469 @@
+﻿2026-10-13T18:36:09.5282472Z Current runner version: '2.337.0'
+2026-10-13T18:36:09.5307390Z ##[group]Runner Image Provisioner
+2026-10-13T18:36:09.5308568Z Hosted Compute Agent
+2026-10-13T18:36:09.5309397Z Version: 20261002.596
+2026-10-13T18:36:09.5310050Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T18:36:09.5310861Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T18:36:09.5311592Z Worker ID: {d617bcd7-28a4-4ae8-8a8d-0d3c4f7d6732}
+2026-10-13T18:36:09.5312337Z Region: northcentralus
+2026-10-13T18:36:09.5312979Z Cloud: Azure
+2026-10-13T18:36:09.5313543Z ##[endgroup]
+2026-10-13T18:36:09.5315100Z ##[group]Operating System
+2026-10-13T18:36:09.5315855Z Ubuntu
+2026-10-13T18:36:09.5316461Z 24.04.5
+2026-10-13T18:36:09.5317048Z LTS
+2026-10-13T18:36:09.5317593Z ##[endgroup]
+2026-10-13T18:36:09.5318460Z ##[group]Runner Image
+2026-10-13T18:36:09.5319182Z Image: ubuntu-24.04
+2026-10-13T18:36:09.5319775Z Version: 20261004.327.1
+2026-10-13T18:36:09.5321130Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T18:36:09.5322778Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T18:36:09.5323865Z ##[endgroup]
+2026-10-13T18:36:09.5325009Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T18:36:09.5327397Z Contents: read
+2026-10-13T18:36:09.5328062Z Metadata: read
+2026-10-13T18:36:09.5328836Z ##[endgroup]
+2026-10-13T18:36:09.5330980Z Secret source: None
+2026-10-13T18:36:09.5332058Z Cache mode: write
+2026-10-13T18:36:09.5333034Z Prepare workflow directory
+2026-10-13T18:36:09.5669930Z Prepare all required actions
+2026-10-13T18:36:09.5718300Z Getting action download info
+2026-10-13T18:36:09.8272626Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-13T18:36:09.9246741Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-10-13T18:36:10.4771655Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-13T18:36:10.6688069Z Complete job name: test
+2026-10-13T18:36:10.7543195Z ##[group]Run actions/checkout@v4
+2026-10-13T18:36:10.7544080Z with:
+2026-10-13T18:36:10.7544634Z   repository: styled-components/styled-components
+2026-10-13T18:36:10.7549025Z   token: ***
+2026-10-13T18:36:10.7549513Z   ssh-strict: true
+2026-10-13T18:36:10.7550001Z   ssh-user: git
+2026-10-13T18:36:10.7550491Z   persist-credentials: true
+2026-10-13T18:36:10.7551021Z   clean: true
+2026-10-13T18:36:10.7551501Z   sparse-checkout-cone-mode: true
+2026-10-13T18:36:10.7552249Z   fetch-depth: 1
+2026-10-13T18:36:10.7552993Z   fetch-tags: false
+2026-10-13T18:36:10.7553559Z   show-progress: true
+2026-10-13T18:36:10.7554086Z   lfs: false
+2026-10-13T18:36:10.7554677Z   submodules: false
+2026-10-13T18:36:10.7555180Z   set-safe-directory: true
+2026-10-13T18:36:10.7555737Z   allow-unsafe-pr-checkout: false
+2026-10-13T18:36:10.7556694Z ##[endgroup]
+2026-10-13T18:36:10.8559351Z Syncing repository: styled-components/styled-components
+2026-10-13T18:36:10.8561743Z ##[group]Getting Git version info
+2026-10-13T18:36:10.8563066Z Working directory is '/home/runner/work/styled-components/styled-components'
+2026-10-13T18:36:10.8564493Z [command]/usr/bin/git version
+2026-10-13T18:36:10.8592186Z git version 2.55.0
+2026-10-13T18:36:10.8611634Z ##[endgroup]
+2026-10-13T18:36:10.8626133Z Temporarily overriding HOME='/home/runner/work/_temp/f1a18c40-b057-4359-a6b9-8aa32ab66b18' before making global git config changes
+2026-10-13T18:36:10.8629219Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T18:36:10.8631797Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:10.8674712Z Deleting the contents of '/home/runner/work/styled-components/styled-components'
+2026-10-13T18:36:10.8679756Z ##[group]Initializing the repository
+2026-10-13T18:36:10.8684117Z [command]/usr/bin/git init /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:10.8755662Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T18:36:10.8760219Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T18:36:10.8762658Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T18:36:10.8764945Z hint: call:
+2026-10-13T18:36:10.8766144Z hint:
+2026-10-13T18:36:10.8767714Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T18:36:10.8769824Z hint:
+2026-10-13T18:36:10.8771573Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T18:36:10.8774061Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T18:36:10.8775861Z hint:
+2026-10-13T18:36:10.8777394Z hint: 	git branch -m <name>
+2026-10-13T18:36:10.8778597Z hint:
+2026-10-13T18:36:10.8779577Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T18:36:10.8781286Z Initialized empty Git repository in /home/runner/work/styled-components/styled-components/.git/
+2026-10-13T18:36:10.8783982Z [command]/usr/bin/git remote add origin https://github.com/styled-components/styled-components
+2026-10-13T18:36:10.8813577Z ##[endgroup]
+2026-10-13T18:36:10.8815175Z ##[group]Disabling automatic garbage collection
+2026-10-13T18:36:10.8817398Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T18:36:10.8849191Z ##[endgroup]
+2026-10-13T18:36:10.8850957Z ##[group]Setting up auth
+2026-10-13T18:36:10.8856506Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T18:36:10.8890927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T18:36:10.9198124Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T18:36:10.9233031Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T18:36:10.9464963Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T18:36:10.9498665Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T18:36:10.9724748Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T18:36:10.9760256Z ##[endgroup]
+2026-10-13T18:36:10.9769078Z ##[group]Fetching the repository
+2026-10-13T18:36:10.9770758Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +29e1d2190bd5b1dd29a57ba30274f83a2aac2876:refs/remotes/pull/5837/merge
+2026-10-13T18:36:12.4391294Z From https://github.com/styled-components/styled-components
+2026-10-13T18:36:12.4392672Z  * [new ref]         29e1d2190bd5b1dd29a57ba30274f83a2aac2876 -> pull/5837/merge
+2026-10-13T18:36:12.4395989Z ##[endgroup]
+2026-10-13T18:36:12.4397124Z ##[group]Determining the checkout info
+2026-10-13T18:36:12.4399129Z ##[endgroup]
+2026-10-13T18:36:12.4405048Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T18:36:12.4456937Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T18:36:12.4484701Z ##[group]Checking out the ref
+2026-10-13T18:36:12.4489968Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5837/merge
+2026-10-13T18:36:12.4726916Z Note: switching to 'refs/remotes/pull/5837/merge'.
+2026-10-13T18:36:12.4727592Z 
+2026-10-13T18:36:12.4728461Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-13T18:36:12.4729557Z changes and commit them, and you can discard any commits you make in this
+2026-10-13T18:36:12.4730690Z state without impacting any branches by switching back to a branch.
+2026-10-13T18:36:12.4731363Z 
+2026-10-13T18:36:12.4731830Z If you want to create a new branch to retain commits you create, you may
+2026-10-13T18:36:12.4733243Z do so (now or later) by using -c with the switch command. Example:
+2026-10-13T18:36:12.4733940Z 
+2026-10-13T18:36:12.4734242Z   git switch -c <new-branch-name>
+2026-10-13T18:36:12.4734494Z 
+2026-10-13T18:36:12.4734733Z Or undo this operation with:
+2026-10-13T18:36:12.4735010Z 
+2026-10-13T18:36:12.4735236Z   git switch -
+2026-10-13T18:36:12.4735546Z 
+2026-10-13T18:36:12.4735860Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-13T18:36:12.4736300Z 
+2026-10-13T18:36:12.4736895Z HEAD is now at 29e1d21 Merge e545904901fdd9c3878a0d24df383a164378b9e0 into 689ce25717773b8b3096db44ee8618318212e0ca
+2026-10-13T18:36:12.4739173Z ##[endgroup]
+2026-10-13T18:36:12.4776251Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T18:36:12.4799741Z 29e1d2190bd5b1dd29a57ba30274f83a2aac2876
+2026-10-13T18:36:12.5117249Z ##[group]Run pnpm/action-setup@v4
+2026-10-13T18:36:12.5117595Z with:
+2026-10-13T18:36:12.5117883Z   dest: ~/setup-pnpm
+2026-10-13T18:36:12.5118372Z   run_install: null
+2026-10-13T18:36:12.5118687Z   cache: false
+2026-10-13T18:36:12.5118975Z   cache_dependency_path: pnpm-lock.yaml
+2026-10-13T18:36:12.5119337Z   package_json_file: package.json
+2026-10-13T18:36:12.5119680Z   standalone: false
+2026-10-13T18:36:12.5119952Z ##[endgroup]
+2026-10-13T18:36:12.6653157Z ##[group]Running self-installer...
+2026-10-13T18:36:13.0456882Z (node:2349) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T18:36:13.0458872Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:36:13.1836986Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-13T18:36:13.5057180Z 
+2026-10-13T18:36:13.5057998Z dependencies:
+2026-10-13T18:36:13.5058511Z + pnpm 10.0.0
+2026-10-13T18:36:13.5058682Z 
+2026-10-13T18:36:13.5209109Z Packages: +1
+2026-10-13T18:36:13.5210697Z +
+2026-10-13T18:36:13.5819679Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-13T18:36:13.5988283Z Done in 765ms
+2026-10-13T18:36:13.6154129Z ##[endgroup]
+2026-10-13T18:36:13.6154621Z Installation Completed!
+2026-10-13T18:36:13.6359705Z ##[group]Run actions/setup-node@v4
+2026-10-13T18:36:13.6359987Z with:
+2026-10-13T18:36:13.6360197Z   cache: pnpm
+2026-10-13T18:36:13.6360416Z   node-version-file: .nvmrc
+2026-10-13T18:36:13.6360664Z   always-auth: false
+2026-10-13T18:36:13.6360888Z   check-latest: false
+2026-10-13T18:36:13.6363267Z   token: ***
+2026-10-13T18:36:13.6363478Z env:
+2026-10-13T18:36:13.6363748Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:13.6364084Z ##[endgroup]
+2026-10-13T18:36:13.7719035Z Node version file is not JSON file
+2026-10-13T18:36:13.7721436Z Resolved .nvmrc as 24
+2026-10-13T18:36:13.7769120Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-13T18:36:13.7773276Z (node:2362) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T18:36:13.7774133Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:36:13.7775802Z ##[group]Environment details
+2026-10-13T18:36:14.0916167Z node: v24.21.0
+2026-10-13T18:36:14.0916564Z npm: 11.19.0
+2026-10-13T18:36:14.0916892Z yarn: 1.22.22
+2026-10-13T18:36:14.0917652Z ##[endgroup]
+2026-10-13T18:36:14.0937789Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-10-13T18:36:14.4805218Z /home/runner/setup-pnpm/node_modules/.bin/store/v10
+2026-10-13T18:36:14.6699550Z Cache hit for: node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3
+2026-10-13T18:36:14.6801932Z (node:2362) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-13T18:36:15.7712405Z Received 134217728 of 242263551 (55.4%), 127.9 MBs/sec
+2026-10-13T18:36:16.1937596Z Received 242263551 of 242263551 (100.0%), 162.4 MBs/sec
+2026-10-13T18:36:16.1938352Z Cache Size: ~231 MB (242263551 B)
+2026-10-13T18:36:16.1972048Z [command]/usr/bin/tar -xf /home/runner/work/_temp/cfd86168-3e18-491f-a02d-288a5a7b4ff0/cache.tzst -P -C /home/runner/work/styled-components/styled-components --use-compress-program unzstd
+2026-10-13T18:36:18.1557898Z Cache restored successfully
+2026-10-13T18:36:18.1678452Z Cache restored from key: node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3
+2026-10-13T18:36:18.1901458Z ##[group]Run pnpm install --frozen-lockfile
+2026-10-13T18:36:18.1901879Z [36;1mpnpm install --frozen-lockfile[0m
+2026-10-13T18:36:18.2125706Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:18.2125999Z env:
+2026-10-13T18:36:18.2126283Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:18.2126620Z ##[endgroup]
+2026-10-13T18:36:18.5207755Z Scope: all 5 workspace projects
+2026-10-13T18:36:18.5767546Z Lockfile is up to date, resolution step is skipped
+2026-10-13T18:36:18.8271998Z Packages: +1196
+2026-10-13T18:36:18.8273026Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-13T18:36:18.8314848Z Progress: resolved 0, reused 1, downloaded 0, added 0
+2026-10-13T18:36:19.8339910Z Progress: resolved 0, reused 1082, downloaded 0, added 702
+2026-10-13T18:36:20.3024115Z Progress: resolved 0, reused 1082, downloaded 0, added 1196, done
+2026-10-13T18:36:20.4877892Z 
+2026-10-13T18:36:20.4879392Z The following dependencies have build scripts that were ignored: unrs-resolver
+2026-10-13T18:36:20.4881149Z To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+2026-10-13T18:36:20.4882100Z 
+2026-10-13T18:36:20.5867100Z . postinstall$ pnpm --filter styled-components generateErrors
+2026-10-13T18:36:20.9068089Z . postinstall: > styled-components@6.6.0 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:20.9070455Z . postinstall: > node scripts/generateErrorMap.js
+2026-10-13T18:36:20.9526528Z . postinstall: Done
+2026-10-13T18:36:20.9531785Z . prepare$ husky
+2026-10-13T18:36:20.9975066Z . prepare: Done
+2026-10-13T18:36:21.0013471Z Done in 2.7s
+2026-10-13T18:36:21.0547830Z ##[group]Run pnpm test
+2026-10-13T18:36:21.0548433Z [36;1mpnpm test[0m
+2026-10-13T18:36:21.0636914Z shell: /usr/bin/bash -e {0}
+2026-10-13T18:36:21.0637333Z env:
+2026-10-13T18:36:21.0637743Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-13T18:36:21.0638444Z ##[endgroup]
+2026-10-13T18:36:21.3704365Z 
+2026-10-13T18:36:21.3705516Z > styled-components-project@ test /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:21.3706931Z > pnpm --filter styled-components test
+2026-10-13T18:36:21.3707604Z 
+2026-10-13T18:36:21.7091942Z 
+2026-10-13T18:36:21.7093455Z > styled-components@6.6.0 pretest /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:21.7094557Z > pnpm run generateErrors
+2026-10-13T18:36:21.7094844Z 
+2026-10-13T18:36:21.9994639Z 
+2026-10-13T18:36:21.9996240Z > styled-components@6.6.0 generateErrors /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:21.9997559Z > node scripts/generateErrorMap.js
+2026-10-13T18:36:22.0442604Z 
+2026-10-13T18:36:22.0442619Z 
+2026-10-13T18:36:22.0443789Z > styled-components@6.6.0 test /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:22.0445071Z > pnpm run test:web && pnpm run test:native && pnpm run test:types
+2026-10-13T18:36:22.0445541Z 
+2026-10-13T18:36:22.3260644Z 
+2026-10-13T18:36:22.3262053Z > styled-components@6.6.0 test:web /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:22.3263133Z > jest -c jest.config.main.js
+2026-10-13T18:36:22.3263433Z 
+2026-10-13T18:36:25.0423080Z PASS src/models/test/InlineStyle.test.ts
+2026-10-13T18:36:25.2656016Z PASS src/utils/test/stylis.test.ts
+2026-10-13T18:36:25.7929738Z PASS src/constructors/test/styled.rsc.test.tsx
+2026-10-13T18:36:25.8250099Z   ● Console
+2026-10-13T18:36:25.8264990Z 
+2026-10-13T18:36:25.8288955Z     console.warn
+2026-10-13T18:36:25.8321352Z       Interpolating a client component (ClientButton) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.
+2026-10-13T18:36:25.8323470Z 
+2026-10-13T18:36:25.8349596Z     [0m [90m 42 |[39m   [36mconst[39m id [33m=[39m ref[33m.[39m$$id[33m;[39m
+2026-10-13T18:36:25.8370795Z      [90m 43 |[39m   [36mconst[39m label [33m=[39m (id [33m&&[39m id[33m.[39mincludes([32m'#'[39m) [33m?[39m id[33m.[39msplit([32m'#'[39m)[33m.[39mpop() [33m:[39m id) [33m||[39m ref[33m.[39mname [33m||[39m [32m'unknown'[39m[33m;[39m
+2026-10-13T18:36:25.8372645Z     [31m[1m>[22m[39m[90m 44 |[39m   console[33m.[39mwarn(
+2026-10-13T18:36:25.8373509Z      [90m    |[39m           [31m[1m^[22m[39m
+2026-10-13T18:36:25.8376263Z      [90m 45 |[39m     [32m`Interpolating a client component (${label}) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.`[39m
+2026-10-13T18:36:25.8378617Z      [90m 46 |[39m   )[33m;[39m
+2026-10-13T18:36:25.8379292Z      [90m 47 |[39m }[0m
+2026-10-13T18:36:25.8379690Z 
+2026-10-13T18:36:25.8380083Z       at warn (src/utils/flatten.ts:44:11)
+2026-10-13T18:36:25.8380845Z       at warnClientReference (src/utils/flatten.ts:93:50)
+2026-10-13T18:36:25.8381622Z       at flatten (src/utils/flatten.ts:124:7)
+2026-10-13T18:36:25.8382329Z       at css (src/constructors/css.ts:60:12)
+2026-10-13T18:36:25.8383366Z       at baseStyled.templateFunction [as div] (src/constructors/constructWithOptions.ts:149:10)
+2026-10-13T18:36:25.8384433Z       at src/constructors/test/styled.rsc.test.tsx:1742:34
+2026-10-13T18:36:25.8385364Z       at Object.<anonymous> (../../node_modules/expect/build/index.js:1824:9)
+2026-10-13T18:36:25.8386987Z       at Object.throwingMatcher [as toThrow] (../../node_modules/expect/build/index.js:2235:93)
+2026-10-13T18:36:25.8388334Z       at Object.toThrow (src/constructors/test/styled.rsc.test.tsx:1750:14)
+2026-10-13T18:36:25.8388981Z 
+2026-10-13T18:36:25.8389275Z     console.warn
+2026-10-13T18:36:25.8391511Z       Interpolating a client component (app/components/client-button.tsx) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.
+2026-10-13T18:36:25.8393438Z 
+2026-10-13T18:36:25.8394189Z     [0m [90m 42 |[39m   [36mconst[39m id [33m=[39m ref[33m.[39m$$id[33m;[39m
+2026-10-13T18:36:25.8396378Z      [90m 43 |[39m   [36mconst[39m label [33m=[39m (id [33m&&[39m id[33m.[39mincludes([32m'#'[39m) [33m?[39m id[33m.[39msplit([32m'#'[39m)[33m.[39mpop() [33m:[39m id) [33m||[39m ref[33m.[39mname [33m||[39m [32m'unknown'[39m[33m;[39m
+2026-10-13T18:36:25.8398338Z     [31m[1m>[22m[39m[90m 44 |[39m   console[33m.[39mwarn(
+2026-10-13T18:36:25.8399235Z      [90m    |[39m           [31m[1m^[22m[39m
+2026-10-13T18:36:25.8401846Z      [90m 45 |[39m     [32m`Interpolating a client component (${label}) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.`[39m
+2026-10-13T18:36:25.8404130Z      [90m 46 |[39m   )[33m;[39m
+2026-10-13T18:36:25.8404941Z      [90m 47 |[39m }[0m
+2026-10-13T18:36:25.8405666Z 
+2026-10-13T18:36:25.8406042Z       at warn (src/utils/flatten.ts:44:11)
+2026-10-13T18:36:25.8406818Z       at warnClientReference (src/utils/flatten.ts:146:48)
+2026-10-13T18:36:25.8407607Z       at flatten (src/utils/flatten.ts:124:7)
+2026-10-13T18:36:25.8408524Z       at css (src/constructors/css.ts:60:12)
+2026-10-13T18:36:25.8409698Z       at baseStyled.templateFunction [as div] (src/constructors/constructWithOptions.ts:149:10)
+2026-10-13T18:36:25.8410752Z       at src/constructors/test/styled.rsc.test.tsx:1757:34
+2026-10-13T18:36:25.8411659Z       at Object.<anonymous> (../../node_modules/expect/build/index.js:1824:9)
+2026-10-13T18:36:25.8412783Z       at Object.throwingMatcher [as toThrow] (../../node_modules/expect/build/index.js:2235:93)
+2026-10-13T18:36:25.8413882Z       at Object.toThrow (src/constructors/test/styled.rsc.test.tsx:1765:14)
+2026-10-13T18:36:25.8416238Z 
+2026-10-13T18:36:25.8416598Z     console.warn
+2026-10-13T18:36:25.8418982Z       Interpolating a client component (ClientButton) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.
+2026-10-13T18:36:25.8420993Z 
+2026-10-13T18:36:25.8421751Z     [0m [90m 42 |[39m   [36mconst[39m id [33m=[39m ref[33m.[39m$$id[33m;[39m
+2026-10-13T18:36:25.8424043Z      [90m 43 |[39m   [36mconst[39m label [33m=[39m (id [33m&&[39m id[33m.[39mincludes([32m'#'[39m) [33m?[39m id[33m.[39msplit([32m'#'[39m)[33m.[39mpop() [33m:[39m id) [33m||[39m ref[33m.[39mname [33m||[39m [32m'unknown'[39m[33m;[39m
+2026-10-13T18:36:25.8428403Z     [31m[1m>[22m[39m[90m 44 |[39m   console[33m.[39mwarn(
+2026-10-13T18:36:25.8479162Z      [90m    |[39m           [31m[1m^[22m[39m
+2026-10-13T18:36:25.8482142Z      [90m 45 |[39m     [32m`Interpolating a client component (${label}) as a selector is not supported in server components. The component selector pattern requires access to the component's internal class name, which is not available across the server/client boundary. Use a plain CSS class selector instead.`[39m
+2026-10-13T18:36:25.8509102Z      [90m 46 |[39m   )[33m;[39m
+2026-10-13T18:36:25.8539072Z      [90m 47 |[39m }[0m
+2026-10-13T18:36:25.8568679Z 
+2026-10-13T18:36:25.8571859Z       at warn (src/utils/flatten.ts:44:11)
+2026-10-13T18:36:25.8572773Z       at warnClientReference (src/utils/flatten.ts:93:50)
+2026-10-13T18:36:25.8573777Z       at flatten (src/utils/flatten.ts:124:7)
+2026-10-13T18:36:25.8574499Z       at css (src/constructors/css.ts:60:12)
+2026-10-13T18:36:25.8575518Z       at baseStyled.templateFunction [as div] (src/constructors/constructWithOptions.ts:149:10)
+2026-10-13T18:36:25.8576794Z       at Object.<anonymous> (src/constructors/test/styled.rsc.test.tsx:1771:32)
+2026-10-13T18:36:25.8577495Z 
+2026-10-13T18:36:25.8578014Z PASS src/constructors/test/createGlobalStyle.test.tsx
+2026-10-13T18:36:25.8579130Z PASS src/test/ordering.test.tsx
+2026-10-13T18:36:26.2583859Z PASS src/test/attrs.test.tsx
+2026-10-13T18:36:26.2690391Z PASS src/utils/test/stylisPluginRSC.test.tsx
+2026-10-13T18:36:26.5006434Z PASS src/test/ssr.test.tsx
+2026-10-13T18:36:26.5469243Z PASS src/test/rehydration.test.tsx
+2026-10-13T18:36:26.7087167Z PASS src/models/test/StyleSheetManager.test.tsx
+2026-10-13T18:36:26.8879664Z PASS src/sheet/test/Rehydration.test.tsx
+2026-10-13T18:36:27.0502952Z PASS src/test/theme.test.tsx
+2026-10-13T18:36:27.2589516Z PASS src/test/styles.test.tsx
+2026-10-13T18:36:27.4395253Z PASS src/test/basic.test.tsx
+2026-10-13T18:36:27.4794260Z PASS src/test/memoization.test.tsx
+2026-10-13T18:36:27.5159647Z PASS src/constructors/test/createGlobalStyle.rsc.test.tsx
+2026-10-13T18:36:27.5470090Z PASS src/constructors/test/createTheme.rsc.test.tsx
+2026-10-13T18:36:27.6359311Z PASS src/sheet/test/Sheet.test.ts
+2026-10-13T18:36:27.6580137Z PASS src/test/hmr-createTheme.test.tsx
+2026-10-13T18:36:27.8159408Z PASS src/test/props.test.tsx
+2026-10-13T18:36:27.8287601Z PASS src/test/expanded-api.test.tsx
+2026-10-13T18:36:27.8472158Z PASS src/constructors/test/keyframes.test.tsx
+2026-10-13T18:36:27.9356925Z PASS src/utils/test/mixinDeep.test.ts
+2026-10-13T18:36:28.0371776Z PASS src/models/test/ThemeProvider.test.tsx
+2026-10-13T18:36:28.0683855Z PASS src/utils/test/flatten.test.tsx
+2026-10-13T18:36:28.1019672Z PASS src/test/constants.test.tsx
+2026-10-13T18:36:28.1829788Z PASS src/test/overriding.test.tsx
+2026-10-13T18:36:28.1865791Z PASS src/test/ssr-memory.test.tsx
+2026-10-13T18:36:28.1972207Z PASS src/constructors/test/createTheme.test.tsx
+2026-10-13T18:36:28.2489605Z PASS src/sheet/test/GroupedTag.test.ts
+2026-10-13T18:36:28.2954268Z PASS src/utils/test/nonce.test.ts
+2026-10-13T18:36:28.3685485Z PASS src/constructors/test/createGlobalStyle.ssr.test.tsx
+2026-10-13T18:36:28.3700987Z PASS src/models/test/StyleSheetManager.rsc.test.tsx
+2026-10-13T18:36:28.3894986Z PASS src/test/warnOnDynamicCreation.test.tsx
+2026-10-13T18:36:28.4355135Z PASS src/sheet/test/dom.test.ts
+2026-10-13T18:36:28.4802535Z PASS src/test/css.test.tsx
+2026-10-13T18:36:28.4869706Z PASS src/hoc/withTheme.test.tsx
+2026-10-13T18:36:28.4888765Z PASS src/utils/test/error.test.ts
+2026-10-13T18:36:28.5279710Z PASS src/utils/test/joinStrings.test.ts
+2026-10-13T18:36:28.5579103Z PASS src/sheet/test/Tag.test.ts
+2026-10-13T18:36:28.6099741Z PASS src/models/test/ThemeProvider.rsc.test.tsx
+2026-10-13T18:36:28.6253531Z PASS src/constructors/test/styled.test.tsx
+2026-10-13T18:36:28.6635089Z PASS src/utils/test/checkDynamicCreation.rsc.test.tsx
+2026-10-13T18:36:28.6888545Z PASS src/utils/test/isStyledComponent.test.ts
+2026-10-13T18:36:28.7303742Z PASS src/hoc/withTheme.rsc.test.tsx
+2026-10-13T18:36:28.7363171Z   ● Console
+2026-10-13T18:36:28.7364232Z 
+2026-10-13T18:36:28.7388913Z     console.warn
+2026-10-13T18:36:28.7440660Z       [withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "Inner"
+2026-10-13T18:36:28.7470405Z 
+2026-10-13T18:36:28.7491188Z     [0m [90m 25 |[39m
+2026-10-13T18:36:28.7508711Z      [90m 26 |[39m     [36mif[39m (process[33m.[39menv[33m.[39m[33mNODE_ENV[39m [33m!==[39m [32m'production'[39m [33m&&[39m themeProp [33m===[39m undefined) {
+2026-10-13T18:36:28.7522651Z     [31m[1m>[22m[39m[90m 27 |[39m       console[33m.[39mwarn(
+2026-10-13T18:36:28.7523752Z      [90m    |[39m               [31m[1m^[22m[39m
+2026-10-13T18:36:28.7525519Z      [90m 28 |[39m         [32m`[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "${getComponentName([39m
+2026-10-13T18:36:28.7527146Z      [90m 29 |[39m [32m          Component[39m
+2026-10-13T18:36:28.7528576Z      [90m 30 |[39m [32m        )}"`[39m[0m
+2026-10-13T18:36:28.7529118Z 
+2026-10-13T18:36:28.7529531Z       at warn (src/hoc/withTheme.tsx:27:15)
+2026-10-13T18:36:28.7530762Z       at renderWithHooks (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5662:16)
+2026-10-13T18:36:28.7532378Z       at renderForwardRef (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5857:18)
+2026-10-13T18:36:28.7537978Z       at renderElement (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6020:11)
+2026-10-13T18:36:28.7540015Z       at renderNodeDestructiveImpl (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6119:11)
+2026-10-13T18:36:28.7541705Z       at renderNodeDestructive (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6091:14)
+2026-10-13T18:36:28.7543263Z       at retryTask (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6543:5)
+2026-10-13T18:36:28.7544718Z       at performWork (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6591:7)
+2026-10-13T18:36:28.7546261Z       at ../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6915:12
+2026-10-13T18:36:28.7548044Z       at scheduleWork (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:78:3)
+2026-10-13T18:36:28.7549715Z       at startWork (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6914:3)
+2026-10-13T18:36:28.7551222Z       at renderToStringImpl (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6988:3)
+2026-10-13T18:36:28.7552823Z       at Object.renderToString (../../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:7080:10)
+2026-10-13T18:36:28.7554123Z       at Object.renderToString (src/hoc/withTheme.rsc.test.tsx:21:33)
+2026-10-13T18:36:28.7554772Z 
+2026-10-13T18:36:28.7555281Z PASS src/utils/test/isPlainObject.test.ts
+2026-10-13T18:36:28.8015877Z PASS src/utils/test/interleave.test.ts
+2026-10-13T18:36:28.8293781Z PASS src/utils/test/generateAlphabeticName.test.ts
+2026-10-13T18:36:28.8674454Z PASS src/utils/test/addUnitIfNeeded.test.ts
+2026-10-13T18:36:28.8821387Z PASS src/models/test/StyleSheetManager.server.test.tsx
+2026-10-13T18:36:28.9204385Z PASS src/utils/test/isStatelessFunction.test.tsx
+2026-10-13T18:36:28.9344207Z PASS src/sheet/test/GroupIDAllocator.test.ts
+2026-10-13T18:36:28.9790368Z PASS src/utils/test/getComponentName.test.tsx
+2026-10-13T18:36:29.0120012Z PASS src/utils/test/determineTheme.test.ts
+2026-10-13T18:36:29.0355171Z PASS src/utils/test/generateDisplayName.test.ts
+2026-10-13T18:36:29.0440941Z PASS src/models/test/Keyframes.test.ts
+2026-10-13T18:36:29.0829051Z PASS src/utils/test/escape.test.ts
+2026-10-13T18:36:29.0861507Z PASS src/sheet/test/dom.node.test.ts
+2026-10-13T18:36:29.1324843Z PASS src/utils/test/hyphenateStyleName.test.ts
+2026-10-13T18:36:29.1804009Z PASS src/test/warnTooManyClasses.test.tsx
+2026-10-13T18:36:29.2591960Z 
+2026-10-13T18:36:29.2595246Z Test Suites: 60 passed, 60 total
+2026-10-13T18:36:29.2595866Z Tests:       980 passed, 980 total
+2026-10-13T18:36:29.2596405Z Snapshots:   624 passed, 624 total
+2026-10-13T18:36:29.2596820Z Time:        6.51 s
+2026-10-13T18:36:29.2597221Z Ran all test suites.
+2026-10-13T18:36:29.5688884Z 
+2026-10-13T18:36:29.5690183Z > styled-components@6.6.0 test:native /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:29.5691370Z > jest -c jest.config.native.js --forceExit
+2026-10-13T18:36:29.5691739Z 
+2026-10-13T18:36:31.8473502Z PASS src/native/test/native.test.tsx
+2026-10-13T18:36:31.8477001Z   native
+2026-10-13T18:36:31.8480423Z     ✓ should not throw an error when called with a valid element (10 ms)
+2026-10-13T18:36:31.8481284Z     ✓ should generate inline styles (2 ms)
+2026-10-13T18:36:31.8481995Z     ✓ should fold successive styled() wrappings (208 ms)
+2026-10-13T18:36:31.8482628Z     ✓ folds defaultProps (2 ms)
+2026-10-13T18:36:31.8483292Z     ✓ should combine inline styles and the style prop (1 ms)
+2026-10-13T18:36:31.8484046Z     ✓ should not console.warn if a comment is seen (1 ms)
+2026-10-13T18:36:31.8484854Z     ✓ strips a JS-style line comment from a style declaration (1 ms)
+2026-10-13T18:36:31.8485647Z     ✓ should update when props change (2 ms)
+2026-10-13T18:36:31.8486446Z     ✓ should forward the "as" prop if "forwardedAs" is used (2 ms)
+2026-10-13T18:36:31.8487455Z     ✓ does not forward an undefined "forwardedAs" as an "as" prop (web parity) (1 ms)
+2026-10-13T18:36:31.8489041Z     ✓ should not add different border values for Image component as its not supported (106 ms)
+2026-10-13T18:36:31.8490020Z     ✓ should warn all css unsupported values (2 ms)
+2026-10-13T18:36:31.8490724Z     ✓ should ignore all css unsupported values (1 ms)
+2026-10-13T18:36:31.8491377Z     ✓ should still apply css supported values (1 ms)
+2026-10-13T18:36:31.8491826Z     attrs
+2026-10-13T18:36:31.8492294Z       ✓ works fine with an empty object (1 ms)
+2026-10-13T18:36:31.8492908Z       ✓ passes simple props on (1 ms)
+2026-10-13T18:36:31.8493469Z       ✓ calls an attr-function with context
+2026-10-13T18:36:31.8494036Z       ✓ merges multiple calls (1 ms)
+2026-10-13T18:36:31.8494596Z       ✓ merges multiple fn calls (1 ms)
+2026-10-13T18:36:31.8495540Z       ✓ merges attrs when inheriting SC
+2026-10-13T18:36:31.8496190Z       ✓ should pass through children as a normal prop
+2026-10-13T18:36:31.8496898Z       ✓ should pass through complex children as well
+2026-10-13T18:36:31.8497499Z       ✓ should override children (1 ms)
+2026-10-13T18:36:31.8498089Z       ✓ accepts a function (1 ms)
+2026-10-13T18:36:31.8498948Z       ✓ function form allows access to theme (1 ms)
+2026-10-13T18:36:31.8499836Z       ✓ attrs wins over an explicitly passed undefined prop (#5807, #4338 parity)
+2026-10-13T18:36:31.8500987Z       ✓ forwards an explicitly passed undefined prop to the wrapped component (#4338 parity)
+2026-10-13T18:36:31.8502505Z       ✓ an identity-spread attrs function still forwards an explicitly passed undefined prop to a wrapped component (#5807) (1 ms)
+2026-10-13T18:36:31.8503729Z       ✓ should still strip undefined values from attrs (parity)
+2026-10-13T18:36:31.8504414Z       ✓ theme prop works (1 ms)
+2026-10-13T18:36:31.8504961Z       ✓ theme in defaultProps works (1 ms)
+2026-10-13T18:36:31.8505554Z       ✓ convert css to styleSheet (1 ms)
+2026-10-13T18:36:31.8506011Z     expanded API
+2026-10-13T18:36:31.8506490Z       ✓ should attach a displayName
+2026-10-13T18:36:31.8507114Z       ✓ should allow multiple calls to be chained
+2026-10-13T18:36:31.8508085Z       ✓ "as" prop should change the rendered element without affecting the styling (1 ms)
+2026-10-13T18:36:31.8509187Z       ✓ should omit transient props (1 ms)
+2026-10-13T18:36:31.8509893Z       ✓ allows for custom prop filtering for elements (1 ms)
+2026-10-13T18:36:31.8510631Z       ✓ allows custom prop filtering for components
+2026-10-13T18:36:31.8511488Z       ✓ composes shouldForwardProp on composed styled components (1 ms)
+2026-10-13T18:36:31.8512312Z       ✓ shouldForwardProp argument signature (1 ms)
+2026-10-13T18:36:31.8513103Z       ✓ should filter out props when using "as" to a custom component
+2026-10-13T18:36:31.8514028Z       ✓ can set computed styles based on props that are being filtered out
+2026-10-13T18:36:31.8515052Z       ✓ should filter our props when using "as" to a different element (1 ms)
+2026-10-13T18:36:31.8515747Z     interpolation evaluation on every render (#5788)
+2026-10-13T18:36:31.8516631Z       ✓ runs a hook called inside an interpolation on every render (2 ms)
+2026-10-13T18:36:31.8518399Z       ✓ recomputes when an interpolation reads external state that changed but props did not (2 ms)
+2026-10-13T18:36:31.8519086Z 
+2026-10-13T18:36:31.8519353Z Test Suites: 1 passed, 1 total
+2026-10-13T18:36:31.8519853Z Tests:       45 passed, 45 total
+2026-10-13T18:36:31.8520324Z Snapshots:   3 passed, 3 total
+2026-10-13T18:36:31.8520753Z Time:        1.897 s
+2026-10-13T18:36:31.8521132Z Ran all test suites.
+2026-10-13T18:36:31.8522332Z Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
+2026-10-13T18:36:32.1632980Z 
+2026-10-13T18:36:32.1633913Z > styled-components@6.6.0 test:types /home/runner/work/styled-components/styled-components/packages/styled-components
+2026-10-13T18:36:32.1635584Z > tsc --noEmit --project tsconfig.test-types.json && tsc --noEmit --project tsconfig.test-template-index.json && tsc --noEmit --project tsconfig.test-intrinsic-index-signature.json
+2026-10-13T18:36:32.1636244Z 
+2026-10-13T18:36:49.5617209Z Post job cleanup.
+2026-10-13T18:36:49.6889433Z (node:2667) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-13T18:36:49.6890284Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-13T18:36:49.6892822Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-b295905d9f030cab9626e22a36b3209e02a8dc30412d8eb534e1061a681e45a3, not saving cache.
+2026-10-13T18:36:49.6999537Z Post job cleanup.
+2026-10-13T18:36:49.8395952Z Pruning is unnecessary.
+2026-10-13T18:36:49.8540357Z Post job cleanup.
+2026-10-13T18:36:49.9396926Z [command]/usr/bin/git version
+2026-10-13T18:36:49.9435366Z git version 2.55.0
+2026-10-13T18:36:49.9469777Z Temporarily overriding HOME='/home/runner/work/_temp/22ec1c84-61e1-4258-850c-31674b4bab39' before making global git config changes
+2026-10-13T18:36:49.9470668Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T18:36:49.9475512Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/styled-components/styled-components
+2026-10-13T18:36:49.9511192Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T18:36:49.9545227Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T18:36:49.9778725Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T18:36:49.9803703Z http.https://github.com/.extraheader
+2026-10-13T18:36:49.9814379Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-13T18:36:49.9847912Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T18:36:50.0079495Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T18:36:50.0111339Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T18:36:50.0474570Z Cleaning up orphan processes
+2026-10-13T18:36:50.0836610Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

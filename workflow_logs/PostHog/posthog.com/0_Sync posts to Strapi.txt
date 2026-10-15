@@ -1,0 +1,621 @@
+﻿2026-10-14T15:40:56.1795369Z Current runner version: '2.337.0'
+2026-10-14T15:40:56.1821956Z ##[group]Runner Image Provisioner
+2026-10-14T15:40:56.1823222Z Hosted Compute Agent
+2026-10-14T15:40:56.1823893Z Version: 20261002.596
+2026-10-14T15:40:56.1824888Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T15:40:56.1825780Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T15:40:56.1826705Z Worker ID: {4d2f7921-1d37-48ca-a52e-ebf83aaaf64f}
+2026-10-14T15:40:56.1827513Z Region: northcentralus
+2026-10-14T15:40:56.1828162Z Cloud: Azure
+2026-10-14T15:40:56.1828815Z ##[endgroup]
+2026-10-14T15:40:56.1830532Z ##[group]Operating System
+2026-10-14T15:40:56.1831206Z Ubuntu
+2026-10-14T15:40:56.1831843Z 24.04.5
+2026-10-14T15:40:56.1832485Z LTS
+2026-10-14T15:40:56.1833076Z ##[endgroup]
+2026-10-14T15:40:56.1833727Z ##[group]Runner Image
+2026-10-14T15:40:56.1834372Z Image: ubuntu-24.04
+2026-10-14T15:40:56.1835155Z Version: 20261004.327.1
+2026-10-14T15:40:56.1836852Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T15:40:56.1838575Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T15:40:56.1839558Z ##[endgroup]
+2026-10-14T15:40:56.1840842Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:40:56.1843166Z Contents: read
+2026-10-14T15:40:56.1843956Z Metadata: read
+2026-10-14T15:40:56.1844550Z ##[endgroup]
+2026-10-14T15:40:56.1847227Z Secret source: Actions
+2026-10-14T15:40:56.1848256Z Cache mode: write
+2026-10-14T15:40:56.1849387Z Prepare workflow directory
+2026-10-14T15:40:56.2186915Z Prepare all required actions
+2026-10-14T15:40:56.2234553Z Getting action download info
+2026-10-14T15:40:56.4386219Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-10-14T15:40:56.5225719Z Download action repository 'pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c' (SHA:c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c)
+2026-10-14T15:40:56.9983758Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-14T15:40:57.1872220Z Complete job name: Sync posts to Strapi
+2026-10-14T15:40:57.2599895Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-10-14T15:40:57.2600912Z with:
+2026-10-14T15:40:57.2601394Z   repository: PostHog/posthog.com
+2026-10-14T15:40:57.2606788Z   token: ***
+2026-10-14T15:40:57.2607517Z   ssh-strict: true
+2026-10-14T15:40:57.2608301Z   ssh-user: git
+2026-10-14T15:40:57.2609043Z   persist-credentials: true
+2026-10-14T15:40:57.2609846Z   clean: true
+2026-10-14T15:40:57.2610473Z   sparse-checkout-cone-mode: true
+2026-10-14T15:40:57.2611304Z   fetch-depth: 1
+2026-10-14T15:40:57.2612028Z   fetch-tags: false
+2026-10-14T15:40:57.2612792Z   show-progress: true
+2026-10-14T15:40:57.2613515Z   lfs: false
+2026-10-14T15:40:57.2614109Z   submodules: false
+2026-10-14T15:40:57.2614825Z   set-safe-directory: true
+2026-10-14T15:40:57.2616227Z ##[endgroup]
+2026-10-14T15:40:57.3611988Z Syncing repository: PostHog/posthog.com
+2026-10-14T15:40:57.3613804Z ##[group]Getting Git version info
+2026-10-14T15:40:57.3614714Z Working directory is '/home/runner/work/posthog.com/posthog.com'
+2026-10-14T15:40:57.3615790Z [command]/usr/bin/git version
+2026-10-14T15:40:57.3672367Z git version 2.55.0
+2026-10-14T15:40:57.3693697Z ##[endgroup]
+2026-10-14T15:40:57.3708219Z Temporarily overriding HOME='/home/runner/work/_temp/95efbc5d-1cec-4b26-a6d4-d95e992a1f8c' before making global git config changes
+2026-10-14T15:40:57.3710387Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:40:57.3713739Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-10-14T15:40:57.3773505Z Deleting the contents of '/home/runner/work/posthog.com/posthog.com'
+2026-10-14T15:40:57.3777478Z ##[group]Initializing the repository
+2026-10-14T15:40:57.3782230Z [command]/usr/bin/git init /home/runner/work/posthog.com/posthog.com
+2026-10-14T15:40:57.3884788Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T15:40:57.3885851Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T15:40:57.3887031Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T15:40:57.3887786Z hint: call:
+2026-10-14T15:40:57.3888602Z hint:
+2026-10-14T15:40:57.3889158Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T15:40:57.3889812Z hint:
+2026-10-14T15:40:57.3890408Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T15:40:57.3891345Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T15:40:57.3892207Z hint:
+2026-10-14T15:40:57.3892905Z hint: 	git branch -m <name>
+2026-10-14T15:40:57.3893584Z hint:
+2026-10-14T15:40:57.3894240Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T15:40:57.3895744Z Initialized empty Git repository in /home/runner/work/posthog.com/posthog.com/.git/
+2026-10-14T15:40:57.3898642Z [command]/usr/bin/git remote add origin https://github.com/PostHog/posthog.com
+2026-10-14T15:40:57.3947222Z ##[endgroup]
+2026-10-14T15:40:57.3948041Z ##[group]Disabling automatic garbage collection
+2026-10-14T15:40:57.3950493Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T15:40:57.3981073Z ##[endgroup]
+2026-10-14T15:40:57.3981890Z ##[group]Setting up auth
+2026-10-14T15:40:57.3982537Z Removing SSH command configuration
+2026-10-14T15:40:57.3989202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:40:57.4020126Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:40:57.4365714Z Removing HTTP extra header
+2026-10-14T15:40:57.4372106Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:40:57.4406712Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:40:57.4631353Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:40:57.4637770Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:40:57.4670367Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:40:57.4903184Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T15:40:57.4940652Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:40:57.4972738Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:40:57.5007765Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:40:57.5040405Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:40:57.5075302Z ##[endgroup]
+2026-10-14T15:40:57.5076654Z ##[group]Fetching the repository
+2026-10-14T15:40:57.5083288Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin d135efd1cef3b8ccba800cd4e9ab6b1522032230
+2026-10-14T15:41:03.1929292Z From https://github.com/PostHog/posthog.com
+2026-10-14T15:41:03.1930952Z  * branch            d135efd1cef3b8ccba800cd4e9ab6b1522032230 -> FETCH_HEAD
+2026-10-14T15:41:03.1940565Z [command]/usr/bin/git rev-parse --verify --quiet d135efd1cef3b8ccba800cd4e9ab6b1522032230^{object}
+2026-10-14T15:41:03.1968278Z d135efd1cef3b8ccba800cd4e9ab6b1522032230
+2026-10-14T15:41:03.1972777Z ##[endgroup]
+2026-10-14T15:41:03.1973354Z ##[group]Determining the checkout info
+2026-10-14T15:41:03.1974271Z ##[endgroup]
+2026-10-14T15:41:03.1979668Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T15:41:03.2031339Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T15:41:03.2062097Z ##[group]Checking out the ref
+2026-10-14T15:41:03.2067889Z [command]/usr/bin/git checkout --progress --force d135efd1cef3b8ccba800cd4e9ab6b1522032230
+2026-10-14T15:41:04.2240203Z Updating files:  98% (7276/7369)
+2026-10-14T15:41:04.3276968Z Updating files:  99% (7296/7369)
+2026-10-14T15:41:04.3278570Z Updating files: 100% (7369/7369)
+2026-10-14T15:41:04.3279199Z Updating files: 100% (7369/7369), done.
+2026-10-14T15:41:04.3358214Z Note: switching to 'd135efd1cef3b8ccba800cd4e9ab6b1522032230'.
+2026-10-14T15:41:04.3359192Z 
+2026-10-14T15:41:04.3359646Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-14T15:41:04.3360615Z changes and commit them, and you can discard any commits you make in this
+2026-10-14T15:41:04.3361572Z state without impacting any branches by switching back to a branch.
+2026-10-14T15:41:04.3362127Z 
+2026-10-14T15:41:04.3362521Z If you want to create a new branch to retain commits you create, you may
+2026-10-14T15:41:04.3363500Z do so (now or later) by using -c with the switch command. Example:
+2026-10-14T15:41:04.3364099Z 
+2026-10-14T15:41:04.3364347Z   git switch -c <new-branch-name>
+2026-10-14T15:41:04.3364710Z 
+2026-10-14T15:41:04.3364939Z Or undo this operation with:
+2026-10-14T15:41:04.3365299Z 
+2026-10-14T15:41:04.3365506Z   git switch -
+2026-10-14T15:41:04.3365803Z 
+2026-10-14T15:41:04.3366482Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-14T15:41:04.3367137Z 
+2026-10-14T15:41:04.3368176Z HEAD is now at d135efd docs(ai-evals): document numeric and categorical evaluation output types (#21193)
+2026-10-14T15:41:04.3400956Z ##[endgroup]
+2026-10-14T15:41:04.3453548Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T15:41:04.3480481Z d135efd1cef3b8ccba800cd4e9ab6b1522032230
+2026-10-14T15:41:04.3793068Z ##[group]Run pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c
+2026-10-14T15:41:04.3793638Z with:
+2026-10-14T15:41:04.3793910Z   dest: ~/setup-pnpm
+2026-10-14T15:41:04.3794198Z   run_install: null
+2026-10-14T15:41:04.3794491Z   package_json_file: package.json
+2026-10-14T15:41:04.3794823Z   standalone: false
+2026-10-14T15:41:04.3795092Z ##[endgroup]
+2026-10-14T15:41:04.4414528Z ##[group]Running self-installer...
+2026-10-14T15:41:04.8428907Z (node:2328) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T15:41:04.8430593Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T15:41:04.9858221Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T15:41:04.9965122Z Packages: +1
+2026-10-14T15:41:04.9989181Z +
+2026-10-14T15:41:05.3970040Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-10-14T15:41:05.4239053Z 
+2026-10-14T15:41:05.4239559Z dependencies:
+2026-10-14T15:41:05.4240033Z + pnpm 10.23.0 (12.11.2 is available)
+2026-10-14T15:41:05.4240373Z 
+2026-10-14T15:41:05.4260369Z Done in 810ms
+2026-10-14T15:41:05.4452506Z ##[endgroup]
+2026-10-14T15:41:05.4453220Z Installation Completed!
+2026-10-14T15:41:05.4645182Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-10-14T15:41:05.4645617Z with:
+2026-10-14T15:41:05.4645838Z   node-version: 22
+2026-10-14T15:41:05.4646393Z   cache: pnpm
+2026-10-14T15:41:05.4646611Z   always-auth: false
+2026-10-14T15:41:05.4647107Z   check-latest: false
+2026-10-14T15:41:05.4649574Z   token: ***
+2026-10-14T15:41:05.4649798Z env:
+2026-10-14T15:41:05.4650100Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T15:41:05.4650440Z ##[endgroup]
+2026-10-14T15:41:05.6127566Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-14T15:41:05.6131141Z (node:2342) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T15:41:05.6131965Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T15:41:05.6133501Z ##[group]Environment details
+2026-10-14T15:41:05.9945641Z node: v22.23.3
+2026-10-14T15:41:05.9946326Z npm: 10.9.9
+2026-10-14T15:41:05.9946825Z yarn: 1.22.22
+2026-10-14T15:41:05.9947649Z ##[endgroup]
+2026-10-14T15:41:05.9968173Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-10-14T15:41:06.3683101Z /home/runner/setup-pnpm/node_modules/.bin/store/v10
+2026-10-14T15:41:06.5261495Z Cache hit for: node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc
+2026-10-14T15:41:06.5369747Z (node:2342) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-14T15:41:07.6362433Z Received 134217728 of 815023133 (16.5%), 127.9 MBs/sec
+2026-10-14T15:41:08.6362568Z Received 348127232 of 815023133 (42.7%), 166.0 MBs/sec
+2026-10-14T15:41:09.6387651Z Received 595591168 of 815023133 (73.1%), 189.3 MBs/sec
+2026-10-14T15:41:10.6384129Z Received 801112064 of 815023133 (98.3%), 190.9 MBs/sec
+2026-10-14T15:41:10.8237120Z Received 815023133 of 815023133 (100.0%), 185.6 MBs/sec
+2026-10-14T15:41:10.8237766Z Cache Size: ~777 MB (815023133 B)
+2026-10-14T15:41:10.8357076Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e552f09a-4d25-48f9-941d-830f6563d8e3/cache.tzst -P -C /home/runner/work/posthog.com/posthog.com --use-compress-program unzstd
+2026-10-14T15:41:19.0041873Z Cache restored successfully
+2026-10-14T15:41:19.0452671Z Cache restored from key: node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc
+2026-10-14T15:41:19.0675220Z ##[group]Run pnpm install --frozen-lockfile
+2026-10-14T15:41:19.0675678Z [36;1mpnpm install --frozen-lockfile[0m
+2026-10-14T15:41:19.0929206Z shell: /usr/bin/bash -e {0}
+2026-10-14T15:41:19.0929519Z env:
+2026-10-14T15:41:19.0929822Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T15:41:19.0930190Z ##[endgroup]
+2026-10-14T15:41:19.3993310Z Scope: all 8 workspace projects
+2026-10-14T15:41:19.5433819Z Lockfile is up to date, resolution step is skipped
+2026-10-14T15:41:19.7147924Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-10-14T15:41:20.0001675Z Packages: +3894
+2026-10-14T15:41:20.0002579Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-10-14T15:41:20.7143488Z Progress: resolved 3894, reused 846, downloaded 0, added 0
+2026-10-14T15:41:21.7206849Z Progress: resolved 3894, reused 3793, downloaded 0, added 0
+2026-10-14T15:41:22.7207683Z Progress: resolved 3894, reused 3868, downloaded 2, added 312
+2026-10-14T15:41:23.7214974Z Progress: resolved 3894, reused 3868, downloaded 2, added 814
+2026-10-14T15:41:24.7214172Z Progress: resolved 3894, reused 3868, downloaded 2, added 1637
+2026-10-14T15:41:25.7213553Z Progress: resolved 3894, reused 3868, downloaded 2, added 2326
+2026-10-14T15:41:26.7214078Z Progress: resolved 3894, reused 3868, downloaded 2, added 2982
+2026-10-14T15:41:27.3463233Z Progress: resolved 3894, reused 3868, downloaded 2, added 3894, done
+2026-10-14T15:41:29.0861100Z 
+2026-10-14T15:41:29.0861857Z dependencies:
+2026-10-14T15:41:29.0862381Z + @amcharts/amcharts5 5.13.6
+2026-10-14T15:41:29.0862961Z + @amcharts/amcharts5-geodata 5.1.5
+2026-10-14T15:41:29.0866297Z + @dnd-kit/core 6.3.1
+2026-10-14T15:41:29.0867059Z + @dnd-kit/sortable 10.0.0
+2026-10-14T15:41:29.0867876Z + @dnd-kit/utilities 3.2.2
+2026-10-14T15:41:29.0868373Z + @dotlottie/react-player 1.6.19
+2026-10-14T15:41:29.0868976Z + @fontsource-variable/ibm-plex-sans 5.2.8
+2026-10-14T15:41:29.0869575Z + @fontsource/source-code-pro 4.5.14
+2026-10-14T15:41:29.0870180Z + @gatsbyjs/reach-router 1.3.9
+2026-10-14T15:41:29.0870705Z + @headlessui/react 1.7.19
+2026-10-14T15:41:29.0871205Z + @headlessui/tailwindcss 0.1.3
+2026-10-14T15:41:29.0871672Z + @heroicons/react 1.0.6
+2026-10-14T15:41:29.0872194Z + @hubspot/api-client 7.2.0
+2026-10-14T15:41:29.0872673Z + @inkeep/cxkit-react 0.5.98
+2026-10-14T15:41:29.0873123Z + @inkeep/uikit 0.3.20
+2026-10-14T15:41:29.0873551Z + @inkeep/uikit-js 0.3.20
+2026-10-14T15:41:29.0873975Z + @lexical/utils 0.35.0
+2026-10-14T15:41:29.0874487Z + @mdx-js/react 1.6.22
+2026-10-14T15:41:29.0874906Z + @mdxeditor/editor 3.45.1
+2026-10-14T15:41:29.0875353Z + @popperjs/core 2.11.8
+2026-10-14T15:41:29.0875766Z + @posthog/brand 0.13.0
+2026-10-14T15:41:29.0876388Z + @posthog/hedgehog-mode 0.0.63
+2026-10-14T15:41:29.0876862Z + @posthog/icons 0.36.6
+2026-10-14T15:41:29.0877336Z + @posthog/twig-components 0.1.3
+2026-10-14T15:41:29.0877885Z + @radix-ui/react-accordion 1.2.12
+2026-10-14T15:41:29.0878444Z + @radix-ui/react-collapsible 1.1.12
+2026-10-14T15:41:29.0878975Z + @radix-ui/react-icons 1.3.2
+2026-10-14T15:41:29.0879483Z + @radix-ui/react-menubar 1.1.16
+2026-10-14T15:41:29.0879988Z + @radix-ui/react-portal 1.1.9
+2026-10-14T15:41:29.0880523Z + @radix-ui/react-radio-group 1.3.8
+2026-10-14T15:41:29.0881075Z + @radix-ui/react-scroll-area 1.2.10
+2026-10-14T15:41:29.0881588Z + @radix-ui/react-tabs 1.1.13
+2026-10-14T15:41:29.0882081Z + @radix-ui/react-toolbar 1.1.11
+2026-10-14T15:41:29.0882632Z + @tailwindcss/container-queries 0.1.1
+2026-10-14T15:41:29.0883192Z + @tanstack/react-virtual 3.13.12
+2026-10-14T15:41:29.0883671Z + @typecaast/react 0.5.5
+2026-10-14T15:41:29.0884113Z + @typecaast/skin-kit 0.4.1
+2026-10-14T15:41:29.0884562Z + @typecaast/skins 0.3.3
+2026-10-14T15:41:29.0885013Z + @types/lodash.groupby 4.6.9
+2026-10-14T15:41:29.0885487Z + @types/react-slick 0.23.13
+2026-10-14T15:41:29.0886153Z + @types/styled-components 5.1.34
+2026-10-14T15:41:29.0886733Z + @typescript-eslint/eslint-plugin 4.33.0
+2026-10-14T15:41:29.0887676Z + @wistia/wistia-player-react 0.1.17
+2026-10-14T15:41:29.0888146Z + ahooks 3.9.5
+2026-10-14T15:41:29.0888541Z + algoliasearch 4.25.2
+2026-10-14T15:41:29.0888918Z + axios 1.12.2
+2026-10-14T15:41:29.0889295Z + canvas-confetti 1.9.4
+2026-10-14T15:41:29.0889690Z + chart.js 4.5.0
+2026-10-14T15:41:29.0890084Z + chrome-aws-lambda 10.1.0
+2026-10-14T15:41:29.0890533Z + cloudinary-react 1.8.1
+2026-10-14T15:41:29.0890933Z + clsx 2.1.1
+2026-10-14T15:41:29.0891276Z + cntl 1.0.0
+2026-10-14T15:41:29.0891605Z + core-js 3.45.1
+2026-10-14T15:41:29.0891950Z + dayjs 1.11.18
+2026-10-14T15:41:29.0892331Z + deepmerge 4.3.1
+2026-10-14T15:41:29.0892685Z + dotenv 10.0.0
+2026-10-14T15:41:29.0893040Z + formik 2.4.6
+2026-10-14T15:41:29.0893423Z + framer-motion 10.18.0
+2026-10-14T15:41:29.0893831Z + fs-extra 10.1.0
+2026-10-14T15:41:29.0894259Z + fuse.js 6.6.2
+2026-10-14T15:41:29.0894605Z + gatsby 4.25.9
+2026-10-14T15:41:29.0895016Z + gatsby-cli 4.25.0
+2026-10-14T15:41:29.0895400Z + gatsby-link 4.25.0
+2026-10-14T15:41:29.0895867Z + gatsby-plugin-algolia 0.26.0
+2026-10-14T15:41:29.0896739Z + gatsby-plugin-breakpoints 1.3.11
+2026-10-14T15:41:29.0899240Z + gatsby-plugin-feed 4.25.0
+2026-10-14T15:41:29.0899726Z + gatsby-plugin-image 2.25.0
+2026-10-14T15:41:29.0900257Z + gatsby-plugin-mailchimp 5.2.2
+2026-10-14T15:41:29.0900784Z + gatsby-plugin-manifest 4.25.0
+2026-10-14T15:41:29.0901266Z + gatsby-plugin-mdx 3.20.0
+2026-10-14T15:41:29.0901789Z + gatsby-plugin-no-sourcemaps 4.25.0
+2026-10-14T15:41:29.0902359Z + gatsby-plugin-postcss 5.25.0
+2026-10-14T15:41:29.0902899Z + gatsby-plugin-react-helmet 5.25.0
+2026-10-14T15:41:29.0903458Z + gatsby-plugin-react-svg 3.3.0
+2026-10-14T15:41:29.0903987Z + gatsby-plugin-sitemap 5.25.0
+2026-10-14T15:41:29.0904513Z + gatsby-plugin-smoothscroll 1.2.0
+2026-10-14T15:41:29.0905084Z + gatsby-react-router-scroll 5.25.0
+2026-10-14T15:41:29.0906028Z + gatsby-remark-autolink-headers 5.25.0
+2026-10-14T15:41:29.0906566Z + gatsby-script 1.10.0
+2026-10-14T15:41:29.0907022Z + gatsby-source-ashby 1.0.5
+2026-10-14T15:41:29.0907574Z + gatsby-source-filesystem 4.25.0
+2026-10-14T15:41:29.0908069Z + gatsby-source-git 1.1.0
+2026-10-14T15:41:29.0908577Z + gatsby-transformer-json 4.25.0
+2026-10-14T15:41:29.0909019Z + gemoji 8.1.0
+2026-10-14T15:41:29.0909407Z + git-url-parse 11.6.0
+2026-10-14T15:41:29.0909819Z + github-slugger 1.5.0
+2026-10-14T15:41:29.0910195Z + glob 10.4.5
+2026-10-14T15:41:29.0910570Z + html-to-image 1.11.13
+2026-10-14T15:41:29.0911009Z + instantsearch.js 4.80.0
+2026-10-14T15:41:29.0911428Z + is-relative 1.0.0
+2026-10-14T15:41:29.0911787Z + jsdom 20.0.3
+2026-10-14T15:41:29.0912132Z + jspdf 3.0.2
+2026-10-14T15:41:29.0912464Z + kea 3.1.6
+2026-10-14T15:41:29.0912824Z + kea-loaders 3.1.1
+2026-10-14T15:41:29.0913227Z + kea-localstorage 3.1.0
+2026-10-14T15:41:29.0913656Z + kea-router 3.4.1
+2026-10-14T15:41:29.0914045Z + kea-typegen 3.5.0
+2026-10-14T15:41:29.0914425Z + keen-slider 6.8.6
+2026-10-14T15:41:29.0914792Z + lexical 0.35.0
+2026-10-14T15:41:29.0915139Z + lodash 4.17.21
+2026-10-14T15:41:29.0915516Z + lodash.get 4.4.2
+2026-10-14T15:41:29.0916051Z + lodash.groupby 4.6.0
+2026-10-14T15:41:29.0916465Z + lodash.uniqby 4.7.0
+2026-10-14T15:41:29.0916862Z + lottie-react 2.4.1
+2026-10-14T15:41:29.0917261Z + lucide-react 0.525.0
+2026-10-14T15:41:29.0917663Z + mapbox-gl 3.16.0
+2026-10-14T15:41:29.0918014Z + mark.js 8.11.1
+2026-10-14T15:41:29.0918454Z + markdown-link-extractor 4.0.2
+2026-10-14T15:41:29.0918915Z + markdown-to-jsx 7.7.13
+2026-10-14T15:41:29.0919295Z + md5 2.3.0
+2026-10-14T15:41:29.0919637Z + mermaid 11.11.0
+2026-10-14T15:41:29.0919983Z + mitt 1.2.0
+2026-10-14T15:41:29.0920311Z + mobx 6.13.7
+2026-10-14T15:41:29.0920665Z + multiparty 4.2.3
+2026-10-14T15:41:29.0921048Z + node-fetch 2.7.0
+2026-10-14T15:41:29.0921440Z + node-html-parser 5.4.2
+2026-10-14T15:41:29.0921876Z + openapi-sampler 1.6.1
+2026-10-14T15:41:29.0922277Z + p-limit 3.1.0
+2026-10-14T15:41:29.0922669Z + parse-link-header 2.0.0
+2026-10-14T15:41:29.0923114Z + patch-package 8.0.0
+2026-10-14T15:41:29.0923508Z + pluralize 8.0.0
+2026-10-14T15:41:29.0923898Z + posthog-node 4.18.0
+2026-10-14T15:41:29.0924540Z + prism-react-renderer 1.3.5
+2026-10-14T15:41:29.0924979Z + prismjs 1.30.0
+2026-10-14T15:41:29.0925359Z + prop-types 15.8.1
+2026-10-14T15:41:29.0925762Z + puppeteer-core 13.7.0
+2026-10-14T15:41:29.0926291Z + qs 6.14.0
+2026-10-14T15:41:29.0926645Z + query-string 6.14.1
+2026-10-14T15:41:29.0927028Z + radix-ui 1.4.3
+2026-10-14T15:41:29.0927398Z + rc-slider 9.7.5
+2026-10-14T15:41:29.0927757Z + react 18.3.1
+2026-10-14T15:41:29.0928150Z + react-animate-height 2.1.2
+2026-10-14T15:41:29.0928621Z + react-burger-menu 3.1.0
+2026-10-14T15:41:29.0929062Z + react-calendly 4.4.0
+2026-10-14T15:41:29.0929481Z + react-chartjs-2 5.3.0
+2026-10-14T15:41:29.0929926Z + react-compare-slider 2.2.0
+2026-10-14T15:41:29.0930368Z + react-confetti 6.4.0
+2026-10-14T15:41:29.0930801Z + react-country-flag 3.1.0
+2026-10-14T15:41:29.0931236Z + react-dom 18.3.1
+2026-10-14T15:41:29.0931630Z + react-dropzone 14.3.8
+2026-10-14T15:41:29.0932048Z + react-github-btn 1.4.0
+2026-10-14T15:41:29.0932474Z + react-helmet 5.2.1
+2026-10-14T15:41:29.0932913Z + react-input-autosize 3.0.0
+2026-10-14T15:41:29.0933558Z + react-instantsearch-hooks-web 6.47.3
+2026-10-14T15:41:29.0934156Z + react-intersection-observer 8.34.0
+2026-10-14T15:41:29.0934648Z + react-lottie 1.2.10
+2026-10-14T15:41:29.0935049Z + react-markdown 8.0.7
+2026-10-14T15:41:29.0935469Z + react-masonry-css 1.0.16
+2026-10-14T15:41:29.0936189Z + react-medium-image-zoom 4.4.3
+2026-10-14T15:41:29.0936689Z + react-number-format 5.4.4
+2026-10-14T15:41:29.0937129Z + react-popper 2.3.0
+2026-10-14T15:41:29.0937536Z + react-redux 8.1.3
+2026-10-14T15:41:29.0937923Z + react-scroll 1.9.3
+2026-10-14T15:41:29.0938325Z + react-scrollspy 3.4.3
+2026-10-14T15:41:29.0938760Z + react-simple-maps 3.0.0
+2026-10-14T15:41:29.0939194Z + react-slick 0.28.1
+2026-10-14T15:41:29.0939795Z + react-string-replace 1.1.1
+2026-10-14T15:41:29.0940321Z + react-textarea-autosize 8.5.9
+2026-10-14T15:41:29.0940887Z + react-transition-group 4.4.5
+2026-10-14T15:41:29.0941370Z + react-tsparticles 2.12.2
+2026-10-14T15:41:29.0941827Z + react-webcam 7.2.0
+2026-10-14T15:41:29.0942258Z + react-zoom-pan-pinch 3.7.0
+2026-10-14T15:41:29.0942716Z + reactflow 11.11.4
+2026-10-14T15:41:29.0943077Z + redoc 2.5.0
+2026-10-14T15:41:29.0943411Z + redux 4.2.1
+2026-10-14T15:41:29.0943782Z + rehype-raw 7.0.0
+2026-10-14T15:41:29.0944177Z + rehype-sanitize 5.0.1
+2026-10-14T15:41:29.0944591Z + remark-gfm 3.0.1
+2026-10-14T15:41:29.0944979Z + remove-markdown 0.5.5
+2026-10-14T15:41:29.0945372Z + request 2.88.2
+2026-10-14T15:41:29.0945763Z + rough-notation 0.5.1
+2026-10-14T15:41:29.0946286Z + sass 1.92.1
+2026-10-14T15:41:29.0946655Z + scrapingbee 1.7.5
+2026-10-14T15:41:29.0947052Z + shallow-compare 1.2.2
+2026-10-14T15:41:29.0947432Z + slugify 1.6.6
+2026-10-14T15:41:29.0947830Z + styled-components 5.3.11
+2026-10-14T15:41:29.0948297Z + svg-react-loader 0.4.6
+2026-10-14T15:41:29.0948713Z + svg-sprite 1.5.4
+2026-10-14T15:41:29.0949072Z + swiper 11.2.10
+2026-10-14T15:41:29.0949427Z + swr 2.3.6
+2026-10-14T15:41:29.0949790Z + tailwind-merge 2.6.0
+2026-10-14T15:41:29.0950238Z + tailwindcss-animated 1.1.2
+2026-10-14T15:41:29.0950699Z + textarea-caret 3.1.0
+2026-10-14T15:41:29.0951197Z + tsparticles-preset-stars 2.12.0
+2026-10-14T15:41:29.0951657Z + turndown 7.2.2
+2026-10-14T15:41:29.0952036Z + typescript 5.9.3
+2026-10-14T15:41:29.0952453Z + unist-util-visit 1.4.1
+2026-10-14T15:41:29.0952842Z + yup 0.32.11
+2026-10-14T15:41:29.0953184Z + zustand 4.5.7
+2026-10-14T15:41:29.0953396Z 
+2026-10-14T15:41:29.0953552Z devDependencies:
+2026-10-14T15:41:29.0953939Z + @babel/core 7.28.4
+2026-10-14T15:41:29.0954468Z + @pmmmwh/react-refresh-webpack-plugin 0.5.17
+2026-10-14T15:41:29.0955115Z + @storybook/addon-actions 6.5.16
+2026-10-14T15:41:29.0955677Z + @storybook/addon-essentials 6.5.16
+2026-10-14T15:41:29.0956355Z + @storybook/addon-links 6.5.16
+2026-10-14T15:41:29.0956883Z + @storybook/addon-postcss 2.0.0
+2026-10-14T15:41:29.0957441Z + @storybook/builder-webpack5 6.5.16
+2026-10-14T15:41:29.0957992Z + @storybook/manager-webpack5 6.5.16
+2026-10-14T15:41:29.0958719Z + @storybook/preset-scss 1.0.3
+2026-10-14T15:41:29.0959189Z + @storybook/react 6.5.16
+2026-10-14T15:41:29.0959693Z + @tailwindcss/aspect-ratio 0.4.2
+2026-10-14T15:41:29.0960174Z + @tailwindcss/forms 0.5.10
+2026-10-14T15:41:29.0960676Z + @tailwindcss/line-clamp 0.4.4
+2026-10-14T15:41:29.0961194Z + @tailwindcss/typography 0.5.16
+2026-10-14T15:41:29.0961714Z + @types/canvas-confetti 1.9.0
+2026-10-14T15:41:29.0962185Z + @types/chart.js 2.9.41
+2026-10-14T15:41:29.0962711Z + @types/gatsby-plugin-breakpoints 1.3.5
+2026-10-14T15:41:29.0963232Z + @types/mark.js 8.11.12
+2026-10-14T15:41:29.0963669Z + @types/mdx-js__react 1.5.8
+2026-10-14T15:41:29.0964117Z + @types/react 16.14.66
+2026-10-14T15:41:29.0964588Z + @types/react-burger-menu 2.8.7
+2026-10-14T15:41:29.0965056Z + @types/react-dom 18.3.7
+2026-10-14T15:41:29.0965514Z + @types/react-helmet 6.1.11
+2026-10-14T15:41:29.0966164Z + @types/react-input-autosize 2.2.4
+2026-10-14T15:41:29.0966695Z + @types/react-scroll 1.8.10
+2026-10-14T15:41:29.0967199Z + @types/react-simple-maps 3.0.6
+2026-10-14T15:41:29.0967696Z + @types/textarea-caret 3.0.4
+2026-10-14T15:41:29.0968218Z + @typescript-eslint/parser 4.33.0
+2026-10-14T15:41:29.0968708Z + autoprefixer 10.4.21
+2026-10-14T15:41:29.0969115Z + babel-loader 8.4.1
+2026-10-14T15:41:29.0969508Z + css-loader 6.11.0
+2026-10-14T15:41:29.0969882Z + eslint 7.32.0
+2026-10-14T15:41:29.0970281Z + eslint-plugin-react 7.37.5
+2026-10-14T15:41:29.0970802Z + hastscript 7.2.0
+2026-10-14T15:41:29.0971161Z + husky 9.1.7
+2026-10-14T15:41:29.0971503Z + jest 27.5.1
+2026-10-14T15:41:29.0971862Z + lint-staged 10.5.4
+2026-10-14T15:41:29.0972279Z + markdownlint-cli2 0.19.0
+2026-10-14T15:41:29.1002105Z + node-gyp 12.2.0
+2026-10-14T15:41:29.1002652Z + postcss 8.5.6
+2026-10-14T15:41:29.1003143Z + postinstall-postinstall 2.1.0
+2026-10-14T15:41:29.1003846Z + prettier 2.8.8
+2026-10-14T15:41:29.1004236Z + puppeteer 13.7.0
+2026-10-14T15:41:29.1004655Z + react-dev-utils 11.0.4
+2026-10-14T15:41:29.1005084Z + sass-loader 12.6.0
+2026-10-14T15:41:29.1005471Z + sharp 0.34.5
+2026-10-14T15:41:29.1006106Z + storybook-addon-gatsby 0.0.2
+2026-10-14T15:41:29.1006612Z + storybook-dark-mode 1.1.2
+2026-10-14T15:41:29.1007059Z + style-loader 3.3.4
+2026-10-14T15:41:29.1007461Z + tailwindcss 3.4.17
+2026-10-14T15:41:29.1007857Z + webpack 5.101.3
+2026-10-14T15:41:29.1008235Z + wrangler 4.67.0
+2026-10-14T15:41:29.1008449Z 
+2026-10-14T15:41:29.1009328Z ╭ Warning ─────────────────────────────────────────────────────────────────────╮
+2026-10-14T15:41:29.1010295Z │                                                                              │
+2026-10-14T15:41:29.1011293Z │   Ignored build scripts: workerd.                                            │
+2026-10-14T15:41:29.1012437Z │   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+2026-10-14T15:41:29.1013555Z │   to run scripts.                                                            │
+2026-10-14T15:41:29.1014472Z │                                                                              │
+2026-10-14T15:41:29.1015480Z ╰──────────────────────────────────────────────────────────────────────────────╯
+2026-10-14T15:41:29.1016084Z 
+2026-10-14T15:41:29.1333765Z . postinstall$ patch-package
+2026-10-14T15:41:29.3052764Z . postinstall: patch-package 8.0.0
+2026-10-14T15:41:29.3054478Z . postinstall: Applying patches...
+2026-10-14T15:41:29.3101627Z . postinstall: @typecaast/react@0.5.5 ✔
+2026-10-14T15:41:29.3127925Z . postinstall: kea@3.1.6 ✔
+2026-10-14T15:41:29.3176811Z . postinstall: Done
+2026-10-14T15:41:29.3182724Z . prepare$ husky
+2026-10-14T15:41:29.3675507Z . prepare: Done
+2026-10-14T15:41:29.3923502Z Done in 10.2s using pnpm v10.23.0
+2026-10-14T15:41:29.4457245Z ##[group]Run pnpm strapi-sync
+2026-10-14T15:41:29.4457760Z [36;1mpnpm strapi-sync[0m
+2026-10-14T15:41:29.4544391Z shell: /usr/bin/bash -e {0}
+2026-10-14T15:41:29.4544719Z env:
+2026-10-14T15:41:29.4545016Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-10-14T15:41:29.4545684Z   STRAPI_API_HOST: ***
+2026-10-14T15:41:29.4547259Z   STRAPI_TOKEN: ***
+2026-10-14T15:41:29.4547505Z ##[endgroup]
+2026-10-14T15:41:29.7807135Z 
+2026-10-14T15:41:29.7808252Z > posthog.com@1.0.0 strapi-sync /home/runner/work/posthog.com/posthog.com
+2026-10-14T15:41:29.7809310Z > npx --yes tsx@4.20.6 scripts/run-post-build-tasks.ts strapi
+2026-10-14T15:41:29.7809771Z 
+2026-10-14T15:41:52.0251596Z Loading post-build data from https://posthog.com/post-build-data.json
+2026-10-14T15:42:05.5242805Z {
+2026-10-14T15:42:05.5243223Z   status: 400,
+2026-10-14T15:42:05.5243649Z   name: 'ValidationError',
+2026-10-14T15:42:05.5244179Z   message: 'This attribute must be unique',
+2026-10-14T15:42:05.5244833Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:05.5245432Z } blog/best-open-source-analytics-tools.mdx
+2026-10-14T15:42:05.5783925Z {
+2026-10-14T15:42:05.5784331Z   status: 400,
+2026-10-14T15:42:05.5784700Z   name: 'ValidationError',
+2026-10-14T15:42:05.5785072Z   message: 'This attribute must be unique',
+2026-10-14T15:42:05.5785437Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:05.5785863Z } blog/best-microsoft-clarity-alternatives.mdx
+2026-10-14T15:42:10.8368914Z {
+2026-10-14T15:42:10.8369220Z   status: 400,
+2026-10-14T15:42:10.8369512Z   name: 'ValidationError',
+2026-10-14T15:42:10.8369868Z   message: 'This attribute must be unique',
+2026-10-14T15:42:10.8370237Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:10.8370645Z } blog/nov-24-shai-hulud-attack-post-mortem.md
+2026-10-14T15:42:13.6138392Z {
+2026-10-14T15:42:13.6138834Z   status: 400,
+2026-10-14T15:42:13.6139253Z   name: 'ValidationError',
+2026-10-14T15:42:13.6139782Z   message: 'This attribute must be unique',
+2026-10-14T15:42:13.6140379Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:13.6140907Z } blog/posthog-alternatives.mdx
+2026-10-14T15:42:26.8840756Z {
+2026-10-14T15:42:26.8841234Z   status: 400,
+2026-10-14T15:42:26.8843227Z   name: 'ValidationError',
+2026-10-14T15:42:26.8843749Z   message: 'Invalid relations',
+2026-10-14T15:42:26.8845187Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:26.8846836Z } newsletter/beyond-the-10x-engineer.md
+2026-10-14T15:42:38.4698957Z {
+2026-10-14T15:42:38.4699264Z   status: 400,
+2026-10-14T15:42:38.4699562Z   name: 'ValidationError',
+2026-10-14T15:42:38.4699927Z   message: 'This attribute must be unique',
+2026-10-14T15:42:38.4700296Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:38.4700669Z } tutorials/api-get-insights-persons.mdx
+2026-10-14T15:42:38.5730371Z {
+2026-10-14T15:42:38.5730674Z   status: 400,
+2026-10-14T15:42:38.5730964Z   name: 'ValidationError',
+2026-10-14T15:42:38.5731327Z   message: 'This attribute must be unique',
+2026-10-14T15:42:38.5731732Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:38.5732100Z } tutorials/api-capture-events.mdx
+2026-10-14T15:42:39.9283779Z {
+2026-10-14T15:42:39.9284082Z   status: 400,
+2026-10-14T15:42:39.9284418Z   name: 'ValidationError',
+2026-10-14T15:42:39.9284776Z   message: 'This attribute must be unique',
+2026-10-14T15:42:39.9285140Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:39.9285483Z } tutorials/churn-rate.mdx
+2026-10-14T15:42:40.0874654Z {
+2026-10-14T15:42:40.0875072Z   status: 400,
+2026-10-14T15:42:40.0875458Z   name: 'ValidationError',
+2026-10-14T15:42:40.0876200Z   message: 'This attribute must be unique',
+2026-10-14T15:42:40.0876736Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:40.0877300Z } tutorials/css-selectors-for-actions.mdx
+2026-10-14T15:42:41.1324446Z {
+2026-10-14T15:42:41.1324855Z   status: 400,
+2026-10-14T15:42:41.1325259Z   name: 'ValidationError',
+2026-10-14T15:42:41.1325777Z   message: 'This attribute must be unique',
+2026-10-14T15:42:41.1326558Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:41.1327802Z } tutorials/filter-internal-users.mdx
+2026-10-14T15:42:41.3155475Z {
+2026-10-14T15:42:41.3156097Z   status: 400,
+2026-10-14T15:42:41.3156504Z   name: 'ValidationError',
+2026-10-14T15:42:41.3157059Z   message: 'This attribute must be unique',
+2026-10-14T15:42:41.3157595Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:41.3158175Z } tutorials/first-last-touch-attribution.mdx
+2026-10-14T15:42:41.4497708Z {
+2026-10-14T15:42:41.4498131Z   status: 400,
+2026-10-14T15:42:41.4498534Z   name: 'ValidationError',
+2026-10-14T15:42:41.4499041Z   message: 'This attribute must be unique',
+2026-10-14T15:42:41.4499578Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:41.4500170Z } tutorials/feedback-interviews-site-apps.mdx
+2026-10-14T15:42:41.9724916Z {
+2026-10-14T15:42:41.9725337Z   status: 400,
+2026-10-14T15:42:41.9725736Z   name: 'ValidationError',
+2026-10-14T15:42:41.9726552Z   message: 'This attribute must be unique',
+2026-10-14T15:42:41.9727089Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:41.9727693Z } tutorials/filter-session-recordings.mdx
+2026-10-14T15:42:42.7727849Z {
+2026-10-14T15:42:42.7728282Z   status: 400,
+2026-10-14T15:42:42.7728711Z   name: 'ValidationError',
+2026-10-14T15:42:42.7729302Z   message: 'This attribute must be unique',
+2026-10-14T15:42:42.7729872Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:42.7730478Z } tutorials/hogql-breakdowns.mdx
+2026-10-14T15:42:44.7327593Z {
+2026-10-14T15:42:44.7327898Z   status: 400,
+2026-10-14T15:42:44.7328195Z   name: 'ValidationError',
+2026-10-14T15:42:44.7328555Z   message: 'This attribute must be unique',
+2026-10-14T15:42:44.7328922Z   details: { errors: [ [Object] ] }
+2026-10-14T15:42:44.7329288Z } tutorials/limit-session-recordings.mdx
+2026-10-14T15:44:52.4014287Z TypeError: fetch failed
+2026-10-14T15:44:52.4014730Z     at node:internal/deps/undici/undici:15270:13 {
+2026-10-14T15:44:52.4015268Z   [cause]: Error: read ECONNRESET
+2026-10-14T15:44:52.4016517Z       at TLSWrap.onStreamRead (node:internal/stream_base_commons:216:20) {
+2026-10-14T15:44:52.4017256Z     errno: -104,
+2026-10-14T15:44:52.4017632Z     code: 'ECONNRESET',
+2026-10-14T15:44:52.4018023Z     syscall: 'read'
+2026-10-14T15:44:52.4018839Z   }
+2026-10-14T15:44:52.4019140Z }
+2026-10-14T15:45:18.0162737Z Post job cleanup.
+2026-10-14T15:45:18.1448544Z (node:2580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-14T15:45:18.1449426Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-14T15:45:18.1452741Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-acac3c01f1bbc566449df67857451fdc204c17bedfc5907475d266e6c3a88edc, not saving cache.
+2026-10-14T15:45:18.1568780Z Post job cleanup.
+2026-10-14T15:45:18.2176975Z Pruning is unnecessary.
+2026-10-14T15:45:18.2317555Z Post job cleanup.
+2026-10-14T15:45:18.3166392Z [command]/usr/bin/git version
+2026-10-14T15:45:18.3205797Z git version 2.55.0
+2026-10-14T15:45:18.3242362Z Temporarily overriding HOME='/home/runner/work/_temp/a91d8186-47eb-44f4-8985-c6f205bf286a' before making global git config changes
+2026-10-14T15:45:18.3243264Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:45:18.3247641Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/posthog.com/posthog.com
+2026-10-14T15:45:18.3280384Z Removing SSH command configuration
+2026-10-14T15:45:18.3286806Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:45:18.3325606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:45:18.3580324Z Removing HTTP extra header
+2026-10-14T15:45:18.3585747Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:45:18.3620257Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:45:18.3871148Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:45:18.3879103Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:45:18.3908208Z includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path
+2026-10-14T15:45:18.3909017Z includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path
+2026-10-14T15:45:18.3909620Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:45:18.3910158Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:45:18.3917152Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path
+2026-10-14T15:45:18.3940152Z /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.3950365Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git.path /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.3987369Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path
+2026-10-14T15:45:18.4012712Z /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4021779Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/posthog.com/posthog.com/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4055158Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:45:18.4079172Z /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4086949Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4120378Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:45:18.4143833Z /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4154184Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config
+2026-10-14T15:45:18.4193252Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:45:18.4444000Z Removing credentials config '/home/runner/work/_temp/git-credentials-a6d7481c-8475-4edf-8c99-23abc8514cc5.config'
+2026-10-14T15:45:18.4618764Z Cleaning up orphan processes
+2026-10-14T15:45:18.4923584Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

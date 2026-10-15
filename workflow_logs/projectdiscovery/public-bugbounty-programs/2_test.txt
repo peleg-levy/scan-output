@@ -1,0 +1,185 @@
+﻿2026-07-20T10:56:24.8703832Z Current runner version: '2.335.1'
+2026-07-20T10:56:24.8729986Z ##[group]Runner Image Provisioner
+2026-07-20T10:56:24.8730896Z Hosted Compute Agent
+2026-07-20T10:56:24.8731494Z Version: 20260707.563
+2026-07-20T10:56:24.8732265Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-20T10:56:24.8733037Z Build Date: 2026-07-07T19:33:50Z
+2026-07-20T10:56:24.8733780Z Worker ID: {6acfd03f-0dd8-4e60-9d6b-b21533820102}
+2026-07-20T10:56:24.8734556Z Azure Region: northcentralus
+2026-07-20T10:56:24.8735232Z ##[endgroup]
+2026-07-20T10:56:24.8736623Z ##[group]Operating System
+2026-07-20T10:56:24.8737292Z Ubuntu
+2026-07-20T10:56:24.8738150Z 24.04.4
+2026-07-20T10:56:24.8738870Z LTS
+2026-07-20T10:56:24.8739459Z ##[endgroup]
+2026-07-20T10:56:24.8740080Z ##[group]Runner Image
+2026-07-20T10:56:24.8740762Z Image: ubuntu-24.04
+2026-07-20T10:56:24.8741366Z Version: 20260714.240.1
+2026-07-20T10:56:24.8742784Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-20T10:56:24.8744354Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+2026-07-20T10:56:24.8745353Z ##[endgroup]
+2026-07-20T10:56:24.8746558Z ##[group]GITHUB_TOKEN Permissions
+2026-07-20T10:56:24.8748986Z Contents: read
+2026-07-20T10:56:24.8749627Z Metadata: read
+2026-07-20T10:56:24.8750323Z PullRequests: read
+2026-07-20T10:56:24.8750951Z ##[endgroup]
+2026-07-20T10:56:24.8753070Z Secret source: None
+2026-07-20T10:56:24.8754045Z Prepare workflow directory
+2026-07-20T10:56:24.9100705Z Prepare all required actions
+2026-07-20T10:56:24.9139607Z Getting action download info
+2026-07-20T10:56:25.1625456Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-07-20T10:56:25.2556889Z Download action repository 'projectdiscovery/actions@v1' (SHA:3873640690165ae484e5f44607d89d0b7e77d91a)
+2026-07-20T10:56:25.5337330Z Getting action download info
+2026-07-20T10:56:25.6433701Z Download action repository 'actions/setup-node@v6' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-07-20T10:56:26.0160021Z Complete job name: test
+2026-07-20T10:56:26.0920378Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T10:56:26.0929603Z ##[group]Run actions/checkout@v4
+2026-07-20T10:56:26.0930383Z with:
+2026-07-20T10:56:26.0930976Z   repository: projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:26.0935499Z   token: ***
+2026-07-20T10:56:26.0935973Z   ssh-strict: true
+2026-07-20T10:56:26.0936444Z   ssh-user: git
+2026-07-20T10:56:26.0936927Z   persist-credentials: true
+2026-07-20T10:56:26.0937453Z   clean: true
+2026-07-20T10:56:26.0938076Z   sparse-checkout-cone-mode: true
+2026-07-20T10:56:26.0938638Z   fetch-depth: 1
+2026-07-20T10:56:26.0939094Z   fetch-tags: false
+2026-07-20T10:56:26.0939606Z   show-progress: true
+2026-07-20T10:56:26.0940095Z   lfs: false
+2026-07-20T10:56:26.0940595Z   submodules: false
+2026-07-20T10:56:26.0941089Z   set-safe-directory: true
+2026-07-20T10:56:26.0941841Z ##[endgroup]
+2026-07-20T10:56:26.1950157Z Syncing repository: projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:26.1952386Z ##[group]Getting Git version info
+2026-07-20T10:56:26.1953592Z Working directory is '/home/runner/work/public-bugbounty-programs/public-bugbounty-programs'
+2026-07-20T10:56:26.1954942Z [command]/usr/bin/git version
+2026-07-20T10:56:26.1995101Z git version 2.54.0
+2026-07-20T10:56:26.2015952Z ##[endgroup]
+2026-07-20T10:56:26.2032652Z Temporarily overriding HOME='/home/runner/work/_temp/ae99b22e-ad89-459b-9d68-18b277a2a358' before making global git config changes
+2026-07-20T10:56:26.2035331Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T10:56:26.2039385Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:26.2086470Z Deleting the contents of '/home/runner/work/public-bugbounty-programs/public-bugbounty-programs'
+2026-07-20T10:56:26.2090625Z ##[group]Initializing the repository
+2026-07-20T10:56:26.2095222Z [command]/usr/bin/git init /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:26.2171506Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-20T10:56:26.2172802Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-20T10:56:26.2173814Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-20T10:56:26.2174837Z hint: call:
+2026-07-20T10:56:26.2175306Z hint:
+2026-07-20T10:56:26.2175904Z hint: 	git config --global init.defaultBranch <name>
+2026-07-20T10:56:26.2176764Z hint:
+2026-07-20T10:56:26.2177718Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-20T10:56:26.2179088Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-20T10:56:26.2179917Z hint:
+2026-07-20T10:56:26.2180384Z hint: 	git branch -m <name>
+2026-07-20T10:56:26.2180920Z hint:
+2026-07-20T10:56:26.2181605Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-20T10:56:26.2183487Z Initialized empty Git repository in /home/runner/work/public-bugbounty-programs/public-bugbounty-programs/.git/
+2026-07-20T10:56:26.2186687Z [command]/usr/bin/git remote add origin https://github.com/projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:26.2225890Z ##[endgroup]
+2026-07-20T10:56:26.2226731Z ##[group]Disabling automatic garbage collection
+2026-07-20T10:56:26.2229561Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-20T10:56:26.2266267Z ##[endgroup]
+2026-07-20T10:56:26.2267068Z ##[group]Setting up auth
+2026-07-20T10:56:26.2268120Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T10:56:26.2299313Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T10:56:26.2620569Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T10:56:26.2651829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T10:56:26.2880312Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T10:56:26.2913445Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T10:56:26.3146643Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-20T10:56:26.3182417Z ##[endgroup]
+2026-07-20T10:56:26.3183936Z ##[group]Fetching the repository
+2026-07-20T10:56:26.3192692Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +916c738b8194c33d251e702933f63fd3d73801a4:refs/remotes/pull/1102/merge
+2026-07-20T10:56:26.6484948Z From https://github.com/projectdiscovery/public-bugbounty-programs
+2026-07-20T10:56:26.6486115Z  * [new ref]         916c738b8194c33d251e702933f63fd3d73801a4 -> pull/1102/merge
+2026-07-20T10:56:26.6515546Z ##[endgroup]
+2026-07-20T10:56:26.6516671Z ##[group]Determining the checkout info
+2026-07-20T10:56:26.6518500Z ##[endgroup]
+2026-07-20T10:56:26.6524571Z [command]/usr/bin/git sparse-checkout disable
+2026-07-20T10:56:26.6568464Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-20T10:56:26.6595457Z ##[group]Checking out the ref
+2026-07-20T10:56:26.6599246Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1102/merge
+2026-07-20T10:56:26.6673488Z Note: switching to 'refs/remotes/pull/1102/merge'.
+2026-07-20T10:56:26.6674352Z 
+2026-07-20T10:56:26.6674844Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-07-20T10:56:26.6676088Z changes and commit them, and you can discard any commits you make in this
+2026-07-20T10:56:26.6677022Z state without impacting any branches by switching back to a branch.
+2026-07-20T10:56:26.6677906Z 
+2026-07-20T10:56:26.6678471Z If you want to create a new branch to retain commits you create, you may
+2026-07-20T10:56:26.6679812Z do so (now or later) by using -c with the switch command. Example:
+2026-07-20T10:56:26.6680573Z 
+2026-07-20T10:56:26.6680914Z   git switch -c <new-branch-name>
+2026-07-20T10:56:26.6681424Z 
+2026-07-20T10:56:26.6681742Z Or undo this operation with:
+2026-07-20T10:56:26.6682221Z 
+2026-07-20T10:56:26.6682529Z   git switch -
+2026-07-20T10:56:26.6682949Z 
+2026-07-20T10:56:26.6683590Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-07-20T10:56:26.6684491Z 
+2026-07-20T10:56:26.6685535Z HEAD is now at 916c738 Merge 0e274c4d294f1107e1b8c783a1f5c3108ec35d7d into ecce42189ec1a95aea8626804baf2dc63c3b2524
+2026-07-20T10:56:26.6688755Z ##[endgroup]
+2026-07-20T10:56:26.6722746Z [command]/usr/bin/git log -1 --format=%H
+2026-07-20T10:56:26.6746401Z 916c738b8194c33d251e702933f63fd3d73801a4
+2026-07-20T10:56:26.6976614Z ##[group]Run projectdiscovery/actions/setup/ajv@v1
+2026-07-20T10:56:26.6977250Z with:
+2026-07-20T10:56:26.6977652Z   node-version: latest
+2026-07-20T10:56:26.6978372Z ##[endgroup]
+2026-07-20T10:56:26.7227061Z ##[group]Run actions/setup-node@v6
+2026-07-20T10:56:26.7227626Z with:
+2026-07-20T10:56:26.7228329Z   node-version: latest
+2026-07-20T10:56:26.7228791Z   check-latest: false
+2026-07-20T10:56:26.7232760Z   token: ***
+2026-07-20T10:56:26.7233198Z   package-manager-cache: true
+2026-07-20T10:56:26.7233691Z ##[endgroup]
+2026-07-20T10:56:26.9211003Z getting latest node version...
+2026-07-20T10:56:26.9212156Z getting latest node version...
+2026-07-20T10:56:26.9226656Z Attempting to download v26.5.0...
+2026-07-20T10:56:27.4194906Z Acquiring 26.5.0 - x64 from https://github.com/actions/node-versions/releases/download/26.5.0-28944078721/node-26.5.0-linux-x64.tar.gz
+2026-07-20T10:56:27.8180984Z Extracting ...
+2026-07-20T10:56:27.8314788Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/bb500388-629c-4ddb-9780-7752f582bded -f /home/runner/work/_temp/7b719c6e-200f-4aa9-b59a-f0080feb2138
+2026-07-20T10:56:29.3356162Z Adding to the cache ...
+2026-07-20T10:56:31.0322826Z ##[group]Environment details
+2026-07-20T10:56:31.2598689Z node: v26.5.0
+2026-07-20T10:56:31.2599170Z npm: 11.17.0
+2026-07-20T10:56:31.2599433Z yarn: 1.22.22
+2026-07-20T10:56:31.2600362Z ##[endgroup]
+2026-07-20T10:56:31.2824403Z ##[group]Run npm i -g ajv-cli
+2026-07-20T10:56:31.2824841Z [36;1mnpm i -g ajv-cli[0m
+2026-07-20T10:56:31.2913433Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-20T10:56:31.2913879Z ##[endgroup]
+2026-07-20T10:56:32.1489948Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-07-20T10:56:32.1518549Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-20T10:56:32.3782282Z 
+2026-07-20T10:56:32.3783022Z added 26 packages in 1s
+2026-07-20T10:56:32.3783367Z 
+2026-07-20T10:56:32.3783926Z 4 packages are looking for funding
+2026-07-20T10:56:32.3784452Z   run `npm fund` for details
+2026-07-20T10:56:32.4225824Z ##[group]Run make compile
+2026-07-20T10:56:32.4226139Z [36;1mmake compile[0m
+2026-07-20T10:56:32.4287672Z shell: /usr/bin/bash -e {0}
+2026-07-20T10:56:32.4288191Z ##[endgroup]
+2026-07-20T10:56:34.3169333Z ##[group]Run make test
+2026-07-20T10:56:34.3170092Z [36;1mmake test[0m
+2026-07-20T10:56:34.3231376Z shell: /usr/bin/bash -e {0}
+2026-07-20T10:56:34.3231675Z ##[endgroup]
+2026-07-20T10:56:34.5325941Z dist/data.json passed test
+2026-07-20T10:56:34.5479627Z Post job cleanup.
+2026-07-20T10:56:34.5538661Z Post job cleanup.
+2026-07-20T10:56:34.6939315Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T10:56:34.6940534Z Post job cleanup.
+2026-07-20T10:56:34.7771868Z [command]/usr/bin/git version
+2026-07-20T10:56:34.7811688Z git version 2.54.0
+2026-07-20T10:56:34.7846656Z Temporarily overriding HOME='/home/runner/work/_temp/490d33b9-7f50-429e-bd25-45db933dc2e2' before making global git config changes
+2026-07-20T10:56:34.7847621Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T10:56:34.7852751Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/public-bugbounty-programs/public-bugbounty-programs
+2026-07-20T10:56:34.7888115Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T10:56:34.7920250Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T10:56:34.8181255Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T10:56:34.8206710Z http.https://github.com/.extraheader
+2026-07-20T10:56:34.8216510Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-20T10:56:34.8249031Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T10:56:34.8476933Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T10:56:34.8509430Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T10:56:34.8867446Z Cleaning up orphan processes
+2026-07-20T10:56:34.9144927Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

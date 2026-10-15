@@ -1,0 +1,310 @@
+﻿2026-09-08T17:47:02.9405389Z Current runner version: '2.337.0'
+2026-09-08T17:47:02.9430714Z ##[group]Runner Image Provisioner
+2026-09-08T17:47:02.9431606Z Hosted Compute Agent
+2026-09-08T17:47:02.9432297Z Version: 20260828.587
+2026-09-08T17:47:02.9433024Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-08T17:47:02.9433788Z Build Date: 2026-08-28T16:44:25Z
+2026-09-08T17:47:02.9434609Z Worker ID: {f68e809c-4081-4485-837c-37a774c1e8ae}
+2026-09-08T17:47:02.9435357Z Azure Region: northcentralus
+2026-09-08T17:47:02.9436039Z ##[endgroup]
+2026-09-08T17:47:02.9437690Z ##[group]Operating System
+2026-09-08T17:47:02.9438352Z Ubuntu
+2026-09-08T17:47:02.9438999Z 24.04.4
+2026-09-08T17:47:02.9439592Z LTS
+2026-09-08T17:47:02.9440181Z ##[endgroup]
+2026-09-08T17:47:02.9440830Z ##[group]Runner Image
+2026-09-08T17:47:02.9441474Z Image: ubuntu-24.04
+2026-09-08T17:47:02.9442132Z Version: 20260831.293.1
+2026-09-08T17:47:02.9443466Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260831.293/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-08T17:47:02.9445145Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260831.293
+2026-09-08T17:47:02.9446177Z ##[endgroup]
+2026-09-08T17:47:02.9447711Z ##[group]GITHUB_TOKEN Permissions
+2026-09-08T17:47:02.9449728Z Contents: read
+2026-09-08T17:47:02.9450523Z Metadata: read
+2026-09-08T17:47:02.9451122Z ##[endgroup]
+2026-09-08T17:47:02.9453216Z Secret source: Actions
+2026-09-08T17:47:02.9454384Z Prepare workflow directory
+2026-09-08T17:47:02.9861353Z Prepare all required actions
+2026-09-08T17:47:02.9927977Z Getting action download info
+2026-09-08T17:47:03.2591159Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-08T17:47:03.3722980Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-08T17:47:03.5664034Z Complete job name: check-coding-standards
+2026-09-08T17:47:03.6417605Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-08T17:47:03.6426268Z ##[group]Run actions/checkout@v4
+2026-09-08T17:47:03.6427228Z with:
+2026-09-08T17:47:03.6427695Z   submodules: true
+2026-09-08T17:47:03.6428767Z   token: ***
+2026-09-08T17:47:03.6429297Z   repository: invoice-collector/invoice-collector
+2026-09-08T17:47:03.6429936Z   ssh-strict: true
+2026-09-08T17:47:03.6430394Z   ssh-user: git
+2026-09-08T17:47:03.6430873Z   persist-credentials: true
+2026-09-08T17:47:03.6431401Z   clean: true
+2026-09-08T17:47:03.6431878Z   sparse-checkout-cone-mode: true
+2026-09-08T17:47:03.6432426Z   fetch-depth: 1
+2026-09-08T17:47:03.6432886Z   fetch-tags: false
+2026-09-08T17:47:03.6433357Z   show-progress: true
+2026-09-08T17:47:03.6433874Z   lfs: false
+2026-09-08T17:47:03.6434339Z   set-safe-directory: true
+2026-09-08T17:47:03.6434868Z   allow-unsafe-pr-checkout: false
+2026-09-08T17:47:03.6435617Z ##[endgroup]
+2026-09-08T17:47:03.7473896Z Syncing repository: invoice-collector/invoice-collector
+2026-09-08T17:47:03.7476488Z ##[group]Getting Git version info
+2026-09-08T17:47:03.7478074Z Working directory is '/home/runner/work/invoice-collector/invoice-collector'
+2026-09-08T17:47:03.7479906Z [command]/usr/bin/git version
+2026-09-08T17:47:03.7508770Z git version 2.55.0
+2026-09-08T17:47:03.7528111Z ##[endgroup]
+2026-09-08T17:47:03.7542725Z Temporarily overriding HOME='/home/runner/work/_temp/dd1b254f-f22c-42b4-b515-dbab7d52faaa' before making global git config changes
+2026-09-08T17:47:03.7544947Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-08T17:47:03.7547528Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-09-08T17:47:03.7593269Z Deleting the contents of '/home/runner/work/invoice-collector/invoice-collector'
+2026-09-08T17:47:03.7596828Z ##[group]Initializing the repository
+2026-09-08T17:47:03.7601309Z [command]/usr/bin/git init /home/runner/work/invoice-collector/invoice-collector
+2026-09-08T17:47:03.7698635Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-08T17:47:03.7700072Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-08T17:47:03.7701058Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-08T17:47:03.7701838Z hint: call:
+2026-09-08T17:47:03.7702278Z hint:
+2026-09-08T17:47:03.7703098Z hint: 	git config --global init.defaultBranch <name>
+2026-09-08T17:47:03.7704028Z hint:
+2026-09-08T17:47:03.7704982Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-08T17:47:03.7706039Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-08T17:47:03.7706870Z hint:
+2026-09-08T17:47:03.7707522Z hint: 	git branch -m <name>
+2026-09-08T17:47:03.7708036Z hint:
+2026-09-08T17:47:03.7708718Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-08T17:47:03.7709814Z Initialized empty Git repository in /home/runner/work/invoice-collector/invoice-collector/.git/
+2026-09-08T17:47:03.7712763Z [command]/usr/bin/git remote add origin https://github.com/invoice-collector/invoice-collector
+2026-09-08T17:47:03.7748204Z ##[endgroup]
+2026-09-08T17:47:03.7749059Z ##[group]Disabling automatic garbage collection
+2026-09-08T17:47:03.7751858Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-08T17:47:03.7783962Z ##[endgroup]
+2026-09-08T17:47:03.7784839Z ##[group]Setting up auth
+2026-09-08T17:47:03.7791141Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-08T17:47:03.7826200Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-08T17:47:03.8179321Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-08T17:47:03.8225226Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-08T17:47:03.8482031Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-08T17:47:03.8522014Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-08T17:47:03.8762038Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-08T17:47:03.8804534Z ##[endgroup]
+2026-09-08T17:47:03.8805523Z ##[group]Fetching the repository
+2026-09-08T17:47:03.8815369Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9c051e8a74f63c002499d6884ed90c51cd12b972:refs/remotes/pull/561/merge
+2026-09-08T17:47:04.6503833Z From https://github.com/invoice-collector/invoice-collector
+2026-09-08T17:47:04.6505857Z  * [new ref]           9c051e8a74f63c002499d6884ed90c51cd12b972 -> pull/561/merge
+2026-09-08T17:47:04.6511606Z ##[endgroup]
+2026-09-08T17:47:04.6512982Z ##[group]Determining the checkout info
+2026-09-08T17:47:04.6517365Z ##[endgroup]
+2026-09-08T17:47:04.6528256Z [command]/usr/bin/git sparse-checkout disable
+2026-09-08T17:47:04.6571362Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-08T17:47:04.6617960Z ##[group]Checking out the ref
+2026-09-08T17:47:04.6621015Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/561/merge
+2026-09-08T17:47:05.6808589Z Updating files:  32% (3044/9240)
+2026-09-08T17:47:05.6876719Z Updating files:  33% (3050/9240)
+2026-09-08T17:47:05.6944124Z Updating files:  34% (3142/9240)
+2026-09-08T17:47:05.7012452Z Updating files:  35% (3234/9240)
+2026-09-08T17:47:05.7079651Z Updating files:  36% (3327/9240)
+2026-09-08T17:47:05.7146441Z Updating files:  37% (3419/9240)
+2026-09-08T17:47:05.7213913Z Updating files:  38% (3512/9240)
+2026-09-08T17:47:05.7280704Z Updating files:  39% (3604/9240)
+2026-09-08T17:47:05.7347445Z Updating files:  40% (3696/9240)
+2026-09-08T17:47:05.7414367Z Updating files:  41% (3789/9240)
+2026-09-08T17:47:05.7481253Z Updating files:  42% (3881/9240)
+2026-09-08T17:47:05.7546721Z Updating files:  43% (3974/9240)
+2026-09-08T17:47:05.7612777Z Updating files:  44% (4066/9240)
+2026-09-08T17:47:05.7679327Z Updating files:  45% (4158/9240)
+2026-09-08T17:47:05.7745683Z Updating files:  46% (4251/9240)
+2026-09-08T17:47:05.7812882Z Updating files:  47% (4343/9240)
+2026-09-08T17:47:05.7912491Z Updating files:  48% (4436/9240)
+2026-09-08T17:47:05.7980718Z Updating files:  49% (4528/9240)
+2026-09-08T17:47:05.8050200Z Updating files:  50% (4620/9240)
+2026-09-08T17:47:05.9485472Z Updating files:  51% (4713/9240)
+2026-09-08T17:47:05.9557196Z Updating files:  52% (4805/9240)
+2026-09-08T17:47:05.9626798Z Updating files:  53% (4898/9240)
+2026-09-08T17:47:05.9695823Z Updating files:  54% (4990/9240)
+2026-09-08T17:47:05.9765588Z Updating files:  55% (5082/9240)
+2026-09-08T17:47:05.9835926Z Updating files:  56% (5175/9240)
+2026-09-08T17:47:05.9905195Z Updating files:  57% (5267/9240)
+2026-09-08T17:47:05.9973818Z Updating files:  58% (5360/9240)
+2026-09-08T17:47:06.0043830Z Updating files:  59% (5452/9240)
+2026-09-08T17:47:06.0111710Z Updating files:  60% (5544/9240)
+2026-09-08T17:47:06.0181288Z Updating files:  61% (5637/9240)
+2026-09-08T17:47:06.0249586Z Updating files:  62% (5729/9240)
+2026-09-08T17:47:06.0317198Z Updating files:  63% (5822/9240)
+2026-09-08T17:47:06.0385225Z Updating files:  64% (5914/9240)
+2026-09-08T17:47:06.0454884Z Updating files:  65% (6006/9240)
+2026-09-08T17:47:06.0548298Z Updating files:  66% (6099/9240)
+2026-09-08T17:47:06.0634544Z Updating files:  67% (6191/9240)
+2026-09-08T17:47:06.0715212Z Updating files:  68% (6284/9240)
+2026-09-08T17:47:06.0800446Z Updating files:  69% (6376/9240)
+2026-09-08T17:47:06.0869934Z Updating files:  70% (6468/9240)
+2026-09-08T17:47:06.0937599Z Updating files:  71% (6561/9240)
+2026-09-08T17:47:06.1006246Z Updating files:  72% (6653/9240)
+2026-09-08T17:47:06.1072926Z Updating files:  73% (6746/9240)
+2026-09-08T17:47:06.1139846Z Updating files:  74% (6838/9240)
+2026-09-08T17:47:06.1207099Z Updating files:  75% (6930/9240)
+2026-09-08T17:47:06.1274819Z Updating files:  76% (7023/9240)
+2026-09-08T17:47:06.1345186Z Updating files:  77% (7115/9240)
+2026-09-08T17:47:06.1413048Z Updating files:  78% (7208/9240)
+2026-09-08T17:47:06.1508455Z Updating files:  79% (7300/9240)
+2026-09-08T17:47:06.1578334Z Updating files:  80% (7392/9240)
+2026-09-08T17:47:06.1645914Z Updating files:  81% (7485/9240)
+2026-09-08T17:47:06.1715316Z Updating files:  82% (7577/9240)
+2026-09-08T17:47:06.1783044Z Updating files:  83% (7670/9240)
+2026-09-08T17:47:06.1851318Z Updating files:  84% (7762/9240)
+2026-09-08T17:47:06.1920208Z Updating files:  85% (7854/9240)
+2026-09-08T17:47:06.1988776Z Updating files:  86% (7947/9240)
+2026-09-08T17:47:06.2058542Z Updating files:  87% (8039/9240)
+2026-09-08T17:47:06.2128619Z Updating files:  88% (8132/9240)
+2026-09-08T17:47:06.2196877Z Updating files:  89% (8224/9240)
+2026-09-08T17:47:06.2264480Z Updating files:  90% (8316/9240)
+2026-09-08T17:47:06.2331538Z Updating files:  91% (8409/9240)
+2026-09-08T17:47:06.2401366Z Updating files:  92% (8501/9240)
+2026-09-08T17:47:06.2469238Z Updating files:  93% (8594/9240)
+2026-09-08T17:47:06.2537336Z Updating files:  94% (8686/9240)
+2026-09-08T17:47:06.2605271Z Updating files:  95% (8778/9240)
+2026-09-08T17:47:06.2672265Z Updating files:  96% (8871/9240)
+2026-09-08T17:47:06.2740886Z Updating files:  97% (8963/9240)
+2026-09-08T17:47:06.2808253Z Updating files:  98% (9056/9240)
+2026-09-08T17:47:06.2869513Z Updating files:  99% (9148/9240)
+2026-09-08T17:47:06.2869840Z Updating files: 100% (9240/9240)
+2026-09-08T17:47:06.2870232Z Updating files: 100% (9240/9240), done.
+2026-09-08T17:47:06.3117168Z Note: switching to 'refs/remotes/pull/561/merge'.
+2026-09-08T17:47:06.3117917Z 
+2026-09-08T17:47:06.3118146Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-08T17:47:06.3118647Z changes and commit them, and you can discard any commits you make in this
+2026-09-08T17:47:06.3119134Z state without impacting any branches by switching back to a branch.
+2026-09-08T17:47:06.3119405Z 
+2026-09-08T17:47:06.3119598Z If you want to create a new branch to retain commits you create, you may
+2026-09-08T17:47:06.3120102Z do so (now or later) by using -c with the switch command. Example:
+2026-09-08T17:47:06.3120364Z 
+2026-09-08T17:47:06.3120479Z   git switch -c <new-branch-name>
+2026-09-08T17:47:06.3120661Z 
+2026-09-08T17:47:06.3120774Z Or undo this operation with:
+2026-09-08T17:47:06.3120937Z 
+2026-09-08T17:47:06.3121036Z   git switch -
+2026-09-08T17:47:06.3121175Z 
+2026-09-08T17:47:06.3121449Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-08T17:47:06.3121765Z 
+2026-09-08T17:47:06.3122127Z HEAD is now at 9c051e8a Merge d3c88fe6b7185878a925aa7f5a2d3d7a92ca784d into dbe10ea10bf2d86ede48a81641d2aabe7798b5f4
+2026-09-08T17:47:06.5380949Z ##[endgroup]
+2026-09-08T17:47:06.5381629Z ##[group]Setting up auth for fetching submodules
+2026-09-08T17:47:06.5387295Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-08T17:47:06.5434295Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-09-08T17:47:06.5471341Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-09-08T17:47:06.5513220Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-154613923@github.com:
+2026-09-08T17:47:06.5544860Z ##[endgroup]
+2026-09-08T17:47:06.5545482Z ##[group]Fetching submodules
+2026-09-08T17:47:06.5549425Z [command]/usr/bin/git submodule sync
+2026-09-08T17:47:06.5897788Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1
+2026-09-08T17:47:06.6099254Z Submodule 'src/premium' (https://github.com/invoice-collector/premium-collectors) registered for path 'src/premium'
+2026-09-08T17:47:06.6127520Z Cloning into '/home/runner/work/invoice-collector/invoice-collector/src/premium'...
+2026-09-08T17:47:07.2534422Z Submodule path 'src/premium': checked out 'de04efc6c1a6805aca52762a893764947583202a'
+2026-09-08T17:47:07.2548363Z [command]/usr/bin/git submodule foreach git config --local gc.auto 0
+2026-09-08T17:47:07.2810875Z Entering 'src/premium'
+2026-09-08T17:47:07.2846587Z ##[endgroup]
+2026-09-08T17:47:07.2847448Z ##[group]Persisting credentials for submodules
+2026-09-08T17:47:07.2856020Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2026-09-08T17:47:07.3137688Z Entering 'src/premium'
+2026-09-08T17:47:07.3201530Z [command]/usr/bin/git submodule foreach sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-09-08T17:47:07.3471709Z Entering 'src/premium'
+2026-09-08T17:47:07.3514775Z file:/home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config	remote.origin.url
+2026-09-08T17:47:07.3541357Z [command]/usr/bin/git submodule foreach git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2026-09-08T17:47:07.3802236Z Entering 'src/premium'
+2026-09-08T17:47:07.3842428Z [command]/usr/bin/git submodule foreach git config --local --add 'url.https://github.com/.insteadOf' 'org-154613923@github.com:'
+2026-09-08T17:47:07.4106256Z Entering 'src/premium'
+2026-09-08T17:47:07.4145030Z ##[endgroup]
+2026-09-08T17:47:07.4194330Z [command]/usr/bin/git log -1 --format=%H
+2026-09-08T17:47:07.4225678Z 9c051e8a74f63c002499d6884ed90c51cd12b972
+2026-09-08T17:47:07.4500673Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-08T17:47:07.4502882Z ##[group]Run actions/setup-node@v4
+2026-09-08T17:47:07.4503150Z with:
+2026-09-08T17:47:07.4503363Z   node-version: 22
+2026-09-08T17:47:07.4503588Z   always-auth: false
+2026-09-08T17:47:07.4503817Z   check-latest: false
+2026-09-08T17:47:07.4506664Z   token: ***
+2026-09-08T17:47:07.4506873Z ##[endgroup]
+2026-09-08T17:47:07.5912161Z Found in cache @ /opt/hostedtoolcache/node/22.23.2/x64
+2026-09-08T17:47:07.5915567Z (node:2531) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-08T17:47:07.5916270Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-08T17:47:07.5918982Z ##[group]Environment details
+2026-09-08T17:47:08.1698893Z node: v22.23.2
+2026-09-08T17:47:08.1699272Z npm: 10.9.8
+2026-09-08T17:47:08.1699572Z yarn: 1.22.22
+2026-09-08T17:47:08.1700284Z ##[endgroup]
+2026-09-08T17:47:08.1851200Z ##[group]Run npm ci
+2026-09-08T17:47:08.1851530Z [36;1mnpm ci[0m
+2026-09-08T17:47:08.1901273Z shell: /usr/bin/bash -e {0}
+2026-09-08T17:47:08.1901571Z ##[endgroup]
+2026-09-08T17:47:11.4995400Z npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-09-08T17:47:12.0481632Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-09-08T17:47:13.1440773Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-09-08T17:47:13.3507901Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:13.4480609Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:14.7811186Z npm warn deprecated glob@11.1.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:14.7916548Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:14.7976767Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:14.8055862Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:24.5021243Z 
+2026-09-08T17:47:24.5022309Z added 702 packages, and audited 703 packages in 16s
+2026-09-08T17:47:24.5022636Z 
+2026-09-08T17:47:24.5023008Z 126 packages are looking for funding
+2026-09-08T17:47:24.5023431Z   run `npm fund` for details
+2026-09-08T17:47:24.5056602Z 
+2026-09-08T17:47:24.5057265Z 4 vulnerabilities (1 moderate, 3 high)
+2026-09-08T17:47:24.5057602Z 
+2026-09-08T17:47:24.5058307Z To address issues that do not require attention, run:
+2026-09-08T17:47:24.5058675Z   npm audit fix
+2026-09-08T17:47:24.5058841Z 
+2026-09-08T17:47:24.5059053Z Some issues need review, and may require choosing
+2026-09-08T17:47:24.5059400Z a different dependency.
+2026-09-08T17:47:24.5059556Z 
+2026-09-08T17:47:24.5059681Z Run `npm audit` for details.
+2026-09-08T17:47:24.5693014Z ##[group]Run npm install --no-save --package-lock=false eslint@^9.0.0
+2026-09-08T17:47:24.5693563Z [36;1mnpm install --no-save --package-lock=false eslint@^9.0.0[0m
+2026-09-08T17:47:24.5735498Z shell: /usr/bin/bash -e {0}
+2026-09-08T17:47:24.5735777Z ##[endgroup]
+2026-09-08T17:47:43.2111079Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-09-08T17:47:43.5854001Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-08T17:47:43.9342266Z 
+2026-09-08T17:47:43.9343229Z added 43 packages, removed 46 packages, changed 119 packages, and audited 700 packages in 19s
+2026-09-08T17:47:43.9343646Z 
+2026-09-08T17:47:43.9343841Z 134 packages are looking for funding
+2026-09-08T17:47:43.9344263Z   run `npm fund` for details
+2026-09-08T17:47:43.9367596Z 
+2026-09-08T17:47:43.9368116Z 3 high severity vulnerabilities
+2026-09-08T17:47:43.9368506Z 
+2026-09-08T17:47:43.9374329Z Some issues need review, and may require choosing
+2026-09-08T17:47:43.9377567Z a different dependency.
+2026-09-08T17:47:43.9377838Z 
+2026-09-08T17:47:43.9378103Z Run `npm audit` for details.
+2026-09-08T17:47:43.9689655Z ##[group]Run npx eslint --config eslint.coding-standards.config.mjs 'src/**/*.ts'
+2026-09-08T17:47:43.9690289Z [36;1mnpx eslint --config eslint.coding-standards.config.mjs 'src/**/*.ts'[0m
+2026-09-08T17:47:43.9731076Z shell: /usr/bin/bash -e {0}
+2026-09-08T17:47:43.9731368Z ##[endgroup]
+2026-09-08T17:47:58.5798182Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-08T17:47:58.5799371Z Post job cleanup.
+2026-09-08T17:47:58.7048603Z (node:2764) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-08T17:47:58.7080403Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-08T17:47:58.7242276Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-08T17:47:58.7243516Z Post job cleanup.
+2026-09-08T17:47:58.8128979Z [command]/usr/bin/git version
+2026-09-08T17:47:58.8172045Z git version 2.55.0
+2026-09-08T17:47:58.8215429Z Temporarily overriding HOME='/home/runner/work/_temp/cd682fc5-750a-4e2e-9c3a-dcbbf73395e5' before making global git config changes
+2026-09-08T17:47:58.8217270Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-08T17:47:58.8221783Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/invoice-collector/invoice-collector
+2026-09-08T17:47:58.8274499Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-08T17:47:58.8315252Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-08T17:47:58.8603753Z Entering 'src/premium'
+2026-09-08T17:47:58.8683102Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-08T17:47:58.8711640Z http.https://github.com/.extraheader
+2026-09-08T17:47:58.8723298Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-08T17:47:58.8761847Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-08T17:47:58.9049378Z Entering 'src/premium'
+2026-09-08T17:47:58.9078649Z http.https://github.com/.extraheader
+2026-09-08T17:47:58.9136245Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-08T17:47:58.9178239Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-08T17:47:58.9438399Z Entering 'src/premium'
+2026-09-08T17:47:58.9460335Z file:/home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config	remote.origin.url
+2026-09-08T17:47:58.9498618Z [command]/usr/bin/git config --file /home/runner/work/invoice-collector/invoice-collector/.git/modules/src/premium/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-08T17:47:58.9698085Z Cleaning up orphan processes
+2026-09-08T17:47:59.0002538Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

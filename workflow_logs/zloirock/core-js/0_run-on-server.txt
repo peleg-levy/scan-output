@@ -1,0 +1,320 @@
+﻿2026-10-14T15:23:02.8697968Z Current runner version: '2.337.0'
+2026-10-14T15:23:02.8724917Z ##[group]Runner Image Provisioner
+2026-10-14T15:23:02.8726240Z Hosted Compute Agent
+2026-10-14T15:23:02.8726973Z Version: 20261002.596
+2026-10-14T15:23:02.8727865Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-14T15:23:02.8729486Z Build Date: 2026-10-02T22:28:27Z
+2026-10-14T15:23:02.8730428Z Worker ID: {cfbb1629-416a-4154-a48f-108a5429698b}
+2026-10-14T15:23:02.8731320Z Region: northcentralus
+2026-10-14T15:23:02.8732157Z Cloud: Azure
+2026-10-14T15:23:02.8732854Z ##[endgroup]
+2026-10-14T15:23:02.8734565Z ##[group]Operating System
+2026-10-14T15:23:02.8735375Z Ubuntu
+2026-10-14T15:23:02.8736037Z 24.04.5
+2026-10-14T15:23:02.8736763Z LTS
+2026-10-14T15:23:02.8737449Z ##[endgroup]
+2026-10-14T15:23:02.8738416Z ##[group]Runner Image
+2026-10-14T15:23:02.8739281Z Image: ubuntu-24.04
+2026-10-14T15:23:02.8739976Z Version: 20261004.327.1
+2026-10-14T15:23:02.8741503Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-14T15:23:02.8743165Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-14T15:23:02.8744414Z ##[endgroup]
+2026-10-14T15:23:02.8747747Z ##[group]GITHUB_TOKEN Permissions
+2026-10-14T15:23:02.8750641Z Actions: write
+2026-10-14T15:23:02.8751614Z ArtifactMetadata: write
+2026-10-14T15:23:02.8752345Z Attestations: write
+2026-10-14T15:23:02.8753110Z Checks: write
+2026-10-14T15:23:02.8753828Z CodeQuality: write
+2026-10-14T15:23:02.8754608Z Contents: write
+2026-10-14T15:23:02.8755280Z CopilotRequests: write
+2026-10-14T15:23:02.8755983Z Deployments: write
+2026-10-14T15:23:02.8756750Z Discussions: write
+2026-10-14T15:23:02.8757454Z Drives: write
+2026-10-14T15:23:02.8758426Z Issues: write
+2026-10-14T15:23:02.8759217Z Metadata: read
+2026-10-14T15:23:02.8760072Z Models: read
+2026-10-14T15:23:02.8760934Z Packages: write
+2026-10-14T15:23:02.8761668Z Pages: write
+2026-10-14T15:23:02.8762362Z PullRequests: write
+2026-10-14T15:23:02.8763123Z RepositoryProjects: write
+2026-10-14T15:23:02.8763852Z SecurityEvents: write
+2026-10-14T15:23:02.8764616Z Statuses: write
+2026-10-14T15:23:02.8765315Z VulnerabilityAlerts: read
+2026-10-14T15:23:02.8766089Z ##[endgroup]
+2026-10-14T15:23:02.8769088Z Secret source: Actions
+2026-10-14T15:23:02.8770302Z Cache mode: write
+2026-10-14T15:23:02.8771315Z Prepare workflow directory
+2026-10-14T15:23:02.9173352Z Prepare all required actions
+2026-10-14T15:23:02.9241468Z Getting action download info
+2026-10-14T15:23:03.1954945Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-14T15:23:03.3023406Z Download action repository 'garygrossgarten/github-action-scp@0.10.0' (SHA:ed477632dd301838ec1bf5307febbd7ff8d2962f)
+2026-10-14T15:23:03.7043788Z Download action repository 'webfactory/ssh-agent@v0.10.0' (SHA:e83874834305fe9a4a2997156cb26c5de65a8555)
+2026-10-14T15:23:03.9893322Z Complete job name: run-on-server
+2026-10-14T15:23:04.0561055Z ##[group]Run echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+2026-10-14T15:23:04.0562140Z [36;1mecho "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT[0m
+2026-10-14T15:23:04.0783879Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T15:23:04.0784918Z ##[endgroup]
+2026-10-14T15:23:04.1271065Z ##[group]Run actions/checkout@v7
+2026-10-14T15:23:04.1271746Z with:
+2026-10-14T15:23:04.1272235Z   ref: master
+2026-10-14T15:23:04.1272747Z   repository: zloirock/core-js
+2026-10-14T15:23:04.1279500Z   token: ***
+2026-10-14T15:23:04.1280311Z   ssh-strict: true
+2026-10-14T15:23:04.1281091Z   ssh-user: git
+2026-10-14T15:23:04.1281906Z   persist-credentials: true
+2026-10-14T15:23:04.1282805Z   clean: true
+2026-10-14T15:23:04.1283604Z   sparse-checkout-cone-mode: true
+2026-10-14T15:23:04.1284542Z   fetch-depth: 1
+2026-10-14T15:23:04.1285333Z   fetch-tags: false
+2026-10-14T15:23:04.1286097Z   show-progress: true
+2026-10-14T15:23:04.1286733Z   lfs: false
+2026-10-14T15:23:04.1287222Z   submodules: false
+2026-10-14T15:23:04.1288058Z   set-safe-directory: true
+2026-10-14T15:23:04.1288901Z   allow-unsafe-pr-checkout: false
+2026-10-14T15:23:04.1289487Z ##[endgroup]
+2026-10-14T15:23:04.2296849Z Syncing repository: zloirock/core-js
+2026-10-14T15:23:04.2299211Z ##[group]Getting Git version info
+2026-10-14T15:23:04.2300016Z Working directory is '/home/runner/work/core-js/core-js'
+2026-10-14T15:23:04.2301207Z [command]/usr/bin/git version
+2026-10-14T15:23:04.2336385Z git version 2.55.0
+2026-10-14T15:23:04.2356400Z ##[endgroup]
+2026-10-14T15:23:04.2367777Z Temporarily overriding HOME='/home/runner/work/_temp/66cf5543-87da-4eab-9b20-fbfbef888f0d' before making global git config changes
+2026-10-14T15:23:04.2373705Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:23:04.2375047Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/core-js/core-js
+2026-10-14T15:23:04.2417775Z Deleting the contents of '/home/runner/work/core-js/core-js'
+2026-10-14T15:23:04.2421595Z ##[group]Determining repository object format
+2026-10-14T15:23:04.4701253Z ##[endgroup]
+2026-10-14T15:23:04.4703381Z ##[group]Initializing the repository
+2026-10-14T15:23:04.4704822Z [command]/usr/bin/git init /home/runner/work/core-js/core-js
+2026-10-14T15:23:04.4780654Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-14T15:23:04.4784021Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-14T15:23:04.4787272Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-14T15:23:04.4789891Z hint: call:
+2026-10-14T15:23:04.4791385Z hint:
+2026-10-14T15:23:04.4793094Z hint: 	git config --global init.defaultBranch <name>
+2026-10-14T15:23:04.4795093Z hint:
+2026-10-14T15:23:04.4796747Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-14T15:23:04.4799561Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-14T15:23:04.4803094Z hint:
+2026-10-14T15:23:04.4805084Z hint: 	git branch -m <name>
+2026-10-14T15:23:04.4807444Z hint:
+2026-10-14T15:23:04.4810563Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-14T15:23:04.4814463Z Initialized empty Git repository in /home/runner/work/core-js/core-js/.git/
+2026-10-14T15:23:04.4821009Z [command]/usr/bin/git remote add origin https://github.com/zloirock/core-js
+2026-10-14T15:23:04.4854857Z ##[endgroup]
+2026-10-14T15:23:04.4857479Z ##[group]Disabling automatic garbage collection
+2026-10-14T15:23:04.4860597Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-14T15:23:04.4890993Z ##[endgroup]
+2026-10-14T15:23:04.4893862Z ##[group]Setting up auth
+2026-10-14T15:23:04.4895973Z Removing SSH command configuration
+2026-10-14T15:23:04.4898362Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:23:04.4935896Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:23:04.5259979Z Removing HTTP extra header
+2026-10-14T15:23:04.5265853Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:23:04.5305963Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:23:04.5547701Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:23:04.5551853Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:23:04.5588394Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:23:04.5832049Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-14T15:23:04.5931237Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/core-js/core-js/.git.path /home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:23:04.5970605Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/core-js/core-js/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:23:04.6007267Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:23:04.6043153Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:23:04.6074547Z ##[endgroup]
+2026-10-14T15:23:04.6076306Z ##[group]Fetching the repository
+2026-10-14T15:23:04.6081744Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master*:refs/remotes/origin/master* +refs/tags/master*:refs/tags/master*
+2026-10-14T15:23:05.0646180Z From https://github.com/zloirock/core-js
+2026-10-14T15:23:05.0646985Z  * [new branch]      master     -> origin/master
+2026-10-14T15:23:05.0651087Z ##[endgroup]
+2026-10-14T15:23:05.0651912Z ##[group]Determining the checkout info
+2026-10-14T15:23:05.0657072Z [command]/usr/bin/git branch --list --remote origin/master
+2026-10-14T15:23:05.0687343Z   origin/master
+2026-10-14T15:23:05.0691456Z ##[endgroup]
+2026-10-14T15:23:05.0695014Z [command]/usr/bin/git sparse-checkout disable
+2026-10-14T15:23:05.0745106Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-14T15:23:05.0779654Z ##[group]Checking out the ref
+2026-10-14T15:23:05.0783319Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-14T15:23:05.2573811Z Reset branch 'master'
+2026-10-14T15:23:05.2577326Z branch 'master' set up to track 'origin/master'.
+2026-10-14T15:23:05.2587578Z ##[endgroup]
+2026-10-14T15:23:05.2638563Z [command]/usr/bin/git log -1 --format=%H
+2026-10-14T15:23:05.2668388Z 625c92144b1f1bb98095adf67997909e62ff5cec
+2026-10-14T15:23:05.2871255Z ##[group]Run garygrossgarten/github-action-scp@0.10.0
+2026-10-14T15:23:05.2871865Z with:
+2026-10-14T15:23:05.2872332Z   local: website/scripts/runner.mjs
+2026-10-14T15:23:05.2872881Z   remote: /var/www/core-js/runner.mjs
+2026-10-14T15:23:05.2873804Z   host: ***
+2026-10-14T15:23:05.2874266Z   username: ci
+2026-10-14T15:23:05.2876721Z   privateKey: ***
+2026-10-14T15:23:05.2877251Z   dotfiles: false
+2026-10-14T15:23:05.2877732Z   concurrency: 1
+2026-10-14T15:23:05.2878392Z   recursive: true
+2026-10-14T15:23:05.2878859Z   verbose: true
+2026-10-14T15:23:05.2879307Z   port: 22
+2026-10-14T15:23:05.2879771Z   atomicPut: false
+2026-10-14T15:23:05.2880254Z ##[endgroup]
+2026-10-14T15:23:05.3850151Z Establishing a SSH connection to ***.
+2026-10-14T15:23:05.3851866Z using provided private key
+2026-10-14T15:23:07.0991366Z 🤝 Connected to ***.
+2026-10-14T15:23:07.0992080Z Starting scp Action: website/scripts/runner.mjs to /var/www/core-js/runner.mjs
+2026-10-14T15:23:09.7822762Z ✔ Successfully copied file website/scripts/runner.mjs to remote /var/www/core-js/runner.mjs.
+2026-10-14T15:23:09.7825812Z ✅ scp Action finished.
+2026-10-14T15:23:09.9063416Z ##[group]Run garygrossgarten/github-action-scp@0.10.0
+2026-10-14T15:23:09.9063815Z with:
+2026-10-14T15:23:09.9064090Z   local: website/scripts/runner.sh
+2026-10-14T15:23:09.9064411Z   remote: /var/www/core-js/runner.sh
+2026-10-14T15:23:09.9064821Z   host: ***
+2026-10-14T15:23:09.9065061Z   username: ci
+2026-10-14T15:23:09.9066896Z   privateKey: ***
+2026-10-14T15:23:09.9067145Z   dotfiles: false
+2026-10-14T15:23:09.9067393Z   concurrency: 1
+2026-10-14T15:23:09.9067634Z   recursive: true
+2026-10-14T15:23:09.9067865Z   verbose: true
+2026-10-14T15:23:09.9068097Z   port: 22
+2026-10-14T15:23:09.9068484Z   atomicPut: false
+2026-10-14T15:23:09.9069019Z ##[endgroup]
+2026-10-14T15:23:10.0064624Z Establishing a SSH connection to ***.
+2026-10-14T15:23:10.0065686Z using provided private key
+2026-10-14T15:23:11.7473202Z 🤝 Connected to ***.
+2026-10-14T15:23:11.7474006Z Starting scp Action: website/scripts/runner.sh to /var/www/core-js/runner.sh
+2026-10-14T15:23:13.3786549Z ✔ Successfully copied file website/scripts/runner.sh to remote /var/www/core-js/runner.sh.
+2026-10-14T15:23:13.3790326Z ✅ scp Action finished.
+2026-10-14T15:23:13.5050395Z ##[group]Run garygrossgarten/github-action-scp@0.10.0
+2026-10-14T15:23:13.5051013Z with:
+2026-10-14T15:23:13.5051428Z   local: website/scripts/helpers.mjs
+2026-10-14T15:23:13.5051968Z   remote: /var/www/core-js/helpers.mjs
+2026-10-14T15:23:13.5052574Z   host: ***
+2026-10-14T15:23:13.5052840Z   username: ci
+2026-10-14T15:23:13.5054733Z   privateKey: ***
+2026-10-14T15:23:13.5054999Z   dotfiles: false
+2026-10-14T15:23:13.5055244Z   concurrency: 1
+2026-10-14T15:23:13.5055491Z   recursive: true
+2026-10-14T15:23:13.5055753Z   verbose: true
+2026-10-14T15:23:13.5055992Z   port: 22
+2026-10-14T15:23:13.5056218Z   atomicPut: false
+2026-10-14T15:23:13.5056473Z ##[endgroup]
+2026-10-14T15:23:13.6033921Z Establishing a SSH connection to ***.
+2026-10-14T15:23:13.6034966Z using provided private key
+2026-10-14T15:23:15.3289750Z 🤝 Connected to ***.
+2026-10-14T15:23:15.3290552Z Starting scp Action: website/scripts/helpers.mjs to /var/www/core-js/helpers.mjs
+2026-10-14T15:23:16.9429325Z ✔ Successfully copied file website/scripts/helpers.mjs to remote /var/www/core-js/helpers.mjs.
+2026-10-14T15:23:16.9432555Z ✅ scp Action finished.
+2026-10-14T15:23:17.0636737Z ##[group]Run webfactory/ssh-agent@v0.10.0
+2026-10-14T15:23:17.0637070Z with:
+2026-10-14T15:23:17.0639305Z   ssh-private-key: ***
+2026-10-14T15:23:17.0639591Z   log-public-key: true
+2026-10-14T15:23:17.0639851Z ##[endgroup]
+2026-10-14T15:23:17.1054321Z Starting ssh-agent
+2026-10-14T15:23:17.1341325Z SSH_AUTH_SOCK=/tmp/ssh-8Q2WfoWAfADV/agent.2374
+2026-10-14T15:23:17.1342505Z SSH_AGENT_PID=2375
+2026-10-14T15:23:17.1342961Z Adding private key(s) to agent
+2026-10-14T15:23:17.1553921Z Identity added: (stdin) (github-actions-deploy)
+2026-10-14T15:23:17.1554579Z Key(s) added:
+2026-10-14T15:23:17.1592687Z 256 SHA256:lStLO898Jq20At6DT5FqTy0jUQpI4dqQcKefC3q+jCE github-actions-deploy (ED25519)
+2026-10-14T15:23:17.1598122Z Configuring deployment key(s)
+2026-10-14T15:23:17.1645285Z Comment for (public) key 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPMPI+Glj+D4iVCQNgH7KA5rKGlEGHqNEAvf1xHsaCi github-actions-deploy' does not match GitHub URL pattern. Not treating it as a GitHub deploy key.
+2026-10-14T15:23:17.1765985Z ##[group]Run ssh -o StrictHostKeyChecking=no ci@*** "chmod +x /var/www/core-js/runner.sh"
+2026-10-14T15:23:17.1766761Z [36;1mssh -o StrictHostKeyChecking=no ci@*** "chmod +x /var/www/core-js/runner.sh"[0m
+2026-10-14T15:23:17.1836182Z shell: /usr/bin/bash -e {0}
+2026-10-14T15:23:17.1836479Z env:
+2026-10-14T15:23:17.1836775Z   SSH_AUTH_SOCK: /tmp/ssh-8Q2WfoWAfADV/agent.2374
+2026-10-14T15:23:17.1837148Z   SSH_AGENT_PID: 2375
+2026-10-14T15:23:17.1837401Z ##[endgroup]
+2026-10-14T15:23:17.7336842Z Warning: Permanently added '***' (ED25519) to the list of known hosts.
+2026-10-14T15:23:18.6664261Z ##[group]Run ssh -o StrictHostKeyChecking=no ci@*** "cd /var/www/core-js/ && ./runner.sh"
+2026-10-14T15:23:18.6665002Z [36;1mssh -o StrictHostKeyChecking=no ci@*** "cd /var/www/core-js/ && ./runner.sh"[0m
+2026-10-14T15:23:18.6733861Z shell: /usr/bin/bash -e {0}
+2026-10-14T15:23:18.6734164Z env:
+2026-10-14T15:23:18.6734457Z   SSH_AUTH_SOCK: /tmp/ssh-8Q2WfoWAfADV/agent.2374
+2026-10-14T15:23:18.6734824Z   SSH_AGENT_PID: 2375
+2026-10-14T15:23:18.6735088Z ##[endgroup]
+2026-10-14T15:23:20.6683249Z Lock acquired by 358271, starting build...
+2026-10-14T15:23:20.7428366Z Creating build directory "builds/2026-10-14-15-23-20-713-m5nd8z/"
+2026-10-14T15:23:20.7587387Z Created build directory builds/2026-10-14-15-23-20-713-m5nd8z/: 14.076ms
+2026-10-14T15:23:20.7588028Z Cloning core-js repository...
+2026-10-14T15:23:41.6770778Z Cloned core-js repository: 20.917s
+2026-10-14T15:23:41.6771206Z Getting versions...
+2026-10-14T15:23:41.8247202Z Got versions: 148.941ms
+2026-10-14T15:23:41.8247656Z Copying docs to builder for "master"
+2026-10-14T15:23:41.9569739Z Copying docs from "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/docs/" to "builds/2026-10-14-15-23-20-713-m5nd8z/builder/v3/docs/"
+2026-10-14T15:23:42.0324896Z Copied docs from "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/docs/" to "builds/2026-10-14-15-23-20-713-m5nd8z/builder/v3/docs/": 75.448ms
+2026-10-14T15:23:42.0325642Z Copied docs to builder for "master": 207.508ms
+2026-10-14T15:23:42.0330452Z Building and copying core-js for master
+2026-10-14T15:23:42.0490473Z Core JS bundles copied: 14.625ms
+2026-10-14T15:23:42.0491003Z Copying docs to builder for "v4"
+2026-10-14T15:23:45.5744123Z Copying docs from "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/docs/" to "builds/2026-10-14-15-23-20-713-m5nd8z/builder/v4/docs/"
+2026-10-14T15:23:45.6528714Z Copied docs from "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/docs/" to "builds/2026-10-14-15-23-20-713-m5nd8z/builder/v4/docs/": 78.202ms
+2026-10-14T15:23:45.6529759Z Copied docs to builder for "v4": 3.604s
+2026-10-14T15:23:45.6530126Z Building and copying core-js for v4
+2026-10-14T15:23:45.6651111Z Core JS bundles copied: 11.556ms
+2026-10-14T15:23:45.6651610Z Preparing builder...
+2026-10-14T15:23:48.2783911Z Installing dependencies...
+2026-10-14T15:24:17.6656177Z Installed dependencies: 29.387s
+2026-10-14T15:24:17.6735247Z Prepared builder: 32.008s
+2026-10-14T15:24:17.6735727Z Copying Babel standalone...
+2026-10-14T15:24:17.6739511Z Installing dependencies...
+2026-10-14T15:24:25.6116237Z Installed dependencies: 7.937s
+2026-10-14T15:24:25.6244848Z Copied Babel standalone: 12.954ms
+2026-10-14T15:24:25.6245313Z Copying blog posts...
+2026-10-14T15:24:25.6273167Z Copied blog posts: 2.579ms
+2026-10-14T15:24:25.6273595Z Copying common files...
+2026-10-14T15:24:25.6319280Z Copied common files: 3.607ms
+2026-10-14T15:24:25.6319647Z Copying builder docs...
+2026-10-14T15:24:25.6320239Z Copying docs from "builds/2026-10-14-15-23-20-713-m5nd8z/builder/" to "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/"
+2026-10-14T15:24:25.7544474Z Copied docs from "builds/2026-10-14-15-23-20-713-m5nd8z/builder/" to "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/docs/web/": 122.502ms
+2026-10-14T15:24:25.7545637Z Copied builder docs: 122.665ms
+2026-10-14T15:24:25.7545943Z Building web...
+2026-10-14T15:24:49.7139013Z Built web: 23.957s
+2026-10-14T15:24:49.7139460Z Copying web...
+2026-10-14T15:24:49.8917447Z Copied web: 179.082ms
+2026-10-14T15:24:49.8922894Z Creating last docs link...
+2026-10-14T15:24:49.8987181Z Created last docs link: 6.347ms
+2026-10-14T15:24:49.8992842Z Switching "./latest" to the latest build...
+2026-10-14T15:24:49.9017382Z Switched "./latest" to the latest build: 2.365ms
+2026-10-14T15:24:49.9032865Z Clearing deleted branches...
+2026-10-14T15:24:49.9102535Z Cleared deleted branches: 7.933ms
+2026-10-14T15:24:49.9104825Z Clearing build directory "builds/2026-10-14-15-23-20-713-m5nd8z/core-js/"
+2026-10-14T15:24:50.9713042Z Cleared build directories builds/2026-10-14-15-23-20-713-m5nd8z/core-js/ and builds/2026-10-14-15-23-20-713-m5nd8z/builder/: 1.060s
+2026-10-14T15:24:50.9714249Z Clearing old builds...
+2026-10-14T15:24:50.9904446Z Build removed: "builds/2026-10-14-14-46-45-280-kjithz"
+2026-10-14T15:24:50.9905384Z Cleared old builds: 18.979ms
+2026-10-14T15:24:50.9907131Z Finished in: 1:30.250 (m:ss.mmm)
+2026-10-14T15:24:51.0060551Z Cleaning up from 358271
+2026-10-14T15:24:51.0320203Z Post job cleanup.
+2026-10-14T15:24:51.0736147Z Stopping SSH agent
+2026-10-14T15:24:51.0784788Z unset SSH_AUTH_SOCK;
+2026-10-14T15:24:51.0785105Z unset SSH_AGENT_PID;
+2026-10-14T15:24:51.0785384Z echo Agent pid 2375 killed;
+2026-10-14T15:24:51.0934660Z Post job cleanup.
+2026-10-14T15:24:51.1763508Z [command]/usr/bin/git version
+2026-10-14T15:24:51.1801987Z git version 2.55.0
+2026-10-14T15:24:51.1841381Z Temporarily overriding HOME='/home/runner/work/_temp/96ee105b-d83c-4aee-8d98-e84d034024d3' before making global git config changes
+2026-10-14T15:24:51.1842938Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-14T15:24:51.1846270Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/core-js/core-js
+2026-10-14T15:24:51.1877858Z Removing SSH command configuration
+2026-10-14T15:24:51.1884321Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-14T15:24:51.1919510Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-14T15:24:51.2162242Z Removing HTTP extra header
+2026-10-14T15:24:51.2168027Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-14T15:24:51.2205829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-14T15:24:51.2448096Z Removing includeIf entries pointing to credentials config files
+2026-10-14T15:24:51.2454888Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-14T15:24:51.2484591Z includeif.gitdir:/home/runner/work/core-js/core-js/.git.path
+2026-10-14T15:24:51.2485538Z includeif.gitdir:/home/runner/work/core-js/core-js/.git/worktrees/*.path
+2026-10-14T15:24:51.2486393Z includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:24:51.2487110Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:24:51.2495134Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/core-js/core-js/.git.path
+2026-10-14T15:24:51.2519887Z /home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:24:51.2530988Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/core-js/core-js/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-3e499aa8\-2f14\-4f12\-b97c\-1d32a9f22919\.config
+2026-10-14T15:24:51.2566605Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/core-js/core-js/.git/worktrees/*.path
+2026-10-14T15:24:51.2589887Z /home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:24:51.2598470Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/core-js/core-js/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-3e499aa8\-2f14\-4f12\-b97c\-1d32a9f22919\.config
+2026-10-14T15:24:51.2641312Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-14T15:24:51.2664289Z /github/runner_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:24:51.2672580Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-3e499aa8\-2f14\-4f12\-b97c\-1d32a9f22919\.config
+2026-10-14T15:24:51.2706519Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-14T15:24:51.2728621Z /github/runner_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config
+2026-10-14T15:24:51.2735653Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-3e499aa8\-2f14\-4f12\-b97c\-1d32a9f22919\.config
+2026-10-14T15:24:51.2770099Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-14T15:24:51.3005440Z Removing credentials config '/home/runner/work/_temp/git-credentials-3e499aa8-2f14-4f12-b97c-1d32a9f22919.config'
+2026-10-14T15:24:51.3175509Z Cleaning up orphan processes

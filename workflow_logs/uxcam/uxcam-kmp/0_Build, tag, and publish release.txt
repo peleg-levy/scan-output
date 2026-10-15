@@ -1,0 +1,845 @@
+﻿2026-08-05T08:15:41.4421790Z Current runner version: '2.336.0'
+2026-08-05T08:15:41.4457500Z ##[group]Runner Image Provisioner
+2026-08-05T08:15:41.4488700Z Hosted Compute Agent
+2026-08-05T08:15:41.4489810Z Version: 20260707.563
+2026-08-05T08:15:41.4490800Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-08-05T08:15:41.4491920Z Build Date: 2026-07-07T19:33:50Z
+2026-08-05T08:15:41.4492960Z Worker ID: {86a08e4f-0183-441c-81bc-83b71366bfa9}
+2026-08-05T08:15:41.4494040Z Azure Region: westus
+2026-08-05T08:15:41.4495020Z ##[endgroup]
+2026-08-05T08:15:41.4496620Z ##[group]Operating System
+2026-08-05T08:15:41.4497630Z macOS
+2026-08-05T08:15:41.4498530Z 15.7.7
+2026-08-05T08:15:41.4499440Z 24G720
+2026-08-05T08:15:41.4500310Z ##[endgroup]
+2026-08-05T08:15:41.4501200Z ##[group]Runner Image
+2026-08-05T08:15:41.4502120Z Image: macos-15-arm64
+2026-08-05T08:15:41.4503030Z Version: 20260727.0256.1
+2026-08-05T08:15:41.4504490Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260727.0256/images/macos/macos-15-arm64-Readme.md
+2026-08-05T08:15:41.4506220Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260727.0256
+2026-08-05T08:15:41.4507480Z ##[endgroup]
+2026-08-05T08:15:41.4509110Z ##[group]GITHUB_TOKEN Permissions
+2026-08-05T08:15:41.4510870Z Contents: write
+2026-08-05T08:15:41.4511840Z Metadata: read
+2026-08-05T08:15:41.4512810Z ##[endgroup]
+2026-08-05T08:15:41.4514970Z Secret source: Actions
+2026-08-05T08:15:41.4516450Z Prepare workflow directory
+2026-08-05T08:15:41.4745110Z Prepare all required actions
+2026-08-05T08:15:41.4780040Z Getting action download info
+2026-08-05T08:15:41.9130510Z Download action repository 'actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+2026-08-05T08:15:42.0870500Z Download action repository 'actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+2026-08-05T08:15:42.6877680Z Complete job name: Build, tag, and publish release
+2026-08-05T08:15:42.7441780Z ##[group]Run actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
+2026-08-05T08:15:42.7443000Z with:
+2026-08-05T08:15:42.7443810Z   fetch-depth: 1
+2026-08-05T08:15:42.7444640Z   ref: v1.0.0
+2026-08-05T08:15:42.7445470Z   persist-credentials: true
+2026-08-05T08:15:42.7446350Z   repository: uxcam/uxcam-kmp
+2026-08-05T08:15:42.7449520Z   token: ***
+2026-08-05T08:15:42.7450330Z   ssh-strict: true
+2026-08-05T08:15:42.7451150Z   ssh-user: git
+2026-08-05T08:15:42.7451970Z   clean: true
+2026-08-05T08:15:42.7452790Z   sparse-checkout-cone-mode: true
+2026-08-05T08:15:42.7453690Z   fetch-tags: false
+2026-08-05T08:15:42.7454520Z   show-progress: true
+2026-08-05T08:15:42.7455350Z   lfs: false
+2026-08-05T08:15:42.7456150Z   submodules: false
+2026-08-05T08:15:42.7457050Z   set-safe-directory: true
+2026-08-05T08:15:42.7458000Z ##[endgroup]
+2026-08-05T08:15:43.0276950Z Syncing repository: uxcam/uxcam-kmp
+2026-08-05T08:15:43.0280230Z ##[group]Getting Git version info
+2026-08-05T08:15:43.0281520Z Working directory is '/Users/runner/work/uxcam-kmp/uxcam-kmp'
+2026-08-05T08:15:43.0283430Z [command]/opt/homebrew/bin/git version
+2026-08-05T08:15:43.0731450Z git version 2.55.0
+2026-08-05T08:15:43.0748110Z ##[endgroup]
+2026-08-05T08:15:43.0755060Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/09419d89-7f43-48c4-9efe-c374726f0fb4/.gitconfig'
+2026-08-05T08:15:43.0758640Z Temporarily overriding HOME='/Users/runner/work/_temp/09419d89-7f43-48c4-9efe-c374726f0fb4' before making global git config changes
+2026-08-05T08:15:43.0760500Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-05T08:15:43.0762330Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/uxcam-kmp/uxcam-kmp
+2026-08-05T08:15:43.0852790Z Deleting the contents of '/Users/runner/work/uxcam-kmp/uxcam-kmp'
+2026-08-05T08:15:43.0855630Z ##[group]Determining repository object format
+2026-08-05T08:15:43.3911300Z ##[endgroup]
+2026-08-05T08:15:43.3915710Z ##[group]Initializing the repository
+2026-08-05T08:15:43.3921420Z [command]/opt/homebrew/bin/git init /Users/runner/work/uxcam-kmp/uxcam-kmp
+2026-08-05T08:15:43.4138620Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-05T08:15:43.4144230Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-05T08:15:43.4148080Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-05T08:15:43.4151520Z hint: call:
+2026-08-05T08:15:43.4154950Z hint:
+2026-08-05T08:15:43.4157780Z hint: 	git config --global init.defaultBranch <name>
+2026-08-05T08:15:43.4160960Z hint:
+2026-08-05T08:15:43.4163890Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-05T08:15:43.4167300Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-05T08:15:43.4170340Z hint:
+2026-08-05T08:15:43.4172820Z hint: 	git branch -m <name>
+2026-08-05T08:15:43.4175360Z hint:
+2026-08-05T08:15:43.4178290Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-05T08:15:43.4182250Z Initialized empty Git repository in /Users/runner/work/uxcam-kmp/uxcam-kmp/.git/
+2026-08-05T08:15:43.4188960Z [command]/opt/homebrew/bin/git remote add origin https://github.com/uxcam/uxcam-kmp
+2026-08-05T08:15:43.4225270Z ##[endgroup]
+2026-08-05T08:15:43.4229170Z ##[group]Disabling automatic garbage collection
+2026-08-05T08:15:43.4233680Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-08-05T08:15:43.4296630Z ##[endgroup]
+2026-08-05T08:15:43.4300150Z ##[group]Setting up auth
+2026-08-05T08:15:43.4302120Z Removing SSH command configuration
+2026-08-05T08:15:43.4304690Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-05T08:15:43.4352780Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-05T08:15:43.5030970Z Removing HTTP extra header
+2026-08-05T08:15:43.5034060Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-05T08:15:43.5075350Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-05T08:15:43.5633650Z Removing includeIf entries pointing to credentials config files
+2026-08-05T08:15:43.5636950Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-05T08:15:43.5683790Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-05T08:15:43.6320280Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-05T08:15:43.6370460Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git.path /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:15:43.6420600Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:15:43.6471580Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:15:43.6523680Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:15:43.6567190Z ##[endgroup]
+2026-08-05T08:15:43.6569780Z ##[group]Fetching the repository
+2026-08-05T08:15:43.6573770Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/v1.0.0*:refs/remotes/origin/v1.0.0* +refs/tags/v1.0.0*:refs/tags/v1.0.0*
+2026-08-05T08:15:44.1945500Z From https://github.com/uxcam/uxcam-kmp
+2026-08-05T08:15:44.1947320Z  * [new tag]         v1.0.0     -> v1.0.0
+2026-08-05T08:15:44.1954090Z ##[endgroup]
+2026-08-05T08:15:44.1957930Z ##[group]Determining the checkout info
+2026-08-05T08:15:44.1961210Z [command]/opt/homebrew/bin/git branch --list --remote origin/v1.0.0
+2026-08-05T08:15:44.2088810Z [command]/opt/homebrew/bin/git tag --list v1.0.0
+2026-08-05T08:15:44.2179600Z v1.0.0
+2026-08-05T08:15:44.2184070Z ##[endgroup]
+2026-08-05T08:15:44.2187930Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-08-05T08:15:44.2274950Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-05T08:15:44.2337730Z ##[group]Checking out the ref
+2026-08-05T08:15:44.2339560Z [command]/opt/homebrew/bin/git checkout --progress --force refs/tags/v1.0.0
+2026-08-05T08:15:44.2532770Z HEAD is now at 5c3cb49 Release 1.0.0
+2026-08-05T08:15:44.2624420Z ##[endgroup]
+2026-08-05T08:15:44.2626910Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-08-05T08:15:44.2667910Z 5c3cb49075f59b50d5c13f30fdfdacdd6f816398
+2026-08-05T08:15:44.2844360Z ##[group]Run if [[ "$GITHUB_EVENT_NAME" == "pull_request_target" ]]; then
+2026-08-05T08:15:44.2845440Z [36;1mif [[ "$GITHUB_EVENT_NAME" == "pull_request_target" ]]; then[0m
+2026-08-05T08:15:44.2846330Z [36;1m  version="${HEAD_BRANCH#release/}"[0m
+2026-08-05T08:15:44.2847180Z [36;1m  publish_only=false[0m
+2026-08-05T08:15:44.2847840Z [36;1melse[0m
+2026-08-05T08:15:44.2848480Z [36;1m  version="$INPUT_VERSION"[0m
+2026-08-05T08:15:44.2849230Z [36;1m  publish_only=true[0m
+2026-08-05T08:15:44.2849890Z [36;1mfi[0m
+2026-08-05T08:15:44.2850560Z [36;1mecho "version=$version" >> "$GITHUB_OUTPUT"[0m
+2026-08-05T08:15:44.2851630Z [36;1mecho "publish_only=$publish_only" >> "$GITHUB_OUTPUT"[0m
+2026-08-05T08:15:44.2886830Z shell: /bin/bash -e {0}
+2026-08-05T08:15:44.2887500Z env:
+2026-08-05T08:15:44.2888110Z   HEAD_BRANCH: 
+2026-08-05T08:15:44.2888750Z   INPUT_VERSION: 1.0.0
+2026-08-05T08:15:44.2889400Z ##[endgroup]
+2026-08-05T08:15:44.3241680Z ##[group]Run if ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+2026-08-05T08:15:44.3242870Z [36;1mif ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then[0m
+2026-08-05T08:15:44.3243970Z [36;1m  echo "::error::Version must be x.y.z, got '$VERSION'"[0m
+2026-08-05T08:15:44.3244840Z [36;1m  exit 1[0m
+2026-08-05T08:15:44.3245510Z [36;1mfi[0m
+2026-08-05T08:15:44.3246170Z [36;1m[0m
+2026-08-05T08:15:44.3246920Z [36;1mif [[ "$PUBLISH_ONLY" == "true" ]]; then[0m
+2026-08-05T08:15:44.3248070Z [36;1m  if ! git ls-remote --exit-code origin "refs/tags/v$VERSION" >/dev/null 2>&1; then[0m
+2026-08-05T08:15:44.3249360Z [36;1m    echo "::error::publish-only retry requested but tag v$VERSION does not exist"[0m
+2026-08-05T08:15:44.3250370Z [36;1m    exit 1[0m
+2026-08-05T08:15:44.3251060Z [36;1m  fi[0m
+2026-08-05T08:15:44.3251950Z [36;1m  echo "Tag v$VERSION exists; retrying publication without rebuilding or retagging."[0m
+2026-08-05T08:15:44.3253020Z [36;1m  exit 0[0m
+2026-08-05T08:15:44.3253670Z [36;1mfi[0m
+2026-08-05T08:15:44.3254440Z [36;1m[0m
+2026-08-05T08:15:44.3255220Z [36;1mif [[ "$HEAD_BRANCH" != "release/$VERSION" ]]; then[0m
+2026-08-05T08:15:44.3256270Z [36;1m  echo "::error::Release branch must be exactly release/$VERSION"[0m
+2026-08-05T08:15:44.3257150Z [36;1m  exit 1[0m
+2026-08-05T08:15:44.3257820Z [36;1mfi[0m
+2026-08-05T08:15:44.3258700Z [36;1mcatalog="$(sed -n 's/^uxcamKmp = "\([^"]*\)".*$/\1/p' gradle/libs.versions.toml)"[0m
+2026-08-05T08:15:44.3259660Z [36;1mif [[ "$catalog" != "$VERSION" ]]; then[0m
+2026-08-05T08:15:44.3260780Z [36;1m  echo "::error::uxcamKmp is '$catalog', but merged release branch requested '$VERSION'"[0m
+2026-08-05T08:15:44.3261760Z [36;1m  exit 1[0m
+2026-08-05T08:15:44.3262440Z [36;1mfi[0m
+2026-08-05T08:15:44.3263740Z [36;1mif git ls-remote --exit-code origin "refs/tags/v$VERSION" >/dev/null 2>&1; then[0m
+2026-08-05T08:15:44.3265030Z [36;1m  echo "::error::Tag v$VERSION already exists — release tags are never moved"[0m
+2026-08-05T08:15:44.3266020Z [36;1m  exit 1[0m
+2026-08-05T08:15:44.3266700Z [36;1mfi[0m
+2026-08-05T08:15:44.3296390Z shell: /bin/bash -e {0}
+2026-08-05T08:15:44.3297020Z env:
+2026-08-05T08:15:44.3297610Z   HEAD_BRANCH: 
+2026-08-05T08:15:44.3298240Z   VERSION: 1.0.0
+2026-08-05T08:15:44.3298910Z   PUBLISH_ONLY: true
+2026-08-05T08:15:44.3299530Z ##[endgroup]
+2026-08-05T08:15:44.5924010Z Tag v1.0.0 exists; retrying publication without rebuilding or retagging.
+2026-08-05T08:15:44.6136220Z ##[group]Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+2026-08-05T08:15:44.6137310Z with:
+2026-08-05T08:15:44.6138090Z   distribution: temurin
+2026-08-05T08:15:44.6138890Z   java-version: 17
+2026-08-05T08:15:44.6139680Z   java-package: jdk
+2026-08-05T08:15:44.6140520Z   check-latest: false
+2026-08-05T08:15:44.6141320Z   set-default: true
+2026-08-05T08:15:44.6142230Z   verify-signature: false
+2026-08-05T08:15:44.6143050Z   server-id: github
+2026-08-05T08:15:44.6143880Z   server-username: GITHUB_ACTOR
+2026-08-05T08:15:44.6144750Z   server-password: GITHUB_TOKEN
+2026-08-05T08:15:44.6145670Z   overwrite-settings: true
+2026-08-05T08:15:44.6146640Z   job-status: success
+2026-08-05T08:15:44.6150170Z   token: ***
+2026-08-05T08:15:44.6150970Z   show-download-progress: false
+2026-08-05T08:15:44.6151810Z ##[endgroup]
+2026-08-05T08:15:44.7261310Z ##[group]Installed distributions
+2026-08-05T08:15:44.7296780Z Resolved Java 17.0.19+10 from tool-cache
+2026-08-05T08:15:44.7300130Z Setting Java 17.0.19+10 as the default
+2026-08-05T08:15:44.7308840Z Creating toolchains.xml for JDK version 17 from temurin
+2026-08-05T08:15:44.7346810Z Writing to /Users/runner/.m2/toolchains.xml
+2026-08-05T08:15:44.7347540Z 
+2026-08-05T08:15:44.7347920Z Java configuration:
+2026-08-05T08:15:44.7348740Z   Distribution: temurin
+2026-08-05T08:15:44.7349500Z   Version: 17.0.19+10
+2026-08-05T08:15:44.7350520Z   Path: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:15:44.7351210Z 
+2026-08-05T08:15:44.7352090Z ##[endgroup]
+2026-08-05T08:15:44.7370270Z Creating settings.xml with server-id: github
+2026-08-05T08:15:44.7371160Z Writing to /Users/runner/.m2/settings.xml
+2026-08-05T08:15:44.7372460Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-08-05T08:15:44.7499490Z ##[group]Run if [[ -z "$SIGNING_KEY" || -z "$OSSRH_USERNAME" ]]; then
+2026-08-05T08:15:44.7500450Z [36;1mif [[ -z "$SIGNING_KEY" || -z "$OSSRH_USERNAME" ]]; then[0m
+2026-08-05T08:15:44.7501440Z [36;1m  echo "::error::Maven publishing is enabled but SIGNING_KEY/OSSRH_USERNAME secrets are missing"[0m
+2026-08-05T08:15:44.7502330Z [36;1m  exit 1[0m
+2026-08-05T08:15:44.7502890Z [36;1mfi[0m
+2026-08-05T08:15:44.7503690Z [36;1m# Both builds stage into ONE directory so a single bundle covers the whole[0m
+2026-08-05T08:15:44.7504750Z [36;1m# release; gradle-plugin is an included build with its own rootProject, hence[0m
+2026-08-05T08:15:44.7505600Z [36;1m# the explicit -PuxcamStagingDir.[0m
+2026-08-05T08:15:44.7506450Z [36;1mSTAGING="$GITHUB_WORKSPACE/build/maven-central-staging"[0m
+2026-08-05T08:15:44.7507220Z [36;1mrm -rf "$STAGING"[0m
+2026-08-05T08:15:44.7507990Z [36;1m./gradlew --no-configuration-cache -PuxcamStagingDir="$STAGING" \[0m
+2026-08-05T08:15:44.7508980Z [36;1m          :uxcam-kmp:publishAllPublicationsToCentralStagingRepository \[0m
+2026-08-05T08:15:44.7510020Z [36;1m          :uxcam-compose:publishAllPublicationsToCentralStagingRepository[0m
+2026-08-05T08:15:44.7511020Z [36;1m./gradlew --no-configuration-cache -PuxcamStagingDir="$STAGING" \[0m
+2026-08-05T08:15:44.7512080Z [36;1m          -p gradle-plugin publishAllPublicationsToCentralStagingRepository[0m
+2026-08-05T08:15:44.7513130Z [36;1mscripts/publish-central.sh "1.0.0" "$STAGING"[0m
+2026-08-05T08:15:44.7547680Z shell: /bin/bash -e {0}
+2026-08-05T08:15:44.7548290Z env:
+2026-08-05T08:15:44.7549110Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:15:44.7550270Z   JAVA_HOME_17_ARM64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:15:44.7551220Z   MAVEN_ARGS: -ntp
+2026-08-05T08:15:44.7576640Z   SIGNING_KEY: ***
+2026-08-05T08:15:44.7577260Z   SIGNING_PASSWORD: ***
+2026-08-05T08:15:44.7577870Z   OSSRH_USERNAME: ***
+2026-08-05T08:15:44.7578510Z   OSSRH_PASSWORD: ***
+2026-08-05T08:15:44.7579110Z   UXCAM_MAVEN_CENTRAL_AUTO_PUBLISH: true
+2026-08-05T08:15:44.7579810Z ##[endgroup]
+2026-08-05T08:15:44.9727980Z Downloading https://services.gradle.org/distributions/gradle-8.14.4-bin.zip
+2026-08-05T08:15:48.2610300Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-08-05T08:15:49.5630330Z 
+2026-08-05T08:15:49.5634660Z Welcome to Gradle 8.14.4!
+2026-08-05T08:15:49.5637380Z 
+2026-08-05T08:15:49.5637810Z Here are the highlights of this release:
+2026-08-05T08:15:49.5643810Z  - Java 24 support
+2026-08-05T08:15:49.5645440Z  - GraalVM Native Image toolchain selection
+2026-08-05T08:15:49.5646210Z  - Enhancements to test reporting
+2026-08-05T08:15:49.5647540Z  - Build Authoring improvements
+2026-08-05T08:15:49.5648180Z 
+2026-08-05T08:15:49.5661290Z For more details see https://docs.gradle.org/8.14.4/release-notes.html
+2026-08-05T08:15:49.5661960Z 
+2026-08-05T08:15:49.5662440Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-08-05T08:16:16.5095280Z > Task :build-logic:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:16:17.8695570Z > Task :build-logic:generateExternalPluginSpecBuilders
+2026-08-05T08:16:17.8699320Z > Task :build-logic:extractPrecompiledScriptPluginPlugins
+2026-08-05T08:16:22.4029380Z > Task :build-logic:generateScriptPluginAdapters
+2026-08-05T08:16:22.4030810Z > Task :build-logic:pluginDescriptors
+2026-08-05T08:16:22.4031980Z > Task :build-logic:processResources
+2026-08-05T08:16:25.9888720Z > Task :build-logic:compilePluginsBlocks
+2026-08-05T08:16:26.2586150Z > Task :build-logic:generatePrecompiledScriptPluginAccessors
+2026-08-05T08:16:28.0840550Z > Task :build-logic:compileKotlin
+2026-08-05T08:16:28.0842000Z > Task :build-logic:compileJava NO-SOURCE
+2026-08-05T08:16:28.0843670Z > Task :build-logic:classes
+2026-08-05T08:16:28.1876580Z > Task :build-logic:jar
+2026-08-05T08:16:49.2855110Z > Task :gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:16:49.2857020Z > Task :gradle-plugin:generateUXCamVersions
+2026-08-05T08:16:55.9227940Z > Task :gradle-plugin:pluginDescriptors
+2026-08-05T08:16:55.9237210Z > Task :gradle-plugin:processResources
+2026-08-05T08:17:01.2755000Z > Task :gradle-plugin:compileKotlin
+2026-08-05T08:17:01.2766200Z > Task :gradle-plugin:compileJava NO-SOURCE
+2026-08-05T08:17:01.2848870Z > Task :gradle-plugin:classes
+2026-08-05T08:17:01.2887510Z > Task :gradle-plugin:jar
+2026-08-05T08:17:13.5309530Z 
+2026-08-05T08:17:13.5311680Z > Configure project :examples:shared
+2026-08-05T08:17:13.5343440Z [uxcam-kmp] :examples:shared: iOS app link — add the native UXCam SDK to the iOS app in Xcode via SwiftPM: https://github.com/uxcam/uxcam-ios (version 3.10.0). (Using CocoaPods or already added? Silence with uxcamKmp { iosLinkReminder.set(false) })
+2026-08-05T08:17:17.8973420Z Checking the license for package Android SDK Build-Tools 34 in /Users/runner/Library/Android/sdk/licenses
+2026-08-05T08:17:17.9005640Z License for package Android SDK Build-Tools 34 accepted.
+2026-08-05T08:17:17.9007300Z Preparing "Install Android SDK Build-Tools 34 v.34.0.0".
+2026-08-05T08:17:20.8298050Z "Install Android SDK Build-Tools 34 v.34.0.0" ready.
+2026-08-05T08:17:20.8300170Z Installing Android SDK Build-Tools 34 in /Users/runner/Library/Android/sdk/build-tools/34.0.0
+2026-08-05T08:17:20.8303060Z "Install Android SDK Build-Tools 34 v.34.0.0" complete.
+2026-08-05T08:17:21.0327580Z "Install Android SDK Build-Tools 34 v.34.0.0" finished.
+2026-08-05T08:17:46.9440330Z 
+2026-08-05T08:17:46.9451080Z > Task :uxcam-kmp:generateUXCamKmpVersions
+2026-08-05T08:17:46.9467800Z > Task :uxcam-kmp:androidReleaseSourcesJar
+2026-08-05T08:17:46.9478460Z > Task :uxcam-kmp:preBuild UP-TO-DATE
+2026-08-05T08:17:46.9484170Z > Task :uxcam-kmp:preReleaseBuild UP-TO-DATE
+2026-08-05T08:17:46.9488550Z > Task :uxcam-kmp:mergeReleaseJniLibFolders
+2026-08-05T08:17:46.9490390Z > Task :uxcam-kmp:mergeReleaseNativeLibs NO-SOURCE
+2026-08-05T08:17:46.9506030Z > Task :uxcam-kmp:stripReleaseDebugSymbols NO-SOURCE
+2026-08-05T08:17:46.9507470Z > Task :uxcam-kmp:generateReleaseResValues
+2026-08-05T08:17:46.9508800Z > Task :uxcam-kmp:copyReleaseJniLibsProjectAndLocalJars
+2026-08-05T08:17:46.9510130Z > Task :uxcam-kmp:extractDeepLinksForAarRelease
+2026-08-05T08:17:47.0025560Z > Task :uxcam-kmp:kmpPartiallyResolvedDependenciesChecker
+2026-08-05T08:17:47.0028250Z > Task :uxcam-kmp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:17:47.0029780Z > Task :uxcam-kmp:generateReleaseResources
+2026-08-05T08:17:47.0030780Z > Task :uxcam-kmp:packageReleaseResources
+2026-08-05T08:17:47.4444350Z > Task :uxcam-kmp:mergeReleaseShaders
+2026-08-05T08:17:47.4460360Z > Task :uxcam-kmp:javaPreCompileRelease
+2026-08-05T08:17:47.4550760Z > Task :uxcam-kmp:compileReleaseShaders NO-SOURCE
+2026-08-05T08:17:47.4555710Z > Task :uxcam-kmp:generateReleaseAssets UP-TO-DATE
+2026-08-05T08:17:47.4557300Z > Task :uxcam-kmp:releaseAssetsCopyForAGP NO-SOURCE
+2026-08-05T08:17:47.4585410Z > Task :uxcam-kmp:packageReleaseAssets
+2026-08-05T08:17:47.4611130Z > Task :uxcam-kmp:prepareLintJarForPublish
+2026-08-05T08:17:47.4612550Z > Task :uxcam-kmp:prepareReleaseArtProfile
+2026-08-05T08:17:47.5445070Z > Task :uxcam-kmp:parseReleaseLocalResources
+2026-08-05T08:17:47.5446350Z > Task :uxcam-kmp:writeReleaseAarMetadata
+2026-08-05T08:17:47.5447470Z > Task :uxcam-kmp:generateReleaseRFile
+2026-08-05T08:17:47.6451480Z > Task :uxcam-kmp:generatePomFileForAndroidReleasePublication
+2026-08-05T08:17:47.6487960Z > Task :uxcam-kmp:processReleaseManifest
+2026-08-05T08:17:51.4461600Z > Task :uxcam-kmp:javadocJar
+2026-08-05T08:17:53.8380170Z 
+2026-08-05T08:17:53.8494480Z > Task :uxcam-kmp:compileReleaseKotlinAndroid
+2026-08-05T08:17:53.8624080Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:107:86 'static fun setSessionProperty(p0: String!, p1: String!): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.8721950Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:108:83 'static fun setSessionProperty(p0: String!, p1: Int): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9371490Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:109:85 'static fun setSessionProperty(p0: String!, p1: Float): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9478410Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:142:61 'static fun allowShortBreakForAnotherApp(): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9489790Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:158:69 'static fun setMultiSessionRecord(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9505610Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:162:70 'static fun disableCrashHandling(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9511280Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMP.android.kt:190:57 'static fun pendingSessionCount(): Int' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9519480Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMPAndroid.kt:9:52 'static fun markSessionAsFavorite(): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9521610Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMPAndroid.kt:12:17 'static fun setImprovedScreenCaptureEnabled(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:53.9525110Z w: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-kmp/src/androidMain/kotlin/com/uxcam/kmp/UXCamKMPAndroid.kt:15:17 'static fun resumeShortBreakForAnotherApp(): Unit' is deprecated. Deprecated in Java.
+2026-08-05T08:17:54.0342640Z 
+2026-08-05T08:17:54.0343830Z > Task :uxcam-kmp:downloadUXCamXcframework
+2026-08-05T08:18:01.0096840Z 
+2026-08-05T08:18:01.0103090Z > Task :uxcam-kmp:cinteropUXCamIosArm64
+2026-08-05T08:18:01.0108770Z Kotlin/Native bundle directory /Users/runner/.konan/kotlin-native-prebuilt-macos-aarch64-2.4.0 is not empty. Native bundle files will be overwritten.
+2026-08-05T08:18:08.3914920Z Downloading native dependencies (LLVM, sysroot etc). This is a one-time action performed only on the first run of the compiler.
+2026-08-05T08:18:08.3917190Z Downloading dependency https://download.jetbrains.com/kotlin/native/resources/llvm/21-aarch64-macos/llvm-21-aarch64-macos-essentials-97.tar.gz to /Users/runner/.konan/dependencies/cache/llvm-21-aarch64-macos-essentials-97.tar.gz
+2026-08-05T08:18:11.2584640Z Done.
+2026-08-05T08:18:11.2586430Z Extracting dependency: /Users/runner/.konan/dependencies/cache/llvm-21-aarch64-macos-essentials-97.tar.gz into /Users/runner/.konan/dependencies
+2026-08-05T08:18:14.0163120Z Downloading dependency https://download.jetbrains.com/kotlin/native/libffi-3.3-1-macos-arm64.tar.gz to /Users/runner/.konan/dependencies/cache/libffi-3.3-1-macos-arm64.tar.gz
+2026-08-05T08:18:14.1345510Z Done.
+2026-08-05T08:18:14.1358950Z Extracting dependency: /Users/runner/.konan/dependencies/cache/libffi-3.3-1-macos-arm64.tar.gz into /Users/runner/.konan/dependencies
+2026-08-05T08:18:20.4467240Z 
+2026-08-05T08:18:20.4473710Z > Task :uxcam-kmp:extractReleaseAnnotations
+2026-08-05T08:18:20.4475180Z > Task :uxcam-kmp:compileReleaseJavaWithJavac NO-SOURCE
+2026-08-05T08:18:20.4476430Z > Task :uxcam-kmp:mergeReleaseGeneratedProguardFiles
+2026-08-05T08:18:20.5180170Z > Task :uxcam-kmp:mergeReleaseConsumerProguardFiles
+2026-08-05T08:18:20.5185340Z > Task :uxcam-kmp:processReleaseJavaRes
+2026-08-05T08:18:20.6447870Z > Task :uxcam-kmp:mergeReleaseJavaResource
+2026-08-05T08:18:22.5002750Z 
+2026-08-05T08:18:22.5025070Z > Task :uxcam-kmp:downloadKotlinNativeDistribution
+2026-08-05T08:18:22.5030880Z Downloading native dependencies (LLVM, sysroot etc). This is a one-time action performed only on the first run of the compiler.
+2026-08-05T08:18:22.5036070Z Downloading dependency https://download.jetbrains.com/kotlin/native/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz to /Users/runner/.konan/dependencies/cache/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz
+2026-08-05T08:18:22.8364680Z Done.
+2026-08-05T08:18:22.8367020Z Extracting dependency: /Users/runner/.konan/dependencies/cache/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz into /Users/runner/.konan/dependencies
+2026-08-05T08:18:25.5235640Z Downloading native dependencies (LLVM, sysroot etc). This is a one-time action performed only on the first run of the compiler.
+2026-08-05T08:18:25.5240480Z Downloading dependency https://download.jetbrains.com/kotlin/native/msys2-mingw-w64-x86_64-2.tar.gz to /Users/runner/.konan/dependencies/cache/msys2-mingw-w64-x86_64-2.tar.gz
+2026-08-05T08:18:28.3311920Z Done.
+2026-08-05T08:18:28.3313390Z Extracting dependency: /Users/runner/.konan/dependencies/cache/msys2-mingw-w64-x86_64-2.tar.gz into /Users/runner/.konan/dependencies
+2026-08-05T08:18:30.9566220Z 
+2026-08-05T08:18:30.9567020Z > Task :uxcam-kmp:syncReleaseLibJars
+2026-08-05T08:18:30.9568260Z > Task :uxcam-kmp:bundleReleaseAar
+2026-08-05T08:18:30.9576190Z > Task :uxcam-kmp:generateMetadataFileForAndroidReleasePublication
+2026-08-05T08:18:31.3369510Z > Task :uxcam-kmp:signAndroidReleasePublication
+2026-08-05T08:18:31.3372000Z > Task :uxcam-kmp:iosArm64Cinterop-UXCamKlib
+2026-08-05T08:18:35.5349950Z > Task :uxcam-kmp:compileKotlinIosArm64
+2026-08-05T08:18:35.5421550Z > Task :uxcam-kmp:iosArm64Klib
+2026-08-05T08:18:49.8318090Z > Task :uxcam-kmp:cinteropUXCamIosX64
+2026-08-05T08:18:50.0444570Z > Task :uxcam-kmp:cinteropUXCamIosSimulatorArm64
+2026-08-05T08:19:00.0387440Z > Task :uxcam-kmp:commonizeNativeDistribution
+2026-08-05T08:19:03.8571000Z > Task :uxcam-kmp:commonizeCInterop
+2026-08-05T08:19:04.1771020Z > Task :uxcam-kmp:transformCommonMainDependenciesMetadata
+2026-08-05T08:19:04.1878830Z > Task :uxcam-kmp:metadataCommonMainProcessResources NO-SOURCE
+2026-08-05T08:19:04.1880470Z > Task :uxcam-kmp:transformNativeMainCInteropDependenciesMetadata
+2026-08-05T08:19:04.1987340Z > Task :uxcam-kmp:transformNativeMainDependenciesMetadata
+2026-08-05T08:19:04.2039520Z > Task :uxcam-kmp:metadataNativeMainProcessResources NO-SOURCE
+2026-08-05T08:19:04.2052150Z > Task :uxcam-kmp:transformAppleMainCInteropDependenciesMetadata
+2026-08-05T08:19:04.2056650Z > Task :uxcam-kmp:transformAppleMainDependenciesMetadata
+2026-08-05T08:19:04.2058030Z > Task :uxcam-kmp:metadataAppleMainProcessResources NO-SOURCE
+2026-08-05T08:19:04.2059960Z > Task :uxcam-kmp:transformIosMainCInteropDependenciesMetadata
+2026-08-05T08:19:04.2071590Z > Task :uxcam-kmp:transformIosMainDependenciesMetadata
+2026-08-05T08:19:04.2094030Z > Task :uxcam-kmp:metadataIosMainProcessResources NO-SOURCE
+2026-08-05T08:19:04.2196970Z > Task :uxcam-kmp:iosArm64SourcesJar
+2026-08-05T08:19:04.2319940Z > Task :uxcam-kmp:generatePomFileForIosArm64Publication
+2026-08-05T08:19:04.2355380Z > Task :uxcam-kmp:iosSimulatorArm64Cinterop-UXCamKlib
+2026-08-05T08:19:05.2311280Z > Task :uxcam-kmp:compileCommonMainKotlinMetadata
+2026-08-05T08:19:05.9877800Z > Task :uxcam-kmp:compileKotlinIosSimulatorArm64
+2026-08-05T08:19:05.9879220Z > Task :uxcam-kmp:metadataCommonMainClasses
+2026-08-05T08:19:05.9881080Z > Task :uxcam-kmp:compileNativeMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:05.9882570Z > Task :uxcam-kmp:metadataNativeMainClasses UP-TO-DATE
+2026-08-05T08:19:05.9884020Z > Task :uxcam-kmp:compileAppleMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:05.9885310Z > Task :uxcam-kmp:metadataAppleMainClasses UP-TO-DATE
+2026-08-05T08:19:06.5139940Z > Task :uxcam-kmp:compileIosMainKotlinMetadata
+2026-08-05T08:19:06.5141610Z > Task :uxcam-kmp:metadataIosMainClasses
+2026-08-05T08:19:06.5148450Z > Task :uxcam-kmp:iosArm64MetadataElements
+2026-08-05T08:19:06.5150120Z > Task :uxcam-kmp:generateMetadataFileForIosArm64Publication
+2026-08-05T08:19:06.6788500Z > Task :uxcam-kmp:signIosArm64Publication
+2026-08-05T08:19:06.6823290Z > Task :uxcam-kmp:iosSimulatorArm64Klib
+2026-08-05T08:19:06.6824680Z > Task :uxcam-kmp:iosSimulatorArm64MetadataElements
+2026-08-05T08:19:06.6826950Z > Task :uxcam-kmp:iosSimulatorArm64SourcesJar
+2026-08-05T08:19:06.6828490Z > Task :uxcam-kmp:generateMetadataFileForIosSimulatorArm64Publication
+2026-08-05T08:19:06.6830150Z > Task :uxcam-kmp:generatePomFileForIosSimulatorArm64Publication
+2026-08-05T08:19:06.6831370Z > Task :uxcam-kmp:signIosSimulatorArm64Publication
+2026-08-05T08:19:06.6832500Z > Task :uxcam-kmp:iosX64Cinterop-UXCamKlib
+2026-08-05T08:19:07.3141820Z > Task :uxcam-kmp:compileKotlinIosX64
+2026-08-05T08:19:07.3148810Z > Task :uxcam-kmp:iosX64Klib
+2026-08-05T08:19:07.3150310Z > Task :uxcam-kmp:iosX64MetadataElements
+2026-08-05T08:19:07.3151610Z > Task :uxcam-kmp:iosX64SourcesJar
+2026-08-05T08:19:07.3152940Z > Task :uxcam-kmp:generateMetadataFileForIosX64Publication
+2026-08-05T08:19:07.3154310Z > Task :uxcam-kmp:generatePomFileForIosX64Publication
+2026-08-05T08:19:07.4673510Z > Task :uxcam-kmp:signIosX64Publication
+2026-08-05T08:19:07.5354260Z > Task :uxcam-kmp:jsProcessResources NO-SOURCE
+2026-08-05T08:19:07.5363030Z > Task :kotlinKotlinNpmCachesSetup
+2026-08-05T08:19:07.8331810Z > Task :uxcam-kmp:jsPackageJson
+2026-08-05T08:19:07.8481120Z > Task :uxcam-kmp:jsPublicPackageJson
+2026-08-05T08:19:07.9634860Z > Task :uxcam-kmp:jsSourcesJar
+2026-08-05T08:19:07.9735550Z > Task :uxcam-kmp:generatePomFileForJsPublication
+2026-08-05T08:19:07.9836100Z > Task :uxcam-kmp:jvmProcessResources NO-SOURCE
+2026-08-05T08:19:07.9937880Z > Task :uxcam-kmp:processJvmMainResources SKIPPED
+2026-08-05T08:19:08.0041730Z > Task :uxcam-kmp:jvmSourcesJar
+2026-08-05T08:19:08.0141960Z > Task :uxcam-kmp:generatePomFileForJvmPublication
+2026-08-05T08:19:08.0244100Z > Task :uxcam-kmp:transformNoopMainDependenciesMetadata
+2026-08-05T08:19:08.1916150Z > Task :uxcam-kmp:compileNoopMainKotlinMetadata
+2026-08-05T08:19:08.2018170Z > Task :uxcam-kmp:transformWebMainDependenciesMetadata
+2026-08-05T08:19:08.2118340Z > Task :uxcam-kmp:compileWebMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:08.2230580Z > Task :uxcam-kmp:generateProjectStructureMetadata
+2026-08-05T08:19:08.2231440Z > Task :uxcam-kmp:metadataNoopMainProcessResources NO-SOURCE
+2026-08-05T08:19:08.2332760Z > Task :uxcam-kmp:metadataNoopMainClasses
+2026-08-05T08:19:08.2434320Z > Task :uxcam-kmp:metadataWebMainProcessResources NO-SOURCE
+2026-08-05T08:19:08.2535840Z > Task :uxcam-kmp:metadataWebMainClasses UP-TO-DATE
+2026-08-05T08:19:08.2637170Z > Task :uxcam-kmp:allMetadataJar
+2026-08-05T08:19:08.2738520Z > Task :uxcam-kmp:buildKotlinToolingMetadata
+2026-08-05T08:19:08.2818070Z > Task :uxcam-kmp:sourcesJar
+2026-08-05T08:19:08.3171810Z > Task :uxcam-kmp:generateMetadataFileForKotlinMultiplatformPublication
+2026-08-05T08:19:08.3272590Z > Task :uxcam-kmp:generatePomFileForKotlinMultiplatformPublication
+2026-08-05T08:19:08.3373400Z > Task :uxcam-kmp:signKotlinMultiplatformPublication
+2026-08-05T08:19:08.7227980Z > Task :uxcam-kmp:compileKotlinJs
+2026-08-05T08:19:08.9605360Z > Task :uxcam-kmp:compileKotlinLinuxX64
+2026-08-05T08:19:08.9617720Z > Task :uxcam-kmp:jsMainClasses
+2026-08-05T08:19:08.9618500Z > Task :uxcam-kmp:jsJar
+2026-08-05T08:19:08.9619170Z > Task :uxcam-kmp:generateMetadataFileForJsPublication
+2026-08-05T08:19:09.0306510Z > Task :uxcam-kmp:compileKotlinJvm
+2026-08-05T08:19:09.0307350Z > Task :uxcam-kmp:signJsPublication
+2026-08-05T08:19:09.0308050Z > Task :uxcam-kmp:compileJvmMainJava NO-SOURCE
+2026-08-05T08:19:09.0308820Z > Task :uxcam-kmp:jvmMainClasses
+2026-08-05T08:19:09.0309540Z > Task :uxcam-kmp:jvmJar
+2026-08-05T08:19:09.0310190Z > Task :uxcam-kmp:generateMetadataFileForJvmPublication
+2026-08-05T08:19:09.0310980Z > Task :uxcam-kmp:signJvmPublication
+2026-08-05T08:19:09.0311550Z > Task :uxcam-kmp:linuxX64Klib
+2026-08-05T08:19:09.0312590Z > Task :uxcam-kmp:linuxX64SourcesJar
+2026-08-05T08:19:09.0313280Z > Task :uxcam-kmp:generateMetadataFileForLinuxX64Publication
+2026-08-05T08:19:09.0313990Z > Task :uxcam-kmp:generatePomFileForLinuxX64Publication
+2026-08-05T08:19:09.1549200Z > Task :uxcam-kmp:signLinuxX64Publication
+2026-08-05T08:19:09.4833650Z > Task :uxcam-kmp:compileKotlinMingwX64
+2026-08-05T08:19:09.4834580Z > Task :uxcam-kmp:mingwX64Klib
+2026-08-05T08:19:09.4835160Z > Task :uxcam-kmp:mingwX64SourcesJar
+2026-08-05T08:19:09.5859530Z > Task :uxcam-kmp:generateMetadataFileForMingwX64Publication
+2026-08-05T08:19:09.5865300Z > Task :uxcam-kmp:generatePomFileForMingwX64Publication
+2026-08-05T08:19:09.5891360Z > Task :uxcam-kmp:signMingwX64Publication
+2026-08-05T08:19:09.7760890Z > Task :uxcam-kmp:wasmJsProcessResources NO-SOURCE
+2026-08-05T08:19:09.7861100Z > Task :kotlinWasmKotlinNpmCachesSetup
+2026-08-05T08:19:10.0812170Z > Task :uxcam-kmp:wasmJsPackageJson
+2026-08-05T08:19:10.0913680Z > Task :uxcam-kmp:wasmJsPublicPackageJson
+2026-08-05T08:19:10.1015110Z > Task :uxcam-kmp:wasmJsSourcesJar
+2026-08-05T08:19:10.1115870Z > Task :uxcam-kmp:generatePomFileForWasmJsPublication
+2026-08-05T08:19:10.1216360Z > Task :uxcam-compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+2026-08-05T08:19:10.1317640Z > Task :uxcam-compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+2026-08-05T08:19:10.1418320Z > Task :uxcam-compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+2026-08-05T08:19:10.1519620Z > Task :uxcam-compose:generateResourceAccessorsForAndroidMain SKIPPED
+2026-08-05T08:19:10.1619660Z > Task :uxcam-compose:convertXmlValueResourcesForCommonMain NO-SOURCE
+2026-08-05T08:19:10.1721690Z > Task :uxcam-compose:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+2026-08-05T08:19:10.1822550Z > Task :uxcam-compose:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+2026-08-05T08:19:10.1832790Z > Task :uxcam-compose:generateResourceAccessorsForCommonMain SKIPPED
+2026-08-05T08:19:10.1833750Z > Task :uxcam-compose:generateActualResourceCollectorsForAndroidMain SKIPPED
+2026-08-05T08:19:10.1834580Z > Task :uxcam-compose:generateComposeResClass SKIPPED
+2026-08-05T08:19:10.1835500Z > Task :uxcam-compose:generateExpectResourceCollectorsForCommonMain SKIPPED
+2026-08-05T08:19:10.1836500Z > Task :uxcam-compose:convertXmlValueResourcesForAndroidRelease NO-SOURCE
+2026-08-05T08:19:10.1837450Z > Task :uxcam-compose:copyNonXmlValueResourcesForAndroidRelease NO-SOURCE
+2026-08-05T08:19:10.1838520Z > Task :uxcam-compose:prepareComposeResourcesTaskForAndroidRelease NO-SOURCE
+2026-08-05T08:19:10.1839580Z > Task :uxcam-compose:generateResourceAccessorsForAndroidRelease SKIPPED
+2026-08-05T08:19:10.1840600Z > Task :uxcam-compose:androidReleaseSourcesJar
+2026-08-05T08:19:10.1841490Z > Task :uxcam-compose:preBuild UP-TO-DATE
+2026-08-05T08:19:10.1842320Z > Task :uxcam-compose:preReleaseBuild UP-TO-DATE
+2026-08-05T08:19:10.1851060Z > Task :uxcam-compose:mergeReleaseJniLibFolders
+2026-08-05T08:19:10.1987900Z > Task :uxcam-compose:mergeReleaseNativeLibs NO-SOURCE
+2026-08-05T08:19:10.2090800Z > Task :uxcam-compose:stripReleaseDebugSymbols NO-SOURCE
+2026-08-05T08:19:10.2194490Z > Task :uxcam-compose:copyReleaseJniLibsProjectAndLocalJars
+2026-08-05T08:19:10.2297310Z > Task :uxcam-compose:generateReleaseResValues FROM-CACHE
+2026-08-05T08:19:10.2398780Z > Task :uxcam-compose:extractDeepLinksForAarRelease FROM-CACHE
+2026-08-05T08:19:10.2506390Z > Task :uxcam-compose:kmpPartiallyResolvedDependenciesChecker
+2026-08-05T08:19:10.2607840Z > Task :uxcam-compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:19:10.2709190Z > Task :uxcam-compose:generateReleaseResources FROM-CACHE
+2026-08-05T08:19:10.2810710Z > Task :uxcam-compose:packageReleaseResources
+2026-08-05T08:19:10.2912010Z > Task :uxcam-compose:parseReleaseLocalResources FROM-CACHE
+2026-08-05T08:19:10.2975250Z > Task :uxcam-compose:generateReleaseRFile
+2026-08-05T08:19:10.2976140Z > Task :uxcam-compose:javaPreCompileRelease FROM-CACHE
+2026-08-05T08:19:10.2976780Z > Task :uxcam-compose:mergeReleaseShaders
+2026-08-05T08:19:10.2977710Z > Task :uxcam-compose:compileReleaseShaders NO-SOURCE
+2026-08-05T08:19:10.2978370Z > Task :uxcam-kmp:bundleLibCompileToJarRelease
+2026-08-05T08:19:10.2978990Z > Task :uxcam-compose:copyReleaseComposeResourcesToAndroidAssets
+2026-08-05T08:19:10.5457570Z > Task :uxcam-kmp:compileKotlinWasmJs
+2026-08-05T08:19:11.5432070Z > Task :uxcam-kmp:wasmJsMainClasses
+2026-08-05T08:19:11.5496140Z > Task :uxcam-kmp:wasmJsJar
+2026-08-05T08:19:11.5504570Z > Task :uxcam-kmp:generateMetadataFileForWasmJsPublication
+2026-08-05T08:19:11.5505290Z > Task :uxcam-kmp:signWasmJsPublication
+2026-08-05T08:19:11.6856870Z > Task :uxcam-kmp:publishAndroidReleasePublicationToCentralStagingRepository
+2026-08-05T08:19:11.6957470Z > Task :uxcam-kmp:publishIosArm64PublicationToCentralStagingRepository
+2026-08-05T08:19:11.7059560Z > Task :uxcam-kmp:publishIosSimulatorArm64PublicationToCentralStagingRepository
+2026-08-05T08:19:11.7160120Z > Task :uxcam-kmp:publishIosX64PublicationToCentralStagingRepository
+2026-08-05T08:19:11.7262060Z > Task :uxcam-kmp:publishJsPublicationToCentralStagingRepository
+2026-08-05T08:19:11.7363790Z > Task :uxcam-kmp:publishJvmPublicationToCentralStagingRepository
+2026-08-05T08:19:11.7465420Z > Task :uxcam-kmp:publishKotlinMultiplatformPublicationToCentralStagingRepository
+2026-08-05T08:19:11.7567070Z > Task :uxcam-kmp:publishLinuxX64PublicationToCentralStagingRepository
+2026-08-05T08:19:11.7668780Z > Task :uxcam-kmp:publishMingwX64PublicationToCentralStagingRepository
+2026-08-05T08:19:11.7770980Z > Task :uxcam-kmp:publishWasmJsPublicationToCentralStagingRepository
+2026-08-05T08:19:11.7775780Z > Task :uxcam-kmp:publishAllPublicationsToCentralStagingRepository
+2026-08-05T08:19:11.7776450Z > Task :uxcam-compose:generateReleaseAssets UP-TO-DATE
+2026-08-05T08:19:11.7777340Z > Task :uxcam-compose:releaseAssetsCopyForAGP NO-SOURCE
+2026-08-05T08:19:11.7778070Z > Task :uxcam-compose:packageReleaseAssets
+2026-08-05T08:19:11.7788550Z > Task :uxcam-compose:prepareLintJarForPublish
+2026-08-05T08:19:11.7791200Z > Task :uxcam-compose:prepareReleaseArtProfile
+2026-08-05T08:19:11.8395770Z > Task :uxcam-compose:writeReleaseAarMetadata
+2026-08-05T08:19:11.8497460Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForReleaseApiElements
+2026-08-05T08:19:11.8599040Z > Task :uxcam-compose:processReleaseManifest
+2026-08-05T08:19:11.8700570Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForReleaseRuntimeElements
+2026-08-05T08:19:11.8823640Z > Task :uxcam-compose:generatePomFileForAndroidReleasePublication
+2026-08-05T08:19:11.8923680Z > Task :uxcam-compose:javadocJar
+2026-08-05T08:19:11.9025210Z > Task :uxcam-compose:downloadKotlinNativeDistribution
+2026-08-05T08:19:11.9026100Z > Task :uxcam-compose:convertXmlValueResourcesForAppleMain NO-SOURCE
+2026-08-05T08:19:11.9127740Z > Task :uxcam-compose:copyNonXmlValueResourcesForAppleMain NO-SOURCE
+2026-08-05T08:19:11.9232120Z > Task :uxcam-compose:prepareComposeResourcesTaskForAppleMain NO-SOURCE
+2026-08-05T08:19:11.9333620Z > Task :uxcam-compose:generateResourceAccessorsForAppleMain SKIPPED
+2026-08-05T08:19:11.9435390Z > Task :uxcam-compose:convertXmlValueResourcesForIosArm64Main NO-SOURCE
+2026-08-05T08:19:11.9536920Z > Task :uxcam-compose:copyNonXmlValueResourcesForIosArm64Main NO-SOURCE
+2026-08-05T08:19:11.9638490Z > Task :uxcam-compose:prepareComposeResourcesTaskForIosArm64Main NO-SOURCE
+2026-08-05T08:19:11.9740450Z > Task :uxcam-compose:generateResourceAccessorsForIosArm64Main SKIPPED
+2026-08-05T08:19:11.9842160Z > Task :uxcam-compose:convertXmlValueResourcesForIosMain NO-SOURCE
+2026-08-05T08:19:11.9867270Z > Task :uxcam-compose:copyNonXmlValueResourcesForIosMain NO-SOURCE
+2026-08-05T08:19:11.9868240Z > Task :uxcam-compose:prepareComposeResourcesTaskForIosMain NO-SOURCE
+2026-08-05T08:19:11.9868970Z > Task :uxcam-compose:generateResourceAccessorsForIosMain SKIPPED
+2026-08-05T08:19:11.9969850Z > Task :uxcam-compose:convertXmlValueResourcesForNativeMain NO-SOURCE
+2026-08-05T08:19:12.0071270Z > Task :uxcam-compose:copyNonXmlValueResourcesForNativeMain NO-SOURCE
+2026-08-05T08:19:12.0172920Z > Task :uxcam-compose:prepareComposeResourcesTaskForNativeMain NO-SOURCE
+2026-08-05T08:19:12.0274320Z > Task :uxcam-compose:generateResourceAccessorsForNativeMain SKIPPED
+2026-08-05T08:19:12.0375870Z > Task :uxcam-compose:generateActualResourceCollectorsForIosArm64Main SKIPPED
+2026-08-05T08:19:12.0477430Z > Task :uxcam-kmp:exportCrossCompilationMetadataForIosArm64ApiElements
+2026-08-05T08:19:13.1693960Z > Task :uxcam-compose:compileReleaseKotlinAndroid
+2026-08-05T08:19:14.6887660Z > Task :uxcam-compose:compileKotlinIosArm64
+2026-08-05T08:19:14.8772040Z > Task :uxcam-compose:extractReleaseAnnotations
+2026-08-05T08:19:14.9870850Z > Task :uxcam-compose:compileReleaseJavaWithJavac NO-SOURCE
+2026-08-05T08:19:14.9899450Z > Task :uxcam-compose:mergeReleaseGeneratedProguardFiles
+2026-08-05T08:19:14.9912690Z > Task :uxcam-compose:mergeReleaseConsumerProguardFiles
+2026-08-05T08:19:14.9913340Z > Task :uxcam-compose:processReleaseJavaRes
+2026-08-05T08:19:14.9913850Z > Task :uxcam-compose:iosArm64Klib
+2026-08-05T08:19:14.9914370Z > Task :uxcam-compose:mergeReleaseJavaResource
+2026-08-05T08:19:14.9914990Z > Task :uxcam-compose:commonizeNativeDistribution
+2026-08-05T08:19:14.9915510Z > Task :uxcam-compose:syncReleaseLibJars
+2026-08-05T08:19:14.9916000Z > Task :uxcam-compose:bundleReleaseAar
+2026-08-05T08:19:14.9916610Z > Task :uxcam-compose:generateMetadataFileForAndroidReleasePublication
+2026-08-05T08:19:15.0925400Z > Task :uxcam-compose:signAndroidReleasePublication
+2026-08-05T08:19:15.0927050Z > Task :uxcam-kmp:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+2026-08-05T08:19:17.4774110Z > Task :uxcam-compose:transformCommonMainDependenciesMetadata
+2026-08-05T08:19:17.4875800Z > Task :uxcam-compose:metadataCommonMainProcessResources NO-SOURCE
+2026-08-05T08:19:17.5212170Z > Task :uxcam-compose:transformNativeMainCInteropDependenciesMetadata
+2026-08-05T08:19:17.6712140Z > Task :uxcam-compose:compileCommonMainKotlinMetadata
+2026-08-05T08:19:17.9343090Z > Task :uxcam-compose:transformNativeMainDependenciesMetadata
+2026-08-05T08:19:17.9344120Z > Task :uxcam-compose:metadataCommonMainClasses
+2026-08-05T08:19:17.9345020Z > Task :uxcam-compose:compileNativeMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:17.9346250Z > Task :uxcam-compose:metadataNativeMainProcessResources NO-SOURCE
+2026-08-05T08:19:17.9347140Z > Task :uxcam-compose:metadataNativeMainClasses UP-TO-DATE
+2026-08-05T08:19:17.9348110Z > Task :uxcam-compose:transformAppleMainCInteropDependenciesMetadata
+2026-08-05T08:19:17.9348950Z > Task :uxcam-compose:transformAppleMainDependenciesMetadata
+2026-08-05T08:19:17.9349700Z > Task :uxcam-compose:compileAppleMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:17.9350560Z > Task :uxcam-compose:metadataAppleMainProcessResources NO-SOURCE
+2026-08-05T08:19:17.9351380Z > Task :uxcam-compose:metadataAppleMainClasses UP-TO-DATE
+2026-08-05T08:19:18.0482110Z > Task :uxcam-compose:transformIosMainCInteropDependenciesMetadata
+2026-08-05T08:19:18.0483140Z > Task :uxcam-compose:transformIosMainDependenciesMetadata
+2026-08-05T08:19:18.1836410Z 
+2026-08-05T08:19:18.1841080Z w: KLIB loader: The same 'unique_name=lifecycle-runtime_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.androidx.lifecycle-lifecycle-runtime-2.9.6-commonMain-WvMiUA.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/androidx.lifecycle-lifecycle-runtime-2.9.4-commonMain-IrcNlw.klib
+2026-08-05T08:19:18.1844170Z > Task :uxcam-compose:compileIosMainKotlinMetadata
+2026-08-05T08:19:18.1846760Z w: KLIB loader: The same 'unique_name=lifecycle-runtime-compose_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.androidx.lifecycle-lifecycle-runtime-compose-2.9.6-commonMain-MM2pxQ.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/androidx.lifecycle-lifecycle-runtime-compose-2.9.4-commonMain-Jyns3Q.klib
+2026-08-05T08:19:18.1852980Z 
+2026-08-05T08:19:18.1856610Z w: KLIB loader: The same 'unique_name=lifecycle-viewmodel_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-2.9.6-commonMain-o5UeXw.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/androidx.lifecycle-lifecycle-viewmodel-2.9.4-commonMain-YZugNA.klib
+2026-08-05T08:19:18.1858930Z > Task :uxcam-compose:metadataIosMainProcessResources NO-SOURCE
+2026-08-05T08:19:18.1865050Z w: KLIB loader: The same 'unique_name=lifecycle-viewmodel-savedstate_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-savedstate-2.9.6-commonMain-HvVjYQ.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/androidx.lifecycle-lifecycle-viewmodel-savedstate-2.9.4-commonMain-KTe1Gw.klib
+2026-08-05T08:19:18.1867750Z > Task :uxcam-compose:metadataIosMainClasses
+2026-08-05T08:19:18.1870020Z w: KLIB loader: The same 'unique_name=annotation_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.compose.annotation-internal-annotation-1.9.3-commonMain-cgDJDA.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.annotation-annotation-1.9.1-commonMain-WmoUwA.klib
+2026-08-05T08:19:18.1872540Z > Task :uxcam-compose:iosArm64MetadataElements
+2026-08-05T08:19:18.1874630Z w: KLIB loader: The same 'unique_name=collection_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/org.jetbrains.compose.collection-internal-collection-1.9.3-commonMain-w7Q_Yw.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/nativeMain/androidx.collection-collection-1.5.0-commonMain-j7f1lg.klib
+2026-08-05T08:19:18.1879420Z w: KLIB loader: The same 'unique_name=runtime_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.compose.runtime-runtime-1.9.3-commonMain-QgBs-g.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.compose.runtime-runtime-1.9.4-commonMain-_TGNUg.klib
+2026-08-05T08:19:18.1882910Z w: KLIB loader: The same 'unique_name=lifecycle-common_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.androidx.lifecycle-lifecycle-common-2.9.6-commonMain-_EOCYQ.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.lifecycle-lifecycle-common-2.9.4-commonMain-2l5nFA.klib
+2026-08-05T08:19:18.1886470Z w: KLIB loader: The same 'unique_name=runtime-saveable_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.compose.runtime-runtime-saveable-1.9.3-commonMain-UtAgeQ.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.compose.runtime-runtime-saveable-1.9.4-commonMain-0zF0yA.klib
+2026-08-05T08:19:18.1890840Z w: KLIB loader: The same 'unique_name=savedstate-compose_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.androidx.savedstate-savedstate-compose-1.3.6-commonMain-Fw7d1w.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.savedstate-savedstate-compose-1.3.3-commonMain-9pLK_g.klib
+2026-08-05T08:19:18.1894460Z w: KLIB loader: The same 'unique_name=savedstate_commonMain' found in more than one library: /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.androidx.savedstate-savedstate-1.3.6-commonMain-Gx5ULw.klib, /Users/runner/work/uxcam-kmp/uxcam-kmp/uxcam-compose/build/kotlinTransformedMetadataLibraries/commonMain/androidx.savedstate-savedstate-1.3.3-commonMain-NwmUsg.klib
+2026-08-05T08:19:18.2191340Z > Task :uxcam-compose:iosArm64SourcesJar
+2026-08-05T08:19:18.2192330Z > Task :uxcam-compose:assembleIosArm64MainResources
+2026-08-05T08:19:18.2193360Z > Task :uxcam-compose:iosArm64CopyHierarchicalMultiplatformResources
+2026-08-05T08:19:18.2194320Z > Task :uxcam-compose:iosArm64ZipMultiplatformResourcesForPublication
+2026-08-05T08:19:18.2195260Z > Task :uxcam-compose:generateMetadataFileForIosArm64Publication
+2026-08-05T08:19:18.2196200Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForIosArm64ApiElements
+2026-08-05T08:19:18.2197120Z > Task :uxcam-compose:generatePomFileForIosArm64Publication
+2026-08-05T08:19:18.3546600Z > Task :uxcam-compose:signIosArm64Publication
+2026-08-05T08:19:18.3649210Z > Task :uxcam-compose:convertXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+2026-08-05T08:19:18.3674390Z > Task :uxcam-compose:copyNonXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+2026-08-05T08:19:18.3686240Z > Task :uxcam-compose:prepareComposeResourcesTaskForIosSimulatorArm64Main NO-SOURCE
+2026-08-05T08:19:18.3689450Z > Task :uxcam-compose:generateResourceAccessorsForIosSimulatorArm64Main SKIPPED
+2026-08-05T08:19:18.3691970Z > Task :uxcam-compose:generateActualResourceCollectorsForIosSimulatorArm64Main SKIPPED
+2026-08-05T08:19:18.3693290Z > Task :uxcam-kmp:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements
+2026-08-05T08:19:21.0285840Z > Task :uxcam-compose:compileKotlinIosSimulatorArm64
+2026-08-05T08:19:21.0286820Z > Task :uxcam-compose:iosSimulatorArm64Klib
+2026-08-05T08:19:21.0287490Z > Task :uxcam-compose:iosSimulatorArm64MetadataElements
+2026-08-05T08:19:21.0288180Z > Task :uxcam-compose:iosSimulatorArm64SourcesJar
+2026-08-05T08:19:21.0288850Z > Task :uxcam-compose:assembleIosSimulatorArm64MainResources
+2026-08-05T08:19:21.0289680Z > Task :uxcam-compose:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+2026-08-05T08:19:21.0290620Z > Task :uxcam-compose:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+2026-08-05T08:19:21.0380420Z > Task :uxcam-compose:generateMetadataFileForIosSimulatorArm64Publication
+2026-08-05T08:19:21.0393010Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+2026-08-05T08:19:21.0394020Z > Task :uxcam-compose:generatePomFileForIosSimulatorArm64Publication
+2026-08-05T08:19:21.1846690Z > Task :uxcam-compose:signIosSimulatorArm64Publication
+2026-08-05T08:19:21.1885270Z > Task :uxcam-compose:convertXmlValueResourcesForIosX64Main NO-SOURCE
+2026-08-05T08:19:21.1886290Z > Task :uxcam-compose:copyNonXmlValueResourcesForIosX64Main NO-SOURCE
+2026-08-05T08:19:21.1887140Z > Task :uxcam-compose:prepareComposeResourcesTaskForIosX64Main NO-SOURCE
+2026-08-05T08:19:21.1887970Z > Task :uxcam-compose:generateResourceAccessorsForIosX64Main SKIPPED
+2026-08-05T08:19:21.1888800Z > Task :uxcam-compose:generateActualResourceCollectorsForIosX64Main SKIPPED
+2026-08-05T08:19:21.1889640Z > Task :uxcam-kmp:exportCrossCompilationMetadataForIosX64ApiElements
+2026-08-05T08:19:22.8548990Z > Task :uxcam-compose:compileKotlinIosX64
+2026-08-05T08:19:22.8550620Z > Task :uxcam-compose:iosX64Klib
+2026-08-05T08:19:22.8551230Z > Task :uxcam-compose:iosX64MetadataElements
+2026-08-05T08:19:22.8551780Z > Task :uxcam-compose:iosX64SourcesJar
+2026-08-05T08:19:22.8552350Z > Task :uxcam-compose:assembleIosX64MainResources
+2026-08-05T08:19:22.8553030Z > Task :uxcam-compose:iosX64CopyHierarchicalMultiplatformResources
+2026-08-05T08:19:22.8554330Z > Task :uxcam-compose:iosX64ZipMultiplatformResourcesForPublication
+2026-08-05T08:19:22.8555100Z > Task :uxcam-compose:generateMetadataFileForIosX64Publication
+2026-08-05T08:19:22.8555880Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForIosX64ApiElements
+2026-08-05T08:19:22.8556690Z > Task :uxcam-compose:generatePomFileForIosX64Publication
+2026-08-05T08:19:22.9232680Z > Task :uxcam-compose:signIosX64Publication
+2026-08-05T08:19:22.9233450Z > Task :uxcam-compose:convertXmlValueResourcesForJsMain NO-SOURCE
+2026-08-05T08:19:22.9234170Z > Task :uxcam-compose:copyNonXmlValueResourcesForJsMain NO-SOURCE
+2026-08-05T08:19:22.9234870Z > Task :uxcam-compose:prepareComposeResourcesTaskForJsMain NO-SOURCE
+2026-08-05T08:19:22.9235570Z > Task :uxcam-compose:generateResourceAccessorsForJsMain SKIPPED
+2026-08-05T08:19:22.9236260Z > Task :uxcam-compose:convertXmlValueResourcesForNoopMain NO-SOURCE
+2026-08-05T08:19:22.9236960Z > Task :uxcam-compose:copyNonXmlValueResourcesForNoopMain NO-SOURCE
+2026-08-05T08:19:22.9237750Z > Task :uxcam-compose:prepareComposeResourcesTaskForNoopMain NO-SOURCE
+2026-08-05T08:19:22.9238460Z > Task :uxcam-compose:generateResourceAccessorsForNoopMain SKIPPED
+2026-08-05T08:19:22.9239150Z > Task :uxcam-compose:convertXmlValueResourcesForWebMain NO-SOURCE
+2026-08-05T08:19:22.9239830Z > Task :uxcam-compose:copyNonXmlValueResourcesForWebMain NO-SOURCE
+2026-08-05T08:19:22.9240550Z > Task :uxcam-compose:prepareComposeResourcesTaskForWebMain NO-SOURCE
+2026-08-05T08:19:22.9241740Z > Task :uxcam-compose:generateResourceAccessorsForWebMain SKIPPED
+2026-08-05T08:19:22.9242450Z > Task :uxcam-compose:generateActualResourceCollectorsForJsMain SKIPPED
+2026-08-05T08:19:23.1414100Z > Task :uxcam-compose:jsResolveResourcesFromDependencies
+2026-08-05T08:19:23.1545910Z > Task :uxcam-compose:assembleJsMainResources
+2026-08-05T08:19:23.1668680Z > Task :uxcam-compose:jsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+2026-08-05T08:19:23.2965980Z > Task :uxcam-compose:jsAggregateResources
+2026-08-05T08:19:23.2968380Z > Task :uxcam-compose:unpackSkikoWasmRuntime
+2026-08-05T08:19:23.3404330Z > Task :uxcam-compose:jsProcessResources
+2026-08-05T08:19:23.5946660Z > Task :uxcam-compose:compileKotlinJs
+2026-08-05T08:19:24.0949130Z > Task :uxcam-compose:jsPackageJson
+2026-08-05T08:19:24.0949800Z > Task :uxcam-compose:jsMainClasses
+2026-08-05T08:19:24.0950360Z > Task :uxcam-compose:jsPublicPackageJson
+2026-08-05T08:19:24.3902260Z > Task :uxcam-compose:jsJar
+2026-08-05T08:19:24.3903470Z > Task :uxcam-compose:jsSourcesJar
+2026-08-05T08:19:24.3904280Z > Task :uxcam-compose:jsCopyHierarchicalMultiplatformResources
+2026-08-05T08:19:24.3905070Z > Task :uxcam-compose:jsZipMultiplatformResourcesForPublication
+2026-08-05T08:19:24.4302650Z > Task :uxcam-compose:generateMetadataFileForJsPublication
+2026-08-05T08:19:24.4303420Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForJsApiElements
+2026-08-05T08:19:24.4304190Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForJsRuntimeElements
+2026-08-05T08:19:24.4304920Z > Task :uxcam-compose:generatePomFileForJsPublication
+2026-08-05T08:19:24.5935080Z > Task :uxcam-compose:signJsPublication
+2026-08-05T08:19:24.5935850Z > Task :uxcam-compose:convertXmlValueResourcesForJvmMain NO-SOURCE
+2026-08-05T08:19:24.5936820Z > Task :uxcam-compose:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+2026-08-05T08:19:24.5937650Z > Task :uxcam-compose:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+2026-08-05T08:19:24.5938560Z > Task :uxcam-compose:generateResourceAccessorsForJvmMain SKIPPED
+2026-08-05T08:19:24.5939440Z > Task :uxcam-compose:generateActualResourceCollectorsForJvmMain SKIPPED
+2026-08-05T08:19:25.1689830Z > Task :uxcam-compose:assembleJvmMainResources
+2026-08-05T08:19:25.1791020Z > Task :uxcam-compose:jvmProcessResources
+2026-08-05T08:19:25.1846390Z > Task :uxcam-compose:processJvmMainResources SKIPPED
+2026-08-05T08:19:25.3022380Z > Task :uxcam-compose:jvmSourcesJar
+2026-08-05T08:19:25.3124620Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForJvmApiElements
+2026-08-05T08:19:25.3227990Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForJvmRuntimeElements
+2026-08-05T08:19:25.3327400Z > Task :uxcam-compose:generatePomFileForJvmPublication
+2026-08-05T08:19:25.3966830Z > Task :uxcam-compose:transformNoopMainDependenciesMetadata
+2026-08-05T08:19:25.5355830Z > Task :uxcam-compose:compileNoopMainKotlinMetadata
+2026-08-05T08:19:25.7875420Z > Task :uxcam-compose:transformWebMainDependenciesMetadata
+2026-08-05T08:19:25.7976320Z > Task :uxcam-compose:compileWebMainKotlinMetadata NO-SOURCE
+2026-08-05T08:19:25.8077750Z > Task :uxcam-kmp:exportRootPublicationCoordinatesForMetadataApiElements
+2026-08-05T08:19:25.8178600Z > Task :uxcam-compose:generateProjectStructureMetadata
+2026-08-05T08:19:25.8279590Z > Task :uxcam-compose:metadataNoopMainProcessResources NO-SOURCE
+2026-08-05T08:19:25.8380160Z > Task :uxcam-compose:metadataNoopMainClasses
+2026-08-05T08:19:25.8481320Z > Task :uxcam-compose:metadataWebMainProcessResources NO-SOURCE
+2026-08-05T08:19:25.8581840Z > Task :uxcam-compose:metadataWebMainClasses UP-TO-DATE
+2026-08-05T08:19:25.8683310Z > Task :uxcam-compose:allMetadataJar
+2026-08-05T08:19:25.8786500Z > Task :uxcam-compose:buildKotlinToolingMetadata
+2026-08-05T08:19:25.8923950Z > Task :uxcam-compose:sourcesJar
+2026-08-05T08:19:25.8924770Z > Task :uxcam-compose:generateMetadataFileForKotlinMultiplatformPublication
+2026-08-05T08:19:25.9048020Z > Task :uxcam-compose:generatePomFileForKotlinMultiplatformPublication
+2026-08-05T08:19:25.9170640Z > Task :uxcam-compose:signKotlinMultiplatformPublication
+2026-08-05T08:19:25.9274940Z > Task :uxcam-compose:convertXmlValueResourcesForWasmJsMain NO-SOURCE
+2026-08-05T08:19:25.9398520Z > Task :uxcam-compose:copyNonXmlValueResourcesForWasmJsMain NO-SOURCE
+2026-08-05T08:19:25.9510320Z > Task :uxcam-compose:prepareComposeResourcesTaskForWasmJsMain NO-SOURCE
+2026-08-05T08:19:25.9612610Z > Task :uxcam-compose:generateResourceAccessorsForWasmJsMain SKIPPED
+2026-08-05T08:19:25.9743370Z > Task :uxcam-compose:generateActualResourceCollectorsForWasmJsMain SKIPPED
+2026-08-05T08:19:25.9854300Z > Task :uxcam-compose:compileKotlinJvm
+2026-08-05T08:19:26.0366080Z > Task :uxcam-compose:compileJvmMainJava NO-SOURCE
+2026-08-05T08:19:26.0466400Z > Task :uxcam-compose:jvmMainClasses
+2026-08-05T08:19:26.0567840Z > Task :uxcam-compose:jvmJar
+2026-08-05T08:19:26.1517710Z > Task :uxcam-compose:generateMetadataFileForJvmPublication
+2026-08-05T08:19:26.1618790Z > Task :uxcam-compose:signJvmPublication
+2026-08-05T08:19:26.1720260Z > Task :uxcam-compose:wasmJsResolveResourcesFromDependencies
+2026-08-05T08:19:26.1822050Z > Task :uxcam-compose:assembleWasmJsMainResources
+2026-08-05T08:19:26.1923060Z > Task :uxcam-compose:wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+2026-08-05T08:19:26.2023370Z > Task :uxcam-compose:wasmJsAggregateResources
+2026-08-05T08:19:26.2124000Z > Task :uxcam-compose:wasmJsProcessResources
+2026-08-05T08:19:26.4361150Z > Task :uxcam-compose:compileKotlinWasmJs
+2026-08-05T08:19:26.8466010Z > Task :uxcam-compose:wasmJsPackageJson
+2026-08-05T08:19:26.8469280Z > Task :uxcam-compose:wasmJsMainClasses
+2026-08-05T08:19:26.8470330Z > Task :uxcam-compose:wasmJsPublicPackageJson
+2026-08-05T08:19:26.8471110Z > Task :uxcam-compose:wasmJsJar
+2026-08-05T08:19:26.8471650Z > Task :uxcam-compose:wasmJsSourcesJar
+2026-08-05T08:19:26.8472340Z > Task :uxcam-compose:wasmJsCopyHierarchicalMultiplatformResources
+2026-08-05T08:19:26.8480570Z > Task :uxcam-compose:wasmJsZipMultiplatformResourcesForPublication
+2026-08-05T08:19:26.8481550Z > Task :uxcam-compose:generateMetadataFileForWasmJsPublication
+2026-08-05T08:19:26.8482440Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForWasmJsApiElements
+2026-08-05T08:19:26.8483450Z > Task :uxcam-kmp:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+2026-08-05T08:19:26.8484360Z > Task :uxcam-compose:generatePomFileForWasmJsPublication
+2026-08-05T08:19:26.8485090Z > Task :uxcam-compose:signWasmJsPublication
+2026-08-05T08:19:26.9866060Z > Task :uxcam-compose:publishAndroidReleasePublicationToCentralStagingRepository
+2026-08-05T08:19:26.9869410Z > Task :uxcam-compose:publishIosArm64PublicationToCentralStagingRepository
+2026-08-05T08:19:26.9870260Z > Task :uxcam-compose:publishIosSimulatorArm64PublicationToCentralStagingRepository
+2026-08-05T08:19:26.9871090Z > Task :uxcam-compose:publishIosX64PublicationToCentralStagingRepository
+2026-08-05T08:19:26.9871860Z > Task :uxcam-compose:publishJsPublicationToCentralStagingRepository
+2026-08-05T08:19:26.9872650Z > Task :uxcam-compose:publishJvmPublicationToCentralStagingRepository
+2026-08-05T08:19:26.9873550Z > Task :uxcam-compose:publishKotlinMultiplatformPublicationToCentralStagingRepository
+2026-08-05T08:19:26.9874380Z > Task :uxcam-compose:publishWasmJsPublicationToCentralStagingRepository
+2026-08-05T08:19:26.9875120Z > Task :uxcam-compose:publishAllPublicationsToCentralStagingRepository
+2026-08-05T08:19:27.1085640Z 
+2026-08-05T08:19:27.1090150Z [Incubating] Problems report is available at: file:///Users/runner/work/uxcam-kmp/uxcam-kmp/build/reports/problems/problems-report.html
+2026-08-05T08:19:27.1091050Z 
+2026-08-05T08:19:27.1091650Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-08-05T08:19:27.1093330Z 
+2026-08-05T08:19:27.1094040Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-08-05T08:19:27.1096100Z 
+2026-08-05T08:19:27.1099110Z For more on this, please refer to https://docs.gradle.org/8.14.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-08-05T08:19:27.1100330Z 
+2026-08-05T08:19:27.1100590Z BUILD SUCCESSFUL in 3m 42s
+2026-08-05T08:19:27.1101030Z 285 actionable tasks: 280 executed, 5 from cache
+2026-08-05T08:19:28.8586180Z Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+2026-08-05T08:19:33.6826170Z > Task :build-logic:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:19:33.7481080Z > Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+2026-08-05T08:19:33.7482180Z > Task :build-logic:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+2026-08-05T08:19:33.8579390Z > Task :build-logic:compilePluginsBlocks UP-TO-DATE
+2026-08-05T08:19:33.8582040Z > Task :build-logic:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+2026-08-05T08:19:33.8582860Z > Task :build-logic:generateScriptPluginAdapters UP-TO-DATE
+2026-08-05T08:19:33.9864700Z > Task :build-logic:compileKotlin UP-TO-DATE
+2026-08-05T08:19:33.9922460Z > Task :build-logic:compileJava NO-SOURCE
+2026-08-05T08:19:33.9924220Z > Task :build-logic:pluginDescriptors UP-TO-DATE
+2026-08-05T08:19:33.9980630Z > Task :build-logic:processResources UP-TO-DATE
+2026-08-05T08:19:33.9981820Z > Task :build-logic:classes UP-TO-DATE
+2026-08-05T08:19:33.9983900Z > Task :build-logic:jar UP-TO-DATE
+2026-08-05T08:19:35.4080900Z > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-08-05T08:19:35.4083770Z > Task :generateUXCamVersions UP-TO-DATE
+2026-08-05T08:19:35.6149930Z > Task :compileKotlin UP-TO-DATE
+2026-08-05T08:19:35.6152980Z > Task :compileJava NO-SOURCE
+2026-08-05T08:19:35.6154030Z > Task :pluginDescriptors UP-TO-DATE
+2026-08-05T08:19:35.6154850Z > Task :processResources UP-TO-DATE
+2026-08-05T08:19:35.6156020Z > Task :classes UP-TO-DATE
+2026-08-05T08:19:35.6156650Z > Task :jar UP-TO-DATE
+2026-08-05T08:19:35.6157370Z > Task :javadoc NO-SOURCE
+2026-08-05T08:19:35.6158000Z > Task :javadocJar
+2026-08-05T08:19:35.6158660Z > Task :sourcesJar
+2026-08-05T08:19:35.6159170Z > Task :generateMetadataFileForPluginMavenPublication
+2026-08-05T08:19:35.8055560Z > Task :generatePomFileForPluginMavenPublication
+2026-08-05T08:19:36.0544600Z > Task :signPluginMavenPublication
+2026-08-05T08:19:36.1733180Z > Task :generatePomFileForUxcamKmpPluginMarkerMavenPublication
+2026-08-05T08:19:36.1741140Z > Task :signUxcamKmpPluginMarkerMavenPublication
+2026-08-05T08:19:36.1742080Z > Task :publishPluginMavenPublicationToCentralStagingRepository
+2026-08-05T08:19:36.1743150Z > Task :publishUxcamKmpPluginMarkerMavenPublicationToCentralStagingRepository
+2026-08-05T08:19:36.1744990Z > Task :publishAllPublicationsToCentralStagingRepository
+2026-08-05T08:19:36.1746930Z 
+2026-08-05T08:19:36.1747220Z BUILD SUCCESSFUL in 7s
+2026-08-05T08:19:36.1747750Z 23 actionable tasks: 9 executed, 14 up-to-date
+2026-08-05T08:19:37.5481520Z ==> Bundle: /Users/runner/work/uxcam-kmp/uxcam-kmp/build/maven-central-bundle/uxcam-kmp-1.0.0-bundle.zip (4480793 bytes, 20 artifacts)
+2026-08-05T08:19:37.5482740Z ==> Uploading to Central Portal (publishingType=AUTOMATIC)
+2026-08-05T08:19:38.0560260Z ==> Deployment ID: 813cf939-da08-4005-9a93-00947cd8b387
+2026-08-05T08:19:38.0567350Z ==> Auto-publish enabled — releases once validation passes.
+2026-08-05T08:19:38.0776450Z ##[group]Run if [[ "$(gh release view "v$VERSION" --json isDraft --jq .isDraft)" == "true" ]]; then
+2026-08-05T08:19:38.0777440Z [36;1mif [[ "$(gh release view "v$VERSION" --json isDraft --jq .isDraft)" == "true" ]]; then[0m
+2026-08-05T08:19:38.0778190Z [36;1m  gh release edit "v$VERSION" --draft=false --latest[0m
+2026-08-05T08:19:38.0778990Z [36;1m  echo "Published GitHub release v$VERSION"[0m
+2026-08-05T08:19:38.0779570Z [36;1melse[0m
+2026-08-05T08:19:38.0780050Z [36;1m  echo "GitHub release v$VERSION is already published."[0m
+2026-08-05T08:19:38.0780580Z [36;1mfi[0m
+2026-08-05T08:19:38.1616590Z shell: /bin/bash -e {0}
+2026-08-05T08:19:38.1617000Z env:
+2026-08-05T08:19:38.1617630Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:19:38.1620960Z   JAVA_HOME_17_ARM64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:19:38.1621670Z   MAVEN_ARGS: -ntp
+2026-08-05T08:19:38.1624770Z   GH_TOKEN: ***
+2026-08-05T08:19:38.1625130Z   VERSION: 1.0.0
+2026-08-05T08:19:38.1625480Z ##[endgroup]
+2026-08-05T08:19:40.6011090Z https://github.com/uxcam/uxcam-kmp/releases/tag/v1.0.0
+2026-08-05T08:19:40.6017000Z Published GitHub release v1.0.0
+2026-08-05T08:19:40.6065340Z ##[group]Run if [[ -z "$SLACK_WEBHOOK_URL" ]]; then
+2026-08-05T08:19:40.6066100Z [36;1mif [[ -z "$SLACK_WEBHOOK_URL" ]]; then[0m
+2026-08-05T08:19:40.6067220Z [36;1m  echo "SLACK_WEBHOOK_URL is not configured; notification skipped."[0m
+2026-08-05T08:19:40.6067960Z [36;1m  exit 0[0m
+2026-08-05T08:19:40.6068430Z [36;1mfi[0m
+2026-08-05T08:19:40.6069000Z [36;1mif [[ "$AUTO_PUBLISH" == "true" ]]; then[0m
+2026-08-05T08:19:40.6069900Z [36;1m  text=":rocket: UXCam KMP SDK $VERSION released — live on Maven Central and GitHub: $RELEASE_URL"[0m
+2026-08-05T08:19:40.6070690Z [36;1melse[0m
+2026-08-05T08:19:40.6071800Z [36;1m  text=":package: UXCam KMP SDK $VERSION is staged and awaiting review — publish the GitHub draft ($RELEASE_URL) and the Central deployment (https://central.sonatype.com/publishing/deployments)"[0m
+2026-08-05T08:19:40.6072820Z [36;1mfi[0m
+2026-08-05T08:19:40.6073240Z [36;1mjq -n --arg text "$text" '{text:$text}' \[0m
+2026-08-05T08:19:40.6073850Z [36;1m  | curl --fail-with-body --retry 3 \[0m
+2026-08-05T08:19:40.6074420Z [36;1m      -H 'Content-Type: application/json' \[0m
+2026-08-05T08:19:40.6075000Z [36;1m      --data-binary @- \[0m
+2026-08-05T08:19:40.6075470Z [36;1m      "$SLACK_WEBHOOK_URL"[0m
+2026-08-05T08:19:40.6115440Z shell: /bin/bash -e {0}
+2026-08-05T08:19:40.6115940Z env:
+2026-08-05T08:19:40.6116560Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:19:40.6117560Z   JAVA_HOME_17_ARM64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/arm64/Contents/Home
+2026-08-05T08:19:40.6118420Z   MAVEN_ARGS: -ntp
+2026-08-05T08:19:40.6119130Z   SLACK_WEBHOOK_URL: 
+2026-08-05T08:19:40.6119800Z   VERSION: 1.0.0
+2026-08-05T08:19:40.6128140Z   RELEASE_URL: https://github.com/uxcam/uxcam-kmp/releases/tag/v1.0.0
+2026-08-05T08:19:40.6128740Z   AUTO_PUBLISH: true
+2026-08-05T08:19:40.6129130Z ##[endgroup]
+2026-08-05T08:19:40.6579310Z SLACK_WEBHOOK_URL is not configured; notification skipped.
+2026-08-05T08:19:40.6755650Z Post job cleanup.
+2026-08-05T08:19:41.0537010Z Post job cleanup.
+2026-08-05T08:19:41.1441000Z [command]/opt/homebrew/bin/git version
+2026-08-05T08:19:41.1504650Z git version 2.55.0
+2026-08-05T08:19:41.1532380Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/0f1a65f5-059f-4400-bea1-a0eceaa25e82/.gitconfig'
+2026-08-05T08:19:41.1538150Z Temporarily overriding HOME='/Users/runner/work/_temp/0f1a65f5-059f-4400-bea1-a0eceaa25e82' before making global git config changes
+2026-08-05T08:19:41.1539380Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-05T08:19:41.1541700Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/uxcam-kmp/uxcam-kmp
+2026-08-05T08:19:41.1617150Z Removing SSH command configuration
+2026-08-05T08:19:41.1622290Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-05T08:19:41.1680210Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-05T08:19:41.2393430Z Removing HTTP extra header
+2026-08-05T08:19:41.2397020Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-05T08:19:41.2446650Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-05T08:19:41.3021330Z Removing includeIf entries pointing to credentials config files
+2026-08-05T08:19:41.3024790Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-05T08:19:41.3079240Z includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git.path
+2026-08-05T08:19:41.3080240Z includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git/worktrees/*.path
+2026-08-05T08:19:41.3081090Z includeif.gitdir:/github/workspace/.git.path
+2026-08-05T08:19:41.3081790Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-05T08:19:41.3085280Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git.path
+2026-08-05T08:19:41.3144890Z /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3152840Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git.path /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3214660Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git/worktrees/*.path
+2026-08-05T08:19:41.3257540Z /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3262840Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/uxcam-kmp/uxcam-kmp/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3308140Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-08-05T08:19:41.3350350Z /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3354540Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3399070Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-05T08:19:41.3438130Z /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3441600Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config
+2026-08-05T08:19:41.3495830Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-05T08:19:41.4102500Z Removing credentials config '/Users/runner/work/_temp/git-credentials-92e87e8b-c5b1-4e6c-a9ec-cf99ae6ebc10.config'
+2026-08-05T08:19:41.4194690Z Cleaning up orphan processes
+2026-08-05T08:19:41.5448150Z Terminate orphan process: pid (4228) (java)
+2026-08-05T08:19:41.9238150Z Terminate orphan process: pid (1620) (java)
+2026-08-05T08:19:41.9615670Z Terminate orphan process: pid (1401) (java)
+2026-08-05T08:19:42.0291680Z Terminate orphan process: pid (1133) (java)
